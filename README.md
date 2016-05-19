@@ -12,7 +12,13 @@ The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](h
 
 ## Using the UI framework
 
-You can use the framework in one of two ways:
+Temporary compiled CSS URL: http://content-style-guide.apps.staging.digital.gov.au/scss/styleguide.css
+
+This version of the CSS has not yet been cleaned up fully. It also needs to be abstracted out of the content guide.
+
+### Future
+
+You will be able to the framework in one of two ways:
 
 1. by inserting the compiled CSS into the HTML `head` of your project's app or website
 2. by downloading the SCSS partials and integrating them into your codebase.
