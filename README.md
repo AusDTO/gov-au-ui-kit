@@ -27,14 +27,19 @@ Option 1 is the easiest, and a slot-in approach. Ideally you should be inserting
 
 Option 2 is likely what you want to do if you are building your own site or app. This way allows you to call any mixins, variables, etc. directly within your own custom stylesheet(s).
 
-# About the DTO
+## Copyright & License
+
+Copyright Digital Transformation Office. Licensed under the MIT license. See LICENSE file for more details.
+
+## About the DTO
 
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
 UI-core is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
 
-# README todos
+## README todos
 
 - add requirements section (e.g. bourbon, neat, etc. and their versions)
+- in reqs, consider https://github.com/postcss/autoprefixer
 - add installation section (installing dependencies & integrating into your project)
 - document relationship to bitters & refills?
