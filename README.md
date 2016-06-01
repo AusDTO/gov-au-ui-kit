@@ -16,6 +16,10 @@ Temporary compiled CSS URL: http://content-style-guide.apps.staging.digital.gov.
 
 This version of the CSS has not yet been cleaned up fully. It also needs to be abstracted out of the content guide.
 
+## Browser Support
+
+The UI components are built on a solid HTML foundation, progressively enhanced to provide core experiences across browsers. All users get critical information and experiences. New browsers get the prettiest experiences, while older browsers get less pretty, but usable ones. If JavaScript fails, users will still get a robust HTML foundation.
+
 ### Future
 
 You will be able to the framework in one of two ways:
