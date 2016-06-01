@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    neat = require('node-neat').includePaths;
+    sass = require('gulp-sass');
 
 var paths = {
     scss: './assets/sass/*.scss'
@@ -8,10 +7,8 @@ var paths = {
 
 gulp.task('styles', function () {
     return gulp.src(paths.scss)
-        .pipe(sass({
-            includePaths: ['styles'].concat(neat)
-        }))
-        .pipe(gulp.dest('./build/public/css'));
+        .pipe(sass())
+        .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('default',function(){
