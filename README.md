@@ -1,4 +1,4 @@
-# gov-au-ui-core
+# gov-au-ui-kit
 
 GOV.AU SCSS UI framework, using Bourbon and Neat.
 
@@ -40,6 +40,5 @@ UI-core is maintained and funded by the [Digital Transformation Office](https://
 ## README todos
 
 - add requirements section (e.g. bourbon, neat, etc. and their versions)
-- in reqs, consider https://github.com/postcss/autoprefixer
 - add installation section (installing dependencies & integrating into your project)
 - document relationship to bitters & refills?
