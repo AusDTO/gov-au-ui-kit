@@ -35,7 +35,7 @@ Copyright Digital Transformation Office. Licensed under the MIT license. See LIC
 
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
-UI-core is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
+UI-Kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
 
 ## README todos
 
