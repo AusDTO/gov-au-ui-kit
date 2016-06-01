@@ -10,28 +10,40 @@ This is a framework building a standardised, accessible look and feel for GOV.AU
 
 The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat).
 
-## Using the UI framework
+## Development
 
-Temporary compiled CSS URL: http://content-style-guide.apps.staging.digital.gov.au/scss/styleguide.css
+We provide the SCSS files directly should you wish to `@import` them yourself.
 
-This version of the CSS has not yet been cleaned up fully. It also needs to be abstracted out of the content guide.
+We also have a build process for the development of the framework which uses node.
 
-To build yourself:
+### Dependencies
+
+We use Bourbon 4.2.7 (we include its SCSS files directly)
+
+- gulp ^3.9.1
+- gulp-sass: ^2.3.1
+- sass-lint: ^1.7.0
+- kss: ^2.4.0
+
+`^` = compatible with version (see [semver](Compatible with version)).
+
+### Building
+
+To just build the SCSS yourself do:
+
 ```
+brew install npm
+npm install
 npm install -g gulp
 gulp
 ```
 
-### Future
+We have automated this, with a few additions:
 
-You will be able to the framework in one of two ways:
+- sass-lint for linting
+- kss-node for the auto-building a living style guide
 
-1. by inserting the compiled CSS into the HTML `head` of your project's app or website
-2. by downloading the SCSS partials and integrating them into your codebase.
-
-Option 1 is the easiest, and a slot-in approach. Ideally you should be inserting the CSS `link` as the first of any stylesheets.
-
-Option 2 is likely what you want to do if you are building your own site or app. This way allows you to call any mixins, variables, etc. directly within your own custom stylesheet(s).
+This is available as a shell script at `bin/cibuild.sh`.
 
 ## Copyright & License
 
@@ -42,9 +54,3 @@ Copyright Digital Transformation Office. Licensed under the MIT license. See LIC
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
 UI-Kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
-
-## README todos
-
-- add requirements section (e.g. bourbon, neat, etc. and their versions)
-- add installation section (installing dependencies & integrating into your project)
-- document relationship to bitters & refills?
