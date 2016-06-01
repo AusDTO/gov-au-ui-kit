@@ -10,6 +10,10 @@ This is a framework building a standardised, accessible look and feel for GOV.AU
 
 The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) (sass mixin library) and [Neat](https://github.com/thoughtbot/neat) (lightweight grid framework).
 
+## Browser Support
+
+The UI components are built on a solid HTML foundation, progressively enhanced to provide core experiences across browsers. All users get critical information and experiences. New browsers get the prettiest experiences, while older browsers get less pretty, but usable ones. If JavaScript fails, users will still get a robust HTML foundation.
+
 ## Development
 
 We provide the scss files directly in `assets/sass`.
