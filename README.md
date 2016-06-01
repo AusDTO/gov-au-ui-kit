@@ -8,24 +8,47 @@ The GOV.AU Design Guide will document this framework.
 
 This is a framework building a standardised, accessible look and feel for GOV.AU projects.
 
-The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat).
+The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) (sass mixin library) and [Neat](https://github.com/thoughtbot/neat) (lightweight grid framework).
 
-## Using the UI framework
+## Development
 
-Temporary compiled CSS URL: http://content-style-guide.apps.staging.digital.gov.au/scss/styleguide.css
+We provide the scss files directly in `assets/sass`.
 
-This version of the CSS has not yet been cleaned up fully. It also needs to be abstracted out of the content guide.
+We also have a build process for the development of the framework which uses node.
 
-### Future
+### Dependencies
 
-You will be able to the framework in one of two ways:
+We use Bourbon 4.2.7, and we include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
 
-1. by inserting the compiled CSS into the HTML `head` of your project's app or website
-2. by downloading the SCSS partials and integrating them into your codebase.
+- gulp ^3.9.1
+- gulp-sass: ^2.3.1
+- sass-lint: ^1.7.0
+- kss: ^2.4.0
 
-Option 1 is the easiest, and a slot-in approach. Ideally you should be inserting the CSS `link` as the first of any stylesheets.
+`^` = *compatible with version* (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 
-Option 2 is likely what you want to do if you are building your own site or app. This way allows you to call any mixins, variables, etc. directly within your own custom stylesheet(s).
+### Building
+
+To just build the scss yourself, install the dependencies:
+
+```
+brew install npm
+npm install
+npm install -g gulp
+```
+
+And then run:
+
+```
+gulp
+```
+
+We have automated this, with a few additions:
+
+- sass-lint for linting
+- kss-node for auto-building a living style guide
+
+This is available as a shell script at `bin/cibuild.sh`.
 
 ## Copyright & License
 
@@ -36,9 +59,3 @@ Copyright Digital Transformation Office. Licensed under the MIT license. See LIC
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
 UI-Kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
-
-## README todos
-
-- add requirements section (e.g. bourbon, neat, etc. and their versions)
-- add installation section (installing dependencies & integrating into your project)
-- document relationship to bitters & refills?
