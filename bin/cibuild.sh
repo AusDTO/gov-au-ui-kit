@@ -9,4 +9,4 @@ npm install
 # build scss into css
 ./node_modules/.bin/gulp
 # generate style examples
-./node_modules/.bin/kss-node assets/sass build
+./node_modules/.bin/kss-node assets/sass build --verbose --homepage=../../README.md
