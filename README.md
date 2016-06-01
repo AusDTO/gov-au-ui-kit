@@ -23,8 +23,12 @@ We use Bourbon 4.2.7, and we include its scss files directly rather than calling
 
 - gulp ^3.9.1
 - gulp-sass: ^2.3.1
+- gulp-sass-lint: ^1.1.1
+- gulp-cssnano: ^2.1.2
+- gulp-sourcemaps: ^1.6.0
+- gulp-rename: ^1.2.2
 - sass-lint: ^1.7.0
-- kss: ^2.4.0
+- kss: ^3.0.0-beta.14
 
 `^` = *compatible with version* (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 
