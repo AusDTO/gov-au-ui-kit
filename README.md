@@ -13,9 +13,11 @@ The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) (sass mixin 
 
 ## Development
 
-We provide the scss files directly in `assets/sass`.
+We provide the scss files directly in `assets/sass`. We also have a build process for the development of the framework which uses gulp on node.js.
 
-We also have a build process for the development of the framework which uses node.
+There is sass-lint validation which can also be [integrated in many text editors and IDEs](https://github.com/sasstools/sass-lint#ide-integration)
+
+Contibutors should be familar with the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [Block Element Modifier conventions](http://getbem.com/)
 
 ### Dependencies
 
