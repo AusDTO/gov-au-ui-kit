@@ -16,6 +16,12 @@ Temporary compiled CSS URL: http://content-style-guide.apps.staging.digital.gov.
 
 This version of the CSS has not yet been cleaned up fully. It also needs to be abstracted out of the content guide.
 
+To build yourself:
+```
+npm install -g gulp
+gulp
+```
+
 ### Future
 
 You will be able to the framework in one of two ways:

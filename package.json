@@ -1,0 +1,32 @@
+{
+  "name": "gov-au-ui-kit",
+  "version": "1.0.0",
+  "description": "An example module to illustrate the usage of a package.json",
+  "author": "Your Name <you.name@example.org>",
+  "contributors": [
+    {
+      "name": "Foo Bar",
+      "email": "foo.bar@example.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodejitsu/browsenpm.org"
+  },
+  "bugs": {
+    "url": "https://github.com/nodejitsu/browsenpm.org/issues"
+  },
+  "keywords": [
+    "nodejitsu",
+    "example",
+    "browsenpm"
+  ],
+  "preferGlobal": true,
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "sass-lint": "^1.7.0",
+    "kss": "^2.4.0"
+  }
+}
