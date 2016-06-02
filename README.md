@@ -15,22 +15,22 @@ The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) (sass mixin 
 
 We provide the scss files directly in `assets/sass`. We also have a build process for the development of the framework which uses gulp on node.js.
 
-There is sass-lint validation which can also be [integrated in many text editors and IDEs](https://github.com/sasstools/sass-lint#ide-integration)
+There is sass-lint validation which can also be [integrated in many text editors and IDEs](https://github.com/sasstools/sass-lint#ide-integration). We have also pulled in the KSS source in order to configure out build pipelines.
 
-Contibutors should be familar with the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [Block Element Modifier conventions](http://getbem.com/)
+Contributors should be familar with the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [Block Element Modifier conventions](http://getbem.com/)
 
 ### Dependencies
 
 We use Bourbon 4.2.7, and we include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
 
-- gulp ^3.9.1
-- gulp-sass: ^2.3.1
-- gulp-sass-lint: ^1.1.1
-- gulp-cssnano: ^2.1.2
-- gulp-sourcemaps: ^1.6.0
-- gulp-rename: ^1.2.2
-- sass-lint: ^1.7.0
-- kss: ^3.0.0-beta.14
+- gulp ^3.9.1`
+- gulp-sass: `^2.3.1`
+- gulp-sass-lint: `^1.1.1`
+- gulp-cssnano: `^2.1.2`
+- gulp-sourcemaps: `^1.6.0`
+- gulp-rename: `^1.2.2`
+- sass-lint: `^1.7.0`
+- kss: `^3.0.0-beta.14`
 
 `^` = *compatible with version* (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 
