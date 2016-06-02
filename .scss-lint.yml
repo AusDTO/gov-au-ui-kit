@@ -19,6 +19,8 @@ linters:
     enabled: false
   DuplicateProperty:
     enabled: true
+    ignore_consecutive:
+      - font-size
   ElsePlacement:
     enabled: true
     style: same_line
