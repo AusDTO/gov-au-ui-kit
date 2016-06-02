@@ -19,7 +19,7 @@ The UI components are built on a solid HTML foundation, progressively enhanced t
 
 We provide the scss files directly in `assets/sass`. We also have a build process for the development of the framework which uses gulp on node.js.
 
-There is sass-lint validation which can also be [integrated in many text editors and IDEs](https://github.com/sasstools/sass-lint#ide-integration). We have also pulled in the KSS source in order to configure out build pipelines.
+There is scss-lint validation which can also be [integrated in many text editors and IDEs](https://github.com/brigade/scss-lint/#editor-integration). We have also pulled in the KSS source in order to configure out build pipelines.
 
 Contributors should be familar with the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [Block Element Modifier conventions](http://getbem.com/)
 
@@ -27,14 +27,12 @@ Contributors should be familar with the [Contributor Code of Conduct](https://gi
 
 We use Bourbon 4.2.7, and we include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
 
-- gulp ^3.9.1`
-- gulp-sass: `^2.3.1`
-- gulp-sass-lint: `^1.1.1`
-- gulp-cssnano: `^2.1.2`
-- gulp-sourcemaps: `^1.6.0`
-- gulp-rename: `^1.2.2`
-- sass-lint: `^1.7.0`
-- kss: `^3.0.0-beta.14`
+- gulp ^3.9.1
+- gulp-scss-lint: ^0.4.0
+- gulp-cssnano: ^2.1.2
+- gulp-sourcemaps: ^1.6.0
+- gulp-rename: ^1.2.2
+- kss: ^3.0.0-beta.14
 
 `^` = *compatible with version* (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 
@@ -43,6 +41,7 @@ We use Bourbon 4.2.7, and we include its scss files directly rather than calling
 To just build the scss yourself, install the dependencies:
 
 ```
+gem install scss_lint scss_lint_reporter_checkstyle
 brew install npm
 npm install
 npm install -g gulp
@@ -56,7 +55,7 @@ gulp
 
 We have automated this, with a few additions:
 
-- sass-lint for linting
+- scss-lint for linting
 - kss-node for auto-building a living style guide
 
 This is available as a shell script at `bin/cibuild.sh`.

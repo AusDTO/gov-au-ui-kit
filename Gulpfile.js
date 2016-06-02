@@ -3,8 +3,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     kss = require('kss'),
-    sourcemaps = require('gulp-sourcemaps')
-    sassLint = require('gulp-sass-lint');
+    sourcemaps = require('gulp-sourcemaps'),
+    scsslint = require('gulp-scss-lint');
 
 var paths = {
     scss: './assets/sass/**/*.scss',
@@ -12,14 +12,16 @@ var paths = {
 };
 
 gulp.task('lint', function () {
-    return gulp.src('./assets/sass/*.scss')
-        .pipe(sassLint({
-            options: {
-                configFile: '.sass-lint.yml'
-            }
+    return gulp.src(['./assets/sass/**/*.scss', '!./assets/sass/vendor/**/*.scss'])
+        .pipe(scsslint({
+            'config': '.scss-lint.yml',
+            'reporterOutputFormat': 'Checkstyle',
+            'filePipeOutput': 'scssReport.xml'
         }))
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError())
+        .pipe(gulp.dest(
+            (typeof process.env.CIRCLE_TEST_REPORTS != 'undefined') ?
+                process.env.CIRCLE_TEST_REPORTS : paths.output))
+        .pipe(scsslint.failReporter('E'))
 });
 
 gulp.task('styles', function () {
@@ -39,6 +41,9 @@ gulp.task('styles.min', function () {
         }))
         .pipe(gulp.dest(paths.output));
 });
+gulp.task('examples', function () {
+    return gulp.src('examples/*').pipe(gulp.dest(paths.output + "/examples"));
+});
 gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
@@ -48,18 +53,18 @@ gulp.task('styleguide', function () {
     });
 });
 
-gulp.task('default',function(){
+gulp.task('default', function () {
     gulp.start('styles');
 });
 
-gulp.task('build',function(){
-    gulp.start(['lint', 'styles','styles.min','styleguide']);
+gulp.task('build', function () {
+    gulp.start(['lint', 'styles', 'styles.min', 'examples', 'styleguide']);
 });
 
-gulp.task('watch',function() {
-    gulp.watch(paths.scss,['styles']);
+gulp.task('watch', function () {
+    gulp.watch(paths.scss, ['styles']);
 });
 
-gulp.task('build.watch',function() {
-    gulp.watch(paths.scss,['build']);
+gulp.task('build.watch', function () {
+    gulp.watch(paths.scss, ['build']);
 });
