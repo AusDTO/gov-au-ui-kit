@@ -1,0 +1,14 @@
+
+// Grid Settings
+//
+// A set of variables to define the maximum width, column count and gutter.
+// For examples see http://neat.bourbon.io/examples/
+//
+// Style guide: Foundation.Grid
+
+$border-box-sizing: true;
+$disable-warnings: true;
+
+$grid-columns: 12 !global;
+$max-width: em(1600) !global;
+$gutter: em(16);
