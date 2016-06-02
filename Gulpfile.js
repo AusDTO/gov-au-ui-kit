@@ -43,7 +43,8 @@ gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
         destination: paths.output,
-        homepage: '../../README.md'
+        homepage: '../../README.md',
+        builder: 'kss-builder'
     });
 });
 
