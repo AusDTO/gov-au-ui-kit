@@ -47,6 +47,7 @@ gulp.task('examples', function () {
 gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
+        css: 'style.css',
         destination: paths.output,
         homepage: '../../README.md',
         builder: 'kss-builder'
