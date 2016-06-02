@@ -1,17 +1,8 @@
 @import 'vendor/normalize';
 @import 'vendor/bourbon/bourbon';
+
+@import 'grid-settings';
 @import 'vendor/neat/neat';
 
-@import 'colours';
+@import "colours";
 @import 'typography';
-
-// Button
-//
-// Your standard button suitable for clicking.
-//
-// :hover   - Highlights when hovering.
-// .shiny   - Do not press this big, shiny, red button.
-//
-// Markup: <button class='button {{modifier_class}}'>
-//
-// Style guide: Components.Button
