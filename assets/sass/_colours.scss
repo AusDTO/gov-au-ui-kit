@@ -5,22 +5,22 @@
 //
 // Style guide: Foundation.Colours
 
-$black:       #000000;
-$non-black:   #232D35;
-$grey:        #828282;
-$dark-grey:   darken($grey, 25%);
-$light-grey:  lighten($grey, 30%);
-$lighter-grey:lighten($grey, 60%);
-$non-white:   #F0F3F5;
-$white:       #FFFFFF;
+$black:         #000000;
+$non-black:     #232D35;
+$grey:          #828282;
+$dark-grey:     darken($grey, 25%);
+$light-grey:    lighten($grey, 30%);
+$lighter-grey:  lighten($grey, 60%);
+$non-white:     #F0F3F5;
+$white:         #FFFFFF;
 
-$aqua:        #02BFE7;
-$dark-aqua:   darken($aqua, 25%);
-$light-aqua:  lighten($aqua, 30%);
+$aqua:          #02BFE7;
+$dark-aqua:      darken($aqua, 25%);
+$light-aqua:    lighten($aqua, 30%);
 
-$navy:        #225187;
-$dark-navy:   darken($navy, 25%);
-$light-navy:  lighten($navy, 30%);
+$navy:          #225187;
+$dark-navy:     darken($navy, 25%);
+$light-navy:    lighten($navy, 30%);
 
 $background-colour:           $white;
 $contrast-background-colour:  $lighter-grey;
