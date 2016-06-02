@@ -1,9 +1,9 @@
-@import "vendor/normalize";
-@import "vendor/bourbon/bourbon";
-@import "vendor/neat/neat";
+@import 'vendor/normalize';
+@import 'vendor/bourbon/bourbon';
+@import 'vendor/neat/neat';
 
-@import "colours";
-@import "typography";
+@import 'colours';
+@import 'typography';
 
 // Button
 //
@@ -12,6 +12,6 @@
 // :hover   - Highlights when hovering.
 // .shiny   - Do not press this big, shiny, red button.
 //
-// Markup: <button class="button {{modifier_class}}">
+// Markup: <button class='button {{modifier_class}}'>
 //
 // Style guide: Components.Button
