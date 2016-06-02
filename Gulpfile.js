@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint');
 
 var paths = {
-    scss: './assets/sass/**/*.scss',
+    scss: './assets/sass/style.scss',
     output: './build/'
 };
 
