@@ -27,8 +27,10 @@ gulp.task('lint', function () {
 
 gulp.task('styles', function () {
     return gulp.src(paths.scss)
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(gitVersion())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.output));
 });
 
@@ -45,13 +47,13 @@ gulp.task('styles.min', function () {
         .pipe(gulp.dest(paths.output));
 });
 gulp.task('examples', function () {
-    return gulp.src('examples/*').pipe(gulp.dest(paths.output + "/examples"));
+    return gulp.src('examples/*').pipe(gulp.dest(paths.output));
 });
 gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
         css: 'style.css',
-        destination: paths.output,
+        destination: paths.output+'/kss',
         homepage: '../../README.md',
         builder: 'kss-builder'
     });
