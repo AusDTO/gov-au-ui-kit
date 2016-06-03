@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     kss = require('kss'),
     sourcemaps = require('gulp-sourcemaps'),
-    scsslint = require('gulp-scss-lint');
+    scsslint = require('gulp-scss-lint'),
+    gitVersion = require('gulp-gitversion');
 
 var paths = {
     scss: './assets/sass/style.scss',
@@ -27,6 +28,7 @@ gulp.task('lint', function () {
 gulp.task('styles', function () {
     return gulp.src(paths.scss)
         .pipe(sass().on('error', sass.logError))
+        .pipe(gitVersion())
         .pipe(gulp.dest(paths.output));
 });
 
@@ -35,10 +37,11 @@ gulp.task('styles.min', function () {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(cssnano())
-        .pipe(sourcemaps.write('.'))
+        .pipe(gitVersion())
         .pipe(rename({
             suffix: '.min'
         }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.output));
 });
 gulp.task('examples', function () {
