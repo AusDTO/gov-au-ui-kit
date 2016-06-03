@@ -6,14 +6,16 @@ $base-heading-leading: 1.4;
 $base-spacing: $base-leading * 1em;
 $small-spacing: $base-spacing / 2;
 
+// The base font-size mixin. This makes setting font sizes in rems easy.
 @mixin font-size($size-value: 1.6) {
   font-size: ($size-value * 10) + px;
   font-size: $size-value + rem;
 }
 
 html {
-  font-size: 10px;
   color: $black;
+  line-height: $base-leading;
+  font-size: 10px;
 }
 
 // Headings
@@ -35,6 +37,16 @@ h6 {
   margin-top: $small-spacing;
 }
 
+// For display font sizing.
+.display {
+  @include font-size(4.8);
+}
+
+// For abstracts or page introductory paragraphs.
+.abstract {
+  @include font-size(2.4);
+}
+
 // Common content elements
 //
 // Base styling and vertical spacing for general content elements.
@@ -48,14 +60,25 @@ dl,
 p,
 dt,
 dd {
-  margin-bottom: ($base-spacing * 1.5);
+  margin-bottom: $small-spacing;
   font-size: 1.6rem;
 }
 
 li {
-  margin-bottom: $base-spacing;
+  margin-bottom: ($small-spacing / 2);
+
+  ul,
+  ol {
+    margin-top: ($small-spacing / 2);
+    margin-bottom: 0;
+  }
 }
 
 dt {
   font-weight: bold;
+  margin-top: $base-spacing;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
