@@ -37,9 +37,42 @@ h6 {
   margin-top: $small-spacing;
 }
 
+h1 {
+  @include font-size(3.6);
+}
+
+h2 {
+  @include font-size(2.4);
+}
+
+h3 {
+  @include font-size(2.1);
+}
+
+h4 {
+  @include font-size(1.8);
+}
+
+h5 {
+  @include font-size(1.6);
+}
+
+h6 {
+  @include font-size(1.6);
+}
+
 // For display font sizing.
 .display {
   @include font-size(4.8);
+
+  // Not settled at all on the breakpoint setup.
+  //
+  // Also need to find a nice and clean way to write this stuff in here.
+  @include media(screen and $mobile-landscape) {
+    @include font-size(3.6);
+
+    color: #cc0;
+  }
 }
 
 // For abstracts or page introductory paragraphs.
