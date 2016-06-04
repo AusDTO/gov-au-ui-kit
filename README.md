@@ -118,7 +118,7 @@ gulp
 We have automated this, with a few additions:
 
 - `scss-lint` for linting
-- `kss-node` for auto-building a living style guide
+- `kss-node` for auto-building a living style guide.
 
 This is available as a shell script at `bin/cibuild.sh`.
 

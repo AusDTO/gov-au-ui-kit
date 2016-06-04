@@ -1,4 +1,12 @@
-// Leading/line-height
+// Testing Lato, using 3 styles: regular 400, italic 400, regular 700.
+//
+// It's optically much smaller than a lot of stock-standard sans-serifs faces...
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700&subset=latin,latin-ext);
+
+// This font-stack is temporary.
+$base-font-family: 'Lato', 'Verdana', sans-serif;
+
+// Leading/line-height.
 $base-leading: 1.6;
 $base-heading-leading: 1.4;
 
@@ -30,6 +38,7 @@ html {
   color: $black;
   line-height: $base-leading;
   font-size: 10px;
+  font-family: $base-font-family;
 }
 
 // Headings
@@ -48,7 +57,7 @@ h6 {
   line-height: $base-heading-leading;
   font-weight: normal;
   margin-bottom: $small-spacing;
-  margin-top: $small-spacing;
+  margin-top: $base-spacing;
 }
 
 h1 {
@@ -91,11 +100,6 @@ h6 {
   }
 }
 
-// For abstracts or page introductory paragraphs.
-.abstract {
-  @include font-size(2.4);
-}
-
 // Common content elements
 //
 // Base styling and vertical spacing for general content elements.
@@ -125,9 +129,14 @@ li {
 
 dt {
   font-weight: bold;
-  margin-top: $small-spacing;
+  margin-top: ($base-spacing * 0.75);
 
   &:first-of-type {
     margin-top: 0;
   }
+}
+
+// For abstracts or page introductory paragraphs.
+.abstract {
+  @include font-size(2.4);
 }
