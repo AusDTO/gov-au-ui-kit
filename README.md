@@ -74,7 +74,7 @@ Therefore, if you:
 
 - spot a bug
 - see good reason to include something from your codebase in our framework
-- have an itch you want to scratch
+- have an itch you want to scratch.
 
 ... come and talk to us.
 
@@ -125,6 +125,8 @@ This is available as a shell script at `bin/cibuild.sh`.
 ## Copyright & License
 
 Copyright Digital Transformation Office. Licensed under the MIT license. See `LICENSE` file for more details.
+
+This repo includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Normalize.css](https://necolas.github.io/normalize.css/).
 
 ## About the DTO
 
