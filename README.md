@@ -126,7 +126,7 @@ This is available as a shell script at `bin/cibuild.sh`.
 
 Copyright Digital Transformation Office. Licensed under the MIT license. See `LICENSE` file for more details.
 
-This repo includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Normalize.css](https://necolas.github.io/normalize.css/).
+This repo includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Normalize.css](https://necolas.github.io/normalize.css/), which all also use the MIT license.
 
 ## About the DTO
 
