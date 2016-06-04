@@ -127,6 +127,8 @@ dd {
 
 li {
   margin-bottom: ($small-spacing / 2);
+  margin-left: -($small-spacing / 4);
+  padding-left: ($small-spacing / 4);
 
   ul,
   ol {
@@ -154,7 +156,7 @@ dt {
 .callout {
   box-shadow: 0 0 8px rgba($black, 0.45);
   padding: $medium-spacing $small-spacing $medium-spacing $base-spacing;
-  margin: $base-spacing;
+  margin: $base-spacing $small-spacing;
 }
 
 .warning-block {
