@@ -1,10 +1,17 @@
 // Testing Lato, using 3 styles: regular 400, italic 400, regular 700.
 //
+// See: https://www.google.com/fonts#UsePlace:use/Collection:Lato
+//
 // It's optically much smaller than a lot of stock-standard sans-serifs faces...
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext);
 
 // This font-stack is temporary.
 $base-font-family: 'Lato', 'Verdana', sans-serif;
+
+// Not actually sure if Lato 700 is being applied...
+strong {
+  font-weight: 700;
+}
 
 // Leading/line-height.
 $base-leading: 1.6;
@@ -24,6 +31,7 @@ $base-heading-leading: 1.4;
 // - font-size mixin: reset to 10px base, then sized in rems
 // - base-spacing: set relative to leading, which is rel. to font-size, in ems.
 $base-spacing: $base-leading * 1em;
+$medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;
 
 // The base font-size mixin. This makes setting font sizes in rems easy, or
@@ -128,15 +136,28 @@ li {
 }
 
 dt {
-  font-weight: bold;
-  margin-top: ($base-spacing * 0.75);
+  font-weight: 700;
+  margin-top: $medium-spacing;
 
   &:first-of-type {
     margin-top: 0;
   }
 }
 
+// More specialised typography.
+//
 // For abstracts or page introductory paragraphs.
 .abstract {
   @include font-size(2.4);
+}
+
+.callout {
+  box-shadow: 0 0 8px rgba($black, 0.45);
+  padding: $medium-spacing $small-spacing $medium-spacing $base-spacing;
+  margin: $base-spacing;
+}
+
+.warning-block {
+  border-left: ($small-spacing / 2) solid $red;
+  padding-left: $base-spacing - ($small-spacing / 2);
 }
