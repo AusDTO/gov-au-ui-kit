@@ -6,7 +6,7 @@ GOV.AU SCSS UI framework, using Bourbon and Neat. It provides:
 - normalize
 - a lightweight, extensible grid framework, with some good defaults
 - basic styling for content with some basic typographic defaults
-- basic styling for UI elements (inputs, etc.)
+- basic styling for UI elements (e.g. `input`).
 
 The GOV.AU Design Guide will document this framework.
 
@@ -24,7 +24,12 @@ The UI components are built on a solid HTML foundation, progressively enhanced t
 
 This framework is in active development.
 
-Releases: we are currently in pre-release stage.
+**Releases:** we are currently in pre-release stage (early June).
+
+**Usage:** we have, and are seeking more early users. Contact us on slack:
+
+- @maxious
+- @klepas
 
 ### Assets
 
@@ -51,15 +56,15 @@ We may investigate creating an installer wrapper, or releasing via git submodule
 2nd milestone is to iterate from there in two ways:
 
 1. iterate on the look and feel under the direction of the designers from the guides team
-2. include styling for commonly used and requested things that builders from other teams need
+2. include styling for commonly used and requested things that builders from other teams need.
 
 #### Immediate priorities
 
 - provide UI styling for `input`, `label`, etc.
 - styling for other buttons, next/previous, etc.
 - some sane basics for high level block elements inc. `main`, `article`, `header`, and `footer`
-- styling for primary and secondary `nav`s
-- styling for calendars
+- styling for primary and secondary `nav`
+- styling for calendars.
 
 ### Contributing
 
@@ -85,7 +90,7 @@ We use Bourbon 4.2.7, and we include its scss files directly rather than calling
 
 - gulp `^3.9.1`
 - gulp-scss-lint `^0.4.0`
-- gulp-cssnano ^2.1.2`
+- gulp-cssnano `^2.1.2`
 - gulp-sourcemaps `^1.6.0`
 - gulp-rename `^1.2.2`
 - gulp-gitversion `^0.0.8`
