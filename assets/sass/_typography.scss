@@ -1,12 +1,20 @@
-// Testing Lato, using 3 styles: regular 400, italic 400, regular 700.
+// Font stacks
 //
-// See: https://www.google.com/fonts#UsePlace:use/Collection:Lato
+// We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
 //
-// It's optically much smaller than a lot of stock-standard sans-serifs faces...
+// Markup: font-stacks-scss.hbs
+//
+// Compatibility untested.
+//
+// Style guide: Typography.Font-stacks
 @import url(https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext);
 
-// This font-stack is temporary.
-$base-font-family: 'Lato', 'Verdana', sans-serif;
+$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
+$base-sans-serif: 'Lato', Geneva, Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+// This gives us pretty much 95% coverage across Win/Mac, and a lot of FOSS default font installs.
+
+$base-font-family: $base-sans-serif;
 
 // Not actually sure if Lato 700 is being applied...
 strong {
