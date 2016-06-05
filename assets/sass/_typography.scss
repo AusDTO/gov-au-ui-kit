@@ -13,23 +13,19 @@ strong {
   font-weight: 700;
 }
 
+// Base spacing
+//
+// Important: we define our base spacing relative to the size of the type. The base-spacing unit is informed by the base leading, which is unit-less; it acts as a multiplier of the font-size. The base-spacing unit is then set in ems by * 1em.
+//
+// Markup: base-typography-scss.hbs
+//
+// Style guide: Typography.Configuration
+
 // Leading/line-height.
 $base-leading: 1.6;
 $base-heading-leading: 1.4;
 
-// Base spacing
-//
-// Important: we define our base spacing *relative* to our typography.
-//
-// The base-spacing unit is informed by the base leading above, which is
-// unit-less; it acts as a multiplier of the font-size (defined below).
-//
-// The base-spacing unit is then set in ems by * 1em.
-//
-// Thus:
-// - leading: unitless, acting as * font-size
-// - font-size mixin: reset to 10px base, then sized in rems
-// - base-spacing: set relative to leading, which is rel. to font-size, in ems.
+// Base spacing, re. to leading.
 $base-spacing: $base-leading * 1em;
 $medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;

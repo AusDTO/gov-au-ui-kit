@@ -1,0 +1,24 @@
+<pre>
+<code>
+// Leading/line-height.
+$base-leading: 1.6;
+$base-heading-leading: 1.4;
+
+// Base spacing, re. to leading.
+$base-spacing: $base-leading * 1em;
+$medium-spacing: $base-spacing * 0.75;
+$small-spacing: $base-spacing / 2;
+
+@mixin font-size($size-value: 1.6) {
+  font-size: ($size-value * 10) + px;
+  font-size: $size-value + rem;
+}
+
+html {
+  color: $black;
+  line-height: $base-leading;
+  font-size: 10px;
+  font-family: $base-font-family;
+}
+</code>
+</pre>
