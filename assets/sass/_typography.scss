@@ -1,12 +1,50 @@
-// Leading/line-height
+// Font stacks
+//
+// We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
+//
+// Markup: font-stacks-scss.hbs
+//
+// Compatibility untested.
+//
+// Style guide: Typography.Font-stacks
+@import url(https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext);
+
+$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
+$base-sans-serif: 'Lato', Geneva, Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+// This gives us pretty much 95% coverage across Win/Mac, and a lot of FOSS default font installs.
+
+$base-font-family: $base-sans-serif;
+
+// Not actually sure if Lato 700 is being applied...
+strong {
+  font-weight: 700;
+}
+
+// Base spacing and spacing
+//
+// We define our base spacing relative to the size of the type by anchoring it to the base leading, which is unit-less; it acts as a multiplier of the font-size.
+//
+// The base-spacing unit is then set in ems by * 1em.
+//
+// The font-size mixin makes setting font sizes in rems eay, or you can call the mixin directly and give it a number (which when multiplied by 10 would result in your desired font size).
+//
+// We may consider extending the base sizing and spacing mixins.
+//
+// Markup: base-typography-scss.hbs
+//
+// Style guide: Typography.Configuration
+
+// Leading/line-height.
 $base-leading: 1.6;
 $base-heading-leading: 1.4;
 
-// Base spacing
+// Base spacing, relative to leading.
 $base-spacing: $base-leading * 1em;
+$medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;
 
-// The base font-size mixin. This makes setting font sizes in rems easy.
+// The core font-size mixin.
 @mixin font-size($size-value: 1.6) {
   font-size: ($size-value * 10) + px;
   font-size: $size-value + rem;
@@ -16,6 +54,7 @@ html {
   color: $black;
   line-height: $base-leading;
   font-size: 10px;
+  font-family: $base-font-family;
 }
 
 // Headings
@@ -34,17 +73,47 @@ h6 {
   line-height: $base-heading-leading;
   font-weight: normal;
   margin-bottom: $small-spacing;
-  margin-top: $small-spacing;
+  margin-top: $base-spacing;
+}
+
+h1 {
+  @include font-size(4.8);
+}
+
+h2 {
+  @include font-size(3.6);
+}
+
+h3 {
+  @include font-size(2.4);
+}
+
+h4 {
+  @include font-size(2.1);
+}
+
+h5 {
+  @include font-size(1.6);
+}
+
+h6 {
+  @include font-size(1.6);
 }
 
 // For display font sizing.
 .display {
-  @include font-size(4.8);
-}
+  @include font-size(7.2);
 
-// For abstracts or page introductory paragraphs.
-.abstract {
-  @include font-size(2.4);
+  // Not settled at all on the breakpoint setup.
+  //
+  // Also need to find a nice and clean way to write this stuff in here.
+  @include media($mobile-landscape and $tablet) {
+    @include font-size(6);
+  }
+
+  @include media(screen and $mobile-landscape) {
+    @include font-size(3.6);
+  }
 }
 
 // Common content elements
@@ -66,6 +135,8 @@ dd {
 
 li {
   margin-bottom: ($small-spacing / 2);
+  margin-left: -($small-spacing / 4);
+  padding-left: ($small-spacing / 4);
 
   ul,
   ol {
@@ -75,10 +146,29 @@ li {
 }
 
 dt {
-  font-weight: bold;
-  margin-top: $base-spacing;
+  font-weight: 700;
+  margin-top: $medium-spacing;
 
   &:first-of-type {
     margin-top: 0;
   }
+}
+
+// More specialised typography.
+//
+// For abstracts or page introductory paragraphs.
+.abstract {
+  @include font-size(2.4);
+}
+
+.callout {
+  border-radius: $tiny-border-radius;
+  box-shadow: 0 0 8px rgba($black, 0.45);
+  padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
+  margin: $base-spacing $small-spacing;
+}
+
+.warning-block {
+  border-left: ($small-spacing / 2) solid $red;
+  padding-left: $base-spacing - ($small-spacing / 2);
 }

@@ -12,3 +12,14 @@ $disable-warnings: true;
 $grid-columns: 12 !global;
 $max-width: em(1600) !global;
 $gutter: em(16);
+
+// Toggle visibility of your grid columns for development/debugging.
+$visual-grid: false;
+
+// Media
+
+$large-desktop: (max-width 1600px);
+$desktop: (min-width 1000px);
+$tablet: (min-width 769px);
+$mobile-landscape: (max-width 768px);
+$mobile: (max-width 420px);
