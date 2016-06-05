@@ -21,9 +21,15 @@ strong {
   font-weight: 700;
 }
 
-// Base spacing
+// Base spacing and spacing
 //
-// Important: we define our base spacing relative to the size of the type. The base-spacing unit is informed by the base leading, which is unit-less; it acts as a multiplier of the font-size. The base-spacing unit is then set in ems by * 1em.
+// We define our base spacing relative to the size of the type by anchoring it to the base leading, which is unit-less; it acts as a multiplier of the font-size.
+//
+// The base-spacing unit is then set in ems by * 1em.
+//
+// The font-size mixin makes setting font sizes in rems eay, or you can call the mixin directly and give it a number (which when multiplied by 10 would result in your desired font size).
+//
+// We may consider extending the base sizing and spacing mixins.
 //
 // Markup: base-typography-scss.hbs
 //
@@ -33,14 +39,12 @@ strong {
 $base-leading: 1.6;
 $base-heading-leading: 1.4;
 
-// Base spacing, re. to leading.
+// Base spacing, relative to leading.
 $base-spacing: $base-leading * 1em;
 $medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;
 
-// The base font-size mixin. This makes setting font sizes in rems easy, or
-// you can just call the mixin `@include: font-size()`, and give it a number
-// which when multiplied by 10 gives you the px size you essentially want.
+// The core font-size mixin.
 @mixin font-size($size-value: 1.6) {
   font-size: ($size-value * 10) + px;
   font-size: $size-value + rem;
