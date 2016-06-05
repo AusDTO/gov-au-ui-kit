@@ -154,8 +154,9 @@ dt {
 }
 
 .callout {
+  border-radius: $tiny-border-radius;
   box-shadow: 0 0 8px rgba($black, 0.45);
-  padding: $medium-spacing $small-spacing $medium-spacing $base-spacing;
+  padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
   margin: $base-spacing $small-spacing;
 }
 
