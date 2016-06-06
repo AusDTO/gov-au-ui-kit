@@ -1,0 +1,67 @@
+// Describe me so no evil shall be committed in wielding this class!
+.wrapper {
+  @include outer-container;
+}
+
+header {
+  @include outer-container(100%);
+
+  background-color: $pink;
+  color: $white;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+footer {
+  @include outer-container(100%);
+
+  background-color: $non-black;
+  color: $white;
+}
+
+main {
+  @include outer-container();
+
+  article {
+    @include media($desktop and $large-desktop) {
+      @include span-columns(8 of 12);
+      @include shift(4);
+    }
+
+    @include media($mobile-landscape and $tablet) {
+      @include span-columns(8 of 12);
+      @include shift(4);
+    }
+
+    @include media(screen and $mobile-landscape) {
+      @include span-columns(10 of 12);
+      @include shift(1);
+    }
+
+  }
+}
+
+.sidebar {
+  @include media($desktop and $large-desktop) {
+    @include span-columns(3 of 12);
+  }
+
+  @include media($mobile-landscape and $tablet) {
+    @include span-columns(3 of 12);
+  }
+
+  @include media(screen and $mobile-landscape) {
+    @include span-columns(10 of 12);
+    @include shift(1);
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
