@@ -5,8 +5,8 @@ var gulp = require('gulp'),
     kss = require('kss'),
     sourcemaps = require('gulp-sourcemaps'),
     scsslint = require('gulp-scss-lint'),
-    gitVersion = require('gulp-gitversion'),
-    validator = require('gulp-html');
+    gitVersion = require('gulp-gitversion')
+    ;
 
 var paths = {
     scss: './assets/sass/style.scss',
@@ -49,10 +49,10 @@ gulp.task('styles.min', function () {
 });
 gulp.task('examples', function () {
     return gulp.src('examples/*')
-        .pipe(validator())
         .pipe(gulp.dest(paths.output));
 });
 gulp.task('htmlvalidate', function () {
+    validator = require('gulp-html')
     return gulp.src(['build/*.html','build/**/*.html'])
         .pipe(validator({'verbose':true}));
 });
