@@ -25,36 +25,33 @@ main {
   @include outer-container();
 
   article {
-    @include media($desktop and $large-desktop) {
-      @include span-columns(8 of 12);
-      @include shift(4);
+
+    @include span-columns(8 of 12);
+
+    @include media($tablet) {
+      @include span-columns(6 of 8);
+      @include shift(2);
     }
 
-    @include media($mobile-landscape and $tablet) {
-      @include span-columns(8 of 12);
-      @include shift(4);
-    }
-
-    @include media(screen and $mobile-landscape) {
-      @include span-columns(10 of 12);
-      @include shift(1);
+    @include media($mobile) {
+      @include span-columns(4 of 4);
+      @include shift(0);
     }
 
   }
+
 }
 
 .sidebar {
-  @include media($desktop and $large-desktop) {
-    @include span-columns(3 of 12);
+
+  @include span-columns(3 of 12);
+
+  @include media($tablet) {
+    @include span-columns(2 of 8);
   }
 
-  @include media($mobile-landscape and $tablet) {
-    @include span-columns(3 of 12);
-  }
-
-  @include media(screen and $mobile-landscape) {
-    @include span-columns(10 of 12);
-    @include shift(1);
+  @include media($mobile) {
+    @include span-columns(4 of 4);
   }
 }
 

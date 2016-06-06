@@ -7,7 +7,7 @@
 // Compatibility untested.
 //
 // Style guide: Typography.Font-stacks
-@import url(https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext);
+@import url('https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext');
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
 $base-sans-serif: 'Lato', Verdana, 'Bitstream Vera Sans', sans-serif;
@@ -27,16 +27,12 @@ strong {
 //
 // The base-spacing unit is then set in ems by * 1em.
 //
-// The font-size mixin makes setting font sizes in rems eay, or you can call the mixin directly and give it a number (which when multiplied by 10 would result in your desired font size).
-//
-// We may consider extending the base sizing and spacing mixins.
-//
 // Markup: base-typography-scss.hbs
 //
 // Style guide: Typography.Configuration
 
 // Leading/line-height.
-$base-leading: 1.6;
+$base-leading: 1.8;
 $base-heading-leading: 1.4;
 
 // Base spacing, relative to leading.
@@ -44,18 +40,18 @@ $base-spacing: $base-leading * 1em;
 $medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;
 
-// The core font-size mixin.
-@mixin font-size($size-value: 1.6) {
-  font-size: ($size-value * 10) + px;
-  font-size: $size-value + rem;
-}
+// Font weights
+$base-font-weight: 400;
+$heading-font-weight: 700;
 
 html {
   color: $black;
   line-height: $base-leading;
-  font-size: 10px;
   font-family: $base-font-family;
+  font-weight: $base-font-weight;
 }
+
+
 
 // Headings
 //
@@ -71,49 +67,97 @@ h4,
 h5,
 h6 {
   line-height: $base-heading-leading;
-  font-weight: normal;
+  font-weight: $base-font-weight;
   margin-bottom: $small-spacing;
   margin-top: $base-spacing;
 }
 
 h1 {
-  @include font-size(4.8);
+  font-size: rem(57);
+  font-weight: $base-font-weight;
+
+  @include media($desktop) {
+    font-size: rem(51);
+  }
+
+  @include media($tablet) {
+    font-size: rem(57);
+  }
+
+  @include media($mobile) {
+    font-size: rem(51);
+  }
 }
 
 h2 {
-  @include font-size(3.6);
+  font-size: rem(43);
+
+  @include media($desktop) {
+    font-size: rem(38);
+  }
+
+  @include media($tablet) {
+    font-size: rem(43);
+  }
+
+  @include media($mobile) {
+    font-size: rem(38);
+  }
 }
 
 h3 {
-  @include font-size(2.4);
+  font-size: rem(28);
+  font-weight: $heading-font-weight;
+
+  @include media($desktop) {
+    font-size: rem(28);
+  }
+
+  @include media($tablet) {
+    font-size: rem(32);
+  }
+
+  @include media($mobile) {
+    font-size: rem(28);
+  }
 }
 
 h4 {
-  @include font-size(2.1);
+  font-size: rem(21);
+  font-weight: $heading-font-weight;
+
+  @include media($desktop) {
+    font-size: rem(21);
+  }
+
+  @include media($tablet) {
+    font-size: rem(24);
+  }
+
+  @include media($mobile) {
+    font-size: rem(21);
+  }
 }
 
 h5 {
-  @include font-size(1.6);
+  font-size: rem(16);
+  font-weight: $heading-font-weight;
+
+  @include media($desktop) {
+    font-size: rem(16);
+  }
+
+  @include media($tablet) {
+    font-size: rem(18);
+  }
+
+  @include media($mobile) {
+    font-size: rem(18);
+  }
 }
 
 h6 {
-  @include font-size(1.6);
-}
-
-// For display font sizing.
-.display {
-  @include font-size(7.2);
-
-  // Not settled at all on the breakpoint setup.
-  //
-  // Also need to find a nice and clean way to write this stuff in here.
-  @include media($mobile-landscape and $tablet) {
-    @include font-size(6);
-  }
-
-  @include media(screen and $mobile-landscape) {
-    @include font-size(3.6);
-  }
+  @extend h5;
 }
 
 // Common content elements
@@ -130,7 +174,15 @@ p,
 dt,
 dd {
   margin-bottom: $small-spacing;
-  font-size: 1.6rem;
+  font-size: rem(16);
+
+  @include media($tablet) {
+    font-size: rem(18);
+  }
+
+  @include media($mobile) {
+    font-size: rem(18);
+  }
 }
 
 li {
@@ -154,11 +206,17 @@ dt {
   }
 }
 
+
+// For display font sizing.
+.display {
+  @extend h1;
+}
+
 // More specialised typography.
 //
 // For abstracts or page introductory paragraphs.
 .abstract {
-  @include font-size(2.4);
+  // @include font-size(2.4);
 }
 
 .callout {
