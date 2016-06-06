@@ -10,16 +10,14 @@ $border-box-sizing: true;
 $disable-warnings: true;
 
 $grid-columns: 12 !global;
-$max-width: em(1600) !global;
-$gutter: em(16);
+$max-width: em(1200) !global;
+$gutter: em(20);
 
 // Toggle visibility of your grid columns for development/debugging.
-$visual-grid: false;
+$visual-grid: true;
 
-// Media
-
-$large-desktop: (max-width 1600px);
-$desktop: (min-width 1000px);
-$tablet: (min-width 769px);
-$mobile-landscape: (max-width 768px);
-$mobile: (max-width 420px);
+ // Media Queries
+@import 'vendor/neat/neat-helpers';
+$desktop: new-breakpoint(max-width 1000px 12);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 420px 4);
