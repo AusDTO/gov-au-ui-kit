@@ -2,7 +2,7 @@
 //
 // We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
 //
-// Markup: font-stacks-scss.hbs
+// Markup: templates/font-stacks-scss.hbs
 //
 // Compatibility untested.
 //
@@ -27,7 +27,7 @@ strong {
 //
 // The base-spacing unit is then set in ems by * 1em.
 //
-// Markup: base-typography-scss.hbs
+// Markup: templates/base-typography-scss.hbs
 //
 // Style guide: Typography.Configuration
 
@@ -57,7 +57,7 @@ html {
 //
 // Common styling for headings 1-6.
 //
-// Markup: headings.hbs
+// Markup: templates/headings.hbs
 //
 // Style guide: Typography.Headings
 h1,
@@ -164,7 +164,7 @@ h6 {
 //
 // Base styling and vertical spacing for general content elements.
 //
-// Markup: content-typography.hbs
+// Markup: templates/content-typography.hbs
 //
 // Style guide: Typography.Content
 ul,
