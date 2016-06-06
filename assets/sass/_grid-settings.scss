@@ -14,10 +14,9 @@ $max-width: em(1600) !global;
 $gutter: em(16);
 
 // Toggle visibility of your grid columns for development/debugging.
-$visual-grid: false;
+$visual-grid: true;
 
 // Media
-
 $large-desktop: (max-width 1600px);
 $desktop: (min-width 1000px);
 $tablet: (min-width 769px);
