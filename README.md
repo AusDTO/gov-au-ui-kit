@@ -94,6 +94,7 @@ We use Bourbon 4.2.7, and we include its scss files directly rather than calling
 - gulp-sourcemaps `^1.6.0`
 - gulp-rename `^1.2.2`
 - gulp-gitversion `^0.0.8`
+- gulp-html `^0.4.4`
 - kss `^3.0.0-beta.14`
 
 `^` = *compatible with version* (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).

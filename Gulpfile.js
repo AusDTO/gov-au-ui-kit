@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     kss = require('kss'),
     sourcemaps = require('gulp-sourcemaps'),
     scsslint = require('gulp-scss-lint'),
-    gitVersion = require('gulp-gitversion');
+    gitVersion = require('gulp-gitversion')
+    ;
 
 var paths = {
     scss: './assets/sass/style.scss',
@@ -47,7 +48,13 @@ gulp.task('styles.min', function () {
         .pipe(gulp.dest(paths.output));
 });
 gulp.task('examples', function () {
-    return gulp.src('examples/*').pipe(gulp.dest(paths.output));
+    return gulp.src('examples/*')
+        .pipe(gulp.dest(paths.output));
+});
+gulp.task('htmlvalidate', function () {
+    validator = require('gulp-html')
+    return gulp.src(['build/*.html','build/**/*.html'])
+        .pipe(validator({'verbose':true}));
 });
 gulp.task('styleguide', function () {
     return kss({
@@ -64,13 +71,17 @@ gulp.task('default', function () {
 });
 
 gulp.task('build', function () {
-    gulp.start(['lint', 'styles', 'styles.min', 'examples', 'styleguide']);
+    gulp.start(['lint', 'styles', 'examples', 'styleguide']);
+});
+
+gulp.task('build.prod', function () {
+    gulp.start(['lint', 'styles', 'styles.min', 'examples', 'styleguide', 'htmlvalidate']);
 });
 
 gulp.task('watch', function () {
     gulp.watch(paths.scss, ['styles']);
 });
 
-gulp.task('build.watch', function () {
+gulp.task('watch.build', function () {
     gulp.watch(paths.scss, ['build']);
 });
