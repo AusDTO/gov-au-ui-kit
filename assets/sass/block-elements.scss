@@ -1,6 +1,11 @@
 // Describe me so no evil shall be committed in wielding this class!
 .wrapper {
   @include outer-container;
+
+  @include media($tablet) {
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+  }
 }
 
 header {
@@ -36,6 +41,9 @@ main {
     @include media($mobile) {
       @include span-columns(4 of 4);
       @include shift(0);
+
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
     }
 
   }
@@ -48,6 +56,9 @@ main {
 
   @include media($tablet) {
     @include span-columns(2 of 8);
+
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
   }
 
   @include media($mobile) {
