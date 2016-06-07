@@ -26,7 +26,7 @@ main {
 
   article {
 
-    @include span-columns(8 of 12);
+    @include span-columns(7 of 12);
 
     @include media($tablet) {
       @include span-columns(6 of 8);
