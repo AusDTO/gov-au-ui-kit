@@ -34,6 +34,7 @@ strong {
 // Leading/line-height.
 $base-leading: 1.8;
 $base-heading-leading: 1.4;
+$small-leading: 1.2;
 
 // Base spacing, relative to leading.
 $base-spacing: $base-leading * 1em;
@@ -75,6 +76,7 @@ h6 {
 h1 {
   font-size: rem(57);
   font-weight: $base-font-weight;
+  line-height: $small-leading;
 
   @include media($desktop) {
     font-size: rem(51);
@@ -91,6 +93,7 @@ h1 {
 
 h2 {
   font-size: rem(43);
+  line-height: $small-leading;
 
   @include media($desktop) {
     font-size: rem(38);
