@@ -51,6 +51,10 @@ gulp.task('examples', function () {
     return gulp.src('examples/*')
         .pipe(gulp.dest(paths.output));
 });
+gulp.task('nginx', function () {
+    return gulp.src('nginx.conf')
+        .pipe(gulp.dest(paths.output));
+});
 gulp.task('htmlvalidate', function () {
     validator = require('gulp-html')
     return gulp.src(['build/*.html','build/**/*.html'])
@@ -75,7 +79,7 @@ gulp.task('build', function () {
 });
 
 gulp.task('build.prod', function () {
-    gulp.start(['lint', 'styles', 'styles.min', 'examples', 'styleguide', 'htmlvalidate']);
+    gulp.start(['lint', 'nginx', 'styles', 'styles.min', 'examples', 'styleguide', 'htmlvalidate']);
 });
 
 gulp.task('watch', function () {
