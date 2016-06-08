@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     ;
 
 var paths = {
+    scssDir: './assets/sass/**/*.scss',
     scss: './assets/sass/style.scss',
     output: './build/'
 };
@@ -78,9 +79,9 @@ gulp.task('build.prod', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.scss, ['styles']);
+    gulp.watch(paths.scssDir, ['styles']);
 });
 
 gulp.task('watch.build', function () {
-    gulp.watch(paths.scss, ['build']);
+    gulp.watch(paths.scssDir, ['build']);
 });
