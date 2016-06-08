@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     kss = require('kss'),
-    sourcemaps = require('gulp-sourcemaps'),
     scsslint = require('gulp-scss-lint'),
     gitVersion = require('gulp-gitversion')
     ;
@@ -28,10 +27,8 @@ gulp.task('lint', function () {
 
 gulp.task('styles', function () {
     return gulp.src(paths.scss)
-        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(gitVersion())
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.output));
 });
 
