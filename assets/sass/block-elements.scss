@@ -48,6 +48,16 @@ main {
 
   }
 
+  .form-wrapper {
+
+    @include span-columns(5);
+
+    @include media($tablet) {
+      @include span-columns(8 of 8);
+    }
+
+  }
+
 }
 
 .sidebar {
