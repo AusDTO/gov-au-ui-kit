@@ -37,14 +37,12 @@ gulp.task('styles', function () {
 
 gulp.task('styles.min', function () {
     return gulp.src(paths.scss)
-        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(cssnano())
         .pipe(gitVersion())
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.output));
 });
 gulp.task('examples', function () {
