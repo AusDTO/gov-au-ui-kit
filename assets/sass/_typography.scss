@@ -227,7 +227,7 @@ dt {
 //
 // Styling for in-line quotations and blockquotes, and citations.
 //
-// Markup: templates/quotations.hbs
+// Markup: templates/quotations-typography.hbs
 //
 // Style guide: Typography.Quotations
 blockquote {
@@ -257,6 +257,12 @@ blockquote {
     padding-bottom: $medium-spacing;
     text-align: right;
     content: close-quote;
+  }
+
+  footer {
+    margin-top: $medium-spacing;
+    padding-top: ($small-spacing / 2);
+    border-top: 1px solid $light-grey;
   }
 
   cite {
