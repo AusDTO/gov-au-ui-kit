@@ -95,6 +95,34 @@
       </ol>
 
     </article>
+
+    <article class="form-wrapper">
+
+        <h2>Contact Us</h2>
+        <form>
+            <p>
+                <label for="name">Your name</label>
+                <input type="text" id="name" required />
+            </p>
+            <p>
+                <label for="colour">Your favourite colour</label>
+                <input type="text" id="colour" disabled />
+            </p>
+            <p>
+                <label for="contact">Your contact</label>
+                <span class="hint" id="name-hint">Please provide an email address or phone number.</span>
+                <input type="text" id="contact" aria-describedby="name-hint" />
+            </p>
+            <p>
+                <label for="message">Your message</label>
+                <textarea id="message"></textarea>
+            </p>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </form>
+
+    </article>
+
   </main>
 
   <footer>
