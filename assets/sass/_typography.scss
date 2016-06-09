@@ -46,14 +46,15 @@ $tiny-spacing: $base-spacing / 4;
 $base-font-weight: 400;
 $heading-font-weight: 700;
 
+// Font styles
+$base-font-style: normal;
+
 html {
   color: $body-text-colour;
   line-height: $base-leading;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
 }
-
-
 
 // Headings
 //
@@ -219,14 +220,85 @@ dt {
 //
 // For abstracts or page introductory paragraphs.
 .abstract {
-  // @include font-size(2.4);
+  font-size: rem(24);
+}
+
+// Quotations
+//
+// Styling for in-line quotations and blockquotes, and citations.
+//
+// Markup: templates/quotations-typography.hbs
+//
+// Style guide: Typography.Quotations
+blockquote {
+  margin: $medium-spacing 0;
+  padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
+  background-color: #f9f9f9;
+  font-family: $base-serif;
+  quotes: '\201C''\201D''\2018''\2019';
+
+  &::before,
+  &::after {
+    display: block;
+    height: 0;
+    font-family: $base-serif;
+    font-size: rem(43);
+    color: $light-navy;
+  }
+
+  &::before {
+    margin-left: -($small-spacing * 0.75);
+    content: open-quote;
+  }
+
+  &::after {
+    margin-right: -($small-spacing * 0.75);
+    margin-top: -($small-spacing);
+    padding-bottom: $medium-spacing;
+    text-align: right;
+    content: close-quote;
+  }
+
+  footer {
+    margin-top: $medium-spacing;
+    padding-top: ($small-spacing / 2);
+    border-top: 1px solid $light-grey;
+  }
+
+  cite {
+    display: inline-block;
+    font-family: $base-sans-serif;
+
+    &::before {
+      content: 'Citation: ';
+      text-transform: lowercase;
+      font-variant: small-caps;
+      letter-spacing: 1px;
+      color: $dark-grey;
+    }
+  }
+
+  blockquote {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+q {
+  quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';
+}
+
+cite {
+  font-style: $base-font-style;
 }
 
 .callout {
+  margin: $base-spacing $small-spacing;
+  padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
   border-radius: $tiny-border-radius;
   box-shadow: 0 0 8px rgba($black, 0.45);
-  padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
-  margin: $base-spacing $small-spacing;
 }
 
 .warning-block {

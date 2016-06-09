@@ -1,7 +1,6 @@
 // Describe me so no evil shall be committed in wielding this class!
 .wrapper {
   @include outer-container;
-
   @include media($tablet) {
     padding-left: $small-spacing;
     padding-right: $small-spacing;
@@ -20,19 +19,21 @@ header {
 }
 
 footer {
-  @include outer-container(100%);
 
-  background-color: $non-black;
-  color: $white;
+  &[role='contentinfo'] {
+    @include outer-container(100%);
+
+    background-color: $non-black;
+    color: $white;
+    margin-top: ($base-spacing * 2);
+  }
 }
 
 main {
   @include outer-container();
 
   article {
-
     @include span-columns(7 of 12);
-
     @include media($tablet) {
       @include span-columns(6 of 8);
       @include shift(2);
@@ -45,7 +46,6 @@ main {
       padding-left: $small-spacing;
       padding-right: $small-spacing;
     }
-
   }
 
   .form-wrapper {
@@ -69,9 +69,7 @@ main {
 
 
 .sidebar {
-
   @include span-columns(3 of 12);
-
   @include media($tablet) {
     @include span-columns(2 of 8);
 
