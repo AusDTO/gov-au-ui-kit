@@ -1,0 +1,79 @@
+
+  // Primary navigation
+  //
+  // A vertical navigation menu that fits three levels of items.
+  //
+  // Markup: templates/navigation.hbs
+  //
+  // Style guide: Components.Navigation
+
+.primary-nav {
+
+  ul {
+    margin: $base-spacing 0;
+    padding: 0;
+    list-style: none;
+
+    ul {
+      margin: 0;
+    }
+
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $secondary-border-colour;
+
+    &:first-child {
+      border-top: 1px solid $secondary-border-colour;
+    }
+  }
+
+  a {
+    display: block;
+    border-left: 2px solid transparent;
+    padding: $tiny-spacing $small-spacing;
+    background-color: $background-colour;
+    text-decoration: none;
+    color: $non-black;
+
+    &:hover,
+    &:active,
+    &.active {
+      border-color: $contrast-border-colour;
+      background-color: $contrast-background-colour;
+    }
+
+  }
+
+}
+
+.sub-nav-list {
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  a {
+    border-left: 1px solid transparent;
+    padding-left: $base-spacing;
+
+    &:hover {
+      border-left: 1px solid $contrast-border-colour;
+    }
+  }
+
+}
+
+.sub-sub-nav-list {
+
+  a {
+    padding-left: $base-spacing + $small-spacing;
+    background-image: url($icon-arrow-r);
+    background-repeat: no-repeat;
+    background-position: $base-spacing $small-spacing * 1.15;
+    background-size: $tiny-spacing auto;
+  }
+
+}
