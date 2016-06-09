@@ -84,7 +84,7 @@ Contributors should be familiar with the [Contributor Code of Conduct](https://g
 
 #### Naming
 
-(Stollen almost entirely from the [18F Frontend Guide](https://pages.18f.gov/frontend/css-coding-styleguide/naming/).)
+(Stolen almost entirely from the [18F Frontend Guide](https://pages.18f.gov/frontend/css-coding-styleguide/naming/).)
 
 * HTML elements should be in lowercase
 * Classes should be in lowercase
