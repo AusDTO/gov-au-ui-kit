@@ -63,8 +63,9 @@ main {
 
 .sidebar {
   @include span-columns(3 of 12);
+
   @include media($tablet) {
     @include span-columns(8 of 8);
   }
-  
+
 }
