@@ -3,12 +3,12 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     kss = require('kss'),
-    sourcemaps = require('gulp-sourcemaps'),
     scsslint = require('gulp-scss-lint'),
     gitVersion = require('gulp-gitversion')
     ;
 
 var paths = {
+    scssDir: './assets/sass/**/*.scss',
     scss: './assets/sass/style.scss',
     output: './build/'
 };
@@ -28,23 +28,19 @@ gulp.task('lint', function () {
 
 gulp.task('styles', function () {
     return gulp.src(paths.scss)
-        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(gitVersion())
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.output));
 });
 
 gulp.task('styles.min', function () {
     return gulp.src(paths.scss)
-        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(cssnano())
         .pipe(gitVersion())
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.output));
 });
 gulp.task('examples', function () {
@@ -83,9 +79,9 @@ gulp.task('build.prod', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.scss, ['styles']);
+    gulp.watch(paths.scssDir, ['styles']);
 });
 
 gulp.task('watch.build', function () {
-    gulp.watch(paths.scss, ['build']);
+    gulp.watch(paths.scssDir, ['build']);
 });

@@ -40,6 +40,7 @@ $small-leading: 1.2;
 $base-spacing: $base-leading * 1em;
 $medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;
+$tiny-spacing: $base-spacing / 4;
 
 // Font weights
 $base-font-weight: 400;
@@ -49,7 +50,7 @@ $heading-font-weight: 700;
 $base-font-style: normal;
 
 html {
-  color: $black;
+  color: $body-text-colour;
   line-height: $base-leading;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
@@ -209,7 +210,6 @@ dt {
     margin-top: 0;
   }
 }
-
 
 // For display font sizing.
 .display {
