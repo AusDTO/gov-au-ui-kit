@@ -19,10 +19,14 @@ header {
 }
 
 footer {
-  @include outer-container(100%);
 
-  background-color: $non-black;
-  color: $white;
+  &[role='contentinfo'] {
+    @include outer-container(100%);
+
+    background-color: $non-black;
+    color: $white;
+    margin-top: ($base-spacing * 2);
+  }
 }
 
 main {
