@@ -36,7 +36,7 @@ main {
     @include span-columns(7 of 12);
     @include media($tablet) {
       @include span-columns(6 of 8);
-      @include shift(2);
+      // @include shift(2);
     }
 
     @include media($mobile) {
@@ -50,17 +50,10 @@ main {
 
   .form-wrapper {
 
-    @include span-columns(5 of 12);
-    @include shift(3);
-
-    @include media($tablet) {
-      @include span-columns(6 of 8);
-      @include shift(2);
-    }
+    @include span-columns(4 of 6);
 
     @include media($mobile) {
       @include span-columns(4 of 4);
-      @include shift(0);
     }
 
   }
@@ -70,22 +63,9 @@ main {
 
 .sidebar {
   @include span-columns(3 of 12);
+
   @include media($tablet) {
-    @include span-columns(2 of 8);
-
-    padding-left: $small-spacing;
-    padding-right: $small-spacing;
+    @include span-columns(8 of 8);
   }
 
-  @include media($mobile) {
-    @include span-columns(4 of 4);
-  }
-}
-
-nav {
-  ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
 }
