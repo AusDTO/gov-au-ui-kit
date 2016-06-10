@@ -296,6 +296,8 @@ cite {
   font-style: $base-font-style;
 }
 
+
+// Callouts
 .callout {
   margin: $base-spacing $small-spacing;
   padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
@@ -306,4 +308,35 @@ cite {
 .warning-block {
   border-left: ($small-spacing / 2) solid $red;
   padding-left: $base-spacing - ($small-spacing / 2);
+}
+
+// Badges
+//
+// Styling for 'badges' that hold either an item number, or to demarcate status (e.g. alpha, beta, draft).
+//
+// Markup: templates/badge-typography.hbs
+//
+// Style guide: Typography.Badges
+%base-badge {
+  // We should put something clever here.
+  border-radius: $large-border-radius;
+  padding: $tiny-spacing $small-spacing;
+  vertical-align: top;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: rem(14);
+}
+
+.badge--alpha {
+  @extend %base-badge;
+
+  background-color: $non-black;
+  color: $white;
+}
+
+.badge--beta {
+  @extend %base-badge;
+
+  background-color: $pink;
+  color: $white;
 }

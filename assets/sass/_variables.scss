@@ -1,5 +1,6 @@
 $base-z-index: 0;
 $base-border-radius: 3px;
 $tiny-border-radius: ($base-border-radius / 3);
+$large-border-radius: ($base-border-radius * 4);
 
 // Spacing is governed by _typography.
