@@ -20,10 +20,28 @@
   <main>
 
     <aside class="sidebar">
-      <nav>
+      <nav class="primary-nav" aria-label="main navigation">
         <ul>
-          <li>nav item 1</li>
-          <li>nav item 2</li>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Purpose</a></li>
+          <li>
+            <a href="#">Foundations</a>
+            <ul class="sub-nav-list">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Design principles</a></li>
+              <li><a href="#">Grid</a></li>
+              <li>
+                <a href="#">Typography</a>
+                <ul class="sub-sub-nav-list">
+                  <li><a href="#">Line height and spacing</a></li>
+                  <li><a href="#">Typesetting</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Text accessibility</a></li>
+              <li><a href="#">Links</a></li>
+              <li><a href="#">Lists</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -122,32 +140,32 @@
         <li>Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
       </ol>
 
-    </article>
+      <section class="form-wrapper">
 
-    <article class="form-wrapper">
+          <h2>Contact Us</h2>
+          <form>
+              <p>
+                  <label for="name">Your name</label>
+                  <input type="text" id="name" required />
+              </p>
+              <p>
+                  <label for="colour">Your favourite colour</label>
+                  <input type="text" id="colour" disabled />
+              </p>
+              <p>
+                  <label for="contact">Your contact</label>
+                  <span class="hint" id="name-hint">Please provide an email address or phone number.</span>
+                  <input type="text" id="contact" aria-describedby="name-hint" />
+              </p>
+              <p>
+                  <label for="message">Your message</label>
+                  <textarea id="message"></textarea>
+              </p>
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" />
+          </form>
 
-        <h2>Contact Us</h2>
-        <form>
-            <p>
-                <label for="name">Your name</label>
-                <input type="text" id="name" required />
-            </p>
-            <p>
-                <label for="colour">Your favourite colour</label>
-                <input type="text" id="colour" disabled />
-            </p>
-            <p>
-                <label for="contact">Your contact</label>
-                <span class="hint" id="name-hint">Please provide an email address or phone number.</span>
-                <input type="text" id="contact" aria-describedby="name-hint" />
-            </p>
-            <p>
-                <label for="message">Your message</label>
-                <textarea id="message"></textarea>
-            </p>
-            <input type="submit" value="Submit" />
-            <input type="reset" value="Reset" />
-        </form>
+      </section>
 
     </article>
 
