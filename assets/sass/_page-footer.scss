@@ -1,0 +1,37 @@
+.page-footer {
+  .footer-logo {
+    @include span-columns(3 of 12);
+
+    @include media($mobile) {
+      @include span-columns(8 of 8);
+    }
+
+    img {
+      height: $base-spacing * 3;
+    }
+  }
+
+  nav {
+    @include media($tablet) {
+      @include span-columns(6 of 8);
+      // @include shift(2);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4 of 4);
+      @include shift(0);
+
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+}

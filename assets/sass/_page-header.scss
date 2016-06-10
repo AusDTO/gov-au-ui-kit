@@ -1,0 +1,17 @@
+.page-header {
+  .status {
+    background-color: $pink;
+    color: $white;
+    padding: $medium-spacing 0;
+
+    p {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    padding-top: $tiny-spacing;
+  }
+}

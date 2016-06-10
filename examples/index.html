@@ -9,15 +9,21 @@
 </head>
 <body>
 
-  <header>
+  <header role="banner" class="page-header">
+    <section class="status">
+      <div class="wrapper">
+        <p>This is current status bar, for msgs, similar to that of the gov.au alpha.</p>
+      </div>
+    </section>
+    </div>
     <div class="wrapper">
-      <h1 class="page-title">
-        Heading 1
+      <h1 class="site-title">
+        GOV.AU: h1.site-title
       </h1>
     </div>
   </header>
 
-  <main>
+  <main role="main">
 
     <aside class="sidebar">
       <nav class="primary-nav" aria-label="main navigation">
@@ -73,7 +79,7 @@
       <p>We need to be able to cater for both block quotations, as well as in-line quotations via the <code>q</code> element, because Simon said <q>yo dawg, get them quotes on yo!</q></p>
 
       <p>The <code>q</code> element is unlikely to see a lot of use, unless we play with the editors to be used for authoring and editing things. The other issue with using the <code>content</code> property is that text selection of its contents is not available, so the opening and closing quotation marks are not selectable.</p>
-      
+
       <p>Time for a <code>blockquote</code>, which are distinct from in-line qutoations via the <code>q</code> element.</p>
 
       <blockquote>
@@ -171,9 +177,21 @@
 
   </main>
 
-  <footer role="contentinfo">
+  <footer role="contentinfo" class="page-footer">
     <div class="wrapper">
-      <p>This is my footer.</p>
+      <div class="footer-logo">
+        <img src="https://www.gov.au/alpha/assets/coatofarms-01.svg" alt="Logo image">
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="javascript:void(0)">Foo</a></li>
+          <li><a href="javascript:void(0)">Bar</a></li>
+          <li><a href="javascript:void(0)">Baz</a></li>
+        </ul>
+      </nav>
+
+      <p>This is a plain paragraph in the footer.</p>
     </div>
   </footer>
 
