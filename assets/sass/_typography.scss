@@ -234,6 +234,7 @@ blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
   background-color: #f9f9f9;
+  border-radius: $tiny-border-radius;
   font-family: $base-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
@@ -278,6 +279,7 @@ blockquote {
     }
   }
 
+  // So that nested blockquotes do not break the vertical rhythm.
   blockquote {
     margin-top: 0;
     margin-bottom: 0;
@@ -287,6 +289,7 @@ blockquote {
 }
 
 q {
+  // Investigate: switching to html entitites?
   quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';
 }
 
