@@ -15,8 +15,8 @@ $non-white:     #f0f3f5;
 $white:         #fff;
 
 $aqua:          #1b8197;
-$dark-aqua:     darken($aqua, 10%);
-$darker-aqua:   darken($aqua, 25%);
+$dark-aqua:     darken($aqua, 5%);
+$darker-aqua:   darken($aqua, 10%);
 $light-aqua:    lighten($aqua, 30%);
 
 $navy:          #225187;
@@ -26,8 +26,8 @@ $light-navy:    lighten($navy, 30%);
 $red:           #cc0000;
 
 $pink:          #880e48;
-$dark-pink:     darken($pink, 15%);
-$darker-pink:   darken($pink, 25%);
+$dark-pink:     darken($pink, 5%);
+$darker-pink:   darken($pink, 10%);
 
 $background-colour:           $white;
 $contrast-background-colour:  $lighter-grey;

@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     kss = require('kss'),
     scsslint = require('gulp-scss-lint'),
+    autoprefixer = require('gulp-autoprefixer'),
     gitVersion = require('gulp-gitversion')
     ;
 
@@ -11,6 +12,12 @@ var paths = {
     scssDir: './assets/sass/**/*.scss',
     scss: './assets/sass/style.scss',
     output: './build/'
+};
+
+var options = {
+  autoprefixer: {
+    browsers: ['last 2 versions']
+  }
 };
 
 gulp.task('lint', function () {
@@ -28,6 +35,7 @@ gulp.task('lint', function () {
 
 gulp.task('styles', function () {
     return gulp.src(paths.scss)
+        .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.output));
@@ -35,6 +43,7 @@ gulp.task('styles', function () {
 
 gulp.task('styles.min', function () {
     return gulp.src(paths.scss)
+        .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
         .pipe(cssnano())
         .pipe(gitVersion())
