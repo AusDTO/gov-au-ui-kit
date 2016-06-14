@@ -31,7 +31,11 @@
   &[disabled],
   &[disabled]:hover,
   &[disabled]:active,
-  &[disabled]:focus {
+  &[disabled]:focus,
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:active,
+  &.disabled:focus {
     cursor: pointer;
     outline: none;
     background-color: $border-colour;
@@ -39,9 +43,7 @@
   }
 
   @include media($tablet) {
-    & {
-      margin: $small-spacing;
-    }
+    margin: $small-spacing;
   }
 
 }
@@ -61,7 +63,7 @@
 //
 // Compatibility untested.
 //
-// Style guide: Typography.Font-stacks
+// Style guide: Buttons and Links.Buttons
 
 
 button,
