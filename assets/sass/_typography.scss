@@ -44,7 +44,8 @@ $tiny-spacing: $base-spacing / 4;
 
 // Font weights
 $base-font-weight: 400;
-$heading-font-weight: 700;
+$bold-font-weight: 700;
+$heading-font-weight: $bold-font-weight;
 
 // Font styles
 $base-font-style: normal;

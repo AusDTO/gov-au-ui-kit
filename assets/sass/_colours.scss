@@ -14,28 +14,43 @@ $lighter-grey:  lighten($grey, 45%);
 $non-white:     #f0f3f5;
 $white:         #fff;
 
-$aqua:          #02bfe7;
-$dark-aqua:      darken($aqua, 25%);
+$aqua:          #1b8197;
+$dark-aqua:     darken($aqua, 10%);
+$darker-aqua:   darken($aqua, 25%);
 $light-aqua:    lighten($aqua, 30%);
 
 $navy:          #225187;
 $dark-navy:     darken($navy, 25%);
 $light-navy:    lighten($navy, 30%);
 
-$red: #cc0000;
-$pink: #880e48;
+$red:           #cc0000;
+
+$pink:          #880e48;
+$dark-pink:     darken($pink, 15%);
+$darker-pink:   darken($pink, 25%);
 
 $background-colour:           $white;
 $contrast-background-colour:  $lighter-grey;
 $link-colour:                 $non-black;
-$button-colour:               $dark-aqua;
-$button-hover-colour:         $dark-navy;
+
+$button-colour:               $aqua;
+$button-hover-colour:         $darker-aqua;
+$button-active-colour:        $dark-aqua;
+
+$button-contrast-colour:        $pink;
+$button-contrast-hover-colour:  $darker-pink;
+$button-contrast-active-colour: $dark-pink;
+
+$button-text-colour:          $white;
+
 $frame-colour:                $light-grey;
 $primary-colour:              $light-navy;
 $highlight-colour:            $aqua;
 $error-colour:                $red;
+
 $border-colour:               $light-grey;
 $secondary-border-colour:     $lighter-grey;
 $contrast-border-colour:      $navy;
+
 $body-text-colour:            $black;
 $secondary-text-colour:       $grey;

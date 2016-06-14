@@ -1,0 +1,64 @@
+
+%base-button {
+  appearance: none;
+  border: none;
+  outline: 2px solid transparent;
+  padding: $tiny-spacing $medium-spacing;
+  background-color: $button-colour;
+  text-decoration: none;
+  font-weight: $bold-font-weight;
+  color: $button-text-colour;
+
+  &:focus {
+    outline-color: $button-outline-colour;
+  }
+
+  &:hover {
+    background-color: $button-hover-colour;
+  }
+
+  &:active {
+    background-color: $button-active-colour;
+  }
+
+}
+
+// Buttons
+//
+// Use buttons to move through a transaction. Aim to use only one button per
+// page.
+//
+// .icon-arrow-r - Places a right-facing arrow inside the button
+// .contrast - Visually distinct from the default button style
+// .secondary - When more than one button is needed
+// ::disabled - Indicates that a button can't be clicked
+//
+// Markup: <button>Next</button>
+//
+// Compatibility untested.
+//
+// Style guide: Typography.Font-stacks
+
+
+button,
+[role='button'] {
+  @extend %base-button;
+
+  &.contrast {
+    background-color: $button-contrast-colour;
+
+    &:hover {
+      background-color: $button-contrast-hover-colour;
+    }
+
+    &:active {
+      background-color: $button-contrast-active-colour;
+    }
+
+  }
+
+  &.secondary {
+    background-color: none;
+  }
+
+}
