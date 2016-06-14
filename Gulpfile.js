@@ -5,13 +5,15 @@ var gulp = require('gulp'),
     kss = require('kss'),
     scsslint = require('gulp-scss-lint'),
     autoprefixer = require('gulp-autoprefixer'),
-    gitVersion = require('gulp-gitversion')
+    gitVersion = require('gulp-gitversion'),
+    scssMerge = require('./lib/gulp-scss-merge.js')
     ;
 
 var paths = {
     scssDir: './assets/sass/**/*.scss',
-    scss: './assets/sass/style.scss',
-    output: './build/'
+    scss: './assets/sass/ui-kit.scss',
+    outputAssets: './build/latest',
+    outputHTML: './build'
 };
 
 var options = {
@@ -29,19 +31,23 @@ gulp.task('lint', function () {
         }))
         .pipe(gulp.dest(
             (typeof process.env.CIRCLE_TEST_REPORTS != 'undefined') ?
-                process.env.CIRCLE_TEST_REPORTS : paths.output))
+                process.env.CIRCLE_TEST_REPORTS : paths.outputAssets))
         .pipe(scsslint.failReporter('E'))
 });
 
-gulp.task('styles', function () {
+gulp.task('ui-kit', function () {
     return gulp.src(paths.scss)
         .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
         .pipe(gitVersion())
-        .pipe(gulp.dest(paths.output));
+        .pipe(gulp.dest(paths.outputAssets));
 });
-
-gulp.task('styles.min', function () {
+gulp.task('ui-kit.scssmerge', function() {
+    return gulp.src(paths.scss)
+        .pipe(scssMerge('_ui-kit.scss'))
+        .pipe(gulp.dest(paths.outputAssets));
+});
+gulp.task('ui-kit.min', function () {
     return gulp.src(paths.scss)
         .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
@@ -50,15 +56,15 @@ gulp.task('styles.min', function () {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest(paths.output));
+        .pipe(gulp.dest(paths.outputAssets));
 });
 gulp.task('examples', function () {
     return gulp.src('examples/*')
-        .pipe(gulp.dest(paths.output));
+        .pipe(gulp.dest(paths.outputHTML));
 });
 gulp.task('nginx', function () {
     return gulp.src('nginx.conf')
-        .pipe(gulp.dest(paths.output));
+        .pipe(gulp.dest(paths.outputHTML));
 });
 gulp.task('htmlvalidate', function () {
     validator = require('gulp-html')
@@ -68,27 +74,27 @@ gulp.task('htmlvalidate', function () {
 gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
-        css: '../style.css',
-        destination: paths.output+'/kss',
+        css: '../latest/ui-kit.css',
+        destination: paths.outputHTML+'/kss',
         homepage: '../../README.md',
         builder: 'kss-builder'
     });
 });
 
 gulp.task('default', function () {
-    gulp.start('styles');
+    gulp.start('ui-kit');
 });
 
 gulp.task('build', function () {
-    gulp.start(['lint', 'styles', 'examples', 'styleguide']);
+    gulp.start(['lint', 'ui-kit', 'examples', 'styleguide']);
 });
 
 gulp.task('build.prod', function () {
-    gulp.start(['lint', 'nginx', 'styles', 'styles.min', 'examples', 'styleguide', 'htmlvalidate']);
+    gulp.start(['lint', 'nginx', 'ui-kit', 'ui-kit.min','ui-kit.scssmerge', 'examples', 'styleguide', 'htmlvalidate']);
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.scssDir, ['styles']);
+    gulp.watch(paths.scssDir, ['ui-kit']);
 });
 
 gulp.task('watch.build', function () {
