@@ -44,7 +44,8 @@ $tiny-spacing: $base-spacing / 4;
 
 // Font weights
 $base-font-weight: 400;
-$heading-font-weight: 700;
+$bold-font-weight: 700;
+$heading-font-weight: $bold-font-weight;
 
 // Font styles
 $base-font-style: normal;
@@ -163,6 +164,22 @@ h5 {
 
 h6 {
   @extend h5;
+}
+
+a {
+  color: $link-colour;
+  text-decoration: none;
+  border-bottom: 1px solid;
+
+  &:visited {
+    color: $link-colour;
+  }
+
+  &:hover,
+  &:active {
+    color: $highlight-colour;
+  }
+
 }
 
 // Common content elements

@@ -1,0 +1,99 @@
+
+%base-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  border: none;
+  outline-offset: -2px;
+  outline: 2px solid transparent;
+  padding: $tiny-spacing $medium-spacing $tiny-spacing * 1.3;
+  background-color: $button-colour;
+  text-decoration: none;
+  font-weight: $bold-font-weight;
+  color: $button-text-colour;
+
+  &:focus {
+    outline-color: lighten($button-colour, 25%);
+  }
+
+  &:visited {
+    color: $button-text-colour;
+  }
+
+  &:hover {
+    background-color: $button-hover-colour;
+  }
+
+  &:active {
+    background-color: $button-active-colour;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active,
+  &[disabled]:focus,
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:active,
+  &.disabled:focus {
+    cursor: pointer;
+    outline: none;
+    background-color: $border-colour;
+    color: $link-colour;
+  }
+
+  @include media($tablet) {
+    margin: $small-spacing;
+  }
+
+}
+
+
+// Buttons
+//
+// Use buttons to move through a transaction. Aim to use only one button per
+// page.
+//
+// .icon-arrow-r - Places a right-facing arrow inside the button
+// .contrast - Visually distinct from the default button style
+// .secondary - When more than one button is needed
+// ::disabled - Indicates that a button can't be clicked
+//
+// Markup: <button>Next</button>
+//
+// Compatibility untested.
+//
+// Style guide: Buttons and Links.Buttons
+
+
+button,
+[role='button'] {
+  @extend %base-button;
+
+  & + & {
+    margin-left: $small-spacing;
+  }
+
+  &.contrast {
+    background-color: $button-contrast-colour;
+
+    &:focus {
+      outline-color: lighten($button-contrast-colour, 25%);
+    }
+
+    &:hover {
+      background-color: $button-contrast-hover-colour;
+    }
+
+    &:active {
+      background-color: $button-contrast-active-colour;
+    }
+
+  }
+
+  &.secondary {
+    background-color: none;
+    text-decoration: underline;
+  }
+
+}
