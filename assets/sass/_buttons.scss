@@ -36,10 +36,10 @@
   &.disabled:hover,
   &.disabled:active,
   &.disabled:focus {
-    cursor: pointer;
+    cursor: not-allowed;
     outline: none;
-    background-color: $border-colour;
-    color: $link-colour;
+    background-color: $button-disabled;
+    color: $non-black;
   }
 
   @include media($tablet) {
