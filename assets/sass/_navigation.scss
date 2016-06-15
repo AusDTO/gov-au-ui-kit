@@ -1,11 +1,24 @@
+// Primary navigation
+//
+// A vertical navigation menu that fits three levels of items.
+//
+// Markup: templates/navigation.hbs
+//
+// Style guide: Components.Navigation
+.accordion {
+  @include media($tablet) {
+    display: none;
+  }
 
-  // Primary navigation
-  //
-  // A vertical navigation menu that fits three levels of items.
-  //
-  // Markup: templates/navigation.hbs
-  //
-  // Style guide: Components.Navigation
+  .accordion-heading {
+    .rotate {
+      transition: all 300ms linear;
+      .down {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
 
 .primary-nav {
 

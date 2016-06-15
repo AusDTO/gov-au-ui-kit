@@ -12,8 +12,9 @@ var gulp = require('gulp'),
     ;
 
 var paths = {
-    scssDir: './assets/sass/**/*.scss',
+    assetsDir: './assets/**/*.*',
     scss: './assets/sass/ui-kit.scss',
+    js: './assets/js/ui-kit.js',
     outputAssets: './build/latest',
     outputHTML: './build'
 };
@@ -36,11 +37,18 @@ gulp.task('lint', function () {
                 process.env.CIRCLE_TEST_REPORTS : paths.outputAssets))
         .pipe(scsslint.failReporter('E'))
 });
-
 gulp.task('ui-kit', function () {
+    gulp.start(['ui-kit.scss', 'ui-kit.js']);
+});
+gulp.task('ui-kit.scss', function () {
     return gulp.src(paths.scss)
         .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
+        .pipe(gitVersion())
+        .pipe(gulp.dest(paths.outputAssets));
+});
+gulp.task('ui-kit.js', function () {
+    return gulp.src(paths.js)
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
@@ -50,10 +58,22 @@ gulp.task('ui-kit.scssmerge', function() {
         .pipe(gulp.dest(paths.outputAssets));
 });
 gulp.task('ui-kit.min', function () {
+    gulp.start(['ui-kit.min.scss', 'ui-kit.min.js']);
+});
+gulp.task('ui-kit.min.scss', function () {
     return gulp.src(paths.scss)
         .pipe(autoprefixer())
         .pipe(sass().on('error', sass.logError))
         .pipe(cssnano())
+        .pipe(gitVersion())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.outputAssets));
+});
+gulp.task('ui-kit.min.js', function () {
+    return gulp.src(paths.js)
+        .pipe(uglify())
         .pipe(gitVersion())
         .pipe(rename({
             suffix: '.min'
@@ -100,9 +120,9 @@ gulp.task('build.prod', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.scssDir, ['ui-kit']);
+    gulp.watch(paths.assetsDir, ['ui-kit']);
 });
 
 gulp.task('watch.build', function () {
-    gulp.watch(paths.scssDir, ['build']);
+    gulp.watch(paths.assetsDir, ['build']);
 });
