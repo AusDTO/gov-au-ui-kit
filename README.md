@@ -26,10 +26,15 @@ This framework is in active development.
 
 **Releases:** we are currently in pre-release stage (early June).
 
-**Usage:** we have, and are seeking more early users. Contact us on slack:
+**Usage:** we have, and are seeking more early users.
 
-- @maxious
-- @klepas
+You can use a precompiled minified version:
+```
+<link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+```
+Or download https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss (which includes Bourbon and Neat) and use it in your existing asset pipeline.
+
+Contact us on slack in #govau-uikit
 
 ### Assets
 
