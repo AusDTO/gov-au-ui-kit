@@ -6,7 +6,7 @@
 // Style guide: Foundation.Colours
 
 $black:         #000;
-$non-black:     #232d35;
+$non-black:     #222222;
 $grey:          #828282;
 $dark-grey:     darken($grey, 25%);
 $light-grey:    lighten($grey, 30%);
@@ -19,38 +19,39 @@ $dark-aqua:     darken($aqua, 5%);
 $darker-aqua:   darken($aqua, 10%);
 $light-aqua:    lighten($aqua, 30%);
 
-$navy:          #225187;
-$dark-navy:     darken($navy, 25%);
+$navy:          #224a61;
+$dark-navy:     darken($navy, 20%);
 $light-navy:    lighten($navy, 30%);
 
 $red:           #cc0000;
 
-$pink:          #880e48;
-$dark-pink:     darken($pink, 5%);
-$darker-pink:   darken($pink, 10%);
+$maroon:        #880e48;
+$dark-maroon:   darken($maroon, 5%);
+$darker-maroon: darken($maroon, 10%);
 
-$background-colour:           $white;
-$contrast-background-colour:  $lighter-grey;
-$link-colour:                 $non-black;
+$background-colour:             $white;
+$contrast-background-colour:    $lighter-grey;
+$link-colour:                   $non-black;
 
-$button-colour:               $aqua;
-$button-hover-colour:         $darker-aqua;
-$button-active-colour:        $dark-aqua;
+$button-colour:                 $aqua;
+$button-hover-colour:           $darker-aqua;
+$button-active-colour:          $dark-aqua;
+$button-disabled:               $light-grey;
 
-$button-contrast-colour:        $pink;
-$button-contrast-hover-colour:  $darker-pink;
-$button-contrast-active-colour: $dark-pink;
+$button-contrast-colour:        $maroon;
+$button-contrast-hover-colour:  $darker-maroon;
+$button-contrast-active-colour: $dark-maroon;
 
-$button-text-colour:          $white;
+$button-text-colour:            $white;
 
-$frame-colour:                $light-grey;
-$primary-colour:              $light-navy;
-$highlight-colour:            $aqua;
-$error-colour:                $red;
+$frame-colour:                  $light-grey;
+$primary-colour:                $light-navy;
+$highlight-colour:              $light-aqua;
+$error-colour:                  $red;
 
-$border-colour:               $light-grey;
-$secondary-border-colour:     $lighter-grey;
-$contrast-border-colour:      $navy;
+$border-colour:                 $light-grey;
+$secondary-border-colour:       $lighter-grey;
+$contrast-border-colour:        $navy;
 
-$body-text-colour:            $black;
-$secondary-text-colour:       $grey;
+$body-text-colour:              $black;
+$secondary-text-colour:         $dark-grey;
