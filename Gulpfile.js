@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     scssMerge = require('./lib/gulp-scss-merge.js'),
     uglify = require('gulp-uglify'),
     del = require('del')
+    runSequence = require('run-sequence')
     ;
 
 var paths = {
@@ -100,7 +101,7 @@ gulp.task('nginx', function () {
         .pipe(gulp.dest(paths.outputHTML));
 });
 
-gulp.task('htmlvalidate', function () {
+gulp.task('htmlvalidate', ['examples','styleguide'], function () {
     validator = require('gulp-html')
     return gulp.src(['build/*.html', 'build/**/*.html'])
         .pipe(validator({'verbose': true}));
@@ -117,19 +118,17 @@ gulp.task('styleguide', function () {
 });
 
 gulp.task('clean', function(done) {
-    del([paths.outputAssets,paths.outputHTML], done);
+    return del([paths.outputAssets,paths.outputHTML], done);
 });
 
-gulp.task('default', function () {
-    gulp.start('ui-kit');
-});
+gulp.task('default', ['ui-kit']);
 
-gulp.task('build', function () {
-    gulp.start(['lint', 'ui-kit', 'examples', 'styleguide']);
-});
+gulp.task('build', ['lint', 'ui-kit', 'examples', 'styleguide']);
 
-gulp.task('build.prod', function () {
-    gulp.start(['clean', 'lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.scssmerge', 'examples', 'styleguide', 'htmlvalidate']);
+gulp.task('build.prod', function(callback) {
+    runSequence('clean',
+        ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.scssmerge', 'htmlvalidate'],
+        callback);
 });
 
 gulp.task('watch', function () {
