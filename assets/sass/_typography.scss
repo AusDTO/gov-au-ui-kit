@@ -237,6 +237,29 @@ blockquote {
   font-family: $base-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
+  &.pullquote {
+    padding: 0;
+    background-color: $background-colour;
+
+    p {
+      @extend h3;
+
+      line-height: $base-leading;
+      text-align: center;
+      font-weight: $base-font-weight;
+    }
+
+    &::before,
+    &::after {
+      text-align: center;
+      margin: 0;
+    }
+
+    &::after {
+      margin-top: -($tiny-spacing);
+    }
+  }
+
   &::before,
   &::after {
     display: block;
