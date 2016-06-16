@@ -3,8 +3,35 @@
 //
 // A set of variables to define the maximum width, column count and gutter.
 // For examples see http://neat.bourbon.io/examples/
+
+
+a lightweight, extensible grid framework, with some good defaults
+neat.bourbon.io
+
+12 cols long, centred page
+page width maximum 1200 pixels
+gutters between cols are 20 pixels
+sized in ems (link later to ems vs rems)
+different breakpoints:
+- desktop (12 cols, max 1000 pixels)
+- tablet (8 cols, 768 pixels max)
+- mobile (4 cols, 420 pixels max)
+
+If devloper and don't provide the spacing required. Talk to us and we can include for all. Or you can use neat themselves create your own file and manually set the column number for an element. Need to provide cols for small breakpoints.
+
+Think about the number of cols changing when smaller devices - refer to the neat doco (on front page).
+
+We have provided define grid elements col settings for block level elements in
+_block-elements.scss that is header, footer, main, article
+
+We also provide wrapper class for escaping the outer (grid) container (eg. for the page header).
+
+If debugging grid turn on the visual grid
+> Create handlebar file to show this $visual-grid: false;
+
+
 //
-// Style guide: Foundation.Grid
+// Style guide: Grid
 
 $border-box-sizing: true;
 $disable-warnings: true;
