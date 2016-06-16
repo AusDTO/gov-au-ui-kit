@@ -25,9 +25,9 @@
   <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
   <!--<![endif]-->
 
-  <!-- in production use <script src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"/> instead of next 2 lines-->
-  <link rel="stylesheet" type="text/css" href="./latest/ui-kit.js"/>
-  <link rel="stylesheet" type="text/css" href="../build/latest/ui-kit.js"/>
+  <!-- in production use <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"/> instead of next 2 lines-->
+  <script type="text/javascript" src="./latest/ui-kit.js"></script>
+  <script type="text/javascript" src="../build/latest/ui-kit.js"></script>
 
   <!-- javascript header end -->
 </head>
@@ -46,7 +46,7 @@
 
    <aside class="sidebar">
      <nav class="primary-nav" aria-label="main navigation">
-       <div class="nav-heading"><a href="javascript:void(0)" class="js-accordion-trigger">Menu <span class="chevron bottom"></span></a></div>
+       <a href="javascript:void(0)" class="js-accordion-trigger nav-heading">Menu <span class="chevron bottom"></span></a></div>
        <ul>
          <li><a href="#">Overview</a></li>
          <li><a href="#">Purpose</a></li>

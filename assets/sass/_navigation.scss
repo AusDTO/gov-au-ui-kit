@@ -8,6 +8,10 @@
 .primary-nav {
   // scss-lint:disable SelectorDepth, NestingDepth
   .nav-heading {
+    display: none;
+    @include media($tablet) {
+      display: block;
+    }
     .chevron {
       float: right;
     }
@@ -17,7 +21,9 @@
     margin: $base-spacing 0;
     padding: 0;
     list-style: none;
-
+    @include media($tablet) {
+      display: none;
+    }
     ul {
       margin: 0;
 
