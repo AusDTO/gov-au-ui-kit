@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7">    <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8">    <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,26 +15,26 @@
   <link rel="stylesheet" type="text/css" href="./latest/ui-kit.css"/>
   <link rel="stylesheet" type="text/css" href="../build/latest/ui-kit.css"/>
 
-  <!-- javascript header ->
+  <!--[if (gte IE 9) | (!IE)]>-->
+  <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  <!--<![endif]-->
   <!--[if lt IE 9]>
-  <script   src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-  <link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
-  <link href="http://fonts.googleapis.com/css?family=Lato:400italic" rel="stylesheet">
-  <link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
+  <link href="//fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Lato:400italic" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
   <![endif]-->
   <!--[if lte IE 9]>
-  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
   <![endif]-->
-  <!--[if (gte IE 9) | (!IE)]>-->
-  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
-  <!--<![endif]-->
+
 
   <!-- in production use <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"/> instead of next 2 lines-->
   <script type="text/javascript" src="./latest/ui-kit.js"></script>
   <script type="text/javascript" src="../build/latest/ui-kit.js"></script>
 
-  <!-- javascript header end -->
 </head>
 <body>
 

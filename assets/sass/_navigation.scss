@@ -12,9 +12,11 @@
     background: $lighter-grey;
     margin-top: $base-spacing;
     display: none;
+
     @include media($tablet) {
       display: block;
     }
+
     .chevron {
       float: right;
     }
@@ -22,14 +24,14 @@
 
   ul {
     margin: $base-spacing 0;
-    @include media($tablet) {
-      margin: 0;
-    }
     padding: 0;
     list-style: none;
+
     @include media($tablet) {
+      margin: 0;
       display: none;
     }
+
     ul {
       margin: 0;
 
