@@ -1,25 +1,25 @@
-#Information
-~What this is and isn't~
-How do I use it - rename documentation folder
-Accessible
-Empowering: feeling they can contribute
-Tracking features
-Roadmap of features / what's here? What's coming?
-Engineering philosophy
+# Information
+- ~~What this is and isn't~~
+- How do I use it - re-name documentation folder
+- Accessible
+- Empowering: feeling they can contribute
+- Tracking features
+- Roadmap of features / what's here? What's coming?
+- Engineering philosophy
 
-#Exploration
-What features do I need now?
-~Give me the tools and the templates~
-Visual examples
-Accessibility
-Code snippets
-Checklists - A11y / Values
-Responsive information
+# Exploration
+- What features do I need now?
+- ~Give me the tools and the templates~
+- Visual examples
+- Accessibility
+- Code snippets
+- Checklists - A11y / Values
+- Responsive information
 
-#Action
-How to I feedback and contribute - way to give feedback, guide to Contributing, features bug tool voting - github issues
-CDN (gov.au)??
-Tech dependencies and Usage
+# Action
+- How to I feedback and contribute - way to give feedback, guide to Contributing, features bug tool voting - github issues
+- CDN (gov.au)??
+- Tech dependencies and Usage
 
 # gov-au-ui-kit (draft GOV.AU Design Guide v1.0)
 
@@ -45,13 +45,13 @@ gov-au-ui-kit is 3 things:
 - Basic styling for UI elements (e.g. `input`).
 
 ### What this isn't
-This isn't a fully developed design system yet.
+This isn't a... [talk to Designers re: complete design system]
 
 ## Who is this for?
 Australian Government designers and developers. This was designed for GOV.AU teams, but we welcome use outside of federal government.
 
 ### How is this related to the Digital Service Standard?
-The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams to [build services using common design patterns](https://www.dto.gov.au/standard/6-consistent-and-responsive/). This is the first release of framework and guidance that will eventually become the design patterns for digital content.
+The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams to [build services using common design patterns](https://www.dto.gov.au/standard/6-consistent-and-responsive/). This is draft work on the framework and guidance that will eventually become the design patterns for digital content.
 
 You should use this with the [draft Content Style Guide](http://content-style-guide.apps.staging.digital.gov.au/) for Digital Transformation Office projects.
 
@@ -78,6 +78,8 @@ We have automated this, with a few additions:
 - `kss-node` for auto-building a living style guide.
 
 This is available as a shell script at `bin/cibuild.sh`.
+
+If you get `Fatal undefined` error, remember to set your local version of Ruby (`rbenv local 2.3.0` if you use rbenv).
 
 ## Make this better
 - Contribute to this repository.
