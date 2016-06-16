@@ -1,20 +1,105 @@
-# gov-au-ui-kit
+#Information
+~What this is and isn't~
+How do I use it - rename documentation folder
+Accessible
+Empowering: feeling they can contribute
+Tracking features
+Roadmap of features / what's here? What's coming?
+Engineering philosophy
+
+#Exploration
+What features do I need now?
+~Give me the tools and the templates~
+Visual examples
+Accessibility
+Code snippets
+Checklists - A11y / Values
+Responsive information
+
+#Action
+How to I feedback and contribute - way to give feedback, guide to Contributing, features bug tool voting - github issues
+CDN (gov.au)??
+Tech dependencies and Usage
+
+# gov-au-ui-kit (draft GOV.AU Design Guide v1.0)
+
 [![CircleCI](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=svg)](https://circleci.com/gh/AusDTO/gov-au-ui-kit)
 
-GOV.AU SCSS UI framework, using Bourbon and Neat. It provides:
+## What is this?
 
-- normalize
-- a lightweight, extensible grid framework, with some good defaults
-- basic styling for content with some basic typographic defaults
-- basic styling for UI elements (e.g. `input`).
+gov-au-ui-kit is 3 things:
 
-The GOV.AU Design Guide will document this framework.
+- online design guide to build a standardised, accessible look and feel for GOV.AU projects  http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/
+- templates (to come)
+- Sass assets (`assets/sass`) you can
+  - link to as a precompiled minified:
+  ```
+  <link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+  ```
+  - download (includes [Bourbon](https://github.com/thoughtbot/bourbon) sass mixin library) and ([Neat](https://github.com/thoughtbot/neat) lightweight grid framework): https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss to use in your existing asset pipeline.
 
-## Introduction
+### Features
+- Normalize (to make browsers render all elements more consistently).
+- Lightweight, extensible grid framework, with some good defaults.
+- Basic styling for content with some basic typographic defaults.
+- Basic styling for UI elements (e.g. `input`).
 
-This is a framework building a standardised, accessible look and feel for GOV.AU projects.
+### What this isn't
+This isn't a fully developed design system yet.
 
-The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) (sass mixin library) and [Neat](https://github.com/thoughtbot/neat) (lightweight grid framework).
+## Who is this for?
+Australian Government designers and developers. This was designed for GOV.AU teams, but we welcome use outside of federal government.
+
+### How is this related to the Digital Service Standard?
+The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams to [build services using common design patterns](https://www.dto.gov.au/standard/6-consistent-and-responsive/). This is the first release of framework and guidance that will eventually become the design patterns for digital content.
+
+You should use this with the [draft Content Style Guide](http://content-style-guide.apps.staging.digital.gov.au/) for Digital Transformation Office projects.
+
+## Build the scss yourself
+
+1. Install dependencies:
+
+```
+gem install scss_lint scss_lint_reporter_checkstyle
+brew install npm
+npm install
+npm install -g gulp
+```
+
+2. Run:
+
+```
+gulp
+```
+
+We have automated this, with a few additions:
+
+- `scss-lint` for linting
+- `kss-node` for auto-building a living style guide.
+
+This is available as a shell script at `bin/cibuild.sh`.
+
+## Make this better
+- Contribute to this repository.
+- Contact us on slack in #govau-uikit.
+- Email [firstname.lastname@digital.gov.au](mailto:TBC).
+
+## Copyright & License
+
+Copyright Digital Transformation Office. Licensed under the MIT license. See `LICENSE` file for more details.
+
+This repo includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Normalize.css](https://necolas.github.io/normalize.css/), which all also use the MIT license.
+
+## About the DTO
+
+![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
+
+gov-au-ui-kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
+
+
+
+
+
 
 ## Browser Support
 
@@ -28,17 +113,7 @@ This framework is in active development.
 
 **Usage:** we have, and are seeking more early users.
 
-You can use a precompiled minified version:
-```
-<link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
-```
-Or download https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss (which includes Bourbon and Neat) and use it in your existing asset pipeline.
 
-Contact us on slack in #govau-uikit
-
-### Assets
-
-We provide the scss files directly in `assets/sass`.
 
 We also have a build process for the development of the framework which uses gulp on node.js (see *§ Building* below).
 
@@ -131,47 +206,3 @@ We use Bourbon 4.2.7, and we include its scss files directly rather than calling
 - kss `^3.0.0-beta.14`
 
 `^` = *compatible with version* (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
-
-### Building
-
-To just build the scss yourself, install the dependencies:
-
-```
-xcode-select --install
-sudo xcodebuild -license
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install rbenv ruby-build
-echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-rbenv install 2.3.0
-
-gem install scss_lint scss_lint_reporter_checkstyle
-brew install npm
-npm install
-npm install -g gulp
-```
-
-And then run:
-
-```
-gulp
-```
-
-We have automated this, with a few additions:
-
-- `scss-lint` for linting
-- `kss-node` for auto-building a living style guide.
-
-This is available as a shell script at `bin/cibuild.sh`.
-
-## Copyright & License
-
-Copyright Digital Transformation Office. Licensed under the MIT license. See `LICENSE` file for more details.
-
-This repo includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Normalize.css](https://necolas.github.io/normalize.css/), which all also use the MIT license.
-
-## About the DTO
-
-![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
-
-UI-Kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
