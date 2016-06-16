@@ -16,14 +16,15 @@ var paths = {
     examplesDir: './examples/**/*.*',
     scss: './assets/sass/ui-kit.scss',
     js: './assets/js/ui-kit.js',
+    readme: "./README.md",
     outputAssets: './build/latest',
     outputHTML: './build'
 };
 
 var options = {
-  autoprefixer: {
-    browsers: ['last 2 versions']
-  }
+    autoprefixer: {
+        browsers: ['last 2 versions']
+    }
 };
 
 gulp.task('lint', function () {
@@ -38,9 +39,11 @@ gulp.task('lint', function () {
                 process.env.CIRCLE_TEST_REPORTS : paths.outputAssets))
         .pipe(scsslint.failReporter('E'))
 });
+
 gulp.task('ui-kit', function () {
     gulp.start(['ui-kit.scss', 'ui-kit.js']);
 });
+
 gulp.task('ui-kit.scss', function () {
     return gulp.src(paths.scss)
         .pipe(autoprefixer())
@@ -48,19 +51,23 @@ gulp.task('ui-kit.scss', function () {
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
+
 gulp.task('ui-kit.js', function () {
     return gulp.src(paths.js)
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
-gulp.task('ui-kit.scssmerge', function() {
+
+gulp.task('ui-kit.scssmerge', function () {
     return gulp.src(paths.scss)
         .pipe(scssMerge('_ui-kit.scss'))
         .pipe(gulp.dest(paths.outputAssets));
 });
+
 gulp.task('ui-kit.min', function () {
     gulp.start(['ui-kit.min.scss', 'ui-kit.min.js']);
 });
+
 gulp.task('ui-kit.min.scss', function () {
     return gulp.src(paths.scss)
         .pipe(autoprefixer())
@@ -72,6 +79,7 @@ gulp.task('ui-kit.min.scss', function () {
         }))
         .pipe(gulp.dest(paths.outputAssets));
 });
+
 gulp.task('ui-kit.min.js', function () {
     return gulp.src(paths.js)
         .pipe(uglify())
@@ -81,24 +89,28 @@ gulp.task('ui-kit.min.js', function () {
         }))
         .pipe(gulp.dest(paths.outputAssets));
 });
+
 gulp.task('examples', function () {
     return gulp.src(paths.examplesDir)
         .pipe(gulp.dest(paths.outputHTML));
 });
+
 gulp.task('nginx', function () {
     return gulp.src('nginx.conf')
         .pipe(gulp.dest(paths.outputHTML));
 });
+
 gulp.task('htmlvalidate', function () {
     validator = require('gulp-html')
-    return gulp.src(['build/*.html','build/**/*.html'])
-        .pipe(validator({'verbose':true}));
+    return gulp.src(['build/*.html', 'build/**/*.html'])
+        .pipe(validator({'verbose': true}));
 });
+
 gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
         css: '../latest/ui-kit.css',
-        destination: paths.outputHTML+'/kss',
+        destination: paths.outputHTML + '/kss',
         homepage: '../../README.md',
         builder: 'kss-builder'
     });
@@ -121,9 +133,9 @@ gulp.task('build.prod', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch([paths.assetsDir,paths.examplesDir], ['ui-kit']);
+    gulp.watch([paths.assetsDir, paths.examplesDir, paths.readme], ['ui-kit']);
 });
 
 gulp.task('watch.build', function () {
-    gulp.watch([paths.assetsDir,paths.examplesDir], ['build']);
+    gulp.watch([paths.assetsDir, paths.examplesDir, paths.readme], ['build']);
 });

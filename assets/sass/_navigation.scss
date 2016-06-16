@@ -5,19 +5,13 @@
 // Markup: templates/navigation.hbs
 //
 // Style guide: Components.Navigation
-.primary-nav-wrapper {
-  @include media($tablet) {
-    display: none;
-  }
-
-  .accordion-heading {
-    .rotate {
-      transition: all 300ms linear;
+.primary-nav {
+  // scss-lint:disable SelectorDepth, NestingDepth
+  .nav-heading {
+    .chevron {
+      float: right;
     }
   }
-}
-
-.primary-nav {
 
   ul {
     margin: $base-spacing 0;
@@ -26,6 +20,29 @@
 
     ul {
       margin: 0;
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        border-left: 1px solid transparent;
+        padding-left: $base-spacing;
+
+        &:hover {
+          border-left: 1px solid $contrast-border-colour;
+        }
+      }
+
+      ul {
+        a {
+          padding-left: $base-spacing + $small-spacing;
+          background-image: url($icon-arrow-r);
+          background-repeat: no-repeat;
+          background-position: $base-spacing $small-spacing * 1.15;
+          background-size: $tiny-spacing auto;
+        }
+      }
     }
 
   }
@@ -57,34 +74,4 @@
     }
 
   }
-
-}
-
-.sub-nav-list {
-
-  li:last-child {
-    border-bottom: none;
-  }
-
-  a {
-    border-left: 1px solid transparent;
-    padding-left: $base-spacing;
-
-    &:hover {
-      border-left: 1px solid $contrast-border-colour;
-    }
-  }
-
-}
-
-.sub-sub-nav-list {
-
-  a {
-    padding-left: $base-spacing + $small-spacing;
-    background-image: url($icon-arrow-r);
-    background-repeat: no-repeat;
-    background-position: $base-spacing $small-spacing * 1.15;
-    background-size: $tiny-spacing auto;
-  }
-
 }
