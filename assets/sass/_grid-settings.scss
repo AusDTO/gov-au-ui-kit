@@ -1,37 +1,47 @@
 
-// Grid Settings
+// Grid settings
 //
-// A set of variables to define the maximum width, column count and gutter.
-// For examples see http://neat.bourbon.io/examples/
+// Keywords: layout, page width, screen size, spacing, grid unit proportions, example: grid layout
 //
+// `_grid-settings.scss` is a set of variables to define the maximum width, column count and gutter.
 //
-// a lightweight, extensible grid framework, with some good defaults
-// neat.bourbon.io
+// It uses Bourbon Neat to provide a flexible and consistent lightweight grid framework, with good defaults.
 //
-// 12 cols long, centred page
-// page width maximum 1200 pixels
-// gutters between cols are 20 pixels
-// sized in ems (link later to ems vs rems)
-// different breakpoints:
-// - desktop (12 cols, max 1000 pixels)
-// - tablet (8 cols, 768 pixels max)
-// - mobile (4 cols, 420 pixels max)
+// Properties are sized in ems to cascade properly.
 //
-// If devloper and don't provide the spacing required. Talk to us and we can include for all. Or you can use neat themselves create your own file and manually set the column number for an element. Need to provide cols for small breakpoints.
+// See a [working example of Neat grid](http://neat.bourbon.io/examples/).
 //
-// Think about the number of cols changing when smaller devices - refer to the neat doco (on front page).
+// ## Spacing
+//
+// Pages are set as 12 columns centred with a maximum width of 1200 pixels. Gutters between the columns are 20 pixes.
 //
 // We have provided define grid elements col settings for block level elements in
 // _block-elements.scss that is header, footer, main, article
 //
+// If you have an element we have not provided sizing for [let us know](index.html#contributing) and we can include it for everyone.
+//
+// If you you want to create your own file you will need to manually set the column number for the element, including for small breakpoints.
+//
+// ## Screen size
+//
+// We use these breakpoints:
+//
+// - Desktop (12 cols, max 1000 pixels)
+// - Tablet (8 cols, 768 pixels max)
+// - Mobile (4 cols, 420 pixels max)
+//
+
+// Think about the number of cols changing when smaller devices - refer to the neat doco (on front page).
+//
+
+//
 // We also provide wrapper class for escaping the outer (grid) container (eg. for the page header).
 //
 // If debugging grid turn on the visual grid
-// > Create handlebar file to show this $visual-grid: false;
 //
+// Create handlebar file to show this $visual-grid: false;
 //
-//
-// Style guide: Grid
+// Style guide: Grid settings
 
 $border-box-sizing: true;
 $disable-warnings: true;
@@ -43,7 +53,7 @@ $gutter: em(20);
 // Toggle visibility of your grid columns for development/debugging.
 $visual-grid: false;
 
- // Media Queries
+// Media Queries
 @import 'vendor/neat/neat-helpers';
 $desktop: new-breakpoint(max-width 1000px 12);
 $tablet: new-breakpoint(max-width 768px 8);
