@@ -5,7 +5,7 @@
 // Markup: templates/navigation.hbs
 //
 // Style guide: Components.Navigation
-.accordion {
+.primary-nav-wrapper {
   @include media($tablet) {
     display: none;
   }
@@ -13,9 +13,6 @@
   .accordion-heading {
     .rotate {
       transition: all 300ms linear;
-      .down {
-        transform: rotate(-180deg);
-      }
     }
   }
 }

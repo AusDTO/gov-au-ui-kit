@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 
 var paths = {
     assetsDir: './assets/**/*.*',
+    examplesDir: './examples/**/*.*',
     scss: './assets/sass/ui-kit.scss',
     js: './assets/js/ui-kit.js',
     outputAssets: './build/latest',
@@ -81,7 +82,7 @@ gulp.task('ui-kit.min.js', function () {
         .pipe(gulp.dest(paths.outputAssets));
 });
 gulp.task('examples', function () {
-    return gulp.src('examples/*')
+    return gulp.src(paths.examplesDir)
         .pipe(gulp.dest(paths.outputHTML));
 });
 gulp.task('nginx', function () {
@@ -120,9 +121,9 @@ gulp.task('build.prod', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.assetsDir, ['ui-kit']);
+    gulp.watch([paths.assetsDir,paths.examplesDir], ['ui-kit']);
 });
 
 gulp.task('watch.build', function () {
-    gulp.watch(paths.assetsDir, ['build']);
+    gulp.watch([paths.assetsDir,paths.examplesDir], ['build']);
 });
