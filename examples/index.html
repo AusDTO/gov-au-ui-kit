@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 no-js">    <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 no-js">    <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8 no-js">    <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9 no-js">    <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- viewport declaration must be included in <head> for media queries to work correctly on real devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement)</script>
   <title>Example Pages</title>
   <!-- in production use <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/> instead of next 2 lines-->
   <link rel="stylesheet" type="text/css" href="./latest/ui-kit.css"/>
   <link rel="stylesheet" type="text/css" href="../build/latest/ui-kit.css"/>
+
+  <!--[if (gte IE 9) | (!IE)]>-->
+  <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+  <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/corysimmons-selectivizr2/1.0.8/selectivizr2.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
+  <link href="//fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Lato:400italic" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
+  <![endif]-->
+
+  <!-- in production use <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"/> instead of next 2 lines-->
+  <script type="text/javascript" src="./latest/ui-kit.js"></script>
+  <script type="text/javascript" src="../build/latest/ui-kit.js"></script>
+
 </head>
 <body>
 
@@ -18,76 +48,77 @@
     </div>
   </header>
 
-  <main>
+ <main>
 
-    <aside class="sidebar">
-      <nav class="primary-nav" aria-label="main navigation">
-        <ul>
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Purpose</a></li>
-          <li>
-            <a href="#">Foundations</a>
-            <ul class="sub-nav-list">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Design principles</a></li>
-              <li><a href="#">Grid</a></li>
-              <li>
-                <a href="#">Typography</a>
-                <ul class="sub-sub-nav-list">
-                  <li><a href="#">Line height and spacing</a></li>
-                  <li><a href="#">Typesetting</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Text accessibility</a></li>
-              <li><a href="#">Links</a></li>
-              <li><a href="#">Lists</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+   <aside class="sidebar">
+     <nav class="primary-nav" aria-label="main navigation">
+       <a href="javascript:void(0)" class="js-accordion-trigger nav-heading" aria-expanded="true"><span>Show menu</span><i class="chevron bottom"></i></a>
+       <ul>
+         <li><a href="#">Overview</a></li>
+         <li><a href="#">Purpose</a></li>
+         <li>
+           <a href="#">Foundations</a>
+           <ul class="sub-nav-list">
+             <li><a href="#">Overview</a></li>
+             <li><a href="#">Design principles</a></li>
+             <li><a href="#">Grid</a></li>
+             <li>
+               <a href="#">Typography</a>
+               <ul class="sub-sub-nav-list">
+                 <li><a href="#">Line height and spacing</a></li>
+                 <li><a href="#">Typesetting</a></li>
+               </ul>
+             </li>
+             <li><a href="#">Text accessibility</a></li>
+             <li><a href="#">Links</a></li>
+             <li><a href="#">Lists</a></li>
+           </ul>
+         </li>
+       </ul>
+     </nav>
+   </aside>
 
-    <article>
-      <h2>Article title that is quite a bit longer</h2>
-      <p class="abstract">This is my <code>.abstract</code> text: the quick brown fox jumped over the lazy dog.</p>
-      <p>Vertical rhythm should be <strong>maintained</strong> between content elements:</p>
+   <article>
+     <h2>Article title that is quite a bit longer</h2>
+     <p class="abstract">This is my <code>.abstract</code> text: the quick brown fox jumped over the lazy dog.</p>
+     <p>Vertical rhythm should be <strong>maintained</strong> between content elements:</p>
 
-      <ul>
-        <li>an unsorted list item</li>
-        <li>another unsorted list item</li>
-      </ul>
+     <ul>
+       <li>an unsorted list item</li>
+       <li>another unsorted list item</li>
+     </ul>
 
       <p>A paragraph with a badge: <span class="badge--beta">beta</span></p>
 
       <p>Sorted list:</p>
 
-      <ol>
-        <li>first sorted list item</li>
-        <li>second sorted list item
-          <ol>
-            <li>another item</li>
-          </ol>
-        </li>
-        <li>and another item</li>
-      </ol>
+     <ol>
+       <li>first sorted list item</li>
+       <li>second sorted list item
+         <ol>
+           <li>another item</li>
+         </ol>
+       </li>
+       <li>and another item</li>
+     </ol>
 
-      <h3>Buttons and links</h3>
+     <h3>Buttons and links</h3>
 
-      <p>A <a href="#">text link</a> can appear within a chunk of text, or within any text element. Buttons can be grouped together:</p>
+     <p>A <a href="#">text link</a> can appear within a chunk of text, or within any text element. Buttons can be grouped together:</p>
 
-      <p>
-        <a href="#" role="button">Primary Button</a>
-        <a href="#" role="button" class="contrast">Contrast button</a>
-        <a href="#" role="button" class="disabled">Disabled</a>
-      </p>
+     <p>
+       <a href="#" role="button">Primary Button</a>
+       <a href="#" role="button" class="contrast">Contrast button</a>
+       <a href="#" role="button" class="disabled">Disabled</a>
+     </p>
 
-      <h3>Quotations and citations</h3>
+     <h3>Quotations and citations</h3>
 
-      <p>We need to be able to cater for both block quotations, as well as in-line quotations via the <code>q</code> element, because Simon said <q>yo dawg, get them quotes on yo!</q></p>
+     <p>We need to be able to cater for both block quotations, as well as in-line quotations via the <code>q</code> element, because Simon said <q>yo dawg, get them quotes on yo!</q></p>
 
-      <p>The <code>q</code> element is unlikely to see a lot of use, unless we play with the editors to be used for authoring and editing things. The other issue with using the <code>content</code> property is that text selection of its contents is not available, so the opening and closing quotation marks are not selectable.</p>
+     <p>The <code>q</code> element is unlikely to see a lot of use, unless we play with the editors to be used for authoring and editing things. The other issue with using the <code>content</code> property is that text selection of its contents is not available, so the opening and closing quotation marks are not selectable.</p>
 
-      <p>Time for a <code>blockquote</code>, which are distinct from in-line qutoations via the <code>q</code> element.</p>
+     <p>Time for a <code>blockquote</code>, which are distinct from in-line qutoations via the <code>q</code> element.</p>
 
       <blockquote>
         <p>Blockquotes are block-level elements that contain in-line elements.</p>
@@ -121,84 +152,84 @@
         <p><em>Mystical explanations.</em>&mdash;Mystical explanations are considered deep. The truth is that they are not even superficial.</p>
       </blockquote>
 
-      <p>As well as definition lists:</p>
+     <p>As well as definition lists:</p>
 
-      <dl>
-        <dt>Definition term 1</dt>
-        <dd>Definition description</dd>
-        <dd>A single definition term can have many definitions.</dd>
+     <dl>
+       <dt>Definition term 1</dt>
+       <dd>Definition description</dd>
+       <dd>A single definition term can have many definitions.</dd>
 
-        <dt>Second definition term</dt>
-        <dd>Another definition.</dd>
-      </dl>
+       <dt>Second definition term</dt>
+       <dd>Another definition.</dd>
+     </dl>
 
-      <h4>Heading Level 4</h4>
+     <h4>Heading Level 4</h4>
 
-      <p>These interespersed elements aim to show the <em>vertical rhythm</em> between various content elements, using predominately margin-bottom, and only margin-top in the instances where it would be too cumbersome or hacky to try continue with just margin-bottom.</p>
+     <p>These interespersed elements aim to show the <em>vertical rhythm</em> between various content elements, using predominately margin-bottom, and only margin-top in the instances where it would be too cumbersome or hacky to try continue with just margin-bottom.</p>
 
-      <p class="callout">This is a callout.</p>
+     <p class="callout">This is a callout.</p>
 
-      <p class="callout warning-block">This is a warning callout.</p>
+     <p class="callout warning-block">This is a warning callout.</p>
 
-      <p>This makes maintaining the vertical rhythm between content easier, and avoids spacing bugs, as well as sizing bugs that aren't immediately apparent when just testing with a few paragraphs and headings.</p>
+     <p>This makes maintaining the vertical rhythm between content easier, and avoids spacing bugs, as well as sizing bugs that aren't immediately apparent when just testing with a few paragraphs and headings.</p>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
-      <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-      <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-      <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+     <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
+     <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
+     <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
 
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
-        <li>Laboriosam quaerat sapiente minima nam minus similique illum architecto et!</li>
-        <li>Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!</li>
-        <li>Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
-      </ul>
+     <ul>
+       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
+       <li>Laboriosam quaerat sapiente minima nam minus similique illum architecto et!</li>
+       <li>Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!</li>
+       <li>Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
+     </ul>
 
-      <h5>Heading Level 5</h5>
+     <h5>Heading Level 5</h5>
 
-      <ol>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
-        <li>Laboriosam quaerat sapiente minima nam minus similique illum architecto et!</li>
-        <li>Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!</li>
-        <li>Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
-      </ol>
+     <ol>
+       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
+       <li>Laboriosam quaerat sapiente minima nam minus similique illum architecto et!</li>
+       <li>Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!</li>
+       <li>Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
+     </ol>
 
-      <section class="form-wrapper">
+     <section class="form-wrapper">
 
-          <h2>Contact Us</h2>
-          <form>
-              <p>
-                  <label for="name">Your name</label>
-                  <input type="text" id="name" required />
-              </p>
-              <p>
-                  <label for="colour">Your favourite colour</label>
-                  <input type="text" id="colour" disabled/>
-              </p>
-              <p>
-                  <label for="contact">Your contact</label>
-                  <span class="hint" id="name-hint">Please provide an email address or phone number.</span>
-                  <input type="text" id="contact" aria-describedby="name-hint" />
-              </p>
-              <p>
-                  <label for="message">Your message</label>
-                  <textarea id="message"></textarea>
-              </p>
-              <input type="submit" value="Submit" />
-              <input type="reset" value="Reset" />
-          </form>
+         <h2>Contact Us</h2>
+         <form>
+             <p>
+                 <label for="name">Your name</label>
+                 <input type="text" id="name" required />
+             </p>
+             <p>
+                 <label for="colour">Your favourite colour</label>
+                 <input type="text" id="colour" disabled/>
+             </p>
+             <p>
+                 <label for="contact">Your contact</label>
+                 <span class="hint" id="name-hint">Please provide an email address or phone number.</span>
+                 <input type="text" id="contact" aria-describedby="name-hint" />
+             </p>
+             <p>
+                 <label for="message">Your message</label>
+                 <textarea id="message"></textarea>
+             </p>
+             <input type="submit" value="Submit" />
+             <input type="reset" value="Reset" />
+         </form>
 
-      </section>
+     </section>
 
-    </article>
+   </article>
 
-  </main>
+ </main>
 
-  <footer role="contentinfo">
-    <div class="wrapper">
-      <p>This is my footer.</p>
-    </div>
-  </footer>
+ <footer role="contentinfo">
+   <div class="wrapper">
+     <p>This is my footer.</p>
+   </div>
+ </footer>
 
 </body>
 </html>
