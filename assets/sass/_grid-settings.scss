@@ -1,32 +1,27 @@
-
 // Grid settings
 //
-// Keywords: layout, page width, screen size, spacing, grid unit proportions, example: grid layout
-//
-// Sections:
-//
-// - Explanation of the thing
-// - Explain usability guidelines
-// - Have a visual or live example
-// - Show its code snippet
-// - Have a feedback mechanism
-// - Include accessbility notes (if required)
-// - Provide responsive info/notes
-// - Include "last updated" blurb
+// Use white space to crate a visual hierachy on the page.
 //
 // The grid unit proportions, gutters and spacing are defined in `_grid-settings.scss`.
 //
 // We use Bourbon Neat to provide a flexible and consistent lightweight grid framework, with good defaults.
 //
-// Properties are sized in ems to cascade properly.
+// Properties are sized in ems so elements cascade properly.
 //
 // See a [working example of the Bourbon Neat grid](http://neat.bourbon.io/examples/).
 //
-// If you have an element we have not provided sizing for [let us know](index.html#contributing) and we can include it. <!-- fix anchor link once readme is approved -->
+// If you need a new element [let us know](index.html#contributing) and we can include it. <!-- fix anchor link once readme is approved -->
 //
 // If you create your own element you will need to manually set column properties in the smallest breakpoint. <!-- is this correct? -->
 //
-// ## Spacing
+// Style guide: Grid settings
+
+$border-box-sizing: true;
+$disable-warnings: true;
+
+// Spacing
+//
+// Long lines reduce legibility, so all lines of text should be no longer than 70 or 80 characters.
 //
 // Pages are set as 12 columns, centred. The maximum width is 1200 pixels.
 //
@@ -34,9 +29,19 @@
 //
 // We define the grid elements column properties for block level elements (`header`, `footer`, `main`, `article`) in `_block-elements.scss`. <!-- where are main and article? -->
 //
-// We have created a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is used just for the page header.
+// We have created a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is used mainly for the page header.
 //
-// ## Screen size
+// Style guide: Grid settings.1 Spacing
+
+$grid-columns: 12 !global;
+$max-width: em(1200) !global;
+$gutter: em(20);
+
+// Screen size
+//
+// Design for small screens first using a small number of columns.
+//
+// Optimise for different screen sizes, but don’t make assumptions about what devices people are using.
 //
 // We define 3 breakpoints:
 //
@@ -44,23 +49,9 @@
 // - Tablet (medium): 8 columns, 768 pixels maximum
 // - Desktop (large): 12 columns, 1000 pixels maximum
 //
-// Make sure you think about the number of columns used when resizing for small devices (eg see the [Bourbon Neat documentation](http://neat.bourbon.io/)) <!-- is this correct? -->
+// Make sure you think about the number of columns used when resizing for small devices (eg see the [Bourbon Neat documentation](http://neat.bourbon.io/)). <!-- is this correct? -->
 //
-// When debugging we recommend you turn on the visual grid.
-//
-// Markup: templates/visual-grid.hbs
-//
-// Style guide: Grid settings
-
-$border-box-sizing: true;
-$disable-warnings: true;
-
-$grid-columns: 12 !global;
-$max-width: em(1200) !global;
-$gutter: em(20);
-
-// Toggle visibility of your grid columns for development/debugging.
-$visual-grid: false;
+// Style guide: Grid settings.2 Screen size
 
 // Media Queries
 @import 'vendor/neat/neat-helpers';
@@ -68,5 +59,47 @@ $desktop: new-breakpoint(max-width 1000px 12);
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
 
+// Debugging
+//
+// Turn on the visual grid to help debugging.
+//
+// Markup: templates/visual-grid.hbs
+//
+// Style guide: Grid settings.3 Debugging
+
+// Toggle visibility of your grid columns for development/debugging.
+$visual-grid: false;
+
 // Make sure you set the viewport to the device-width in your head, eg
 // <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+// Attribution
+//
+// This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+//
+// Style guide: Grid settings.4 Attribution
+
+// Last updated
+//
+// 17 June 2016 <!-- can we automate this please -->
+//
+// Style guide: Grid settings.5 Last updated
+
+// Sections to include
+//
+// - ~~Explanation of the thing~~
+// - Explain usability guidelines
+// - Have a visual or live example
+// - Show its code snippet
+// - Have a feedback mechanism
+// - Include accessbility notes (if required)
+// - Provide responsive info/notes
+// - ~~Include "last updated" blurb~~
+//
+// Style guide: Grid settings.6 Sections to include
+
+// Keywords
+//
+// Keywords: layout, page width, screen size, spacing, grid unit proportions, example: grid layout
+//
+// Style guide: Grid settings.7 Keywords
