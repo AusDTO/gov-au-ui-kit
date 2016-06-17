@@ -1,13 +1,22 @@
-
-  // Primary navigation
-  //
-  // A vertical navigation menu that fits three levels of items.
-  //
-  // Markup: templates/navigation.hbs
-  //
-  // Style guide: Components.Navigation
-
+// Primary navigation
+//
+// A vertical navigation menu that fits three levels of items.
+//
+// Markup: templates/navigation.hbs
+//
+// Style guide: Components.Navigation
 .primary-nav {
+  // scss-lint:disable SelectorDepth, NestingDepth
+  .nav-heading {
+    color: $darker-aqua;
+    background: $lighter-grey;
+    margin-top: $base-spacing;
+    display: none;
+
+    .chevron {
+      float: right;
+    }
+  }
 
   ul {
     margin: $base-spacing 0;
@@ -16,6 +25,29 @@
 
     ul {
       margin: 0;
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        border-left: 1px solid transparent;
+        padding-left: $base-spacing;
+
+        &:hover {
+          border-left: 1px solid $contrast-border-colour;
+        }
+      }
+
+      ul {
+        a {
+          padding-left: $base-spacing + $small-spacing;
+          background-image: url($icon-arrow-r);
+          background-repeat: no-repeat;
+          background-position: $base-spacing $small-spacing * 1.15;
+          background-size: $tiny-spacing auto;
+        }
+      }
     }
 
   }
@@ -47,34 +79,17 @@
     }
 
   }
-
 }
 
-.sub-nav-list {
-
-  li:last-child {
-    border-bottom: none;
+.js .primary-nav ul {
+  @include media($tablet) {
+    margin: 0;
+    display: none;
   }
-
-  a {
-    border-left: 1px solid transparent;
-    padding-left: $base-spacing;
-
-    &:hover {
-      border-left: 1px solid $contrast-border-colour;
-    }
-  }
-
 }
 
-.sub-sub-nav-list {
-
-  a {
-    padding-left: $base-spacing + $small-spacing;
-    background-image: url($icon-arrow-r);
-    background-repeat: no-repeat;
-    background-position: $base-spacing $small-spacing * 1.15;
-    background-size: $tiny-spacing auto;
+.js .nav-heading {
+  @include media($tablet) {
+    display: block;
   }
-
 }
