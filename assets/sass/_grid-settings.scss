@@ -21,3 +21,6 @@ $visual-grid: false;
 $desktop: new-breakpoint(max-width 1000px 12);
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
+
+// Make sure you set the viewport to the device-width in your head, eg
+// <meta name="viewport" content="width=device-width, initial-scale=1.0">
