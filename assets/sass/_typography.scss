@@ -27,6 +27,8 @@ strong {
 //
 // The base-spacing unit is then set in ems by * 1em.
 //
+// Roadmap: likely change to the base-spacing unit to be give a figure easier to multiplay and divide.
+//
 // Markup: templates/base-typography-scss.hbs
 //
 // Style guide: Typography.Configuration
@@ -186,6 +188,8 @@ a {
 //
 // Base styling and vertical spacing for general content elements.
 //
+// We may move some of this to only appy to content inside an `article`.
+//
 // Markup: templates/content-typography.hbs
 //
 // Style guide: Typography.Content
@@ -243,6 +247,8 @@ dt {
 // Quotations
 //
 // Styling for in-line quotations and blockquotes, and citations.
+//
+// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
 //
 // Markup: templates/quotations-typography.hbs
 //
