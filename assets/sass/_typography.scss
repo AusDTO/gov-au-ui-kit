@@ -263,13 +263,36 @@ blockquote {
   font-family: $base-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
+  &.pullquote {
+    padding: 0;
+    background-color: $background-colour;
+
+    p {
+      @extend h3;
+
+      line-height: $base-leading;
+      text-align: center;
+      font-weight: $base-font-weight;
+    }
+
+    &::before,
+    &::after {
+      text-align: center;
+      margin: 0;
+    }
+
+    &::after {
+      margin-top: -($tiny-spacing);
+    }
+  }
+
   &::before,
   &::after {
     display: block;
     height: 0;
     font-family: $base-serif;
     font-size: rem(43);
-    color: $light-navy;
+    color: $aqua;
   }
 
   &::before {
@@ -304,6 +327,7 @@ blockquote {
     }
   }
 
+  // So that nested blockquotes do not break the vertical rhythm.
   blockquote {
     margin-top: 0;
     margin-bottom: 0;
@@ -313,6 +337,7 @@ blockquote {
 }
 
 q {
+  // Investigate: switching to html entitites?
   quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';
 }
 
@@ -320,6 +345,8 @@ cite {
   font-style: $base-font-style;
 }
 
+
+// Callouts
 .callout {
   margin: $base-spacing $small-spacing;
   padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
@@ -330,4 +357,35 @@ cite {
 .warning-block {
   border-left: ($small-spacing / 2) solid $red;
   padding-left: $base-spacing - ($small-spacing / 2);
+}
+
+// Badges
+//
+// Styling for 'badges' that hold either an item number, or to demarcate status (e.g. alpha, beta, draft).
+//
+// Markup: templates/badge-typography.hbs
+//
+// Style guide: Typography.Badges
+%base-badge {
+  // We should put something clever here.
+  border-radius: $large-border-radius;
+  padding: $tiny-spacing $small-spacing;
+  vertical-align: top;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: rem(14);
+}
+
+.badge--alpha {
+  @extend %base-badge;
+
+  background-color: $non-black;
+  color: $white;
+}
+
+.badge--beta {
+  @extend %base-badge;
+
+  background-color: $maroon;
+  color: $white;
 }

@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint'),
     autoprefixer = require('gulp-autoprefixer'),
     gitVersion = require('gulp-gitversion'),
-    scssMerge = require('./lib/gulp-scss-merge.js')
+    scssMerge = require('./lib/gulp-scss-merge.js'),
+    uglify = require('gulp-uglify'),
+    del = require('del')
     ;
 
 var paths = {
@@ -81,6 +83,10 @@ gulp.task('styleguide', function () {
     });
 });
 
+gulp.task('clean', function(done) {
+    del([paths.outputAssets,paths.outputHTML], done);
+});
+
 gulp.task('default', function () {
     gulp.start('ui-kit');
 });
@@ -90,7 +96,7 @@ gulp.task('build', function () {
 });
 
 gulp.task('build.prod', function () {
-    gulp.start(['lint', 'nginx', 'ui-kit', 'ui-kit.min','ui-kit.scssmerge', 'examples', 'styleguide', 'htmlvalidate']);
+    gulp.start(['clean', 'lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.scssmerge', 'examples', 'styleguide', 'htmlvalidate']);
 });
 
 gulp.task('watch', function () {
