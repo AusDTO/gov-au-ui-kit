@@ -15,6 +15,8 @@ gov-au-ui-kit is 3 things:
   ```
   - download from https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss to use in your asset pipeline (this includes [Bourbon](https://github.com/thoughtbot/bourbon) sass mixin library and the [Neat](https://github.com/thoughtbot/neat) lightweight grid framework).
 
+Look at an [example page showing the full framework](https://gov-au-ui-kit.apps.staging.digital.gov.au/).
+
 ### Features
 
 - Normalize (to make browsers render all elements more consistently).
