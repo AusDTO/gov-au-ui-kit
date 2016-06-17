@@ -13,10 +13,6 @@
     margin-top: $base-spacing;
     display: none;
 
-    @include media($tablet) {
-      display: block;
-    }
-
     .chevron {
       float: right;
     }
@@ -26,11 +22,6 @@
     margin: $base-spacing 0;
     padding: 0;
     list-style: none;
-
-    @include media($tablet) {
-      margin: 0;
-      display: none;
-    }
 
     ul {
       margin: 0;
@@ -87,5 +78,18 @@
       background-color: $contrast-background-colour;
     }
 
+  }
+}
+
+.js .primary-nav ul {
+  @include media($tablet) {
+    margin: 0;
+    display: none;
+  }
+}
+
+.js .nav-heading {
+  @include media($tablet) {
+    display: block;
   }
 }

@@ -36,7 +36,7 @@ main {
     @include span-columns(7 of 12);
     @include media($tablet) {
       @include span-columns(6 of 8);
-      // @include shift(2);
+      @include shift(1);
     }
 
     @include media($mobile) {
@@ -77,7 +77,14 @@ main:after {
   @include span-columns(3 of 12);
 
   @include media($tablet) {
-    @include span-columns(8 of 8);
+    @include span-columns(6 of 8);
+    @include shift(1);
   }
+  @include media($mobile) {
+    @include span-columns(4 of 4);
+    @include shift(0);
 
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+  }
 }
