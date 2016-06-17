@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 var paths = {
     assetsDir: './assets/**/*.*',
     examplesDir: './examples/**/*.*',
+    kssBuilderDir: './kss-builder/**/*.*',
     scss: './assets/sass/ui-kit.scss',
     js: './assets/js/ui-kit.js',
     readme: "./README.md",
@@ -136,5 +137,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('watch.build', function () {
-    gulp.watch([paths.assetsDir, paths.examplesDir, paths.readme], ['build']);
+    gulp.watch([paths.assetsDir, paths.examplesDir, paths.kssBuilderDir, paths.readme], ['build']);
 });
