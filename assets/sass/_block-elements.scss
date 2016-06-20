@@ -12,9 +12,6 @@ header {
 
   &[role='banner'] {
     @include outer-container(100%);
-
-    background-color: $non-black;
-    color: $white;
   }
 }
 
@@ -26,13 +23,12 @@ footer {
     margin-top: ($base-spacing * 2);
     padding-top: $base-spacing;
     padding-bottom: $base-spacing;
-    background-color: $non-black;
-    color: $white;
   }
 }
 
 main {
   @include outer-container();
+  padding-top: $base-spacing;
 
   article {
     @include span-columns(7 of 12);
@@ -51,15 +47,12 @@ main {
   }
 
   .form-wrapper {
-
     @include span-columns(4 of 6);
 
     @include media($mobile) {
       @include span-columns(4 of 4);
     }
-
   }
-
 }
 
 // IE 8 "clearfix" from https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
