@@ -25,6 +25,9 @@ $light-navy:    lighten($navy, 30%);
 
 $red:           #cc0000;
 
+$light-green:   #e6efc2;
+$green:         darken($light-green, 55%);
+
 $maroon:        #880e48;
 $dark-maroon:   darken($maroon, 5%);
 $darker-maroon: darken($maroon, 10%);
@@ -48,6 +51,7 @@ $frame-colour:                  $light-grey;
 $primary-colour:                $light-navy;
 $highlight-colour:              $light-aqua;
 $error-colour:                  $red;
+$success-colour:                $light-green;
 
 $border-colour:                 $light-grey;
 $secondary-border-colour:       $lighter-grey;
