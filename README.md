@@ -137,6 +137,14 @@ We use Bourbon 4.2.7, and we include its scss files directly rather than calling
 To just build the scss yourself, install the dependencies:
 
 ```
+xcode-select --install
+sudo xcodebuild -license
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install rbenv ruby-build
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+rbenv install 2.3.0
+
 gem install scss_lint scss_lint_reporter_checkstyle
 brew install npm
 npm install
