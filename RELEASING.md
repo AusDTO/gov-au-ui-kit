@@ -25,7 +25,7 @@ Each MAJOR release will come with a code name to ease communication.
 Two separate deployed versions of the UI Kit will be maintained.
 
 | Branch | Server | URL |
--------------------------
+|--------|--------|-----|
 | develop | Staging | [http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/](http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/) |
 | master | Production | TBD |
 
