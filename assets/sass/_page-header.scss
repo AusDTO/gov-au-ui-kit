@@ -11,7 +11,7 @@ header[role='banner'] {
     }
   }
 
-  .login {
+  .controls {
     padding: $medium-spacing 0;
     text-align: right;
     background-color: $navy;
@@ -58,6 +58,8 @@ header[role='banner'] {
 
     .button--feedback {
       @extend %base-button;
+
+      //background-color: $button-contrast-colour;
     }
   }
 

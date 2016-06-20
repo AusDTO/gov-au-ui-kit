@@ -96,6 +96,10 @@ h1 {
   @include media($mobile) {
     font-size: rem(51);
   }
+
+  &:first-of-type {
+    margin-top: $tiny-spacing;
+  }
 }
 
 h2 {
@@ -112,10 +116,6 @@ h2 {
 
   @include media($mobile) {
     font-size: rem(38);
-  }
-
-  &:first-of-type {
-    margin-top: $tiny-spacing;
   }
 }
 
