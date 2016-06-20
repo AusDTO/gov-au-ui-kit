@@ -10,11 +10,11 @@
 header {
   @include outer-container(100%);
 
-  background-color: $maroon;
-  color: $white;
+  &[role='banner'] {
+    @include outer-container(100%);
 
-  h1 {
-    margin-top: 0;
+    background-color: $non-black;
+    color: $white;
   }
 }
 
@@ -23,9 +23,11 @@ footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
 
+    margin-top: ($base-spacing * 2);
+    padding-top: $base-spacing;
+    padding-bottom: $base-spacing;
     background-color: $non-black;
     color: $white;
-    margin-top: ($base-spacing * 2);
   }
 }
 
