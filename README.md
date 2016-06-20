@@ -48,6 +48,8 @@ Goal: build a lean and frugal CSS/SCSS framework to make building gov.au easier.
 
 #### Releases
 
+Please see [RELEASING](RELEASING.md).
+
 We want to provide stable, usable releases at the end of each sprint.
 
 We are wary about the possibility of breaking changes, and will work to ensure if anything does change that can cause things to break that we will try to gracefully deprecate them.
