@@ -1,4 +1,7 @@
-.page-footer {
+footer[role='contentinfo'] {
+  background-color: $non-black;
+  color: $white;
+
   .footer-logo {
     @include span-columns(3 of 12);
 

@@ -1,17 +1,86 @@
-.page-header {
-  .status {
-    background-color: $maroon;
-    color: $white;
-    padding: $medium-spacing 0;
+header[role='banner'] {
+  margin-bottom: $base-spacing;
 
-    p {
-      margin: 0;
-      font-weight: bold;
+  // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
+  a {
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: none;
     }
   }
 
-  h1 {
-    margin-top: 0;
-    padding-top: $tiny-spacing;
+  .login {
+    padding: $medium-spacing 0;
+    text-align: right;
+    background-color: $navy;
+    color: $white;
+  }
+
+  .govau--header {
+    padding: $medium-spacing 0;
+    background-color: $dark-aqua;
+    color: $white;
+
+    .govau--logo {
+      @include span-columns(3);
+    }
+
+    .logo {
+      @extend h3;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: $base-sans-serif;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        // fill me in
+      }
+    }
+
+    .badge--alpha,
+    .badge--beta {
+      vertical-align: top;
+      margin-left: $tiny-spacing;
+    }
+
+    .search {
+      @include span-columns(4);
+      @include shift(1);
+    }
+
+    .feedback {
+      @include span-columns(4);
+    }
+
+    .button--feedback {
+      @extend %base-button;
+    }
+  }
+
+  .hero {
+    padding: $base-spacing 0;
+    background-color: $light-aqua;
+    color: $black;
+
+    .site-title {
+      @extend h1;
+
+      display: block;
+      margin: $tiny-spacing 0;
+      color: $black;
+
+      &:hover,
+      &:focus {
+        // fill me in
+      }
+    }
+
+    .tagline {
+      @extend .abstract;
+    }
   }
 }

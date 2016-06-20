@@ -9,19 +9,35 @@
 </head>
 <body>
 
-  <header role="banner" class="page-header">
-    <section class="status">
+  <header role="banner">
+    <section class="login">
       <div class="wrapper">
-        <p>This is current status bar, for msgs, similar to that of the gov.au alpha.</p>
+        <a href="#" class="login">Login</a>
       </div>
     </section>
-    </div>
-    <div class="wrapper">
-      <h1 class="site-title">
-        GOV.AU: h1.site-title
-        <span class="badge--alpha">alpha</span>
-      </h1>
-    </div>
+    <section class="govau--header">
+      <div class="wrapper">
+        <div class="govau--logo">
+          <a href="#" class="logo">gov.au</a> <span class="badge--alpha">alpha</span>
+        </div>
+        <div class="search">
+          <form>
+            <fieldset>
+              <input id="search" class="text-input" type="text" name="q" size="15" tabindex="0" accesskey="S" />
+              <input id="searchsubmit" type="submit" name="sa" value="Search" tabindex="0" />
+            </fieldset>
+          </form>
+      </div>
+      <div class="feedback">
+        <a href="#" class="button--feedback">Give feedback</a>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="wrapper">
+        <a href="#" class="site-title">Department of Intertubes</a>
+        <p class="tagline">Calibration of intertube serialisation will be a real game-changer.</p>
+      </div>
+    </section>
   </header>
 
   <main role="main">
@@ -200,7 +216,7 @@
 
   </main>
 
-  <footer role="contentinfo" class="page-footer">
+  <footer role="contentinfo">
     <div class="wrapper">
       <div class="footer-logo">
         <img src="https://www.gov.au/alpha/assets/coatofarms-01.svg" alt="Logo image">
