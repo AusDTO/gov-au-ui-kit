@@ -2,9 +2,9 @@
 //
 // A vertical navigation menu that fits three levels of items.
 //
-// Markup: templates/navigation.hbs
+// Markup: templates/primary-navigation.hbs
 //
-// Style guide: Components.Navigation
+// Style guide: Components.Navigation.Primary Navigation
 .primary-nav {
   // scss-lint:disable SelectorDepth, NestingDepth
   .nav-heading {
@@ -91,5 +91,38 @@
 .js .nav-heading {
   @include media($tablet) {
     display: block;
+  }
+}
+
+// Breadcrumbs
+//
+// A inline listing of pages that are broader than this one
+//
+// Markup: templates/breadcrumbs.hbs
+//
+// Style guide: Components.Navigation.Breadcrumbs
+.breadcrumbs {
+  @extend .wrapper;
+  margin-top: 0;
+  background-color: $lighter-grey;
+
+  @include media($tablet) {
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: $tiny-spacing $small-spacing;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+
+    li:not(:last-child)::after {
+      content: ' ' + entity('raquo');
+      font-weight: bold;
+    }
+
   }
 }
