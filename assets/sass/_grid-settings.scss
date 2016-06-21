@@ -14,7 +14,7 @@ $max-width: em(1200) !global;
 $gutter: em(20);
 
 // Toggle visibility of your grid columns for development/debugging.
-$visual-grid: true;
+$visual-grid: false;
 
  // Media Queries
 @import 'vendor/neat/neat-helpers';
