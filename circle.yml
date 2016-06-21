@@ -17,6 +17,6 @@ test:
 
 deployment:
   development:
-    branch: master
+    branch: develop
     commands:
       - ./bin/cideploy.sh
