@@ -157,57 +157,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 }
 
 // ------------------------------------------------------------------------------
-// Layout and page background
-// ------------------------------------------------------------------------------
-
-#kss-node {
-  margin: 0;
-  padding: 20px;
-  background: #fff;
-
-  @media screen and (min-width: 769px) {
-    padding: 0;
-    background: #fff;
-
-    .kss-main,
-    .kss-sidebar {
-      float: left;
-      margin-right: -100%;
-      box-sizing: border-box;
-    }
-  }
-
-  .kss-main {
-    width: 100%;
-    margin: 0 auto;
-
-    @media screen and (min-width: 769px) {
-      width: 80%;
-      margin-left: 20%;
-      padding: 0 20px 0 30px;
-    }
-  }
-
-  .kss-sidebar {
-    border-bottom:1px solid #ddd;
-
-    @media screen and (min-width: 769px) {
-      position: fixed;
-      width: 20%;
-      height: 100%;
-      overflow: auto;
-      padding: 0 10px 0 20px;
-      border-bottom: 0;
-      background-image: url(noise-low.png), -ms-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -o-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -webkit-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), radial-gradient(#fff, #eee);
-      box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.7);
-    }
-  }
-}
-
-// ------------------------------------------------------------------------------
 // Sidebar-area components
 // ------------------------------------------------------------------------------
 
