@@ -1,12 +1,59 @@
+// Typography
+//
+// This explains the typography suite provided by the gov-au-ui-kit. It provides basic styling for content and typographic defaults.
+//
+// It is designed to meet the highest standards of usability and accessibility. It also sets a consistent visual voice of credibility, warmth, and ease-of-use across Australian Government digital platforms.
+//
+// This aims to meet common goverment typographic needs:
+// - clear and consistent headings
+// - legible body paragraphs
+// - clear labels
+// - easy-to-use input fields.
+//
+// The framework uses the open source Lato font family.
+//
+// Lato is designed for legibility and can beautifully adapt to a variety of visual styles.
+//
+// Style guide: Typography
+
+// Typeface
+//
+// Lato is an open source sans serif typeface created for legibility in UI design.
+//
+// Lato provides:
+// - a variety of weights that are easy to read at all sizes
+// - clear headers
+// - highly-readable body text.
+//
+// The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
+//
+// ### Example: Lato regular
+// ABCDEFGHIJKLMNOPQRSTUVWXYZ
+// abcdefghijklmnopqrstuvwxyz
+// 1234567890(!@#s%g.,?:;)
+//
+// ### Example: Lato bold
+//
+// <strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ</strong>
+// <strong>abcdefghijklmnopqrstuvwxyz</strong>
+// <strong>1234567890(!@#s%g.,?:;)</strong>
+//
+// Style guide: Typography.1 Typeface
+
 // Font stacks
 //
 // We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
+//
+// choice of fonts stacks good support across browser history etc.
+//
+// working on compatability for web font stacks for IE 6-9, won't be able to use the import rule - devs need to add HTML to their head
 //
 // Markup: templates/font-stacks-scss.hbs
 //
 // Compatibility untested.
 //
-// Style guide: Typography.Font-stacks
+// Style guide: Typography.3 Font stacks
+
 @import url('https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext');
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
@@ -21,7 +68,15 @@ strong {
   font-weight: 700;
 }
 
-// Base spacing and spacing
+// Base spacing & spacing
+//
+// Base spacing and spacing is relative to the font size and calculated in SCSS, by anchoring it to the base leading, which is unit-less. It acts as a multiplier of the font-size.
+//
+// The base-spacing unit is then set in ems by * 1em.
+//
+// Visual example
+//
+// Code Example
 //
 // We define our base spacing relative to the size of the type by anchoring it to the base leading, which is unit-less; it acts as a multiplier of the font-size.
 //
@@ -29,7 +84,7 @@ strong {
 //
 // Markup: templates/base-typography-scss.hbs
 //
-// Style guide: Typography.Configuration
+// Style guide: Typography.4 Base spacing & spacing
 
 // Leading/line-height.
 $base-leading: 1.8;
@@ -57,13 +112,34 @@ html {
   font-weight: $base-font-weight;
 }
 
-// Headings
+// Headings & body copy
+//
+// The type sizes are suitable for average screen densities and reading comfort under typical conditions.
+//
+// They are initially based on a perfect fourth modular scale.
+//
+// They sized across 4 breakpoint groups to suit a range of devices.
+//
+// We recommend you use the default settings based on relative units to allow for variety across users' browsers and device screens.
+//
+// This framework uses 4 breakpoints:
+//
+// - Mobile: 4 columns, 420px maximum
+// - Tablet: 8 columns, 768px maximum
+// - Desktop: 12 columns, 1000px maximum
+//
+// Insert HTML table
+//
+// Visual example (needs to include body and sub example)
+//
+// Code Example
 //
 // Common styling for headings 1-6.
 //
 // Markup: templates/headings.hbs
 //
-// Style guide: Typography.Headings
+// Style guide: Typography.2 Headings & body copy
+
 h1,
 h2,
 h3,
@@ -188,7 +264,22 @@ a {
 //
 // Markup: templates/content-typography.hbs
 //
-// Style guide: Typography.Content
+// Phil: “I was thinking that we might break these out and have sort explanations for each? between examples and code, so stripping out all the body copy and headers (as these are seen up the page) and just showing the elements?”
+//
+// Below is a series of examples outlining common content elements.
+//
+// * Lists Example (Bullets / numbers)
+//
+// * Definitions
+//
+// * Callouts and warning’s
+//
+// * Quotations / Inline quotes and Block quotes
+//
+// *  Badges
+//
+// Style guide: Typography.5 Common content elements
+
 ul,
 ol,
 dl,
@@ -246,7 +337,8 @@ dt {
 //
 // Markup: templates/quotations-typography.hbs
 //
-// Style guide: Typography.Quotations
+// Style guide: Typography.6 Quotations
+
 blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
@@ -356,7 +448,8 @@ cite {
 //
 // Markup: templates/badge-typography.hbs
 //
-// Style guide: Typography.Badges
+// Style guide: Typography.7 Badges
+
 %base-badge {
   // We should put something clever here.
   border-radius: $large-border-radius;
