@@ -14,11 +14,11 @@ $max-width: em(1200) !global;
 $gutter: em(20);
 
 // Toggle visibility of your grid columns for development/debugging.
-$visual-grid: false;
+$visual-grid: true;
 
  // Media Queries
 @import 'vendor/neat/neat-helpers';
-$desktop: new-breakpoint(max-width 1000px 12);
+$desktop: new-breakpoint(max-width $max-width 12);
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
 
