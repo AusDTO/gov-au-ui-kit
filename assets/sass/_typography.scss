@@ -42,15 +42,18 @@
 
 // Font stacks
 //
-// We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
+// We're currently testing Lato in 3 styles:
+// - regular 400
+// - italic 400
+// - regular 700.
 //
-// choice of fonts stacks good support across browser history etc.
+// At this stage the main target of the font stacks are still undecided. We're confident to achieve a high degree of coverage across a range of browsers using the fall-backs.
 //
-// working on compatability for web font stacks for IE 6-9, won't be able to use the import rule - devs need to add HTML to their head
+// This gives us pretty much 95% coverage across Windowns and Mac. and a lot of FOSS default font installs.
+//
+// We still need to consider the pros and cons of any webfont inclusion. We are also working on compatability for web font stacks for Internet Explorer version 6-9. Developers will not be able to use the import rule and will need to add HTML to their head.
 //
 // Markup: templates/font-stacks-scss.hbs
-//
-// Compatibility untested.
 //
 // Style guide: Typography.3 Font stacks
 
@@ -59,7 +62,6 @@
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
 $base-sans-serif: 'Lato', Verdana, 'Bitstream Vera Sans', sans-serif;
 $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
-// This gives us pretty much 95% coverage across Win/Mac, and a lot of FOSS default font installs.
 
 $base-font-family: $base-sans-serif;
 
@@ -70,7 +72,9 @@ strong {
 
 // Base spacing & spacing
 //
-// Base spacing and spacing is relative to the font size and calculated in SCSS, by anchoring it to the base leading, which is unit-less. It acts as a multiplier of the font-size.
+// Base spacing and spacing is relative to the font size and calculated in SCSS.
+//
+// It is anchored to the base leading, which is unit-less. It acts as a multiplier of the font-size.
 //
 // The base-spacing unit is then set in ems by * 1em.
 //
@@ -118,25 +122,87 @@ html {
 //
 // They are initially based on a perfect fourth modular scale.
 //
-// They sized across 4 breakpoint groups to suit a range of devices.
-//
-// We recommend you use the default settings based on relative units to allow for variety across users' browsers and device screens.
-//
 // This framework uses 4 breakpoints:
+// - Mobile (extra small devices): 4 columns, 420px maximum
+// - Tablet (small devices): 8 columns, 768px maximum
+// - Desktop (medium devices): 12 columns, 1000px maximum
+// - Large desktops (large devices): 12 columns, 1200px maximum
 //
-// - Mobile: 4 columns, 420px maximum
-// - Tablet: 8 columns, 768px maximum
-// - Desktop: 12 columns, 1000px maximum
+// ### Font size and line heights default settings
 //
-// Insert HTML table
+// We recommend you use relative units to allow for variety across users' browsers and device screens.
 //
-// Visual example (needs to include body and sub example)
+//  This table shows size and line height (size/line-height) in pixels and ems.
 //
-// Code Example
+// <table style="border-style:solid;border-width:1px;">
+  // <tr>
+    // <th>Style</th>
+    // <th>Mobile</th>
+    // <th>Tablet</th>
+    // <th>Desktop</th>
+    // <th>Large desktops</th>
+//   </tr>
+  // <tr>
+    // <td>H1 - Display type 1</td>
+    // <td>51/61<br>3.1875em</td>
+    // <td><br>57/68<br>3.5625em<br></td>
+    // <td>51/61<br>3.1875em</td>
+    // <td>57/68<br>3.5625em</td>
+//   </tr>
+  // <tr>
+    // <td>H2 - Display type 2</td>
+    // <td>43/52<br>2.6875em</td>
+    // <td>43/52<br>2.6875em</td>
+    // <td>38/45<br>2.375em</td>
+    // <td>43/52<br>2.6875em</td>
+//   </tr>
+  // <tr>
+    // <td>H3 Article main title</td>
+    // <td>28/40<br>1.75em</td>
+    // <td>32/45<br>1.75em</td>
+    // <td>28/40<br>1.75em</td>
+    // <td>28/40<br>1.75em</td>
+//   </tr>
+  // <tr>
+    // <td>H4 section heading / introduction</td>
+    // <td>21/32<br>1.3125em</td>
+    // <td>24/34<br>1.5em</td>
+    // <td>21/32<br>1.3125em</td>
+    // <td>21/32<br>1.3125em</td>
+//   </tr>
+  // <tr>
+    // <td>H5 sub section heading</td>
+    // <td>18/30<br>1.125em</td>
+    // <td>18/30<br>1.125em</td>
+    // <td>16/28<br>1em</td>
+    // <td>16/28<br>1em</td>
+//   </tr>
+  // <tr>
+    // <td>H6 sub section heading (uppercase)</td>
+    // <td>18/30<br>1.125em</td>
+    // <td>18/30<br>1.125em</td>
+    // <td>16/28<br>1em</td>
+    // <td>16/28<br>1em</td>
+//   </tr>
+  // <tr>
+    // <td>Body copy</td>
+    // <td>18/30<br>1.125em</td>
+    // <td>18/30<br>1.125em</td>
+    // <td>16/28,1em</td>
+    // <td>16/28,1em</td>
+//   </tr>
+  // <tr>
+    // <td>Index, captions, links</td>
+    // <td>14/20<br>0.875em</td>
+    // <td>14/20<br>0.875em</td>
+    // <td>14/20<br>0.875em</td>
+    // <td>14/20<br>0.875em</td>
+//   </tr>
+// </table>
 //
-// Common styling for headings 1-6.
+// ### Base size examples
 //
-// Markup: templates/headings.hbs
+// Markup: templates/heading-body-styles.hbs
 //
 // Style guide: Typography.2 Headings & body copy
 
@@ -264,19 +330,30 @@ a {
 //
 // Markup: templates/content-typography.hbs
 //
-// Phil: “I was thinking that we might break these out and have sort explanations for each? between examples and code, so stripping out all the body copy and headers (as these are seen up the page) and just showing the elements?”
+// Below is a series of examples outlining how the framework shows styling and vertical spacing for common content elements.
 //
-// Below is a series of examples outlining common content elements.
+//* Lists Example (Bullets / numbers)
 //
-// * Lists Example (Bullets / numbers)
+//List styles have been developed to enable unordered (bulleted) and ordered(numbered)
 //
-// * Definitions
 //
-// * Callouts and warning’s
+//* Definitions
 //
-// * Quotations / Inline quotes and Block quotes
+//Definition styles have been developed to display definition terms as lists.
 //
-// *  Badges
+//* Callouts and warning’s
+//
+//Callouts and warnings can be used to draw the users attention to a specific piece of content.
+//
+//* Quotations / Inline quotes and Block quotes
+//
+//Quoting have been developed for use in two ways inline and as a pull quote. The inline quoting has been developed to handle additional nested elements such as quotes, ordered and unordered lists.
+//
+//*  Badges
+//
+//Badges have been created to hold either an item number or demonstrate status. An example of this is the  alpha badge seen in the header of the Gov.au/alpha
+//
+// Markup: templates/block-level-elements.hbs
 //
 // Style guide: Typography.5 Common content elements
 
