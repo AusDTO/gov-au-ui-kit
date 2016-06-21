@@ -8,13 +8,14 @@ var gulp = require('gulp'),
     gitVersion = require('gulp-gitversion'),
     scssMerge = require('./lib/gulp-scss-merge.js'),
     uglify = require('gulp-uglify'),
-    del = require('del')
+    del = require('del'),
     runSequence = require('run-sequence')
     ;
 
 var paths = {
     assetsDir: './assets/**/*.*',
     examplesDir: './examples/**/*.*',
+    kssBuilderDir: './kss-builder/**/*.*',
     scss: './assets/sass/ui-kit.scss',
     js: './assets/js/ui-kit.js',
     readme: "./README.md",
@@ -101,10 +102,21 @@ gulp.task('nginx', function () {
         .pipe(gulp.dest(paths.outputHTML));
 });
 
-gulp.task('htmlvalidate', ['examples','styleguide'], function () {
-    validator = require('gulp-html')
-    return gulp.src(['build/*.html', 'build/**/*.html'])
-        .pipe(validator({'verbose': true}));
+gulp.task('htmlvalidate', ['examples','styleguide'], function (cb) {
+    try {
+        validator = require('gulp-html')
+        return gulp.src(['build/*.html', 'build/**/*.html'])
+            .pipe(validator({'verbose': true}));
+    } catch (err) {
+        if (err.code == 'MODULE_NOT_FOUND') {
+            console.log("WARNING: optional HTML validator not installed, to resolve run:");
+            console.log("> npm install AusDTO/gulp-html");
+            return cb;
+        }
+        else {
+            throw err
+        }
+    }
 });
 
 gulp.task('styleguide', function () {
@@ -136,5 +148,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('watch.build', function () {
-    gulp.watch([paths.assetsDir, paths.examplesDir, paths.readme], ['build']);
+    gulp.watch([paths.assetsDir, paths.examplesDir, paths.kssBuilderDir, paths.readme], ['build']);
 });

@@ -80,6 +80,7 @@ main:after {
     @include span-columns(6 of 8);
     @include shift(1);
   }
+
   @include media($mobile) {
     @include span-columns(4 of 4);
     @include shift(0);

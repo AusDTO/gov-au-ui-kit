@@ -1,25 +1,20 @@
 {
   "name": "gov-au-ui-kit",
-  "version": "1.0.0",
-  "description": "An example module to illustrate the usage of a package.json",
-  "author": "Your Name <you.name@example.org>",
-  "contributors": [
-    {
-      "name": "Foo Bar",
-      "email": "foo.bar@example.com"
-    }
-  ],
+  "version": "0.1.2",
+  "description": "GOV.AU UI framework, using Bourbon and Neat",
+  "author": "GOV.AU UI Kit team <ui-kit-announce@digital.gov.au>",
+  "homepage": "https://gov-au-ui-kit.apps.staging.digital.gov.au/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nodejitsu/browsenpm.org"
+    "url": "https://github.com/AusDTO/gov-au-ui-kit"
   },
   "bugs": {
-    "url": "https://github.com/nodejitsu/browsenpm.org/issues"
+    "url": "https://github.com/AusDTO/gov-au-ui-kit/issues"
   },
   "keywords": [
-    "nodejitsu",
-    "example",
-    "browsenpm"
+    "ui",
+    "scss",
+    "js"
   ],
   "preferGlobal": true,
   "license": "MIT",
@@ -28,7 +23,6 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-gitversion": "^0.0.8",
-    "gulp-html": "AusDTO/gulp-html",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "gulp-scss-lint": "^0.4.0",
