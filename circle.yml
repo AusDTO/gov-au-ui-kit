@@ -12,7 +12,7 @@ test:
   override:
     - ./bin/cibuild.sh
   post:
-    - cf login -a https://api.system.staging.digital.gov.au -o dto --skip-ssl-validation -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
+    - cf login -a https://api.system.staging.digital.gov.au -o dto -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
     - cf target -o dto -s dtomisc
 
 deployment:
