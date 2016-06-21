@@ -8,8 +8,6 @@
 }
 
 header {
-  @include outer-container(100%);
-
   &[role='banner'] {
     @include outer-container(100%);
   }
@@ -34,7 +32,7 @@ main {
     @include span-columns(7 of 12);
     @include media($tablet) {
       @include span-columns(6 of 8);
-      @include shift(1);
+      // @include shift(2);
     }
 
     @include media($mobile) {

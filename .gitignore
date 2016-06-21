@@ -38,3 +38,5 @@ jspm_packages
 *.css.map
 .idea
 build
+
+.DS_Store
