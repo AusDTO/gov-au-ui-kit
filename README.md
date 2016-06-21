@@ -6,10 +6,10 @@
 
 gov-au-ui-kit is 3 things:
 
-- draft design guide to build a standardised, accessible look and feel for GOV.AU projects:  http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/
-- templates (to come)
+- draft design guide to build an accessible standardised look and feel for GOV.AU projects: http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/
+- templates (**to come - [describe further?]**)
 - a lean and frugal CSS/SCSS framework (`assets/sass`) that you can
-  - link to as a precompiled minified file:
+  - link to as a precompiled minified file: **run by devs**
   ```
   <link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
   ```
@@ -20,14 +20,15 @@ Look at an [example page showing the full framework](https://gov-au-ui-kit.apps.
 ### Features
 
 - Normalize (to make browsers render all elements more consistently).
-- Lightweight, extensible grid framework, with some good defaults.
-- Basic styling for content with some basic typographic defaults.
+- Lightweight extensible grid framework with some good defaults.
+- Basic styling for content with some typographic defaults.
 - Basic styling for UI elements (e.g. `input`).
-- UI components build on solid HTML foundation, progressively enhanced to provide core experiences across browsers (if JavaScript fails, users will still get a robust HTML foundation).
+- Progressively enhanced to provide core experiences across browsers. Users with current browsers get a better looking site. Users with older browsers still have an accessible experience.
+- UI components build on solid HTML foundation. If JavaScript fails users will still get a robust HTML foundation.
 
 ## What this isn't
 
-This isn't a... [talk to Designers re: complete design system]
+This is not a... **[talk to Designers re: complete design system]**
 
 ## Who is this for?
 
@@ -65,11 +66,11 @@ This is available as a shell script at `bin/cibuild.sh`.
 
 ### Errors
 
-If you get `Fatal undefined` error, remember to set the Ruby version to 2.3.0 (`rbenv local 2.3.0` if you use rbenv).
+If you get `Fatal undefined` error, remember to set the Ruby version to 2.3.0 (`rbenv local 2.3.0` if you use rbenv). [**check with devs**]
 
 ### Dependencies
 
-We use Bourbon 4.2.7, and we include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
+We use Bourbon 4.2.7. We include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
 
 - gulp `^3.9.1`
 - gulp-scss-lint `^0.4.0`
@@ -84,15 +85,16 @@ We use Bourbon 4.2.7, and we include its scss files directly rather than calling
 
 ## Make gov-au-ui-kit better
 
-- Contribute to this repository (understand the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our conventions](https://github.com/AusDTO/gov-au-ui-kit/blob/master/conventions.md), including [Block Element Modifier](http://getbem.com/), first).
+- Create a new [GitHub issue](), or comment on [existing issues]().
+- Contribute to this repository. You should understand the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our conventions](https://github.com/AusDTO/gov-au-ui-kit/blob/master/conventions.md), including [Block Element Modifier](http://getbem.com/), first.
 - Contact us on slack in #govau-uikit.
-- Email [firstname.lastname@digital.gov.au](mailto:TBC).
+- Email [firstname.lastname@digital.gov.au](mailto:TBC). [**subject to agreement by team**]
 
 ## Roadmap
 
-This framework is in active development.
+This framework is in active development. **generally check following is up to date**
 
-**Releases:** we are currently in pre-release stage (early June).
+**Releases:** we are currently in pre-release stage (June).
 
 **Usage:** we have, and are seeking more early users.
 
@@ -137,14 +139,14 @@ We may investigate creating an installer wrapper, or releasing via git submodule
 
 Iterate in 2 ways:
 
-1. look and feel under the direction of the designers from the guides team
-2. styling for commonly used and requested things that builders from other teams need.
+- look and feel under the direction of the designers from the GOV.AU Guides team
+- styling for commonly used and requested things that builders from other Digital Transformation Office teams need.
 
 ## Copyright & license
 
 Copyright Digital Transformation Office. [Licensed under the MIT license](https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE)).
 
-This repo includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Normalize.css](https://necolas.github.io/normalize.css/), which all also use the MIT license.
+This repository includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/) and [Normalize.css](https://necolas.github.io/normalize.css/). All also use the MIT license.
 
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
@@ -176,5 +178,5 @@ gov-au-ui-kit is maintained and funded by the [Digital Transformation Office](ht
 ### Action
 
 - ~~How to I feedback and contribute - way to give feedback~~, guide to Contributing, features bug tool voting - github issues
-- CDN (gov.au)??
+- CDN (gov.au)?? [**talk to devs**]
 - Tech dependencies and Usage
