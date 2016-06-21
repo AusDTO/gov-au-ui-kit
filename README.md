@@ -1,4 +1,4 @@
-# gov-au-ui-kit (draft GOV.AU Design Guide v1.0)
+# gov-au-ui-kit (draft GOV.AU Design Guide)
 
 [![CircleCI](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=svg)](https://circleci.com/gh/AusDTO/gov-au-ui-kit)
 
@@ -17,14 +17,14 @@ gov-au-ui-kit is 3 things:
 
 Look at an [example page showing the full framework](https://gov-au-ui-kit.apps.staging.digital.gov.au/).
 
-### Features
+### Features & browser support
 
 - Normalize (to make browsers render all elements more consistently).
 - Lightweight extensible grid framework with some good defaults.
 - Basic styling for content with some typographic defaults.
 - Basic styling for UI elements (e.g. `input`).
-- Progressively enhanced to provide core experiences across browsers. Users with current browsers get a better looking site. Users with older browsers still have an accessible experience.
 - UI components build on solid HTML foundation. If JavaScript fails users will still get a robust HTML foundation.
+- Progressively enhanced to provide core experiences across browsers. All users get critical information and an accessible site. Users with newer browsers get a better looking site.
 
 ## What this isn't
 
@@ -85,7 +85,7 @@ We use Bourbon 4.2.7. We include its scss files directly rather than calling it 
 
 ## Make gov-au-ui-kit better
 
-- Create a new [GitHub issue](), or comment on [existing issues]().
+- Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
 - Contribute to this repository. You should understand the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our conventions](https://github.com/AusDTO/gov-au-ui-kit/blob/master/conventions.md), including [Block Element Modifier](http://getbem.com/), first.
 - Contact us on slack in #govau-uikit.
 - Email [firstname.lastname@digital.gov.au](mailto:TBC). [**subject to agreement by team**]
@@ -94,11 +94,20 @@ We use Bourbon 4.2.7. We include its scss files directly rather than calling it 
 
 This framework is in active development. **generally check following is up to date**
 
-**Releases:** we are currently in pre-release stage (June).
+Goal: build a lean and frugal CSS/SCSS framework to make building GOV.AU easier. It should:
+- provide base consistency
+- allow for easier rapid prototyping directly in the browser
+- shouldn't get in the way of customised design needs.
 
-**Usage:** we have, and are seeking more early users.
+**Releases:** see [RELEASING.md](RELEASING.md).
 
-We also have a build process for the development of the framework which uses gulp on node.js (see [Build the scss yourself](#building))
+We aim to provide stable, usable releases at the end of each sprint.
+
+We are wary about breaking changes. We will work to ensure we will gracefully deprecate any changes that cause things to break.
+
+We may create an installer wrapper, or release via git submodules.
+
+We have a build process for the development of the framework which uses gulp on node.js (see [Build the scss yourself](#building))
 
 ### 1st milestone
 
