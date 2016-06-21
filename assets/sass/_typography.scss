@@ -29,13 +29,17 @@
 //
 // ### Example: Lato regular
 // ABCDEFGHIJKLMNOPQRSTUVWXYZ
+//
 // abcdefghijklmnopqrstuvwxyz
+//
 // 1234567890(!@#s%g.,?:;)
 //
 // ### Example: Lato bold
 //
 // <strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ</strong>
+//
 // <strong>abcdefghijklmnopqrstuvwxyz</strong>
+//
 // <strong>1234567890(!@#s%g.,?:;)</strong>
 //
 // Style guide: Typography.1 Typeface
@@ -47,9 +51,9 @@
 // - italic 400
 // - regular 700.
 //
-// At this stage the main target of the font stacks are still undecided. We're confident to achieve a high degree of coverage across a range of browsers using the fall-backs.
+// The main target of the font stacks are undecided. We are confident can achieve a high degree of coverage across a range of browsers using the fall-backs.
 //
-// This gives us pretty much 95% coverage across Windowns and Mac. and a lot of FOSS default font installs.
+// This gives us pretty much 95% coverage across Windowns and Mac and a lot of FOSS default font installs.
 //
 // We still need to consider the pros and cons of any webfont inclusion. We are also working on compatability for web font stacks for Internet Explorer version 6-9. Developers will not be able to use the import rule and will need to add HTML to their head.
 //
@@ -72,19 +76,11 @@ strong {
 
 // Base spacing & spacing
 //
-// Base spacing and spacing is relative to the font size and calculated in SCSS.
+// Base spacing and spacing is relative to the font size and calculated in the SCSS.
 //
-// It is anchored to the base leading, which is unit-less. It acts as a multiplier of the font-size.
-//
-// The base-spacing unit is then set in ems by * 1em.
+// The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `base-spacing` unit is then set in ems (ie by * 1em).
 //
 // Visual example
-//
-// Code Example
-//
-// We define our base spacing relative to the size of the type by anchoring it to the base leading, which is unit-less; it acts as a multiplier of the font-size.
-//
-// The base-spacing unit is then set in ems by * 1em.
 //
 // Markup: templates/base-typography-scss.hbs
 //
