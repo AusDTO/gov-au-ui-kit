@@ -2,12 +2,16 @@ header[role='banner'] {
   margin-bottom: $base-spacing;
 
   // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
-  a {
-    border-bottom: none;
+  .controls a,
+  .govau--header .logo {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    color: $white;
 
     &:hover,
     &:focus {
-      border-bottom: none;
+      padding-bottom: 2px;
+      border-bottom: 2px solid $orange;
     }
   }
 
@@ -37,7 +41,7 @@ header[role='banner'] {
 
       &:hover,
       &:focus {
-        // fill me in
+        border-bottom: 3px solid $orange;
       }
     }
 
@@ -47,91 +51,15 @@ header[role='banner'] {
       margin-left: $tiny-spacing;
     }
 
-    .searchbox {
-      @include span-columns(4);
-      @include clearfix;
+    .feedback {
+      float: right;
+    }
 
-      color: $white;
-      padding-right: $base-spacing;
-
-      .searchbox-text {
-        border: 1px solid transparentize($white, .5);
-        background-color: transparent;
-        padding: $tiny-spacing $medium-spacing;
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        font-size: rem(18);
-
-        &:hover {
-          background-color: transparentize($white, .1);
-        }
-
-        &:focus {
-          background-color: $white;
-          color: $black;
-        }
-      }
-
-      .searchbox-button {
-        cursor: pointer;
-        margin-right: -($base-spacing);
-        float: right;
-        background-color: transparent;
-        width: $base-spacing;
-        height: $base-spacing;
-        text-align: center;
-        overflow: hidden;
-        text-indent: -99em;
-        border: solid 3px transparent;
-        background: transparent url('https://assets.publishing.service.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png');
-        background-position: 4px center;
-        background-repeat: no-repeat;
-
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        &:focus {
-          background-color: rgba(255, 255, 255, 0.1);
-          border: solid 3px $white;
-        }
-      }
-
-      .searchbox-button,
-      .searchbox-text {
-        -webkit-transition: background 200ms ease;
-        -moz-transition: background 200ms ease;
-        -ms-transition: background 200ms ease;
-        -o-transition: background 200ms ease;
-        transition: background 200ms ease;
-      }
-
-      .searchbox-wrap {
-        position: relative;
-        float: left;
-        width: 100%;
-      }
-
-      .searchbox-label {
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 1;
-        font-size: rem(16);
-        padding-top: $tiny-spacing;
-        text-indent: $medium-spacing;
-      }
+    .button--feedback {
+      @extend %base-button;
+      @extend button.contrast;
     }
   }
-
-  .feedback {
-    @include span-columns(4);
-  }
-
-  .button--feedback {
-    @extend %base-button;
-    }
 
   .hero {
     padding: $base-spacing 0;
@@ -141,9 +69,9 @@ header[role='banner'] {
     .site-title {
       @extend h1;
 
-      display: block;
       margin: $tiny-spacing 0;
       color: $black;
+      border-bottom: none;
 
       &:hover,
       &:focus {

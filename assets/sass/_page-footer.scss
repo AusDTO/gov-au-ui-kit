@@ -1,4 +1,6 @@
 footer[role='contentinfo'] {
+  @include pad($base-spacing 0);
+
   background-color: $non-black;
   color: $white;
 
