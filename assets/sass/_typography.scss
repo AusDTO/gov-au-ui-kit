@@ -190,6 +190,7 @@ a {
   &:hover,
   &:active {
     color: $highlight-colour;
+    border-bottom-width: 3px;
   }
 
 }
