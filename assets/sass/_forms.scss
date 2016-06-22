@@ -71,7 +71,9 @@ form {
   //
   // Style guide: Forms.TextInput
 
-  [type='text'] {
+  [type='text'],
+  [type='email'],
+  [type='password'] {
     @extend %base-text-input;
   }
 
