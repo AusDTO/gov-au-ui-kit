@@ -17,6 +17,7 @@
 
   &:disabled {
     opacity: 0.5;
+    cursor: not-allowed;
   }
 
 }
@@ -70,7 +71,9 @@ form {
   //
   // Style guide: Forms.TextInput
 
-  [type='text'] {
+  [type='text'],
+  [type='email'],
+  [type='password'] {
     @extend %base-text-input;
   }
 

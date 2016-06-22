@@ -54,6 +54,8 @@
 //
 // The main target of the font stacks are undecided. We are confident can achieve a high degree of coverage across a range of browsers using the fall-backs.
 //
+// We also will likely need to move our webfonts into the `head` of any HTML, as IE is not a fan of @import for fonts (requires testing).
+//
 // This gives us pretty much 95% coverage across Windowns and Mac and a lot of FOSS default font installs.
 //
 // We still need to consider the pros and cons of any webfont inclusion. We are also working on compatability for web font stacks for Internet Explorer version 6-9. Developers will not be able to use the import rule and will need to add HTML to their head.
@@ -82,6 +84,8 @@ strong {
 // The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `base-spacing` unit is then set in ems (ie by * 1em).
 //
 // Visual example
+//
+// Roadmap: likely change to the base-spacing unit to be give a figure easier to multiplay and divide.
 //
 // Markup: templates/base-typography-scss.hbs
 //
@@ -231,6 +235,10 @@ h1 {
   @include media($mobile) {
     font-size: rem(51);
   }
+
+  &:first-of-type {
+    margin-top: $tiny-spacing;
+  }
 }
 
 h2 {
@@ -247,6 +255,10 @@ h2 {
 
   @include media($mobile) {
     font-size: rem(38);
+  }
+
+  &:first-of-type {
+    margin-top: $tiny-spacing;
   }
 }
 
@@ -317,6 +329,7 @@ a {
   &:hover,
   &:active {
     color: $highlight-colour;
+    border-bottom-width: 3px;
   }
 
 }
@@ -325,6 +338,7 @@ a {
 //
 // Base styling and vertical spacing for general content elements.
 //
+<<<<<<< HEAD
 // Style guide: Typography.5 Common content elements
 
 // Lists (bullets & numbers)
@@ -355,7 +369,9 @@ a {
 //
 // This makes maintaining the vertical rhythm between content easier, and avoids spacing bugs, as well as sizing bugs that are not clear when just testing with a few paragraphs and headings.
 //
-// Markup: templates/callouts-examples.hbs
+// We may move some of this to only appy to content inside an `article`.
+//
+// Markup: templates/content-typography.hbs
 //
 // Style guide: Typography.5 Common content elements.2 Callouts & warnings
 
@@ -410,6 +426,18 @@ dt {
   font-size: rem(24);
 }
 
+<<<<<<< HEAD
+=======
+// Quotations
+//
+// Styling for in-line quotations and blockquotes, and citations.
+//
+// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
+//
+// Markup: templates/quotations-typography.hbs
+//
+// Style guide: Typography.Quotations
+>>>>>>> develop
 blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
@@ -521,6 +549,7 @@ cite {
 //
 // Markup: templates/badges-examples.hbs
 //
+<<<<<<< HEAD
 // Style guide: Typography.5 Common content elements.7 Badges
 
 %base-badge {
@@ -545,4 +574,26 @@ cite {
 
   background-color: $maroon;
   color: $white;
+=======
+// Style guide: Typography.Badges
+$badges: (
+  "default":  $grey,
+  "alpha":    $non-black,
+  "beta":     $maroon,
+  "error":    $error-colour,
+  "success":  $green,
+);
+
+@each $badge-type, $color in $badges {
+  .badge--#{$badge-type} {
+    display: inline-block;
+    background-color: $color;
+    border-radius: $large-border-radius;
+    padding: $tiny-spacing $small-spacing;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: lighten($color, 75%);
+    font-size: rem(14);
+  }
+>>>>>>> develop
 }
