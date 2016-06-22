@@ -90,7 +90,7 @@ $mobile: new-breakpoint(max-width 420px 4);
 // Style guide: Grid settings.3 Debugging
 
 // Toggle visibility of your grid columns for development/debugging.
-$visual-grid: true;
+$visual-grid: false;
 
 // Make sure you set the viewport to the device-width in your head, eg
 // <meta name="viewport" content="width=device-width, initial-scale=1.0">
