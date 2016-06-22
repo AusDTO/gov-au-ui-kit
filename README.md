@@ -124,7 +124,7 @@ We may create an installer wrapper, or release via git submodules.
 
 We have a build process for the development of the framework which uses gulp on node.js (see [Build the scss yourself](#building))
 
-#### Milestones
+## Milestones
 
 ### 1st milestone
 
@@ -132,7 +132,7 @@ Priorities for 1st milestone:
 
 Meet the general look and feel of the gov.au alpha. This allows us to establish the basics of the framework while meeting a relatively easily met static target.
 
-#### Immediate priorities
+### Immediate priorities
 
 - provide UI styling for `input`, `label`, etc.
 - styling for other buttons, next/previous, etc.
