@@ -1,4 +1,4 @@
-# gov-au-ui-kit (draft GOV.AU Design Guide)
+# gov-au-ui-kit
 
 [![CircleCI](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=svg)](https://circleci.com/gh/AusDTO/gov-au-ui-kit)
 
@@ -7,7 +7,7 @@
 gov-au-ui-kit is 3 things:
 
 - draft design guide to build an accessible standardised look and feel for GOV.AU projects: http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/
-- templates (**to come - [describe further?]**)
+- templates (to come)
 - a lean and frugal CSS/SCSS framework (`assets/sass`) that you can
   - link to as a precompiled minified file: **run by devs**
   ```
@@ -28,11 +28,11 @@ Look at an [example page showing the full framework](https://gov-au-ui-kit.apps.
 
 ## What this isn't
 
-This is not a... **[talk to Designers re: complete design system]**
+This is not yet a complete design system. This is the starting point that will develop with your help.
 
 ## Who is this for?
 
-Australian Government designers and developers. This was designed for GOV.AU teams, but we welcome use outside of federal government.
+Teams building Australian Government sites. This was designed for GOV.AU teams, but we welcome use outside of federal government.
 
 ## How is this related to the Digital Service Standard?
 
@@ -160,32 +160,3 @@ This repository includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourb
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
 gov-au-ui-kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
-
-## Content to do list
-
-### Information
-
-- ~~What this is and isn't~~
-- ~~How do I use it~~
-- Accessible
-- ~~Empowering: feeling they can contribute~~
-- ~~Tracking features~~
-- ~~Roadmap of features / what's here? What's coming?~~
-- ~~Engineering philosophy~~
-- Rename examples to documentation folder, and fix code
-
-### Exploration
-
-- What features do I need now?
-- Give me ~~the tools~~ and the templates
-- Visual examples
-- Accessibility
-- Code snippets
-- Checklists - A11y / Values
-- Responsive information
-
-### Action
-
-- ~~How to I feedback and contribute - way to give feedback~~, guide to Contributing, features bug tool voting - github issues
-- CDN (gov.au)?? [**talk to devs**]
-- Tech dependencies and Usage
