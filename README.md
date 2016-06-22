@@ -60,7 +60,7 @@ gulp
 We have automated this, with a few additions:
 
 - `scss-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software))
-- `[kss-node](http://warpspire.com/kss/)` for auto-building a living style guide.
+- `kss-node` for auto-building a living style guide: http://warpspire.com/kss/
 
 This is available as a shell script at `bin/cibuild.sh`.
 
@@ -68,36 +68,40 @@ This is available as a shell script at `bin/cibuild.sh`.
 
 If you get `Fatal undefined` error, remember to set the Ruby version to 2.3.0. Most of us use rbenv:
 
-  $ rbenv local 2.3.0
+```
+$ rbenv local 2.3.0
+```
 
 or in rvm:
 
-  $ rvm use 2.3.0
+```
+$ rvm use 2.3.0
+```
 
 ### Dependencies
 
 We use Bourbon 4.2.7. We include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
 
-  "gulp": "^3.9.1",
-  "gulp-autoprefixer": "^3.1.0",
-  "gulp-cssnano": "^2.1.2",
-  "gulp-gitversion": "^0.0.8",
-  "gulp-html": "^0.4.4",
-  "gulp-rename": "^1.2.2",
-  "gulp-sass": "^2.3.1",
-  "gulp-scss-lint": "^0.4.0",
-  "gulp-sourcemaps": "^1.6.0",
-  "gulp-util": "^3.0.7",
-  "kss": "^3.0.0-beta.14",
-  "sass-lint": "^1.7.0",
-  "through2": "^2.0.1"
+- "gulp": "^3.9.1",
+- "gulp-autoprefixer": "^3.1.0",
+- "gulp-cssnano": "^2.1.2",
+- "gulp-gitversion": "^0.0.8",
+- "gulp-html": "^0.4.4",
+- "gulp-rename": "^1.2.2",
+- "gulp-sass": "^2.3.1",
+- "gulp-scss-lint": "^0.4.0",
+- "gulp-sourcemaps": "^1.6.0",
+- "gulp-util": "^3.0.7",
+- "kss": "^3.0.0-beta.14",
+- "sass-lint": "^1.7.0",
+- "through2": "^2.0.1"
 
 `^` = compatible with version (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 
 ## Make gov-au-ui-kit better
 
 - Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
-- Contribute to this repository. You should understand the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our conventions](https://github.com/AusDTO/gov-au-ui-kit/blob/master/conventions.md), including [Block Element Modifier](http://getbem.com/), first.
+- Contribute to this repository. You should understand the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our conventions](conventions.md), including [Block Element Modifier](http://getbem.com/), first.
 - Contact us on slack in #govau-uikit.
 
 ## Roadmap
@@ -120,32 +124,13 @@ We may create an installer wrapper, or release via git submodules.
 
 We have a build process for the development of the framework which uses gulp on node.js (see [Build the scss yourself](#building))
 
-### 1st milestone
+#### Milestones
 
-Meet the general look and feel of the gov.au alpha. This allows us to establish the basics of the framework while meeting a relatively easily met static target.
+### 1st milestone
 
 Priorities for 1st milestone:
 
-Goal: build a lean and frugal CSS/SCSS framework to make building gov.au easier. It should provide base consistency, allow for easier rapid prototyping directly in the browser, and shouldn't get in the way of customised design needs.
-
-#### Releases
-
-Please see [RELEASING](RELEASING.md).
-
-We want to provide stable, usable releases at the end of each sprint.
-
-We are wary about the possibility of breaking changes, and will work to ensure if anything does change that can cause things to break that we will try to gracefully deprecate them.
-
-We may investigate creating an installer wrapper, or releasing via git submodules.
-
-#### Milestones
-
-1st milestone is to meet the general look and feel of the gov.au alpha. This allows us to establish the basics of the framework while meeting a relatively-easily met, static target.
-
-2nd milestone is to iterate from there in two ways:
-
-1. iterate on the look and feel under the direction of the designers from the guides team
-2. include styling for commonly used and requested things that builders from other teams need.
+Meet the general look and feel of the gov.au alpha. This allows us to establish the basics of the framework while meeting a relatively easily met static target.
 
 #### Immediate priorities
 
