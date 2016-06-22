@@ -28,6 +28,7 @@
 // The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
 //
 // ### Example: Lato regular
+//
 // ABCDEFGHIJKLMNOPQRSTUVWXYZ
 //
 // abcdefghijklmnopqrstuvwxyz
@@ -76,7 +77,7 @@ strong {
 
 // Base spacing & spacing
 //
-// Base spacing and spacing is relative to the font size and calculated in the SCSS.
+// Base spacing and spacing are relative to the font size and calculated in the SCSS.
 //
 // The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `base-spacing` unit is then set in ems (ie by * 1em).
 //
@@ -124,7 +125,7 @@ html {
 // - Desktop (medium devices): 12 columns, 1000px maximum
 // - Large desktops (large devices): 12 columns, 1200px maximum
 //
-// ### Font size and line heights default settings
+// ### Font size & line heights default settings
 //
 // We recommend you use relative units to allow for variety across users' browsers and device screens.
 //
@@ -320,38 +321,43 @@ a {
 
 }
 
-// Common content elements
+// Common content elements examples
 //
 // Base styling and vertical spacing for general content elements.
 //
-// Markup: templates/content-typography.hbs
-//
-// Below is a series of examples outlining how the framework shows styling and vertical spacing for common content elements.
-//
-//* Lists Example (Bullets / numbers)
-//
-//List styles have been developed to enable unordered (bulleted) and ordered(numbered)
-//
-//
-//* Definitions
-//
-//Definition styles have been developed to display definition terms as lists.
-//
-//* Callouts and warning’s
-//
-//Callouts and warnings can be used to draw the users attention to a specific piece of content.
-//
-//* Quotations / Inline quotes and Block quotes
-//
-//Quoting have been developed for use in two ways inline and as a pull quote. The inline quoting has been developed to handle additional nested elements such as quotes, ordered and unordered lists.
-//
-//*  Badges
-//
-//Badges have been created to hold either an item number or demonstrate status. An example of this is the  alpha badge seen in the header of the Gov.au/alpha
-//
-// Markup: templates/block-level-elements.hbs
-//
 // Style guide: Typography.5 Common content elements
+
+// Lists (bullets & numbers)
+//
+// List styles have been developed to enable unordered (bulleted) and ordered (numbered).
+//
+// Definition styles have been developed to display definition terms as lists.
+//
+// Markup: templates/list-examples.hbs
+//
+// Style guide: Typography.5 Common content elements.1 Lists (bullets & numbers)
+
+// Quotations, inline quotes & blockquotes
+//
+// Styling for in-line quotations and blockquotes, and citations.
+//
+// There are 2 ways of using quotes:
+// - inline: inline quoting has been developed to handle additional nested elements (ie quotes, ordered and unordered lists).
+// - pull quotes.
+//
+// Markup: templates/quotations-examples.hbs
+//
+// Style guide: Typography.5 Common content elements.2 Callouts & warnings
+
+// Callouts & warnings
+//
+// Callouts and warnings can be used to draw the users attention to a specific piece of content.
+//
+// This makes maintaining the vertical rhythm between content easier, and avoids spacing bugs, as well as sizing bugs that are not clear when just testing with a few paragraphs and headings.
+//
+// Markup: templates/callouts-examples.hbs
+//
+// Style guide: Typography.5 Common content elements.2 Callouts & warnings
 
 ul,
 ol,
@@ -403,14 +409,6 @@ dt {
 .abstract {
   font-size: rem(24);
 }
-
-// Quotations
-//
-// Styling for in-line quotations and blockquotes, and citations.
-//
-// Markup: templates/quotations-typography.hbs
-//
-// Style guide: Typography.6 Quotations
 
 blockquote {
   margin: $medium-spacing 0;
@@ -519,9 +517,11 @@ cite {
 //
 // Styling for 'badges' that hold either an item number, or to demarcate status (e.g. alpha, beta, draft).
 //
-// Markup: templates/badge-typography.hbs
+//Badges have been created to hold either an item number or demonstrate status. An example of this is the  alpha badge seen in the header of the Gov.au/alpha.
 //
-// Style guide: Typography.7 Badges
+// Markup: templates/badges-examples.hbs
+//
+// Style guide: Typography.5 Common content elements.7 Badges
 
 %base-badge {
   // We should put something clever here.
