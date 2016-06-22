@@ -4,6 +4,7 @@
   appearance: none;
   display: inline-block;
   border: none;
+  border-radius: $tiny-border-radius;
   outline-offset: -2px;
   outline: 2px solid transparent;
   padding: $tiny-spacing $medium-spacing $tiny-spacing * 1.3;

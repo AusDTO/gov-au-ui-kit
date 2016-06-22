@@ -1,29 +1,20 @@
 header[role='banner'] {
 
   // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
-  .controls a,
-  .govau--header .logo {
-    border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      padding-bottom: 2px;
-      border-bottom: 2px solid $orange;
-    }
-  }
-
   .controls {
     padding: $medium-spacing 0;
     text-align: right;
-    background-color: $navy;
+    background-color: $dark-navy;
     color: $white;
+
+    a {
+      color: $white;
+    }
   }
 
   .govau--header {
     padding: $medium-spacing 0;
-    background-color: $dark-aqua;
+    background-color: $navy;
     color: $white;
 
     .govau--logo {
@@ -40,14 +31,16 @@ header[role='banner'] {
     .logo {
       @extend h3;
 
+      padding-bottom: 2px;
+      border-bottom: none;
+      color: $white;
+      font-family: $base-sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-family: $base-sans-serif;
-      color: $white;
 
       &:hover,
       &:focus {
-        border-bottom: 3px solid $orange;
+        border-bottom: 1px;
       }
     }
 
@@ -55,6 +48,7 @@ header[role='banner'] {
     .badge--beta {
       vertical-align: top;
       margin-left: $tiny-spacing;
+      background-color: $aqua;
     }
 
     .feedback {
@@ -69,23 +63,30 @@ header[role='banner'] {
 
     .button--feedback {
       @extend %base-button;
-      @extend button.contrast;
+      @extend button;
 
       margin: 0;
+      border: solid 1px;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background: $white;
+        color: $navy;
+      }
     }
   }
 
   .hero {
-    padding: $base-spacing 0;
-    background-color: $light-aqua;
-    color: $black;
+    padding: ($base-spacing * 2) 0;
+    background-color: $aqua;
+    color: $white;
 
     .site-title {
       @extend h1;
 
       margin: $tiny-spacing 0;
-      color: $black;
-      border-bottom: none;
+      color: $white;
 
       &:hover,
       &:focus {
