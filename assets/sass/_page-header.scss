@@ -1,25 +1,16 @@
 header[role='banner'] {
   margin-bottom: $base-spacing;
+
   // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
-  .controls a{
-    color: $white;
-  }
-  .govau--header .logo {
-    border-bottom:none;
-    padding-bottom: 2px;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      border-bottom-width: 1px;
-    }
-  }
-
   .controls {
     padding: $medium-spacing 0;
     text-align: right;
     background-color: $dark-navy;
     color: $white;
+
+    a {
+      color: $white;
+    }
   }
 
   .govau--header {
@@ -41,14 +32,16 @@ header[role='banner'] {
     .logo {
       @extend h3;
 
+      padding-bottom: 2px;
+      border-bottom: none;
+      color: $white;
+      font-family: $base-sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-family: $base-sans-serif;
-      color: $white;
 
       &:hover,
       &:focus {
-        border-bottom: 3px solid $orange;
+        border-bottom: 1px;
       }
     }
 
@@ -78,16 +71,15 @@ header[role='banner'] {
       background-color: transparent;
 
       &:hover,
-      &:focus{
+      &:focus {
         background: $white;
         color: $navy;
       }
-
     }
   }
 
   .hero {
-    padding: $base-spacing*2 0;
+    padding: ($base-spacing * 2) 0;
     background-color: $aqua;
     color: $white;
 
@@ -96,7 +88,6 @@ header[role='banner'] {
 
       margin: $tiny-spacing 0;
       color: $white;
-      /*border-bottom: none;*/
 
       &:hover,
       &:focus {
