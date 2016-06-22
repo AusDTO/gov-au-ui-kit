@@ -9,11 +9,11 @@ gov-au-ui-kit is 3 things:
 - draft design guide to build an accessible standardised look and feel for GOV.AU projects: http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/
 - templates (to come)
 - a lean and frugal CSS/SCSS framework (`assets/sass`) that you can
-  - link to as a precompiled minified file: **run by devs**
+  - link to as a precompiled minified file:
   ```
   <link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
   ```
-  - download from https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss to use in your asset pipeline (this includes [Bourbon](https://github.com/thoughtbot/bourbon) sass mixin library and the [Neat](https://github.com/thoughtbot/neat) lightweight grid framework).
+  - download from https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss to use in your asset pipeline (this includes [Normalize](https://necolas.github.io/normalize.css/), [Bourbon](https://github.com/thoughtbot/bourbon) sass mixin library and the [Neat](https://github.com/thoughtbot/neat) lightweight grid framework).
 
 Look at an [example page showing the full framework](https://gov-au-ui-kit.apps.staging.digital.gov.au/).
 
@@ -59,27 +59,38 @@ gulp
 
 We have automated this, with a few additions:
 
-- `scss-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software)
-- `kss-node` for auto-building a living style guide.
+- `scss-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software))
+- `[kss-node](http://warpspire.com/kss/)` for auto-building a living style guide.
 
 This is available as a shell script at `bin/cibuild.sh`.
 
 ### Errors
 
-If you get `Fatal undefined` error, remember to set the Ruby version to 2.3.0 (`rbenv local 2.3.0` if you use rbenv). [**check with devs**]
+If you get `Fatal undefined` error, remember to set the Ruby version to 2.3.0. Most of us use rbenv:
+
+  $ rbenv local 2.3.0
+
+or in rvm:
+
+  $ rvm use 2.3.0
 
 ### Dependencies
 
 We use Bourbon 4.2.7. We include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
 
-- gulp `^3.9.1`
-- gulp-scss-lint `^0.4.0`
-- gulp-cssnano `^2.1.2`
-- gulp-sourcemaps `^1.6.0`
-- gulp-rename `^1.2.2`
-- gulp-gitversion `^0.0.8`
-- gulp-html `^0.4.4`
-- kss `^3.0.0-beta.14`
+  "gulp": "^3.9.1",
+  "gulp-autoprefixer": "^3.1.0",
+  "gulp-cssnano": "^2.1.2",
+  "gulp-gitversion": "^0.0.8",
+  "gulp-html": "^0.4.4",
+  "gulp-rename": "^1.2.2",
+  "gulp-sass": "^2.3.1",
+  "gulp-scss-lint": "^0.4.0",
+  "gulp-sourcemaps": "^1.6.0",
+  "gulp-util": "^3.0.7",
+  "kss": "^3.0.0-beta.14",
+  "sass-lint": "^1.7.0",
+  "through2": "^2.0.1"
 
 `^` = compatible with version (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 
@@ -88,18 +99,18 @@ We use Bourbon 4.2.7. We include its scss files directly rather than calling it 
 - Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
 - Contribute to this repository. You should understand the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our conventions](https://github.com/AusDTO/gov-au-ui-kit/blob/master/conventions.md), including [Block Element Modifier](http://getbem.com/), first.
 - Contact us on slack in #govau-uikit.
-- Email [firstname.lastname@digital.gov.au](mailto:TBC). [**subject to agreement by team**]
 
 ## Roadmap
 
-This framework is in active development. **generally check following is up to date**
+This framework is in active development.
 
 Goal: build a lean and frugal CSS/SCSS framework to make building GOV.AU easier. It should:
+
 - provide base consistency
 - allow for easier rapid prototyping directly in the browser
 - shouldn't get in the way of customised design needs.
 
-**Releases:** see [RELEASING.md](RELEASING.md).
+**Releases:** see [RELEASING.md](RELEASING.md) and [CHANGELOG.md](CHANGELOG.md)
 
 We aim to provide stable, usable releases at the end of each sprint.
 

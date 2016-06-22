@@ -6,7 +6,7 @@
 - Classes should be in lowercase.
 - Avoid CamelCase.
 - Name things clearly and semantically, by its function and not its appearance.
-- Avoid presentation or location-specific words. It is preferable to be able to change a  colour variable's value, and have it cascade, and not also have to change the name of the variable.
+- Avoid presentation or location-specific words. It is preferable to be able to change a colour variable's value, and have it cascade, and not also have to change the name of the variable.
 - Be wary in naming components based on content (eg `.item_list` over `.product_list`).
 - Do not abbreviate, unless it is a well-known abbreviation.
 - Name components and modules with singular nouns (eg `.button`).
