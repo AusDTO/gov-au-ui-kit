@@ -5,6 +5,8 @@
 //
 // Style guide: Foundation.Colours
 
+// Colour constants
+
 $black:         #000;
 $non-black:     #222222;
 $grey:          #828282;
@@ -34,6 +36,8 @@ $maroon:        #880e48;
 $dark-maroon:   darken($maroon, 5%);
 $darker-maroon: darken($maroon, 10%);
 
+// Colour variables
+
 $background-colour:             $white;
 $contrast-background-colour:    $lighter-grey;
 $link-colour:                   $non-black;
@@ -61,3 +65,9 @@ $contrast-border-colour:        $navy;
 
 $body-text-colour:              $black;
 $secondary-text-colour:         $dark-grey;
+
+$badge-colour-default:          $grey;
+$badge-colour-alpha:            $non-black;
+$badge-colour-beta:             $maroon;
+$badge-colour-error:            $error-colour;
+$badge-colour-success:          $green;
