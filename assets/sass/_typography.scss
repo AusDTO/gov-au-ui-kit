@@ -261,7 +261,9 @@ dt {
 //
 // For abstracts or page introductory paragraphs.
 .abstract {
-  font-size: rem(24);
+  @extend h4;
+
+  font-weight: $base-font-weight;
 }
 
 // Quotations
