@@ -338,7 +338,6 @@ a {
 //
 // Base styling and vertical spacing for general content elements.
 //
-<<<<<<< HEAD
 // Style guide: Typography.5 Common content elements
 
 // Lists (bullets & numbers)
@@ -355,13 +354,19 @@ a {
 //
 // Styling for in-line quotations and blockquotes, and citations.
 //
+// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
+//
+// Markup: templates/quotations-typography.hbs
+//
+// Styling for in-line quotations and blockquotes, and citations.
+//
 // There are 2 ways of using quotes:
 // - inline: inline quoting has been developed to handle additional nested elements (ie quotes, ordered and unordered lists).
 // - pull quotes.
 //
 // Markup: templates/quotation-examples.hbs
 //
-// Style guide: Typography.5 Common content elements.2 Callouts & warnings
+// Style guide: Typography.5 Common content elements.6 Quotations, inline quotes & blockquotes
 
 // Callouts & warnings
 //
@@ -426,18 +431,12 @@ dt {
   font-size: rem(24);
 }
 
-<<<<<<< HEAD
-=======
 // Quotations
 //
-// Styling for in-line quotations and blockquotes, and citations.
-//
-// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
-//
-// Markup: templates/quotations-typography.hbs
+
 //
 // Style guide: Typography.Quotations
->>>>>>> develop
+
 blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
@@ -549,7 +548,6 @@ cite {
 //
 // Markup: templates/badges-examples.hbs
 //
-<<<<<<< HEAD
 // Style guide: Typography.5 Common content elements.7 Badges
 
 %base-badge {
@@ -574,7 +572,7 @@ cite {
 
   background-color: $maroon;
   color: $white;
-=======
+
 // Style guide: Typography.Badges
 $badges: (
   "default":  $grey,
@@ -595,5 +593,4 @@ $badges: (
     color: lighten($color, 75%);
     font-size: rem(14);
   }
->>>>>>> develop
 }
