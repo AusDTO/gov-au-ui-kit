@@ -34,6 +34,16 @@
 //
 // The main target of the font stacks are undecided. We are confident can achieve a high degree of coverage across a range of browsers using the fall-backs.
 //
+// basic styling for content with some basic typographic defaults
+//
+// add table with parings for each breakpoint
+//
+// choice of fonts stacks good support across browser history etc.
+//
+// working on compatability for web font stacks for IE 6-9, won't be able to use the import rule - devs need to add HTML to their head
+//
+// We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
+//
 // We also will likely need to move our webfonts into the `head` of any HTML, as IE is not a fan of @import for fonts (requires testing).
 //
 // This gives us pretty much 95% coverage across Windowns and Mac and a lot of FOSS default font installs.
