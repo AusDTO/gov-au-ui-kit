@@ -35,7 +35,7 @@
         padding-left: $base-spacing;
 
         &:hover {
-          border-left: 1px solid $contrast-border-colour;
+          border-left: 1px solid $border-contrast-colour;
         }
       }
 
@@ -55,10 +55,10 @@
   li {
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid $secondary-border-colour;
+    border-bottom: 1px solid $border-secondary-colour;
 
     &:first-child {
-      border-top: 1px solid $secondary-border-colour;
+      border-top: 1px solid $border-secondary-colour;
     }
   }
 
@@ -74,8 +74,8 @@
     &:hover,
     &:active,
     &.active {
-      border-color: $contrast-border-colour;
-      background-color: $contrast-background-colour;
+      border-color: $border-contrast-colour;
+      background-color: $background-contrast-colour;
     }
 
   }
