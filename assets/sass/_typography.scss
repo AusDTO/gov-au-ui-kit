@@ -1,20 +1,25 @@
 // Typography
 //
-// This explains the typography suite provided by the gov-au-ui-kit. It provides basic styling for content and typographic defaults.
+// This explains the gov-au-ui-kit typography suite, basic styling for content and typographic defaults.
 //
-// It is designed to meet the highest standards of usability and accessibility. It also sets a consistent visual voice of credibility, warmth, and ease-of-use across Australian Government digital platforms.
+// It aims to meet common goverment typographic needs:
 //
-// This aims to meet common goverment typographic needs:
 // - clear and consistent headings
 // - legible body paragraphs
 // - clear labels
 // - easy-to-use input fields.
 //
+// It is designed for:
+//
+// - the highest standards of usability and accessibility
+// - consistent visual voice of credibility and warmth
+// - ease-of-use across Australian Government digital platforms.
+//
 // Style guide: Typography
 
 // Lato typeface
 //
-// The framework uses the open source Lato font family, regular, bold and italic typefaces.
+// The framework uses the open source [Lato font family](http://www.latofonts.com/).
 //
 // Lato provides:
 //
@@ -27,30 +32,18 @@
 //
 // ### Font stacks
 //
-// We're currently testing Lato in 3 styles:
+// We are testing Lato in 3 styles:
 // - regular 400
 // - italic 400
 // - regular 700.
 //
 // The main target of the font stacks are undecided. We are confident can achieve a high degree of coverage across a range of browsers using the fall-backs.
 //
-// basic styling for content with some basic typographic defaults
-//
-// add table with parings for each breakpoint
-//
-// choice of fonts stacks good support across browser history etc.
-//
-// working on compatability for web font stacks for IE 6-9, won't be able to use the import rule - devs need to add HTML to their head
-//
-// We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
-//
-// We also will likely need to move our webfonts into the `head` of any HTML, as IE is not a fan of @import for fonts (requires testing).
-//
-// This gives us pretty much 95% coverage across Windowns and Mac and a lot of FOSS default font installs.
+// This gives us pretty much 95% coverage across Windowns and Mac and a lot of FOSS default font installs. **tweak this**
 //
 // We still need to consider the pros and cons of any webfont inclusion. We are also working on compatability for web font stacks for Internet Explorer version 6-9. Developers will not be able to use the import rule and will need to add HTML to their head.
 //
-// ### Pairing/style examples
+// ### Pairing style examples
 // #### Lato regular
 //
 // ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -90,9 +83,7 @@ strong {
 //
 // The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `base-spacing` unit is then set in ems (ie by * 1em).
 //
-// Visual example
-//
-// Roadmap: likely change to the base-spacing unit to be give a figure easier to multiplay and divide.
+// We are likely to change the base-spacing unit to be give a figure easier to multiplay and divide.
 //
 // Markup: templates/base-typography-scss.hbs
 //
@@ -135,7 +126,7 @@ html {
 // - Mobile (extra small devices): 4 columns, 420px maximum
 // - Tablet (small devices): 8 columns, 768px maximum
 // - Desktop (medium devices): 12 columns, 1000px maximum
-// - Large desktops (large devices): 12 columns, 1200px maximum
+// - Large desktop (large devices): 12 columns, 1200px maximum
 //
 // ### Font size & line heights default settings
 //
@@ -149,7 +140,7 @@ html {
     // <th>Mobile</th>
     // <th>Tablet</th>
     // <th>Desktop</th>
-    // <th>Large desktops</th>
+    // <th>Large desktop</th>
 //   </tr>
   // <tr>
     // <td>H1 - Display type 1</td>
@@ -209,7 +200,7 @@ html {
 //   </tr>
 // </table>
 //
-// ### Base size examples: body copy
+// ### Base size examples
 //
 // Markup: templates/heading-body-styles.hbs
 //
@@ -348,7 +339,10 @@ a {
 
 // Lists (bullets & numbers)
 //
-// List styles have been developed to enable unordered (bulleted) and ordered (numbered).
+// List styles have been developed for:
+//
+//- unordered (bullet point lists)
+//- ordered lists (numbered).
 //
 // Definition styles have been developed to display definition terms as lists.
 //
@@ -359,7 +353,7 @@ a {
 // Quotations, in-line quotes & blockquotes
 //
 // There are 2 ways of using quotes:
-// - **in-line quoting** has been developed to handle additional nested elements (ie quotes, ordered and unordered lists).
+// - **in-line quoting** for additional nested elements (ie quotes, ordered and unordered lists).
 // - **pull quotes**.
 //
 // Markup: templates/quotation-examples.hbs
@@ -368,11 +362,11 @@ a {
 
 // Callouts & warnings
 //
-// Callouts and warnings can be used to draw the users attention to a specific piece of content.
+// **Callouts** and **warning callouts** can be used to draw the users attention to a specific piece of content.
 //
-// This makes maintaining the vertical rhythm between content easier, and avoids spacing bugs, as well as sizing bugs that are not clear when just testing with a few paragraphs and headings.
+// This makes maintaining the vertical rhythm between content easier, and avoids spacing and sizing bugs that are not clear when just testing with a few paragraphs and headings.
 //
-// We may move some of this to only appy to content inside an `article`.
+// We may move some of this to only apply to content inside an `article`.
 //
 // Markup: templates/callouts-examples.hbs
 //
@@ -536,9 +530,9 @@ cite {
 
 // Badges
 //
-// Styling for 'badges' that either:
+// Styling for 'badges' that:
 //
-// - hold item number
+// - hold item numbers
 // - indicate status (eg alpha, beta, draft).
 //
 // Markup: templates/badges-examples.hbs
