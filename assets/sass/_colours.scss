@@ -39,17 +39,18 @@ $darker-maroon: darken($maroon, 10%);
 // Colour variables
 
 $background-colour:             $white;
-$contrast-background-colour:    $lighter-grey;
+$background-contrast-colour:    $lighter-grey;
+
 $link-colour:                   $non-black;
 
 $button-colour:                 $aqua;
-$button-hover-colour:           $darker-aqua;
-$button-active-colour:          $dark-aqua;
-$button-disabled:               $light-grey;
+$button-colour--hover:          $darker-aqua;
+$button-colour--active:         $dark-aqua;
+$button-colour--disabled:       $light-grey;
 
-$button-contrast-colour:        $maroon;
-$button-contrast-hover-colour:  $darker-maroon;
-$button-contrast-active-colour: $dark-maroon;
+$button-contrast-colour:         $maroon;
+$button-contrast-colour--hover:  $darker-maroon;
+$button-contrast-colour--active: $dark-maroon;
 
 $button-text-colour:            $white;
 
@@ -60,11 +61,11 @@ $error-colour:                  $red;
 $success-colour:                $light-green;
 
 $border-colour:                 $light-grey;
-$secondary-border-colour:       $lighter-grey;
-$contrast-border-colour:        $navy;
+$border-secondary-colour:       $lighter-grey;
+$border-contrast-colour:        $navy;
 
 $body-text-colour:              $black;
-$secondary-text-colour:         $dark-grey;
+$body-secondary-text-colour:    $dark-grey;
 
 $badge-colour-default:          $grey;
 $badge-colour-alpha:            $non-black;
