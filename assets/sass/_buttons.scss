@@ -1,5 +1,7 @@
 
 %base-button {
+  -webkit-appearance: none;
+  appearance: none;
   display: inline-block;
   margin: 0 $small-spacing $small-spacing 0;
   height: $base-spacing * 1.5;
