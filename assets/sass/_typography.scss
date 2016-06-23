@@ -553,19 +553,6 @@ cite {
   font-size: rem(14);
 }
 
-.badge--alpha {
-  @extend %base-badge;
-
-  background-color: $non-black;
-  color: $white;
-}
-
-.badge--beta {
-  @extend %base-badge;
-
-  background-color: $maroon;
-  color: $white;
-
 $badges: (
   "default":  $badge-colour-default,
   "alpha":    $badge-colour-alpha,
