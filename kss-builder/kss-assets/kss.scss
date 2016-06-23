@@ -282,6 +282,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     display: block;
     color: #000;
     text-decoration: none;
+    border: none;
 
     &:hover,
     &:focus,

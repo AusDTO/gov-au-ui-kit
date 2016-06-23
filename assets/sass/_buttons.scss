@@ -1,5 +1,7 @@
 
 %base-button {
+  -webkit-appearance: none;
+  appearance: none;
   display: inline-block;
   margin: 0 $small-spacing $small-spacing 0;
   height: $base-spacing * 1.5;
@@ -22,12 +24,12 @@
   }
 
   &:hover {
-    background-color: $button-hover-colour;
+    background-color: $button-colour--hover;
     color: $button-text-colour;
   }
 
   &:active {
-    background-color: $button-active-colour;
+    background-color: $button-colour--active;
     color: $button-text-colour;
   }
 
@@ -41,7 +43,7 @@
   &.disabled:focus {
     cursor: not-allowed;
     outline: none;
-    background-color: $button-disabled;
+    background-color: $button-colour--disabled;
     color: $non-black;
   }
 
@@ -78,11 +80,11 @@ button,
     }
 
     &:hover {
-      background-color: $button-contrast-hover-colour;
+      background-color: $button-contrast-colour--hover;
     }
 
     &:active {
-      background-color: $button-contrast-active-colour;
+      background-color: $button-contrast-colour--active;
     }
 
   }

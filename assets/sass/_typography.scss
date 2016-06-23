@@ -570,22 +570,22 @@ cite {
   color: $white;
 
 $badges: (
-  "default":  $grey,
-  "alpha":    $non-black,
-  "beta":     $maroon,
-  "error":    $error-colour,
-  "success":  $green,
+  "default":  $badge-colour-default,
+  "alpha":    $badge-colour-alpha,
+  "beta":     $badge-colour-beta,
+  "error":    $badge-colour-error,
+  "success":  $badge-colour-success,
 );
 
-@each $badge-type, $color in $badges {
+@each $badge-type, $colour in $badges {
   .badge--#{$badge-type} {
     display: inline-block;
-    background-color: $color;
+    background-color: $colour;
     border-radius: $large-border-radius;
     padding: $tiny-spacing $small-spacing;
     line-height: 1;
     letter-spacing: 1px;
-    color: lighten($color, 75%);
+    color: lighten($colour, 75%);
     font-size: rem(14);
   }
 }
