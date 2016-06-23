@@ -350,15 +350,22 @@ a {
 //
 // Style guide: Typography.4 Common content elements.1 Lists (bullets & numbers)
 
-// Quotations, in-line quotes & blockquotes
+// Quotations
 //
-// There are 2 ways of using quotes:
-// - **in-line quoting** for additional nested elements (ie quotes, ordered and unordered lists).
-// - **pull quotes**.
+// The framework provides 2 ways of using quotes:
+//
+// - **in-line quoting** for additional nested elements (ie quotes, ordered and unordered lists) using `q` element
+// - **pull quotes** using "" in a `blockquote`.
+//
+// `blockquote` is a block-level element that can contain in-line elements. So they can nest:
+//
+// - multiple paragraphs, lists, etc
+// - another `blockquote`
+// - the `footer` element to provide citations using `<cite>`.
 //
 // Markup: templates/quotation-examples.hbs
 //
-// Style guide: Typography.4 Common content elements.6 Quotations, in-line quotes & blockquotes
+// Style guide: Typography.4 Common content elements.6 Blockquotes & citing
 
 // Callouts & warnings
 //
@@ -366,7 +373,7 @@ a {
 //
 // This makes maintaining the vertical rhythm between content easier, and avoids spacing and sizing bugs that are not clear when just testing with a few paragraphs and headings.
 //
-// We may move some of this to only apply to content inside an `article`.
+// This may change to apply only to content inside an `article`.
 //
 // Markup: templates/callouts-examples.hbs
 //
