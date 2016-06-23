@@ -94,7 +94,7 @@ gulp.task('ui-kit.min.js', function () {
 
 gulp.task('examples', function () {
     return gulp.src(paths.examplesDir)
-        .pipe(gulp.dest(paths.outputHTML));
+        .pipe(gulp.dest(paths.outputHTML+'/examples'));
 });
 
 gulp.task('nginx', function () {
@@ -123,7 +123,7 @@ gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
         css: '../latest/ui-kit.css',
-        destination: paths.outputHTML + '/kss',
+        destination: paths.outputHTML,
         homepage: '../../README.md',
         builder: 'kss-builder'
     });
