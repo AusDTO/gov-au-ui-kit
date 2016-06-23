@@ -534,18 +534,13 @@ cite {
 
 // Badges
 //
-// Styling for 'badges' that:
+// The framework provides styling for `badges` to indicate status:
 //
-// - hold item numbers
-// - indicate status (eg alpha, beta, draft).
-//
-// .default   - Default styling
-// .alpha     - Default styling2
-// .beta      - Default styling3
-// .error     - Default styling4
-// .success   - Default styling5
-//
-// Markup: templates/badges-examples.hbs
+// - <span class="badge--default">In-progress</span> using `<span class="badge--default">in-progress</span>`
+// - <span class="badge--alpha">alpha</span> using `<span class="badge--alpha">alpha</span>`
+// - <span class="badge--beta">beta</span> using `<span class="badge--beta">beta</span>`
+// - <span class="badge--error">error</span> using `<span class="badge--error">error</span>`
+// - <span class="badge--success">done</span> using `<span class="badge--success">done</span>`
 //
 // Style guide: Typography.4 Common content elements.7 Badges
 
