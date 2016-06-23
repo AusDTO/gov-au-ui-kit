@@ -9,127 +9,81 @@
 // They are not web-safe colours. Let us know if they need to be.
 //
 // <div class="guide-colour-examples">
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-black"></div>
-//     <p class="text">
-//       <strong>Black</strong><br/>
-//       #000000
-//     </p>
+//     <p class="text"> <strong>Black</strong><br/>
+//       #000000 </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-non-black"></div>
-//     <p class="text">
-//       <strong>Non-black</strong><br/>
-//       #222222
-//     </p>
+//     <p class="text"> <strong>Non-black</strong><br/>
+//       #222222 </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-grey"></div>
-//     <p class="text">
-//       <strong>Grey</strong><br/>
-//       #828282
-//     </p>
+//     <p class="text"> <strong>Grey</strong><br/>
+//       #828282 </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-dark-grey"></div>
-//     <p class="text">
-//       <strong>Dark Grey</strong><br/>
-//       ???
-//     </p>
+//     <p class="text"> <strong>Dark Grey</strong><br/>
+//       ??? </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-light-grey"></div>
-//     <p class="text">
-//       <strong>Light Grey</strong><br/>
-//       ??
-//     </p>
+//     <p class="text"> <strong>Light Grey</strong><br/>
+//       ?? </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-lighter-grey"></div>
-//     <p class="text">
-//       <strong>Clighter Grey</strong><br/>
-//       ??
-//     </p>
+//     <p class="text"> <strong>Clighter Grey</strong><br/>
+//       ?? </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-non-white"></div>
-//     <p class="text">
-//       <strong>Non-white</strong><br/>
-//       ??
-//     </p>
+//     <p class="text"> <strong>Non-white</strong><br/>
+//       ?? </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-white"></div>
-//     <p class="text">
-//       <strong>White</strong><br/>
-//       ??
-//     </p>
+//     <p class="text"> <strong>White</strong><br/>
+//       ?? </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-aqua"></div>
-//     <p class="text">
-//       <strong>Aqua</strong><br/>
-//       ??
-//     </p>
+//     <p class="text"> <strong>Aqua</strong><br/>
+//       ?? </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-dark-aqua"></div>
-//     <p class="text">
-//       <strong>Dark Aqua</strong><br/>
-//       ??
-//     </p>
+//     <p class="text"> <strong>Dark Aqua</strong><br/>
+//       ?? </p>
 //   </div>
-//
 //   <div class="guide-colour">
 //     <div class="swatch bg-darker-aqua"></div>
-//     <p class="text">
-//       <strong>darker-aqua</strong><br/>
-//       ??
-//     </p>
+//     <p class="text"> <strong>darker-aqua</strong><br/>
+//       ?? </p>
 //   </div>
-//
-//     <div class="guide-colour">
-//       <div class="swatch bg-light-aqua"></div>
-//       <p class="text">
-//         <strong>darker-aqua</strong><br/>
-//         ??
-//       </p>
-//     </div>
-//
-//     <div class="guide-colour">
-//       <div class="swatch bg-navy"></div>
-//       <p class="text">
-//         <strong>navy</strong><br/>
-//         #224a61
-//       </p>
-//     </div>
-//
-//     <div class="guide-colour">
-//       <div class="swatch bg-dark-navy"></div>
-//       <p class="text">
-//         <strong>Dark Navy</strong><br/>
-//         ??
-//       </p>
-//     </div>
-//
-//     <div class="guide-colour">
-//       <div class="swatch bg-light-navy"></div>
-//       <p class="text">
-//         <strong>Light Navy</strong><br/>
-//         #cc0000
-//       </p>
-//     </div>
-//
+//   <div class="guide-colour">
+//     <div class="swatch bg-light-aqua"></div>
+//     <p class="text"> <strong>light-aqua</strong><br/>
+//       ?? </p>
+//   </div>
+//   <div class="guide-colour">
+//     <div class="swatch bg-navy"></div>
+//     <p class="text"> <strong>navy</strong><br/>
+//       #224a61 </p>
+//   </div>
+//   <div class="guide-colour">
+//     <div class="swatch bg-dark-navy"></div>
+//     <p class="text"> <strong>Dark Navy</strong><br/>
+//       ?? </p>
+//   </div>
+//   <div class="guide-colour">
+//     <div class="swatch bg-light-navy"></div>
+//     <p class="text"> <strong>Light Navy</strong><br/>
+//       #cc0000 </p>
+//   </div>
 // </div>
 //
 // If you need more guidance [contact us](index.html#contributing). <!-- fix anchor link once readme is approved -->
@@ -377,11 +331,11 @@ $badge-colour-success:          $green;
   @include span-columns(3);
   @include omega(4n);
   margin-bottom: 1.9356%;  //Should be a var from grid margin goodness
-  border:solid 1px $light-grey;
+  border: solid 1px $light-grey;
 
   .swatch {
     padding: 50% 0;
-    border-bottom:solid 1px $light-grey;
+    border-bottom: solid 1px $light-grey;
   }
 
   .text {
