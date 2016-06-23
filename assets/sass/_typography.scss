@@ -10,42 +10,22 @@
 // - clear labels
 // - easy-to-use input fields.
 //
-// The framework uses the open source Lato font family.
-//
-// Lato is designed for legibility and can beautifully adapt to a variety of visual styles.
-//
 // Style guide: Typography
 
-// Typeface
+// Lato typeface
 //
-// Lato is an open source sans serif typeface created for legibility in UI design.
+// The framework uses the open source Lato font family, regular, bold and italic typefaces.
 //
 // Lato provides:
+//
+// - legibility and adaptability
+// - optimisation for print, web and mobile interfaces
 // - a variety of weights that are easy to read at all sizes
 // - clear headers
-// - highly-readable body text.
+// - highly-readable body text
+// - feeling of warmth with strong structure for stability and seriousness
 //
-// The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
-//
-// ### Example: Lato regular
-//
-// ABCDEFGHIJKLMNOPQRSTUVWXYZ
-//
-// abcdefghijklmnopqrstuvwxyz
-//
-// 1234567890(!@#s%g.,?:;)
-//
-// ### Example: Lato bold
-//
-// <strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ</strong>
-//
-// <strong>abcdefghijklmnopqrstuvwxyz</strong>
-//
-// <strong>1234567890(!@#s%g.,?:;)</strong>
-//
-// Style guide: Typography.1 Typeface
-
-// Font stacks
+// ### Font stacks
 //
 // We're currently testing Lato in 3 styles:
 // - regular 400
@@ -60,9 +40,26 @@
 //
 // We still need to consider the pros and cons of any webfont inclusion. We are also working on compatability for web font stacks for Internet Explorer version 6-9. Developers will not be able to use the import rule and will need to add HTML to their head.
 //
+// ### Pairing/style examples
+// #### Lato regular
+//
+// ABCDEFGHIJKLMNOPQRSTUVWXYZ
+//
+// abcdefghijklmnopqrstuvwxyz
+//
+// 1234567890(!@#s%g.,?:;)
+//
+// #### Lato bold
+//
+// <strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ</strong>
+//
+// <strong>abcdefghijklmnopqrstuvwxyz</strong>
+//
+// <strong>1234567890(!@#s%g.,?:;)</strong>
+//
 // Markup: templates/font-stacks-scss.hbs
 //
-// Style guide: Typography.3 Font stacks
+// Style guide: Typography.1 Lato typeface
 
 @import url('https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext');
 
@@ -89,7 +86,7 @@ strong {
 //
 // Markup: templates/base-typography-scss.hbs
 //
-// Style guide: Typography.4 Base spacing & spacing
+// Style guide: Typography.3 Base spacing & spacing
 
 // Leading/line-height.
 $base-leading: 1.8;
@@ -123,7 +120,8 @@ html {
 //
 // They are initially based on a perfect fourth modular scale.
 //
-// This framework uses 4 breakpoints:
+// ### Beakpoints
+//
 // - Mobile (extra small devices): 4 columns, 420px maximum
 // - Tablet (small devices): 8 columns, 768px maximum
 // - Desktop (medium devices): 12 columns, 1000px maximum
@@ -131,7 +129,7 @@ html {
 //
 // ### Font size & line heights default settings
 //
-// We recommend you use relative units to allow for variety across users' browsers and device screens.
+// Use relative units to allow for variety across users' browsers and device screens.
 //
 //  This table shows size and line height (size/line-height) in pixels and ems.
 //
@@ -201,7 +199,7 @@ html {
 //   </tr>
 // </table>
 //
-// ### Base size examples
+// ### Base size examples: body copy
 //
 // Markup: templates/heading-body-styles.hbs
 //
@@ -334,11 +332,9 @@ a {
 
 }
 
-// Common content elements examples
+// Common content elements base & vertical styling
 //
-// Base styling and vertical spacing for general content elements.
-//
-// Style guide: Typography.5 Common content elements
+// Style guide: Typography.4 Common content elements
 
 // Lists (bullets & numbers)
 //
@@ -348,25 +344,17 @@ a {
 //
 // Markup: templates/list-examples.hbs
 //
-// Style guide: Typography.5 Common content elements.1 Lists (bullets & numbers)
+// Style guide: Typography.4 Common content elements.1 Lists (bullets & numbers)
 
-// Quotations, inline quotes & blockquotes
-//
-// Styling for in-line quotations and blockquotes, and citations.
-//
-// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
-//
-// Markup: templates/quotations-typography.hbs
-//
-// Styling for in-line quotations and blockquotes, and citations.
+// Quotations, in-line quotes & blockquotes
 //
 // There are 2 ways of using quotes:
-// - inline: inline quoting has been developed to handle additional nested elements (ie quotes, ordered and unordered lists).
-// - pull quotes.
+// - **in-line quoting** has been developed to handle additional nested elements (ie quotes, ordered and unordered lists).
+// - **pull quotes**.
 //
 // Markup: templates/quotation-examples.hbs
 //
-// Style guide: Typography.5 Common content elements.6 Quotations, inline quotes & blockquotes
+// Style guide: Typography.4 Common content elements.6 Quotations, in-line quotes & blockquotes
 
 // Callouts & warnings
 //
@@ -376,9 +364,9 @@ a {
 //
 // We may move some of this to only appy to content inside an `article`.
 //
-// Markup: templates/content-typography.hbs
+// Markup: templates/callouts-examples.hbs
 //
-// Style guide: Typography.5 Common content elements.2 Callouts & warnings
+// Style guide: Typography.4 Common content elements.2 Callouts & warnings
 
 ul,
 ol,
@@ -431,12 +419,6 @@ dt {
   font-size: rem(24);
 }
 
-// Quotations
-//
-
-//
-// Style guide: Typography.Quotations
-
 blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
@@ -455,6 +437,8 @@ blockquote {
       text-align: center;
       font-weight: $base-font-weight;
     }
+
+// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
 
     &::before,
     &::after {
@@ -542,13 +526,14 @@ cite {
 
 // Badges
 //
-// Styling for 'badges' that hold either an item number, or to demarcate status (e.g. alpha, beta, draft).
+// Styling for 'badges' that either:
 //
-//Badges have been created to hold either an item number or demonstrate status. An example of this is the  alpha badge seen in the header of the Gov.au/alpha.
+// - hold item number
+// - indicate status (eg alpha, beta, draft).
 //
 // Markup: templates/badges-examples.hbs
 //
-// Style guide: Typography.5 Common content elements.7 Badges
+// Style guide: Typography.4 Common content elements.7 Badges
 
 %base-badge {
   // We should put something clever here.
@@ -573,7 +558,6 @@ cite {
   background-color: $maroon;
   color: $white;
 
-// Style guide: Typography.Badges
 $badges: (
   "default":  $grey,
   "alpha":    $non-black,
