@@ -17,50 +17,44 @@
 //
 // Style guide: Typography
 
-// Lato typeface
+// Typeface
 //
-// The framework uses the open source [Lato font family](http://www.latofonts.com/).
+// The framework is currently testing the open source [Lato font family](http://www.latofonts.com/) in 3 styles:
 //
-// Lato provides:
-//
-// - legibility and adaptability
-// - optimisation for print, web and mobile interfaces
-// - a variety of weights that are easy to read at all sizes
-// - clear headers
-// - highly-readable body text
-// - feeling of warmth with strong structure for stability and seriousness
-//
-// ### Font stacks
-//
-// We are testing Lato in 3 styles:
 // - regular 400
 // - italic 400
 // - regular 700.
 //
-// The main target of the font stacks are undecided. We are confident can achieve a high degree of coverage across a range of browsers using the fall-backs.
+// The framework is likely to change to a different primary typeface. We are currently testing the use of webfonts generally.
 //
-// This gives us pretty much 95% coverage across Windowns and Mac and a lot of FOSS default font installs. **tweak this**
+// If we choose to use webfonts we provide optimisation.
 //
-// We still need to consider the pros and cons of any webfont inclusion. We are also working on compatability for web font stacks for Internet Explorer version 6-9. Developers will not be able to use the import rule and will need to add HTML to their head.
+// ### Font stacks
+//
+// ```
+// $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
+// $base-sans-serif: 'Lato', Geneva, Verdana, 'Bitstream Vera Sans', sans-serif;
+// $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+// ```
+//
+// Despite not having not decided on a webfont the font stacks should achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
+//
+// Currently you will need to `link` to Lato via the HTML `head` to support Internet Explorer.
 //
 // ### Pairing style examples
 // #### Lato regular
 //
-// ABCDEFGHIJKLMNOPQRSTUVWXYZ
-//
-// abcdefghijklmnopqrstuvwxyz
-//
+// ABCDEFGHIJKLMNOPQRSTUVWXYZ</br>
+// abcdefghijklmnopqrstuvwxyz</br>
 // 1234567890(!@#s%g.,?:;)
 //
 // #### Lato bold
 //
-// <strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ</strong>
-//
-// <strong>abcdefghijklmnopqrstuvwxyz</strong>
-//
+// <strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ</strong></br>
+// <strong>abcdefghijklmnopqrstuvwxyz</strong></br>
 // <strong>1234567890(!@#s%g.,?:;)</strong>
 //
-// Markup: templates/font-stacks-scss.hbs
+// We will provide a full HTML test page showing all possible pairings.
 //
 // Style guide: Typography.1 Lato typeface
 
@@ -81,11 +75,27 @@ strong {
 //
 // Base spacing and spacing are relative to the font size and calculated in the SCSS.
 //
+// ```
+// $base-spacing: $base-leading * 1em;
+// $medium-spacing: $base-spacing * 0.75;
+// $small-spacing: $base-spacing / 2;
+//
+// html {
+//   color: $body-text-colour;
+//   line-height: $base-leading;
+//   font-family: $base-font-family;
+//   font-weight: $base-font-weight;
+// }
+// ```
+//
 // The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `base-spacing` unit is then set in ems (ie by * 1em).
 //
-// We are likely to change the base-spacing unit to be give a figure easier to multiplay and divide.
+// ```
+// $base-leading: 1.6;
+// $base-heading-leading: 1.4;
+// ```
 //
-// Markup: templates/base-typography-scss.hbs
+// We are likely to change the base-spacing unit to be give a figure easier to multiplay and divide.
 //
 // Style guide: Typography.3 Base spacing & spacing
 
@@ -117,7 +127,7 @@ html {
 
 // Headings & body copy
 //
-// The type sizes are suitable for average screen densities and reading comfort under typical conditions.
+// The type sizes are desiged for legability and readability. We are currently testing this.
 //
 // They are initially based on a perfect fourth modular scale.
 //
@@ -125,8 +135,7 @@ html {
 //
 // - Mobile (extra small devices): 4 columns, 420px maximum
 // - Tablet (small devices): 8 columns, 768px maximum
-// - Desktop (medium devices): 12 columns, 1000px maximum
-// - Large desktop (large devices): 12 columns, 1200px maximum
+// - Desktop (medium devices): 12 columns, 1200px maximum
 //
 // ### Font size & line heights default settings
 //
@@ -134,69 +143,54 @@ html {
 //
 //  This table shows size and line height (size/line-height) in pixels and ems.
 //
-// <table style="border-style:solid;border-width:1px;">
+// <table style="width:100%;">
   // <tr>
     // <th>Style</th>
     // <th>Mobile</th>
     // <th>Tablet</th>
     // <th>Desktop</th>
-    // <th>Large desktop</th>
 //   </tr>
   // <tr>
-    // <td>H1 - Display type 1</td>
-    // <td>51/61<br>3.1875em</td>
-    // <td><br>57/68<br>3.5625em<br></td>
-    // <td>51/61<br>3.1875em</td>
-    // <td>57/68<br>3.5625em</td>
+    // <td>h1 / .display </td>
+    // <td>51 / 3.1875em</td>
+    // <td>57 / 3.5625em<br></td>
+    // <td>51 / 3.1875em</td>
 //   </tr>
   // <tr>
-    // <td>H2 - Display type 2</td>
-    // <td>43/52<br>2.6875em</td>
-    // <td>43/52<br>2.6875em</td>
-    // <td>38/45<br>2.375em</td>
-    // <td>43/52<br>2.6875em</td>
+    // <td>h2</td>
+    // <td>43 / 2.6875em</td>
+    // <td>43 / 2.6875em</td>
+    // <td>38 / 2.375em</td>
 //   </tr>
   // <tr>
-    // <td>H3 Article main title</td>
-    // <td>28/40<br>1.75em</td>
-    // <td>32/45<br>1.75em</td>
-    // <td>28/40<br>1.75em</td>
-    // <td>28/40<br>1.75em</td>
+    // <td>h3</td>
+    // <td>28 / 1.75em</td>
+    // <td>32 / 1.75em</td>
+    // <td>28 / 1.75em</td>
 //   </tr>
   // <tr>
-    // <td>H4 section heading / introduction</td>
-    // <td>21/32<br>1.3125em</td>
-    // <td>24/34<br>1.5em</td>
-    // <td>21/32<br>1.3125em</td>
-    // <td>21/32<br>1.3125em</td>
+    // <td>h4</td>
+    // <td>21 / 1.3125em</td>
+    // <td>24 / 1.5em</td>
+    // <td>21 / 1.3125em</td>
 //   </tr>
   // <tr>
-    // <td>H5 sub section heading</td>
-    // <td>18/30<br>1.125em</td>
-    // <td>18/30<br>1.125em</td>
-    // <td>16/28<br>1em</td>
-    // <td>16/28<br>1em</td>
+    // <td>h5</td>
+    // <td>18 / 1.125em</td>
+    // <td>18 / 1.125em</td>
+    // <td>16 / >1em</td>
 //   </tr>
   // <tr>
-    // <td>H6 sub section heading (uppercase)</td>
-    // <td>18/30<br>1.125em</td>
-    // <td>18/30<br>1.125em</td>
-    // <td>16/28<br>1em</td>
-    // <td>16/28<br>1em</td>
+    // <td>h6</td>
+    // <td>18 / 1.125em</td>
+    // <td>18 / 1.125em</td>
+    // <td>16 / 1em</td>
 //   </tr>
   // <tr>
     // <td>Body copy</td>
-    // <td>18/30<br>1.125em</td>
-    // <td>18/30<br>1.125em</td>
-    // <td>16/28,1em</td>
-    // <td>16/28,1em</td>
-//   </tr>
-  // <tr>
-    // <td>Index, captions, links</td>
-    // <td>14/20<br>0.875em</td>
-    // <td>14/20<br>0.875em</td>
-    // <td>14/20<br>0.875em</td>
-    // <td>14/20<br>0.875em</td>
+    // <td>18 / 1.125em</td>
+    // <td>18 / 1.125em</td>
+    // <td>16 / 1em</td>
 //   </tr>
 // </table>
 //
