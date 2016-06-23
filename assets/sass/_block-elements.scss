@@ -1,63 +1,54 @@
 // Describe me so no evil shall be committed in wielding this class!
 .wrapper {
   @include outer-container;
-  @include media($tablet) {
-    padding-left: $small-spacing;
-    padding-right: $small-spacing;
+
+  @include media($desktop) {
+    @include pad(0 default);
   }
 }
 
 header {
-  @include outer-container(100%);
-
-  background-color: $maroon;
-  color: $white;
-
-  h1 {
-    margin-top: 0;
+  &[role='banner'] {
+    @include outer-container(100%);
   }
 }
 
 footer {
-
   &[role='contentinfo'] {
     @include outer-container(100%);
 
-    background-color: $non-black;
-    color: $white;
     margin-top: ($base-spacing * 2);
+    @include pad(0 default);
   }
 }
 
 main {
   @include outer-container();
+  padding-top: $base-spacing;
+
+  @include media($tablet) {
+    @include pad($base-spacing default 0 default);
+  }
 
   article {
     @include span-columns(7 of 12);
     @include media($tablet) {
       @include span-columns(6 of 8);
-      @include shift(1);
     }
 
     @include media($mobile) {
       @include span-columns(4 of 4);
       @include shift(0);
-
-      padding-left: $small-spacing;
-      padding-right: $small-spacing;
     }
   }
 
   .form-wrapper {
-
     @include span-columns(4 of 6);
 
     @include media($mobile) {
       @include span-columns(4 of 4);
     }
-
   }
-
 }
 
 // IE 8 "clearfix" from https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
@@ -84,8 +75,5 @@ main:after {
   @include media($mobile) {
     @include span-columns(4 of 4);
     @include shift(0);
-
-    padding-left: $small-spacing;
-    padding-right: $small-spacing;
   }
 }

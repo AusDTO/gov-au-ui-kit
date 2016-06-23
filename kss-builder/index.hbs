@@ -13,13 +13,26 @@
 </head>
 <body id="kss-node">
 
-<header>
-  <div class="wrapper">
-    <h1 class="page-title">{{options.title}}</h1>
-  </div>
+<header role="banner">
+  <section class="govau--header">
+    <div class="wrapper">
+      <div class="govau--logo">
+        <a href="#" class="logo">gov.au</a> <span class="badge--alpha">alpha</span>
+      </div>
+      <div class="feedback">
+        <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" class="button--feedback">Give feedback</a>
+      </div>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="wrapper">
+      <a href="#" class="site-title">{{options.title}}</a>
+      <p class="tagline">A living style guide of the ui-kit, built using KSS.</p>
+    </div>
+  </section>
 </header>
-<main>
 
+<main>
   <aside class="sidebar">
     <nav class="primary-nav" aria-label="main navigation">
       <ul>
@@ -175,7 +188,7 @@
 
 {{! This will only be included in the demo page. }}
 {{#if options.demo}}
-  <footer class="kss-github">
+  <footer role="contentinfo" dropzone=""class="kss-github">
     <!-- https://github.com/blog/273-github-ribbons -->
     <a href="https://github.com/kss-node/kss-node"><img src="kss-assets/github-fork--black.png"
                                                         alt="Fork me on GitHub"></a>

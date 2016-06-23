@@ -11,6 +11,8 @@
 //
 // We're currently testing Lato, using 3 styles: regular 400, italic 400, regular 700, as per the future design direction. At this stage the main target of our font stacks are still undecided, but we're confident to achieve a high degree of coverage using the fall-backs. We still need to consider the pros and cons of any webfont inclusion.
 //
+// We also will likely need to move our webfonts into the `head` of any HTML, as IE is not a fan of @import for fonts (requires testing).
+//
 // Markup: templates/font-stacks-scss.hbs
 //
 // Compatibility untested.
@@ -35,6 +37,8 @@ strong {
 // We define our base spacing relative to the size of the type by anchoring it to the base leading, which is unit-less; it acts as a multiplier of the font-size.
 //
 // The base-spacing unit is then set in ems by * 1em.
+//
+// Roadmap: likely change to the base-spacing unit to be give a figure easier to multiplay and divide.
 //
 // Markup: templates/base-typography-scss.hbs
 //
@@ -101,6 +105,10 @@ h1 {
   @include media($mobile) {
     font-size: rem(51);
   }
+
+  &:first-of-type {
+    margin-top: $tiny-spacing;
+  }
 }
 
 h2 {
@@ -117,6 +125,10 @@ h2 {
 
   @include media($mobile) {
     font-size: rem(38);
+  }
+
+  &:first-of-type {
+    margin-top: $tiny-spacing;
   }
 }
 
@@ -187,6 +199,7 @@ a {
   &:hover,
   &:active {
     color: $highlight-colour;
+    border-bottom-width: 3px;
   }
 
 }
@@ -194,6 +207,8 @@ a {
 // Common content elements
 //
 // Base styling and vertical spacing for general content elements.
+//
+// We may move some of this to only appy to content inside an `article`.
 //
 // Markup: templates/content-typography.hbs
 //
@@ -252,6 +267,8 @@ dt {
 // Quotations
 //
 // Styling for in-line quotations and blockquotes, and citations.
+//
+// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
 //
 // Markup: templates/quotations-typography.hbs
 //
@@ -366,26 +383,23 @@ cite {
 // Markup: templates/badge-typography.hbs
 //
 // Style guide: Typography.Badges
-%base-badge {
-  // We should put something clever here.
-  border-radius: $large-border-radius;
-  padding: $tiny-spacing $small-spacing;
-  vertical-align: top;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: rem(14);
-}
+$badges: (
+  "default":  $grey,
+  "alpha":    $non-black,
+  "beta":     $maroon,
+  "error":    $error-colour,
+  "success":  $green,
+);
 
-.badge--alpha {
-  @extend %base-badge;
-
-  background-color: $non-black;
-  color: $white;
-}
-
-.badge--beta {
-  @extend %base-badge;
-
-  background-color: $maroon;
-  color: $white;
+@each $badge-type, $color in $badges {
+  .badge--#{$badge-type} {
+    display: inline-block;
+    background-color: $color;
+    border-radius: $large-border-radius;
+    padding: $tiny-spacing $small-spacing;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: lighten($color, 75%);
+    font-size: rem(14);
+  }
 }

@@ -1,0 +1,101 @@
+header[role='banner'] {
+
+  // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
+  .controls {
+    padding: $medium-spacing 0;
+    text-align: right;
+    background-color: $dark-navy;
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .govau--header {
+    padding: $medium-spacing 0;
+    background-color: $navy;
+    color: $white;
+
+    .govau--logo {
+      float: left;
+
+      @include media($mobile) {
+        @include span-columns(4 of 4);
+
+        float: none;
+        padding-bottom: $medium-spacing;
+      }
+    }
+
+    .logo {
+      @extend h3;
+
+      padding-bottom: 2px;
+      border-bottom: none;
+      color: $white;
+      font-family: $base-sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      &:hover,
+      &:focus {
+        border-bottom: 1px;
+      }
+    }
+
+    .badge--alpha,
+    .badge--beta {
+      vertical-align: top;
+      margin-left: $tiny-spacing;
+      background-color: $aqua;
+    }
+
+    .feedback {
+      float: right;
+
+      @include media($mobile) {
+        @include span-columns(4 of 4);
+
+        float: none;
+      }
+    }
+
+    .button--feedback {
+      @extend %base-button;
+      @extend button;
+
+      margin: 0;
+      border: solid 1px;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background: $white;
+        color: $navy;
+      }
+    }
+  }
+
+  .hero {
+    padding: ($base-spacing * 2) 0;
+    background-color: $aqua;
+    color: $white;
+
+    .site-title {
+      @extend h1;
+
+      margin: $tiny-spacing 0;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        // fill me in
+      }
+    }
+
+    .tagline {
+      @extend .abstract;
+    }
+  }
+}
