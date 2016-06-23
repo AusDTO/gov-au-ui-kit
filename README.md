@@ -6,7 +6,7 @@
 
 gov-au-ui-kit is 3 things:
 
-- draft design guide to build an accessible standardised look and feel for GOV.AU projects: http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/
+- draft design guide to build an accessible standardised look and feel for GOV.AU projects: http://gov-au-ui-kit.apps.staging.digital.gov.au/
 - templates (to come)
 - a lean and frugal CSS/SCSS framework (`assets/sass`) that you can
   - link to as a precompiled minified file:
