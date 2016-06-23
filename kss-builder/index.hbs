@@ -186,14 +186,12 @@
 </script>
 {{{scripts}}}
 
-{{! This will only be included in the demo page. }}
-{{#if options.demo}}
-  <footer role="contentinfo" dropzone=""class="kss-github">
-    <!-- https://github.com/blog/273-github-ribbons -->
-    <a href="https://github.com/kss-node/kss-node"><img src="kss-assets/github-fork--black.png"
-                                                        alt="Fork me on GitHub"></a>
-  </footer>
-{{/if}}
+
+<footer role="contentinfo">
+  <div class="wrapper">
+    <p>Last modified: {{moment "" "DD MMM Y"}}</p>
+  </div>
+</footer>
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
