@@ -82,19 +82,11 @@ $ rvm use 2.3.0
 
 We use Bourbon 4.2.7. We include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
 
+Some of the key libraries we use are:
 - "gulp": "^3.9.1",
-- "gulp-autoprefixer": "^3.1.0",
-- "gulp-cssnano": "^2.1.2",
-- "gulp-gitversion": "^0.0.8",
-- "gulp-html": "^0.4.4",
-- "gulp-rename": "^1.2.2",
 - "gulp-sass": "^2.3.1",
-- "gulp-scss-lint": "^0.4.0",
-- "gulp-sourcemaps": "^1.6.0",
-- "gulp-util": "^3.0.7",
 - "kss": "^3.0.0-beta.14",
-- "sass-lint": "^1.7.0",
-- "through2": "^2.0.1"
+- "sass-lint": "^1.7.0"
 
 `^` = compatible with version (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 

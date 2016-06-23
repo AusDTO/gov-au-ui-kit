@@ -18,6 +18,7 @@ var paths = {
     kssBuilderDir: './kss-builder/**/*.*',
     scss: './assets/sass/ui-kit.scss',
     js: './assets/js/ui-kit.js',
+    markdown: "./*.md",
     readme: "./README.md",
     outputAssets: './build/latest',
     outputHTML: './build'
@@ -97,6 +98,11 @@ gulp.task('examples', function () {
         .pipe(gulp.dest(paths.outputHTML+'/examples'));
 });
 
+gulp.task('markdown', function () {
+    return gulp.src(paths.markdown)
+        .pipe(gulp.dest(paths.outputHTML));
+});
+
 gulp.task('nginx', function () {
     return gulp.src('nginx.conf')
         .pipe(gulp.dest(paths.outputHTML));
@@ -122,7 +128,7 @@ gulp.task('htmlvalidate', ['examples','styleguide'], function (cb) {
 gulp.task('styleguide', function () {
     return kss({
         source: 'assets/sass',
-        css: '../latest/ui-kit.css',
+        css: './latest/ui-kit.css',
         destination: paths.outputHTML,
         homepage: '../../README.md',
         builder: 'kss-builder'
@@ -135,11 +141,11 @@ gulp.task('clean', function(done) {
 
 gulp.task('default', ['ui-kit']);
 
-gulp.task('build', ['lint', 'ui-kit', 'examples', 'styleguide']);
+gulp.task('build', ['lint', 'ui-kit', 'markdown',  'examples', 'styleguide']);
 
 gulp.task('build.prod', function(callback) {
     runSequence('clean',
-        ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.scssmerge', 'htmlvalidate'],
+        ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.scssmerge', 'markdown', 'htmlvalidate'],
         callback);
 });
 
