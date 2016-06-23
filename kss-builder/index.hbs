@@ -28,6 +28,7 @@
     <div class="wrapper">
       <a href="#" class="site-title">{{options.title}}</a>
       <p class="tagline">A living style guide of the ui-kit, built using KSS.</p>
+      <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
   </section>
 </header>
@@ -186,14 +187,12 @@
 </script>
 {{{scripts}}}
 
-{{! This will only be included in the demo page. }}
-{{#if options.demo}}
-  <footer role="contentinfo" dropzone=""class="kss-github">
-    <!-- https://github.com/blog/273-github-ribbons -->
-    <a href="https://github.com/kss-node/kss-node"><img src="kss-assets/github-fork--black.png"
-                                                        alt="Fork me on GitHub"></a>
-  </footer>
-{{/if}}
+
+<footer role="contentinfo">
+  <div class="wrapper">
+    <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
+  </div>
+</footer>
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>

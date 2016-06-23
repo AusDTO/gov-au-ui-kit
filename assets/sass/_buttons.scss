@@ -95,4 +95,17 @@ button,
     color: $link-colour;
   }
 
+  &.inverted {
+    border: 1px solid;
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $button-inverted-colour;
+      background-color: $button-inverted-colour;
+      color: $button-inverted-text-colour;
+    }
+  }
+
 }

@@ -46,7 +46,7 @@ header[role='banner'] {
 
     .badge--alpha,
     .badge--beta {
-      vertical-align: top;
+      vertical-align: text-bottom;
       margin-left: $tiny-spacing;
       background-color: $aqua;
     }
@@ -62,18 +62,11 @@ header[role='banner'] {
     }
 
     .button--feedback {
-      @extend %base-button;
       @extend button;
+      @extend .inverted;
 
       margin: 0;
-      border: solid 1px;
-      background-color: transparent;
 
-      &:hover,
-      &:focus {
-        background: $white;
-        color: $navy;
-      }
     }
   }
 

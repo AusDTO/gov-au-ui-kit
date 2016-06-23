@@ -85,7 +85,7 @@ $mobile: new-breakpoint(max-width 420px 4);
 //
 // Turn on the visual grid to help debugging.
 //
-// Markup: templates/visual-grid.hbs
+// ``` $visual-grid: true; ```
 //
 // Style guide: Grid settings.3 Debugging
 
@@ -103,27 +103,6 @@ $visual-grid: false;
 
 // Last updated
 //
-// 17 June 2016 <!-- can we automate this please -->
-//
-//
-//
-// ### Sections to include
-//
-// - diagram e.g. http://uspto.github.io/designpatterns/docs/foundation/grid.html
-// - ~~Grid basics~~
-// - ~~Breakpoints~~
-// - Responsive behaviour / Provide responsive info/notes - what is still needed?
-// - ~~Layout examples~~
-// - ~~Explanation of the thing~~
-// - ~~Explain usability guidelines~~
-// - ~~Have a visual or live example~~
-// - ~~Show its code snippet~~
-// - ~~Have a feedback mechanism~~
-// - ~~Include accessbility notes (if required)~~
-// - ~~Include "last updated" blurb~~
-//
-// ### Good keywords / headings
-//
-// Keywords: ~~layout, page width, screen size, spacing, grid unit proportions, example: grid layout~~
+// 23 June 2016 <!-- can we automate this please -->
 //
 // Style guide: Grid settings.5 Last updated
