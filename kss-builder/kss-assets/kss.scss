@@ -280,14 +280,12 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   }
   .kss-title__permalink {
     display: block;
-    color: #000;
     text-decoration: none;
     border: none;
 
     &:hover,
     &:focus,
     &:active {
-      color: $kss-colors-link;
 
       @media screen and (min-width: 607px) {
         .kss-title__permalink-hash {
