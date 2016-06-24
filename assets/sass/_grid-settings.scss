@@ -13,13 +13,21 @@ If you need to reference just the grid, not the whole framework, use:
 > @import "grid-settings"
 > ```
 
-### Creating elements
+Style guide: Grid
+*/
+
+/*
+Creating elements
 
 If you need a new element [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues) so we can include it for everyone. <!-- fix anchor link once readme is approved -->
 
 For each new element you will need to manually set column properties, starting from the smallest breakpoint. <!-- is this correct? -->
 
-### Debugging
+Style guide: Grid.1 Creating elements
+*/
+
+/*
+Debugging
 
 Turn on the visual grid to help debugging:
 
@@ -27,7 +35,7 @@ Turn on the visual grid to help debugging:
 
 See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/examples/).
 
-Style guide: Grid
+Style guide: Grid.2 Debugging
 */
 
 $border-box-sizing: true;
@@ -48,7 +56,7 @@ The grid element column properties for block level elements (`header`, `footer`,
 
 There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is reserved for the page header.
 
-Style guide: Grid.1 Spacing
+Style guide: Grid.3 Spacing
 */
 
 /*
@@ -72,7 +80,7 @@ $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
 ```
 
-Style guide: Grid.2 Breakpoints
+Style guide: Grid.4 Breakpoints
 */
 
 /*
@@ -84,7 +92,7 @@ Long lines reduce legibility. Lines of text should be no longer than 75 characte
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 
-Style guide: Grid.3 Accessibility
+Style guide: Grid.5 Accessibility
 */
 
 $grid-columns: 12 !global;
@@ -120,5 +128,5 @@ Attribution
 
 This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
-Style guide: Grid.4 Attribution
+Style guide: Grid.6 Attribution
 */
