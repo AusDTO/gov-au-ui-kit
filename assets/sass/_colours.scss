@@ -308,6 +308,10 @@ $badge-colour-success:          $green;
 
 .guide-colour-block {
   padding: 0.5em;  //Should be a var like $medium-spacing but _colours.scss doesn't inherit this var yet
+  .tab {
+    display: inline-block;
+    width: 20%;
+  }
 }
 
 .guide-colour {
@@ -324,5 +328,10 @@ $badge-colour-success:          $green;
   .text {
     padding: 0.5em; //Should be a var like $medium-spacing but _colours.scss doesn't inherit this var yet
     margin: 0;
+
+    small {
+      display: block;
+      line-height: 1.5;
+    }
   }
 }
