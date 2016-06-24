@@ -221,7 +221,6 @@ $badge-colour-success:          $green;
 
 
 // Colour background classes
-
 .bg-black {
   background-color: $black;
   color: $white;
@@ -229,7 +228,7 @@ $badge-colour-success:          $green;
 
 .bg-non-black {
   background-color: $non-black;
-  color: $lighter-grey;
+  color: $non-white;
 }
 
 .bg-grey {
@@ -254,10 +253,12 @@ $badge-colour-success:          $green;
 
 .bg-non-white {
   background-color: $non-white;
+  color: $non-black;
 }
 
 .bg-white {
   background-color: $white;
+  color: $non-black;
 }
 
 .bg-aqua {
@@ -277,7 +278,7 @@ $badge-colour-success:          $green;
 
 .bg-light-aqua {
   background-color: $light-aqua;
-  color: $non-white;
+  color: $non-black;
 }
 
 .bg-navy {
@@ -295,11 +296,15 @@ $badge-colour-success:          $green;
   color: $non-white;
 }
 
-.bg-red {
+.bg-error {
   background-color: $red;
   color: $white;
 }
 
+.bg-success {
+  background-color: $green;
+  color: $white;
+}
 
 //Moved to KSS styles?
 .guide-colour-examples {
