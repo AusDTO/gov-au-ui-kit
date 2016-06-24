@@ -1,3 +1,5 @@
+# For an explanation of these linter options see:
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
   BangFormat:
     enabled: true
@@ -13,6 +15,7 @@ linters:
     enabled: true
   Comment:
     enabled: true
+    allowed: '^[/*]'
   DebugStatement:
     enabled: true
   DeclarationOrder:
