@@ -542,17 +542,7 @@ cite {
 // - <span class="badge--error">error</span> using `<span class="badge--error">error</span>`
 // - <span class="badge--success">done</span> using `<span class="badge--success">done</span>`
 //
-// Style guide: Typography.4 Common content elements.7 Badges
-
-%base-badge {
-  // We should put something clever here.
-  border-radius: $large-border-radius;
-  padding: $tiny-spacing $small-spacing;
-  vertical-align: top;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: rem(14);
-}
+// Style guide: Typography.Badges
 
 $badges: (
   "default":  $badge-colour-default,
