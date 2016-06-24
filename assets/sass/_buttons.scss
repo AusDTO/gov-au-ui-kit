@@ -53,18 +53,19 @@
 
 }
 
-// Buttons
-//
-// Use buttons to move through a transaction. Aim to use only one button per
-// page.
-//
-// .contrast - Visually distinct from the default button style
-// .secondary - When more than one button is needed
-//
-// Markup: templates/buttons.hbs
-//
-// Style guide: Buttons and Links.Buttons
+/*
+Buttons
 
+Use buttons to move through a transaction. Aim to use only one button per
+page.
+
+.contrast - Visually distinct from the default button style
+.secondary - When more than one button is needed
+
+Markup: templates/buttons.hbs
+
+Style guide: Buttons and Links.Buttons
+*/
 
 button,
 .button,

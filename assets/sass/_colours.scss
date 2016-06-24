@@ -1,48 +1,53 @@
-// Colours
-//
-// The basic palette of colours available in the gov-au-ui-kit framework.
-//
-// These colours are not finalised and may change.
-//
-// The framework uses semantic names, including lighter and darker versions that are percentage variations of the original colours. The Sass variables are also provided below, for reference.
-//
-// They are not web-safe colours. Let us know if they need to be.
-//
-// If you need more guidance [contact us](index.html#contributing). <!-- fix anchor link once readme is approved -->
-//
-// Markup: templates/colours.hbs
-//
-// Style guide: Colours
+/*
+Colours
 
-// Colour contrast
-//
-// To make your content accessible the colour contrast ratio for text and interactive elements should be at least 4.5:1 as [recommended by the W3C](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
-//
-// ### Fully accessible combinations
-// (example to come)
-//
-// Style guide: Colours.1 Colour contrast
+The basic palette of colours available in the gov-au-ui-kit framework.
 
-// Attribution
-//
-// Style guide: Colours.2 Attribution
+These colours are not finalised and may change.
 
-// Last updated
-//
-// 17 June 2016 <!-- can we automate this please -->
-//
-// ### Sections to include
-//
-// - ~~Explanation of the thing~~
-// - Have a visual or live example / Show its code snippet: a basic HTML swatch palette to come <!-- link to Sydney sketch files -->
-// - ~~Have a feedback mechanism~~
-// - ~~Include accessbility notes (if required)~~
-// - ~~Include "last updated" blurb~~
-//
-// ### Good keywords/headings
-// ~~colour contrast, sass variables, palatte~~
-//
-// Style guide: Colours.3 Last updated
+The framework uses semantic names, including lighter and darker versions that are percentage variations of the original colours. The Sass variables are also provided below, for reference.
+
+They are not web-safe colours. Let us know if they need to be.
+
+If you need more guidance [contact us](index.html#contributing). <!-- fix anchor link once readme is approved -->
+
+Markup: templates/colours.hbs
+
+Style guide: Colours
+
+
+Colour contrast
+
+To make your content accessible the colour contrast ratio for text and interactive elements should be at least 4.5:1 as [recommended by the W3C](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+
+### Fully accessible combinations
+(example to come)
+
+Style guide: Colours.1 Colour contrast
+
+
+Attribution
+
+Style guide: Colours.2 Attribution
+
+
+Last updated
+
+17 June 2016 <!-- can we automate this please -->
+
+### Sections to include
+
+- ~~Explanation of the thing~~
+- Have a visual or live example / Show its code snippet: a basic HTML swatch palette to come <!-- link to Sydney sketch files -->
+- ~~Have a feedback mechanism~~
+- ~~Include accessbility notes (if required)~~
+- ~~Include "last updated" blurb~~
+
+### Good keywords/headings
+~~colour contrast, sass variables, palatte~~
+
+Style guide: Colours.3 Last updated
+*/
 
 // Colour constants
 

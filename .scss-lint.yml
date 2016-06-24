@@ -13,6 +13,7 @@ linters:
     enabled: true
   Comment:
     enabled: true
+    allowed: '^[/*]'
   DebugStatement:
     enabled: true
   DeclarationOrder:
