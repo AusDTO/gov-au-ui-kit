@@ -7,87 +7,106 @@ These colours are not finalised and may change.
 
 The framework uses semantic names, including lighter and darker versions that are percentage variations of the original colours. The Sass variables are also provided below, for reference.
 
-They are not web-safe colours. Let us know if they need to be.
-
 <div class="guide-colour-examples">
   <div class="guide-colour">
     <div class="swatch bg-non-black"></div>
     <p class="text"> <strong>Non-black</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+      <small>$non-black<br/>#CC0000</small></p>
   </div>
+
   <div class="guide-colour">
     <div class="swatch bg-dark-grey"></div>
-    <p class="text"> <strong>Dark Grey</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+    <p class="text"> <strong>Dark-grey</strong><br/>
+      <small>$dark-grey<br/>#313131</small></p>
   </div>
+
   <div class="guide-colour">
     <div class="swatch bg-grey"></div>
     <p class="text"> <strong>Grey</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+      <small>$grey<br/> #717171</small></p>
   </div>
+
   <div class="guide-colour">
     <div class="swatch bg-light-grey"></div>
-    <p class="text"> <strong>Light Grey</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+    <p class="text"> <strong>Light-grey</strong><br/>
+      <small>$light-grey<br/> #BEBEBE</small></p>
   </div>
+
   <div class="guide-colour">
-    <div class="swatch bg-non-white"></div>
-    <p class="text"> <strong>Non-white</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+    <div class="swatch bg-darker-aqua"></div>
+    <p class="text"> <strong>Darker-aqua</strong><br/>
+      <small>$darker-aqua<br/> #115361</small></p>
   </div>
+
   <div class="guide-colour">
-    <div class="swatch bg-white"></div>
-    <p class="text"> <strong>White</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+    <div class="swatch bg-dark-aqua"></div>
+    <p class="text"> <strong>Dark-aqua</strong><br/>
+      <small>$dark-aqua<br/> #146577</small></p>
   </div>
+
   <div class="guide-colour">
     <div class="swatch bg-aqua"></div>
     <p class="text"> <strong>Aqua</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+      <small>$aqua<br/> #18788D</small></p>
   </div>
-  <div class="guide-colour">
-    <div class="swatch bg-dark-aqua"></div>
-    <p class="text"> <strong>Dark Aqua</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
-  </div>
-  <div class="guide-colour">
-    <div class="swatch bg-darker-aqua"></div>
-    <p class="text"> <strong>darker-aqua</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
-  </div>
+
   <div class="guide-colour">
     <div class="swatch bg-light-aqua"></div>
-    <p class="text"> <strong>light-aqua</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+    <p class="text"> <strong>Light-aqua</strong><br/>
+      <small>$light-aqua<br/> #5BCBE3</small></p>
   </div>
-  <div class="guide-colour">
-    <div class="swatch bg-navy"></div>
-    <p class="text"> <strong>navy</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
-  </div>
+
   <div class="guide-colour">
     <div class="swatch bg-dark-navy"></div>
-    <p class="text"> <strong>Dark Navy</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+    <p class="text"> <strong>Dark-navy</strong><br/>
+      <small>$dark-navy<br/> #152D3B</small></p>
   </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-navy"></div>
+    <p class="text"> <strong>Navy</strong><br/>
+      <small>$navy<br/> #224A61</small></p>
+  </div>
+
   <div class="guide-colour">
     <div class="swatch bg-light-navy"></div>
-    <p class="text"> <strong>Light Navy</strong><br/>
-      <small>Var name<br/> #cc0000</small></p>
+    <p class="text"> <strong>Light-navy</strong><br/>
+      <small>$light-navy<br/> #327DA9</small></p>
   </div>
- </div>
 
- ### Contextual colors
- <div class="guide-colour-examples">
   <div class="guide-colour">
-    <div class="swatch bg-error"></div>
-    <p class="text"> <strong>Error</strong><br/>
-      <small>$error-colour<br/> #CC0000</small></p>
+    <div class="swatch bg-non-white"></div>
+    <p class="text"> <strong>Non-white</strong><br/>
+      <small>$non-white<br/> #F0F3F5</small></p>
   </div>
+</div>
+
+
+### Contextual colors
+ <div class="guide-colour-examples">
+
   <div class="guide-colour">
     <div class="swatch bg-success"></div>
-    <p class="text"> <strong>Success</strong><br/>
-      <small>$success-colour<br/> #00865F</small></p>
+    <p class="text"> <strong>Success-green</strong><br/>
+      <small>$success-colour<br/> #007554</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-green"></div>
+    <p class="text"> <strong>Light-green</strong><br/>
+      <small>$light-green<br/> #E6EFC2</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-error"></div>
+    <p class="text"> <strong>Error-red</strong><br/>
+      <small>$error-colour<br/> #CC0000</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-red"></div>
+    <p class="text"> <strong>Light-red</strong><br/>
+      <small>$light-red<br/> #F9DEDE</small></p>
   </div>
 </div>
 
@@ -102,23 +121,25 @@ Colour contrast
 To make your content accessible the colour contrast ratio for text and interactive elements should be at least 4.5:1 as [recommended by the W3C](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
 
 ### Recommended accessible combinations
-<p class="guide-colour-block bg-black"><span class="tab">Black</span> White</p>
-<p class="guide-colour-block bg-non-black"><span class="tab">Non-black</span> Non-white</p>
-<p class="guide-colour-block bg-dark-grey"><span class="tab">Dark-grey</span> Non-white</p>
-<p class="guide-colour-block bg-grey"><span class="tab">Grey</span> White</p>
-<p class="guide-colour-block bg-light-grey"><span class="tab">Light-grey</span> Non-black</p>
-<p class="guide-colour-block bg-lighter-grey"><span class="tab">Lighter-grey</span> Non-black</p>
-<p class="guide-colour-block bg-non-white"><span class="tab">Non-white</span> Non-black</p>
-<p class="guide-colour-block bg-white"><span class="tab">White</span> Non-black</p>
-<p class="guide-colour-block bg-darker-aqua"><span class="tab">Darker-aqua</span> Non-white</p>
-<p class="guide-colour-block bg-dark-aqua"><span class="tab">Dark-aqua</span> Non-white</p>
-<p class="guide-colour-block bg-aqua"><span class="tab">Aqua</span> White</p>
-<p class="guide-colour-block bg-light-aqua"><span class="tab">Light-aqua</span> Non-black</p>
-<p class="guide-colour-block bg-dark-navy"><span class="tab">Dark-navy</span> Non-white</p>
-<p class="guide-colour-block bg-navy"><span class="tab">Navy</span> Non-white</p>
-<p class="guide-colour-block bg-light-navy"><span class="tab">Light-navy</span> Non-white</p>
-<p class="guide-colour-block bg-error"><span class="tab">Error</span> White</p>
-<p class="guide-colour-block bg-success"><span class="tab">Success</span> White</p>
+<p class="guide-colour-block bg-black">white on black <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-grey">non-white on dark-grey<span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-grey">white on grey <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-grey">non-black on light-grey <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-lighter-grey">non-black on lighter-grey <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-non-white">non-black on non-white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-white">non-black on white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-darker-aqua">non-white on darker-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-aqua">non-white on dark-aqua <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-aqua">white on aqua <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-aqua">non-black on light-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-navy">non-white on dark-navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-navy">non-white on navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-light-navy">white on light-navy <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-error">white on error-red  <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-red">error-red on light-red <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-success">white on success-green <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-green">success-green on light-green <span class="invert">AA</span></p>
 
 Style guide: Colours.1 Colour contrast
 */
@@ -137,7 +158,7 @@ Last updated
 ### Sections to include
 
 - ~~Explanation of the thing~~
-- Have a visual or live example / Show its code snippet: a basic HTML swatch palette to come <!-- link to Sydney sketch files -->
+- ~~Have a visual or live example / Show its code snippet: a basic HTML swatch palette to come~~  <!-- link to Sydney sketch files -->
 - ~~Have a feedback mechanism~~
 - ~~Include accessbility notes (if required)~~
 - ~~Include "last updated" blurb~~
@@ -166,12 +187,19 @@ $light-aqua:    lighten($aqua, 30%);
 
 $navy:          #224a61;
 $dark-navy:     darken($navy, 10%);
-$light-navy:    lighten($navy, 30%);
+$light-navy:    #327da9; //lighten($navy, 30%); Changed for WCAG:AA
 
-$red:           #c00;
+$red:           #cc0000;
+$light-red:     #f9dede;
 
+$green:         #007554;
 $light-green:   #e6efc2;
-$green:         #00865f;
+
+$yellow:        #f9c642;  //Warning from Alpha
+$light-yellow:  #fdf7dc;  //Warning from Alpha
+
+$blue:          #fff;     //Info from Alpha
+$light-blue:    #e8f5fa;  //Info from Alpha
 
 $orange:        #fbb03b;
 
@@ -204,7 +232,7 @@ $frame-colour:                  $light-grey;
 $primary-colour:                $light-navy;
 $highlight-colour:              $light-aqua;
 $error-colour:                  $red;
-$success-colour:                $light-green;
+$success-colour:                $green;
 
 $border-colour:                 $light-grey;
 $border-secondary-colour:       $lighter-grey;
@@ -224,87 +252,203 @@ $badge-colour-success:          $green;
 .bg-black {
   background-color: $black;
   color: $white;
+
+  .invert {
+    background-color: $white;
+    color: $black;
+  }
 }
 
 .bg-non-black {
   background-color: $non-black;
   color: $non-white;
+
+  .invert {
+    background-color: $non-white;
+    color: $non-black;
+  }
 }
 
 .bg-grey {
   background-color: $grey;
   color: $white;
+
+  .invert {
+    background-color: $white;
+    color: $grey;
+  }
 }
 
 .bg-dark-grey {
   background-color: $dark-grey;
-  color: $lighter-grey;
+  color: $non-white;
+
+  .invert {
+    background-color: $non-white;
+    color: $dark-grey;
+  }
 }
 
 .bg-light-grey {
   background-color: $light-grey;
   color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $light-grey;
+  }
 }
 
 .bg-lighter-grey {
   background-color: $lighter-grey;
   color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $lighter-grey;
+  }
 }
 
 .bg-non-white {
   background-color: $non-white;
   color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $non-white;
+  }
 }
 
 .bg-white {
   background-color: $white;
   color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $white;
+  }
 }
 
 .bg-aqua {
   background-color: $aqua;
   color: $non-white;
+
+  .invert {
+    background-color: $non-white;
+    color: $aqua;
+  }
 }
 
 .bg-dark-aqua {
   background-color: $dark-aqua;
   color: $non-white;
+
+  .invert {
+    background-color: $non-white;
+    color: $dark-aqua;
+  }
 }
 
 .bg-darker-aqua {
   background-color: $darker-aqua;
   color: $non-white;
+
+  .invert {
+    background-color: $non-white;
+    color: $darker-aqua;
+  }
 }
 
 .bg-light-aqua {
   background-color: $light-aqua;
   color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $light-aqua;
+  }
 }
 
 .bg-navy {
   background-color: $navy;
   color: $non-white;
+
+  .invert {
+    background-color: $non-white;
+    color: $navy;
+  }
 }
 
 .bg-dark-navy {
   background-color: $dark-navy;
   color: $non-white;
+
+  .invert {
+    background-color: $non-white;
+    color: $dark-navy;
+  }
 }
 
 .bg-light-navy {
   background-color: $light-navy;
-  color: $non-white;
+  color: $white;
+
+  .invert {
+    background-color: $white;
+    color: $light-navy;
+  }
 }
 
 .bg-error {
   background-color: $red;
   color: $white;
+
+  .invert {
+    background-color: $white;
+    color: $red;
+  }
+}
+
+.bg-light-red {
+  background-color: $light-red;
+  color: $red;
+
+  .invert {
+    background-color: $red;
+    color: $light-red;
+  }
 }
 
 .bg-success {
   background-color: $green;
   color: $white;
+
+  .invert {
+    background-color: $white;
+    color: $green;
+  }
 }
+
+.bg-light-green {
+  background-color: $light-green;
+  color: $green;
+
+  .invert {
+    background-color: $green;
+    color: $light-green;
+  }
+}
+
+.bg-yellow {
+  background-color: $yellow;
+  color: $white;
+}
+
+.bg-light-yellow {
+  background-color: $light-yellow;
+  color: $white;
+}
+
 
 //Moved to KSS styles?
 .guide-colour-examples {
@@ -312,10 +456,13 @@ $badge-colour-success:          $green;
 }
 
 .guide-colour-block {
-  padding: 0.5em;  //Should be a var like $medium-spacing but _colours.scss doesn't inherit this var yet
-  .tab {
-    display: inline-block;
-    width: 20%;
+  padding: 0.5em 0.5em 0.5em 1em;  //Should be a var like $medium-spacing but _colours.scss doesn't inherit this var yet
+
+  .invert {
+    float: right;
+    padding: 0 0.5em;
+    border-radius: $base-border-radius;
+    font-weight: bold;
   }
 }
 
