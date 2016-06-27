@@ -1,15 +1,22 @@
 /*
+Navigation
+
+Navigation tells your users where they are, where they've been and where they can go.
+
+Style guide: Navigation
+*/
+
+/*
 Primary navigation
 
 A vertical navigation menu that fits three levels of items.
 
 Markup: templates/primary-navigation.hbs
 
-Style guide: Components.Navigation.Primary Navigation
+Style guide: Navigation.Primary Navigation
 */
 
 .primary-nav {
-  // scss-lint:disable SelectorDepth, NestingDepth
   .nav-heading {
     color: $darker-aqua;
     background: $lighter-grey;
@@ -111,7 +118,7 @@ A inline listing of pages that are broader than this one
 
 Markup: templates/breadcrumbs.hbs
 
-Style guide: Components.Navigation.Breadcrumbs
+Style guide: Navigation.Breadcrumbs
 */
 .breadcrumbs {
   @include outer-container(100%);
