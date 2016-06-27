@@ -128,11 +128,13 @@ Style guide: Components.Navigation.Breadcrumbs
       padding: 0;
     }
 
-    li:not(:last-child)::after {
-      content: '\f105';
-      padding-left: 0.95em; //accounts for inline-block whitespace bug
-      padding-right: 0.7em;
-      font-family: FontAwesome;
+    li:not(:last-child) {
+      margin-right: $small-spacing;
+      padding-right: $medium-spacing;
+      background-image: url($icon-arrow-r);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: $tiny-spacing auto;
       color: $grey;
     }
 
