@@ -1697,6 +1697,8 @@ Style guide: Navigation.Breadcrumbs
   @media screen and (max-width: 768px) {
     .breadcrumbs {
       display: none; } }
+  .wrapper .breadcrumbs {
+    max-width: auto; }
   .breadcrumbs ul {
     margin: 0;
     padding: 0.9em 0;
@@ -1766,6 +1768,9 @@ Style guide: Navigation.Breadcrumbs
   .jump-links li {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%; }
+
+.example {
+  margin: 1.8em 0; }
 
 pre {
   margin: 0 0 1.8em;
@@ -1853,5 +1858,5 @@ pre {
   .atv {
     color: #060; } }
 
-/* git version: 65ebfec1c8a97b803d554500f289d4e19d87165a */
-/* created at: Mon Jun 27 2016 16:44:54 GMT+1000 (AEST)*/
+/* git version: c116696deb5afd4eb177a3d0d26e0cdc219652e4 */
+/* created at: Mon Jun 27 2016 16:51:57 GMT+1000 (AEST)*/

@@ -9,6 +9,10 @@
   }
 }
 
+.example {
+  margin: $base-spacing 0;
+}
+
 pre {
   margin: 0 0 $base-spacing;
   padding: $small-spacing;
