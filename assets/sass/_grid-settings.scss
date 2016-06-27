@@ -3,15 +3,15 @@ Grid
 
 This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to create a consistent 16 column responsive grid layout with good defaults.
 
+Bourbon is a SaSS mixin library (it provides little, if any styling), while Neat is a flexible grid framework.
+
 Avoid mixing this layout with other grid layouts.
+
+<p class="callout"><strong>Grid classes?</strong> There are no non-semantic grid classes with which to set block elements. This is intentional. If you need to add to or customise the grid system see below.</p>
 
 The grid unit proportions, gutters and spacing are defined in `_grid-settings.scss`.
 
-If you need to reference just the grid, not the whole framework, use:
-
-```
-@import "grid-settings"
-```
+<hr />
 
 This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
@@ -56,7 +56,6 @@ If you give an element a modified grid setting consider the implications for all
 
 Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy) at different breakpoints.
 ```
-@import 'vendor/neat/neat-helpers';
 $desktop: new-breakpoint(max-width 1200px 12);
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
@@ -70,11 +69,11 @@ Layout
 
 Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar / side navigation.
 
-![Diagram of the layout across 12 columns](kss-assets/grid.png)
+![Diagram of the layout across 12 columns](../kss-builder/kss-assets/layout.png)
 
 The full 16 columns are used only when a sidebar element is introduced.
 
-![Diagram of the layout across 16 columns](kss-assets/grid-nav.png)
+![Diagram of the layout across 16 columns](../kss-builder/kss-assets/layout-nav.png)
 
 Style guide: Grid.4 Layout
 */
