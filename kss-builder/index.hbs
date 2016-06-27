@@ -37,7 +37,7 @@
   <script type='text/javascript'
           src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
   <![endif]-->
-  
+
 </head>
 <body>
 
@@ -52,6 +52,7 @@
       </div>
     </div>
   </section>
+  {{# if homepage}}
   <section class="hero">
     <div class="wrapper">
       <a href="/" class="site-title">{{options.title}}</a>
@@ -59,6 +60,7 @@
       <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
   </section>
+  {{/if}}
 </header>
 
 <main>
@@ -66,7 +68,7 @@
     <nav class="primary-nav" aria-label="main navigation">
       <ul>
         <li>
-          <a href="/">Overview</a>
+          <a href="/">Welcome</a>
         </li>
         {{#each menu}}
           <li>
