@@ -28,7 +28,7 @@ The framework is currently testing the open source [Open Sans font family](https
 
 - regular 400
 - regular 400 italic
-- regular bold
+- regular 600 bold
 
 The framework is likely to change to a different primary typeface. We are currently testing the use of webfonts generally.
 
@@ -44,16 +44,16 @@ $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream 
 
 Despite not having decided on a webfont the font stacks should achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
 
-Currently you will need to `link` to Work Sans via the HTML `head` to support Internet Explorer.
+Currently you will need to `link` to Open Sans via the HTML `head` to support Internet Explorer.
 
 ### Pairing style examples
-#### Work Sans regular 400
+#### Open Sans regular 400
 
 <p class="abstract">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
 1234567890(!@#s%g.,?:;)</p>
 
-#### Work Sans bold 400
+#### Open Sans bold 400
 
 <p class="abstract"><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
