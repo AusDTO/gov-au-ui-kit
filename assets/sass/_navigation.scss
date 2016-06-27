@@ -78,7 +78,8 @@ Style guide: Components.Navigation.Primary Navigation
 
     &:hover,
     &:active,
-    &.active {
+    &.active,
+    &.is-active {
       border-color: $border-contrast-colour;
       background-color: $background-contrast-colour;
     }

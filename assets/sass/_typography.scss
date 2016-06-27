@@ -125,6 +125,9 @@ $heading-font-weight: $bold-font-weight;
 // Font styles
 $base-font-style: normal;
 
+// Font sizes
+$small-font-size: 87.5%;
+
 html {
   color: $body-text-colour;
   line-height: $base-leading;
@@ -334,6 +337,14 @@ a {
     border-bottom-width: 3px;
   }
 
+}
+
+code,
+pre,
+samp,
+kbd {
+  font-family: $base-monospace;
+  font-size: $small-font-size;
 }
 
 /*
