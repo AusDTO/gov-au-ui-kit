@@ -55,13 +55,15 @@
 /*
 Buttons
 
-Use 1 button per page.
+Use 1 button per page. **WHY?**
 
 Buttons signal actions. Use them to move the user through a transaction.
 
-Use button text to describe what the button does. Keep it short.
+Use button text to describe what the button does&mdash;keep it short.
 
 The button alignment in [forms](section-forms.html) should put the primary action button at the left edge, in the user's line of sight.
+
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 Style guide: Buttons
 */
@@ -74,9 +76,8 @@ Call buttons using:
 - `<button>` element (for actions like submitting a form)
 - the `class` property of `a` elements (eg a link).
 
-There are 2 extra styles, in addition to the default:
+There are 2 extra styles, in addition to the default: **rewrite**
 
-- `.contrast` for distinct visual difference
 - `.secondary` for when there is a strong user need for a second button.
 
 Do not apply styles to disabled buttons.
@@ -84,14 +85,6 @@ Do not apply styles to disabled buttons.
 Markup: templates/buttons-examples.hbs
 
 Style guide: Buttons.1 Creating buttons
-*/
-
-/*
-Attribution
-
-This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
-
-Style guide: Buttons.2 Attribution
 */
 
 button,
