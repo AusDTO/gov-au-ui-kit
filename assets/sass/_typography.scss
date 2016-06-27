@@ -24,36 +24,36 @@ Style guide: Typography
 /*
 Typeface
 
-The framework is currently testing the open source [Lato font family](http://www.latofonts.com/) in 3 styles:
+The framework is currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
 
 - regular 400
-- italic 400
-- regular 700.
+- regular 400 italic
+- regular 600 bold
 
 The framework is likely to change to a different primary typeface. We are currently testing the use of webfonts generally.
 
-If we choose to use webfonts we provide optimisation.
+We aim to spend a spike in the future to properly test and optimise any usage of webfonts.
 
 ### Font stacks
 
 ```
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Lato', Geneva, Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-sans-serif: 'Open Sans', Geneva, Verdana, 'Bitstream Vera Sans', sans-serif;
 $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 ```
 
 Despite not having decided on a webfont the font stacks should achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
 
-Currently you will need to `link` to Lato via the HTML `head` to support Internet Explorer.
+Currently you will need to `link` to Open Sans via the HTML `head` to support Internet Explorer.
 
 ### Pairing style examples
-#### Lato regular
+#### Open Sans regular 400
 
 <p class="abstract">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
 1234567890(!@#s%g.,?:;)</p>
 
-#### Lato bold
+#### Open Sans bold 400
 
 <p class="abstract"><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
@@ -61,20 +61,19 @@ abcdefghijklmnopqrstuvwxyz<br />
 
 We will provide a full HTML test page showing all possible pairings.
 
-Style guide: Typography.1 Lato typeface
+Style guide: Typography.1 Open Sans typeface
 */
 
-@import url('https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext');
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Lato', Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
 $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 
 $base-font-family: $base-sans-serif;
 
-// Not actually sure if Lato 700 is being applied...
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /*
