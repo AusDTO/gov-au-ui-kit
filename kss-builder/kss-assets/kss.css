@@ -1520,6 +1520,18 @@ footer[role='contentinfo'] {
   footer[role='contentinfo'] nav li {
     list-style: none; }
 
+/*
+Forms
+
+Form elements and attributes in HTML5 provide a greater degree of semantic mark-up
+than HTML4 and remove a great deal of the need for tedious scripting and styling
+that was required in HTML4. The forms features in HTML5 provide a better experience
+for users by making forms more consistent across different web sites and giving
+immediate feedback to the user about data entry. They also provide this experience
+to users who have scripting disabled in their browser.
+
+Style guide: Forms
+*/
 form [type='text'],
 form [type='email'],
 form [type='password'], form textarea {
@@ -1545,51 +1557,51 @@ form [type='password'], form textarea {
 
 form {
   /*
-  Label
+Label
 
-  Used to tell the user what to enter into the field
+Used to tell the user what to enter into the field
 
-  Markup: <label>Enter your name</label>
+Markup: <label>Enter your name</label>
 
-  Style guide: Forms.Label
-  */
+Style guide: Forms.Label
+*/
   /*
-  Hint text
+Hint text
 
-  An optional extra descriptor for the input field
+An optional extra descriptor for the input field
 
-  Markup:
-  <span class="hint" id="name-hint">Your name is on your birth certificate</span>
-  <input type="text" id="name" aria-describedby="name-hint" />
+Markup:
+<span class="hint" id="name-hint">Your name is on your birth certificate</span>
+<input type="text" id="name" aria-describedby="name-hint" />
 
-  Style guide: Forms.HintText
-  */
+Style guide: Forms.HintText
+*/
   /*
-  Text input
+Text input
 
-  A single line text input
+A single line text input
 
-  Markup: <input type="text" />
+Markup: <input type="text" />
 
-  :focus - When a user has entered the field with the cursor or mouse
-  :invalid  - When a form is submitted with an invalid value
-  :disabled - When an input has the `disabled` attribute
+:focus - When a user has entered the field with the cursor or mouse
+:invalid  - When a form is submitted with an invalid value
+:disabled - When an input has the `disabled` attribute
 
-  Style guide: Forms.TextInput
-  */
+Style guide: Forms.TextInput
+*/
   /*
-  Textarea input
+Textarea input
 
-  A multi-line text input
+A multi-line text input
 
-  Markup: <textarea></textarea>
+Markup: <textarea></textarea>
 
-  :focus - When a user has entered the field with the cursor or mouse
-  :invalid  - When a form is submitted with an invalid value
-  :disabled - When an input has the `disabled` attribute
+:focus - When a user has entered the field with the cursor or mouse
+:invalid  - When a form is submitted with an invalid value
+:disabled - When an input has the `disabled` attribute
 
-  Style guide: Forms.TextAreaInput
-  */ }
+Style guide: Forms.TextAreaInput
+*/ }
   form fieldset,
   form p {
     margin: 0 0 1.35em 0;
@@ -1859,5 +1871,5 @@ code {
   .atv {
     color: #060; } }
 
-/* git version: 043be4cc2ba82beb5bb6d955e17eb04e1c237d19 */
-/* created at: Mon Jun 27 2016 17:20:08 GMT+1000 (AEST)*/
+/* git version: 2a499ae68330c9fa00c6f3c715d00033c6ee8c97 */
+/* created at: Mon Jun 27 2016 17:27:25 GMT+1000 (AEST)*/
