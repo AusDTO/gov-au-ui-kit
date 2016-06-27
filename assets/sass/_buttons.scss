@@ -1,3 +1,35 @@
+/*
+Buttons
+
+Buttons signal action&mdash;use them to move the user through a transaction.
+
+Use 1 button per page to build a strong call to action. Adding a second or third button forces users to make a choice. If choice is required use another kind of element eg radio button.
+
+Use button text to describe what the button does&mdash;keep it short.
+
+The button alignment in [forms](section-forms.html) should put the primary action button at the left edge, in the user's line of sight.
+
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+
+Style guide: Buttons
+*/
+
+/*
+Creating buttons
+
+Call buttons using:
+
+- `<button>` element (for actions like submitting a form)
+- the `class` property of `a` elements (eg a link).
+
+There is `.secondary` style for when there is a strong user need for a second button. Use this style when the second option is less important.
+
+Do not apply styles to disabled buttons.
+
+Markup: templates/buttons-examples.hbs
+
+Style guide: Buttons.1 Creating buttons
+*/
 
 %base-button {
   -webkit-appearance: none;
@@ -51,41 +83,6 @@
   }
 
 }
-
-/*
-Buttons
-
-Use 1 button per page. **WHY?**
-
-Buttons signal actions. Use them to move the user through a transaction.
-
-Use button text to describe what the button does&mdash;keep it short.
-
-The button alignment in [forms](section-forms.html) should put the primary action button at the left edge, in the user's line of sight.
-
-This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
-
-Style guide: Buttons
-*/
-
-/*
-Creating buttons
-
-Call buttons using:
-
-- `<button>` element (for actions like submitting a form)
-- the `class` property of `a` elements (eg a link).
-
-There are 2 extra styles, in addition to the default: **rewrite**
-
-- `.secondary` for when there is a strong user need for a second button.
-
-Do not apply styles to disabled buttons.
-
-Markup: templates/buttons-examples.hbs
-
-Style guide: Buttons.1 Creating buttons
-*/
 
 button,
 .button,
