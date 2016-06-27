@@ -6,7 +6,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url("https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -564,36 +564,36 @@ Style guide: Typography
 /*
 Typeface
 
-The framework is currently testing the open source [Lato font family](http://www.latofonts.com/) in 3 styles:
+The framework is currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
 
 - regular 400
-- italic 400
-- regular 700.
+- regular 400 italic
+- regular 600 bold
 
 The framework is likely to change to a different primary typeface. We are currently testing the use of webfonts generally.
 
-If we choose to use webfonts we provide optimisation.
+We aim to spend a spike in the future to properly test and optimise any usage of webfonts.
 
 ### Font stacks
 
 ```
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Lato', Geneva, Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
 $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 ```
 
 Despite not having decided on a webfont the font stacks should achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
 
-Currently you will need to `link` to Lato via the HTML `head` to support Internet Explorer.
+Currently you will need to `link` to Open Sans via the HTML `head` to support Internet Explorer.
 
 ### Pairing style examples
-#### Lato regular
+#### Open Sans regular 400
 
 <p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
 1234567890(!@#s%g.,?:;)</p>
 
-#### Lato bold
+#### Open Sans bold 400
 
 <p class='abstract'><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
@@ -601,10 +601,10 @@ abcdefghijklmnopqrstuvwxyz<br />
 
 We will provide a full HTML test page showing all possible pairings.
 
-Style guide: Typography.1 Lato typeface
+Style guide: Typography.1 Open Sans typeface
 */
 strong {
-  font-weight: 700; }
+  font-weight: 600; }
 
 /*
 Spacing
@@ -638,7 +638,7 @@ Style guide: Typography.3 Base spacing & spacing
 html {
   color: #000;
   line-height: 1.8;
-  font-family: "Lato", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   font-weight: 400; }
 
 /*
@@ -951,7 +951,7 @@ blockquote {
     border-top: 1px solid #cfcfcf; }
   blockquote cite {
     display: inline-block;
-    font-family: "Lato", Verdana, "Bitstream Vera Sans", sans-serif; }
+    font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif; }
     blockquote cite::before {
       content: 'Citation: ';
       text-transform: lowercase;
@@ -1186,7 +1186,7 @@ header[role='banner'] .govau--header {
     padding-bottom: 2px;
     border-bottom: none;
     color: #fff;
-    font-family: "Lato", Verdana, "Bitstream Vera Sans", sans-serif;
+    font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px; }
     header[role='banner'] .govau--header .logo:hover, header[role='banner'] .govau--header .logo:focus {
@@ -1442,7 +1442,7 @@ header[role='banner'] .govau--header {
     padding-bottom: 2px;
     border-bottom: none;
     color: #fff;
-    font-family: "Lato", Verdana, "Bitstream Vera Sans", sans-serif;
+    font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px; }
     header[role='banner'] .govau--header .logo:hover, header[role='banner'] .govau--header .logo:focus {
@@ -1603,13 +1603,20 @@ form {
     font-size: 0.875rem; }
 
 /*
+Navigation
+
+Navigation tells your users where they are, where they've been and where they can go.
+
+Style guide: Navigation
+*/
+/*
 Primary navigation
 
 A vertical navigation menu that fits three levels of items.
 
 Markup: templates/primary-navigation.hbs
 
-Style guide: Components.Navigation.Primary Navigation
+Style guide: Navigation.Primary Navigation
 */
 .primary-nav .nav-heading {
   color: #135c6c;
@@ -1634,7 +1641,7 @@ Style guide: Components.Navigation.Primary Navigation
         border-left: 1px solid #224a61; }
     .primary-nav ul ul ul a {
       padding-left: 2.7em;
-      background-image: url('data:image/svg+xml;utf8,<svg width="6px" height="8px" viewBox="665 531 6 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M669.941964,535.058036 L666.629464,538.370536 C666.572916,538.427084 666.505953,538.455357 666.428571,538.455357 C666.35119,538.455357 666.284226,538.427084 666.227679,538.370536 L665.486607,537.629464 C665.430059,537.572916 665.401786,537.505953 665.401786,537.428571 C665.401786,537.35119 665.430059,537.284226 665.486607,537.227679 L667.857143,534.857143 L665.486607,532.486607 C665.430059,532.430059 665.401786,532.363096 665.401786,532.285714 C665.401786,532.208333 665.430059,532.141369 665.486607,532.084821 L666.227679,531.34375 C666.284226,531.287202 666.35119,531.258929 666.428571,531.258929 C666.505953,531.258929 666.572916,531.287202 666.629464,531.34375 L669.941964,534.65625 C669.998512,534.712798 670.026786,534.779762 670.026786,534.857143 C670.026786,534.934524 669.998512,535.001488 669.941964,535.058036 L669.941964,535.058036 Z" stroke="none" fill-opacity="0.738337862" fill="#9B9B9B " fill-rule="evenodd"></path></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg width="6px" height="8px" viewBox="665 531 6 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M669.941964,535.058036 L666.629464,538.370536 C666.572916,538.427084 666.505953,538.455357 666.428571,538.455357 C666.35119,538.455357 666.284226,538.427084 666.227679,538.370536 L665.486607,537.629464 C665.430059,537.572916 665.401786,537.505953 665.401786,537.428571 C665.401786,537.35119 665.430059,537.284226 665.486607,537.227679 L667.857143,534.857143 L665.486607,532.486607 C665.430059,532.430059 665.401786,532.363096 665.401786,532.285714 C665.401786,532.208333 665.430059,532.141369 665.486607,532.084821 L666.227679,531.34375 C666.284226,531.287202 666.35119,531.258929 666.428571,531.258929 C666.505953,531.258929 666.572916,531.287202 666.629464,531.34375 L669.941964,534.65625 C669.998512,534.712798 670.026786,534.779762 670.026786,534.857143 C670.026786,534.934524 669.998512,535.001488 669.941964,535.058036 L669.941964,535.058036 Z" stroke="none" fill-opacity="0.738337862" fill="#707070" fill-rule="evenodd"></path></svg>');
       background-repeat: no-repeat;
       background-position: 1.8em 1.035em;
       background-size: 0.45em auto; }
@@ -1674,14 +1681,15 @@ A inline listing of pages that are broader than this one
 
 Markup: templates/breadcrumbs.hbs
 
-Style guide: Components.Navigation.Breadcrumbs
+Style guide: Navigation.Breadcrumbs
 */
 .breadcrumbs {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  color: #828282; }
   .breadcrumbs::after {
     clear: both;
     content: "";
@@ -1691,13 +1699,20 @@ Style guide: Components.Navigation.Breadcrumbs
       display: none; } }
   .breadcrumbs ul {
     margin: 0;
-    padding: 0.45em 0.9em;
+    padding: 0.9em 0;
     list-style: none; }
     .breadcrumbs ul li {
-      display: inline-block; }
-      .breadcrumbs ul li:not(:last-child)::after {
-        content: " »";
-        font-weight: bold; }
+      display: inline-block;
+      margin: 0;
+      padding: 0; }
+    .breadcrumbs ul li:not(:last-child) {
+      margin-right: 0.9em;
+      padding-right: 1.35em;
+      background-image: url('data:image/svg+xml;utf8,<svg width="6px" height="8px" viewBox="665 531 6 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M669.941964,535.058036 L666.629464,538.370536 C666.572916,538.427084 666.505953,538.455357 666.428571,538.455357 C666.35119,538.455357 666.284226,538.427084 666.227679,538.370536 L665.486607,537.629464 C665.430059,537.572916 665.401786,537.505953 665.401786,537.428571 C665.401786,537.35119 665.430059,537.284226 665.486607,537.227679 L667.857143,534.857143 L665.486607,532.486607 C665.430059,532.430059 665.401786,532.363096 665.401786,532.285714 C665.401786,532.208333 665.430059,532.141369 665.486607,532.084821 L666.227679,531.34375 C666.284226,531.287202 666.35119,531.258929 666.428571,531.258929 C666.505953,531.258929 666.572916,531.287202 666.629464,531.34375 L669.941964,534.65625 C669.998512,534.712798 670.026786,534.779762 670.026786,534.857143 C670.026786,534.934524 669.998512,535.001488 669.941964,535.058036 L669.941964,535.058036 Z" stroke="none" fill-opacity="0.738337862" fill="#707070" fill-rule="evenodd"></path></svg>');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 0.45em auto;
+      color: #828282; }
 
 @media print {
   *,
@@ -1838,5 +1853,5 @@ pre {
   .atv {
     color: #060; } }
 
-/* git version: ca08ffab1a5b889e13a66bcf49167dd613195ab3 */
-/* created at: Mon Jun 27 2016 16:17:38 GMT+1000 (AEST)*/
+/* git version: 65ebfec1c8a97b803d554500f289d4e19d87165a */
+/* created at: Mon Jun 27 2016 16:44:54 GMT+1000 (AEST)*/
