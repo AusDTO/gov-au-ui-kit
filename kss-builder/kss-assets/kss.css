@@ -1755,7 +1755,8 @@ Style guide: Components.Navigation.Breadcrumbs
 pre {
   margin: 0 0 1.8em;
   padding: 0.9em;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  color: #224a61; }
 
 /* Pretty printing styles. Used with prettify.js. */
 /* SPAN elements with the classes below are added by prettyprint. */
@@ -1837,5 +1838,5 @@ pre {
   .atv {
     color: #060; } }
 
-/* git version: 82b08048ac5089b1e4b060662a36d31f4ce15eab */
-/* created at: Mon Jun 27 2016 15:37:02 GMT+1000 (AEST)*/
+/* git version: ca08ffab1a5b889e13a66bcf49167dd613195ab3 */
+/* created at: Mon Jun 27 2016 16:17:38 GMT+1000 (AEST)*/
