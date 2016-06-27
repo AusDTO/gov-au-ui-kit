@@ -16,18 +16,32 @@ header {
 footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
-
-    margin-top: ($base-spacing * 2);
     @include pad(0 default);
+    margin-top: ($base-spacing * 2);
   }
 }
 
 main {
-  @include outer-container();
-  padding-top: $base-spacing;
+  @include outer-container;
 
   @include media($tablet) {
     @include pad($base-spacing default 0 default);
+  }
+
+  padding-top: $base-spacing;
+
+  // IE 8 "clearfix" from https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+  // HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/
+  // scss-lint:disable PseudoElement
+  &,
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
   }
 
   article {
@@ -49,19 +63,6 @@ main {
       @include span-columns(4 of 4);
     }
   }
-}
-
-// IE 8 "clearfix" from https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
-// HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/
-// scss-lint:disable PseudoElement
-main:before,
-main:after {
-  content: ' ';
-  display: table;
-}
-
-main:after {
-  clear: both;
 }
 
 .sidebar {

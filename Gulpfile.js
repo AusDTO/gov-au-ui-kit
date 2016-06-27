@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     kss = require('kss'),
-    scsslint = require('gulp-scss-lint'),
+    sassLint = require('gulp-sass-lint'),
     autoprefixer = require('gulp-autoprefixer'),
     gitVersion = require('gulp-gitversion'),
     scssMerge = require('./lib/gulp-scss-merge.js'),
@@ -14,6 +14,7 @@ var gulp = require('gulp'),
 
 var paths = {
     assetsDir: './assets/**/*.*',
+    scssDir: './assets/sass/**/*.scss',
     examplesDir: './examples/**/*.*',
     kssBuilderDir: './kss-builder/**/*.*',
     scss: './assets/sass/ui-kit.scss',
@@ -31,16 +32,14 @@ var options = {
 };
 
 gulp.task('lint', function () {
-    return gulp.src(['./assets/sass/**/*.scss', '!./assets/sass/vendor/**/*.scss'])
-        .pipe(scsslint({
-            'config': '.scss-lint.yml',
-            'reporterOutputFormat': 'Checkstyle',
-            'filePipeOutput': 'scssReport.xml'
+    return gulp.src([paths.scssDir, '!./assets/sass/vendor/**/*.scss'])
+        .pipe(sassLint({
+          configFile: '.sass-lint.yml'
         }))
         .pipe(gulp.dest(
             (typeof process.env.CIRCLE_TEST_REPORTS != 'undefined') ?
                 process.env.CIRCLE_TEST_REPORTS : paths.outputAssets))
-        .pipe(scsslint.failReporter('E'))
+        .pipe(sassLint.failOnError())
 });
 
 gulp.task('ui-kit', function () {

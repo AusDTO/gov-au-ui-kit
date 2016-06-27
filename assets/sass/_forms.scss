@@ -31,31 +31,31 @@ form {
     border: none;
   }
 
-/*
-Label
+  /*
+  Label
 
-Used to tell the user what to enter into the field
+  Used to tell the user what to enter into the field
 
-Markup: <label>Enter your name</label>
+  Markup: <label>Enter your name</label>
 
-Style guide: Forms.Label
-*/
+  Style guide: Forms.Label
+  */
 
   label {
     display: block;
   }
 
-/*
-Hint text
+  /*
+  Hint text
 
-An optional extra descriptor for the input field
+  An optional extra descriptor for the input field
 
-Markup:
-<span class="hint" id="name-hint">Your name is on your birth certificate</span>
-<input type="text" id="name" aria-describedby="name-hint" />
+  Markup:
+  <span class="hint" id="name-hint">Your name is on your birth certificate</span>
+  <input type="text" id="name" aria-describedby="name-hint" />
 
-Style guide: Forms.HintText
-*/
+  Style guide: Forms.HintText
+  */
 
   .hint {
     display: block;
@@ -63,19 +63,19 @@ Style guide: Forms.HintText
     font-size: rem(14);
   }
 
-/*
-Text input
+  /*
+  Text input
 
-A single line text input
+  A single line text input
 
-Markup: <input type="text" />
+  Markup: <input type="text" />
 
-:focus - When a user has entered the field with the cursor or mouse
-:invalid  - When a form is submitted with an invalid value
-:disabled - When an input has the `disabled` attribute
+  :focus - When a user has entered the field with the cursor or mouse
+  :invalid  - When a form is submitted with an invalid value
+  :disabled - When an input has the `disabled` attribute
 
-Style guide: Forms.TextInput
-*/
+  Style guide: Forms.TextInput
+  */
 
   [type='text'],
   [type='email'],
@@ -83,19 +83,19 @@ Style guide: Forms.TextInput
     @extend %base-text-input;
   }
 
-/*
-Textarea input
+  /*
+  Textarea input
 
-A multi-line text input
+  A multi-line text input
 
-Markup: <textarea></textarea>
+  Markup: <textarea></textarea>
 
-:focus - When a user has entered the field with the cursor or mouse
-:invalid  - When a form is submitted with an invalid value
-:disabled - When an input has the `disabled` attribute
+  :focus - When a user has entered the field with the cursor or mouse
+  :invalid  - When a form is submitted with an invalid value
+  :disabled - When an input has the `disabled` attribute
 
-Style guide: Forms.TextAreaInput
-*/
+  Style guide: Forms.TextAreaInput
+  */
 
   textarea {
     @extend %base-text-input;

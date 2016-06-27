@@ -29,8 +29,10 @@ Style guide: Components.Navigation.Primary Navigation
     ul {
       margin: 0;
 
-      li:last-child {
-        border-bottom: none;
+      li {
+        &:last-child {
+          border-bottom: none;
+        }
       }
 
       a {
@@ -84,16 +86,20 @@ Style guide: Components.Navigation.Primary Navigation
   }
 }
 
-.js .primary-nav ul {
-  @include media($tablet) {
-    margin: 0;
-    display: none;
+.js {
+  .primary-nav {
+    ul {
+      @include media($tablet) {
+        margin: 0;
+        display: none;
+      }
+    }
   }
-}
 
-.js .nav-heading {
-  @include media($tablet) {
-    display: block;
+  .nav-heading {
+    @include media($tablet) {
+      display: block;
+    }
   }
 }
 

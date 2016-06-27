@@ -34,17 +34,16 @@
   }
 
   &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active,
-  &[disabled]:focus,
-  &.disabled,
-  &.disabled:hover,
-  &.disabled:active,
-  &.disabled:focus {
-    cursor: not-allowed;
-    outline: none;
-    background-color: $button-colour--disabled;
-    color: $non-black;
+  &.disabled {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: not-allowed;
+      outline: none;
+      background-color: $button-colour--disabled;
+      color: $non-black;
+    }
   }
 
   @include media($tablet) {

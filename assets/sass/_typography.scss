@@ -49,13 +49,13 @@ Currently you will need to `link` to Open Sans via the HTML `head` to support In
 ### Pairing style examples
 #### Open Sans regular 400
 
-<p class="abstract">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
 1234567890(!@#s%g.,?:;)</p>
 
 #### Open Sans bold 400
 
-<p class="abstract"><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<p class='abstract'><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
 abcdefghijklmnopqrstuvwxyz<br />
 1234567890(!@#s%g.,?:;)</strong></p>
 
@@ -151,7 +151,7 @@ Use relative units to allow for variety across users' browsers and device screen
 
  This table shows size and line height (size/line-height) in pixels and ems.
 
-<table style="width:100%;">
+<table style='width:100%;'>
   <tr>
     <th>Style</th>
     <th>Mobile</th>
@@ -461,7 +461,7 @@ blockquote {
       font-weight: $base-font-weight;
     }
 
-// Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
+    // Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
 
     &::before,
     &::after {
@@ -539,7 +539,7 @@ cite {
   margin: $base-spacing $small-spacing;
   padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
   border-radius: $tiny-border-radius;
-  box-shadow: 0 0 8px rgba($black, 0.45);
+  box-shadow: 0 0 8px $light-grey;
 }
 
 .callout--warning {
@@ -554,21 +554,21 @@ Badges
 
 The framework provides styling for `badges` to indicate status:
 
-- <span class="badge--default">In-progress</span> using `<span class="badge--default">in-progress</span>`
-- <span class="badge--alpha">alpha</span> using `<span class="badge--alpha">alpha</span>`
-- <span class="badge--beta">beta</span> using `<span class="badge--beta">beta</span>`
-- <span class="badge--error">error</span> using `<span class="badge--error">error</span>`
-- <span class="badge--success">done</span> using `<span class="badge--success">done</span>`
+- <span class='badge--default'>In-progress</span> using `<span class='badge--default'>in-progress</span>`
+- <span class='badge--alpha'>alpha</span> using `<span class='badge--alpha'>alpha</span>`
+- <span class='badge--beta'>beta</span> using `<span class='badge--beta'>beta</span>`
+- <span class='badge--error'>error</span> using `<span class='badge--error'>error</span>`
+- <span class='badge--success'>done</span> using `<span class='badge--success'>done</span>`
 
 Style guide: Typography.4 Common content elements.5 Badges
 */
 
 $badges: (
-  "default":  $badge-colour-default,
-  "alpha":    $badge-colour-alpha,
-  "beta":     $badge-colour-beta,
-  "error":    $badge-colour-error,
-  "success":  $badge-colour-success,
+  'default':  $badge-colour-default,
+  'alpha':    $badge-colour-alpha,
+  'beta':     $badge-colour-beta,
+  'error':    $badge-colour-error,
+  'success':  $badge-colour-success,
 );
 
 @each $badge-type, $colour in $badges {

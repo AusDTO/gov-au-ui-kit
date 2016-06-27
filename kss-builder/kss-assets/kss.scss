@@ -23,16 +23,8 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 // ------------------------------------------------------------------------------
 
 .kss-style {
-  color: $kss-colors-foreground;
-  font-family: $kss-font-body;
-  font-size: $kss-font-size;
-  line-height: $kss-vertical-rhythm;
 
   a {
-    color: $kss-colors-link;
-    text-decoration: none;
-    transition-property: color;
-    transition-duration: 0.5s;
 
     &:visited { color: $kss-colors-link-visited; }
     &:hover,
