@@ -55,8 +55,12 @@
 /*
 Buttons
 
-Use buttons to move through a transaction. Aim to use only one button per
-page.
+The `button` element is a multipurpose element for representing buttons. Use buttons
+to move through a transaction. Aim to use only one button per page. Buttons were
+introduced into HTML as an alternative to inputs that are much easier to style.
+Unlike inputs, a button's label is determined by its content. This means you can
+nest elements within a button, such as images, paragraphs, or headers. Buttons
+can also contain ::before and ::after pseudo-elements.
 
 .contrast - Visually distinct from the default button style
 .secondary - When more than one button is needed
