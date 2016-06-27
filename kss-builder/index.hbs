@@ -39,7 +39,7 @@
   <![endif]-->
   
 </head>
-<body id="kss-node">
+<body>
 
 <header role="banner">
   <section class="govau--header">
@@ -76,7 +76,7 @@
                 <ul>
                   {{#each children}}
                     <li>
-                      <a href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>                   </a>
+                      <a href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
                     </li>
                   {{/each}}
                 </ul>
@@ -102,7 +102,7 @@
       the "#if @first" block as seen below.
     }}
 
-      <h1 name="#kssref-{{sections.0.header.referenceURI}}">{{sections.0.header}}</h1>
+      <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
       <h4>Jump to</h4>
       <ul class="jump-links">
         {{#each sections}}
@@ -117,7 +117,7 @@
 
           <div>
             {{#unless @first}}
-            <h{{depth}} name="#kssref-{{referenceURI}}">
+            <h{{depth}} id="#kssref-{{referenceURI}}">
               {{header}}
             </h{{depth}}>
             {{/unless}}
@@ -195,14 +195,9 @@
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
-<script src="kss-assets/scrollspy.js"></script>
 <script src="kss-assets/prettify.js"></script>
 <script>
   prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
 </script>
 {{{scripts}}}
 
