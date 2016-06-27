@@ -542,7 +542,9 @@ cite {
   box-shadow: 0 0 8px rgba($black, 0.45);
 }
 
-.warning-block {
+.callout--warning {
+  @extend .callout;
+
   border-left: ($small-spacing / 2) solid $red;
   padding-left: $base-spacing - ($small-spacing / 2);
 }
