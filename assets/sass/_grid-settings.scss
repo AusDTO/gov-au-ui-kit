@@ -19,20 +19,6 @@ Style guide: Grid
 */
 
 /*
-Layout
-
-Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar / side navigation.
-
-![Diagram of the layout across 12 columns](kss-assets/grid.png)
-
-The full 16 columns are used only when a sidebar element is introduced.
-
-![Diagram of the layout across 16 columns](kss-assets/grid-nav.png)
-
-Style guide: Grid.1 Layout
-*/
-
-/*
 Extending settings
 
 If you need an element not defined here you are probably not the only one&mdash;please [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues) so we can provide it for everyone.
@@ -80,6 +66,28 @@ Style guide: Grid.3 Breakpoints
 */
 
 /*
+Layout
+
+Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar / side navigation.
+
+![Diagram of the layout across 12 columns](kss-assets/grid.png)
+
+The full 16 columns are used only when a sidebar element is introduced.
+
+![Diagram of the layout across 16 columns](kss-assets/grid-nav.png)
+
+Style guide: Grid.4 Layout
+*/
+
+/*
+Wrapper class
+
+There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is currently used for the page `header` and `footer`.
+
+Style guide: Grid.5 Wrapper class
+*/
+
+/*
 Margins & gutters
 
 Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 20px.
@@ -90,9 +98,7 @@ $max-width: em(1200) !global;
 $gutter: em(20);
 ```
 
-There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is currently used for the page `header` and `footer`.
-
-Style guide: Grid.4 Margins & gutters
+Style guide: Grid.6 Margins & gutters
 */
 
 /*
@@ -100,7 +106,7 @@ Header & footer
 
 The site header and footer are targeted by their ARIA roles, not a `class` or `id`. Use `banner` and `contentinfo` roles, respectively.
 
-Style guide: Grid.5 Header & footer
+Style guide: Grid.7 Header & footer
 */
 
 /*
@@ -112,7 +118,7 @@ Long lines reduce legibility. Lines of text should be no longer than 75 characte
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 
-Style guide: Grid.6 Accessibility
+Style guide: Grid.8 Accessibility
 */
 
 /*
