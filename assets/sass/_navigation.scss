@@ -111,6 +111,7 @@ Style guide: Components.Navigation.Breadcrumbs
 
   margin-top: 0;
   background-color: $lighter-grey;
+  color: $grey;
 
   @include media($tablet) {
     display: none;
@@ -118,16 +119,23 @@ Style guide: Components.Navigation.Breadcrumbs
 
   ul {
     margin: 0;
-    padding: $tiny-spacing $small-spacing;
+    padding: $small-spacing 0;
     list-style: none;
 
     li {
       display: inline-block;
+      margin: 0;
+      padding: 0;
     }
 
-    li:not(:last-child)::after {
-      content: ' ' + entity('raquo');
-      font-weight: bold;
+    li:not(:last-child) {
+      margin-right: $small-spacing;
+      padding-right: $medium-spacing;
+      background-image: url($icon-arrow-r);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: $tiny-spacing auto;
+      color: $grey;
     }
 
   }
