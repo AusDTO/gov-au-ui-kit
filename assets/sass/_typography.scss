@@ -594,3 +594,8 @@ $badges: (
     font-size: rem(14);
   }
 }
+
+// Refactor into an images partial?
+img {
+  width: 100%;
+}
