@@ -1697,8 +1697,6 @@ Style guide: Navigation.Breadcrumbs
   @media screen and (max-width: 768px) {
     .breadcrumbs {
       display: none; } }
-  .wrapper .breadcrumbs {
-    max-width: auto; }
   .breadcrumbs ul {
     margin: 0;
     padding: 0.9em 0;
@@ -1776,6 +1774,9 @@ pre {
   margin: 0 0 1.8em;
   padding: 0.9em;
   background-color: whitesmoke;
+  color: #224a61; }
+
+code {
   color: #224a61; }
 
 /* Pretty printing styles. Used with prettify.js. */
@@ -1858,5 +1859,5 @@ pre {
   .atv {
     color: #060; } }
 
-/* git version: c116696deb5afd4eb177a3d0d26e0cdc219652e4 */
-/* created at: Mon Jun 27 2016 16:51:57 GMT+1000 (AEST)*/
+/* git version: 043be4cc2ba82beb5bb6d955e17eb04e1c237d19 */
+/* created at: Mon Jun 27 2016 17:20:08 GMT+1000 (AEST)*/
