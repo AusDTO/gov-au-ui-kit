@@ -34,7 +34,11 @@ The framework is likely to change to a different primary typeface. We are curren
 
 We aim to spend a spike in the future to properly test and optimise any usage of webfonts.
 
-### Font stacks
+Style guide: Typography.1 Typeface
+*/
+
+/*
+Font stacks
 
 ```
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
@@ -46,7 +50,12 @@ Despite not having decided on a webfont the font stacks should achieve a high de
 
 Currently you will need to `link` to Open Sans via the HTML `head` to support Internet Explorer.
 
-### Pairing style examples
+Style guide: Typography.1 Typeface.1 Font stacks
+*/
+
+/*
+Pairing style examples
+
 #### Open Sans regular 400
 
 <p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
@@ -61,79 +70,8 @@ abcdefghijklmnopqrstuvwxyz<br />
 
 We will provide a full HTML test page showing all possible pairings.
 
-Style guide: Typography.1 Open Sans typeface
+Style guide: Typography.1 Typeface.2 Pairing style examples
 */
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext');
-
-$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
-$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
-
-$base-font-family: $base-sans-serif;
-
-strong {
-  font-weight: 600;
-}
-
-/*
-Spacing
-
-Spacing is relative to the font sizes' `line-height` (leading).
-
-```
-$base-leading: 1.6;
-$base-heading-leading: 1.4;
-
-html {
-  color: $body-text-colour;
-  line-height: $base-leading;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
-}
-```
-
-The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `$base-spacing` unit is then set in ems (ie by * 1em).
-
-```
-$base-spacing: $base-leading * 1em;
-$medium-spacing: $base-spacing * 0.75;
-$small-spacing: $base-spacing / 2;
-```
-
-We are likely to change the `$base-spacing` unit to give a figure easier to multiply and divide.
-
-Style guide: Typography.3 Base spacing & spacing
-*/
-
-// Leading/line-height.
-$base-leading: 1.8;
-$base-heading-leading: 1.4;
-$small-leading: 1.2;
-
-// Base spacing, relative to leading.
-$base-spacing: $base-leading * 1em;
-$medium-spacing: $base-spacing * 0.75;
-$small-spacing: $base-spacing / 2;
-$tiny-spacing: $base-spacing / 4;
-
-// Font weights
-$base-font-weight: 400;
-$bold-font-weight: 700;
-$heading-font-weight: $bold-font-weight;
-
-// Font styles
-$base-font-style: normal;
-
-// Font sizes
-$small-font-size: 87.5%;
-
-html {
-  color: $body-text-colour;
-  line-height: $base-leading;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
-}
 
 /*
 Headings & body copy
@@ -147,6 +85,8 @@ They are initially based on a perfect fourth modular scale.
 - Mobile (extra small devices): 4 columns, 420px maximum
 - Tablet (small devices): 8 columns, 768px maximum
 - Desktop (medium devices): 12 columns, 1200px maximum
+
+You should think about this in parallel with the [grid breakpoints](grid-settings-2-screen-size). **FIX ANCHOR LINK**
 
 ### Font size & line heights default settings
 
@@ -211,6 +151,75 @@ Markup: templates/heading-body-styles.hbs
 
 Style guide: Typography.2 Headings & body copy
 */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext');
+
+$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
+$base-sans-serif: 'Lato', Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+
+$base-font-family: $base-sans-serif;
+
+// Not actually sure if Lato 700 is being applied...
+strong {
+  font-weight: 700;
+}
+
+/*
+Spacing
+
+Spacing is relative to the font sizes' `line-height` (leading).
+
+```
+$base-leading: 1.6;
+$base-heading-leading: 1.4;
+
+html {
+  color: $body-text-colour;
+  line-height: $base-leading;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+}
+```
+
+The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `$base-spacing` unit is then set in ems (ie by * 1em).
+
+```
+$base-spacing: $base-leading * 1em;
+$medium-spacing: $base-spacing * 0.75;
+$small-spacing: $base-spacing / 2;
+```
+
+We are likely to change the `$base-spacing` unit to give a figure easier to multiply and divide.
+
+Style guide: Typography.3 Spacing
+*/
+
+// Leading/line-height.
+$base-leading: 1.8;
+$base-heading-leading: 1.4;
+$small-leading: 1.2;
+
+// Base spacing, relative to leading.
+$base-spacing: $base-leading * 1em;
+$medium-spacing: $base-spacing * 0.75;
+$small-spacing: $base-spacing / 2;
+$tiny-spacing: $base-spacing / 4;
+
+// Font weights
+$base-font-weight: 400;
+$bold-font-weight: 700;
+$heading-font-weight: $bold-font-weight;
+
+// Font styles
+$base-font-style: normal;
+
+html {
+  color: $body-text-colour;
+  line-height: $base-leading;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+}
 
 h1,
 h2,
@@ -352,7 +361,7 @@ Horizontal & vertical rhythm
 
 Combinations of these elements have been tested to maintain vertical rhythm between content.
 
-Style guide: Typography.4 Common content elements
+Style guide: Typography.4 Horizontal & vertical rhythm
 */
 
 /*
@@ -565,11 +574,11 @@ Badges
 
 The framework provides styling for `badges` to indicate status:
 
-- <span class='badge--default'>In-progress</span> using `<span class='badge--default'>in-progress</span>`
-- <span class='badge--alpha'>alpha</span> using `<span class='badge--alpha'>alpha</span>`
-- <span class='badge--beta'>beta</span> using `<span class='badge--beta'>beta</span>`
-- <span class='badge--error'>error</span> using `<span class='badge--error'>error</span>`
-- <span class='badge--success'>done</span> using `<span class='badge--success'>done</span>`
+- <span class="badge--default">in-progress</span> using `<span class="badge--default">in-progress</span>`
+- <span class="badge--alpha">alpha</span> using `<span class="badge--alpha">alpha</span>`
+- <span class="badge--beta">beta</span> using `<span class="badge--beta">beta</span>`
+- <span class="badge--error">error</span> using `<span class="badge--error">error</span>`
+- <span class="badge--success">done</span> using `<span class="badge--success">done</span>`
 
 Style guide: Typography.4 Common content elements.5 Badges
 */
