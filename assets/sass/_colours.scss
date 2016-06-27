@@ -1,11 +1,21 @@
 /*
 Colours
 
-The basic palette of colours available in the gov-au-ui-kit framework.
+The framework provides a basic palette of colours that are clear and accessible.
 
-These colours are not finalised and may change.
+The colours are not finalised.
 
-The framework uses semantic names, including lighter and darker versions that are percentage variations of the original colours. The Sass variables are also provided below, for reference.
+If you need more guidance please [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues).
+
+Style guide: Colours
+*/
+
+/*
+Palatte
+
+The framework uses semantic names. This includes lighter and darker versions that are percentage variations of the original colours.
+
+The Sass variables are also provided below, for reference.
 
 <div class="guide-colour-examples">
   <div class="guide-colour">
@@ -81,8 +91,14 @@ The framework uses semantic names, including lighter and darker versions that ar
   </div>
 </div>
 
+Style guide: Colours.1 Palatte
+*/
 
-### Contextual colors
+/*
+Contextual colours palatte
+
+These colours are reserved to help show specific changes in status.
+
  <div class="guide-colour-examples">
 
   <div class="guide-colour">
@@ -110,17 +126,15 @@ The framework uses semantic names, including lighter and darker versions that ar
   </div>
 </div>
 
-If you need more guidance [contact us](index.html#contributing). <!-- fix anchor link once readme is approved -->
-
-Style guide: Colours
+Style guide: Colours.2 Contextual colours palatte
 */
 
 /*
 Colour contrast
 
-To make your content accessible the colour contrast ratio for text and interactive elements should be at least 4.5:1 as [recommended by the W3C](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+The colour contrast ratio for text and interactive elements should be at least 4.5:1 as [recommended by the W3C](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
 
-### Recommended accessible combinations
+### Accessible combinations
 <p class="guide-colour-block bg-black">white on black <span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-dark-grey">non-white on dark-grey<span class="invert">AAA</span></p>
@@ -141,32 +155,7 @@ To make your content accessible the colour contrast ratio for text and interacti
 <p class="guide-colour-block bg-success">white on success-green <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-green">success-green on light-green <span class="invert">AA</span></p>
 
-Style guide: Colours.1 Colour contrast
-*/
-
-/*
-Attribution
-
-Style guide: Colours.2 Attribution
-*/
-
-/*
-Last updated
-
-17 June 2016 <!-- can we automate this please -->
-
-### Sections to include
-
-- ~~Explanation of the thing~~
-- ~~Have a visual or live example / Show its code snippet: a basic HTML swatch palette to come~~  <!-- link to Sydney sketch files -->
-- ~~Have a feedback mechanism~~
-- ~~Include accessbility notes (if required)~~
-- ~~Include "last updated" blurb~~
-
-### Good keywords/headings
-~~colour contrast, sass variables, palatte~~
-
-Style guide: Colours.3 Last updated
+Style guide: Colours.3 Colour contrast
 */
 
 // Colour constants
