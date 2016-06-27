@@ -9,21 +9,25 @@ The grid unit proportions, gutters and spacing are defined in `_grid-settings.sc
 
 If you need to reference just the grid, not the whole framework, use:
 
-> ```
-> @import "grid-settings"
-> ```
+```
+@import "grid-settings"
+```
+
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 Style guide: Grid
 */
 
 /*
-Creating elements
+Extending grid settings
+
+**REWRITE THIS**
 
 If you need a new element [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues) so we can include it for everyone. <!-- fix anchor link once readme is approved -->
 
 For each new element you will need to manually set column properties, starting from the smallest breakpoint. <!-- is this correct? -->
 
-Style guide: Grid.1 Creating elements
+Style guide: Grid.1 Extending grid settings
 */
 
 /*
@@ -31,7 +35,9 @@ Debugging
 
 Turn on the visual grid to help debugging:
 
-> ``` $visual-grid: true; ```
+```
+$visual-grid: true;
+```
 
 See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/examples/).
 
@@ -48,9 +54,11 @@ Maximum page width is set to 16 columns centred, 1200px. Gutters between the col
 
 Properties are sized in ems to allow elements to cascade properly
 
-> `$grid-columns: 12 !global;` <br />
-> `$max-width: em(1200) !global;` <br />
-> `$gutter: em(20);`
+```
+$grid-columns: 12 !global;
+$max-width: em(1200) !global;
+$gutter: em(20);
+```
 
 The grid element column properties for block level elements (`header`, `footer`, `main`, `article`) are defined in `_block-elements.scss`.
 
@@ -122,11 +130,3 @@ $visual-grid: false;
 
 // Make sure you set the viewport to the device-width in your head, eg
 // <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-/*
-Attribution
-
-This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
-
-Style guide: Grid.6 Attribution
-*/
