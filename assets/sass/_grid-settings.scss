@@ -19,22 +19,40 @@ Style guide: Grid
 */
 
 /*
-Extending grid settings
+Layout
 
-**REWRITE THIS**
+Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar / side navigation.
 
-We define the grid placement for a number of elements in `_block-elements.scss`: `header`, `footer`, `main`, `article` and `aside`.
+![Diagram of the layout across 12 columns](kss-assets/grid.png)
 
-If you need to do something we don't provide you need to use `span-columns` function [provided by Neat](http://thoughtbot.github.io/neat-docs/latest/#span-columns).
+The full 16 columns are used only when a sidebar element is introduced.
 
-For each new element you will need to manually set column properties, from largest to smallest:
+![Diagram of the layout across 16 columns](kss-assets/grid-nav.png)
+
+Style guide: Grid.1 Layout
+*/
+
+/*
+Extending settings
+
+If you need an element not defined here you are probably not the only one&mdash;please [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues) so we can provide it for everyone.
+
+We define the grid placement for the following elements in `_block-elements.scss`:
+
+- `header`
+- `footer`
+- `main`
+- `article`
+- `aside`.
+
+To create your own element you will need to use the [Neat `span-columns` function](http://thoughtbot.github.io/neat-docs/latest/#span-columns).
+
+For each new element you will need to manually set column properties for the breakpoints, from largest to smallest:
 1. `$desktop`
 2. `$tablet`
 3. `$mobile`
 
-[Log an issue](https://github.com/AusDTO/gov-au-ui-kit/issues) if you need to do this. As there is probably a common need and we should provide this for everyone else.
-
-Style guide: Grid.1 Extending grid settings
+Style guide: Grid.2 Extending settings
 */
 
 /*
@@ -46,11 +64,11 @@ This framework uses 3 breakpoints for grid layout:
 - Tablet: 8 columns, 768px maximum
 - Desktop: 12 columns, 1200px maximum
 
-We are exploring using a fourth, wide desktop breakpoint.
+We are exploring using a fourth breakpoint: wide desktop.
 
-If you give an element a modified grid setting consider the implications for all breakpoints. The [Digital Service Standard recommends](https://www.dto.gov.au/standard/6-consistent-and-responsive/) you build using mobile first design principles. **IMPROVE LINK**
+If you give an element a modified grid setting consider the implications for all breakpoints. The Digital Service Standard recommends you [build using mobile first design principles](https://www.dto.gov.au/standard/6-consistent-and-responsive/).
 
-Please also consider [type sizing](section-typography.html#kssref-typography-2-headings-body-copy) at different breakpoints.
+Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy) at different breakpoints.
 ```
 @import 'vendor/neat/neat-helpers';
 $desktop: new-breakpoint(max-width 1200px 12);
@@ -58,7 +76,7 @@ $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
 ```
 
-Style guide: Grid.2 Breakpoints
+Style guide: Grid.3 Breakpoints
 */
 
 /*
@@ -74,20 +92,16 @@ $gutter: em(20);
 
 There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is currently used for the page `header` and `footer`.
 
-**Image example of layouts**
-
-Style guide: Grid.3 Margins & gutters
+Style guide: Grid.4 Margins & gutters
 */
 
 /*
 Header & footer
 
-The site header and footer are targeted by their ARIA roles, not a `class` or `id`.
+The site header and footer are targeted by their ARIA roles, not a `class` or `id`. Use `banner` and `contentinfo` roles, respectively.
 
-Use `banner` and `contentinfo` roles, respectively.
-
-Style guide: Grid.4 Page header & footer
-/*
+Style guide: Grid.5 Header & footer
+*/
 
 /*
 Accessibility
@@ -98,7 +112,7 @@ Long lines reduce legibility. Lines of text should be no longer than 75 characte
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 
-Style guide: Grid.5 Accessibility
+Style guide: Grid.6 Accessibility
 */
 
 /*
@@ -112,7 +126,7 @@ $visual-grid: true;
 
 See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/examples/).
 
-Style guide: Grid.6 Debugging
+Style guide: Grid.7 Debugging
 */
 
 $border-box-sizing: true;
