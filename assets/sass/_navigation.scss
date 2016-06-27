@@ -126,7 +126,7 @@ Style guide: Navigation.Breadcrumbs
   @include outer-container(100%);
 
   margin-top: 0;
-  background-color: $lighter-grey;
+  background-color: $non-white;
   color: $grey;
 
   @include media($tablet) {
