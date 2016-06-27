@@ -23,11 +23,82 @@ Extending grid settings
 
 **REWRITE THIS**
 
-If you need a new element [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues) so we can include it for everyone. <!-- fix anchor link once readme is approved -->
+We define the grid placement for a number of elements in `_block-elements.scss`: `header`, `footer`, `main`, `article` and `aside`.
 
-For each new element you will need to manually set column properties, starting from the smallest breakpoint. <!-- is this correct? -->
+If you need to do something we don't provide you need to use `span-columns` function [provided by Neat](http://thoughtbot.github.io/neat-docs/latest/#span-columns).
+
+For each new element you will need to manually set column properties, from largest to smallest:
+1. `$desktop`
+2. `$tablet`
+3. `$mobile`
+
+[Log an issue](https://github.com/AusDTO/gov-au-ui-kit/issues) if you need to do this. As there is probably a common need and we should provide this for everyone else.
 
 Style guide: Grid.1 Extending grid settings
+*/
+
+/*
+Breakpoints
+
+This framework uses 3 breakpoints for grid layout:
+
+- Mobile: 4 columns, 420px maximum
+- Tablet: 8 columns, 768px maximum
+- Desktop: 12 columns, 1200px maximum
+
+We are exploring using a fourth, wide desktop breakpoint.
+
+If you give an element a modified grid setting consider the implications for all breakpoints. The [Digital Service Standard recommends](https://www.dto.gov.au/standard/6-consistent-and-responsive/) you build using mobile first design principles. **IMPROVE LINK**
+
+Please also consider [type sizing](section-typography.html#kssref-typography-2-headings-body-copy) at different breakpoints.
+```
+@import 'vendor/neat/neat-helpers';
+$desktop: new-breakpoint(max-width 1200px 12);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 420px 4);
+```
+
+Style guide: Grid.2 Breakpoints
+*/
+
+/*
+Margins & gutters
+
+Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 20px.
+
+```
+$grid-columns: 12 !global;
+$max-width: em(1200) !global;
+$gutter: em(20);
+```
+
+There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is currently used for the page `header` and `footer`.
+
+**Image example of layouts**
+
+Style guide: Grid.3 Margins & gutters
+*/
+
+/*
+Header & footer
+
+The site header and footer are targeted by their ARIA roles, not a `class` or `id`.
+
+Use `banner` and `contentinfo` roles, respectively.
+
+Style guide: Grid.4 Page header & footer
+/*
+
+/*
+Accessibility
+
+Design for small screens first. Optimise for larger sizes, but do not assume you know which devices people are using.
+
+Long lines reduce legibility. Lines of text should be no longer than 75 characters. Place text in narrower grid boxes to stop text lines from becoming too wide.
+
+Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
+
+Style guide: Grid.5 Accessibility
 */
 
 /*
@@ -41,67 +112,11 @@ $visual-grid: true;
 
 See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/examples/).
 
-Style guide: Grid.2 Debugging
+Style guide: Grid.6 Debugging
 */
 
 $border-box-sizing: true;
 $disable-warnings: true;
-
-/*
-Spacing
-
-Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 20px.
-
-Properties are sized in ems to allow elements to cascade properly
-
-```
-$grid-columns: 12 !global;
-$max-width: em(1200) !global;
-$gutter: em(20);
-```
-
-The grid element column properties for block level elements (`header`, `footer`, `main`, `article`) are defined in `_block-elements.scss`.
-
-There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is reserved for the page header.
-
-Style guide: Grid.3 Spacing
-*/
-
-/*
-Breakpoints
-
-This framework uses 4 breakpoints for grid layout:
-
-- Mobile: 4 columns, 420px maximum
-- Tablet: 8 columns, 768px maximum
-- Desktop: 12 columns, 1000px maximum
-- Wide desktop: 16 columns, 1200px maximum
-
-Make sure you think about the number of columns used when resizing for small devices (eg see the [Bourbon Neat documentation](http://neat.bourbon.io/)). **IMPROVE THIS**
-
-These are different from the [typography breakpoints](section-typography.html#kssref-typography-2-headings-body-copy).
-
-```
-@import 'vendor/neat/neat-helpers';
-$desktop: new-breakpoint(max-width 1000px 12);
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 420px 4);
-```
-
-Style guide: Grid.4 Breakpoints
-*/
-
-/*
-Accessibility
-
-Design for small screens first. Optimise for larger sizes, but do not assume you know which devices people are using.
-
-Long lines reduce legibility. Lines of text should be no longer than 75 characters. Place text in narrower grid boxes to stop text lines from becoming too wide.
-
-Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
-
-Style guide: Grid.5 Accessibility
-*/
 
 $grid-columns: 12 !global;
 $max-width: em(1200) !global;
