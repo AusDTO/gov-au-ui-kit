@@ -66,20 +66,6 @@ We have automated the build, with a few additions:
 
 This is available as a shell script at `bin/cibuild.sh`.
 
-### Errors
-
-If you get `Fatal undefined` error, remember to set the Ruby version to 2.3.0. Most of us use rbenv:
-
-```
-$ rbenv local 2.3.0
-```
-
-or in rvm:
-
-```
-$ rvm use 2.3.0
-```
-
 ### Dependencies
 
 We use Bourbon 4.2.7. We include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
