@@ -11,7 +11,7 @@ Style guide: Colours
 */
 
 /*
-Palatte
+Palette
 
 The framework uses semantic names. This includes lighter and darker versions that are percentage variations of the original colours.
 
@@ -91,7 +91,7 @@ The Sass variables are also provided below, for reference.
   </div>
 </div>
 
-Style guide: Colours.1 Palatte
+Style guide: Colours.1 Palette
 */
 
 /*
@@ -126,7 +126,7 @@ These colours are reserved to help show specific changes in status.
   </div>
 </div>
 
-Style guide: Colours.2 Contextual colours palatte
+Style guide: Colours.2 Contextual colours palette
 */
 
 /*
@@ -161,7 +161,7 @@ Style guide: Colours.3 Colour contrast
 // Colour constants
 
 $black:         #000;
-$non-black:     #222222;
+$non-black:     #222;
 $grey:          #6e6e6e;
 $dark-grey:     darken($grey, 25%);
 $light-grey:    lighten($grey, 30%);
@@ -178,7 +178,7 @@ $navy:          #224a61;
 $dark-navy:     darken($navy, 10%);
 $light-navy:    #327da9; //lighten($navy, 30%); Changed for WCAG:AA
 
-$red:           #cc0000;
+$red:           #c00;
 $light-red:     #f9dede;
 
 $green:         #007554;
