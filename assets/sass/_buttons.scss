@@ -22,8 +22,6 @@ Call buttons using:
 - `<button>` element (for actions like submitting a form)
 - the `class` property of `a` elements (eg a link).
 
-There is `.secondary` style for when there is a strong user need for a second button. Use this style when the second option is less important.
-
 Do not apply styles to disabled buttons.
 
 Markup: templates/buttons-examples.hbs
@@ -89,29 +87,6 @@ button,
 [role='button'],
 [type='button'] {
   @extend %base-button;
-
-  &.contrast {
-    background-color: $button-contrast-colour;
-
-    &:focus {
-      outline-color: lighten($button-contrast-colour, 25%);
-    }
-
-    &:hover {
-      background-color: $button-contrast-colour--hover;
-    }
-
-    &:active {
-      background-color: $button-contrast-colour--active;
-    }
-
-  }
-
-  &.secondary {
-    background-color: transparent;
-    text-decoration: underline;
-    color: $link-colour;
-  }
 
   &.inverted {
     border: 1px solid;
