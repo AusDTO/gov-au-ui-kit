@@ -10,16 +10,22 @@
 }
 
 .guide-example {
+  border: solid 5px $non-white;
   margin: $base-spacing 0;
+  padding: $base-spacing;
+
+  :first-child {
+    margin-top: 0;
+  }
 }
 
 pre {
-  white-space: pre;
-  overflow: scroll;
-  margin: 0 0 $base-spacing;
-  padding: $small-spacing;
   background-color: $background-contrast-colour;
   color: $navy;
+  margin: 0 0 $base-spacing;
+  overflow: scroll;
+  padding: $small-spacing;
+  white-space: pre;
 }
 
 code {
@@ -269,102 +275,83 @@ code {
 // ------------------------------------------------------------------------------
 //   group prettyprint.js styling
 // ------------------------------------------------------------------------------
-/* Pretty printing styles. Used with prettify.js. */
-/* SPAN elements with the classes below are added by prettyprint. */
-.pln {
-  color: #000;
-}  /* plain text */
-
-.str {
-  color: #080;
-}  /* string content */
-
-.kwd {
-  color: #008;
-}  /* a keyword */
-
-.com {
-  color: #800;
-}  /* a comment */
-
-.typ {
-  color: #606;
-}  /* a type name */
+// Pretty printing styles. Used with prettify.js.
+// SPAN elements with the classes below are added by prettyprint.
 
 
-.lit {
-  color: #066;
-}  /* a literal value */
-
-.pun,
-.opn,
-.clo {
-  color: #660;
-} /* punctuation, lisp open bracket, lisp close bracket */
-
-.tag {
-  color: #008;
-}  /* a markup tag name */
-
-.atn {
-  color: #606;
-}  /* a markup attribute name */
-
-.atv {
-  color: #080;
-}  /* a markup attribute value */
-
-.dec,
-.var {
-  color: #606;
-}  /* a declaration; a variable name */
-
-.fun {
-  color: red;
-}  /* a function name */
-
-/* Use higher contrast and text-weight for printable form. */
+// Use higher contrast and text-weight for printable form.
 @media print, projection {
   .str {
-    color: #060;
+    color: $black;
   }
 
   .kwd {
-    color: #006;
+    color: $black;
     font-weight: bold;
   }
 
   .com {
-    color: #600;
+    color: $black;
     font-style: italic;
   }
 
   .typ {
-    color: #404;
+    color: $black;
     font-weight: bold;
   }
 
   .lit {
-    color: #044;
+    color: $black;
   }
 
   .pun,
   .opn,
   .clo {
-    color: #440;
+    color: $black;
   }
 
   .tag {
-    color: #006;
+    color: $black;
     font-weight: bold;
   }
 
   .atn {
-    color: #404;
+    color: $black;
   }
 
   .atv {
-    color: #060;
+    color: $black;
   }
 
+}
+
+
+// ------------------------------------------------------------------------------
+//   Guide Typography Page Styles
+// ------------------------------------------------------------------------------
+.guide--type-example {
+  background-color: $non-white;
+  border-radius: $base-border-radius;
+  color: $dark-aqua;
+  margin-bottom: $small-spacing;
+  padding: 2em;
+  overflow: auto;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.kss-section--depth-2 {
+  border-top: solid 1px $light-grey;
+  margin-top: $base-spacing * 2;
+  padding-top: $base-spacing * 2;
 }

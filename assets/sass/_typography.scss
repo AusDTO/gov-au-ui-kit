@@ -25,9 +25,21 @@ Typeface
 
 We are currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
 
-- regular 400
-- regular 400 italic
-- regular 600 bold
+<div class="guide--type-example"><h4>Open Sans regular 400</h4>
+  <p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890(!@#s%g.,?:;)</p>
+</div>
+<div class="guide--type-example"><h4>Open Sans regular 400 italic</h4>
+  <p class='abstract'><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890(!@#s%g.,?:;)</em></p>
+</div>
+<div class="guide--type-example"><h4>Open Sans bold 700</h4>
+  <p class='abstract'><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890(!@#s%g.,?:;)</strong></p>
+</div>
 
 The framework is likely to change to a different primary typeface. We are currently testing the use of webfonts generally.
 
@@ -70,16 +82,6 @@ abcdefghijklmnopqrstuvwxyz<br />
 We will provide a full HTML test page showing all possible pairings.
 
 Style guide: Typography.1 Typeface.2 Pairing style examples
-*/
-
-/*
-Headings & body copy
-
-The type sizes are designed for legibility and readability. We are currently testing this.
-
-They are initially based on a perfect fourth modular scale.
-
-Style guide: Typography.2 Headings & body copy
 */
 
 /*
@@ -230,6 +232,83 @@ html {
   font-weight: $base-font-weight;
 }
 
+/*
+Headings & body copy
+
+The type sizes are designed for legibility and readability. We are currently testing this.
+
+They are initially based on a perfect fourth modular scale.
+
+### Breakpoints
+
+- Mobile (extra small devices): 4 columns, 420px maximum
+- Tablet (small devices): 8 columns, 768px maximum
+- Desktop (medium devices): 12 columns, 1200px maximum
+
+### Font size & line heights default settings
+
+Use relative units to allow for variety across users' browsers and device screens.
+
+ This table shows size and line height (size/line-height) in pixels and ems.
+
+<table class="content-table">
+  <tr>
+    <th>Style</th>
+    <th>Mobile</th>
+    <th>Tablet</th>
+    <th>Desktop</th>
+  </tr>
+  <tr>
+    <td>h1 / .display </td>
+    <td>51 / 3.1875em</td>
+    <td>57 / 3.5625em<br></td>
+    <td>51 / 3.1875em</td>
+  </tr>
+  <tr>
+    <td>h2</td>
+    <td>43 / 2.6875em</td>
+    <td>43 / 2.6875em</td>
+    <td>38 / 2.375em</td>
+  </tr>
+  <tr>
+    <td>h3</td>
+    <td>28 / 1.75em</td>
+    <td>32 / 1.75em</td>
+    <td>28 / 1.75em</td>
+  </tr>
+  <tr>
+    <td>h4 / .abstract</td>
+    <td>21 / 1.3125em</td>
+    <td>24 / 1.5em</td>
+    <td>21 / 1.3125em</td>
+  </tr>
+  <tr>
+    <td>h5</td>
+    <td>18 / 1.125em</td>
+    <td>18 / 1.125em</td>
+    <td>16 / >1em</td>
+  </tr>
+  <tr>
+    <td>h6</td>
+    <td>18 / 1.125em</td>
+    <td>18 / 1.125em</td>
+    <td>16 / 1em</td>
+  </tr>
+  <tr>
+    <td>Body copy</td>
+    <td>18 / 1.125em</td>
+    <td>18 / 1.125em</td>
+    <td>16 / 1em</td>
+  </tr>
+</table>
+
+### Base size examples
+
+Markup: templates/heading-body-styles.hbs
+
+Style guide: Typography.2 Headings & body copy
+*/
+
 h1,
 h2,
 h3,
@@ -351,8 +430,9 @@ a {
 
   &:hover,
   &:active {
+    border-bottom-color: $aqua; //for non RGBA
+    border-bottom-color: transparentize($aqua, 0.5);
     color: $highlight-colour;
-    border-bottom-width: 3px;
   }
 
 }
@@ -619,5 +699,5 @@ $badges: (
 
 // Refactor into an images partial?
 img {
-  width: 100%;
+  max-width: 100%;
 }
