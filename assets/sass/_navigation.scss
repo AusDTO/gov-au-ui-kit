@@ -2,6 +2,8 @@
 Navigation
 
 Navigation tells your users where they are, where they've been and where they can go.
+The HTML <nav> element (HTML Navigation Element) represents a section of a page
+that links to other pages or to parts within the page: a section with navigation links.
 
 Style guide: Navigation
 */
@@ -115,6 +117,8 @@ Style guide: Navigation.Primary Navigation
 Breadcrumbs
 
 A inline listing of pages that are broader than this one
+
+Markup: templates/breadcrumbs.hbs
 
 Style guide: Navigation.Breadcrumbs
 */

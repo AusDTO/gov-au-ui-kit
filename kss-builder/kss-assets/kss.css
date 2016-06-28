@@ -1622,6 +1622,8 @@ Style guide: Forms.TextAreaInput
 Navigation
 
 Navigation tells your users where they are, where they've been and where they can go.
+The HTML <nav> element (HTML Navigation Element) represents a section of a page
+that links to other pages or to parts within the page: a section with navigation links.
 
 Style guide: Navigation
 */
@@ -1694,6 +1696,8 @@ Style guide: Navigation.Primary Navigation
 Breadcrumbs
 
 A inline listing of pages that are broader than this one
+
+Markup: templates/breadcrumbs.hbs
 
 Style guide: Navigation.Breadcrumbs
 */
@@ -1875,5 +1879,5 @@ code {
   .atv {
     color: #060; } }
 
-/* git version: 5701c829adbec3253a835638847682c6a55028d7 */
-/* created at: Tue Jun 28 2016 10:19:42 GMT+1000 (AEST)*/
+/* git version: 722b969a1d84f12d0281cde726f8b83769a7be71 */
+/* created at: Tue Jun 28 2016 10:24:58 GMT+1000 (AEST)*/
