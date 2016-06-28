@@ -129,7 +129,6 @@ gulp.task('htmlvalidate', ['examples','styleguide'], function (cb) {
 gulp.task('styleguide', ['styleguide.scss'], function () {
     return kss({
         source: 'assets/sass',
-        css: './latest/ui-kit.css',
         destination: paths.outputHTML,
         homepage: '../../README.md',
         builder: 'kss-builder'
