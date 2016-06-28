@@ -1,3 +1,33 @@
+/*
+Buttons
+
+Buttons signal action&mdash;use them to move the user through a transaction.
+
+Use 1 button per page to build a strong call to action. Adding a second or third button forces users to make a choice. If choice is required use another kind of element eg radio button.
+
+Use button text to describe what the button does&mdash;keep it short.
+
+The button alignment in [forms](section-forms.html) should put the primary action button at the left edge, in the user's line of sight.
+
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+
+Style guide: Buttons
+*/
+
+/*
+Creating buttons
+
+Call buttons using:
+
+- `<button>` element (for actions like submitting a form)`
+- the `role` property of `a` elements (eg an anchor link).
+
+Do not apply styles to disabled buttons.
+
+Markup: templates/buttons-examples.hbs
+
+Style guide: Buttons.1 Creating buttons
+*/
 
 %base-button {
   -webkit-appearance: none;
@@ -52,52 +82,11 @@
 
 }
 
-/*
-Buttons
-
-The `button` element is a multipurpose element for representing buttons. Use buttons
-to move through a transaction. Aim to use only one button per page. Buttons were
-introduced into HTML as an alternative to inputs that are much easier to style.
-Unlike inputs, a button's label is determined by its content. This means you can
-nest elements within a button, such as images, paragraphs, or headers. Buttons
-can also contain ::before and ::after pseudo-elements.
-
-.contrast - Visually distinct from the default button style
-.secondary - When more than one button is needed
-
-Markup: templates/buttons.hbs
-
-Style guide: Buttons and Links.Buttons
-*/
-
 button,
 .button,
 [role='button'],
 [type='button'] {
   @extend %base-button;
-
-  &.contrast {
-    background-color: $button-contrast-colour;
-
-    &:focus {
-      outline-color: lighten($button-contrast-colour, 25%);
-    }
-
-    &:hover {
-      background-color: $button-contrast-colour--hover;
-    }
-
-    &:active {
-      background-color: $button-contrast-colour--active;
-    }
-
-  }
-
-  &.secondary {
-    background-color: transparent;
-    text-decoration: underline;
-    color: $link-colour;
-  }
 
   &.inverted {
     border: 1px solid;
