@@ -23,7 +23,7 @@ Style guide: Typography
 /*
 Typeface
 
-The framework is currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
+We are currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
 
 - regular 400
 - regular 400 italic
@@ -163,17 +163,16 @@ Markup: templates/heading-body-styles.hbs
 Style guide: Typography.2 Headings & body copy.3 Base size examples
 */
 
-@import url('https://fonts.googleapis.com/css?family=Lato:700,400italic,400&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext');
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Lato', Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
 $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 
 $base-font-family: $base-sans-serif;
 
-// Not actually sure if Lato 700 is being applied...
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /*
