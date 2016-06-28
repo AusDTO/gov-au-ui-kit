@@ -19,8 +19,8 @@ Creating buttons
 
 Call buttons using:
 
-- `<button>` element (for actions like submitting a form)
-- the `class` property of `a` elements (eg a link).
+- `<button>` element (for actions like submitting a form)`
+- the `role` property of `a` elements (eg an anchor link).
 
 Do not apply styles to disabled buttons.
 
