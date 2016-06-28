@@ -25,17 +25,17 @@ Typeface
 
 We are currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
 
-<div class="guide_type-example"><h4>Open Sans regular 400</h4>
+<div class="guide--type-example"><h4>Open Sans regular 400</h4>
   <p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</p>
 </div>
-<div class="guide_type-example"><h4>Open Sans regular 400 italic</h4>
+<div class="guide--type-example"><h4>Open Sans regular 400 italic</h4>
   <p class='abstract'><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</em></p>
 </div>
-<div class="guide_type-example"><h4>Open Sans bold 400</h4>
+<div class="guide--type-example"><h4>Open Sans bold 400</h4>
   <p class='abstract'><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</strong></p>
@@ -440,8 +440,9 @@ a {
 
   &:hover,
   &:active {
+    border-bottom-color: $aqua; //for non RGBA
+    border-bottom-color: transparentize($aqua, 0.5);
     color: $highlight-colour;
-    border-bottom-width: 3px;
   }
 
 }
