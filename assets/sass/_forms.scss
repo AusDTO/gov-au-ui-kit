@@ -24,7 +24,7 @@ Style guide: Forms
   }
 
   &:focus {
-    outline: 2px solid $highlight-colour;
+    outline: 2px solid $focus-colour;
   }
 
   &:disabled {
