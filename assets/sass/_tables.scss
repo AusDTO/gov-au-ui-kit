@@ -1,0 +1,20 @@
+
+.content-table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr:nth-child(even) {
+    background-color: $non-white;
+  }
+
+  td,
+  th {
+    border-bottom: solid 1px $light-grey;
+    padding: $small-spacing;
+    text-align: left;
+  }
+
+  thead {
+    border-bottom: solid 2px $grey;
+  }
+}
