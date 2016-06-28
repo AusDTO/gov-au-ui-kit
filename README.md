@@ -47,10 +47,12 @@ You should use this with the [draft **Content Style Guide**](http://content-styl
 
 ## <a name="building"></a>Build the scss yourself
 
-Install system dependencies:
+We have a build process for the development of the framework which uses gulp on node.js.
+
+To build it yourself, begin by installing the system dependencies:
 - Node.js v5.0.0
 
-Install dependencies:
+Install node package dependencies:
 
 ```
 npm install
@@ -86,10 +88,10 @@ Some of the key libraries we use are:
 ## Make gov-au-ui-kit better
 
 - Create a new [**GitHub issue**](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues)
-- Contribute to this repository. You should understand the [*Contributor Code of Conduct*](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our *Conventions*](conventions.md), including [Block Element Modifier](http://getbem.com/), first
-- Contact us on slack in #govau-uikit.
+- Contribute to this repository. Please see the [**Contributor Code of Conduct**](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our code **Conventions**](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first
+- Contact us on slack in `#govau-uikit`.
 
-## Roadmap
+## Project goal
 
 This framework is in active development.
 
@@ -99,21 +101,25 @@ Goal: build a lean and frugal CSS/SCSS framework to make building GOV.AU easier.
 - allow for easier rapid prototyping directly in the browser
 - shouldn't get in the way of customised design needs.
 
-**Releases:** see [RELEASING.md](RELEASING.md) and [CHANGELOG.md](CHANGELOG.md)
+### Releases
+
+See [RELEASING.md](RELEASING.md) and [CHANGELOG.md](CHANGELOG.md).
 
 We aim to provide stable, usable releases at the end of each sprint.
 
+### Deprecation
+
 We are wary about breaking changes. We will work to ensure we will gracefully deprecate any changes that cause things to break.
 
-We may create an installer wrapper, or release via git submodules.
+### Installer/wrapper
 
-We have a build process for the development of the framework which uses gulp on node.js (see [Build the scss yourself](#building))
+We may create an installer wrapper (likely node-based), or release via git submodules.
 
 ## Milestones
 
 ### 1st general goal
 
-Meet the general look and feel of the gov.au alpha.
+Meet the general look and feel of the [gov.au alpha](http://gov.au/alpha), with room for some improvements.
 
 This will allow us to establish the basics of the framework while meeting a relatively easily met static target.
 
