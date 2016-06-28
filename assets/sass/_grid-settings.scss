@@ -130,6 +130,8 @@ See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/exampl
 Style guide: Grid.7 Debugging
 */
 
+$visual-grid: false;
+
 $border-box-sizing: true;
 $disable-warnings: true;
 
@@ -142,21 +144,6 @@ $gutter: em(20);
 $desktop: new-breakpoint(max-width $max-width 12);
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
-
-/*
-Debugging
-
-Turn on the visual grid to help debugging.
-
-```
-$visual-grid: true;
-```
-
-Style guide: Grid settings.3 Debugging
-*/
-
-// Toggle visibility of your grid columns for development/debugging.
-$visual-grid: false;
 
 // Make sure you set the viewport to the device-width in your head, eg
 // <meta name="viewport" content="width=device-width, initial-scale=1.0">
