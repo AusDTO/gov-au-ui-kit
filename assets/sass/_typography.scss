@@ -171,10 +171,6 @@ $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream 
 
 $base-font-family: $base-sans-serif;
 
-strong {
-  font-weight: 600;
-}
-
 /*
 Spacing
 
@@ -218,7 +214,7 @@ $tiny-spacing: $base-spacing / 4;
 
 // Font weights
 $base-font-weight: 400;
-$bold-font-weight: 700;
+$bold-font-weight: 600;
 $heading-font-weight: $bold-font-weight;
 
 // Font styles
@@ -366,6 +362,10 @@ kbd {
   font-size: $small-font-size;
 }
 
+strong {
+  font-weight: 600;
+}
+
 /*
 Horizontal & vertical rhythm
 
@@ -464,7 +464,7 @@ li {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: $bold-font-weight;
   margin-top: $medium-spacing;
 
   &:first-of-type {
