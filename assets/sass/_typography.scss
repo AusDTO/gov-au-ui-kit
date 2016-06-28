@@ -430,8 +430,7 @@ a {
 
   &:hover,
   &:active {
-    border-bottom-color: $aqua; //for non RGBA
-    border-bottom-color: transparentize($aqua, 0.5);
+    border-bottom-color: lighten($highlight-colour, 20%);
     color: $highlight-colour;
   }
 
