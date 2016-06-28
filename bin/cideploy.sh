@@ -4,5 +4,4 @@
 set -e
 # Output the commands we run
 set -x
-
-cf push gov-au-ui-kit -b staticfile_buildpack -p ./build -i 1
+cf push gov-au-ui-kit$1 -b staticfile_buildpack -p ./build -i 1
