@@ -36,7 +36,7 @@ var options = {
 };
 
 gulp.task('lint', function () {
-    return gulp.src([paths.scssDir, '!./assets/sass/vendor/**/*.scss'])
+    return gulp.src([paths.scssDir, paths.kssScssDir, '!./assets/sass/vendor/**/*.scss'])
         .pipe(sassLint({
           configFile: '.sass-lint.yml'
         }))
