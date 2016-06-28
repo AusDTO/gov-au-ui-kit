@@ -1343,8 +1343,12 @@ button, header[role='banner'] .govau--header .button--feedback,
 /*
 Buttons
 
-Use buttons to move through a transaction. Aim to use only one button per
-page.
+The `button` element is a multipurpose element for representing buttons. Use buttons
+to move through a transaction. Aim to use only one button per page. Buttons were
+introduced into HTML as an alternative to inputs that are much easier to style.
+Unlike inputs, a button's label is determined by its content. This means you can
+nest elements within a button, such as images, paragraphs, or headers. Buttons
+can also contain ::before and ::after pseudo-elements.
 
 .contrast - Visually distinct from the default button style
 .secondary - When more than one button is needed
@@ -1691,8 +1695,6 @@ Breadcrumbs
 
 A inline listing of pages that are broader than this one
 
-Markup: templates/breadcrumbs.hbs
-
 Style guide: Navigation.Breadcrumbs
 */
 .breadcrumbs {
@@ -1770,19 +1772,21 @@ Style guide: Navigation.Breadcrumbs
   header[role='banner'] .govau--header .logo {
     page-break-after: avoid; } }
 
-.jump-links {
+.guide-jump-links {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  .jump-links li {
+  .guide-jump-links li {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%; }
 
-.example {
+.guide-example {
   margin: 1.8em 0; }
 
 pre {
+  white-space: pre;
+  overflow: scroll;
   margin: 0 0 1.8em;
   padding: 0.9em;
   background-color: whitesmoke;
@@ -1871,5 +1875,5 @@ code {
   .atv {
     color: #060; } }
 
-/* git version: 2a499ae68330c9fa00c6f3c715d00033c6ee8c97 */
-/* created at: Mon Jun 27 2016 17:27:25 GMT+1000 (AEST)*/
+/* git version: 5701c829adbec3253a835638847682c6a55028d7 */
+/* created at: Tue Jun 28 2016 10:19:42 GMT+1000 (AEST)*/

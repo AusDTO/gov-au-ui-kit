@@ -1,6 +1,6 @@
 @import './../../assets/sass/ui-kit';
 
-.jump-links {
+.guide-jump-links {
   display: flex;
   flex-wrap: wrap;
 
@@ -9,11 +9,16 @@
   }
 }
 
-.example {
+.guide-section {
+}
+
+.guide-example {
   margin: $base-spacing 0;
 }
 
 pre {
+  white-space: pre;
+  overflow: scroll;
   margin: 0 0 $base-spacing;
   padding: $small-spacing;
   background-color: $background-contrast-colour;

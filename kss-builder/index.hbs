@@ -106,7 +106,7 @@
 
       <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
       <h4>Jump to</h4>
-      <ul class="jump-links">
+      <ul class="guide-jump-links">
         {{#each sections}}
           {{#unless @first}}
           <li><a href="#kssref-{{referenceURI}}">{{header}}</a></li>
@@ -115,7 +115,7 @@
       </ul>
       {{#each sections}}
         <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
-                                                 class="kss-section kss-section--depth-{{depth}}">
+                                                 class="guide-section kss-section--depth-{{depth}}">
 
           <div>
             {{#unless @first}}
@@ -162,7 +162,7 @@
                 </div>
               {{/if}}
 
-              <div class="example">
+              <div class="guide-example">
                 {{{example}}}
               </div>
 
