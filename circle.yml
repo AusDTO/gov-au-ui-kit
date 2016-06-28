@@ -19,4 +19,8 @@ deployment:
   development:
     branch: develop
     commands:
+      - ./bin/cideploy.sh -staging
+  prod:
+    branch: master
+    commands:
       - ./bin/cideploy.sh
