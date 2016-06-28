@@ -55,7 +55,7 @@ Style guide: Colours.3 Last updated
 // Colour constants
 
 $black:         #000;
-$non-black:     #222222;
+$non-black:     #222;
 $grey:          #828282;
 $dark-grey:     darken($grey, 25%);
 $light-grey:    lighten($grey, 30%);
@@ -72,7 +72,7 @@ $navy:          #224a61;
 $dark-navy:     darken($navy, 10%);
 $light-navy:    lighten($navy, 30%);
 
-$red:           #cc0000;
+$red:           #c00;
 
 $light-green:   #e6efc2;
 $green:         darken($light-green, 55%);

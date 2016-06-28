@@ -34,11 +34,11 @@ The grid element column properties for block level elements (`header`, `footer`,
 
 There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is reserved for the page header.
 
-> `$grid-columns: 12 !global;`
->
-> `$max-width: em(1200) !global;`
->
-> `$gutter: em(20);`
+```
+$grid-columns: 12 !global;
+$max-width: em(1200) !global;
+$gutter: em(20);
+```
 
 Style guide: Grid settings.1 Spacing
 */
@@ -72,13 +72,13 @@ This framework uses 3 breakpoints:
 
 Make sure you think about the number of columns used when resizing for small devices (eg see the [Bourbon Neat documentation](http://neat.bourbon.io/)). <!-- is this correct? -->
 
-> ` @import 'vendor/neat/neat-helpers'; `
+```
+@import 'vendor/neat/neat-helpers';
 
-> ` $desktop: new-breakpoint(max-width 1000px 12); `
-
-> ` $tablet: new-breakpoint(max-width 768px 8); `
-
-> ` $mobile: new-breakpoint(max-width 420px 4); `
+$desktop: new-breakpoint(max-width 1000px 12);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 420px 4);
+```
 
 Style guide: Grid settings.2 Screen size
 */
@@ -94,7 +94,9 @@ Debugging
 
 Turn on the visual grid to help debugging.
 
-``` $visual-grid: true; ```
+```
+$visual-grid: true;
+```
 
 Style guide: Grid settings.3 Debugging
 */

@@ -6,7 +6,13 @@
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+  (function (h) {
+    h.className = h.className.replace('no-js', 'js')
+  })(document.documentElement)
+  </script>
 
   <link rel="stylesheet" href="kss-assets/kss.css">
   {{{styles}}}
@@ -31,9 +37,9 @@
   <script type='text/javascript'
           src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
   <![endif]-->
-  
+
 </head>
-<body id="kss-node">
+<body>
 
 <header role="banner">
   <section class="govau--header">
@@ -46,13 +52,15 @@
       </div>
     </div>
   </section>
+  {{# if homepage}}
   <section class="hero">
     <div class="wrapper">
-      <a href="#" class="site-title">{{options.title}}</a>
+      <a href="/" class="site-title">{{options.title}}</a>
       <p class="tagline">A living style guide of the ui-kit, built using KSS.</p>
       <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
   </section>
+  {{/if}}
 </header>
 
 <main>
@@ -60,24 +68,17 @@
     <nav class="primary-nav" aria-label="main navigation">
       <ul>
         <li>
-          <a href="./">
-            <span class="kss-nav__ref">0</span><span class="kss-nav__name">Overview</span>
-          </a>
+          <a href="/">Welcome</a>
         </li>
         {{#each menu}}
           <li>
-            <a href="section-{{referenceURI}}.html">
-              <span class="kss-nav__ref">{{referenceNumber}}</span><span class="kss-nav__name">{{header}}</span>
-            </a>
+            <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active"{{/if}}>{{header}}</a>
             {{#if isActive}}
               {{#if children}}
                 <ul>
                   {{#each children}}
                     <li>
-                      <a href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
-                  <span class="kss-nav__ref {{#if isGrandChild}}kss-nav__ref-child{{/if}}">{{referenceNumber}}</span
-                  ><span class="kss-nav__name">{{header}}</span>
-                      </a>
+                      <a href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
                     </li>
                   {{/each}}
                 </ul>
@@ -102,26 +103,26 @@
       The "root" element comes first in this loop, and can be detected using
       the "#if @first" block as seen below.
     }}
+
+      <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
+      <h4>Jump to</h4>
+      <ul class="guide-jump-links">
+        {{#each sections}}
+          {{#unless @first}}
+          <li><a href="#kssref-{{referenceURI}}">{{header}}</a></li>
+          {{/unless}}
+        {{/each}}
+      </ul>
       {{#each sections}}
         <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
-                                                 class="kss-section kss-section--depth-{{depth}}">
+                                                 class="guide-section kss-section--depth-{{depth}}">
 
           <div>
-            <h{{depth}}>
-              <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
-            <span class="kss-title__ref">
-              {{referenceNumber}}
-              <span class="kss-title__permalink-hash">
-                {{#if @root.hasNumericReferences}}
-                  #permalink
-                {{else}}
-                  #{{reference}}
-                {{/if}}
-              </span>
-            </span>
-                {{header}}
-              </a>
+            {{#unless @first}}
+            <h{{depth}} id="#kssref-{{referenceURI}}">
+              {{header}}
             </h{{depth}}>
+            {{/unless}}
 
             {{#if description}}
               <div class="kss-description">
@@ -161,7 +162,7 @@
                 </div>
               {{/if}}
 
-              <div class="kss-modifier__example">
+              <div class="guide-example">
                 {{{example}}}
               </div>
 
@@ -172,15 +173,13 @@
                 <div class="kss-modifier__description">
                   {{{description}}}
                 </div>
-                <div class="kss-modifier__example">
+                <div class="example">
                   {{{markup}}}
                 </div>
               {{/each}}
             </div>
             {{#if example}}
-              <div class="kss-markup">
-                <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
-              </div>
+              <pre class="prettyprint lang-html"><code data-language="html">{{markup}}</code></pre>
             {{/if}}
           {{/if}}
 
@@ -198,14 +197,9 @@
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
-<script src="kss-assets/scrollspy.js"></script>
 <script src="kss-assets/prettify.js"></script>
 <script>
   prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
 </script>
 {{{scripts}}}
 

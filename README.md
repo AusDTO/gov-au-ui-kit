@@ -42,41 +42,29 @@ You should use this with the [draft Content Style Guide](http://content-style-gu
 
 ## <a name="building"></a>Build the scss yourself
 
+Install system dependencies:
+- Node.js v5.0.0
+
 Install dependencies:
 
 ```
-gem install scss_lint scss_lint_reporter_checkstyle
-brew install npm
 npm install
-npm install -g gulp
 ```
 
-Run it:
+Run a build:
 
 ```
 gulp
 ```
 
-We have automated this, with a few additions:
+The style guide can now be found at `./build/index.html`
 
-- `scss-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software))
+We have automated the build, with a few additions:
+
+- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software))
 - `kss-node` for auto-building a living style guide: http://warpspire.com/kss/
 
 This is available as a shell script at `bin/cibuild.sh`.
-
-### Errors
-
-If you get `Fatal undefined` error, remember to set the Ruby version to 2.3.0. Most of us use rbenv:
-
-```
-$ rbenv local 2.3.0
-```
-
-or in rvm:
-
-```
-$ rvm use 2.3.0
-```
 
 ### Dependencies
 

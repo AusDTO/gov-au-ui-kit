@@ -24,6 +24,9 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+# Compiled Guide CSS
+kss-builder/kss-assets/kss.css
+
 # Dependency directories
 node_modules
 jspm_packages

@@ -1,15 +1,24 @@
 /*
+Navigation
+
+Navigation tells your users where they are, where they've been and where they can go.
+The HTML `<nav>` element (HTML Navigation Element) represents a section of a page
+that links to other pages or to parts within the page: a section with navigation links.
+
+Style guide: Navigation
+*/
+
+/*
 Primary navigation
 
 A vertical navigation menu that fits three levels of items.
 
 Markup: templates/primary-navigation.hbs
 
-Style guide: Components.Navigation.Primary Navigation
+Style guide: Navigation.Primary Navigation
 */
 
 .primary-nav {
-  // scss-lint:disable SelectorDepth, NestingDepth
   .nav-heading {
     color: $darker-aqua;
     background: $lighter-grey;
@@ -29,8 +38,10 @@ Style guide: Components.Navigation.Primary Navigation
     ul {
       margin: 0;
 
-      li:last-child {
-        border-bottom: none;
+      li {
+        &:last-child {
+          border-bottom: none;
+        }
       }
 
       a {
@@ -76,7 +87,8 @@ Style guide: Components.Navigation.Primary Navigation
 
     &:hover,
     &:active,
-    &.active {
+    &.active,
+    &.is-active {
       border-color: $border-contrast-colour;
       background-color: $background-contrast-colour;
     }
@@ -84,16 +96,20 @@ Style guide: Components.Navigation.Primary Navigation
   }
 }
 
-.js .primary-nav ul {
-  @include media($tablet) {
-    margin: 0;
-    display: none;
+.js {
+  .primary-nav {
+    ul {
+      @include media($tablet) {
+        margin: 0;
+        display: none;
+      }
+    }
   }
-}
 
-.js .nav-heading {
-  @include media($tablet) {
-    display: block;
+  .nav-heading {
+    @include media($tablet) {
+      display: block;
+    }
   }
 }
 
@@ -104,7 +120,7 @@ A inline listing of pages that are broader than this one
 
 Markup: templates/breadcrumbs.hbs
 
-Style guide: Components.Navigation.Breadcrumbs
+Style guide: Navigation.Breadcrumbs
 */
 .breadcrumbs {
   @include outer-container(100%);
