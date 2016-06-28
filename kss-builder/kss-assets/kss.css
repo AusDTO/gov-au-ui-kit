@@ -970,13 +970,13 @@ q {
 cite {
   font-style: normal; }
 
-.callout {
+.callout, .callout--warning {
   margin: 1.8em 0.9em;
   padding: 1.35em 1.35em 1.35em 1.8em;
   border-radius: 1px;
   box-shadow: 0 0 8px #cfcfcf; }
 
-.warning-block {
+.callout--warning {
   border-left: 0.45em solid #c00;
   padding-left: 1.35em; }
 
@@ -1541,7 +1541,7 @@ form [type='email'],
 form [type='password'], form textarea {
   width: 100%;
   outline-offset: 0;
-  border: 1px solid #cfcfcf;
+  border: 2px solid #cfcfcf;
   border-radius: 0;
   background-color: #fff;
   padding: 0.45em; }
@@ -1622,7 +1622,7 @@ Style guide: Forms.TextAreaInput
 Navigation
 
 Navigation tells your users where they are, where they've been and where they can go.
-The HTML <nav> element (HTML Navigation Element) represents a section of a page
+The HTML `<nav>` element (HTML Navigation Element) represents a section of a page
 that links to other pages or to parts within the page: a section with navigation links.
 
 Style guide: Navigation
@@ -1879,5 +1879,5 @@ code {
   .atv {
     color: #060; } }
 
-/* git version: 722b969a1d84f12d0281cde726f8b83769a7be71 */
-/* created at: Tue Jun 28 2016 10:24:58 GMT+1000 (AEST)*/
+/* git version: 919d77175a1eeea515cdbf7a67179ef26aab6b17 */
+/* created at: Tue Jun 28 2016 10:32:05 GMT+1000 (AEST)*/

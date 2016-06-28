@@ -40,9 +40,7 @@ gulp.task('lint', function () {
         .pipe(sassLint({
           configFile: '.sass-lint.yml'
         }))
-        .pipe(gulp.dest(
-            (typeof process.env.CIRCLE_TEST_REPORTS !== 'undefined') ?
-                process.env.CIRCLE_TEST_REPORTS : paths.outputAssets))
+        .pipe(sassLint.format())
         .pipe(sassLint.failOnError());
 });
 
