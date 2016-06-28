@@ -15,10 +15,9 @@
   </script>
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  {{{styles}}}
 
   <!--[if (gte IE 9) | (!IE)]>-->
-  <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
+  <script src="http://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
           crossorigin="anonymous"></script>
   <!--<![endif]-->
   <!--[if lt IE 9]>
@@ -66,7 +65,9 @@
 <main>
   <aside class="sidebar">
     <nav class="primary-nav" aria-label="main navigation">
-      <ul>
+      <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
+      aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
+      <ul id="primary-nav-panel" aria-labelledby="primary-nav-heading">
         <li>
           <a href="/">Welcome</a>
         </li>
@@ -193,21 +194,19 @@
   </article>
 </main>
 
-<!-- SCRIPTS -->
-<script src="kss-assets/kss.js"></script>
-<script src="kss-assets/prettify.js"></script>
-<script>
-  prettyPrint();
-</script>
-{{{scripts}}}
-
-
 <footer role="contentinfo">
   <div class="wrapper">
     <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
   </div>
 </footer>
 
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="/latest/ui-kit.min.js"></script>
+<script>
+  prettyPrint();
+</script>
+
 </body>
 </html>
