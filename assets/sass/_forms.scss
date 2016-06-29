@@ -43,9 +43,12 @@ form {
   /*
   Label
 
-  Used to tell the user what to enter into the field
+  Used to tell the user what to enter into the field.
 
-  Markup: <label>Enter your name</label>
+  Markup:
+  <form>
+    <label>Enter your name</label>
+  </form>
 
   Style guide: Forms.Label
   */
@@ -57,11 +60,13 @@ form {
   /*
   Hint text
 
-  An optional extra descriptor for the input field
+  An optional extra descriptor for the input field.
 
   Markup:
-  <span class="hint" id="name-hint">Your name is on your birth certificate</span>
-  <input type="text" id="name" aria-describedby="name-hint" />
+  <form>
+    <label class="hint" for="name" id="name-hint">Your name is on your birth certificate</label>
+    <input type="text" id="name" aria-describedby="name-hint" />
+  </form>
 
   Style guide: Forms.HintText
   */
@@ -75,13 +80,17 @@ form {
   /*
   Text input
 
-  A single line text input
+  A single line text input.
 
-  Markup: <input type="text" />
+  Markup:
+  <form>
+    <input type="text" />
+    <input type="text" disabled/>
+  </form>
 
   :focus - When a user has entered the field with the cursor or mouse
-  :invalid  - When a form is submitted with an invalid value
-  :disabled - When an input has the `disabled` attribute
+  .invalid  - When a form is submitted with an invalid value
+  disabled - When an input has the `disabled` attribute
 
   Style guide: Forms.TextInput
   */
@@ -95,13 +104,16 @@ form {
   /*
   Textarea input
 
-  A multi-line text input
+  A multi-line text input.
 
-  Markup: <textarea></textarea>
+  Markup:
+  <form>
+    <textarea></textarea>
+  </form>
 
   :focus - When a user has entered the field with the cursor or mouse
-  :invalid  - When a form is submitted with an invalid value
-  :disabled - When an input has the `disabled` attribute
+  .invalid  - When a form is submitted with an invalid value
+  disabled - When an input has the `disabled` attribute
 
   Style guide: Forms.TextAreaInput
   */
