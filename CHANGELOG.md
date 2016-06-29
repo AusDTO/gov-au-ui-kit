@@ -4,7 +4,7 @@
 
 ### 1.0.0 - 2016-06-29
 
-Guide MVP is now (live)[1].
+Guide MVP is now live ([1]).
 
 Adds:
 
@@ -25,15 +25,15 @@ Adds:
   - Primary navigation (vertical sidebar)
   - Breadcrumbs
 - Typography
-  - Body font changed to (Open Sans)[2]
+  - Body font changed to Open Sans ([2])
   - Guidance on font and heading sizes
   - Callouts & blockquotes
   - Badges
 
 Markup changes:
 
-- Badge[3] variants now use BEM classnames (eg `badge--beta`)
-- Callout[4] variant now use BEM classname (eg `callout--warning)
+- Badge ([3]) variants now use BEM classnames (eg `badge--beta`)
+- Callout ([4]) variant now use BEM classname (eg `callout--warning)
 
 ## UI Kit "Rugby"
 
