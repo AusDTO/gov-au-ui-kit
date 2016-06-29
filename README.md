@@ -6,30 +6,27 @@
 
 UI Kit (`gov-au-ui-kit`) is 3 things:
 
-1. a design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
+1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
 2. common-use templates (to come)
 3. a lean and frugal CSS/SCSS framework (found in `assets/sass/`) that you can
   - link to as a precompiled minified file:
   ```
   <link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
   ```
-  - download & include the complete SCSS framework in your asset pipeline to use the inbuilt mixins/extends for prototyping & building:
+  - download and include the complete SCSS framework in your asset pipeline to use the inbuilt mixins/extends for prototyping and building:
   ```
   https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss
   ```
 
-We have [an example page showing the full framework](https://gov-au-ui-kit.apps.staging.digital.gov.au/) for staging.
-
 ### Features & browser support
 
-- [Normalize](https://necolas.github.io/normalize.css/) (to make browsers render all elements more consistently).
-- Bourbon 4.2.7
-- Neat
-- a grid framework with some good defaults
-- basic styling for content with some good typographic coverage
-- basic styling for UI elements (eg `input`, `label`, etc.)
-- UI components build on solid HTML foundation. If JavaScript fails users will still get a robust HTML foundation.
-- Progressively enhanced to provide core experiences across browsers. All users get critical information and an accessible site. Users with newer browsers get a better looking site.
+- [Normalize](https://necolas.github.io/normalize.css/).
+- Bourbon, version 4.2.7.
+- Neat, and settings for a grid framework with some good defaults.
+- Basic styling for content with some good typographic coverage.
+- Basic styling for UI elements (eg `input`, `label`, etc.).
+- UI components build on solid HTML foundation.
+- Built on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
 
 ## What this isn't
 
@@ -45,7 +42,7 @@ The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams 
 
 You should use this with the [draft **Content Style Guide**](http://content-style-guide.apps.staging.digital.gov.au/) for Digital Transformation Office projects.
 
-## <a name="building"></a>Build the scss yourself
+## Build the SCSS yourself
 
 We have a build process for the development of the framework which uses gulp on node.js.
 
@@ -87,8 +84,8 @@ Some of the key libraries we use are:
 
 ## Make gov-au-ui-kit better
 
-- Create a new [**GitHub issue**](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues)
-- Contribute to this repository. Please see the [**Contributor Code of Conduct**](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our code **Conventions**](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first
+- Create a new [**GitHub issue**](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
+- Contribute to this repository. Please see the [**Contributor Code of Conduct**](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our code **Conventions**](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
 - Contact us on slack in `#govau-uikit`.
 
 ## Project goal
