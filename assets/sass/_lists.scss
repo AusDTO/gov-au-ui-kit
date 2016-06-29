@@ -1,0 +1,38 @@
+
+
+
+.list-horiz {
+  @include outer-container;
+  background-color: $non-white;
+  padding: $base-spacing 0;
+
+  .image-box {
+    @include span-columns(3);
+  }
+
+  .list-horiz--body {
+    @include span-columns(9);
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  footer {
+    font-size: $small-font-size;
+
+    h4,
+    dl,
+    dt,
+    dd {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+
+    dt,
+    dd {
+      margin-right: $tiny-spacing;
+    }
+  }
+}
