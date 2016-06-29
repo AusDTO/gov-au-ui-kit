@@ -32,7 +32,8 @@ Adds:
 
 Markup changes:
 
-- (Badge)[3] variants now use BEM classnames (e.g. `badge--beta`)
+- (Badge)[3] variants now use BEM classnames (eg `badge--beta`)
+- (Callout)[4] variant now use BEM classname (eg `callout--warning)
 
 ## UI Kit "Rugby"
 
@@ -60,3 +61,4 @@ Bugfixes:
 [1]: https://gov-au-ui-kit.apps.staging.digital.gov.au/
 [2]: https://www.google.com/fonts/specimen/Open+Sans
 [3]: https://gov-au-ui-kit.apps.staging.digital.gov.au/section-typography.html#kssref-typography-4-horizontal-vertical-rhythm-3-badges
+[4]: https://gov-au-ui-kit.apps.staging.digital.gov.au/section-typography.html#kssref-typography-4-horizontal-vertical-rhythm-2-callouts-warnings
