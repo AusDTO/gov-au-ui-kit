@@ -76,7 +76,7 @@ You should think about this in parallel with the [grid breakpoints](section-grid
 Style guide: Typography.2 Headings & body copy.1 Breakpoints
 */
 
-@import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,700,400&subset=latin,latin-ext');
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
 $base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
@@ -128,7 +128,7 @@ $tiny-spacing: $base-spacing / 4;
 // Font weights
 $base-font-weight: 400;
 $bold-font-weight: 600;
-$heading-font-weight: $bold-font-weight;
+$heading-font-weight: 700;
 
 // Font sizes
 $small-font-size: 87.5%;
@@ -227,14 +227,13 @@ h4,
 h5,
 h6 {
   line-height: $base-heading-leading;
-  font-weight: $base-font-weight;
+  font-weight: $heading-font-weight;
   margin-bottom: $small-spacing;
   margin-top: $base-spacing;
 }
 
 h1 {
   font-size: rem(40);
-  font-weight: $base-font-weight;
   line-height: $small-leading;
 
   @include media($tablet) {
