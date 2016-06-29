@@ -65,7 +65,7 @@ The style guide can now be found at `./build/index.html`
 
 We have automated the build, with a few additions:
 
-- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software)
+- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software))
 - `kss-node` for auto-building a living style guide: http://warpspire.com/kss/
 
 This is available as a shell script at `bin/cibuild.sh`.
