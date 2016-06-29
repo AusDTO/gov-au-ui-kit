@@ -2,7 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### 1.0.0 - 2016-06-28
+### 1.0.0 - 2016-06-29
 
 Guide MVP is now (live)[1].
 
