@@ -1,7 +1,7 @@
 /*
 Typography
 
-This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to provide a consistent 16 column responsive grid layout with basic content styling and good typographic defaults.
+This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to provide a consistent 12 column responsive grid layout with basic content styling and good typographic defaults.
 
 The framework aims to meet common government typographic needs:
 
@@ -65,26 +65,6 @@ Style guide: Typography.1 Typeface.1 Font stacks
 */
 
 /*
-Pairing style examples
-
-#### Open Sans regular 400
-
-<p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-abcdefghijklmnopqrstuvwxyz<br />
-1234567890(!@#s%g.,?:;)</p>
-
-#### Open Sans bold 400
-
-<p class='abstract'><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-abcdefghijklmnopqrstuvwxyz<br />
-1234567890(!@#s%g.,?:;)</strong></p>
-
-We will provide a full HTML test page showing all possible pairings.
-
-Style guide: Typography.1 Typeface.2 Pairing style examples
-*/
-
-/*
 Breakpoints
 
 - Mobile (extra small devices): 4 columns, 420px maximum
@@ -94,75 +74,6 @@ Breakpoints
 You should think about this in parallel with the [grid breakpoints](section-grid.html#kssref-grid-3-breakpoints).
 
 Style guide: Typography.2 Headings & body copy.1 Breakpoints
-*/
-
-/*
-Font size & line height defaults
-
-Use relative units to allow for variety across a user's browser and device screen size.
-
-This table shows the default font size in pixels and line height in ems for styles.
-
-<table style="width:100%;">
-  <tr>
-    <th>Style</th>
-    <th>Mobile</th>
-    <th>Tablet</th>
-    <th>Desktop</th>
-  </tr>
-  <tr>
-    <td>h1 / .display </td>
-    <td>51px / 3.1875em</td>
-    <td>57px / 3.5625em<br></td>
-    <td>51px / 3.1875em</td>
-  </tr>
-  <tr>
-    <td>h2</td>
-    <td>43px / 2.6875em</td>
-    <td>43px / 2.6875em</td>
-    <td>38px / 2.375em</td>
-  </tr>
-  <tr>
-    <td>h3</td>
-    <td>28px / 1.75em</td>
-    <td>32px / 1.75em</td>
-    <td>28px / 1.75em</td>
-  </tr>
-  <tr>
-    <td>h4 / .abstract</td>
-    <td>21px / 1.3125em</td>
-    <td>24px / 1.5em</td>
-    <td>21px / 1.3125em</td>
-  </tr>
-  <tr>
-    <td>h5</td>
-    <td>18px / 1.125em</td>
-    <td>18px / 1.125em</td>
-    <td>16px / >1em</td>
-  </tr>
-  <tr>
-    <td>h6</td>
-    <td>18px / 1.125em</td>
-    <td>18px / 1.125em</td>
-    <td>16px / 1em</td>
-  </tr>
-  <tr>
-    <td>Body copy</td>
-    <td>18px / 1.125em</td>
-    <td>18px / 1.125em</td>
-    <td>16px / 1em</td>
-  </tr>
-</table>
-
-Style guide: Typography.2 Headings & body copy.2 Font size & line height defaults
-*/
-
-/*
-Base size examples
-
-Markup: templates/heading-body-styles.hbs
-
-Style guide: Typography.2 Headings & body copy.3 Base size examples
 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext');
@@ -430,8 +341,7 @@ a {
 
   &:hover,
   &:active {
-    border-bottom-color: $aqua; //for non RGBA
-    border-bottom-color: transparentize($aqua, 0.5);
+    border-bottom-color: lighten($highlight-colour, 30%);
     color: $highlight-colour;
   }
 
