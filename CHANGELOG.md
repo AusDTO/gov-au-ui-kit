@@ -8,8 +8,9 @@ Guide MVP is now live ([1]).
 
 Adds:
 
-- Guide now uses UI Kit styles throughout
-- 'Last Updated' added to UI Kit documentation
+- Style guide
+  - Guide now uses UI Kit styles throughout
+  - 'Last Updated' added to UI Kit documentation
 - Buttons
   - Guidance on how to apply button styling to `button` and `a` elements
 - Colours
