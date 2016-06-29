@@ -32,8 +32,8 @@ Adds:
 
 Markup changes:
 
-- (Badge)[3] variants now use BEM classnames (eg `badge--beta`)
-- (Callout)[4] variant now use BEM classname (eg `callout--warning)
+- Badge[3] variants now use BEM classnames (eg `badge--beta`)
+- Callout[4] variant now use BEM classname (eg `callout--warning)
 
 ## UI Kit "Rugby"
 
