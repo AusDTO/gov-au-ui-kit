@@ -26,6 +26,9 @@ pre {
   overflow: scroll;
   padding: $small-spacing;
   white-space: pre;
+  @include media($tablet) {
+    white-space: normal;
+  }
 }
 
 code {

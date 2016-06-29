@@ -38,6 +38,7 @@
           src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
   <![endif]-->
 
+  <script type="text/javascript" src="latest/ui-kit.js"></script>
 </head>
 <body>
 
@@ -66,7 +67,9 @@
 <main>
   <aside class="sidebar">
     <nav class="primary-nav" aria-label="main navigation">
-      <ul>
+      <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
+         aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
+      <ul id="primary-nav-panel" aria-labelledby="primary-nav-heading">
         <li>
           <a href="/">Getting started</a>
         </li>
