@@ -338,6 +338,12 @@ Style guide: Navigation.3 Breadcrumbs
       display: inline-block;
       margin: 0;
       padding: 0;
+      color: $white;
+
+      a {
+        color: $white;
+      }
+
     }
 
     li:not(:last-child) {
@@ -347,7 +353,6 @@ Style guide: Navigation.3 Breadcrumbs
       background-repeat: no-repeat;
       background-position: right;
       background-size: $tiny-spacing auto;
-      color: $grey;
     }
   }
 
