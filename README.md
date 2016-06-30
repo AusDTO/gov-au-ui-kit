@@ -42,7 +42,7 @@ The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams 
 
 You should use this with the [draft **Content Style Guide**](http://content-style-guide.apps.staging.digital.gov.au/) for Digital Transformation Office projects.
 
-## Build the SCSS yourself
+## Build the Guide yourself
 
 We have a build process for the development of the framework which uses gulp on node.js.
 
@@ -58,10 +58,11 @@ npm install
 Run a build:
 
 ```
-gulp
+gulp build
 ```
 
-The style guide can now be found at `./build/index.html`
+The compiled style guide can be found at `./build/index.html` and the UI Kit CSS
+at `./build/latest/ui-kit.css`.
 
 We have automated the build, with a few additions:
 
