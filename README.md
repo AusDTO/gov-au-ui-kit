@@ -66,10 +66,13 @@ at `./build/latest/ui-kit.css`.
 
 We have automated the build, with a few additions:
 
-- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software))
-- `kss-node` for auto-building a living style guide: http://warpspire.com/kss/
+- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software)
+- `cssnano` for [CSS compression](http://cssnano.co/)
+- `autoprefixer` for adding [CSS vendor prefixes](https://autoprefixer.github.io/)
+- `AusDTO/gulp-html` for [HTML validation](https://github.com/AusDTO/gulp-html)
+- `kss` for auto-building a [living style guide](http://warpspire.com/kss/)
 
-This is available as a shell script at `bin/cibuild.sh`.
+Our CI build is available as a shell script at `bin/cibuild.sh`.
 
 ### Dependencies
 
@@ -85,9 +88,9 @@ Some of the key libraries we use are:
 
 ## Make gov-au-ui-kit better
 
-- Create a new [**GitHub issue**](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
-- Contribute to this repository. Please see the [**Contributor Code of Conduct**](code_of_conduct.md) and [our code **Conventions**](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
-- Contact us on slack in `#govau-uikit`.
+- Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
+- Contribute to this repository. Please see the [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
+- Contact us on slack in `#govau-guide`.
 
 ## Project goal
 
