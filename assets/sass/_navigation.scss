@@ -297,7 +297,10 @@ Style guide: Navigation.2 Local Navigation
 
   .nav-heading {
     @include media($tablet) {
-      display: none;
+      display: block;
+      background-color: $dark-aqua;
+      color: $white;
+      padding: $medium-spacing / 2 $small-spacing;
     }
 
   }
