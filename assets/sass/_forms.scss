@@ -16,7 +16,8 @@ Style guide: Forms
   background-color: $background-colour;
   padding: $tiny-spacing;
 
-  &:invalid {
+  &:invalid,
+  &.invalid {
     outline: 2px solid $error-colour;
   }
 
@@ -88,6 +89,10 @@ form {
     <p>
       <label>A text input field:</label>
       <input type="text" />
+    </p>
+    <p>
+      <label>An invalid field:</label>
+      <input type="text" class="invalid"/>
     </p>
     <p>
       <label>A disabled field:</label>
