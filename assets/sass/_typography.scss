@@ -386,6 +386,11 @@ Style guide: Typography.4 Horizontal & vertical rhythm.4 Quotations
 */
 
 ul,
+ol {
+  padding-left: 1.1 * $base-spacing;
+}
+
+ul,
 ol,
 dl,
 p,
