@@ -88,5 +88,10 @@ header[role='banner'] {
     .tagline {
       @extend .abstract;
     }
+
+    code,
+    a {
+      color: $white;
+    }
   }
 }
