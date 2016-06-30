@@ -228,7 +228,7 @@ h5,
 h6 {
   line-height: $base-heading-leading;
   font-weight: $heading-font-weight;
-  margin-bottom: $small-spacing;
+  margin-bottom: $small-spacing * .5;
   margin-top: $base-spacing;
 }
 
@@ -398,6 +398,7 @@ dt,
 dd {
   margin-bottom: $small-spacing;
   font-size: rem(16);
+  line-height: $base-spacing * .9;
 
   @include media($tablet) {
     font-size: rem(18);
