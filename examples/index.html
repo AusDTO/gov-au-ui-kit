@@ -20,7 +20,7 @@
   })(document.documentElement)</script>
   <title>Example Pages</title>
   <!-- in production use <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/> instead of next 2 lines-->
-  <link rel="stylesheet" type="text/css" href="./latest/ui-kit.css"/>
+  <link rel="stylesheet" type="text/css" href="../latest/ui-kit.css"/>
   <link rel="stylesheet" type="text/css" href="../build/latest/ui-kit.css"/>
 
   <!--[if (gte IE 9) | (!IE)]>-->
@@ -34,9 +34,9 @@
           src="//cdnjs.cloudflare.com/ajax/libs/corysimmons-selectivizr2/1.0.8/selectivizr2.min.js"></script>
   <script type="text/javascript"
           src="//cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
-  <link href="//fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Lato:400italic" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400&subset=latin,latin-ext" rel='stylesheet'>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic&subset=latin,latin-ext" rel='stylesheet'>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:700&subset=latin,latin-ext" rel='stylesheet'>
   <![endif]-->
   <!--[if lte IE 9]>
   <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
@@ -45,7 +45,7 @@
   <![endif]-->
 
   <!-- in production use <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"/> instead of next 2 lines-->
-  <script type="text/javascript" src="./latest/ui-kit.js"></script>
+  <script type="text/javascript" src="../latest/ui-kit.js"></script>
   <script type="text/javascript" src="../build/latest/ui-kit.js"></script>
 
 </head>
@@ -74,6 +74,16 @@
       </div>
     </section>
   </header>
+
+  <nav class="breadcrumbs" aria-label="breadcrumb">
+    <div class="wrapper">
+      <ul>
+        <li><a href="#" title="Home">Home</a></li>
+        <li><a href="#" title="Menu1">Menu1</a></li>
+        <li>Menu2</li>
+      </ul>
+    </div>
+  </nav>
 
   <main>
 
@@ -209,7 +219,7 @@
 
         <p class="callout">This is a callout.</p>
 
-        <p class="callout warning-block">This is a warning callout.</p>
+        <p class="callout--warning">This is a warning callout.</p>
 
         <p>This makes maintaining the vertical rhythm between content easier, and avoids spacing bugs, as well as sizing
           bugs that aren't immediately apparent when just testing with a few paragraphs and headings.</p>
@@ -262,8 +272,8 @@
               <label for="message">Your message</label>
               <textarea id="message"></textarea>
             </p>
-            <input type="submit" value="Submit"/>
-            <input type="reset" value="Reset"/>
+            <input role="button" type="submit" value="Submit"/>
+            <input role="button" type="reset" value="Reset"/>
           </form>
 
         </section>

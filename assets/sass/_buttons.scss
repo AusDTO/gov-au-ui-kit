@@ -1,9 +1,44 @@
+/*
+Buttons
+
+Buttons signal action&mdash;use them to move the user through a transaction.
+
+Use 1 button per page to build a strong call to action. Adding a second or third button forces users to make a choice. If choice is required use another kind of element eg radio button.
+
+Use button text to describe what the button does&mdash;keep it short.
+
+The button alignment in [forms](section-forms.html) should put the primary action button at the left edge, in the user's line of sight.
+
+<hr />
+
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+
+Style guide: Buttons
+*/
+
+/*
+Creating buttons
+
+Call buttons using:
+
+- `<button>` element (for actions like submitting a form)
+- the `role` property of `a` elements (eg an anchor link).
+
+Do not apply styles to disabled buttons.
+
+Markup: templates/buttons-examples.hbs
+
+Style guide: Buttons.1 Creating buttons
+*/
 
 %base-button {
   -webkit-appearance: none;
   appearance: none;
   display: inline-block;
+  margin: 0 $small-spacing $small-spacing 0;
+  height: $base-spacing * 1.5;
   border: none;
+  border-radius: $tiny-border-radius;
   outline-offset: -2px;
   outline: 2px solid transparent;
   padding: $tiny-spacing $medium-spacing $tiny-spacing * 1.3;
@@ -21,25 +56,26 @@
   }
 
   &:hover {
-    background-color: $button-hover-colour;
+    background-color: $button-colour--hover;
+    color: $button-text-colour;
   }
 
   &:active {
-    background-color: $button-active-colour;
+    background-color: $button-colour--active;
+    color: $button-text-colour;
   }
 
   &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active,
-  &[disabled]:focus,
-  &.disabled,
-  &.disabled:hover,
-  &.disabled:active,
-  &.disabled:focus {
-    cursor: not-allowed;
-    outline: none;
-    background-color: $button-disabled;
-    color: $non-black;
+  &.disabled {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: not-allowed;
+      outline: none;
+      background-color: $button-colour--disabled;
+      color: $non-black;
+    }
   }
 
   @include media($tablet) {
@@ -48,52 +84,23 @@
 
 }
 
-
-// Buttons
-//
-// Use buttons to move through a transaction. Aim to use only one button per
-// page.
-//
-// .icon-arrow-r - Places a right-facing arrow inside the button
-// .contrast - Visually distinct from the default button style
-// .secondary - When more than one button is needed
-// ::disabled - Indicates that a button can't be clicked
-//
-// Markup: <button>Next</button>
-//
-// Compatibility untested.
-//
-// Style guide: Buttons and Links.Buttons
-
-
 button,
-[role='button'] {
+.button,
+[role='button'],
+[type='button'] {
   @extend %base-button;
 
-  & + & {
-    margin-left: $small-spacing;
-  }
+  &.inverted {
+    border: 1px solid;
+    background-color: transparent;
 
-  &.contrast {
-    background-color: $button-contrast-colour;
-
+    &:hover,
+    &:active,
     &:focus {
-      outline-color: lighten($button-contrast-colour, 25%);
+      border-color: $button-inverted-colour;
+      background-color: $button-inverted-colour;
+      color: $button-inverted-text-colour;
     }
-
-    &:hover {
-      background-color: $button-contrast-hover-colour;
-    }
-
-    &:active {
-      background-color: $button-contrast-active-colour;
-    }
-
-  }
-
-  &.secondary {
-    background-color: none;
-    text-decoration: underline;
   }
 
 }

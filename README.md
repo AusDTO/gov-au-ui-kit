@@ -1,177 +1,154 @@
-# gov-au-ui-kit
-[![CircleCI](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=svg)](https://circleci.com/gh/AusDTO/gov-au-ui-kit)
+# `gov-au-ui-kit`
 
-GOV.AU SCSS UI framework, using Bourbon and Neat. It provides:
+![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield)
 
-- normalize
-- a lightweight, extensible grid framework, with some good defaults
-- basic styling for content with some basic typographic defaults
-- basic styling for UI elements (e.g. `input`).
+## What is this?
 
-The GOV.AU Design Guide will document this framework.
+UI Kit (`gov-au-ui-kit`) is 3 things:
 
-## Introduction
+1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
+2. common-use templates (to come)
+3. a lean and frugal CSS/SCSS framework (found in `assets/sass/`) that you can
+  - link to as a precompiled minified file:
+  ```
+  <link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+  ```
+  - download and include the complete SCSS framework in your asset pipeline to use the inbuilt mixins/extends for prototyping and building:
+  ```
+  https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss
+  ```
 
-This is a framework building a standardised, accessible look and feel for GOV.AU projects.
+### Features & browser support
 
-The framework uses [Bourbon](https://github.com/thoughtbot/bourbon) (sass mixin library) and [Neat](https://github.com/thoughtbot/neat) (lightweight grid framework).
+- [Normalize](https://necolas.github.io/normalize.css/).
+- Bourbon, version 4.2.7.
+- Neat, and settings for a grid framework with some good defaults.
+- Basic styling for content with some good typographic coverage.
+- Basic styling for UI elements (eg `input`, `label`, etc).
+- UI components build on solid HTML foundation.
+- Built on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
 
-## Browser Support
+## What this isn't
 
-The UI components are built on a solid HTML foundation, progressively enhanced to provide core experiences across browsers. All users get critical information and experiences. New browsers get the prettiest experiences, while older browsers get less pretty, but usable ones. If JavaScript fails, users will still get a robust HTML foundation.
+This is not yet a complete design or design system. This is the starting point that will develop with your help.
 
-## Development
+## Who is this for?
 
-This framework is in active development.
+Teams building Australian Government sites. This was designed for GOV.AU teams, but we welcome use outside of federal government.
 
-**Releases:** we are currently in pre-release stage (early June).
+## How is this related to the Digital Service Standard?
 
-**Usage:** we have, and are seeking more early users.
+The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams to [build services using common design patterns](https://www.dto.gov.au/standard/6-consistent-and-responsive/). This is draft work on the framework and guidance that will eventually become the design patterns for digital content.
 
-You can use a precompiled minified version:
+You should use this with the [draft **Content Style Guide**](http://content-style-guide.apps.staging.digital.gov.au/) for Digital Transformation Office projects.
+
+## Build the Guide yourself
+
+We have a build process for the development of the framework which uses gulp on node.js.
+
+To build it yourself, begin by installing the system dependencies:
+- Node.js v5.0.0
+
+Install node package dependencies:
+
 ```
-<link rel="stylesheet" type="text/css" href="//gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+npm install
 ```
-Or download https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss (which includes Bourbon and Neat) and use it in your existing asset pipeline.
 
-Contact us on slack in #govau-uikit
+Run a build:
 
-### Assets
+```
+gulp build
+```
 
-We provide the scss files directly in `assets/sass`.
+The compiled style guide can be found at `./build/index.html` and the UI Kit CSS
+at `./build/latest/ui-kit.css`.
 
-We also have a build process for the development of the framework which uses gulp on node.js (see *§ Building* below).
+We have automated the build, with a few additions:
 
-### Roadmap
+- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software)
+- `cssnano` for [CSS compression](http://cssnano.co/)
+- `autoprefixer` for adding [CSS vendor prefixes](https://autoprefixer.github.io/)
+- `AusDTO/gulp-html` for [HTML validation](https://github.com/AusDTO/gulp-html)
+- `kss` for auto-building a [living style guide](http://warpspire.com/kss/)
 
-Goal: build a lean and frugal CSS/SCSS framework to make building gov.au easier. It should provide base consistency, allow for easier rapid prototyping directly in the browser, and shouldn't get in the way of customised design needs.
-
-#### Releases
-
-Please see [RELEASING](RELEASING.md).
-
-We want to provide stable, usable releases at the end of each sprint.
-
-We are wary about the possibility of breaking changes, and will work to ensure if anything does change that can cause things to break that we will try to gracefully deprecate them.
-
-We may investigate creating an installer wrapper, or releasing via git submodules.
-
-#### Milestones
-
-1st milestone is to meet the general look and feel of the gov.au alpha. This allows us to establish the basics of the framework while meeting a relatively-easily met, static target.
-
-2nd milestone is to iterate from there in two ways:
-
-1. iterate on the look and feel under the direction of the designers from the guides team
-2. include styling for commonly used and requested things that builders from other teams need.
-
-#### Immediate priorities
-
-- provide UI styling for `input`, `label`, etc.
-- styling for other buttons, next/previous, etc.
-- some sane basics for high level block elements inc. `main`, `article`, `header`, and `footer`
-- styling for primary and secondary `nav`
-- styling for calendars.
-
-### Contributing
-
-We welcome contributions! Please talk to us about what you're building so that we can make it easier for you.
-
-Therefore, if you:
-
-- spot a bug
-- see good reason to include something from your codebase in our framework
-- have an itch you want to scratch.
-
-... come and talk to us.
-
-Contributors should be familiar with the [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [Block Element Modifier conventions](http://getbem.com/)
-
-### Conventions
-
-#### Naming
-
-(Stolen almost entirely from the [18F Frontend Guide](https://pages.18f.gov/frontend/css-coding-styleguide/naming/).)
-
-* HTML elements should be in lowercase
-* Classes should be in lowercase
-* Avoid CamelCase
-* Name things clearly and semantically, viz., by its function and not its appearance
-* Avoid presentation- or location-specific words, eg it is preferable to be able to change a colour variable's value, and have it cascade, and not also have to change the name of the variable
-* Be wary in naming components based on content (eg `.item_list` over `.product_list`)
-* Do not abbreviate, unless it is a well-known abbreviation
-* Name components and modules with singular nouns (eg `.button`)
-* Name modifiers and states with adjectives (eg `.is_hovered`)
-* If you intend to bring in other CSS librabries consider the namespacing carefully
-* Do not attach styles to a class prefixed with `js-` because these are reserved for JavaScript and they need to be portable.
-
-We have opted to follow the BEM (Blocks, Elements, Modifiers) convention. For more information see [getbem.com](http://getbem.com/introduction/).
-
-#### Linting
-
-There is `scss-lint` validation which can also be [integrated in many text editors and IDEs](https://github.com/brigade/scss-lint/#editor-integration). We have also pulled in the KSS source in order to configure out build pipelines.
-
-#### Markup
-
-* Use HTML5, including `header`, `footer`, `article`, `section`, `aside`, `nav`
-* Use ARIA roles, eg applying `role="contentinfo"` to the page `footer`
-* ...
+Our CI build is available as a shell script at `bin/cibuild.sh`.
 
 ### Dependencies
 
-We use Bourbon 4.2.7, and we include its scss files directly rather than calling it via its node package. Bourbon and Neat live under `/assets/sass/vendor`.
+We use Bourbon 4.2.7. We include its `.scss` files directly rather than calling it via its node (or gem) package. Bourbon and Neat live under `/assets/sass/vendor`.
 
-- gulp `^3.9.1`
-- gulp-scss-lint `^0.4.0`
-- gulp-cssnano `^2.1.2`
-- gulp-sourcemaps `^1.6.0`
-- gulp-rename `^1.2.2`
-- gulp-gitversion `^0.0.8`
-- gulp-html `^0.4.4`
-- kss `^3.0.0-beta.14`
+Some of the key libraries we use are:
+- `gulp ^3.9.1`
+- `gulp-sass ^2.3.1`
+- `kss ^3.0.0-beta.14`
+- `sass-lint ^1.7.0`
 
-`^` = *compatible with version* (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
+`^` = compatible with version (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
 
-### Building
+## Make gov-au-ui-kit better
 
-To just build the scss yourself, install the dependencies:
+- Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
+- Contribute to this repository. Please see the [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
+- Contact us on slack in `#govau-guide`.
 
-```
-xcode-select --install
-sudo xcodebuild -license
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install rbenv ruby-build
-echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-rbenv install 2.3.0
+## Project goal
 
-gem install scss_lint scss_lint_reporter_checkstyle
-brew install npm
-npm install
-npm install -g gulp
-```
+This framework is in active development.
 
-And then run:
+Goal: build a lean and frugal CSS/SCSS framework to make building GOV.AU easier. It should:
 
-```
-gulp
-```
+- provide base consistency
+- allow for easier rapid prototyping directly in the browser
+- should not get in the way of customised design needs.
 
-We have automated this, with a few additions:
+### Releases
 
-- `scss-lint` for linting
-- `kss-node` for auto-building a living style guide.
+See [RELEASING.md](RELEASING.md) and [CHANGELOG.md](CHANGELOG.md).
 
-This is available as a shell script at `bin/cibuild.sh`.
+We aim to provide stable, usable releases at the end of each sprint.
 
-## Copyright & License
+### Deprecation
 
-Copyright Digital Transformation Office. Licensed under the MIT license. See `LICENSE` file for more details.
+We are wary about breaking changes. We will work to ensure we will gracefully deprecate any changes that cause things to break.
 
-This repo includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Normalize.css](https://necolas.github.io/normalize.css/), which all also use the MIT license.
+### Installer/wrapper
 
-## About the DTO
+We may create an installer wrapper (likely node-based), or release via git submodules.
+
+## Milestones
+
+### 1st general goal
+
+Meet the general look and feel of the [gov.au alpha](http://gov.au/alpha), with room for some improvements.
+
+This will allow us to establish the basics of the framework while meeting a relatively easily met static target.
+
+We are focused on:
+
+- establishing the basic framework
+- provide UI styling for `input`, `label`, etc
+- styling for other buttons, next/previous, etc
+- some sane basics for high level block elements inc. `main`, `article`, `header`, and `footer`
+- styling for primary and secondary `nav`.
+
+### Future… (coming roadmap)
+
+Iterate in 2 ways:
+
+- look and feel under the direction of the designers from the GOV.AU Guides team
+- styling for commonly used and requested things that builders from other Digital Transformation Office teams need, including:
+  - styling for calendars
+  - styling for common web application elements
+  - extensive testing
+  - templates.
+
+## Copyright & license
+
+Copyright Digital Transformation Office. [Licensed under the MIT license](https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE).
+
+This repository includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/) and [Normalize.css](https://necolas.github.io/normalize.css/). All also use the MIT license.
 
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
-UI-Kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
+gov-au-ui-kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).

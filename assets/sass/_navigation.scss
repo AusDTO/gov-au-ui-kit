@@ -1,12 +1,24 @@
-// Primary navigation
-//
-// A vertical navigation menu that fits three levels of items.
-//
-// Markup: templates/primary-navigation.hbs
-//
-// Style guide: Components.Navigation.Primary Navigation
+/*
+Navigation
+
+Navigation tells your users where they are, where they've been and where they can go.
+
+The `<nav>` element (HTML Navigation Element) represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+
+Style guide: Navigation
+*/
+
+/*
+Primary navigation
+
+A vertical navigation menu that fits 3 levels of items
+
+Markup: templates/primary-navigation.hbs
+
+Style guide: Navigation.Primary Navigation
+*/
+
 .primary-nav {
-  // scss-lint:disable SelectorDepth, NestingDepth
   .nav-heading {
     color: $darker-aqua;
     background: $lighter-grey;
@@ -26,8 +38,10 @@
     ul {
       margin: 0;
 
-      li:last-child {
-        border-bottom: none;
+      li {
+        &:last-child {
+          border-bottom: none;
+        }
       }
 
       a {
@@ -35,7 +49,7 @@
         padding-left: $base-spacing;
 
         &:hover {
-          border-left: 1px solid $contrast-border-colour;
+          border-left: 1px solid $border-contrast-colour;
         }
       }
 
@@ -55,10 +69,10 @@
   li {
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid $secondary-border-colour;
+    border-bottom: 1px solid $border-secondary-colour;
 
     &:first-child {
-      border-top: 1px solid $secondary-border-colour;
+      border-top: 1px solid $border-secondary-colour;
     }
   }
 
@@ -73,39 +87,47 @@
 
     &:hover,
     &:active,
-    &.active {
-      border-color: $contrast-border-colour;
-      background-color: $contrast-background-colour;
+    &.active,
+    &.is-active {
+      border-color: $border-contrast-colour;
+      background-color: $background-contrast-colour;
     }
 
   }
 }
 
-.js .primary-nav ul {
-  @include media($tablet) {
-    margin: 0;
-    display: none;
+.js {
+  .primary-nav {
+    ul {
+      @include media($tablet) {
+        margin: 0;
+        display: none;
+      }
+    }
+  }
+
+  .nav-heading {
+    @include media($tablet) {
+      display: block;
+    }
   }
 }
 
-.js .nav-heading {
-  @include media($tablet) {
-    display: block;
-  }
-}
+/*
+Breadcrumbs
 
-// Breadcrumbs
-//
-// A inline listing of pages that are broader than this one
-//
-// Markup: templates/breadcrumbs.hbs
-//
-// Style guide: Components.Navigation.Breadcrumbs
+A inline listing of pages that are broader than this one
+
+Markup: templates/breadcrumbs.hbs
+
+Style guide: Navigation.Breadcrumbs
+*/
 .breadcrumbs {
   @include outer-container(100%);
 
   margin-top: 0;
-  background-color: $lighter-grey;
+  background-color: $non-white;
+  color: $grey;
 
   @include media($tablet) {
     display: none;
@@ -113,16 +135,23 @@
 
   ul {
     margin: 0;
-    padding: $tiny-spacing $small-spacing;
+    padding: $small-spacing 0;
     list-style: none;
 
     li {
       display: inline-block;
+      margin: 0;
+      padding: 0;
     }
 
-    li:not(:last-child)::after {
-      content: ' ' + entity('raquo');
-      font-weight: bold;
+    li:not(:last-child) {
+      margin-right: $small-spacing;
+      padding-right: $medium-spacing;
+      background-image: url($icon-arrow-r);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: $tiny-spacing auto;
+      color: $grey;
     }
 
   }

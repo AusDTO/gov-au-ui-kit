@@ -1,18 +1,28 @@
+/*
+Forms
+
+Form elements and attributes in HTML5 provide a greater degree of semantic mark-up than HTML4. They remove a great deal of the need for scripting and styling that was required in HTML4.
+
+The forms features in HTML5 provide a better experience for users by making forms more consistent across different web sites and giving immediate feedback to the user about data entry. They also provide this experience to users who have scripting disabled in their browser.
+
+Style guide: Forms
+*/
 
 %base-text-input {
   width: 100%;
   outline-offset: 0;
-  border: 1px solid $border-colour;
+  border: 2px solid $border-colour;
   border-radius: 0;
   background-color: $background-colour;
   padding: $tiny-spacing;
 
-  &:invalid {
+  &:invalid,
+  &.invalid {
     outline: 2px solid $error-colour;
   }
 
   &:focus {
-    outline: 2px solid $highlight-colour;
+    outline: 2px solid $focus-colour;
   }
 
   &:disabled {
@@ -31,64 +41,91 @@ form {
     border: none;
   }
 
-  // Label
-  //
-  // Used to tell the user what to enter into the field
-  //
-  // Markup: <label>Enter your name</label>
-  //
-  // Style guide: Forms.Label
+  /*
+  Label
+
+  Used to tell the user what to enter into the field.
+
+  Markup:
+  <form>
+    <label>Enter your name</label>
+  </form>
+
+  Style guide: Forms.Label
+  */
 
   label {
     display: block;
   }
 
-  // Hint text
-  //
-  // An optional extra descriptor for the input field
-  //
-  // Markup:
-  // <span class="hint" id="name-hint">Your name is on your birth certificate</span>
-  // <input type="text" id="name" aria-describedby="name-hint" />
-  //
-  // Style guide: Forms.HintText
+  /*
+  Hint text
+
+  An optional extra descriptor for the input field.
+
+  Markup:
+  <form>
+    <label for="name">Enter your name</label>
+    <span class="hint" id="name-hint">Your name is on your birth certificate</span>
+    <input type="text" id="name" aria-describedby="name-hint" />
+  </form>
+
+  Style guide: Forms.HintText
+  */
 
   .hint {
     display: block;
-    color: $secondary-text-colour;
+    color: $body-secondary-text-colour;
     font-size: rem(14);
   }
 
-  // Text input
-  //
-  // A single line text input
-  //
-  // Markup: <input type="text" />
-  //
-  // :focus - When a user has entered the field with the cursor or mouse
-  // :invalid  - When a form is submitted with an invalid value
-  // :disabled - When an input has the `disabled` attribute
-  //
-  // Style guide: Forms.TextInput
+  /*
+  Text input
 
-  [type='text'] {
+  A single line text input.
+
+  Markup:
+  <form>
+    <p>
+      <label>A text input field:</label>
+      <input type="text" />
+    </p>
+    <p>
+      <label>An invalid field:</label>
+      <input type="text" class="invalid" />
+    </p>
+    <p>
+      <label>A disabled field:</label>
+      <input type="text" disabled />
+    </p>
+  </form>
+
+  Style guide: Forms.TextInput
+  */
+
+  [type='text'],
+  [type='email'],
+  [type='password'] {
     @extend %base-text-input;
   }
 
-  // Textarea input
-  //
-  // A multi-line text input
-  //
-  // Markup: <textarea></textarea>
-  //
-  // :focus - When a user has entered the field with the cursor or mouse
-  // :invalid  - When a form is submitted with an invalid value
-  // :disabled - When an input has the `disabled` attribute
-  //
-  // Style guide: Forms.TextAreaInput
+  /*
+  Textarea input
+
+  A multi-line text input that can be resised vertically by the user.
+
+  Markup:
+  <form>
+    <label>An input for longer responses:</label>
+    <textarea></textarea>
+  </form>
+
+  Style guide: Forms.TextAreaInput
+  */
 
   textarea {
     @extend %base-text-input;
+    resize: vertical;
   }
 
 }

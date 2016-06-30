@@ -1,32 +1,194 @@
+/*
+Colours
 
-// Colours
-//
-// The basic palette of colours available in the framework.
-//
-// Style guide: Foundation.Colours
+The framework provides a basic palette of colours that are clear and accessible.
+
+The colours are not finalised.
+
+If you need more guidance please [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues).
+
+Style guide: Colours
+*/
+
+/*
+Palette
+
+The framework uses semantic names. This includes lighter and darker versions that are percentage variations of the original colours.
+
+The Sass variables are also provided below, for reference.
+
+<div class="guide-colour-examples">
+  <div class="guide-colour">
+    <div class="swatch bg-non-black"></div>
+    <p class="text"> <strong>Non-black</strong><br/>
+      <small>$non-black<br/>#CC0000</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-dark-grey"></div>
+    <p class="text"> <strong>Dark-grey</strong><br/>
+      <small>$dark-grey<br/>#313131</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-grey"></div>
+    <p class="text"> <strong>Grey</strong><br/>
+      <small>$grey<br/> #717171</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-grey"></div>
+    <p class="text"> <strong>Light-grey</strong><br/>
+      <small>$light-grey<br/> #BEBEBE</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-darker-aqua"></div>
+    <p class="text"> <strong>Darker-aqua</strong><br/>
+      <small>$darker-aqua<br/> #115361</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-dark-aqua"></div>
+    <p class="text"> <strong>Dark-aqua</strong><br/>
+      <small>$dark-aqua<br/> #146577</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-aqua"></div>
+    <p class="text"> <strong>Aqua</strong><br/>
+      <small>$aqua<br/> #18788D</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-aqua"></div>
+    <p class="text"> <strong>Light-aqua</strong><br/>
+      <small>$light-aqua<br/> #5BCBE3</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-dark-navy"></div>
+    <p class="text"> <strong>Dark-navy</strong><br/>
+      <small>$dark-navy<br/> #152D3B</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-navy"></div>
+    <p class="text"> <strong>Navy</strong><br/>
+      <small>$navy<br/> #224A61</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-navy"></div>
+    <p class="text"> <strong>Light-navy</strong><br/>
+      <small>$light-navy<br/> #327DA9</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-non-white"></div>
+    <p class="text"> <strong>Non-white</strong><br/>
+      <small>$non-white<br/> #F0F3F5</small></p>
+  </div>
+</div>
+
+Style guide: Colours.1 Palette
+*/
+
+/*
+Contextual colours palatte
+
+These colours are reserved to help show specific changes in status.
+
+ <div class="guide-colour-examples">
+
+  <div class="guide-colour">
+    <div class="swatch bg-success"></div>
+    <p class="text"> <strong>Success-green</strong><br/>
+      <small>$success-colour<br/> #007554</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-green"></div>
+    <p class="text"> <strong>Light-green</strong><br/>
+      <small>$light-green<br/> #E6EFC2</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-error"></div>
+    <p class="text"> <strong>Error-red</strong><br/>
+      <small>$error-colour<br/> #CC0000</small></p>
+  </div>
+
+  <div class="guide-colour">
+    <div class="swatch bg-light-red"></div>
+    <p class="text"> <strong>Light-red</strong><br/>
+      <small>$light-red<br/> #F9DEDE</small></p>
+  </div>
+</div>
+
+Style guide: Colours.2 Contextual colours palette
+*/
+
+/*
+Colour contrast
+
+The colour contrast ratio for text and interactive elements should be at least 4.5:1 as [recommended by the W3C](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+
+### Accessible combinations
+<p class="guide-colour-block bg-black">white on black <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-grey">non-white on dark-grey<span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-grey">white on grey <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-grey">non-black on light-grey <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-lighter-grey">non-black on lighter-grey <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-non-white">non-black on non-white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-white">non-black on white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-darker-aqua">non-white on darker-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-aqua">non-white on dark-aqua <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-aqua">white on aqua <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-aqua">non-black on light-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-navy">non-white on dark-navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-navy">non-white on navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-light-navy">white on light-navy <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-error">white on error-red  <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-red">error-red on light-red <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-success">white on success-green <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-green">success-green on light-green <span class="invert">AA</span></p>
+
+Style guide: Colours.3 Colour contrast
+*/
+
+// Colour constants
 
 $black:         #000;
-$non-black:     #222222;
-$grey:          #828282;
+$non-black:     #222;
+$grey:          #6e6e6e;
 $dark-grey:     darken($grey, 25%);
 $light-grey:    lighten($grey, 30%);
 $lighter-grey:  lighten($grey, 45%);
 $non-white:     #f0f3f5;
 $white:         #fff;
 
-$aqua:          #1b8197;
+$aqua:          #18788d;
 $dark-aqua:     darken($aqua, 5%);
 $darker-aqua:   darken($aqua, 10%);
 $light-aqua:    lighten($aqua, 30%);
 
 $navy:          #224a61;
-$dark-navy:     darken($navy, 20%);
-$light-navy:    lighten($navy, 30%);
+$dark-navy:     darken($navy, 10%);
+$light-navy:    #327da9; //lighten($navy, 30%); Changed for WCAG:AA
 
-$red:           #cc0000;
+$red:           #c00;
+$light-red:     #f9dede;
 
+$green:         #007554;
 $light-green:   #e6efc2;
-$green:         darken($light-green, 55%);
+
+$yellow:        #f9c642;  //Warning from Alpha
+$light-yellow:  #fdf7dc;  //Warning from Alpha
+
+$blue:          #fff;     //Info from Alpha
+$light-blue:    #e8f5fa;  //Info from Alpha
 
 $orange:        #fbb03b;
 
@@ -34,30 +196,43 @@ $maroon:        #880e48;
 $dark-maroon:   darken($maroon, 5%);
 $darker-maroon: darken($maroon, 10%);
 
+// Colour variables
+
 $background-colour:             $white;
-$contrast-background-colour:    $lighter-grey;
+$background-contrast-colour:    $lighter-grey;
+
 $link-colour:                   $non-black;
 
 $button-colour:                 $aqua;
-$button-hover-colour:           $darker-aqua;
-$button-active-colour:          $dark-aqua;
-$button-disabled:               $light-grey;
+$button-colour--hover:          $darker-aqua;
+$button-colour--active:         $dark-aqua;
+$button-colour--disabled:       $light-grey;
 
-$button-contrast-colour:        $maroon;
-$button-contrast-hover-colour:  $darker-maroon;
-$button-contrast-active-colour: $dark-maroon;
+$button-contrast-colour:         $maroon;
+$button-contrast-colour--hover:  $darker-maroon;
+$button-contrast-colour--active: $dark-maroon;
+
+$button-inverted-colour:        $white;
 
 $button-text-colour:            $white;
+$button-inverted-text-colour:   $navy;
 
 $frame-colour:                  $light-grey;
 $primary-colour:                $light-navy;
-$highlight-colour:              $light-aqua;
+$highlight-colour:              $aqua;
+$focus-colour:                  $light-aqua;
 $error-colour:                  $red;
-$success-colour:                $light-green;
+$success-colour:                $green;
 
 $border-colour:                 $light-grey;
-$secondary-border-colour:       $lighter-grey;
-$contrast-border-colour:        $navy;
+$border-secondary-colour:       $lighter-grey;
+$border-contrast-colour:        $navy;
 
 $body-text-colour:              $black;
-$secondary-text-colour:         $dark-grey;
+$body-secondary-text-colour:    $dark-grey;
+
+$badge-colour-default:          $grey;
+$badge-colour-alpha:            $non-black;
+$badge-colour-beta:             $maroon;
+$badge-colour-error:            $error-colour;
+$badge-colour-success:          $green;

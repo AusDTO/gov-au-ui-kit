@@ -17,7 +17,7 @@ Each MAJOR release will come with a code name to ease communication.
 | Major Release | Codename | Description |
 |----------------:|----------|--------------|
 | 0.x.x | Rugby | Pre-release for GovAU projects and for preliminary feedback amongst the Australian Public Service (APS) |
-| 1.x.x | Vegemite | Stable release target for APS Distribution |
+| 1.x.x | Kraken | Stable release target for APS Distribution |
 | 2.x.x | Boomerang | TBD |
 
 ## Deployment
@@ -101,4 +101,3 @@ The email should contain the release information (copy paste from Github is fine
 ## Changelog Management
 
 Changelogs will be kept in CHANGELOG.md and updated where appropriate. Generally, a changelog entry should form part of the acceptance criteria for a ticket.
-
