@@ -322,7 +322,7 @@ Style guide: Navigation.3 Breadcrumbs
 [class^='breadcrumbs'] {
   display: none;
   margin: 0;
-  background-color: $non-white;
+  background-color: $aqua;
   color: $grey;
 
   @include media($tablet) {
