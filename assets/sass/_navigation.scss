@@ -331,7 +331,7 @@ Style guide: Navigation.3 Breadcrumbs
 
   ul {
     margin: 0;
-    padding: .5 * $medium-spacing 0;
+    padding: .5 * $medium-spacing 0 .6 * $medium-spacing;
     line-height: $medium-spacing;
     list-style: none;
 
