@@ -257,10 +257,14 @@ Style guide: Navigation.2 Local Navigation
 
     font-size: rem(14);
 
+    &:hover {
+      border-color: $border-contrast-colour;
+      background-color: $lighter-aqua;
+    }
+
     &:active,
     &.active,
     &.is-active {
-      border-color: $border-contrast-colour;
       background-color: $lighter-aqua;
     }
 
