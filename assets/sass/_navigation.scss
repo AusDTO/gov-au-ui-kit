@@ -249,12 +249,13 @@ Style guide: Navigation.2 Local Navigation
     background-color: $background-colour;
     text-decoration: none;
     color: $non-black;
-    font-size: rem(16);
 
     &:hover {
       border-color: $border-contrast-colour;
       background-color: $nav-focus-colour;
     }
+
+    font-size: rem(14);
 
     &:active,
     &.active,
