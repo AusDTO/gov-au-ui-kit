@@ -301,6 +301,11 @@ Style guide: Navigation.2 Local Navigation
       background-color: $dark-aqua;
       color: $white;
       padding: $medium-spacing / 2 $small-spacing;
+
+      &:hover {
+        border-color: $dark-aqua;
+        background-color: $dark-aqua;
+      }
     }
 
   }
