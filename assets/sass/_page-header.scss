@@ -44,11 +44,9 @@ header[role='banner'] {
       }
     }
 
-    .badge--alpha,
-    .badge--beta {
+    [class^='badge'] {
       vertical-align: text-bottom;
       margin-left: $tiny-spacing;
-      background-color: $aqua;
     }
 
     .feedback {
