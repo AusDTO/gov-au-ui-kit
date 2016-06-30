@@ -259,7 +259,8 @@ Style guide: Navigation.2 Local Navigation
     &:active,
     &.active,
     &.is-active {
-      background-color: $nav-focus-colour;
+      border-color: $border-contrast-colour;
+      background-color: $lighter-aqua;
     }
 
   }
