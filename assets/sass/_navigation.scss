@@ -253,13 +253,12 @@ Style guide: Navigation.2 Local Navigation
 
     &:hover {
       border-color: $border-contrast-colour;
-      background-color: $nav-focus-colour;
+      background-color: $lighter-aqua;
     }
 
     &:active,
     &.active,
     &.is-active {
-      border-color: $border-contrast-colour;
       background-color: $lighter-aqua;
     }
 
