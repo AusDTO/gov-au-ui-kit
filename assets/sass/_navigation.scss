@@ -215,12 +215,7 @@ Style guide: Navigation.2 Local Navigation
       }
 
       a {
-        border-left: 1px solid transparent;
         padding-left: $base-spacing;
-
-        &:hover {
-          border-left: 1px solid $border-contrast-colour;
-        }
       }
 
       ul {
@@ -249,7 +244,7 @@ Style guide: Navigation.2 Local Navigation
   a {
     display: block;
     border: none;
-    border-left: 2px solid transparent;
+    border-left: 4px solid transparent;
     padding: $tiny-spacing $small-spacing;
     background-color: $background-colour;
     text-decoration: none;
