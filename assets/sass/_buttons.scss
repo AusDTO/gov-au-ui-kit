@@ -9,6 +9,8 @@ Use button text to describe what the button does&mdash;keep it short.
 
 The button alignment in [forms](section-forms.html) should put the primary action button at the left edge, in the user's line of sight.
 
+<hr />
+
 This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 Style guide: Buttons
@@ -19,7 +21,7 @@ Creating buttons
 
 Call buttons using:
 
-- `<button>` element (for actions like submitting a form)`
+- `<button>` element (for actions like submitting a form)
 - the `role` property of `a` elements (eg an anchor link).
 
 Do not apply styles to disabled buttons.

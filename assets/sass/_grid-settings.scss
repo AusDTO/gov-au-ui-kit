@@ -1,9 +1,9 @@
 /*
 Grid
 
-This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to create a consistent 16 column responsive grid layout with good defaults.
+This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to create a consistent 12 column responsive grid layout with good defaults.
 
-Bourbon is a SaSS mixin library (it provides little, if any styling), while Neat is a flexible grid framework.
+Bourbon is a SaSS mixin library (it provides little styling). Neat is a flexible grid framework.
 
 Avoid mixing this layout with other grid layouts.
 
@@ -54,7 +54,7 @@ We are exploring using a fourth breakpoint: wide desktop.
 
 If you give an element a modified grid setting consider the implications for all breakpoints. The Digital Service Standard recommends you [build using mobile first design principles](https://www.dto.gov.au/standard/6-consistent-and-responsive/).
 
-Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy) at different breakpoints.
+Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy-1-breakpoints) at different breakpoints.
 ```
 $desktop: new-breakpoint(max-width 1200px 12);
 $tablet: new-breakpoint(max-width 768px 8);
@@ -69,7 +69,7 @@ Layout
 
 Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar / side navigation.
 
-![Diagram of the layout across 12 columns](../kss-builder/kss-assets/img_layout_12col_720.png)
+![Diagram of the layout across 12 columns](kss-assets/img_layout_12col_720.png)
 
 Style guide: Grid.4 Layout
 */

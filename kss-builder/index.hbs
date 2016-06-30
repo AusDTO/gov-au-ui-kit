@@ -38,6 +38,7 @@
           src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
   <![endif]-->
 
+  <script type="text/javascript" src="latest/ui-kit.js"></script>
 </head>
 <body>
 
@@ -48,14 +49,14 @@
         <a href="#" class="logo">gov.au ui-kit</a> <span class="badge--default">draft</span>
       </div>
       <div class="feedback">
-        <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" class="button--feedback">Give feedback</a>
+        <a href="https://github.com/AusDTO/gov-au-ui-kit/issues/new" class="button--feedback">Give feedback</a>
       </div>
     </div>
   </section>
   {{# if homepage}}
   <section class="hero">
     <div class="wrapper">
-      <a href="/" class="site-title">{{options.title}}</a>
+      <span class="site-title">{{options.title}}</span>
       <p class="tagline">A living style guide of <code>gov-au-ui-kit</code>, built using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
       <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
@@ -66,7 +67,9 @@
 <main>
   <aside class="sidebar">
     <nav class="primary-nav" aria-label="main navigation">
-      <ul>
+      <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
+         aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
+      <ul id="primary-nav-panel" aria-labelledby="primary-nav-heading">
         <li>
           <a href="/">Getting started</a>
         </li>

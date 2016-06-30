@@ -1,6 +1,6 @@
 # `gov-au-ui-kit`
 
-[![CircleCI](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=svg)](https://circleci.com/gh/AusDTO/gov-au-ui-kit)
+![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield)
 
 ## What is this?
 
@@ -24,7 +24,7 @@ UI Kit (`gov-au-ui-kit`) is 3 things:
 - Bourbon, version 4.2.7.
 - Neat, and settings for a grid framework with some good defaults.
 - Basic styling for content with some good typographic coverage.
-- Basic styling for UI elements (eg `input`, `label`, etc.).
+- Basic styling for UI elements (eg `input`, `label`, etc).
 - UI components build on solid HTML foundation.
 - Built on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
 
@@ -42,7 +42,7 @@ The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams 
 
 You should use this with the [draft **Content Style Guide**](http://content-style-guide.apps.staging.digital.gov.au/) for Digital Transformation Office projects.
 
-## Build the SCSS yourself
+## Build the Guide yourself
 
 We have a build process for the development of the framework which uses gulp on node.js.
 
@@ -58,17 +58,21 @@ npm install
 Run a build:
 
 ```
-gulp
+gulp build
 ```
 
-The style guide can now be found at `./build/index.html`
+The compiled style guide can be found at `./build/index.html` and the UI Kit CSS
+at `./build/latest/ui-kit.css`.
 
 We have automated the build, with a few additions:
 
-- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software))
-- `kss-node` for auto-building a living style guide: http://warpspire.com/kss/
+- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software)
+- `cssnano` for [CSS compression](http://cssnano.co/)
+- `autoprefixer` for adding [CSS vendor prefixes](https://autoprefixer.github.io/)
+- `AusDTO/gulp-html` for [HTML validation](https://github.com/AusDTO/gulp-html)
+- `kss` for auto-building a [living style guide](http://warpspire.com/kss/)
 
-This is available as a shell script at `bin/cibuild.sh`.
+Our CI build is available as a shell script at `bin/cibuild.sh`.
 
 ### Dependencies
 
@@ -84,9 +88,9 @@ Some of the key libraries we use are:
 
 ## Make gov-au-ui-kit better
 
-- Create a new [**GitHub issue**](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
-- Contribute to this repository. Please see the [**Contributor Code of Conduct**](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md) and [our code **Conventions**](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
-- Contact us on slack in `#govau-uikit`.
+- Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
+- Contribute to this repository. Please see the [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
+- Contact us on slack in `#govau-guide`.
 
 ## Project goal
 
@@ -96,7 +100,7 @@ Goal: build a lean and frugal CSS/SCSS framework to make building GOV.AU easier.
 
 - provide base consistency
 - allow for easier rapid prototyping directly in the browser
-- shouldn't get in the way of customised design needs.
+- should not get in the way of customised design needs.
 
 ### Releases
 
@@ -123,8 +127,8 @@ This will allow us to establish the basics of the framework while meeting a rela
 We are focused on:
 
 - establishing the basic framework
-- provide UI styling for `input`, `label`, etc.
-- styling for other buttons, next/previous, etc.
+- provide UI styling for `input`, `label`, etc
+- styling for other buttons, next/previous, etc
 - some sane basics for high level block elements inc. `main`, `article`, `header`, and `footer`
 - styling for primary and secondary `nav`.
 
@@ -141,7 +145,7 @@ Iterate in 2 ways:
 
 ## Copyright & license
 
-Copyright Digital Transformation Office. [Licensed under the MIT license](https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE)).
+Copyright Digital Transformation Office. [Licensed under the MIT license](https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE).
 
 This repository includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/) and [Normalize.css](https://necolas.github.io/normalize.css/). All also use the MIT license.
 

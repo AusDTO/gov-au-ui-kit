@@ -2,14 +2,15 @@
 
 ## UI Kit "Kraken"
 
-### 1.0.0 - 2016-06-28
+### 1.0.0 - 2016-06-29
 
-Guide MVP is now (live)[1].
+Guide MVP is now live ([1]).
 
 Adds:
 
-- Guide now uses UI Kit styles throughout
-- 'Last Updated' added to UI Kit documentation
+- Style guide
+  - Guide now uses UI Kit styles throughout
+  - 'Last Updated' added to UI Kit documentation
 - Buttons
   - Guidance on how to apply button styling to `button` and `a` elements
 - Colours
@@ -25,14 +26,15 @@ Adds:
   - Primary navigation (vertical sidebar)
   - Breadcrumbs
 - Typography
-  - Body font changed to (Open Sans)[2]
+  - Body font changed to Open Sans ([2])
   - Guidance on font and heading sizes
   - Callouts & blockquotes
   - Badges
 
 Markup changes:
 
-- (Badge)[3] variants now use BEM classnames (e.g. `badge--beta`)
+- Badge ([3]) variants now use BEM classnames (eg `badge--beta`)
+- Callout ([4]) variant now use BEM classname (eg `callout--warning`)
 
 ## UI Kit "Rugby"
 
@@ -60,3 +62,4 @@ Bugfixes:
 [1]: https://gov-au-ui-kit.apps.staging.digital.gov.au/
 [2]: https://www.google.com/fonts/specimen/Open+Sans
 [3]: https://gov-au-ui-kit.apps.staging.digital.gov.au/section-typography.html#kssref-typography-4-horizontal-vertical-rhythm-3-badges
+[4]: https://gov-au-ui-kit.apps.staging.digital.gov.au/section-typography.html#kssref-typography-4-horizontal-vertical-rhythm-2-callouts-warnings
