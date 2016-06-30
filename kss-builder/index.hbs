@@ -93,7 +93,7 @@
 
   <article role="main">
     {{#if homepage}}
-      <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview">
+      <div id="kssref-0" class="guide-section guide-section--depth-0 kss-overview">
         {{{homepage}}}
       </div>
     {{else}}
@@ -116,7 +116,7 @@
       </ul>
       {{#each sections}}
         <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
-                                                 class="guide-section kss-section--depth-{{depth}}">
+                                                 class="guide-section guide-section--depth-{{depth}}">
 
           <div>
             {{#unless @first}}
