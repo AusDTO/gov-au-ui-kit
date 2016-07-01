@@ -124,7 +124,8 @@ Style guide: Navigation.Breadcrumbs
 */
 .breadcrumbs {
   @include outer-container(100%);
-
+  min-width: 100%;
+  flex: none;
   margin-top: 0;
   background-color: $non-white;
   color: $grey;
