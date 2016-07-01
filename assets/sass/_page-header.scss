@@ -81,7 +81,8 @@ header[role='banner'] {
     }
 
     .tagline {
-      @extend .abstract;
+      @extend h4;
+      font-weight: $base-font-weight;
     }
 
     code,
