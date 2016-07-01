@@ -29,18 +29,19 @@ main {
   }
 
   padding-top: $base-spacing;
+  zoom: 1; /* IE < 8 */
 
-  // IE 8 "clearfix" from https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
-  // HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/
-  // scss-lint:disable PseudoElement
-  &,
-  &::before,
-  &::after {
-    content: ' ';
-    display: table;
+  // http://cssmojo.com/latest_new_clearfix_so_far/
+  // !!! using single colons for Pseudo-elements for compatibility
+  &:before,
+  &:after {
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
   }
 
-  &::after {
+  &:after {
     clear: both;
   }
 
