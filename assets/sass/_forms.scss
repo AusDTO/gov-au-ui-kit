@@ -8,7 +8,7 @@ The forms features in HTML5 provide a better experience for users by making form
 Style guide: Forms
 */
 
-%base-text-input {
+%base-input {
   width: 100%;
   outline-offset: 0;
   border: 2px solid $border-colour;
@@ -21,13 +21,19 @@ Style guide: Forms
     outline: 2px solid $error-colour;
   }
 
+  &:valid,
+  &.valid {
+    outline: 2px solid $success-colour;
+  }
+
   &:focus {
     outline: 2px solid $focus-colour;
   }
 
-  &:disabled {
-    opacity: 0.5;
+  &:disabled,
+  &[disabled] {
     cursor: not-allowed;
+    opacity: .5;
   }
 
 }
@@ -106,13 +112,13 @@ form {
   [type='text'],
   [type='email'],
   [type='password'] {
-    @extend %base-text-input;
+    @extend %base-input;
   }
 
   /*
   Textarea input
 
-  A multi-line text input that can be resised vertically by the user.
+  A multi-line text input that can be resized vertically by the user.
 
   Markup:
   <form>
@@ -124,8 +130,186 @@ form {
   */
 
   textarea {
-    @extend %base-text-input;
+    @extend %base-input;
     resize: vertical;
   }
 
+
+  input {
+    &[type='radio'],
+    &[type='checkbox'] {
+      @extend %base-input;
+      height: 1px;
+      // hide the native widget but keep it in the tab order
+      left: -10000px;
+      position: absolute;
+      visibility: visible;
+      width: 1px;
+
+      &:focus + label {
+        outline: 1px solid $border-colour;
+      }
+
+      &:invalid + label {
+        color: $error-colour;
+
+        &::before {
+          border-color: $error-colour;
+        }
+      }
+
+      + label {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 15px 0 15px 60px;
+        position: relative;
+        width: 100%;
+
+        @include media($tablet) {
+          padding: 12px 0 12px 60px;
+        }
+
+        &::before {
+          display: inline-block;
+          height: 27px;
+          position: absolute;
+          text-align: center;
+          top: 13px;
+          width: 27px;
+
+          @include media($tablet) {
+            top: 9px;
+          }
+        }
+      }
+    }
+  }
+
+  /*
+Radio button input
+
+A collection of mutually exclusive options.
+
+Markup:
+<form>
+          <fieldset>
+            <legend>Would you like?</legend>
+            <input id="yes" name="reply" type="radio" value="Yes"/>
+            <label for="yes">Yes</label>
+            <input id="no" name="reply" type="radio" value="No"/>
+            <label for="no">No</label>
+          </fieldset>
+</form>
+
+Style guide: Forms.RadioButtonInput
+*/
+  input[type='radio'] {
+    & + label {
+      &::before {
+        border: 2px solid $body-text-colour;
+        border-radius: 50%;
+        content: '';
+        left: 18px;
+      }
+    }
+
+    &:checked + label {
+      font-weight: bold;
+
+      &::before {
+        border-radius: 50%;
+        content: '';
+      }
+
+      &::after {
+        width: 17px;
+        height: 17px;
+        background-color: $body-text-colour;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        content: '';
+        left: 23px;
+        top: 18px;
+        position: absolute;
+
+        @include media($tablet) {
+          top: 14px;
+        }
+      }
+    }
+  }
+
+  /*
+Checkbox input
+
+A collection of options where any number of options can be chosen.
+
+Markup:
+<form>
+        <fieldset>
+          <legend>Which would you like?</legend>
+          <input id="aaa" name="reply" type="checkbox" value="AAA"/>
+          <label for="aaa">AAA</label>
+          <input id="bbb" name="reply" type="checkbox" value="BBB"/>
+          <label for="bbb">BBB</label>
+           <input id="ccc" name="reply" type="checkbox" value="CCC"/>
+          <label for="ccc">CCC</label>
+        </fieldset>
+</form>
+
+Style guide: Forms.CheckboxInput
+*/
+  input[type='checkbox'] + label {
+    &::before {
+      left: 20px;
+      border: 2px solid $body-text-colour;
+      content: '';
+      @include media($tablet) {
+        top: 9px;
+      }
+    }
+  }
+
+  input[type='checkbox'] {
+    &:checked + label {
+      font-weight: bold;
+
+      &::before {
+        font-size: 18px;
+        content: '';
+      }
+
+      &::after {
+        width: 17px;
+        height: 17px;
+        background-color: $body-text-colour;
+        border: 1px solid transparent;
+        content: '';
+        left: 25px;
+        top: 18px;
+        position: absolute;
+
+        @include media($tablet) {
+          top: 14px;
+        }
+      }
+    }
+  }
+}
+
+// show native checkboxes and radio buttons on IE6/7/8
+.ie6,
+.ie7,
+.ie8 {
+  input {
+    &[type='radio'],
+    &[type='checkbox'] {
+      border: 0;
+      height: 3em;
+      left: 1px;
+      margin-bottom: -4em;
+      position: relative;
+      width: 3em;
+    }
+  }
 }

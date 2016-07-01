@@ -2,6 +2,15 @@
 
 ## UI Kit "Kraken"
 
+### Next release
+
+- Typography
+  - Heading sizes scaled down
+  - Added 700 font-weight to apply to headings
+  - Scale down body line-height
+  - Increase space between list items
+  - Added styles for `hr` element
+
 ### 1.0.0 - 2016-06-29
 
 Guide MVP is now live ([1]).

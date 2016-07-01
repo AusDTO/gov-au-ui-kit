@@ -25,18 +25,23 @@ Typeface
 
 We are currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
 
-<div class="guide--type-example"><h4>Open Sans regular 400</h4>
-  <p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<div class="guide-example--type"><h4>Open Sans regular 400</h4>
+  <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</p>
 </div>
-<div class="guide--type-example"><h4>Open Sans regular 400 italic</h4>
-  <p class='abstract'><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<div class="guide-example--type"><h4>Open Sans regular 400 italic</h4>
+  <p><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</em></p>
 </div>
-<div class="guide--type-example"><h4>Open Sans bold 700</h4>
-  <p class='abstract'><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<div class="guide-example--type"><h4>Open Sans semi bold 600</h4>
+  <p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890(!@#s%g.,?:;)</strong></p>
+</div>
+<div class="guide-example--type"><h4>Open Sans bold 700</h4>
+  <p><strong class="very-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</strong></p>
 </div>
@@ -76,7 +81,7 @@ You should think about this in parallel with the [grid breakpoints](section-grid
 Style guide: Typography.2 Headings & body copy.1 Breakpoints
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,700,400&subset=latin,latin-ext');
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
 $base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
@@ -115,7 +120,7 @@ Style guide: Typography.3 Spacing
 */
 
 // Leading/line-height.
-$base-leading: 1.8;
+$base-leading: 1.6;
 $base-heading-leading: 1.4;
 $small-leading: 1.2;
 
@@ -128,7 +133,7 @@ $tiny-spacing: $base-spacing / 4;
 // Font weights
 $base-font-weight: 400;
 $bold-font-weight: 600;
-$heading-font-weight: $bold-font-weight;
+$heading-font-weight: 700;
 
 // Font sizes
 $small-font-size: 87.5%;
@@ -171,44 +176,44 @@ Use relative units to allow for variety across users' browsers and device screen
   </tr>
   <tr>
     <td>h1 / .display </td>
-    <td>51 / 3.1875em</td>
-    <td>57 / 3.5625em<br></td>
-    <td>51 / 3.1875em</td>
+    <td>32 / 2em</td>
+    <td>44 / 2.75em<br></td>
+    <td>40 / 2.5em</td>
   </tr>
   <tr>
     <td>h2</td>
-    <td>43 / 2.6875em</td>
-    <td>43 / 2.6875em</td>
-    <td>38 / 2.375em</td>
+    <td>28 / 1.75em</td>
+    <td>32 / 2em</td>
+    <td>32 / 2em</td>
   </tr>
   <tr>
     <td>h3</td>
-    <td>28 / 1.75em</td>
-    <td>32 / 1.75em</td>
-    <td>28 / 1.75em</td>
+    <td>24 / 1.5em</td>
+    <td>26 / 1.625em</td>
+    <td>26 / 1.625em</td>
   </tr>
   <tr>
     <td>h4 / .abstract</td>
-    <td>21 / 1.3125em</td>
-    <td>24 / 1.5em</td>
-    <td>21 / 1.3125em</td>
+    <td>19 / 1.1875em</td>
+    <td>22 / 1.375em</td>
+    <td>22 / 1.275em</td>
   </tr>
   <tr>
     <td>h5</td>
-    <td>18 / 1.125em</td>
-    <td>18 / 1.125em</td>
-    <td>16 / >1em</td>
+    <td>16 / 1em</td>
+    <td>16 / 1em</td>
+    <td>16 / 1em</td>
   </tr>
   <tr>
     <td>h6</td>
-    <td>18 / 1.125em</td>
-    <td>18 / 1.125em</td>
+    <td>16 / 1em</td>
+    <td>16 / 1em</td>
     <td>16 / 1em</td>
   </tr>
   <tr>
     <td>Body copy</td>
-    <td>18 / 1.125em</td>
-    <td>18 / 1.125em</td>
+    <td>16 / 1em</td>
+    <td>16 / 1em</td>
     <td>16 / 1em</td>
   </tr>
 </table>
@@ -227,26 +232,21 @@ h4,
 h5,
 h6 {
   line-height: $base-heading-leading;
-  font-weight: $base-font-weight;
-  margin-bottom: $small-spacing;
+  font-weight: $heading-font-weight;
+  margin-bottom: $small-spacing * .5;
   margin-top: $base-spacing;
 }
 
 h1 {
-  font-size: rem(57);
-  font-weight: $base-font-weight;
+  font-size: rem(40);
   line-height: $small-leading;
 
-  @include media($desktop) {
-    font-size: rem(51);
-  }
-
   @include media($tablet) {
-    font-size: rem(57);
+    font-size: rem(44);
   }
 
   @include media($mobile) {
-    font-size: rem(51);
+    font-size: rem(32);
   }
 
   &:first-of-type {
@@ -255,57 +255,29 @@ h1 {
 }
 
 h2 {
-  font-size: rem(43);
+  font-size: rem(32);
   line-height: $small-leading;
 
-  @include media($desktop) {
-    font-size: rem(38);
-  }
-
-  @include media($tablet) {
-    font-size: rem(43);
-  }
-
   @include media($mobile) {
-    font-size: rem(38);
-  }
-
-  &:first-of-type {
-    margin-top: $tiny-spacing;
+    font-size: rem(28);
   }
 }
 
 h3 {
-  font-size: rem(28);
+  font-size: rem(26);
   font-weight: $heading-font-weight;
 
-  @include media($desktop) {
-    font-size: rem(28);
-  }
-
-  @include media($tablet) {
-    font-size: rem(32);
-  }
-
   @include media($mobile) {
-    font-size: rem(28);
+    font-size: rem(24);
   }
 }
 
 h4 {
-  font-size: rem(21);
+  font-size: rem(22);
   font-weight: $heading-font-weight;
 
-  @include media($desktop) {
-    font-size: rem(21);
-  }
-
-  @include media($tablet) {
-    font-size: rem(24);
-  }
-
   @include media($mobile) {
-    font-size: rem(21);
+    font-size: rem(19);
   }
 }
 
@@ -313,16 +285,8 @@ h5 {
   font-size: rem(16);
   font-weight: $heading-font-weight;
 
-  @include media($desktop) {
-    font-size: rem(16);
-  }
-
-  @include media($tablet) {
-    font-size: rem(18);
-  }
-
   @include media($mobile) {
-    font-size: rem(18);
+    font-size: rem(16);
   }
 }
 
@@ -357,6 +321,15 @@ kbd {
 
 strong {
   font-weight: $bold-font-weight;
+  &.very-bold {
+    font-weight: $heading-font-weight;
+  }
+}
+
+hr {
+  border-color: $border-secondary-colour;
+  border-style: solid;
+  border-bottom: none;
 }
 
 /*
@@ -427,6 +400,11 @@ Style guide: Typography.4 Horizontal & vertical rhythm.4 Quotations
 */
 
 ul,
+ol {
+  padding-left: 1.1 * $base-spacing;
+}
+
+ul,
 ol,
 dl,
 p,
@@ -434,6 +412,7 @@ dt,
 dd {
   margin-bottom: $small-spacing;
   font-size: rem(16);
+  line-height: $base-spacing;
 
   @include media($tablet) {
     font-size: rem(18);
@@ -445,7 +424,7 @@ dd {
 }
 
 li {
-  margin-bottom: ($small-spacing / 2);
+  margin-bottom: ($small-spacing / 1.5);
   margin-left: -($small-spacing / 4);
   padding-left: ($small-spacing / 4);
 
@@ -477,6 +456,9 @@ dt {
   @extend h4;
 
   font-weight: $base-font-weight;
+  border-bottom: 1px solid;
+  padding-bottom: 1.3 * $base-spacing;
+  margin-bottom: 2 * $base-spacing;
 }
 
 blockquote {
