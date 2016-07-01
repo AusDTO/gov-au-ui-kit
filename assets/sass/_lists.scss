@@ -12,9 +12,9 @@ Style guide: List styles
 */
 
 /*
-Horizontal list view
+Horizontal list
 
-Markup: templates/lists.hbs
+Markup: templates/lists-horiz.hbs
 
 Style guide: List styles.1 Horizontal list
 */
@@ -61,16 +61,19 @@ Style guide: List styles.1 Horizontal list
     }
   }
 
-  h3 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: $tiny-spacing;
   }
 
   .tags {
     //font-size: $small-font-size; https://github.com/AusDTO/gov-au-ui-kit/issues/101
     color: $grey;
 
-    h4,
     dl,
     dt,
     dd {
