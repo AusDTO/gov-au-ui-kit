@@ -12,7 +12,6 @@ This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.he
 Style guide: Forms
 */
 
-<<<<<<< HEAD
 /*
 Form controls
 
@@ -104,10 +103,7 @@ Markup:
 Style guide: Forms.3 HintText
 */
 
-%base-text-input {
-=======
 %base-input {
->>>>>>> develop
   width: 100%;
   outline-offset: 0;
   border: 2px solid $border-colour;
@@ -162,8 +158,6 @@ form {
     @extend %base-input;
   }
 
-<<<<<<< HEAD
-=======
   /*
   Textarea input
 
@@ -178,7 +172,6 @@ form {
   Style guide: Forms.TextAreaInput
   */
 
->>>>>>> develop
   textarea {
     @extend %base-input;
     resize: vertical;
