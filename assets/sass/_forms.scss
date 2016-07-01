@@ -21,6 +21,11 @@ Style guide: Forms
     outline: 2px solid $error-colour;
   }
 
+  &:valid,
+  &.valid {
+    outline: 2px solid $success-colour;
+  }
+
   &:focus {
     outline: 2px solid $focus-colour;
   }

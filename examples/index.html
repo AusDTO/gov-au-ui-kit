@@ -258,7 +258,7 @@
       <form>
         <p>
           <label for="name">Your name</label>
-          <input type="text" id="name" required/>
+          <input type="text" id="name"/>
         </p>
         <p>
           <label for="colour">Your favourite colour</label>
@@ -266,8 +266,8 @@
         </p>
         <p>
           <label for="contact">Your contact</label>
-          <span class="hint" id="name-hint">Please provide an email address or phone number.</span>
-          <input type="text" id="contact" aria-describedby="name-hint"/>
+          <span class="hint" id="name-hint">Please provide an email address.</span>
+          <input type="email" id="contact" aria-describedby="name-hint" required/>
         </p>
 
         <fieldset id="reply">
