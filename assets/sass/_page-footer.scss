@@ -31,7 +31,15 @@ footer[role='contentinfo'] {
       display: inline-block;
     }
   }
+  /*
+  Footer navigation
 
+  A number of lists of links arranged horizontally
+
+  Markup: templates/footer-navigation.hbs
+
+  Style guide: Navigation.Footer Navigation
+  */
   nav {
     @include media($tablet) {
       @include span-columns(6 of 8);
