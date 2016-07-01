@@ -51,6 +51,7 @@ Style guide: List styles.1 Horizontal list
 
   .meta {
     font-size: $small-font-size;
+    margin-top: $small-spacing;
 
     time {
       color: $grey;
@@ -62,6 +63,7 @@ Style guide: List styles.1 Horizontal list
 
   h3 {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .tags {
