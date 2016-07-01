@@ -21,8 +21,8 @@ Style guide: List styles.1 Horizontal list
 
 .list-horiz {
   @include outer-container;
-  background-color: $non-white;
-  padding: $base-spacing 0;
+  padding: ($base-spacing * 1.5) 0;
+  border-bottom: solid 1px $light-grey;
 
   .image-box {
     @include span-columns(3);
@@ -32,12 +32,28 @@ Style guide: List styles.1 Horizontal list
     @include span-columns(9);
   }
 
+  .list-horiz--body-full {
+    //Full width no col
+  }
+
+  .meta {
+    font-size: $small-font-size;
+
+    time {
+      color: $grey;
+      border-right: solid 1px $grey;
+      margin-right: $small-spacing;
+      padding-right: $small-spacing;
+    }
+  }
+
   h3 {
     margin-top: 0;
   }
 
-  footer {
-    font-size: $small-font-size;
+  .tags {
+    //font-size: $small-font-size; https://github.com/AusDTO/gov-au-ui-kit/issues/101
+    color: $grey;
 
     h4,
     dl,
@@ -51,6 +67,11 @@ Style guide: List styles.1 Horizontal list
     dt,
     dd {
       margin-right: $tiny-spacing;
+      font-size: $small-font-size;
+    }
+
+    a {
+      color: $aqua;
     }
   }
 }
