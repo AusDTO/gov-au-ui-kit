@@ -85,12 +85,12 @@ Style guide: Grid.5 Wrapper class
 /*
 Margins & gutters
 
-Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 20px.
+Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 32px.
 
 ```
-$grid-columns: 12 !global;
+$grid-columns: 16 !global;
 $max-width: em(1200) !global;
-$gutter: em(20);
+$gutter: em(32);
 ```
 
 Style guide: Grid.6 Margins & gutters
@@ -107,13 +107,21 @@ Style guide: Grid.7 Header & footer
 /*
 Accessibility
 
-Design for small screens first. Optimise for larger sizes, but do not assume you know which devices people are using.
+- Mobile: 4 columns, 420px maximum
+- Tablet: 8 columns, 768px maximum
+- Desktop: 12 columns, 1000px maximum
+- Desktop XL: 16 columns, 1200px minimum
 
 Long lines reduce legibility. Lines of text should be no longer than 75 characters. Place text in narrower grid boxes to stop text lines from becoming too wide.
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 
-Style guide: Grid.8 Accessibility
+$desktop: new-breakpoint(max-width $max-width 12);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 420px 4);
+```
+
+Style guide: Grid settings.2 Screen size
 */
 
 /*
@@ -130,14 +138,15 @@ See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/exampl
 Style guide: Grid.7 Debugging
 */
 
-$visual-grid: false;
+// Toggle visibility of your grid columns for development/debugging.
+$visual-grid: true;
 
 $border-box-sizing: true;
 $disable-warnings: true;
 
-$grid-columns: 12 !global;
+$grid-columns: 16 !global;
 $max-width: em(1200) !global;
-$gutter: em(20);
+$gutter: em(32);
 
 // Media Queries
 @import 'vendor/neat/neat-helpers';
