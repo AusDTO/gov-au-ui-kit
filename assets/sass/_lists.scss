@@ -14,15 +14,16 @@ Style guide: List styles
 /*
 Horizontal list view
 
-Example to come
+Markup: templates/lists.hbs
 
 Style guide: List styles.1 Horizontal list
 */
 
 .non-list {
   list-style: none;
-  margin: 0;
+  margin: ($base-spacing * 2) 0;
   padding: 0;
+  border-top: solid 1px $light-grey;
 }
 
 .list-horiz {
@@ -31,11 +32,17 @@ Style guide: List styles.1 Horizontal list
   border-bottom: solid 1px $light-grey;
 
   .image-box {
-    @include span-columns(3);
+    @include span-columns(4);
+    @include media($tablet) {
+      width: auto;
+    }
   }
 
   .list-horiz--body {
-    @include span-columns(9);
+    @include span-columns(8);
+    @include media($tablet) {
+      width: auto;
+    }
   }
 
   .list-horiz--body-full {
