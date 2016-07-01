@@ -41,9 +41,9 @@ We are currently testing the open source [Open Sans font family](https://www.goo
   1234567890(!@#s%g.,?:;)</strong></p>
 </div>
 <div class="guide-example--type"><h4>Open Sans bold 700</h4>
-  <p style="font-weight:700;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  <p><strong class="very-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
-  1234567890(!@#s%g.,?:;)</p>
+  1234567890(!@#s%g.,?:;)</strong></p>
 </div>
 
 The framework is likely to change to a different primary typeface. We are currently testing the use of webfonts generally.
@@ -321,6 +321,9 @@ kbd {
 
 strong {
   font-weight: $bold-font-weight;
+  &.very-bold {
+    font-weight: $heading-font-weight;
+  }
 }
 
 hr {
