@@ -46,7 +46,7 @@ main {
   }
 
   article {
-    @include span-columns(12 of 16);
+    @include span-columns(9 of 16);
     @include shift(1);
 
     @include media($desktop) {
