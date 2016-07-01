@@ -1,22 +1,105 @@
 /*
 List views
 
-This framework provides 4 list views styles:
+This framework provides 4 list view styles:
 
 - horizontal list view
 - small list view
 - vertical list view
 - hero list view
 
+Each style has several possible configurations (eg with or without image).
+
+You can add tags to each item using the HTML `<dt>` tag.
+
 Style guide: List styles
 */
 
 /*
-Horizontal list view
+Horizontal list
 
-Markup: templates/lists.hbs
+### Image configuration
+
+<ul class="non-list">
+  <li>
+    <article class="list-horiz">
+      <div class="image-box">
+        <img src="kss-assets/img-placeholder.gif" alt="example image"/>
+      </div>
+
+      <div class="list-horiz--body">
+        <h3>
+          <a href="#">Item link</a>
+        </h3>
+
+        <div class="list-horiz--meta">
+          <time datetime="2016-05-08 00:00">08 May 2016</time>
+          <a href="#" rel="author">Author</a>
+        </div>
+
+        <div class="list-horiz--snippet">
+          <p>About the item.</p>
+        </div>
+
+        <footer class="tags">
+          <dl>
+            <dt>Topics:</dt>
+              <dd><a href="#">Tag Name</a></dd>
+          </dl>
+        </footer>
+      </div>
+    </article><!--list-horiz-->
+  </li>
+</ul>
+
+### No image configuration
+
+<ul class="non-list">
+  <li>
+    <article class="list-horiz">
+      <div class="list-horiz--body-full">
+        <h3>
+          <a href="#">Item link</a>
+        </h3>
+
+        <div class="meta">
+          <time datetime="2016-05-08 00:00">08 May 2016</time> <a href="#" rel="author">Author</a>
+        </div>
+
+        <div class="list-horiz--snippet">
+          <p>About the item.</p>
+        </div>
+
+        <footer class="tags">
+          <dl>
+            <dt>Topics:</dt>
+              <dd><a href="#">Tag Name</a></dd>
+          </dl>
+        </footer>
+      </div>
+    </article><!--list-horiz-->
+  </li>
+</ul>
 
 Style guide: List styles.1 Horizontal list
+*/
+
+/*
+Small list
+
+Style guide: List styles.2 Small list
+*/
+
+/*
+Vertical list
+
+Style guide: List styles.3 Vertical list
+*/
+
+/*
+Hero list
+
+Style guide: List styles.4 Hero list
 */
 
 .non-list {
