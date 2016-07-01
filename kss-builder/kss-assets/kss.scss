@@ -9,6 +9,11 @@
   }
 }
 
+.guide-section--depth-2 {
+  border-top: solid 1px $light-grey;
+  margin-top: $base-spacing * 2;
+}
+
 .guide-example {
   border: solid 5px $non-white;
   margin: $base-spacing 0;
@@ -16,6 +21,27 @@
 
   :first-child {
     margin-top: 0;
+  }
+}
+
+.guide-example--type {
+  background-color: $non-white;
+  border-radius: $base-border-radius;
+  color: $dark-aqua;
+  margin-bottom: $small-spacing;
+  padding: 2em;
+  overflow: auto;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -326,35 +352,4 @@ code {
     color: $black;
   }
 
-}
-
-
-// ------------------------------------------------------------------------------
-//   Guide Typography Page Styles
-// ------------------------------------------------------------------------------
-.guide--type-example {
-  background-color: $non-white;
-  border-radius: $base-border-radius;
-  color: $dark-aqua;
-  margin-bottom: $small-spacing;
-  padding: 2em;
-  overflow: auto;
-
-  h4 {
-    margin-top: 0;
-  }
-
-  p {
-    font-size: 2em;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.kss-section--depth-2 {
-  border-top: solid 1px $light-grey;
-  margin-top: $base-spacing * 2;
-  padding-top: $base-spacing * 2;
 }
