@@ -3,7 +3,14 @@
 ## UI Kit "Kraken"
 
 ### Next release
-
+- Forms
+  - Added styled checkboxes and radio buttons
+- Header and Footer
+  - Ensured footer is pushed to the bottom of the screen even with short content
+- List views
+  - Added horizontal, vertical and small lists of content
+- Tables
+  - Documented use of tables
 - Typography
   - Heading sizes scaled down
   - Added 700 font-weight to apply to headings
@@ -11,8 +18,7 @@
   - Increase space between list items
   - Added styles for `hr` element
 
-
-### 1.0.0 - 2016-06-30
+### 1.0.0 - 2016-06-29
 
 Guide MVP is now live ([1]).
 
