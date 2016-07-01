@@ -1,0 +1,92 @@
+/*
+List views
+
+This framework provides 4 list views styles:
+
+- horizontal list view
+- small list view
+- vertical list view
+- hero list view
+
+Style guide: List styles
+*/
+
+/*
+Horizontal list view
+
+Markup: templates/lists.hbs
+
+Style guide: List styles.1 Horizontal list
+*/
+
+.non-list {
+  list-style: none;
+  margin: ($base-spacing * 2) 0;
+  padding: 0;
+  border-top: solid 1px $light-grey;
+}
+
+.list-horiz {
+  @include outer-container;
+  padding: ($base-spacing * 1.5) 0;
+  border-bottom: solid 1px $light-grey;
+
+  .image-box {
+    @include span-columns(4);
+    @include media($tablet) {
+      width: auto;
+    }
+  }
+
+  .list-horiz--body {
+    @include span-columns(8);
+    @include media($tablet) {
+      width: auto;
+    }
+  }
+
+  .list-horiz--body-full {
+    //Full width no col
+  }
+
+  .meta {
+    font-size: $small-font-size;
+    margin-top: $small-spacing;
+
+    time {
+      color: $grey;
+      border-right: solid 1px $grey;
+      margin-right: $small-spacing;
+      padding-right: $small-spacing;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .tags {
+    //font-size: $small-font-size; https://github.com/AusDTO/gov-au-ui-kit/issues/101
+    color: $grey;
+
+    h4,
+    dl,
+    dt,
+    dd {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+
+    dt,
+    dd {
+      margin-right: $tiny-spacing;
+      font-size: $small-font-size;
+    }
+
+    a {
+      color: $aqua;
+    }
+  }
+}

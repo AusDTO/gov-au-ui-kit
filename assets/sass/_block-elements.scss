@@ -45,7 +45,7 @@ main {
     clear: both;
   }
 
-  article {
+  > article {//hotfix for articles not working in the content area
     @include span-columns(7 of 12);
     @include media($tablet) {
       @include span-columns(6 of 8);
