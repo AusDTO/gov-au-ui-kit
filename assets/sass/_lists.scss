@@ -19,59 +19,35 @@ Markup: templates/lists-horiz.hbs
 Style guide: List styles.1 Horizontal list
 */
 
+/*
+Vertical list
+
+WARNING. Work in progress
+
+Markup: templates/lists-vert.hbs
+
+Style guide: List styles.2 Vertical list
+*/
+
+/*
+Small list
+
+Note: .pseudo-link class is used to emulate a Link when the parent is a block link
+
+Markup: templates/lists-small.hbs
+
+Style guide: List styles.3 Small list
+*/
+
 .non-list {
+  @include outer-container;
   list-style: none;
   margin: ($base-spacing * 2) 0;
   padding: 0;
   border-top: solid 1px $light-grey;
-}
-
-.list-horiz {
-  @include outer-container;
-  padding: ($base-spacing * 1.5) 0;
-  border-bottom: solid 1px $light-grey;
-
-  .image-box {
-    @include span-columns(4);
-    @include media($tablet) {
-      width: auto;
-    }
-  }
-
-  .list-horiz--body {
-    @include span-columns(8);
-    @include media($tablet) {
-      width: auto;
-    }
-  }
-
-  .list-horiz--body-full {
-    //Full width no col
-  }
-
-  .meta {
-    font-size: $small-font-size;
-    margin-top: $small-spacing;
-
-    time {
-      color: $grey;
-      border-right: solid 1px $grey;
-      margin-right: $small-spacing;
-      padding-right: $small-spacing;
-    }
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 0;
-    margin-bottom: $tiny-spacing;
-  }
 
   .tags {
-    //font-size: $small-font-size; https://github.com/AusDTO/gov-au-ui-kit/issues/101
+    //font-size: $small-font-size; ?? https://github.com/AusDTO/gov-au-ui-kit/issues/101
     color: $grey;
 
     dl,
@@ -91,5 +67,141 @@ Style guide: List styles.1 Horizontal list
     a {
       color: $aqua;
     }
+  }
+
+  .meta {
+    font-size: $small-font-size;
+    margin-top: $small-spacing;
+    margin-bottom: $small-spacing;
+
+    time {
+      color: $grey;
+    }
+  }
+
+  li {
+    padding: ($base-spacing * 1.5) 0;
+    border-bottom: solid 1px $light-grey;
+    margin-bottom: 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: $tiny-spacing;
+  }
+
+  .list-snippet {
+    //No style as of yet, selector may be used for JS
+  }
+}
+
+
+.list-horiz {
+  li {
+    @include outer-container;
+
+    .image-box {
+      @include span-columns(4);
+      @include media($tablet) {
+        width: auto;
+      }
+    }
+
+    .list-horiz--body {
+      @include span-columns(8);
+      @include media($tablet) {
+        width: auto;
+      }
+    }
+
+    .list-horiz--body-full {
+      //Full width no col
+    }
+
+    .meta {
+      time {
+        display: inline-block;
+        margin-right: $small-spacing;
+      }
+    }
+  }
+
+  .hero-item {
+    .image-box {
+      @include span-columns(8);
+      @include media($tablet) {
+        width: auto;
+      }
+    }
+
+    .list-horiz--body {
+      @include span-columns(4);
+      @include media($tablet) {
+        width: auto;
+      }
+    }
+  }
+}
+
+
+.list-vert {
+  li {
+    @include span-columns(4);
+    @include omega(3n);
+    // Should consider word-wrap issues in narrow cols
+    // https://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
+
+    .meta {
+      time {
+        display: block;
+      }
+    }
+  }
+}
+
+
+.list-small {
+  a {
+    display: block;
+    padding: $small-spacing;
+    padding-left: ($base-spacing * 2);
+    border-bottom: none;
+
+    background-image: url($icon-arrow-r);
+    background-repeat: no-repeat;
+    background-position: $base-spacing center;
+    background-size: $tiny-spacing auto;
+
+    &:hover,
+    &:active {
+      background-position: ($base-spacing * 1.25) center;
+      background-color: $non-white;
+
+      .pseudo-link {
+        // Refactor .pseudo-link into typography?
+        color: $dark-aqua;
+        border-bottom-color: lighten($highlight-colour, 30%);
+      }
+    }
+
+  }
+
+  .pseudo-link {
+    color: $link-colour;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+
+  li {
+    padding: 0;
+  }
+
+  .meta {
+    display: block;
+    margin-bottom: 0;
   }
 }
