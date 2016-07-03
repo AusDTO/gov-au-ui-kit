@@ -33,6 +33,10 @@ Markup:
     <label>An invalid field:</label>
     <input type="text" class="invalid" />
   </p>
+    <p>
+    <label>An valid field:</label>
+    <input type="text" class="valid" />
+  </p>
   <p>
     <label>A disabled field:</label>
     <input type="text" disabled />
@@ -116,7 +120,6 @@ Style guide: Forms.3 HintText
     outline: 2px solid $error-colour;
   }
 
-  &:valid,
   &.valid {
     outline: 2px solid $success-colour;
   }
