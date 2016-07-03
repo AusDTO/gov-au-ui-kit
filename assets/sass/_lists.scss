@@ -1,12 +1,15 @@
 /*
 List views
 
-This framework provides 4 list views styles:
+This framework provides 3 list view styles:
 
 - horizontal list view
 - small list view
 - vertical list view
-- hero list view
+
+Each style has several possible configurations (eg with or without image or hero item).
+
+You can add tags to each item using the HTML `<dt>` tag.
 
 Style guide: List styles
 */
@@ -32,7 +35,7 @@ Style guide: List styles.2 Vertical list
 /*
 Small list
 
-Note: .pseudo-link class is used to emulate a Link when the parent is a block link
+Note: ``.pseudo-link` class is used to emulate a Link when the parent is a block link
 
 Markup: templates/lists-small.hbs
 
