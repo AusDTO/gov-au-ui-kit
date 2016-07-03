@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "gulp-sass-lint": {
+      "version": "1.2.0",
+      "from": "gulp-sass-lint@1.2.0",
+      "dependencies": {
+        "sass-lint": {
+          "from": "git+https://github.com/sasstools/sass-lint#feature/disable-linters",
+          "version": "1.7.0"
+        }
+      }
+    }
+  }
+}

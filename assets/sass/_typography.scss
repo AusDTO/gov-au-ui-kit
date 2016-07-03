@@ -79,9 +79,11 @@ Breakpoints
 You should think about this in parallel with the [grid breakpoints](section-grid.html#kssref-grid-3-breakpoints).
 
 Style guide: Typography.2 Headings & body copy.1 Breakpoints
+
+
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,700,400&subset=latin,latin-ext');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,600,700,400&subset=latin,latin-ext'); //sass-lint:disable-line  no-url-protocols
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
 $base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
@@ -321,6 +323,7 @@ kbd {
 
 strong {
   font-weight: $bold-font-weight;
+
   &.very-bold {
     font-weight: $heading-font-weight;
   }
