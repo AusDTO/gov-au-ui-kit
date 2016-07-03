@@ -1,9 +1,9 @@
 /*
 Grid
 
-This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to create a consistent 12 column responsive grid layout with good defaults.
+This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to create a consistent 16 column responsive grid layout with good defaults.
 
-Bourbon is a SaSS mixin library (it provides little styling). Neat is a flexible grid framework.
+Bourbon is a [SASS](http://sass-lang.com/) mixin library (it provides little styling). Neat is a flexible grid framework.
 
 Avoid mixing this layout with other grid layouts.
 
@@ -42,6 +42,25 @@ Style guide: Grid.2 Extending settings
 */
 
 /*
+Margins & gutters
+
+Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 32px.
+
+```
+$grid-columns: 16 !global;
+$max-width: em(1200) !global;
+$gutter: em(32);
+```
+
+Style guide: Grid.3 Margins & gutters
+*/
+
+$grid-columns: 16 !global;
+$max-width: em(1200) !global;
+$gutter: em(32);
+
+
+/*
 Breakpoints
 
 This framework uses 3 breakpoints for grid layout:
@@ -49,20 +68,27 @@ This framework uses 3 breakpoints for grid layout:
 - Mobile: 4 columns, 420px maximum
 - Tablet: 8 columns, 768px maximum
 - Desktop: 12 columns, 1200px maximum
+- Desktop XL: 16 columns, 1200px and up
 
 We are exploring using a fourth breakpoint: wide desktop.
 
 If you give an element a modified grid setting consider the implications for all breakpoints. The Digital Service Standard recommends you [build using mobile first design principles](https://www.dto.gov.au/standard/6-consistent-and-responsive/).
 
 Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy-1-breakpoints) at different breakpoints.
+
 ```
-$desktop: new-breakpoint(max-width 1200px 12);
+$desktop: new-breakpoint(max-width $max-width 12);
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 420px 4);
 ```
 
-Style guide: Grid.3 Breakpoints
+Style guide: Grid.4 Breakpoints
 */
+
+@import 'vendor/neat/neat-helpers';
+$desktop: new-breakpoint(max-width $max-width 12);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 420px 4);
 
 /*
 Layout
@@ -71,7 +97,7 @@ Primary content is always contained in 12 columns. This allows for seamless intr
 
 ![Diagram of the layout across 12 columns](kss-assets/img_layout_12col_720.png)
 
-Style guide: Grid.4 Layout
+Style guide: Grid.5 Layout
 */
 
 /*
@@ -79,21 +105,7 @@ Wrapper class
 
 There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is currently used for the page `header` and `footer`.
 
-Style guide: Grid.5 Wrapper class
-*/
-
-/*
-Margins & gutters
-
-Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 20px.
-
-```
-$grid-columns: 12 !global;
-$max-width: em(1200) !global;
-$gutter: em(20);
-```
-
-Style guide: Grid.6 Margins & gutters
+Style guide: Grid.6 Wrapper class
 */
 
 /*
@@ -106,8 +118,6 @@ Style guide: Grid.7 Header & footer
 
 /*
 Accessibility
-
-Design for small screens first. Optimise for larger sizes, but do not assume you know which devices people are using.
 
 Long lines reduce legibility. Lines of text should be no longer than 75 characters. Place text in narrower grid boxes to stop text lines from becoming too wide.
 
@@ -127,23 +137,14 @@ $visual-grid: true;
 
 See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/examples/).
 
-Style guide: Grid.7 Debugging
+Style guide: Grid.9 Debugging
 */
 
+// Toggle visibility of your grid columns for development/debugging.
 $visual-grid: false;
 
 $border-box-sizing: true;
 $disable-warnings: true;
-
-$grid-columns: 12 !global;
-$max-width: em(1200) !global;
-$gutter: em(20);
-
-// Media Queries
-@import 'vendor/neat/neat-helpers';
-$desktop: new-breakpoint(max-width $max-width 12);
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 420px 4);
 
 // Make sure you set the viewport to the device-width in your head, eg
 // <meta name="viewport" content="width=device-width, initial-scale=1.0">
