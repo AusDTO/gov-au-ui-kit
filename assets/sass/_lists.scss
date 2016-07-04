@@ -1,0 +1,262 @@
+/*
+List views
+
+Each list style has optional layout items. Follow the markup patterns in the examples
+below to achieve the correct style and semantics.
+
+- **Image**: omit the `figure` element if you don't need an image. Note: If you
+leave in a `figure` with no `img` you'll still get a left padding on your item
+- **Tags**: add tags to each item using a `footer.tags` and a `dl` element
+- **Meta**: use a `div.meta` to include supplementary information
+
+Style guide: List styles
+*/
+
+%base-list {
+  list-style: none;
+  margin: ($base-spacing * 2) 0;
+  padding: 0;
+  border-top: solid 1px $border-colour;
+
+  .tags {
+    color: $grey;
+
+    dl,
+    dt,
+    dd {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+
+    dt,
+    dd {
+      margin-right: $tiny-spacing;
+      font-size: $small-font-size;
+    }
+
+    a {
+      color: $aqua;
+    }
+  }
+
+  .meta {
+    font-size: $small-font-size;
+    margin-top: $small-spacing;
+    margin-bottom: $small-spacing;
+
+    time {
+      color: $grey;
+    }
+  }
+
+  li {
+    padding: ($base-spacing * 1.5) 0;
+    border-bottom: solid 1px $border-colour;
+    margin-bottom: 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: $tiny-spacing;
+  }
+
+  h3 {
+    @extend h4;
+  }
+}
+
+/*
+Horizontal list
+
+A Horizontal list can have item(s) with a featured image. Note: If you
+leave in a `figure` with no `img` you'll still get a left padding on your item.
+
+- **Hero item**: by adding the `.hero-item` class to a list item, the layout
+changes to fit a wider image
+
+Markup: templates/lists-horizontal.hbs
+
+Style guide: List styles.1 Horizontal list
+*/
+
+.list-horizontal {
+  @extend %base-list;
+
+  li {
+
+    display: flex;
+
+    figure {
+      flex: 0 0 35%;
+      margin-right: $base-spacing;
+
+      @include media($tablet) {
+        flex: initial;
+      }
+    }
+
+    .meta {
+      time {
+        display: inline-block;
+        margin-right: $small-spacing;
+      }
+    }
+
+    &.hero-item {
+      figure {
+        flex-basis: 65%;
+      }
+    }
+
+    @include media($tablet) {
+      flex-wrap: wrap;
+    }
+
+  }
+
+}
+
+
+/*
+Vertical list
+
+The Vertical list suits content that fits into a column layout, and wraps with
+two list items on each row. Note: In browsers where [Flexbox layout](http://caniuse.com/#feat=flexbox)
+is not supported, this will appear as a Horizontal list except with the image
+below the list item content.
+
+To make a list appear with three or four columns, use the classes `.vertical-list--thirds`
+and `.vertical-list--fourths` respectively.
+
+Markup: templates/lists-vertical.hbs
+
+Style guide: List styles.2 Vertical list
+*/
+
+.list-vertical {
+
+  @extend %base-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+
+    flex: 0 0 48%;
+
+    @include media($tablet) {
+      flex-basis: 100%;
+    }
+
+    article {
+      display: flex;
+      flex-wrap: wrap;
+
+      h3,
+      div,
+      p {
+        flex: 0 0 100%;
+      }
+    }
+
+    h3 {
+      min-height: $base-spacing * 2;
+
+      @include media ($tablet) {
+        min-height: auto;
+      }
+    }
+
+    p {
+      min-height: $base-spacing * 3;
+
+      @include media ($tablet) {
+        min-height: auto;
+      }
+    }
+
+    .meta {
+      order: -1;
+
+      time {
+        display: block;
+      }
+    }
+  }
+}
+
+.list-vertical--thirds {
+  @extend .list-vertical;
+
+  li {
+    flex: 0 0 30%;
+  }
+}
+
+.list-vertical--fourths {
+  @extend .list-vertical;
+
+  li {
+    flex: 0 0 20%;
+  }
+}
+
+/*
+Small list
+
+These work well for displaying a larger number of list items with just a label
+and some meta information.
+
+Markup: templates/lists-small.hbs
+
+Style guide: List styles.3 Small list
+*/
+
+.list-small {
+  @extend %base-list;
+
+  a {
+    display: block;
+    padding: $small-spacing;
+    padding-left: ($base-spacing * 2);
+    border-bottom: none;
+
+    background-image: url($icon-arrow-r);
+    background-repeat: no-repeat;
+    background-position: $base-spacing ($small-spacing * 1.75);
+    background-size: $tiny-spacing auto;
+    transition: background $transition-timing $transition-easing;
+
+    &:hover,
+    &:active {
+      background-position: ($base-spacing * 1.25) ($small-spacing * 1.75);
+      background-color: $non-white;
+
+      span {
+        color: $dark-aqua;
+      }
+    }
+
+  }
+
+  span {
+    color: $link-colour;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+
+  li {
+    padding: 0;
+  }
+
+  .meta {
+    display: block;
+    margin: 0;
+  }
+}

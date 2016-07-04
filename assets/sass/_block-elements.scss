@@ -41,7 +41,7 @@ main {
   flex: 1;
   padding-top: $base-spacing;
 
-  article {
+  .content-main {
     @include span-columns(9 of 16);
     @include shift(1);
 
@@ -86,4 +86,8 @@ main {
     @include span-columns(4 of 4);
     @include shift(0);
   }
+}
+
+figure {
+  margin: 0;
 }

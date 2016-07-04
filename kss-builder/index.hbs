@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   {{{styles}}}
 
-  <!--[if (gte IE 9) | (!IE)]>-->
+  <!--[if (gte IE 9) | (!IE)]> <!-->
   <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
           crossorigin="anonymous"></script>
   <!--<![endif]-->
@@ -91,7 +91,7 @@
     </nav>
   </aside>
 
-  <article role="main">
+  <article role="main" class="content-main">
     {{#if homepage}}
       <div id="kssref-0" class="guide-section guide-section--depth-0 kss-overview">
         {{{homepage}}}
@@ -196,10 +196,6 @@
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
-<script src="kss-assets/prettify.js"></script>
-<script>
-  prettyPrint();
-</script>
 {{{scripts}}}
 
 
