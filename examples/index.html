@@ -19,14 +19,25 @@
     h.className = h.className.replace('no-js', 'js')
   })(document.documentElement)</script>
   <title>Example Pages</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Open+Sans:400italic,600,700,400:latin,latin-ext']
+      }
+    });
+  </script>
+
   <!-- in production use <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/> instead of next 2 lines-->
   <link rel="stylesheet" type="text/css" href="../latest/ui-kit.css"/>
   <link rel="stylesheet" type="text/css" href="../build/latest/ui-kit.css"/>
 
-  <!--[if (gte IE 9) | (!IE)]>
+
+  <!--[if (gte IE 9) | (!IE)]> <!-->
   <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
           crossorigin="anonymous"></script>
-  <![endif]-->
+  <!--<![endif]-->
   <!--[if lt IE 9]>
   <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
           crossorigin="anonymous"></script>
