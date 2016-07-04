@@ -170,3 +170,44 @@ Style guide: Navigation.2 Breadcrumbs
 
   }
 }
+
+/*
+Skip Links
+
+See. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">WCAG 2.4.1 Bypass Blocks</a>
+
+When this Success Criterion is not satisfied, it may be difficult for people with some disabilities to reach the main content of a Web page quickly and easily.
+
+Markup: templates/skip-link.hbs
+
+Style guide: Navigation.3 Skip Links
+*/
+.skip-to {
+  position: relative;
+  z-index: 99;
+
+  a {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    background-color: $white;
+
+    &:active,
+    &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: absolute;
+      width: auto;
+      top: 10px;
+      left: 10px;
+      padding: $tiny-spacing $small-spacing;
+    }
+  }
+}

@@ -40,6 +40,11 @@
 </head>
 <body>
 
+<div class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+</div>
+
 <header role="banner">
   <section class="govau--header">
     <div class="wrapper">
@@ -63,7 +68,7 @@
 </header>
 
 <main>
-  <aside class="sidebar">
+  <aside class="sidebar" id="nav">
     <nav class="primary-nav" aria-label="main navigation">
       <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
          aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
@@ -91,7 +96,7 @@
     </nav>
   </aside>
 
-  <article role="main" class="content-main">
+  <article role="main" id="content" class="content-main">
     {{#if homepage}}
       <div id="kssref-0" class="guide-section guide-section--depth-0 kss-overview">
         {{{homepage}}}
