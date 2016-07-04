@@ -20,7 +20,7 @@
   padding: $base-spacing;
 
   :first-child {
-    margin-top: 0;
+    // margin-top: 0;
   }
 }
 
@@ -297,59 +297,4 @@ code {
 .bg-light-yellow {
   background-color: $light-yellow;
   color: $white;
-}
-
-
-
-// ------------------------------------------------------------------------------
-//   group prettyprint.js styling
-// ------------------------------------------------------------------------------
-// Pretty printing styles. Used with prettify.js.
-// SPAN elements with the classes below are added by prettyprint.
-
-
-// Use higher contrast and text-weight for printable form.
-@media print, projection {
-  .str {
-    color: $black;
-  }
-
-  .kwd {
-    color: $black;
-    font-weight: bold;
-  }
-
-  .com {
-    color: $black;
-    font-style: italic;
-  }
-
-  .typ {
-    color: $black;
-    font-weight: bold;
-  }
-
-  .lit {
-    color: $black;
-  }
-
-  .pun,
-  .opn,
-  .clo {
-    color: $black;
-  }
-
-  .tag {
-    color: $black;
-    font-weight: bold;
-  }
-
-  .atn {
-    color: $black;
-  }
-
-  .atv {
-    color: $black;
-  }
-
 }

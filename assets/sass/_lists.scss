@@ -7,50 +7,20 @@ This framework provides 3 list view styles:
 - small list view
 - vertical list view
 
-Each style has several possible configurations (eg with or without image or hero item).
+Each style has several possible configurations (e.g. with or without image or hero item).
 
 You can add tags to each item using the HTML `<dt>` tag.
 
 Style guide: List styles
 */
 
-/*
-Horizontal list
-
-Markup: templates/lists-horiz.hbs
-
-Style guide: List styles.1 Horizontal list
-*/
-
-/*
-Vertical list
-
-WARNING. Work in progress
-
-Markup: templates/lists-vert.hbs
-
-Style guide: List styles.2 Vertical list
-*/
-
-/*
-Small list
-
-Note: ``.pseudo-link` class is used to emulate a Link when the parent is a block link
-
-Markup: templates/lists-small.hbs
-
-Style guide: List styles.3 Small list
-*/
-
-.non-list {
-  @include outer-container;
+%base-list {
   list-style: none;
   margin: ($base-spacing * 2) 0;
   padding: 0;
-  border-top: solid 1px $light-grey;
+  border-top: solid 1px $border-colour;
 
   .tags {
-    //font-size: $small-font-size; ?? https://github.com/AusDTO/gov-au-ui-kit/issues/101
     color: $grey;
 
     dl,
@@ -84,7 +54,7 @@ Style guide: List styles.3 Small list
 
   li {
     padding: ($base-spacing * 1.5) 0;
-    border-bottom: solid 1px $light-grey;
+    border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
   }
 
@@ -96,33 +66,30 @@ Style guide: List styles.3 Small list
     margin-top: 0;
     margin-bottom: $tiny-spacing;
   }
-
-  .list-snippet {
-    //No style as of yet, selector may be used for JS
-  }
 }
 
+/*
+Horizontal list
 
-.list-horiz {
+Markup: templates/lists-horizontal.hbs
+
+Style guide: List styles.1 Horizontal list
+*/
+
+.list-horizontal {
+  @extend %base-list;
+
   li {
-    @include outer-container;
 
-    .image-box {
-      @include span-columns(4);
+    display: flex;
+
+    figure {
+      flex: 0 0 35%;
+      margin-right: $base-spacing;
+
       @include media($tablet) {
-        width: auto;
+        flex: initial;
       }
-    }
-
-    .list-horiz--body {
-      @include span-columns(8);
-      @include media($tablet) {
-        width: auto;
-      }
-    }
-
-    .list-horiz--body-full {
-      //Full width no col
     }
 
     .meta {
@@ -131,24 +98,39 @@ Style guide: List styles.3 Small list
         margin-right: $small-spacing;
       }
     }
-  }
 
-  .hero-item {
-    .image-box {
-      @include span-columns(8);
-      @include media($tablet) {
-        width: auto;
+    &.hero-item {
+      figure {
+        flex-basis: 65%;
       }
     }
 
-    .list-horiz--body {
-      @include span-columns(4);
-      @include media($tablet) {
-        width: auto;
-      }
+    @include media($tablet) {
+      flex-wrap: wrap;
     }
+
   }
+
 }
+
+
+/*
+Vertical list
+
+WARNING. Work in progress
+
+Markup: templates/lists-vert.hbs
+
+Style guide: List styles.2 Vertical list
+*/
+
+/*
+Small list
+
+Markup: templates/lists-small.hbs
+
+Style guide: List styles.3 Small list
+*/
 
 
 .list-vert {
