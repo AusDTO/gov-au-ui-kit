@@ -17,18 +17,11 @@ header[role='banner'] {
     background-color: $navy;
     color: $white;
 
-    .wrapper {
-      @include media($tablet) {
-        display: flex;
-      }
-    }
-
     .govau--logo {
-      float: left;
       padding-bottom: $medium-spacing;
 
       @include media($tablet) {
-        flex-grow: 1;
+        float: left;
         padding-bottom: 0;
       }
     }
@@ -55,6 +48,7 @@ header[role='banner'] {
     }
 
     .feedback {
+      display: block;
       @include media($tablet) {
         float: right;
       }
