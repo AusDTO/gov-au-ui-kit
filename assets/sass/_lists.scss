@@ -7,8 +7,6 @@ below to achieve the correct style and semantics.
 - **Image**: omit the `figure` element if you don't need an image
 - **Tags**: add tags to each item using a `footer.tags` and a `dl` element
 - **Meta**: use a `div.meta` to include supplementary information
-- **Hero item**: by adding the `.hero-item` class to a list item, the layout
-changes to fit a wider image
 
 Style guide: List styles
 */
@@ -73,6 +71,11 @@ Style guide: List styles
 
 /*
 Horizontal list
+
+A Horizontal list can have item(s) with a featured image.
+
+- **Hero item**: by adding the `.hero-item` class to a list item, the layout
+changes to fit a wider image
 
 Markup: templates/lists-horizontal.hbs
 
