@@ -33,10 +33,10 @@ We define the grid placement for the following elements in `_block-elements.scss
 
 To create your own element you will need to use the [Neat `span-columns` function](http://thoughtbot.github.io/neat-docs/latest/#span-columns).
 
-For each new element you will need to manually set column properties for the breakpoints, from largest to smallest:
-1. `$desktop`
+For each new element you will need to manually set column properties for the breakpoints, from smallest to largest:
+1. `$mobile`
 2. `$tablet`
-3. `$mobile`
+3. `$desktop`
 
 Style guide: Grid.2 Extending settings
 */
@@ -44,10 +44,9 @@ Style guide: Grid.2 Extending settings
 /*
 Margins & gutters
 
-Maximum page width is set to 16 columns centred, 1200px. Gutters between the columns are a minimum of 32px.
+Maximum page width is set to 1200px. Gutters between the columns are a minimum of 32px.
 
 ```
-$grid-columns: 16 !global;
 $max-width: em(1200) !global;
 $gutter: em(32);
 ```
@@ -63,23 +62,22 @@ $gutter: em(32);
 /*
 Breakpoints
 
-This framework uses 3 breakpoints for grid layout:
+This framework has a mobile-first default layout of 4 columsn, and adds 3
+breakpoints for grid layout on larger screens:
 
-- Mobile: 4 columns, 420px maximum
-- Tablet: 8 columns, 768px maximum
-- Desktop: 12 columns, 1200px maximum
-- Desktop XL: 16 columns, 1200px and up
-
-We are exploring using a fourth breakpoint: wide desktop.
+- Default: 4 columns
+- Mobile: 8 columns, 420px minimum
+- Tablet: 12 columns, 768px minimum
+- Desktop: 16 columns, 1200px minimum
 
 If you give an element a modified grid setting consider the implications for all breakpoints. The Digital Service Standard recommends you [build using mobile first design principles](https://www.dto.gov.au/standard/6-consistent-and-responsive/).
 
 Please also consider the [font size](section-typography.html#kssref-typography-2-headings-body-copy-1-breakpoints) at different breakpoints.
 
 ```
-$desktop: new-breakpoint(max-width $max-width 12);
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 420px 4);
+$mobile: new-breakpoint(min-width 420px 8);
+$tablet: new-breakpoint(min-width 768px 12);
+$desktop: new-breakpoint(min-width $max-width 16);
 ```
 
 Style guide: Grid.4 Breakpoints
