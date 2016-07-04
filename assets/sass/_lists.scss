@@ -1,15 +1,14 @@
 /*
 List views
 
-This framework provides 3 list view styles:
+Each list style has optional layout items. Follow the markup patterns in the examples
+below to achieve the correct style and semantics.
 
-- horizontal list view
-- small list view
-- vertical list view
-
-Each style has several possible configurations (e.g. with or without image or hero item).
-
-You can add tags to each item using the HTML `<dt>` tag.
+- **Image**: omit the `figure` element if you don't need an image
+- **Tags**: add tags to each item using a `footer.tags` and a `dl` element
+- **Meta**: use a `div.meta` to include supplementary information
+- **Hero item**: by adding the `.hero-item` class to a list item, the layout
+changes to fit a wider image
 
 Style guide: List styles
 */
