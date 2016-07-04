@@ -26,38 +26,24 @@ A single line text input. By default users can enter any combination of letters,
 Markup:
 <form>
   <p>
-    <label>A text input field:</label>
-    <input type="text" />
+    <label for="textin">A text input field:</label>
+    <input name="textin" id="textin" type="text" />
   </p>
   <p>
-    <label>An invalid field:</label>
-    <input type="text" class="invalid" />
+    <label for="textinvalid">An invalid field:</label>
+    <input name="textinvalid" id="textinvalid" type="text" class="invalid" />
   </p>
     <p>
-    <label>An valid field:</label>
-    <input type="text" class="valid" />
+    <label for="textvalid">An valid field:</label>
+    <input name="textvalid" id="textvalid" type="text" class="valid" />
   </p>
   <p>
-    <label>A disabled field:</label>
-    <input type="text" disabled />
+    <label for="textdisabled">A disabled field:</label>
+    <input name="textdisabled" id="textdisabled" type="text" disabled />
   </p>
 </form>
 
 Style guide: Forms.0 Form controls.1 Text input
-*/
-
-/*
-Text area input
-
-A multi-line text input using `<textarea>`. The user can resise the field vertically.
-
-Markup:
-  <form>
-    <label>Long response</label>
-    <textarea></textarea>
-  </form>
-
-Style guide: Forms.0 Form controls.2 text area input
 */
 
 /*
@@ -168,8 +154,8 @@ form {
 
   Markup:
   <form>
-    <label>An input for longer responses:</label>
-    <textarea></textarea>
+    <label for="texta">An input for longer responses:</label>
+    <textarea name="texta" id="texta"></textarea>
   </form>
 
   Style guide: Forms.TextAreaInput
