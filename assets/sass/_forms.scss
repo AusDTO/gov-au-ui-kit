@@ -328,20 +328,3 @@ Style guide: Forms.CheckboxInput
     }
   }
 }
-
-// show native checkboxes and radio buttons on IE6/7/8
-.ie6,
-.ie7,
-.ie8 {
-  input {
-    &[type='radio'],
-    &[type='checkbox'] {
-      border: 0;
-      height: 3em;
-      left: 1px;
-      margin-bottom: -4em;
-      position: relative;
-      width: 3em;
-    }
-  }
-}

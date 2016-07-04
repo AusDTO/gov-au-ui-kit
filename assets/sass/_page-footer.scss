@@ -4,6 +4,10 @@ footer[role='contentinfo'] {
   background-color: $non-black;
   color: $white;
 
+  a {
+    color: $white;
+  }
+
   .footer-logo {
     @include span-columns(3 of 12);
 
@@ -12,10 +16,31 @@ footer[role='contentinfo'] {
     }
 
     img {
-      height: $base-spacing * 3;
+      height: $base-spacing * 4;
     }
   }
 
+  .footer-links {
+    @include span-columns(9 of 12);
+
+    @include media($mobile) {
+      @include span-columns(8 of 8);
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+  
+  /*
+  Footer navigation
+
+  A number of lists of links arranged horizontally
+
+  Markup: templates/footer-navigation.hbs
+
+  Style guide: Navigation.Footer Navigation
+  */
   nav {
     @include media($tablet) {
       @include span-columns(6 of 8);
@@ -30,13 +55,22 @@ footer[role='contentinfo'] {
       padding-right: $small-spacing;
     }
 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+
     ul {
-      margin: 0;
-      padding: 0;
+      flex-basis: 25%;
+      flex-shrink: 0;
     }
 
     li {
+      line-height: 1.5em;
       list-style: none;
     }
+
   }
+
 }

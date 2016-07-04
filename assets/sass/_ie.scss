@@ -1,0 +1,53 @@
+// Internet Explorer tweaks
+.ie6,
+.ie7,
+.ie8 {
+
+  // stick footer
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  footer {
+    width: 100%;
+    padding-bottom: 150px;
+
+    ul {
+      display: inline-block;
+      width: 200px;
+    }
+
+  }
+
+  // show native checkboxes and radio buttons on IE6/7/8
+  input {
+    &[type='radio'],
+    &[type='checkbox'] {
+      border: 0;
+      height: 3em;
+      left: 1px;
+      margin-bottom: -4em;
+      position: relative;
+      width: 3em;
+    }
+  }
+
+  // http://cssmojo.com/latest_new_clearfix_so_far/
+  // !!! using single colons for Pseudo-elements for compatibility
+  main {
+    zoom: 1; /* IE < 8 */
+
+    &:before,
+    &:after {
+      content: '.';
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+}

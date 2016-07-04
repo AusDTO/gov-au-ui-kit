@@ -1,4 +1,10 @@
 // Describe me so no evil shall be committed in wielding this class!
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .wrapper {
   @include outer-container;
 
@@ -10,40 +16,30 @@
 header {
   &[role='banner'] {
     @include outer-container(100%);
+    min-width: 100%;
+    flex: none;
   }
 }
 
 footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
+    min-width: 100%;
+    flex: none;
     @include pad(0 default);
     margin-top: ($base-spacing * 2);
+
   }
 }
 
 main {
   @include outer-container;
-
   @include media($tablet) {
     @include pad($base-spacing default 0 default);
   }
 
+  flex: 1;
   padding-top: $base-spacing;
-  zoom: 1; /* IE < 8 */
-
-  // http://cssmojo.com/latest_new_clearfix_so_far/
-  // !!! using single colons for Pseudo-elements for compatibility
-  &:before,
-  &:after {
-    content: '.';
-    display: block;
-    height: 0;
-    overflow: hidden;
-  }
-
-  &:after {
-    clear: both;
-  }
 
   article {
     @include span-columns(9 of 16);
