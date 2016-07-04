@@ -39,7 +39,7 @@ main {
     @include pad($base-spacing 0 0 0);
   }
 
-  article {
+  .content-main {
     @include span-columns(4 of 4);
     @include shift(0);
 
