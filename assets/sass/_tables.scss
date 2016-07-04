@@ -1,4 +1,30 @@
+/*
+Content Tables
 
+Tabular content arranged in rows and columns with column headings.
+An alternating row color is provided to improve readability.
+
+Markup:
+<table class="content-table">
+  <tbody><tr>
+    <th>Apples</th>
+    <th>Oranges</th>
+    <th>Widgets</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+</tbody></table>
+
+Style guide: Tables.Content Tables
+*/
 .content-table {
   border-collapse: collapse;
   width: 100%;
