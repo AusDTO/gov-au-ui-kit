@@ -4,7 +4,8 @@ List views
 Each list style has optional layout items. Follow the markup patterns in the examples
 below to achieve the correct style and semantics.
 
-- **Image**: omit the `figure` element if you don't need an image
+- **Image**: omit the `figure` element if you don't need an image. Note: If you
+leave in a `figure` with no `img` you'll still get a left padding on your item
 - **Tags**: add tags to each item using a `footer.tags` and a `dl` element
 - **Meta**: use a `div.meta` to include supplementary information
 
@@ -155,8 +156,26 @@ Style guide: List styles.2 Vertical list
       display: flex;
       flex-wrap: wrap;
 
-      * {
+      h3,
+      div,
+      p {
         flex: 0 0 100%;
+      }
+    }
+
+    h3 {
+      min-height: $base-spacing * 2;
+
+      @include media ($tablet) {
+        min-height: auto;
+      }
+    }
+
+    p {
+      min-height: $base-spacing * 3;
+
+      @include media ($tablet) {
+        min-height: auto;
       }
     }
 
