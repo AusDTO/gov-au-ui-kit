@@ -49,6 +49,11 @@
 </head>
 <body>
 
+<div class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+</div>
+
 <header role="banner">
   <section class="controls">
     <div class="wrapper">
@@ -86,7 +91,7 @@
 <main>
 
   <aside class="sidebar">
-    <nav class="primary-nav" aria-label="main navigation">
+    <nav class="primary-nav" aria-label="main navigation" id="nav">
       <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
          aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
       <ul id="primary-nav-panel" aria-labelledby="primary-nav-heading">
@@ -114,7 +119,7 @@
     </nav>
   </aside>
 
-  <article class="content-main">
+  <article id="content" class="content-main">
     <h1>Article title that is quite a bit longer</h1>
     <p class="abstract">This is my <code>.abstract</code> text: the quick brown fox jumped over the lazy dog.</p>
     <p>Vertical rhythm should be <strong>maintained</strong> between content elements:</p>
