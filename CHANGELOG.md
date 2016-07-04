@@ -19,6 +19,7 @@
   - Scale down body line-height
   - Increase space between list items
   - Added styles for `hr` element
+- Refactored responsive breakpoints to use `min-width` (mobile-first)
 
 ### 1.0.0 - 2016-06-29
 
