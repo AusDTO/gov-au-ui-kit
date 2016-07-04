@@ -1,0 +1,86 @@
+// Describe me so no evil shall be committed in wielding this class!
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.wrapper {
+  @include outer-container;
+  @include pad(0 $base-spacing);
+}
+
+header {
+  &[role='banner'] {
+    @include outer-container(100%);
+    min-width: 100%;
+    flex: none;
+  }
+}
+
+footer {
+  &[role='contentinfo'] {
+    @include outer-container(100%);
+    min-width: 100%;
+    flex: none;
+    @include pad(0 default);
+    margin-top: ($base-spacing * 2);
+
+  }
+}
+
+main {
+  @include outer-container;
+  @include pad(0 $base-spacing);
+
+  flex: 1;
+
+<<<<<<< a0ed60723ba03c82d47eb903dfe4f5e7d70fa662
+  .content-main {
+    @include span-columns(9 of 16);
+    @include shift(1);
+=======
+  @include media($tablet) {
+    @include pad($base-spacing 0 0 0);
+  }
+>>>>>>> Refactor styles to use mobile-first (min-width) media queries
+
+  article {
+    @include span-columns(4 of 4);
+    @include shift(0);
+
+    @include media($tablet) {
+      @include span-columns(8 of 12);
+    }
+
+    @include media($desktop) {
+      @include span-columns(9 of 16);
+      @include shift(1);
+    }
+
+  }
+
+  .form-wrapper {
+    @include span-columns(4 of 4);
+
+    @include media($tablet) {
+      @include span-columns(4 of 6);
+    }
+  }
+}
+
+.sidebar {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(3 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(3 of 16);
+  }
+}
+
+figure {
+  margin: 0;
+}

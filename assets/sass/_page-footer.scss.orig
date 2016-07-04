@@ -1,0 +1,75 @@
+footer[role='contentinfo'] {
+  @include pad($base-spacing 0);
+
+  background-color: $non-black;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .footer-logo {
+
+    @include media($tablet) {
+      @include span-columns(3 of 12);
+    }
+
+    img {
+      height: $base-spacing * 4;
+    }
+  }
+
+  .footer-links {
+
+    @include media($mobile) {
+      @include span-columns(9 of 12);
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+<<<<<<< a0ed60723ba03c82d47eb903dfe4f5e7d70fa662
+=======
+  hr {
+    margin: ($base-spacing * 2) 0;
+  }
+
+>>>>>>> Refactor styles to use mobile-first (min-width) media queries
+  /*
+  Footer navigation
+
+  A number of lists of links arranged horizontally. Displays two columns up to a
+  $tablet breakpoint, and four columns beyond that.
+
+  Markup: templates/footer-navigation.hbs
+
+  Style guide: Navigation.Footer Navigation
+  */
+  nav {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+
+    ul {
+      flex: 0 0 50%;
+      margin: 0;
+      padding: 0;
+
+      @include media($tablet) {
+        flex-basis: 25%;
+      }
+    }
+
+    li {
+      line-height: 1.5em;
+      list-style: none;
+    }
+
+  }
+
+}
