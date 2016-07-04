@@ -89,15 +89,11 @@ Style guide: List styles.1 Horizontal list
 
   li {
 
-    display: flex;
-    flex-wrap: wrap;
-
     @include media($tablet) {
-      flex-wrap: nowrap;
+      display: flex;
     }
 
     figure {
-      flex: initial;
 
       @include media($tablet) {
         flex: 0 0 35%;
