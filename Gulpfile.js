@@ -31,7 +31,7 @@ var paths = {
 
 var options = {
     autoprefixer: {
-        browsers: ['last 2 versions']
+        browsers: ['last 2 versions', 'ie 8-10']
     }
 };
 
@@ -50,8 +50,8 @@ gulp.task('ui-kit', function () {
 
 gulp.task('ui-kit.scss', function () {
     return gulp.src(paths.scss)
-        .pipe(autoprefixer(options.autoprefixer))
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer(options.autoprefixer))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
@@ -74,8 +74,8 @@ gulp.task('ui-kit.min', function () {
 
 gulp.task('ui-kit.min.scss', function () {
     return gulp.src(paths.scss)
-        .pipe(autoprefixer(options.autoprefixer))
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer(options.autoprefixer))
         .pipe(cssnano())
         .pipe(gitVersion())
         .pipe(rename({
