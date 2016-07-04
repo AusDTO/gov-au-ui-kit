@@ -126,7 +126,12 @@ Style guide: List styles.1 Horizontal list
 Vertical list
 
 The Vertical list suits content that fits into a column layout, and wraps with
-two list items on each row.
+two list items on each row. Note: In browsers where [Flexbox layout](http://caniuse.com/#feat=flexbox)
+is not supported, this will appear as a Horizontal list except with the image
+below the list item content.
+
+To make a list appear with three or four columns, use the classes `.vertical-list--thirds`
+and `.vertical-list--fourths` respectively.
 
 Markup: templates/lists-vertical.hbs
 
@@ -139,18 +144,14 @@ Style guide: List styles.2 Vertical list
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   li {
 
     flex: 0 0 48%;
 
-    &:nth-child(odd) {
-      margin-right: 4%;
-    }
-
     @include media($tablet) {
       flex-basis: 100%;
-      margin-right: 0;
     }
 
     article {
@@ -190,6 +191,22 @@ Style guide: List styles.2 Vertical list
   }
 }
 
+.list-vertical--thirds {
+  @extend .list-vertical;
+
+  li {
+    flex: 0 0 30%;
+  }
+}
+
+.list-vertical--fourths {
+  @extend .list-vertical;
+
+  li {
+    flex: 0 0 20%;
+  }
+}
+
 /*
 Small list
 
@@ -200,8 +217,6 @@ Markup: templates/lists-small.hbs
 
 Style guide: List styles.3 Small list
 */
-
-
 
 .list-small {
   @extend %base-list;
