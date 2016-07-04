@@ -55,7 +55,7 @@ $gutter: em(32);
 Style guide: Grid.3 Margins & gutters
 */
 
-$grid-columns: 16 !global;
+$grid-columns: 4 !global;
 $max-width: em(1200) !global;
 $gutter: em(32);
 
@@ -86,9 +86,9 @@ Style guide: Grid.4 Breakpoints
 */
 
 @import 'vendor/neat/neat-helpers';
-$desktop: new-breakpoint(max-width $max-width 12);
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 420px 4);
+$mobile: new-breakpoint(min-width 420px 8);
+$tablet: new-breakpoint(min-width 768px 12);
+$desktop: new-breakpoint(min-width $max-width 16);
 
 /*
 Layout

@@ -9,10 +9,9 @@ footer[role='contentinfo'] {
   }
 
   .footer-logo {
-    @include span-columns(3 of 12);
 
-    @include media($mobile) {
-      @include span-columns(8 of 8);
+    @include media($tablet) {
+      @include span-columns(3 of 12);
     }
 
     img {
@@ -21,10 +20,9 @@ footer[role='contentinfo'] {
   }
 
   .footer-links {
-    @include span-columns(9 of 12);
 
     @include media($mobile) {
-      @include span-columns(8 of 8);
+      @include span-columns(9 of 12);
     }
 
     a {
@@ -32,28 +30,21 @@ footer[role='contentinfo'] {
     }
   }
 
+  hr {
+    margin: ($base-spacing * 2) 0;
+  }
+
   /*
   Footer navigation
 
-  A number of lists of links arranged horizontally
+  A number of lists of links arranged horizontally. Displays two columns up to a
+  $tablet breakpoint, and four columns beyond that.
 
   Markup: templates/footer-navigation.hbs
 
   Style guide: Navigation.Footer Navigation
   */
   nav {
-    @include media($tablet) {
-      @include span-columns(6 of 8);
-      // @include shift(2);
-    }
-
-    @include media($mobile) {
-      @include span-columns(4 of 4);
-      @include shift(0);
-
-      padding-left: $small-spacing;
-      padding-right: $small-spacing;
-    }
 
     display: flex;
     flex-wrap: wrap;
@@ -62,8 +53,13 @@ footer[role='contentinfo'] {
     box-sizing: border-box;
 
     ul {
-      flex-basis: 25%;
-      flex-shrink: 0;
+      flex: 0 0 50%;
+      margin: 0;
+      padding: 0;
+
+      @include media($tablet) {
+        flex-basis: 25%;
+      }
     }
 
     li {

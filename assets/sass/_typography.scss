@@ -224,15 +224,15 @@ h6 {
 }
 
 h1 {
-  font-size: rem(40);
+  font-size: rem(32);
   line-height: $small-leading;
 
   @include media($tablet) {
     font-size: rem(44);
   }
 
-  @include media($mobile) {
-    font-size: rem(32);
+  @include media($desktop) {
+    font-size: rem(40);
   }
 
   &:first-of-type {
@@ -241,39 +241,35 @@ h1 {
 }
 
 h2 {
-  font-size: rem(32);
+  font-size: rem(28);
   line-height: $small-leading;
 
-  @include media($mobile) {
-    font-size: rem(28);
+  @include media($tablet) {
+    font-size: rem(32);
   }
 }
 
 h3 {
-  font-size: rem(26);
+  font-size: rem(24);
   font-weight: $heading-font-weight;
 
-  @include media($mobile) {
-    font-size: rem(24);
+  @include media($tablet) {
+    font-size: rem(26);
   }
 }
 
 h4 {
-  font-size: rem(22);
+  font-size: rem(19);
   font-weight: $heading-font-weight;
 
-  @include media($mobile) {
-    font-size: rem(19);
+  @include media($tablet) {
+    font-size: rem(22);
   }
 }
 
 h5 {
   font-size: rem(16);
   font-weight: $heading-font-weight;
-
-  @include media($mobile) {
-    font-size: rem(16);
-  }
 }
 
 h6 {
@@ -374,15 +370,11 @@ p,
 dt,
 dd {
   margin-bottom: $small-spacing;
-  font-size: rem(16);
+  font-size: rem(18);
   line-height: $base-spacing;
 
   @include media($tablet) {
-    font-size: rem(18);
-  }
-
-  @include media($mobile) {
-    font-size: rem(18);
+    font-size: rem(16);
   }
 }
 

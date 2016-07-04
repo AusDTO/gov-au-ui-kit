@@ -7,10 +7,7 @@ body {
 
 .wrapper {
   @include outer-container;
-
-  @include media($desktop) {
-    @include pad(0 default);
-  }
+  @include pad(0 $base-spacing);
 }
 
 header {
@@ -34,57 +31,47 @@ footer {
 
 main {
   @include outer-container;
-  @include media($tablet) {
-    @include pad($base-spacing default 0 default);
-  }
+  @include pad(0 $base-spacing);
 
   flex: 1;
-  padding-top: $base-spacing;
 
-  .content-main {
-    @include span-columns(9 of 16);
-    @include shift(1);
+  @include media($tablet) {
+    @include pad($base-spacing 0 0 0);
+  }
 
-    @include media($desktop) {
-      @include span-columns(8 of 12);
-      @include shift(1);
-    }
+  article {
+    @include span-columns(4 of 4);
+    @include shift(0);
 
     @include media($tablet) {
-      @include span-columns(6 of 8);
+      @include span-columns(8 of 12);
     }
 
-    @include media($mobile) {
-      @include span-columns(4 of 4);
-      @include shift(0);
+    @include media($desktop) {
+      @include span-columns(9 of 16);
+      @include shift(1);
     }
 
   }
 
   .form-wrapper {
-    @include span-columns(4 of 6);
+    @include span-columns(4 of 4);
 
-    @include media($mobile) {
-      @include span-columns(4 of 4);
+    @include media($tablet) {
+      @include span-columns(4 of 6);
     }
   }
 }
 
 .sidebar {
-  @include span-columns(3 of 16);
+  @include span-columns(4 of 4);
 
-  @include media($desktop) {
+  @include media($tablet) {
     @include span-columns(3 of 12);
   }
 
-  @include media($tablet) {
-    @include span-columns(6 of 8);
-    @include shift(1);
-  }
-
-  @include media($mobile) {
-    @include span-columns(4 of 4);
-    @include shift(0);
+  @include media($desktop) {
+    @include span-columns(3 of 16);
   }
 }
 
