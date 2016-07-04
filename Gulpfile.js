@@ -137,8 +137,8 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
 
 gulp.task('styleguide.scss', function () {
     return gulp.src(paths.kssScssDir)
-        .pipe(autoprefixer(options.autoprefixer))
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer(options.autoprefixer))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.kssCssDir));
 });
