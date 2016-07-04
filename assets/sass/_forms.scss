@@ -1,11 +1,96 @@
 /*
 Forms
 
-Form elements and attributes in HTML5 provide a greater degree of semantic mark-up than HTML4. They remove a great deal of the need for scripting and styling that was required in HTML4.
+Keep forms as simple as possible&mdash;only ask what is needed for the transaction.
 
-The forms features in HTML5 provide a better experience for users by making forms more consistent across different web sites and giving immediate feedback to the user about data entry. They also provide this experience to users who have scripting disabled in their browser.
+Ask only 1 question per page.
+
+<hr />
+
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
 Style guide: Forms
+*/
+
+/*
+Form controls
+
+Style guide: Forms.0 Form controls
+*/
+
+/*
+Text input
+
+A single line text input. By default users can enter any combination of letters, numbers or symbols.
+
+Markup:
+<form>
+  <p>
+    <label for="textin">A text input field:</label>
+    <input name="textin" id="textin" type="text" />
+  </p>
+  <p>
+    <label for="textinvalid">An invalid field:</label>
+    <input name="textinvalid" id="textinvalid" type="text" class="invalid" />
+  </p>
+    <p>
+    <label for="textvalid">An valid field:</label>
+    <input name="textvalid" id="textvalid" type="text" class="valid" />
+  </p>
+  <p>
+    <label for="textdisabled">A disabled field:</label>
+    <input name="textdisabled" id="textdisabled" type="text" disabled />
+  </p>
+</form>
+
+Style guide: Forms.0 Form controls.1 Text input
+*/
+
+/*
+Optional & mandatory fields
+
+Only ask for the information you absolutely need. Don't mark mandatory fields with asterisks.
+
+If you have to ask for optional information, mark the field labels with '(optional)'.
+
+Style guide: Forms.1 Optional & mandatory fields
+*/
+
+/*
+Labels
+
+All forms fields should have labels. Don't hide labels, unless the surrounding context makes them unnecessary.
+
+Tell the user what they need to enter into the field. Label text should be short and direct. Avoid colons at the end of labels.
+
+Align labels above their fields. They should be associated with form fields using the `for` attribute.
+
+Markup:
+<form>
+  <label class="form-label" for="full-name">Full name</label>
+  <input class="form-control" id="full-name" type="text" />
+</form>
+
+Style guide: Forms.2 Labels
+*/
+
+/*
+Hint text
+
+Use hint text to give the user contextual help about how to provide the information.
+
+The hint text should be above the form field and always visible.
+
+Make sure screen readers can read hint text correctly (use the correct ARIA tags).
+
+Markup:
+<form>
+  <label for="name">Full name</label>
+  <span class="hint" id="name-hint">Your name is on your birth certificate.</span>
+  <input type="text" id="name" aria-describedby="name-hint" />
+</form>
+
+Style guide: Forms.3 HintText
 */
 
 %base-input {
@@ -21,7 +106,6 @@ Style guide: Forms
     outline: 2px solid $error-colour;
   }
 
-  &:valid,
   &.valid {
     outline: 2px solid $success-colour;
   }
@@ -47,67 +131,15 @@ form {
     border: none;
   }
 
-  /*
-  Label
-
-  Used to tell the user what to enter into the field.
-
-  Markup:
-  <form>
-    <label>Enter your name</label>
-  </form>
-
-  Style guide: Forms.Label
-  */
-
   label {
     display: block;
   }
-
-  /*
-  Hint text
-
-  An optional extra descriptor for the input field.
-
-  Markup:
-  <form>
-    <label for="name">Enter your name</label>
-    <span class="hint" id="name-hint">Your name is on your birth certificate</span>
-    <input type="text" id="name" aria-describedby="name-hint" />
-  </form>
-
-  Style guide: Forms.HintText
-  */
 
   .hint {
     display: block;
     color: $body-secondary-text-colour;
     font-size: rem(14);
   }
-
-  /*
-  Text input
-
-  A single line text input.
-
-  Markup:
-  <form>
-    <p>
-      <label>A text input field:</label>
-      <input type="text" />
-    </p>
-    <p>
-      <label>An invalid field:</label>
-      <input type="text" class="invalid" />
-    </p>
-    <p>
-      <label>A disabled field:</label>
-      <input type="text" disabled />
-    </p>
-  </form>
-
-  Style guide: Forms.TextInput
-  */
 
   [type='text'],
   [type='email'],
@@ -122,8 +154,8 @@ form {
 
   Markup:
   <form>
-    <label>An input for longer responses:</label>
-    <textarea></textarea>
+    <label for="texta">An input for longer responses:</label>
+    <textarea name="texta" id="texta"></textarea>
   </form>
 
   Style guide: Forms.TextAreaInput

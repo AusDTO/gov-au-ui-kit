@@ -55,7 +55,7 @@
   <section class="hero">
     <div class="wrapper">
       <span class="site-title">{{options.title}}</span>
-      <p class="tagline">A living style guide of <code>gov-au-ui-kit</code>, built using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
+      <p class="tagline">A living style guide of gov-au-ui-kit, built using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
       <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
   </section>
@@ -93,7 +93,7 @@
 
   <article role="main">
     {{#if homepage}}
-      <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview">
+      <div id="kssref-0" class="guide-section guide-section--depth-0 kss-overview">
         {{{homepage}}}
       </div>
     {{else}}
@@ -106,7 +106,7 @@
     }}
 
       <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
-      <h4>Jump to</h4>
+      <h2>Jump to</h2>
       <ul class="guide-jump-links">
         {{#each sections}}
           {{#unless @first}}
@@ -116,7 +116,7 @@
       </ul>
       {{#each sections}}
         <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
-                                                 class="guide-section kss-section--depth-{{depth}}">
+                                                 class="guide-section guide-section--depth-{{depth}}">
 
           <div>
             {{#unless @first}}
