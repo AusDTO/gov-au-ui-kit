@@ -73,7 +73,8 @@ Style guide: List styles
 /*
 Horizontal list
 
-A Horizontal list can have item(s) with a featured image.
+A Horizontal list can have item(s) with a featured image. Note: If you
+leave in a `figure` with no `img` you'll still get a left padding on your item.
 
 - **Hero item**: by adding the `.hero-item` class to a list item, the layout
 changes to fit a wider image
