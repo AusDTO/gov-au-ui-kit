@@ -3,4 +3,7 @@ $base-border-radius: 3px;
 $tiny-border-radius: ($base-border-radius / 3);
 $large-border-radius: ($base-border-radius * 4);
 
+$transition-timing: .2s;
+$transition-easing: ease-in-out;
+
 // Spacing is governed by _typography.
