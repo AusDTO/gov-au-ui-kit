@@ -11,6 +11,8 @@
   - Added horizontal, vertical and small lists of content
 - Tables
   - Documented use of tables
+- Navigation
+  - Skip to main content link
 - Typography
   - Heading sizes scaled down
   - Added 700 font-weight to apply to headings
