@@ -65,6 +65,10 @@ Style guide: List styles
     margin-top: 0;
     margin-bottom: $tiny-spacing;
   }
+
+  h3 {
+    @extend h4;
+  }
 }
 
 /*
@@ -116,12 +120,52 @@ Style guide: List styles.1 Horizontal list
 /*
 Vertical list
 
-WARNING. Work in progress
+The Vertical list suits content that fits into a column layout, and wraps with
+two list items on each row.
 
-Markup: templates/lists-vert.hbs
+Markup: templates/lists-vertical.hbs
 
 Style guide: List styles.2 Vertical list
 */
+
+.list-vertical {
+
+  @extend %base-list;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+
+    flex: 0 0 48%;
+
+    &:nth-child(odd) {
+      margin-right: 4%;
+    }
+
+    @include media($tablet) {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+
+    article {
+      display: flex;
+      flex-wrap: wrap;
+
+      * {
+        flex: 0 0 100%;
+      }
+    }
+
+    .meta {
+      order: -1;
+
+      time {
+        display: block;
+      }
+    }
+  }
+}
 
 /*
 Small list
@@ -131,21 +175,6 @@ Markup: templates/lists-small.hbs
 Style guide: List styles.3 Small list
 */
 
-
-.list-vert {
-  li {
-    @include span-columns(4);
-    @include omega(3n);
-    // Should consider word-wrap issues in narrow cols
-    // https://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
-
-    .meta {
-      time {
-        display: block;
-      }
-    }
-  }
-}
 
 
 .list-small {
