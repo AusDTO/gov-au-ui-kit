@@ -1,7 +1,7 @@
 /*
 Typography
 
-This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to provide a consistent 12 column responsive grid layout with basic content styling and good typographic defaults.
+This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to provide a responsive grid layout with basic content styling and good typographic defaults.
 
 The framework aims to meet common government typographic needs:
 
@@ -25,18 +25,23 @@ Typeface
 
 We are currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
 
-<div class="guide--type-example"><h4>Open Sans regular 400</h4>
-  <p class='abstract'>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<div class="guide-example--type"><h3>Open Sans regular 400</h3>
+  <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</p>
 </div>
-<div class="guide--type-example"><h4>Open Sans regular 400 italic</h4>
-  <p class='abstract'><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<div class="guide-example--type"><h3>Open Sans regular 400 italic</h3>
+  <p><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</em></p>
 </div>
-<div class="guide--type-example"><h4>Open Sans bold 700</h4>
-  <p class='abstract'><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+<div class="guide-example--type"><h3>Open Sans semi bold 600</h3>
+  <p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890(!@#s%g.,?:;)</strong></p>
+</div>
+<div class="guide-example--type"><h3>Open Sans bold 700</h3>
+  <p><strong class="very-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</strong></p>
 </div>
@@ -59,24 +64,10 @@ $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream 
 
 We have not decided on using a webfont but the font stacks should still achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
 
-Currently you will need to `link` to Open Sans via the HTML `head` to support Internet Explorer.
+Currently you will need to load webfonts through the [Google Web Font Loader](https://github.com/typekit/webfontloader) via `<script>` to provide Open Sans via the HTML `head` to support both modern browsers, and Internet Explorer.
 
 Style guide: Typography.1 Typeface.1 Font stacks
 */
-
-/*
-Breakpoints
-
-- Mobile (extra small devices): 4 columns, 420px maximum
-- Tablet (small devices): 8 columns, 768px maximum
-- Desktop (medium devices): 12 columns, 1200px maximum
-
-You should think about this in parallel with the [grid breakpoints](section-grid.html#kssref-grid-3-breakpoints).
-
-Style guide: Typography.2 Headings & body copy.1 Breakpoints
-*/
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext');
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
 $base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
@@ -115,7 +106,7 @@ Style guide: Typography.3 Spacing
 */
 
 // Leading/line-height.
-$base-leading: 1.8;
+$base-leading: 1.6;
 $base-heading-leading: 1.4;
 $small-leading: 1.2;
 
@@ -128,7 +119,7 @@ $tiny-spacing: $base-spacing / 4;
 // Font weights
 $base-font-weight: 400;
 $bold-font-weight: 600;
-$heading-font-weight: $bold-font-weight;
+$heading-font-weight: 700;
 
 // Font sizes
 $small-font-size: 87.5%;
@@ -152,9 +143,9 @@ They are initially based on a perfect fourth modular scale.
 
 ### Breakpoints
 
-- Mobile (extra small devices): 4 columns, 420px maximum
-- Tablet (small devices): 8 columns, 768px maximum
-- Desktop (medium devices): 12 columns, 1200px maximum
+- Mobile (extra small devices): 8 columns, 420px maximum
+- Tablet (small devices): 12 columns, 768px maximum
+- Desktop (medium devices): 16 columns, 1200px maximum
 
 ### Font size & line heights default settings
 
@@ -170,46 +161,46 @@ Use relative units to allow for variety across users' browsers and device screen
     <th>Desktop</th>
   </tr>
   <tr>
-    <td>h1 / .display </td>
-    <td>51 / 3.1875em</td>
-    <td>57 / 3.5625em<br></td>
-    <td>51 / 3.1875em</td>
+    <td>h1</td>
+    <td>32px</td>
+    <td>44px<br></td>
+    <td>40px</td>
   </tr>
   <tr>
     <td>h2</td>
-    <td>43 / 2.6875em</td>
-    <td>43 / 2.6875em</td>
-    <td>38 / 2.375em</td>
+    <td>28px</td>
+    <td>32px</td>
+    <td>32px</td>
   </tr>
   <tr>
     <td>h3</td>
-    <td>28 / 1.75em</td>
-    <td>32 / 1.75em</td>
-    <td>28 / 1.75em</td>
+    <td>24px</td>
+    <td>26px</td>
+    <td>26px</td>
   </tr>
   <tr>
-    <td>h4 / .abstract</td>
-    <td>21 / 1.3125em</td>
-    <td>24 / 1.5em</td>
-    <td>21 / 1.3125em</td>
+    <td>h4</td>
+    <td>19px</td>
+    <td>22px</td>
+    <td>22px</td>
   </tr>
   <tr>
     <td>h5</td>
-    <td>18 / 1.125em</td>
-    <td>18 / 1.125em</td>
-    <td>16 / >1em</td>
+    <td>16px</td>
+    <td>16px</td>
+    <td>16px</td>
   </tr>
   <tr>
     <td>h6</td>
-    <td>18 / 1.125em</td>
-    <td>18 / 1.125em</td>
-    <td>16 / 1em</td>
+    <td>16px</td>
+    <td>16px</td>
+    <td>16px</td>
   </tr>
   <tr>
-    <td>Body copy</td>
-    <td>18 / 1.125em</td>
-    <td>18 / 1.125em</td>
-    <td>16 / 1em</td>
+    <td>p</td>
+    <td>16px</td>
+    <td>16px</td>
+    <td>16px</td>
   </tr>
 </table>
 
@@ -227,26 +218,21 @@ h4,
 h5,
 h6 {
   line-height: $base-heading-leading;
-  font-weight: $base-font-weight;
-  margin-bottom: $small-spacing;
+  font-weight: $heading-font-weight;
+  margin-bottom: $small-spacing * .5;
   margin-top: $base-spacing;
 }
 
 h1 {
-  font-size: rem(57);
-  font-weight: $base-font-weight;
+  font-size: rem(32);
   line-height: $small-leading;
 
-  @include media($desktop) {
-    font-size: rem(51);
-  }
-
   @include media($tablet) {
-    font-size: rem(57);
+    font-size: rem(44);
   }
 
-  @include media($mobile) {
-    font-size: rem(51);
+  @include media($desktop) {
+    font-size: rem(40);
   }
 
   &:first-of-type {
@@ -255,75 +241,35 @@ h1 {
 }
 
 h2 {
-  font-size: rem(43);
-  line-height: $small-leading;
-
-  @include media($desktop) {
-    font-size: rem(38);
-  }
-
-  @include media($tablet) {
-    font-size: rem(43);
-  }
-
-  @include media($mobile) {
-    font-size: rem(38);
-  }
-
-  &:first-of-type {
-    margin-top: $tiny-spacing;
-  }
-}
-
-h3 {
   font-size: rem(28);
-  font-weight: $heading-font-weight;
-
-  @include media($desktop) {
-    font-size: rem(28);
-  }
+  line-height: $small-leading;
 
   @include media($tablet) {
     font-size: rem(32);
   }
+}
 
-  @include media($mobile) {
-    font-size: rem(28);
+h3 {
+  font-size: rem(24);
+  font-weight: $heading-font-weight;
+
+  @include media($tablet) {
+    font-size: rem(26);
   }
 }
 
 h4 {
-  font-size: rem(21);
+  font-size: rem(19);
   font-weight: $heading-font-weight;
 
-  @include media($desktop) {
-    font-size: rem(21);
-  }
-
   @include media($tablet) {
-    font-size: rem(24);
-  }
-
-  @include media($mobile) {
-    font-size: rem(21);
+    font-size: rem(22);
   }
 }
 
 h5 {
   font-size: rem(16);
   font-weight: $heading-font-weight;
-
-  @include media($desktop) {
-    font-size: rem(16);
-  }
-
-  @include media($tablet) {
-    font-size: rem(18);
-  }
-
-  @include media($mobile) {
-    font-size: rem(18);
-  }
 }
 
 h6 {
@@ -357,6 +303,37 @@ kbd {
 
 strong {
   font-weight: $bold-font-weight;
+
+  &.very-bold {
+    font-weight: $heading-font-weight;
+  }
+}
+
+// For display font sizing.
+.display {
+  @extend h1;
+}
+
+// More specialised typography.
+//
+// For abstracts or page introductory paragraphs.
+.abstract {
+  @extend h4;
+
+  font-weight: $base-font-weight;
+  border-bottom: 1px solid;
+  padding-bottom: 1.3 * $base-spacing;
+  margin-bottom: 2 * $base-spacing;
+}
+
+hr {
+  border-color: $border-secondary-colour;
+  border-style: solid;
+  border-bottom: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 /*
@@ -378,53 +355,13 @@ List styles have been developed for:
 
 Markup: templates/list-examples.hbs
 
-Style guide: Typography.4 Horizontal & vertical rhythm.1 Lists
+Style guide: Typography.5 Lists
 */
 
-/*
-Callouts & warnings
-
-**Callouts** and **warning callouts** can be used to draw the user's attention to a specific piece of content.
-
-Markup: templates/callouts-examples.hbs
-
-Style guide: Typography.4 Horizontal & vertical rhythm.2 Callouts & warnings
-*/
-
-/*
-Badges
-
-The framework provides styling for `badges` to indicate status:
-
-- <span class="badge--default">in-progress</span> using `<span class="badge--default">in-progress</span>`
-- <span class="badge--alpha">alpha</span> using `<span class="badge--alpha">alpha</span>`
-- <span class="badge--beta">beta</span> using `<span class="badge--beta">beta</span>`
-- <span class="badge--error">error</span> using `<span class="badge--error">error</span>`
-- <span class="badge--success">done</span> using `<span class="badge--success">done</span>`
-
-Style guide: Typography.4 Horizontal & vertical rhythm.3 Badges
-*/
-
-/*
-Quotations
-
-The framework provides 2 ways of using quotes:
-
-- **in-line quoting** using `q` element (adds quotation marks to either side of the in-line quotation)
-- **block quotes** via `blockquote`:
- - standard block quote
- - editorial block quote (pull quote) with larger size text.
-
-`blockquote` is a block-level element that can contain in-line elements. So they can nest:
-
-- multiple paragraphs, lists, etc
-- another `blockquote`
-- the `footer` element to provide citations using `<cite>`.
-
-Markup: templates/quotation-examples.hbs
-
-Style guide: Typography.4 Horizontal & vertical rhythm.4 Quotations
-*/
+ul,
+ol {
+  padding-left: 1.1 * $base-spacing;
+}
 
 ul,
 ol,
@@ -434,18 +371,11 @@ dt,
 dd {
   margin-bottom: $small-spacing;
   font-size: rem(16);
-
-  @include media($tablet) {
-    font-size: rem(18);
-  }
-
-  @include media($mobile) {
-    font-size: rem(18);
-  }
+  line-height: $base-spacing;
 }
 
 li {
-  margin-bottom: ($small-spacing / 2);
+  margin-bottom: ($small-spacing / 1.5);
   margin-left: -($small-spacing / 4);
   padding-left: ($small-spacing / 4);
 
@@ -465,19 +395,82 @@ dt {
   }
 }
 
-// For display font sizing.
-.display {
-  @extend h1;
+/*
+Callouts & warnings
+
+**Callouts** and **warning callouts** can be used to draw the user's attention to a specific piece of content.
+
+Markup: templates/callouts-examples.hbs
+
+Style guide: Typography.6 Callouts & warnings
+*/
+
+.callout {
+  margin: $base-spacing $small-spacing;
+  padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
+  border-radius: $tiny-border-radius;
+  box-shadow: 0 0 8px $light-grey;
 }
 
-// More specialised typography.
-//
-// For abstracts or page introductory paragraphs.
-.abstract {
-  @extend h4;
+.callout--warning {
+  @extend .callout;
 
-  font-weight: $base-font-weight;
+  border-left: ($small-spacing / 2) solid $red;
+  padding-left: $base-spacing - ($small-spacing / 2);
 }
+
+
+/*
+Badges
+
+The framework provides styling for `badges` to indicate status.
+
+Markup: templates/badges.hbs
+
+Style guide: Typography.7 Badges
+*/
+
+$badges: (
+  'default':  $badge-colour-default,
+  'alpha':    $badge-colour-alpha,
+  'beta':     $badge-colour-beta,
+  'error':    $badge-colour-error,
+  'success':  $badge-colour-success,
+);
+
+@each $badge-type, $colour in $badges {
+  .badge--#{$badge-type} {
+    display: inline-block;
+    background-color: $colour;
+    border-radius: $large-border-radius;
+    padding: $tiny-spacing $small-spacing;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: lighten($colour, 75%);
+    font-size: rem(14);
+  }
+}
+
+/*
+Quotations
+
+The framework provides 2 ways of using quotes:
+
+- **in-line quoting** using `q` element (adds quotation marks to either side of the in-line quotation)
+- **block quotes** via `blockquote`:
+ - standard block quote
+ - editorial block quote (pull quote) with larger size text.
+
+`blockquote` is a block-level element that can contain in-line elements. So they can nest:
+
+- multiple paragraphs, lists, etc
+- another `blockquote`
+- the `footer` element to provide citations using `<cite>`.
+
+Markup: templates/quotation-examples.hbs
+
+Style guide: Typography.8 Quotations
+*/
 
 blockquote {
   margin: $medium-spacing 0;
@@ -568,46 +561,4 @@ q {
 
 cite {
   font-style: $base-font-style;
-}
-
-
-// Callouts
-.callout {
-  margin: $base-spacing $small-spacing;
-  padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
-  border-radius: $tiny-border-radius;
-  box-shadow: 0 0 8px $light-grey;
-}
-
-.callout--warning {
-  @extend .callout;
-
-  border-left: ($small-spacing / 2) solid $red;
-  padding-left: $base-spacing - ($small-spacing / 2);
-}
-
-$badges: (
-  'default':  $badge-colour-default,
-  'alpha':    $badge-colour-alpha,
-  'beta':     $badge-colour-beta,
-  'error':    $badge-colour-error,
-  'success':  $badge-colour-success,
-);
-
-@each $badge-type, $colour in $badges {
-  .badge--#{$badge-type} {
-    display: inline-block;
-    background-color: $colour;
-    border-radius: $large-border-radius;
-    padding: $tiny-spacing $small-spacing;
-    line-height: 1;
-    letter-spacing: 1px;
-    color: lighten($colour, 75%);
-    font-size: rem(14);
-  }
-}
-
-// Refactor into an images partial?
-img {
-  max-width: 100%;
 }

@@ -1,80 +1,85 @@
 // Describe me so no evil shall be committed in wielding this class!
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .wrapper {
   @include outer-container;
+  @include pad(0 $base-spacing);
 
   @include media($desktop) {
-    @include pad(0 default);
+    @include pad(0);
   }
 }
 
 header {
   &[role='banner'] {
     @include outer-container(100%);
+    min-width: 100%;
+    flex: none;
   }
 }
 
 footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
+    min-width: 100%;
+    flex: none;
     @include pad(0 default);
     margin-top: ($base-spacing * 2);
+
   }
 }
 
 main {
   @include outer-container;
+  @include pad(0 $base-spacing);
+
+  // makes flex work in IE10/11 https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
+  flex: 1 0 auto;
 
   @include media($tablet) {
-    @include pad($base-spacing default 0 default);
+    @include pad($base-spacing 0 0 0);
   }
 
-  padding-top: $base-spacing;
+  .content-main {
+    @include span-columns(4 of 4);
+    @include shift(0);
 
-  // IE 8 "clearfix" from https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
-  // HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/
-  // scss-lint:disable PseudoElement
-  &,
-  &::before,
-  &::after {
-    content: ' ';
-    display: table;
-  }
-
-  &::after {
-    clear: both;
-  }
-
-  article {
-    @include span-columns(7 of 12);
     @include media($tablet) {
-      @include span-columns(6 of 8);
+      @include span-columns(8 of 12);
     }
 
-    @include media($mobile) {
-      @include span-columns(4 of 4);
-      @include shift(0);
+    @include media($desktop) {
+      @include span-columns(9 of 16);
+      @include shift(1);
     }
+
   }
 
   .form-wrapper {
-    @include span-columns(4 of 6);
+    @include span-columns(4 of 4);
 
-    @include media($mobile) {
-      @include span-columns(4 of 4);
+    @include media($tablet) {
+      @include span-columns(4 of 6);
     }
   }
 }
 
 .sidebar {
-  @include span-columns(3 of 12);
+  @include span-columns(4 of 4);
 
   @include media($tablet) {
-    @include span-columns(6 of 8);
-    @include shift(1);
+    @include span-columns(3 of 12);
   }
 
-  @include media($mobile) {
-    @include span-columns(4 of 4);
-    @include shift(0);
+  @include media($desktop) {
+    @include span-columns(3 of 16);
   }
+}
+
+figure {
+  margin: 0;
 }

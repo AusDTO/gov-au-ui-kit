@@ -1,9 +1,13 @@
 /*
 Navigation
 
-Navigation tells your users where they are, where they've been and where they can go.
+Ensure users understand where they are in the service, where they have been and where they can go.
 
-The `<nav>` element (HTML Navigation Element) represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+Use the HTML `<nav>` element and ARIA tags to define clear and accessible navigation links for the page.
+
+<hr />
+
+This guidance is in part adapted from [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 Style guide: Navigation
 */
@@ -11,11 +15,29 @@ Style guide: Navigation
 /*
 Primary navigation
 
-A vertical navigation menu that fits 3 levels of items
+The framework provides a vertical navigation menu that shows 3 levels of items.
+
+Ensure the side menu is accessible with a keyboard&mdash;users should be able to tab through every link. Use ARIA tags so screen readers can understand the menu.
+
+Use active state (`class="active"`) to show which page the user is on.
+
+Use short navigation links. They don't have to be the full page title.
+
+Test with users to ensure the navigation hierarchy is not too long or too deep.
 
 Markup: templates/primary-navigation.hbs
 
-Style guide: Navigation.Primary Navigation
+Style guide: Navigation.1 Primary Navigation
+*/
+
+/*
+Breadcrumbs
+
+Use breadcrumbs to help the user understand where are in the service and how they got there.
+
+Markup: templates/breadcrumbs.hbs
+
+Style guide: Navigation.2 Breadcrumbs
 */
 
 .primary-nav {
@@ -23,7 +45,6 @@ Style guide: Navigation.Primary Navigation
     color: $darker-aqua;
     background: $lighter-grey;
     margin-top: $base-spacing;
-    display: none;
 
     .chevron {
       float: right;
@@ -99,38 +120,33 @@ Style guide: Navigation.Primary Navigation
 .js {
   .primary-nav {
     ul {
+      margin: 0;
+      display: none;
       @include media($tablet) {
-        margin: 0;
-        display: none;
+        margin: inherit;
+        display: block;
       }
     }
   }
 
   .nav-heading {
     @include media($tablet) {
-      display: block;
+      display: none;
     }
   }
 }
 
-/*
-Breadcrumbs
-
-A inline listing of pages that are broader than this one
-
-Markup: templates/breadcrumbs.hbs
-
-Style guide: Navigation.Breadcrumbs
-*/
 .breadcrumbs {
   @include outer-container(100%);
-
+  display: none;
+  min-width: 100%;
+  flex: none;
   margin-top: 0;
   background-color: $non-white;
   color: $grey;
 
   @include media($tablet) {
-    display: none;
+    display: block;
   }
 
   ul {
@@ -154,5 +170,46 @@ Style guide: Navigation.Breadcrumbs
       color: $grey;
     }
 
+  }
+}
+
+/*
+Skip Links
+
+See. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">WCAG 2.4.1 Bypass Blocks</a>
+
+When this Success Criterion is not satisfied, it may be difficult for people with some disabilities to reach the main content of a Web page quickly and easily.
+
+Markup: templates/skip-link.hbs
+
+Style guide: Navigation.3 Skip Links
+*/
+.skip-to {
+  position: relative;
+  z-index: 99;
+
+  a {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    background-color: $white;
+
+    &:active,
+    &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: absolute;
+      width: auto;
+      top: 10px;
+      left: 10px;
+      padding: $tiny-spacing $small-spacing;
+    }
   }
 }

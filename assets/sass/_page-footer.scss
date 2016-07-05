@@ -4,39 +4,69 @@ footer[role='contentinfo'] {
   background-color: $non-black;
   color: $white;
 
-  .footer-logo {
-    @include span-columns(3 of 12);
+  a {
+    color: $white;
+  }
 
-    @include media($mobile) {
-      @include span-columns(8 of 8);
+  .footer-logo {
+
+    @include media($tablet) {
+      @include span-columns(3 of 12);
     }
 
     img {
-      height: $base-spacing * 3;
+      height: $base-spacing * 4;
     }
   }
 
-  nav {
-    @include media($tablet) {
-      @include span-columns(6 of 8);
-      // @include shift(2);
-    }
+  .footer-links {
 
     @include media($mobile) {
-      @include span-columns(4 of 4);
-      @include shift(0);
-
-      padding-left: $small-spacing;
-      padding-right: $small-spacing;
+      @include span-columns(9 of 12);
     }
 
+    a {
+      display: inline-block;
+    }
+  }
+
+  hr {
+    margin: ($base-spacing * 2) 0;
+  }
+
+  /*
+  Footer navigation
+
+  A number of lists of links arranged horizontally. Displays two columns up to a
+  $tablet breakpoint, and four columns beyond that.
+
+  Markup: templates/footer-navigation.hbs
+
+  Style guide: Navigation.Footer Navigation
+  */
+  nav {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+
     ul {
+      flex: 0 0 50%;
       margin: 0;
       padding: 0;
+
+      @include media($tablet) {
+        flex-basis: 25%;
+      }
     }
 
     li {
+      line-height: 1.5em;
       list-style: none;
     }
+
   }
+
 }

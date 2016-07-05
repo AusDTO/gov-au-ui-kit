@@ -1,11 +1,31 @@
 @import './../../assets/sass/ui-kit';
 
-.guide-jump-links {
-  display: flex;
-  flex-wrap: wrap;
+%scrolling-example {
+  width: 17em;
 
-  li {
-    flex-basis: 50%;
+  @include media($mobile) {
+    width: 25em;
+  }
+
+  @include media($tablet) {
+    width: 35em;
+  }
+
+  @include media($desktop) {
+    width: 45em;
+  }
+}
+
+.guide-jump-links {
+
+  @include media ($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex-basis: 50%;
+    }
+
   }
 }
 
@@ -14,32 +34,57 @@
   margin: $base-spacing 0;
   padding: $base-spacing;
 
-  :first-child {
+}
+
+.guide-example--type {
+  @extend %scrolling-example;
+  background-color: $non-white;
+  border-radius: $base-border-radius;
+  color: $dark-aqua;
+  margin-bottom: $small-spacing;
+  padding: 2em;
+  overflow: auto;
+
+  h4 {
     margin-top: 0;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
 pre {
-  background-color: $background-contrast-colour;
-  color: $navy;
+  @extend %scrolling-example;
   margin: 0 0 $base-spacing;
-  overflow: scroll;
-  padding: $small-spacing;
   white-space: pre;
-  @include media($tablet) {
-    white-space: normal;
-  }
+  overflow: scroll;
+  background-color: $non-white;
+  padding: $small-spacing;
 }
 
+pre,
 code {
   color: $navy;
 }
 
 .guide-colour {
-  @include span-columns(3);
-  @include omega(4n);
+  float: left;
+  width: 43%;
+  margin-right: 3%;
   margin-bottom: $gutter;
   border: solid 1px $light-grey;
+
+  @include media($tablet) {
+    float: none;
+    margin-right: 0;
+    @include span-columns(3 of 12);
+    @include omega(4n);
+  }
 
   .swatch {
     padding: 50% 0;
@@ -271,90 +316,4 @@ code {
 .bg-light-yellow {
   background-color: $light-yellow;
   color: $white;
-}
-
-
-
-// ------------------------------------------------------------------------------
-//   group prettyprint.js styling
-// ------------------------------------------------------------------------------
-// Pretty printing styles. Used with prettify.js.
-// SPAN elements with the classes below are added by prettyprint.
-
-
-// Use higher contrast and text-weight for printable form.
-@media print, projection {
-  .str {
-    color: $black;
-  }
-
-  .kwd {
-    color: $black;
-    font-weight: bold;
-  }
-
-  .com {
-    color: $black;
-    font-style: italic;
-  }
-
-  .typ {
-    color: $black;
-    font-weight: bold;
-  }
-
-  .lit {
-    color: $black;
-  }
-
-  .pun,
-  .opn,
-  .clo {
-    color: $black;
-  }
-
-  .tag {
-    color: $black;
-    font-weight: bold;
-  }
-
-  .atn {
-    color: $black;
-  }
-
-  .atv {
-    color: $black;
-  }
-
-}
-
-
-// ------------------------------------------------------------------------------
-//   Guide Typography Page Styles
-// ------------------------------------------------------------------------------
-.guide--type-example {
-  background-color: $non-white;
-  border-radius: $base-border-radius;
-  color: $dark-aqua;
-  margin-bottom: $small-spacing;
-  padding: 2em;
-  overflow: auto;
-
-  h4 {
-    margin-top: 0;
-  }
-
-  p {
-    font-size: 2em;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.kss-section--depth-2 {
-  border-top: solid 1px $light-grey;
-  margin-top: $base-spacing * 2;
-  padding-top: $base-spacing * 2;
 }

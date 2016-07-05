@@ -14,10 +14,19 @@
   })(document.documentElement)
   </script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Open+Sans:400italic,600,700,400:latin,latin-ext']
+      }
+    });
+  </script>
+
   <link rel="stylesheet" href="kss-assets/kss.css">
   {{{styles}}}
 
-  <!--[if (gte IE 9) | (!IE)]>-->
+  <!--[if (gte IE 9) | (!IE)]><!-->
   <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
           crossorigin="anonymous"></script>
   <!--<![endif]-->
@@ -26,11 +35,6 @@
           crossorigin="anonymous"></script>
   <script type="text/javascript"
           src="//cdnjs.cloudflare.com/ajax/libs/corysimmons-selectivizr2/1.0.8/selectivizr2.min.js"></script>
-  <script type="text/javascript"
-          src="//cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400&subset=latin,latin-ext" rel='stylesheet'>
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic&subset=latin,latin-ext" rel='stylesheet'>
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:700&subset=latin,latin-ext" rel='stylesheet'>
   <![endif]-->
   <!--[if lte IE 9]>
   <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
@@ -41,6 +45,11 @@
   <script type="text/javascript" src="latest/ui-kit.js"></script>
 </head>
 <body>
+
+<div class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+</div>
 
 <header role="banner">
   <section class="govau--header">
@@ -57,7 +66,7 @@
   <section class="hero">
     <div class="wrapper">
       <span class="site-title">{{options.title}}</span>
-      <p class="tagline">A living style guide of <code>gov-au-ui-kit</code>, built using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
+      <p class="tagline">A living style guide of gov-au-ui-kit, built using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
       <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
   </section>
@@ -65,7 +74,7 @@
 </header>
 
 <main>
-  <aside class="sidebar">
+  <aside class="sidebar" id="nav">
     <nav class="primary-nav" aria-label="main navigation">
       <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
          aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
@@ -93,9 +102,9 @@
     </nav>
   </aside>
 
-  <article role="main">
+  <article role="main" id="content" class="content-main">
     {{#if homepage}}
-      <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview">
+      <div id="kssref-0" class="guide-section guide-section--depth-0 kss-overview">
         {{{homepage}}}
       </div>
     {{else}}
@@ -108,7 +117,7 @@
     }}
 
       <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
-      <h4>Jump to</h4>
+      <h2>Jump to</h2>
       <ul class="guide-jump-links">
         {{#each sections}}
           {{#unless @first}}
@@ -118,7 +127,7 @@
       </ul>
       {{#each sections}}
         <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
-                                                 class="guide-section kss-section--depth-{{depth}}">
+                                                 class="guide-section guide-section--depth-{{depth}}">
 
           <div>
             {{#unless @first}}
@@ -198,10 +207,6 @@
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
-<script src="kss-assets/prettify.js"></script>
-<script>
-  prettyPrint();
-</script>
 {{{scripts}}}
 
 
