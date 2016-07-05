@@ -18,13 +18,11 @@ header[role='banner'] {
     color: $white;
 
     .govau--logo {
-      float: left;
+      padding-bottom: $medium-spacing;
 
-      @include media($mobile) {
-        @include span-columns(4 of 4);
-
-        float: none;
-        padding-bottom: $medium-spacing;
+      @include media($tablet) {
+        float: left;
+        padding-bottom: 0;
       }
     }
 
@@ -50,12 +48,9 @@ header[role='banner'] {
     }
 
     .feedback {
-      float: right;
-
-      @include media($mobile) {
-        @include span-columns(4 of 4);
-
-        float: none;
+      display: block;
+      @include media($tablet) {
+        float: right;
       }
     }
 

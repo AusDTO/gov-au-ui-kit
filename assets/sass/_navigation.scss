@@ -45,7 +45,6 @@ Style guide: Navigation.2 Breadcrumbs
     color: $darker-aqua;
     background: $lighter-grey;
     margin-top: $base-spacing;
-    display: none;
 
     .chevron {
       float: right;
@@ -121,22 +120,25 @@ Style guide: Navigation.2 Breadcrumbs
 .js {
   .primary-nav {
     ul {
+      margin: 0;
+      display: none;
       @include media($tablet) {
-        margin: 0;
-        display: none;
+        margin: inherit;
+        display: block;
       }
     }
   }
 
   .nav-heading {
     @include media($tablet) {
-      display: block;
+      display: none;
     }
   }
 }
 
 .breadcrumbs {
   @include outer-container(100%);
+  display: none;
   min-width: 100%;
   flex: none;
   margin-top: 0;
@@ -144,7 +146,7 @@ Style guide: Navigation.2 Breadcrumbs
   color: $grey;
 
   @include media($tablet) {
-    display: none;
+    display: block;
   }
 
   ul {

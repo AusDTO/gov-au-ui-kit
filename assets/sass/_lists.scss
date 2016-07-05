@@ -89,14 +89,15 @@ Style guide: List styles.1 Horizontal list
 
   li {
 
-    display: flex;
+    @include media($tablet) {
+      display: flex;
+    }
 
     figure {
-      flex: 0 0 35%;
-      margin-right: $base-spacing;
 
       @include media($tablet) {
-        flex: initial;
+        flex: 0 0 35%;
+        margin-right: $base-spacing;
       }
     }
 
@@ -109,12 +110,10 @@ Style guide: List styles.1 Horizontal list
 
     &.hero-item {
       figure {
-        flex-basis: 65%;
+        @include media($tablet) {
+          flex-basis: 65%;
+        }
       }
-    }
-
-    @include media($tablet) {
-      flex-wrap: wrap;
     }
 
   }
@@ -148,10 +147,10 @@ Style guide: List styles.2 Vertical list
 
   li {
 
-    flex: 0 0 48%;
+    flex: 0 0 100%;
 
     @include media($tablet) {
-      flex-basis: 100%;
+      flex-basis: 48%;
     }
 
     article {
@@ -166,18 +165,18 @@ Style guide: List styles.2 Vertical list
     }
 
     h3 {
-      min-height: $base-spacing * 2;
+      min-height: auto;
 
       @include media ($tablet) {
-        min-height: auto;
+        min-height:  $base-spacing * 2;
       }
     }
 
     p {
-      min-height: $base-spacing * 3;
+      min-height: auto;
 
       @include media ($tablet) {
-        min-height: auto;
+        min-height: $base-spacing * 3;
       }
     }
 
@@ -195,7 +194,9 @@ Style guide: List styles.2 Vertical list
   @extend .list-vertical;
 
   li {
-    flex: 0 0 30%;
+    @include media ($tablet) {
+      flex: 0 0 31%;
+    }
   }
 }
 
@@ -203,7 +204,9 @@ Style guide: List styles.2 Vertical list
   @extend .list-vertical;
 
   li {
-    flex: 0 0 20%;
+    @include media ($tablet) {
+      flex: 0 0 22%;
+    }
   }
 }
 

@@ -43,10 +43,7 @@ pre {
   margin: 0 0 $base-spacing;
   overflow: scroll;
   padding: $small-spacing;
-  white-space: pre;
-  @include media($tablet) {
-    white-space: normal;
-  }
+  white-space: normal;
 }
 
 code {
