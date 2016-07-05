@@ -108,6 +108,15 @@ Style guide: List styles.1 Horizontal list
       }
     }
 
+    ul {
+      padding-left: 0;
+
+      li {
+        border-bottom: none;
+        padding: $tiny-spacing 0;
+      }
+    }
+
     &.hero-item {
       figure {
         @include media($tablet) {
