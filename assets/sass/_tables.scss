@@ -36,8 +36,14 @@ Style guide: Tables.Content Tables
   td,
   th {
     border-bottom: solid 1px $light-grey;
-    padding: $small-spacing;
+    padding: $tiny-spacing;
+    font-size: $small-font-size;
     text-align: left;
+
+    @include media($tablet) {
+      padding: $small-spacing;
+      font-size: initial;
+    }
   }
 
   thead {

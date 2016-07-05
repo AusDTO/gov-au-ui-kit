@@ -1,11 +1,31 @@
 @import './../../assets/sass/ui-kit';
 
-.guide-jump-links {
-  display: flex;
-  flex-wrap: wrap;
+%scrolling-example {
+  width: 17em;
 
-  li {
-    flex-basis: 50%;
+  @include media($mobile) {
+    width: 25em;
+  }
+
+  @include media($tablet) {
+    width: 35em;
+  }
+
+  @include media($desktop) {
+    width: 45em;
+  }
+}
+
+.guide-jump-links {
+
+  @include media ($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex-basis: 50%;
+    }
+
   }
 }
 
@@ -17,6 +37,7 @@
 }
 
 .guide-example--type {
+  @extend %scrolling-example;
   background-color: $non-white;
   border-radius: $base-border-radius;
   color: $dark-aqua;
@@ -38,23 +59,32 @@
 }
 
 pre {
-  background-color: $background-contrast-colour;
-  color: $navy;
+  @extend %scrolling-example;
   margin: 0 0 $base-spacing;
+  white-space: pre;
   overflow: scroll;
+  background-color: $non-white;
   padding: $small-spacing;
-  white-space: normal;
 }
 
+pre,
 code {
   color: $navy;
 }
 
 .guide-colour {
-  @include span-columns(3);
-  @include omega(4n);
+  float: left;
+  width: 43%;
+  margin-right: 3%;
   margin-bottom: $gutter;
   border: solid 1px $light-grey;
+
+  @include media($tablet) {
+    float: none;
+    margin-right: 0;
+    @include span-columns(3 of 12);
+    @include omega(4n);
+  }
 
   .swatch {
     padding: 50% 0;
