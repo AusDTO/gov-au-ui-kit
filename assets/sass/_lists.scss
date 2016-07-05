@@ -54,6 +54,15 @@ Style guide: List styles
     padding: ($base-spacing * 1.5) 0;
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
+
+    ul {
+      padding-left: 0;
+
+      li {
+        border-bottom: none;
+        padding: $tiny-spacing 0;
+      }
+    }
   }
 
   h2,
@@ -105,15 +114,6 @@ Style guide: List styles.1 Horizontal list
       time {
         display: inline-block;
         margin-right: $small-spacing;
-      }
-    }
-
-    ul {
-      padding-left: 0;
-
-      li {
-        border-bottom: none;
-        padding: $tiny-spacing 0;
       }
     }
 
