@@ -347,6 +347,10 @@ Style guide: Navigation.3 Breadcrumbs
         color: $white;
       }
 
+      a:hover {
+        border-bottom-color: $white;
+      }
+
     }
 
     li:not(:last-child) {
