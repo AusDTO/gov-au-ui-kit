@@ -55,6 +55,7 @@ Style guide: List styles
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
 
+
     ul {
       padding-left: 0;
 
@@ -95,6 +96,7 @@ Style guide: List styles.1 Horizontal list
 
 .list-horizontal {
   @extend %base-list;
+  border-top: none;
 
   li {
 
@@ -117,7 +119,13 @@ Style guide: List styles.1 Horizontal list
       }
     }
 
+    &:last-child {
+      border-bottom: none;
+    }
+
     &.hero-item {
+      border-top: solid 1px $border-colour;
+      
       figure {
         @include media($tablet) {
           flex-basis: 65%;
