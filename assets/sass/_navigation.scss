@@ -302,17 +302,18 @@ Style guide: Navigation.2 Local Navigation
   }
 
   .nav-heading {
-    @include media($tablet) {
-      display: block;
+    display: block;
+    background-color: $dark-aqua;
+    color: $white;
+    padding: $medium-spacing / 2 $small-spacing;
+
+    &:hover {
+      border-color: $dark-aqua;
       background-color: $dark-aqua;
-      color: $white;
-      padding: $medium-spacing / 2 $small-spacing;
+    }
 
-      &:hover {
-        border-color: $dark-aqua;
-        background-color: $dark-aqua;
-      }
-
+    @include media($tablet) {
+      display: none;
     }
   }
 }
