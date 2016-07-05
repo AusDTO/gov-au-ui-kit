@@ -2,24 +2,42 @@
 
 ## UI Kit "Kraken"
 
-### Next release
+### 1.1.0 - 2016-07-05
+
+Adds or modifies:
+
 - Forms
   - Added styled checkboxes and radio buttons
 - Header and Footer
   - Ensured footer is pushed to the bottom of the screen even with short content
 - List views
-  - Added horizontal, vertical and small lists of content
+  - Added more styles for horizontal, vertical and small lists for use in main content area
 - Tables
-  - Documented use of tables
+  - Added missing documentation on use of tables
 - Navigation
-  - Skip to main content link
+  - Skip to main content links and documentation
+- Font asset loading
+  - Removed calling of webfonts via `@import`
+  - Added [Google Web Font Loader](https://github.com/typekit/webfontloader) (see *&sect; Markup changes* below)
 - Typography
   - Heading sizes scaled down
-  - Added 700 font-weight to apply to headings
-  - Scale down body line-height
-  - Increase space between list items
+  - Added 700 font-weight to apply to some headings
+  - Scale down body leading (`line-height`)
+  - Increase spacing between list items
   - Added styles for `hr` element
-- Refactored responsive breakpoints to use `min-width` (mobile-first)
+- Responsive grid changes
+  - Increased column gutter width
+  - Increased number of columns for each breakpoint for more granular grid placements
+  - Refactored responsive breakpoints to use `min-width` (mobile-first)
+
+Bugfixes:
+
+- Fixed [#122](https://github.com/AusDTO/gov-au-ui-kit/issues/122)
+- Fixed [#102](https://github.com/AusDTO/gov-au-ui-kit/issues/102)
+
+Markup changes:
+
+- Add new `<script>` tag to load Google Web Font Loader into `<head>`
 
 ### 1.0.0 - 2016-06-29
 
