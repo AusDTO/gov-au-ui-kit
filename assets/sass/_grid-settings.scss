@@ -62,8 +62,7 @@ $gutter: em(32);
 /*
 Breakpoints
 
-This framework has a mobile-first default layout of 4 columsn, and adds 3
-breakpoints for grid layout on larger screens:
+This framework has a mobile-first default layout of 4 columns, and adds 3 breakpoints for grid layout on larger screens:
 
 - Default: 4 columns
 - Mobile: 8 columns, 420px minimum
@@ -91,9 +90,11 @@ $desktop: new-breakpoint(min-width $max-width 16);
 /*
 Layout
 
-Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar / side navigation.
+Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar/side navigation.
 
-![Diagram of the layout across 12 columns](kss-assets/img_layout_12col_720.png)
+![Diagram of the layout across 16 columns](kss-assets/img_layout.png)
+
+![Diagram of the layout with optional aside nav](kss-assets/img_layoutwithnav.png)
 
 Style guide: Grid.5 Layout
 */
