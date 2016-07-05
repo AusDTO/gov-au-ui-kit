@@ -64,7 +64,7 @@ $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream 
 
 We have not decided on using a webfont but the font stacks should still achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
 
-Currently you will need to `link` to Open Sans via the HTML `head` to support Internet Explorer.
+Currently you will need to load webfonts through the [Google Web Font Loader](https://github.com/typekit/webfontloader) via `<script>` to provide Open Sans via the HTML `head` to support both modern browsers, and Internet Explorer.
 
 Style guide: Typography.1 Typeface.1 Font stacks
 */
