@@ -44,9 +44,6 @@ pre {
   overflow: scroll;
   padding: $small-spacing;
   white-space: normal;
-  @include media($tablet) {
-    white-space: pre;
-  }
 }
 
 code {
