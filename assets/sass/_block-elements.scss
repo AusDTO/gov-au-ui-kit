@@ -8,6 +8,10 @@ body {
 .wrapper {
   @include outer-container;
   @include pad(0 $base-spacing);
+
+  @include media($desktop) {
+    @include pad(0);
+  }
 }
 
 header {
