@@ -86,3 +86,100 @@ header[role='banner'] {
     }
   }
 }
+
+
+.admin {
+  //Applied to body in order to compensate for the .admin-bar fixed element on desktop
+  padding-top: 4em;
+  @include media($tablet) {
+    padding-top: 0;
+  }
+}
+
+.admin-bar {
+  background-color: $maroon;
+  color: $white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 98;
+  padding: $small-spacing 0;
+  box-shadow: 0 5px 10px 0 $non-black;
+
+  @include media($tablet) {
+    position: relative;
+  }
+
+  a {
+    color: $white;
+  }
+
+  .admin-nav,
+  .admin-actions {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include clearfix;
+
+    li {
+      float: left;
+      margin: 0.4em 0 0 0;
+    }
+
+    .button--item {
+      margin-top: 0;
+      @include media($tablet) {
+        float: right;
+      }
+    }
+
+  }
+
+  .admin-nav {
+    float: left;
+    @include media($tablet) {
+      float: none;;
+    }
+
+    li {
+      margin-right: $tiny-spacing;
+    }
+  }
+
+  .admin-actions {
+    float: right;
+    @include media($tablet) {
+      float: none;
+    }
+
+    li {
+      margin-left: $tiny-spacing;
+    }
+  }
+
+  .badge--default {
+    float: left;
+
+    background-color: $white;
+    color: $maroon;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    margin-right: $tiny-spacing;
+    margin-top: 0.5em;
+  }
+
+  .button--edit {
+    @extend button;
+    @extend .inverted;
+
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      color: $maroon;
+    }
+  }
+
+}
