@@ -1,7 +1,9 @@
 header[role='banner'] {
 
   // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
-  .controls {
+
+  /*.controls {
+
     padding: $medium-spacing 0;
     text-align: right;
     background-color: $dark-navy;
@@ -10,7 +12,7 @@ header[role='banner'] {
     a {
       color: $white;
     }
-  }
+  }*/
 
   .govau--header {
     padding: $medium-spacing 0;
@@ -90,16 +92,17 @@ header[role='banner'] {
 
 .admin {
   //Applied to body in order to compensate for the .admin-bar fixed element on desktop
-  padding-top: 4em;
+  padding-top: 0;
   @include media($tablet) {
-    padding-top: 0;
+
+    padding-top: 4em;
   }
 }
 
-.admin-bar {
+.controls {
   background-color: $maroon;
   color: $white;
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -108,15 +111,20 @@ header[role='banner'] {
   box-shadow: 0 5px 10px 0 $non-black;
 
   @include media($tablet) {
-    position: relative;
+    position: fixed;
   }
 
   a {
     color: $white;
+
+    &:hover,
+    &:focus {
+      border-bottom: none;
+    }
   }
 
-  .admin-nav,
-  .admin-actions {
+  .controls--nav,
+  .controls--actions {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -129,17 +137,15 @@ header[role='banner'] {
 
     .button--item {
       margin-top: 0;
-      @include media($tablet) {
-        float: right;
-      }
+      float: right;
     }
 
   }
 
-  .admin-nav {
-    float: left;
+  .controls--nav {
+    float: none;
     @include media($tablet) {
-      float: none;;
+      float: left;
     }
 
     li {
@@ -147,10 +153,10 @@ header[role='banner'] {
     }
   }
 
-  .admin-actions {
-    float: right;
+  .controls--actions {
+    float: none;
     @include media($tablet) {
-      float: none;
+      float: right;
     }
 
     li {
