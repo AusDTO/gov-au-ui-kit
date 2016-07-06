@@ -36,16 +36,6 @@ Here are a few guidelines to follow when submitting a pull request:
 
 Have questions or need help with setup? Open an issue here [https://github.com/AusDTO/gov-au-ui-kit/issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
 
-## Licenses and attribution
-
-### A few parts of this project are not in the public domain
-
-The files in `assets/sass/vendor/bourbon` are from [Bourbon](http://bourbon.io/), copyright [thoughtbot](https://thoughtbot.com/), inc., under the [MIT license](https://github.com/thoughtbot/neat/blob/master/LICENSE.md).
-
-The files in `assets/sass/vendor/neat` are from [Neat](http://neat.bourbon.io/), copyright [thoughtbot](https://thoughtbot.com/), inc., also under the [MIT license](https://github.com/thoughtbot/neat/blob/master/LICENSE.md).
-
-The file `assets/sass/_normalize.scss` is from [Normalize.css](https://github.com/necolas/normalize.css), copyright Nicolas Gallagher and Jonathan Neal, under the [MIT license](https://github.com/necolas/normalize.css/blob/master/LICENSE.md).
-
 ---
 
 This guide is adapted from [18F's Contributing Guide](https://github.com/18F/open-source-policy/blob/master/CONTRIBUTING.md)
