@@ -47,7 +47,6 @@ main {
 
   .content-main {
     @include span-columns(4 of 4);
-    @include shift(0);
 
     @include media($tablet) {
       @include span-columns(8 of 12);
@@ -56,6 +55,18 @@ main {
     @include media($desktop) {
       @include span-columns(9 of 16);
       @include shift(1);
+    }
+
+    &:first-child {
+      @include media($tablet) {
+        @include span-columns(10 of 12);
+        @include shift(1);
+      }
+
+      @include media($desktop) {
+        @include span-columns(12 of 16);
+        @include shift(2);
+      }
     }
 
   }
