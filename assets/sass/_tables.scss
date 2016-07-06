@@ -6,6 +6,36 @@ An alternating row colour is provided to improve readability.
 
 Markup:
   <table class="content-table">
+      <tr>
+        <th>Date</th>
+        <th>Event</th>
+        <th>Venue</th>
+      </tr>
+      <tr>
+        <td>12 February</td>
+        <td>Waltz with Strauss</td>
+        <td>Main Hall</td>
+      </tr>
+      <tr>
+        <td>24 March</td>
+        <td>The Obelisks</td>
+        <td>West Wing</td>
+      </tr>
+      <tr>
+        <td>14 April</td>
+        <td>The What</td>
+        <td>Main Hall</td>
+      </tr>
+  </table>
+
+Style guide: Tables.1 Basic Tables
+*/
+
+/*
+Complex Tables
+
+Markup:
+  <table class="content-table">
     <caption>Shelly's Daughters</caption>
     <thead>
       <tr>
@@ -33,7 +63,7 @@ Markup:
     </tbody>
   </table>
 
-Style guide: Tables.1 Content Tables
+Style guide: Tables.3 Complex Tables
 */
 
 /*
@@ -49,7 +79,7 @@ The HTML for tables needs to be carefully considered for accessibility.
 ### Table head, body, and foot
 The [`<thead>`, `<tbody>`, and `<tfoot>` elements](https://www.w3.org/TR/html401/struct/tables.html#h-11.2.3) provide no accessibility functionality but depending on browser support `<thead>` and `<tfoot>` may be repeated across pages when long tables are printed.
 
-Style guide: Tables.3 Accessibility
+Style guide: Tables.2 Accessibility
 */
 
 
