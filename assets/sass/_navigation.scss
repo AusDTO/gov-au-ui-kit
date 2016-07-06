@@ -35,6 +35,8 @@ Breadcrumbs
 
 Use breadcrumbs to help the user understand where are in the service and how they got there.
 
+The breadcrumbs do not receive any left padding because they are expected to sit nested inside a block that spans the full viewport width to aligned with the first column.
+
 Markup: templates/breadcrumbs.hbs
 
 Style guide: Navigation.2 Breadcrumbs

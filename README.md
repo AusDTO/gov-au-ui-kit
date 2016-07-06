@@ -25,15 +25,23 @@ This way you can access framework's variables and mixins
 @import url('https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss');
 ```
 
-### Features & browser support
+### Features
 
 - [Normalize](https://necolas.github.io/normalize.css/).
-- Bourbon, version 4.2.7.
-- Neat, and settings for a grid framework with some good defaults.
+- [Bourbon](http://bourbon.io/), version 4.2.7.
+- [Neat](http://neat.bourbon.io/), and settings for a grid framework with some good defaults.
 - Basic styling for content with some good typographic coverage.
 - Basic styling for UI elements (eg `input`, `label`, etc).
-- UI components build on solid HTML foundation.
-- Built on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
+
+For a full list of features please see the [CHANGELOG](CHANGELOG.md).
+
+### Browser support
+
+Our components are built on a solid HTML foundation, opting on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
+
+We intend to support Internet Explorer 8+.
+
+We will provide precise version support information in the future.
 
 ## What this isn't
 
