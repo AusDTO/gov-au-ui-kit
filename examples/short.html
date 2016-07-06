@@ -19,9 +19,17 @@
     h.className = h.className.replace('no-js', 'js')
   })(document.documentElement)</script>
   <title>Example Pages</title>
-  <!-- in production use <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/> instead of next 2 lines-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Open+Sans:400italic,600,700,400:latin,latin-ext']
+      }
+    });
+  </script>
+
   <link rel="stylesheet" type="text/css" href="../latest/ui-kit.css"/>
-  <link rel="stylesheet" type="text/css" href="../build/latest/ui-kit.css"/>
 
   <!--[if (gte IE 9) | (!IE)]>
   <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
@@ -32,9 +40,6 @@
           crossorigin="anonymous"></script>
   <script type="text/javascript"
           src="//cdnjs.cloudflare.com/ajax/libs/corysimmons-selectivizr2/1.0.8/selectivizr2.min.js"></script>
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400&subset=latin,latin-ext" rel='stylesheet'>
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic&subset=latin,latin-ext" rel='stylesheet'>
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:700&subset=latin,latin-ext" rel='stylesheet'>
   <![endif]-->
   <!--[if lte IE 9]>
   <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
@@ -42,9 +47,7 @@
           src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
   <![endif]-->
 
-  <!-- in production use <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"/> instead of next 2 lines-->
   <script type="text/javascript" src="../latest/ui-kit.js"></script>
-  <script type="text/javascript" src="../build/latest/ui-kit.js"></script>
 
 </head>
 <body>
