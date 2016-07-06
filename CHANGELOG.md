@@ -2,6 +2,16 @@
 
 ## UI Kit "Kraken"
 
+### Next release (scheduled 2016-07-12)
+
+Adds or modifies:
+
+- New & improved Table examples
+
+Bugfixes:
+
+- Fixed [#111](https://github.com/AusDTO/gov-au-ui-kit/issues/111) Single column layout width
+
 ### 1.1.0 - 2016-07-05
 
 Adds or modifies:
