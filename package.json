@@ -23,6 +23,7 @@
   "preferGlobal": true,
   "license": "MIT",
   "dependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-connect": "^4.1.0",
@@ -32,13 +33,13 @@
     "gulp-sass": "^2.3.1",
     "gulp-sass-lint": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg2png": "^1.0.2",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "handlebars.moment": "^1.0.4",
-    "sass-inline-svg": "^0.0.3",
-    "del": "^2.2.0",
     "kss": "^3.0.0-beta.14",
     "run-sequence": "^1.2.1",
+    "sass-inline-svg": "^0.0.3",
     "through2": "^2.0.1"
   }
 }

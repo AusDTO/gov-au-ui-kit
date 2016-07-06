@@ -12,8 +12,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     del = require('del'),
     runSequence = require('run-sequence'),
-    inliner = require('sass-inline-svg'),
-    connect = require('gulp-connect')
+    inline = require('./lib/gulp-scss-inline.js'),
+    connect = require('gulp-connect'),
+    svg2png = require('gulp-svg2png')
     ;
 
 var paths = {
@@ -50,11 +51,11 @@ gulp.task('ui-kit', function () {
     gulp.start(['ui-kit.scss', 'ui-kit.js']);
 });
 
-gulp.task('ui-kit.scss', function () {
+gulp.task('ui-kit.scss', ['svg2png'], function () {
     return gulp.src(paths.scss)
         .pipe(sass({
             functions: {
-                svg: inliner('./')
+                inline: inline('./')
             }
         }).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
@@ -78,7 +79,7 @@ gulp.task('ui-kit.min', function () {
     gulp.start(['ui-kit.min.scss', 'ui-kit.min.js']);
 });
 
-gulp.task('ui-kit.min.scss', function () {
+gulp.task('ui-kit.min.scss', ['svg2png'], function () {
     return gulp.src(paths.scss)
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
@@ -90,7 +91,7 @@ gulp.task('ui-kit.min.scss', function () {
         .pipe(gulp.dest(paths.outputAssets));
 });
 
-gulp.task('ui-kit.min.js', function () {
+gulp.task('ui-kit.min.js',['svg2png'], function () {
     return gulp.src(paths.js)
         .pipe(uglify())
         .pipe(gitVersion())
@@ -189,4 +190,10 @@ gulp.task('webserver', function () {
         livereload: true,
         root: ['.', 'build']
     });
+});
+
+gulp.task('svg2png', function () {
+    return gulp.src('./assets/img/icons/*.svg')
+        .pipe(svg2png())
+        .pipe(gulp.dest('./build/latest/img/icons/'));
 });
