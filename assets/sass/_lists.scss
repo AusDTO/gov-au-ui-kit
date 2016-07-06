@@ -125,7 +125,7 @@ Style guide: List styles.1 Horizontal list
 
     &.hero-item {
       border-top: solid 1px $border-colour;
-      
+
       figure {
         @include media($tablet) {
           flex-basis: 65%;
@@ -158,12 +158,15 @@ Style guide: List styles.2 Vertical list
 
   @extend %base-list;
 
+  border-top: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   li {
 
+    border-top: 1px solid $border-colour;
+    border-bottom: none;
     flex: 0 0 100%;
 
     @include media($tablet) {
