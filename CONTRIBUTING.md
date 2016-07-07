@@ -12,6 +12,9 @@ If your suggestion is not already in our roadmap, we'll probably suggest that yo
 
 We encourage you to read our [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md). By ensuring that all staff and contributors follow this guide we can maintain an inclusive and friendly environment.
 
+We've also put together some [Coding Convention guidelines](https://github.com/AusDTO/gov-au-ui-kit/blob/master/conventions.md)
+which explain our code style and linting.
+
 Finally, if you're unsure about anything, just ask — or submit your issue or pull request anyway. The worst that can happen is we'll politely ask you to change something. We appreciate all friendly contributions.
 
 ## Guidelines
