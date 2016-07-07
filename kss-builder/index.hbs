@@ -75,7 +75,7 @@
 
 <main>
   <aside class="sidebar" id="nav">
-    <nav class="primary-nav" aria-label="main navigation">
+    <nav class="primary-nav guide-section-nav" aria-label="main navigation">
       <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
          aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
       <ul id="primary-nav-panel" aria-labelledby="primary-nav-heading">
@@ -85,17 +85,6 @@
         {{#each menu}}
           <li>
             <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active"{{/if}}>{{header}}</a>
-            {{#if isActive}}
-              {{#if children}}
-                <ul>
-                  {{#each children}}
-                    <li>
-                      <a href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
-                    </li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-            {{/if}}
           </li>
         {{/each}}
       </ul>
@@ -118,7 +107,7 @@
       <header>
         <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
         <h2>Contents</h2>
-        <ul class="guide-jump-links">
+        <ul class="jump-links">
           {{#each sections}}
             {{#unless @first}}
             <li><a href="#kssref-{{referenceURI}}">{{header}}</a></li>

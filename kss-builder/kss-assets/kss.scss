@@ -1,5 +1,9 @@
 @import './../../assets/sass/ui-kit';
 
+.guide-section-nav {
+  margin-top: ($base-spacing * 4);
+}
+
 %scrolling-example {
   width: 17em;
 
@@ -13,53 +17,6 @@
 
   @include media($desktop) {
     width: 45em;
-  }
-}
-
-article {
-  header {
-    margin-bottom: $base-spacing * 2;
-
-    // Jump to link heading, inside the article header
-    h2 {
-      @extend h6;
-
-      margin-top: $base-spacing * 2;
-      margin-bottom: 0;
-      padding-bottom: $tiny-spacing;
-      margin-left: $small-spacing;
-      padding-left: ($base-spacing - $tiny-spacing);
-      border-left: $tiny-spacing solid $light-grey;
-      color: $grey;
-      font-weight: $base-font-weight;
-    }
-
-    ul,
-    ol {
-      margin-top: 0;
-      margin-left: $small-spacing;
-      padding: $medium-spacing 0 $medium-spacing ($base-spacing - $tiny-spacing);
-      border-left: $tiny-spacing solid $light-grey;
-
-      @include media ($tablet) {
-        column-count: 2;
-        column-width: 40%;
-        column-gap: $gutter * 4;
-      }
-
-      li {
-        margin-bottom: $medium-spacing;
-        font-weight: $bold-font-weight;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    ul {
-      list-style-type: none;
-    }
   }
 }
 
