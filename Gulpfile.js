@@ -11,7 +11,10 @@ var gulp = require('gulp'),
     scssMerge = require('./lib/gulp-scss-merge.js'),
     uglify = require('gulp-uglify'),
     del = require('del'),
-    runSequence = require('run-sequence')
+    runSequence = require('run-sequence'),
+    inline = require('./lib/gulp-scss-inline.js'),
+    connect = require('gulp-connect'),
+    svg2png = require('gulp-svg2png')
     ;
 
 var paths = {
@@ -38,7 +41,7 @@ var options = {
 gulp.task('lint', function () {
     return gulp.src([paths.scssDir, paths.kssScssDir, '!./assets/sass/vendor/**/*.scss'])
         .pipe(sassLint({
-          configFile: '.sass-lint.yml'
+            configFile: '.sass-lint.yml'
         }))
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError());
@@ -48,9 +51,13 @@ gulp.task('ui-kit', function () {
     gulp.start(['ui-kit.scss', 'ui-kit.js']);
 });
 
-gulp.task('ui-kit.scss', function () {
+gulp.task('ui-kit.scss', ['svg2png'], function () {
     return gulp.src(paths.scss)
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            functions: {
+                inline: inline('./')
+            }
+        }).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
@@ -72,7 +79,7 @@ gulp.task('ui-kit.min', function () {
     gulp.start(['ui-kit.min.scss', 'ui-kit.min.js']);
 });
 
-gulp.task('ui-kit.min.scss', function () {
+gulp.task('ui-kit.min.scss', ['svg2png'], function () {
     return gulp.src(paths.scss)
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
@@ -84,7 +91,7 @@ gulp.task('ui-kit.min.scss', function () {
         .pipe(gulp.dest(paths.outputAssets));
 });
 
-gulp.task('ui-kit.min.js', function () {
+gulp.task('ui-kit.min.js',['svg2png'], function () {
     return gulp.src(paths.js)
         .pipe(uglify())
         .pipe(gitVersion())
@@ -96,7 +103,7 @@ gulp.task('ui-kit.min.js', function () {
 
 gulp.task('examples', function () {
     return gulp.src(paths.examplesDir)
-        .pipe(gulp.dest(paths.outputHTML+'/examples'));
+        .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
 });
 
 gulp.task('markdown', function () {
@@ -109,7 +116,7 @@ gulp.task('nginx', function () {
         .pipe(gulp.dest(paths.outputHTML));
 });
 
-gulp.task('htmlvalidate', ['examples','styleguide'], function (cb) {
+gulp.task('htmlvalidate', ['examples', 'styleguide'], function (cb) {
     try {
         var validator = require('gulp-html');
         return gulp.src(['build/*.html', 'build/**/*.html'])
@@ -127,12 +134,17 @@ gulp.task('htmlvalidate', ['examples','styleguide'], function (cb) {
 });
 
 gulp.task('styleguide', ['styleguide.scss'], function () {
-    return kss({
+    var kssresult = kss({
         source: 'assets/sass',
         destination: paths.outputHTML,
         homepage: '../../README.md',
         builder: 'kss-builder'
     });
+    kssresult.then(function(v) {
+        //console.log(v); // true
+        gulp.src('./build/*.html').pipe(connect.reload());
+    });
+
 });
 
 gulp.task('styleguide.scss', function () {
@@ -143,24 +155,45 @@ gulp.task('styleguide.scss', function () {
         .pipe(gulp.dest(paths.kssCssDir));
 });
 
-gulp.task('clean', function(done) {
-    return del([paths.outputAssets,paths.outputHTML], done);
+gulp.task('clean', function (done) {
+    return del([paths.outputAssets, paths.outputHTML], done);
 });
 
-gulp.task('default', ['ui-kit']);
+gulp.task('default', ['build']);
 
-gulp.task('build', ['lint', 'ui-kit', 'markdown',  'examples', 'styleguide']);
+gulp.task('build', ['lint', 'ui-kit', 'markdown', 'examples', 'styleguide']);
 
-gulp.task('build.prod', function(callback) {
+gulp.task('build.prod', function (callback) {
     runSequence('clean',
         ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.scssmerge', 'markdown', 'htmlvalidate'],
         callback);
 });
 
-gulp.task('watch', function () {
-    gulp.watch([paths.assetsDir, paths.examplesDir, paths.readme], ['ui-kit']);
-});
+gulp.task('watch', ['watch.build']);
 
 gulp.task('watch.build', function () {
-    gulp.watch([paths.assetsDir, paths.examplesDir, paths.kssBuilderDir, paths.readme], ['build']);
+    gulp.watch([paths.assetsDir, paths.examplesDir, paths.kssBuilderDir, paths.readme, '!kss_builder/kss-assets/kss.css'],
+        {verbose: true},
+        ['build']);
+});
+
+gulp.task('serve', ['webserver', 'build','watch.build', 'livereload']);
+
+gulp.task('livereload', function() {
+    gulp.watch(['./build/latest/'], () => {
+        gulp.src('./build/latest/**/*').pipe(connect.reload());
+    });
+});
+
+gulp.task('webserver', function () {
+    connect.server({
+        livereload: true,
+        root: ['.', 'build']
+    });
+});
+
+gulp.task('svg2png', function () {
+    return gulp.src('./assets/img/icons/*.svg')
+        .pipe(svg2png())
+        .pipe(gulp.dest('./build/latest/img/icons/'));
 });

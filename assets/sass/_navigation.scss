@@ -78,8 +78,8 @@ Style guide: Navigation.2 Breadcrumbs
 
       ul {
         a {
+          @extend .icon-arrow-right;
           padding-left: $base-spacing + $small-spacing;
-          background-image: url($icon-arrow-r);
           background-repeat: no-repeat;
           background-position: $base-spacing $small-spacing * 1.15;
           background-size: $tiny-spacing auto;
@@ -163,9 +163,9 @@ Style guide: Navigation.2 Breadcrumbs
     }
 
     li:not(:last-child) {
+      @extend .icon-arrow-right;
       margin-right: $small-spacing;
       padding-right: $medium-spacing;
-      background-image: url($icon-arrow-r);
       background-repeat: no-repeat;
       background-position: right;
       background-size: $tiny-spacing auto;
