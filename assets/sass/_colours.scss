@@ -228,8 +228,11 @@ $border-colour:                 $light-grey;
 $border-secondary-colour:       $lighter-grey;
 $border-contrast-colour:        $navy;
 
+$box-shadow-colour:             rgba($non-black, 0.5);
+
 $body-text-colour:              $dark-grey;
 $body-secondary-text-colour:    $dark-grey;
+$body-inverted-text-colour:     $white;
 
 $badge-colour-default:          $grey;
 $badge-colour-alpha:            $non-black;
