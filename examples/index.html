@@ -50,7 +50,7 @@
   <script type="text/javascript" src="../latest/ui-kit.js"></script>
 
 </head>
-<body class="admin"><!-- Logged in as admin context -->
+<body>
 
   <div class="skip-to">
     <a href="#content">Skip to main content</a>
@@ -58,38 +58,31 @@
   </div>
 
   <header role="banner">
-    <section class="controls">
-      <div class="wrapper">
-        <a href="#" class="login">Logout</a>
-      </div>
-    </section>
-    <section class="govau--header">
-      <div class="wrapper">
-        <div class="govau--logo">
-          <a href="#" class="logo">gov.au</a> <span class="badge--default">draft</span>
-        </div>
-        <div class="feedback">
-          <a href="#" class="button--feedback">Give feedback</a>
-        </div>
-      </div>
-    </section>
-    <section class="hero">
-      <div class="wrapper">
-        <a href="#" class="site-title">Department of Intertubes</a>
-        <p class="tagline">Calibration of intertube serialisation will be a real game-changer.</p>
-      </div>
-    </section>
-  </header>
 
-  <nav class="breadcrumbs" aria-label="breadcrumb">
+  <div class="controls--contrast">
     <div class="wrapper">
-      <ul>
-        <li><a href="#" title="Home">Home</a></li>
-        <li><a href="#" title="Menu1">Menu1</a></li>
-        <li>Menu2</li>
-      </ul>
+      <section>
+        <nav class="breadcrumbs--inverted" aria-label="controls-breadcrumb">
+          <ul>
+            <li><a href="#" title="Home">Editorial</a></li>
+            <li><a href="#" title="Menu1">PMC</a></li>
+            <li>Menu2</li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="right">
+
+        <ul class="inline-links--inverted">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Sign Out</a></li>
+        </ul>
+
+        <a href="#" role="button">Edit</a>
+
+      </section>
     </div>
-  </nav>
+  </div>
 
   <main>
     <aside class="sidebar">

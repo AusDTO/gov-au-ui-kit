@@ -1,18 +1,36 @@
-header[role='banner'] {
+[class^='controls'] {
+  padding: $tiny-spacing 0;
+  background-color: $dark-navy;
+  color: $body-inverted-text-colour;
+  box-shadow: 0 5px 10px 0 $box-shadow-colour;
 
-  // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
+  section {
+    @include span-columns(4 of 4);
 
-  /*.controls {
-
-    padding: $medium-spacing 0;
-    text-align: right;
-    background-color: $dark-navy;
-    color: $white;
-
-    a {
-      color: $white;
+    @include media($tablet) {
+      @include span-columns(6 of 12);
     }
-  }*/
+
+    @include media($desktop) {
+      @include span-columns(8 of 16);
+    }
+
+    &.right {
+      text-align: right;
+    }
+  }
+
+  [role='button'] {
+    @extend .inverted;
+    margin: 0;
+  }
+
+  &[class$='--contrast'] {
+    background-color: $dark-maroon;
+  }
+}
+
+header[role='banner'] {
 
   .govau--header {
     padding: $medium-spacing 0;
@@ -87,105 +105,4 @@ header[role='banner'] {
       color: $white;
     }
   }
-}
-
-
-.admin {
-  //Applied to body in order to compensate for the .admin-bar fixed element on desktop
-  padding-top: 0;
-  @include media($tablet) {
-
-    padding-top: 4em;
-  }
-}
-
-.controls {
-  background-color: $maroon;
-  color: $white;
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 98;
-  padding: $small-spacing 0;
-  box-shadow: 0 5px 10px 0 $non-black;
-
-  @include media($tablet) {
-    position: fixed;
-  }
-
-  a {
-    color: $white;
-
-    &:hover,
-    &:focus {
-      border-bottom: none;
-    }
-  }
-
-  .controls--nav,
-  .controls--actions {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    @include clearfix;
-
-    li {
-      float: left;
-      margin: 0.4em 0 0 0;
-    }
-
-    .button--item {
-      margin-top: 0;
-      float: right;
-    }
-
-  }
-
-  .controls--nav {
-    float: none;
-    @include media($tablet) {
-      float: left;
-    }
-
-    li {
-      margin-right: $tiny-spacing;
-    }
-  }
-
-  .controls--actions {
-    float: none;
-    @include media($tablet) {
-      float: right;
-    }
-
-    li {
-      margin-left: $tiny-spacing;
-    }
-  }
-
-  .badge--default {
-    float: left;
-
-    background-color: $white;
-    color: $maroon;
-    text-transform: uppercase;
-    font-weight: bold;
-
-    margin-right: $tiny-spacing;
-    margin-top: 0.5em;
-  }
-
-  .button--edit {
-    @extend button;
-    @extend .inverted;
-
-    margin: 0;
-
-    &:hover,
-    &:focus {
-      color: $maroon;
-    }
-  }
-
 }
