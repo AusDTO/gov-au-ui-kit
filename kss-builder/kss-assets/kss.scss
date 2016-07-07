@@ -16,16 +16,31 @@
   }
 }
 
+article {
+  header {
+    margin-bottom: $base-spacing * 2;
+
+    // Jump to link heading, inside the article header
+    h2 {
+      @extend h6;
+
+      margin-top: $base-spacing * 2;
+      color: $grey;
+      font-weight: $base-font-weight;
+    }
+  }
+}
+
 .guide-jump-links {
 
   @include media ($tablet) {
-    display: flex;
-    flex-wrap: wrap;
+    column-count: 2;
+    column-width: 40%;
+    column-gap: $gutter * 4;
+  }
 
-    li {
-      flex-basis: 50%;
-    }
-
+  li {
+    margin-bottom: $small-spacing;
   }
 }
 
