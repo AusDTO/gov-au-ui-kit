@@ -1,9 +1,11 @@
-// Chevrons in CSS http://codepen.io/jonneal/pen/kptBs
+@mixin inline-background-image($img) {
+  background-image: inline('build/latest/img/icons/' + $img + '.png');
+  background-image: none, inline('assets/img/icons/' + $img + '.svg'),
+  linear-gradient(transparent, transparent);
+}
 
 .icon-arrow-right {
-  background-image: inline('build/latest/img/icons/arrow-right.png');
-  background-image: none, inline('assets/img/icons/arrow-right.svg') ,
-  linear-gradient(transparent, transparent);
+  @include inline-background-image('arrow-right');
 }
 
 .chevron {
