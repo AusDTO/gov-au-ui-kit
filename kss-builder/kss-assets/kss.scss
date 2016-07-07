@@ -25,27 +25,41 @@ article {
       @extend h6;
 
       margin-top: $base-spacing * 2;
+      margin-bottom: 0;
+      padding-bottom: $tiny-spacing;
+      margin-left: $small-spacing;
+      padding-left: ($base-spacing - $tiny-spacing);
+      border-left: $tiny-spacing solid $light-grey;
       color: $grey;
       font-weight: $base-font-weight;
     }
-  }
-}
 
-.guide-jump-links {
-  margin-bottom: $base-spacing;
-  margin-left: $small-spacing;
-  padding: $small-spacing 0 $small-spacing ($base-spacing * 1.5);
-  border-left: 3px solid $light-grey;
+    ul,
+    ol {
+      margin-top: 0;
+      margin-left: $small-spacing;
+      padding: $medium-spacing 0 $medium-spacing ($base-spacing - $tiny-spacing);
+      border-left: $tiny-spacing solid $light-grey;
 
-  @include media ($tablet) {
-    column-count: 2;
-    column-width: 40%;
-    column-gap: $gutter * 4;
-  }
+      @include media ($tablet) {
+        column-count: 2;
+        column-width: 40%;
+        column-gap: $gutter * 4;
+      }
 
-  li {
-    margin-bottom: $medium-spacing;
-    font-weight: $bold-font-weight;
+      li {
+        margin-bottom: $medium-spacing;
+        font-weight: $bold-font-weight;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    ul {
+      list-style-type: none;
+    }
   }
 }
 

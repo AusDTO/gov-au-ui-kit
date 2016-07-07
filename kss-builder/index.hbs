@@ -118,13 +118,13 @@
       <header>
         <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
         <h2>Contents</h2>
-        <ol class="guide-jump-links">
+        <ul class="guide-jump-links">
           {{#each sections}}
             {{#unless @first}}
             <li><a href="#kssref-{{referenceURI}}">{{header}}</a></li>
             {{/unless}}
           {{/each}}
-        </ol>
+        </ul>
       </header>
       {{#each sections}}
         <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
