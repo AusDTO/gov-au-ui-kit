@@ -23,6 +23,17 @@
     });
   </script>
 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72255206-3', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
   <link rel="stylesheet" href="kss-assets/kss.css">
   {{{styles}}}
 
@@ -209,10 +220,18 @@
 <script src="kss-assets/kss.js"></script>
 {{{scripts}}}
 
-
 <footer role="contentinfo">
   <div class="wrapper">
-    <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
+    <div class="footer-logo">
+      <img src="https://www.gov.au/alpha/assets/coatofarms-01.svg" alt="Australian Government Coat of Arms" />
+    </div>
+    <div class="footer-links">
+      <a href="https://www.dto.gov.au/privacy-statement/">Privacy Statement</a>
+      <br/>
+      <br/>
+      &copy; Commonwealth of Australia<br/>
+      <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md">Licensed under the MIT License.</a>
+    </div>
   </div>
 </footer>
 
