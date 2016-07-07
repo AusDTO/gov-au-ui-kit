@@ -2,9 +2,9 @@
   padding: $tiny-spacing 0;
   background-color: $dark-navy;
   color: $body-inverted-text-colour;
-  box-shadow: 0 5px 10px 0 $box-shadow-colour;
 
   section {
+
     @include span-columns(4 of 4);
 
     @include media($tablet) {
@@ -13,6 +13,18 @@
 
     @include media($desktop) {
       @include span-columns(8 of 16);
+    }
+
+    &:first-child:last-child {
+      @include span-columns(4 of 4);
+
+      @include media($tablet) {
+        @include span-columns(12 of 12);
+      }
+
+      @include media($desktop) {
+        @include span-columns(16 of 16);
+      }
     }
 
     &.right {
