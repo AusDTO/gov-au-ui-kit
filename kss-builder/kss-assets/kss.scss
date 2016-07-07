@@ -32,6 +32,10 @@ article {
 }
 
 .guide-jump-links {
+  margin-bottom: $base-spacing;
+  margin-left: $small-spacing;
+  padding: $small-spacing 0 $small-spacing ($base-spacing * 1.5);
+  border-left: 3px solid $light-grey;
 
   @include media ($tablet) {
     column-count: 2;
@@ -40,7 +44,8 @@ article {
   }
 
   li {
-    margin-bottom: $small-spacing;
+    margin-bottom: $medium-spacing;
+    font-weight: $bold-font-weight;
   }
 }
 
