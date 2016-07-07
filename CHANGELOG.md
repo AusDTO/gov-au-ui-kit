@@ -11,6 +11,7 @@ Adds or modifies:
 Bugfixes:
 
 - Fixed [#111](https://github.com/AusDTO/gov-au-ui-kit/issues/111) Single column layout width
+- Fixed [#99](https://github.com/AusDTO/gov-au-ui-kit/issues/99) Breadcrumbs icon not showing up
 
 ### 1.1.0 - 2016-07-05
 
