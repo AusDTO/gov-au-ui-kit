@@ -16,7 +16,6 @@ Style guide: List styles
   list-style: none;
   margin: ($base-spacing * 2) 0;
   padding: 0;
-  border-top: solid 1px $border-colour;
 
   .tags {
     color: $grey;
@@ -86,7 +85,6 @@ Style guide: List styles.1 Horizontal list
 
 .list-horizontal {
   @extend %base-list;
-  border-top: none;
 
   > li {
 
@@ -148,7 +146,6 @@ Style guide: List styles.2 Vertical list
 
   @extend %base-list;
 
-  border-top: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -233,6 +230,7 @@ Style guide: List styles.3 Small list
 
 .list-small {
   @extend %base-list;
+  border-top: solid 1px $border-colour;
 
   a {
     display: block;
