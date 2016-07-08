@@ -137,7 +137,7 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
     var kssresult = kss({
         source: 'assets/sass',
         destination: paths.outputHTML,
-        homepage: '../../README.md',
+        homepage: '../../homepage.md',
         builder: 'kss-builder'
     });
     kssresult.then(function(v) {
