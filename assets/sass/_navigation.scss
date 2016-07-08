@@ -216,47 +216,47 @@ Style guide: Navigation.3 Skip Links
   }
 }
 
-// Document me please! :)
-//
-// Card ID for the doc work: DESIGN-153
-article {
-  header {
-    margin-bottom: $base-spacing * 2;
 
-    // Jump to link heading, inside the article header
-    h2 {
-      @extend h6;
+/*
+Index links
 
-      margin: ($base-spacing * 2) 0 0 $small-spacing;
-      padding: 0 0 $tiny-spacing ($base-spacing - $tiny-spacing);
-      border-left: $tiny-spacing solid $light-grey;
-      color: $grey;
-      font-weight: $base-font-weight;
-    }
+Used to group a collection of text links, Index links can appear at the beginning of an article page as a table of contents, or as a group of links to related content.
 
-    .jump-links {
-      margin: 0 0 0 $small-spacing;
-      padding: $medium-spacing 0 $medium-spacing ($base-spacing - $tiny-spacing);
-      border-left: $tiny-spacing solid $light-grey;
+An optional heading is included in the markup example. Any level leading from `h2` to `h6` can be used. Use a heading level that's appropriate for your document outline.
 
-      @include media ($tablet) {
-        column-count: 2;
-        column-width: 40%;
-        column-gap: $gutter * 4;
-      }
+Markup: templates/index-links.hbs
 
-      li {
-        margin-bottom: $medium-spacing;
-        font-weight: $bold-font-weight;
+Style guide: Navigation.4 Index links
+*/
 
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
+.index-links {
+  margin: ($base-spacing * 2) 0 $base-spacing $small-spacing;
+  border-left: $tiny-spacing solid $non-white;
+  padding: 0 0 $medium-spacing ($base-spacing - $tiny-spacing);
 
-    ul {
-      list-style-type: none;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @extend h6;
+    margin: 0 0 $tiny-spacing;
+    color: $grey;
+    font-weight: $base-font-weight;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: $base-spacing 0 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: $medium-spacing;
+    font-weight: $bold-font-weight;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

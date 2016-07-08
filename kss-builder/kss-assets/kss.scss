@@ -1,9 +1,5 @@
 @import './../../assets/sass/ui-kit';
 
-.guide-section-nav {
-  margin-top: ($base-spacing * 4);
-}
-
 %scrolling-example {
   width: 17em;
 
@@ -18,6 +14,14 @@
   @include media($desktop) {
     width: 45em;
   }
+}
+
+.guide-section-nav {
+  margin-top: ($base-spacing * 4);
+}
+
+.guide-section-header {
+  margin-bottom: $base-spacing * 2;
 }
 
 .guide-example {

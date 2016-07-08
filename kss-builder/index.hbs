@@ -92,36 +92,35 @@
   </aside>
 
   <article role="main" id="content" class="content-main">
+
     {{#if homepage}}
-      <div id="kssref-0" class="guide-section guide-section--depth-0 kss-overview">
+      <div id="guide-0" class="guide-section guide-section--depth-0 kss-overview">
         {{{homepage}}}
       </div>
     {{else}}
 
-    {{!
-      Display each section, in order.
+    <header class="guide-section-header">
+      <h1>{{sections.0.header}}</h1>
 
-      The "root" element comes first in this loop, and can be detected using
-      the "#if @first" block as seen below.
-    }}
-      <header>
-        <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
+      <nav class="index-links">
         <h2>Contents</h2>
-        <ul class="jump-links">
+        <ul>
           {{#each sections}}
             {{#unless @first}}
-            <li><a href="#kssref-{{referenceURI}}">{{header}}</a></li>
+            <li><a href="#guide-{{referenceURI}}">{{header}}</a></li>
             {{/unless}}
           {{/each}}
         </ul>
-      </header>
+      </nav>
+    </header>
+
       {{#each sections}}
-        <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
+        <{{#if @first}}div{{else}}section{{/if}} id="guide-{{referenceURI}}"
                                                  class="guide-section guide-section--depth-{{depth}}">
 
           <div>
             {{#unless @first}}
-            <h{{depth}} id="#kssref-{{referenceURI}}">
+            <h{{depth}} id="#guide-{{referenceURI}}">
               {{header}}
             </h{{depth}}>
             {{/unless}}
