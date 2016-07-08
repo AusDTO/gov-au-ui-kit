@@ -46,7 +46,7 @@ Style guide: Navigation.2 Breadcrumbs
   .nav-heading {
     color: $darker-aqua;
     background: $lighter-grey;
-    margin-top: $base-spacing;
+    margin: $base-spacing 0;
 
     .chevron {
       float: right;
