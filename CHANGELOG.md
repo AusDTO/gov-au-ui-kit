@@ -7,6 +7,7 @@
 Adds or modifies:
 
 - New & improved Table examples
+- Minor style updates to List views
 
 Bugfixes:
 
