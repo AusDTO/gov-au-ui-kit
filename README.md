@@ -1,6 +1,6 @@
 # `gov-au-ui-kit`
 
-![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield)
+![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
 ## What is this?
 
