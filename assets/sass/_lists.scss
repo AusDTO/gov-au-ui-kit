@@ -16,7 +16,6 @@ Style guide: List styles
   list-style: none;
   margin: ($base-spacing * 2) 0;
   padding: 0;
-  border-top: solid 1px $border-colour;
 
   .tags {
     color: $grey;
@@ -50,7 +49,7 @@ Style guide: List styles
     }
   }
 
-  li {
+  > li {
     padding: ($base-spacing * 1.5) 0;
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
@@ -87,7 +86,7 @@ Style guide: List styles.1 Horizontal list
 .list-horizontal {
   @extend %base-list;
 
-  li {
+  > li {
 
     @include media($tablet) {
       display: flex;
@@ -108,7 +107,13 @@ Style guide: List styles.1 Horizontal list
       }
     }
 
+    &:last-child {
+      border-bottom: none;
+    }
+
     &.hero-item {
+      border-top: solid 1px $border-colour;
+
       figure {
         @include media($tablet) {
           flex-basis: 65%;
@@ -145,8 +150,10 @@ Style guide: List styles.2 Vertical list
   flex-wrap: wrap;
   justify-content: space-between;
 
-  li {
+  > li {
 
+    border-top: 1px solid $border-colour;
+    border-bottom: none;
     flex: 0 0 100%;
 
     @include media($tablet) {
@@ -193,7 +200,7 @@ Style guide: List styles.2 Vertical list
 .list-vertical--thirds {
   @extend .list-vertical;
 
-  li {
+  > li {
     @include media ($tablet) {
       flex: 0 0 31%;
     }
@@ -203,7 +210,7 @@ Style guide: List styles.2 Vertical list
 .list-vertical--fourths {
   @extend .list-vertical;
 
-  li {
+  > li {
     @include media ($tablet) {
       flex: 0 0 22%;
     }
@@ -223,6 +230,7 @@ Style guide: List styles.3 Small list
 
 .list-small {
   @extend %base-list;
+  border-top: solid 1px $border-colour;
 
   a {
     @extend .icon-arrow-right;
