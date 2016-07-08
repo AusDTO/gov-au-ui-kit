@@ -17,7 +17,9 @@
 }
 
 .guide-section-nav {
-  margin-top: ($base-spacing * 4);
+  @include media($tablet) {
+    margin-top: ($base-spacing * 4);
+  }
 }
 
 .guide-section-header {
