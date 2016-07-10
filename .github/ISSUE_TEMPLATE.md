@@ -1,8 +1,12 @@
 <!--
 
-# Title Line Template: [Brief statement describing what's wrong.]
+# Title Line Templates:
 
-Use the title line as the title of your issue, then delete these lines.
+Feature Request - [Name the feature you'd like added]
+
+Bug - [A brief statement describing what's wrong]
+
+Use a title line as the title of your issue, then delete these lines.
 
 -->
 
