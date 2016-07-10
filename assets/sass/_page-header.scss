@@ -34,11 +34,17 @@
 
   [role='button'] {
     @extend .inverted;
+
     margin: 0;
   }
 
   &[class$='--contrast'] {
     background-color: $dark-maroon;
+
+    [role='button']:hover,
+    [role='button']:focus {
+      color: $maroon;
+    }
   }
 }
 
