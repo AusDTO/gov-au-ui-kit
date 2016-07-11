@@ -158,6 +158,7 @@ Style guide: Navigation.2 Breadcrumbs
   }
 
   ul {
+    display: inline-block;
     margin: 0;
     padding: $small-spacing 0;
     list-style: none;
