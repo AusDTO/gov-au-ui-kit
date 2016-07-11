@@ -28,13 +28,15 @@
     }
 
     &.right {
-      text-align: right;
+      @include media($tablet) {
+        text-align: right;
+      }
     }
   }
 
   [role='button'] {
     @extend .inverted;
-    margin: 0 $small-spacing;
+    margin: 0;
   }
 
   &[class$='--contrast'] {

@@ -143,22 +143,16 @@ Style guide: Navigation.2 Breadcrumbs
 */
 
 [class^='breadcrumbs'] {
-  @include outer-container(100%);
-  min-width: 100%;
-  margin-top: 0;
+  display: none;
+  margin: 0 $small-spacing 0 0;
   background-color: $non-white;
   color: $grey;
 
-  &[aria-label='breadcrumb'] {
-    display: none;
-
-    @include media($tablet) {
-      display: block;
-    }
+  @include media($tablet) {
+    display: inline-block;
   }
 
   ul {
-    display: inline-block;
     margin: 0;
     padding: $small-spacing 0;
     list-style: none;
