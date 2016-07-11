@@ -34,8 +34,7 @@
 
   [role='button'] {
     @extend .inverted;
-
-    margin: 0;
+    margin: 0 $small-spacing;
   }
 
   &[class$='--contrast'] {
