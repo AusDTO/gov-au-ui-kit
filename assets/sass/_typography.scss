@@ -291,6 +291,10 @@ a {
     color: $highlight-colour;
   }
 
+  &:focus {
+    background-color: #ffbf47;
+    outline: 3px solid #ffbf47;
+  }
 }
 
 code,
