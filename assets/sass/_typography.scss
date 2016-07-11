@@ -287,7 +287,6 @@ a {
 
   &:hover,
   &:active {
-    border-bottom-color: lighten($highlight-colour, 30%);
     color: $highlight-colour;
   }
 

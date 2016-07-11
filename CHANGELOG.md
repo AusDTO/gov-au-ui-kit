@@ -8,6 +8,8 @@ Adds or modifies:
 
 - New & improved Table examples
 - Minor style updates to List views
+- Controls bar now includes a Contrast style
+- Breadcrumbs now include an Inverted style
 
 Bugfixes:
 

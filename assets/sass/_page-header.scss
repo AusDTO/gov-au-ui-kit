@@ -1,21 +1,60 @@
-header[role='banner'] {
+[class^='controls'] {
+  padding: $tiny-spacing 0;
+  background-color: $controls-bg-colour;
+  color: $body-inverted-text-colour;
 
-  // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
-  .controls {
-    padding: $medium-spacing 0;
-    text-align: right;
-    background-color: $dark-navy;
-    color: $white;
+  section {
 
-    a {
-      color: $white;
+    @include span-columns(4 of 4);
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($desktop) {
+      @include span-columns(8 of 16);
+    }
+
+    &:first-child:last-child {
+      @include span-columns(4 of 4);
+
+      @include media($tablet) {
+        @include span-columns(12 of 12);
+      }
+
+      @include media($desktop) {
+        @include span-columns(16 of 16);
+      }
+    }
+
+    &.right {
+      @include media($tablet) {
+        text-align: right;
+      }
     }
   }
 
+  [role='button'] {
+    @extend .inverted;
+    margin: 0;
+  }
+
+  &[class$='--contrast'] {
+    background-color: $controls-contrast-bg-colour;
+
+    [role='button']:hover,
+    [role='button']:focus {
+      color: $controls-contrast-bg-colour;
+    }
+  }
+}
+
+header[role='banner'] {
+
   .govau--header {
     padding: $medium-spacing 0;
-    background-color: $navy;
-    color: $white;
+    background-color: $header-bg-colour;
+    color: $body-inverted-text-colour;
 
     .govau--logo {
       padding-bottom: $medium-spacing;
@@ -31,7 +70,7 @@ header[role='banner'] {
 
       padding-bottom: 2px;
       border-bottom: none;
-      color: $white;
+      color: $body-inverted-text-colour;
       font-family: $base-sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -65,14 +104,14 @@ header[role='banner'] {
 
   .hero {
     padding: ($base-spacing * 2) 0;
-    background-color: $aqua;
-    color: $white;
+    background-color: $hero-bg-colour;
+    color: $body-inverted-text-colour;
 
     .site-title {
       @extend h1;
 
       margin: $tiny-spacing 0;
-      color: $white;
+      color: $body-inverted-text-colour;
     }
 
     .tagline {
@@ -82,7 +121,7 @@ header[role='banner'] {
 
     code,
     a {
-      color: $white;
+      color: $body-inverted-text-colour;
     }
   }
 }
