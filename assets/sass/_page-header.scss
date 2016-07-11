@@ -52,9 +52,14 @@
 header[role='banner'] {
 
   .govau--header {
-    padding: $medium-spacing 0;
+    position: relative;
+    padding: $medium-spacing 0 ($base-spacing * 3);
     background-color: $header-bg-colour;
     color: $body-inverted-text-colour;
+
+    @include media($tablet) {
+      padding-bottom: 0;
+    }
 
     .govau--logo {
       padding-bottom: $medium-spacing;
@@ -88,7 +93,16 @@ header[role='banner'] {
 
     .feedback {
       display: block;
+      position: absolute;
+      bottom: $gutter;
+      left: $base-spacing;
+      right: $base-spacing;
+
       @include media($tablet) {
+        position: relative;
+        bottom: initial;
+        left: initial;
+        right: initial;
         float: right;
       }
     }
@@ -96,9 +110,14 @@ header[role='banner'] {
     .button--feedback {
       @extend button;
       @extend .inverted;
-
       margin: 0;
+      width: 100%;
+      text-align: center;
 
+      @include media($tablet) {
+        width: auto;
+        text-align: initial;
+      }
     }
   }
 

@@ -13,6 +13,59 @@ Style guide: Navigation
 */
 
 /*
+Global navigation
+
+Style guide: Navigation.1 Global Navigation
+*/
+.global-nav {
+  clear: both;
+  padding: $tiny-spacing 0 $small-spacing;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    @include media($tablet) {
+      @include outer-container;
+    }
+  }
+
+  li {
+    margin: 0;
+    border-bottom: 1px solid $border-colour;
+
+    &:first-child {
+      border-top: 1px solid $border-colour;
+    }
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+
+      &:nth-child(2) {
+        border-top: 1px solid $border-colour;
+      }
+    }
+
+    @include media($desktop) {
+      @include span-columns(8 of 16);
+    }
+  }
+
+  a {
+    display: block;
+    border-bottom: 0;
+    padding: $small-spacing 0 1em;
+    color: $body-inverted-text-colour;
+  }
+
+  span {
+    border-bottom: 1px solid;
+    color: $body-inverted-text-colour;
+  }
+}
+
+/*
 Primary navigation
 
 The framework provides a vertical navigation menu that shows 3 levels of items.
@@ -27,7 +80,7 @@ Test with users to ensure the navigation hierarchy is not too long or too deep.
 
 Markup: templates/primary-navigation.hbs
 
-Style guide: Navigation.1 Primary Navigation
+Style guide: Navigation.2 Primary Navigation
 */
 
 .primary-nav {
@@ -139,7 +192,7 @@ The inverted style can be used on a darker coloured background. Make sure you ch
 
 Markup: templates/breadcrumbs.hbs
 
-Style guide: Navigation.2 Breadcrumbs
+Style guide: Navigation.3 Breadcrumbs
 */
 
 [class^='breadcrumbs'] {
@@ -203,7 +256,7 @@ When this Success Criterion is not satisfied, it may be difficult for people wit
 
 Markup: templates/skip-link.hbs
 
-Style guide: Navigation.3 Skip Links
+Style guide: Navigation.4 Skip Links
 */
 .skip-to {
   position: relative;
@@ -245,7 +298,7 @@ An optional heading is included in the markup example. Any level leading from `h
 
 Markup: templates/index-links.hbs
 
-Style guide: Navigation.4 Index links
+Style guide: Navigation.5 Index links
 */
 
 .index-links {
@@ -290,7 +343,7 @@ When placing these links on a dark background, use `.inline-links--inverted.` Ma
 
 Markup: templates/inline-links.hbs
 
-Style guide: Navigation.4 Inline Links
+Style guide: Navigation.6 Inline Links
 */
 [class^='inline-links'] {
   display: inline-block;
