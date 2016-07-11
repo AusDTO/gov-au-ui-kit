@@ -67,6 +67,7 @@ To build it yourself, begin by installing the system dependencies:
 Install node package dependencies:
 
 ```
+npm -g install gulp
 npm install
 ```
 
