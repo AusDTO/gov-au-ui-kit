@@ -566,3 +566,9 @@ q {
 cite {
   font-style: $base-font-style;
 }
+
+article {
+  h1:first-of-type {
+    margin-top: 0;
+  }
+}

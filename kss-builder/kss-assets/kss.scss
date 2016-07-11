@@ -16,17 +16,14 @@
   }
 }
 
-.guide-jump-links {
-
-  @include media ($tablet) {
-    display: flex;
-    flex-wrap: wrap;
-
-    li {
-      flex-basis: 50%;
-    }
-
+.guide-section-nav {
+  @include media($tablet) {
+    margin-top: ($base-spacing * 4);
   }
+}
+
+.guide-section-header {
+  margin-bottom: $base-spacing * 2;
 }
 
 .guide-example {

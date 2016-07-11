@@ -42,7 +42,7 @@ main {
   flex: 1 0 auto;
 
   @include media($tablet) {
-    @include pad($base-spacing 0 0 0);
+    @include pad(($base-spacing * 2) 0 0 0);
   }
 
   .content-main {
