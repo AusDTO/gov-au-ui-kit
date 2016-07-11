@@ -8,6 +8,10 @@
   @include inline-background-image('arrow-right');
 }
 
+.icon-arrow-right-white {
+  @include inline-background-image('arrow-right-white');
+}
+
 .chevron {
   &::before {
     border-style: solid;

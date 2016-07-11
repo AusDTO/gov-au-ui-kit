@@ -193,7 +193,7 @@ Style guide: Navigation.2 Breadcrumbs
 
     ul {
       li:not(:last-child) {
-        background-image: url($icon-arrow-r-white);
+        @extend .icon-arrow-right-white;
         color: $body-inverted-text-colour;
       }
     }
