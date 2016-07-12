@@ -15,7 +15,15 @@ Style guide: Navigation
 /*
 Global navigation
 
-Global
+Provides the highest level of navigation in the framework.
+
+**Behaviour**
+
+The Global Navigation panel is collapsed (hidden) by default on all screen sizes. Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
+
+Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
+
+Markup: templates/global-navigation.hbs
 
 Style guide: Navigation.1 Global Navigation
 */
