@@ -147,9 +147,13 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
 
 });
 
-gulp.task('styleguide.scss', function () {
+gulp.task('styleguide.scss', ['svg2png'], function () {
     return gulp.src(paths.kssScssDir)
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            functions: {
+                inline: inline('./')
+            }
+        }).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.kssCssDir));

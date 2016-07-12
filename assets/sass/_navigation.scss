@@ -13,7 +13,115 @@ Style guide: Navigation
 */
 
 /*
-Primary navigation
+Global navigation
+
+Provides the highest level of navigation in the framework.
+
+**Behaviour**
+
+The Global Navigation panel is collapsed (hidden) by default on all screen sizes. Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
+
+Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
+
+Markup: templates/global-navigation.hbs
+
+Style guide: Navigation.1 Global Navigation
+*/
+.global-nav-toggle {
+  position: relative;
+  float: right;
+  height: auto;
+  margin: $tiny-spacing 0;
+  border-bottom: 1px solid;
+  padding: 0;
+
+  &::before {
+    @extend .bars;
+    content: '';
+    position: absolute;
+    top: .25em;
+    bottom: .25em;
+    left: ($base-spacing * -1);
+    width: $medium-spacing;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  &[aria-expanded='true'] {
+    &::before {
+      @extend .close;
+    }
+  }
+
+  &,
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.global-nav {
+  clear: both;
+  padding: $tiny-spacing 0 $small-spacing;
+  overflow: hidden;
+  transition: padding ($transition-timing * 2) ease;
+
+  &[aria-expanded='false'] {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: $base-spacing 0;
+    padding: 0;
+
+    @include media($tablet) {
+      @include outer-container;
+      margin-top: $base-spacing;
+    }
+  }
+
+  li {
+    margin: 0;
+    border-bottom: 1px solid $border-soft-colour;
+
+    &:first-child {
+      border-top: 1px solid $border-soft-colour;
+    }
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+
+      &:nth-child(2) {
+        border-top: 1px solid $border-soft-colour;
+      }
+    }
+
+    @include media($desktop) {
+      @include span-columns(8 of 16);
+    }
+
+    a {
+      display: block;
+      border-bottom: 0;
+      padding: $small-spacing 0 1em;
+      color: $body-inverted-text-colour;
+    }
+  }
+
+  .feedback {
+    display: block;
+
+    @include media($tablet) {
+      display: none;
+    }
+  }
+}
+
+/*
+Local navigation
 
 The framework provides a vertical navigation menu that shows 3 levels of items.
 
@@ -25,24 +133,75 @@ Use short navigation links. They don't have to be the full page title.
 
 Test with users to ensure the navigation hierarchy is not too long or too deep.
 
-Markup: templates/primary-navigation.hbs
+**Behaviour**
 
-Style guide: Navigation.1 Primary Navigation
+The Local Navigation panel is collapsed (hidden) by default on small screens (up to the `$tablet`). Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
+
+Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
+
+Markup: templates/local-navigation.hbs
+
+Style guide: Navigation.2 Local Navigation
 */
 
-.primary-nav {
-  .nav-heading {
-    color: $darker-aqua;
-    background: $lighter-grey;
-    margin: $base-spacing 0;
+.local-nav-toggle {
+  position: relative;
+  width: 100%;
+  margin: $base-spacing 0 0;
+  text-align: left;
+  font-weight: $base-font-weight;
 
-    .chevron {
-      float: right;
+  &,
+  &:hover {
+    background-color: $lighter-grey;
+    color: $darker-aqua;
+  }
+
+  &::before {
+    @extend .chevron-down-navy;
+    content: '';
+    position: absolute;
+    top: .5em;
+    bottom: .5em;
+    right: $small-spacing;
+    width: $medium-spacing;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transform: rotate(0deg);
+    transition: transform $transition-timing $transition-easing;
+  }
+
+  &[aria-expanded='true'] {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+.primary-nav,
+.local-nav {
+  margin: 0 0 $base-spacing;
+  padding: $base-spacing 0;
+  overflow: hidden;
+  transition: padding ($transition-timing * 2) ease;
+
+  &[aria-expanded='false'] {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include media($tablet) {
+      height: auto;
+      padding: 0 0 $base-spacing;
     }
   }
 
   ul {
-    margin: $base-spacing 0;
+    margin: 0;
     padding: 0;
     list-style: none;
 
@@ -107,6 +266,24 @@ Style guide: Navigation.1 Primary Navigation
   }
 }
 
+
+
+// This class is legacy as of v1.2
+// Marked for removal at 2.0
+.primary-nav {
+  .nav-heading {
+    color: $darker-aqua;
+    background: $lighter-grey;
+    margin: $base-spacing 0;
+
+    .chevron {
+      float: right;
+    }
+  }
+}
+
+// This class is legacy as of v1.2
+// Marked for removal at 2.0
 .js {
   .primary-nav {
     ul {
@@ -126,6 +303,7 @@ Style guide: Navigation.1 Primary Navigation
   }
 }
 
+
 /*
 Breadcrumbs
 
@@ -139,12 +317,12 @@ The inverted style can be used on a darker coloured background. Make sure you ch
 
 Markup: templates/breadcrumbs.hbs
 
-Style guide: Navigation.2 Breadcrumbs
+Style guide: Navigation.3 Breadcrumbs
 */
 
 [class^='breadcrumbs'] {
   display: none;
-  margin: 0 $small-spacing 0 0;
+  margin: 0;
   background-color: $non-white;
   color: $grey;
 
@@ -203,7 +381,7 @@ When this Success Criterion is not satisfied, it may be difficult for people wit
 
 Markup: templates/skip-link.hbs
 
-Style guide: Navigation.3 Skip Links
+Style guide: Navigation.4 Skip Links
 */
 .skip-to {
   position: relative;
@@ -245,7 +423,7 @@ An optional heading is included in the markup example. Any level leading from `h
 
 Markup: templates/index-links.hbs
 
-Style guide: Navigation.4 Index links
+Style guide: Navigation.5 Index links
 */
 
 .index-links {
@@ -290,7 +468,7 @@ When placing these links on a dark background, use `.inline-links--inverted.` Ma
 
 Markup: templates/inline-links.hbs
 
-Style guide: Navigation.4 Inline Links
+Style guide: Navigation.6 Inline Links
 */
 [class^='inline-links'] {
   display: inline-block;

@@ -12,6 +12,20 @@
   @include inline-background-image('arrow-right-white');
 }
 
+.bars {
+  @include inline-background-image('bars');
+}
+
+.close {
+  @include inline-background-image('close');
+}
+
+.chevron-down-navy {
+  @include inline-background-image('chevron-down-navy');
+}
+
+// This class is legacy as of v1.2
+// Marked for removal in v2.0
 .chevron {
   &::before {
     border-style: solid;
