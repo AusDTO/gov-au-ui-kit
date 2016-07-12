@@ -15,9 +15,6 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <!-- viewport declaration must be included in <head> for media queries to work correctly on real devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>(function (h) {
-    h.className = h.className.replace('no-js', 'js')
-  })(document.documentElement)</script>
   <title>Example Pages</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
@@ -84,18 +81,21 @@
         <div class="govau--logo">
           <a href="#" class="logo">gov.au</a> <span class="badge--default">draft</span>
         </div>
-        <div class="feedback">
+        <div class="feedback" tabindex="1">
           <a href="#" class="button--feedback">Give feedback</a>
         </div>
-        <nav class="global-nav" aria-label="global navigation">
+        <nav class="global-nav" aria-label="global navigation" tabindex="2">
           <ul>
-            <li><a href="#"><span>About us</span></a></li>
-            <li><a href="#"><span>Information and services</span></a></li>
-            <li><a href="#"><span>Ministers</span></a></li>
-            <li><a href="#"><span>News</span></a></li>
-            <li><a href="#"><span>Departments & Agencies</span></a></li>
-            <li><a href="#"><span>Contact us</span></a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Information and services</a></li>
+            <li><a href="#">Ministers</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Departments & Agencies</a></li>
+            <li><a href="#">Contact us</a></li>
           </ul>
+          <div class="feedback">
+            <a href="#" class="button--feedback">Give feedback</a>
+          </div>
         </nav>
       </div>
     </section>

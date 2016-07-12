@@ -34,6 +34,10 @@
     }
   }
 
+  [class^='breadcrumbs'] {
+    margin-right: $small-spacing;
+  }
+
   [role='button'] {
     @extend .inverted;
     margin: 0;
@@ -49,98 +53,89 @@
   }
 }
 
-header[role='banner'] {
+.govau--header {
+  position: relative;
+  padding: $medium-spacing 0 ($base-spacing * 3);
+  padding-bottom: $medium-spacing;
+  background-color: $header-bg-colour;
+  color: $body-inverted-text-colour;
 
-  .govau--header {
-    position: relative;
-    padding: $medium-spacing 0 ($base-spacing * 3);
-    background-color: $header-bg-colour;
-    color: $body-inverted-text-colour;
+  @include media($tablet) {
+    padding-bottom: $medium-spacing;
+  }
+
+  .govau--logo {
+    float: left;
 
     @include media($tablet) {
       padding-bottom: 0;
     }
+  }
 
-    .govau--logo {
-      padding-bottom: $medium-spacing;
+  .logo {
+    @extend h3;
 
-      @include media($tablet) {
-        float: left;
-        padding-bottom: 0;
-      }
-    }
+    padding-bottom: 2px;
+    border-bottom: none;
+    color: $body-inverted-text-colour;
+    font-family: $base-sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
-    .logo {
-      @extend h3;
-
-      padding-bottom: 2px;
-      border-bottom: none;
-      color: $body-inverted-text-colour;
-      font-family: $base-sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-
-      &:hover,
-      &:focus {
-        border-bottom: 1px;
-      }
-    }
-
-    [class^='badge'] {
-      vertical-align: text-bottom;
-      margin-left: $tiny-spacing;
-    }
-
-    .feedback {
-      display: block;
-      position: absolute;
-      bottom: $gutter;
-      left: $base-spacing;
-      right: $base-spacing;
-
-      @include media($tablet) {
-        position: relative;
-        bottom: initial;
-        left: initial;
-        right: initial;
-        float: right;
-      }
-    }
-
-    .button--feedback {
-      @extend button;
-      @extend .inverted;
-      margin: 0;
-      width: 100%;
-      text-align: center;
-
-      @include media($tablet) {
-        width: auto;
-        text-align: initial;
-      }
+    &:hover,
+    &:focus {
+      border-bottom: 1px;
     }
   }
 
-  .hero {
-    padding: ($base-spacing * 2) 0;
-    background-color: $hero-bg-colour;
+  [class^='badge'] {
+    vertical-align: text-bottom;
+    margin-left: $tiny-spacing;
+  }
+}
+
+.feedback {
+  display: none;
+
+  @include media($tablet) {
+    display: block;
+    float: right;
+    margin-left: $base-spacing;
+  }
+}
+
+.button--feedback {
+  @extend button;
+  @extend .inverted;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+
+  @include media($tablet) {
+    width: auto;
+    text-align: initial;
+  }
+}
+
+.hero {
+  padding: ($base-spacing * 2) 0;
+  background-color: $hero-bg-colour;
+  color: $body-inverted-text-colour;
+
+  .site-title {
+    @extend h1;
+
+    margin: $tiny-spacing 0;
     color: $body-inverted-text-colour;
+  }
 
-    .site-title {
-      @extend h1;
+  .tagline {
+    @extend h4;
+    font-weight: $base-font-weight;
+  }
 
-      margin: $tiny-spacing 0;
-      color: $body-inverted-text-colour;
-    }
-
-    .tagline {
-      @extend h4;
-      font-weight: $base-font-weight;
-    }
-
-    code,
-    a {
-      color: $body-inverted-text-colour;
-    }
+  code,
+  a {
+    color: $body-inverted-text-colour;
   }
 }

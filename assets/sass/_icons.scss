@@ -12,6 +12,14 @@
   @include inline-background-image('arrow-right-white');
 }
 
+.bars {
+  @include inline-background-image('bars');
+}
+
+.close {
+  @include inline-background-image('close');
+}
+
 .chevron {
   &::before {
     border-style: solid;

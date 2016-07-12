@@ -15,27 +15,71 @@ Style guide: Navigation
 /*
 Global navigation
 
+Global
+
 Style guide: Navigation.1 Global Navigation
 */
+.global-nav-toggle {
+  position: relative;
+  float: right;
+  height: auto;
+  margin: $tiny-spacing 0;
+  border-bottom: 1px solid;
+  padding: 0;
+
+  &::before {
+    @extend .bars;
+    content: '';
+    position: absolute;
+    top: .25em;
+    bottom: .25em;
+    left: ($base-spacing * -1);
+    width: $medium-spacing;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  &[aria-expanded='true'] {
+    &::before {
+      @extend .close;
+    }
+  }
+
+  &,
+  &:hover {
+    background-color: transparent;
+  }
+}
+
 .global-nav {
   clear: both;
   padding: $tiny-spacing 0 $small-spacing;
+  overflow: hidden;
+  transition: padding ($transition-timing * 2) ease;
+
+  &[aria-expanded='false'] {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   ul {
     list-style-type: none;
+    margin: $base-spacing 0;
     padding: 0;
 
     @include media($tablet) {
       @include outer-container;
+      margin-top: $base-spacing;
     }
   }
 
   li {
     margin: 0;
-    border-bottom: 1px solid $border-colour;
+    border-bottom: 1px solid $border-soft-colour;
 
     &:first-child {
-      border-top: 1px solid $border-colour;
+      border-top: 1px solid $border-soft-colour;
     }
 
     @include media($tablet) {
@@ -43,25 +87,28 @@ Style guide: Navigation.1 Global Navigation
       @include omega(2n);
 
       &:nth-child(2) {
-        border-top: 1px solid $border-colour;
+        border-top: 1px solid $border-soft-colour;
       }
     }
 
     @include media($desktop) {
       @include span-columns(8 of 16);
     }
+
+    a {
+      display: block;
+      border-bottom: 0;
+      padding: $small-spacing 0 1em;
+      color: $body-inverted-text-colour;
+    }
   }
 
-  a {
+  .feedback {
     display: block;
-    border-bottom: 0;
-    padding: $small-spacing 0 1em;
-    color: $body-inverted-text-colour;
-  }
 
-  span {
-    border-bottom: 1px solid;
-    color: $body-inverted-text-colour;
+    @include media($tablet) {
+      display: none;
+    }
   }
 }
 
@@ -197,7 +244,7 @@ Style guide: Navigation.3 Breadcrumbs
 
 [class^='breadcrumbs'] {
   display: none;
-  margin: 0 $small-spacing 0 0;
+  margin: 0;
   background-color: $non-white;
   color: $grey;
 
