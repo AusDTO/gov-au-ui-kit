@@ -1,6 +1,7 @@
 footer[role='contentinfo'] {
   @include pad($base-spacing 0);
   background-color: $non-white;
+  border-top: 6px solid $border-contrast-colour;
 
   ul {
     padding: 0;
