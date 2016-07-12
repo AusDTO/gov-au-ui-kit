@@ -133,25 +133,75 @@ Use short navigation links. They don't have to be the full page title.
 
 Test with users to ensure the navigation hierarchy is not too long or too deep.
 
-Markup: templates/primary-navigation.hbs
+**Behaviour**
+
+The Local Navigation panel is collapsed (hidden) by default on small screens (up to the `$tablet`). Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
+
+Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
+
+Markup: templates/local-navigation.hbs
 
 Style guide: Navigation.2 Local Navigation
 */
 
+.local-nav-toggle {
+  position: relative;
+  width: 100%;
+  margin: $base-spacing 0 0;
+  text-align: left;
+  font-weight: $base-font-weight;
+
+  &,
+  &:hover {
+    background-color: $lighter-grey;
+    color: $darker-aqua;
+  }
+
+  &::before {
+    @extend .chevron-down-navy;
+    content: '';
+    position: absolute;
+    top: .5em;
+    bottom: .5em;
+    right: $small-spacing;
+    width: $medium-spacing;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transform: rotate(0deg);
+    transition: transform $transition-timing $transition-easing;
+  }
+
+  &[aria-expanded='true'] {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include media($tablet) {
+    display: none;
+  }
+}
+
 .primary-nav,
 .local-nav {
-  .nav-heading {
-    color: $darker-aqua;
-    background: $lighter-grey;
-    margin: $base-spacing 0;
+  margin: 0 0 $base-spacing;
+  padding: $base-spacing 0;
+  overflow: hidden;
+  transition: padding ($transition-timing * 2) ease;
 
-    .chevron {
-      float: right;
+  &[aria-expanded='false'] {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include media($tablet) {
+      height: auto;
+      padding: 0 0 $base-spacing;
     }
   }
 
   ul {
-    margin: $base-spacing 0;
+    margin: 0;
     padding: 0;
     list-style: none;
 
@@ -216,24 +266,6 @@ Style guide: Navigation.2 Local Navigation
   }
 }
 
-.js {
-  .primary-nav {
-    ul {
-      margin: 0;
-      display: none;
-      @include media($tablet) {
-        margin: inherit;
-        display: block;
-      }
-    }
-  }
-
-  .nav-heading {
-    @include media($tablet) {
-      display: none;
-    }
-  }
-}
 
 /*
 Breadcrumbs
