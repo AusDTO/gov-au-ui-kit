@@ -1,12 +1,7 @@
 footer[role='contentinfo'] {
   @include pad($base-spacing 0);
 
-  background-color: $non-black;
-  color: $white;
-
-  a {
-    color: $white;
-  }
+  background-color: $non-white;
 
   .footer-logo {
 
