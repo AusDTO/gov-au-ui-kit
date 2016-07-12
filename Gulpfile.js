@@ -147,7 +147,7 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
 
 });
 
-gulp.task('styleguide.scss', function () {
+gulp.task('styleguide.scss', ['svg2png'], function () {
     return gulp.src(paths.kssScssDir)
         .pipe(sass({
             functions: {
