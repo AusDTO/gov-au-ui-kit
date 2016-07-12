@@ -8,21 +8,14 @@ UI Kit (`gov-au-ui-kit`) is 3 things:
 
 1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
 2. common-use templates (to come)
-3. a lean and frugal CSS/SCSS framework (found in `assets/sass/`) that you can
-include in your project in one of two ways:
+3. a lean and frugal CSS & JS framework (found in `assets/`) that you can
+include in your project:
 
-**Link to as a precompiled minified file**
+**Link to precompiled minified files**
 
 ```
 <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
-```
-
-**Download and include the complete SCSS framework**
-
-This way you can access framework's variables and mixins
-
-```
-@import url('https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss');
+<script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
 ```
 
 ### Features
