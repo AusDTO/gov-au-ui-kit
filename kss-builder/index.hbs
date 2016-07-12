@@ -23,13 +23,22 @@
     });
   </script>
 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72255206-3', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
   <link rel="stylesheet" href="kss-assets/kss.css">
   {{{styles}}}
 
-  <!--[if (gte IE 9) | (!IE)]><!-->
   <script src="//code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
-          crossorigin="anonymous"></script>
-  <!--<![endif]-->
+            crossorigin="anonymous"></script>
   <!--[if lt IE 9]>
   <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
           crossorigin="anonymous"></script>
@@ -55,7 +64,7 @@
   <section class="govau--header">
     <div class="wrapper">
       <div class="govau--logo">
-        <a href="#" class="logo">gov.au ui-kit</a> <span class="badge--default">draft</span>
+        <a href="/" class="logo">gov.au ui-kit</a> <span class="badge--default">draft</span>
       </div>
       <div class="feedback">
         <a href="https://github.com/AusDTO/gov-au-ui-kit/issues/new" class="button--feedback">Give feedback</a>
@@ -66,7 +75,7 @@
   <section class="hero">
     <div class="wrapper">
       <span class="site-title">{{options.title}}</span>
-      <p class="tagline">A living style guide of gov-au-ui-kit, built using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
+      <p class="tagline">A living style guide of the UI-Kit <abbr title="Sassy CSS">SCSS</abbr> framework, built from the source, using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
       <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
   </section>
@@ -75,27 +84,14 @@
 
 <main>
   <aside class="sidebar" id="nav">
-    <nav class="primary-nav" aria-label="main navigation">
-      <a id="primary-nav-heading" href="javascript:void(0)" class="js-accordion-trigger nav-heading"
-         aria-expanded="true" aria-controls="primary-nav-panel"><span>Show menu</span><i class="chevron bottom"></i></a>
-      <ul id="primary-nav-panel" aria-labelledby="primary-nav-heading">
+    <nav class="local-nav" aria-label="main navigation">
+      <ul>
         <li>
           <a href="/">Getting started</a>
         </li>
         {{#each menu}}
           <li>
             <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active"{{/if}}>{{header}}</a>
-            {{#if isActive}}
-              {{#if children}}
-                <ul>
-                  {{#each children}}
-                    <li>
-                      <a href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
-                    </li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-            {{/if}}
           </li>
         {{/each}}
       </ul>
@@ -103,35 +99,35 @@
   </aside>
 
   <article role="main" id="content" class="content-main">
+
     {{#if homepage}}
-      <div id="kssref-0" class="guide-section guide-section--depth-0 kss-overview">
+      <div id="guide-0" class="guide-section guide-section--depth-0 kss-overview">
         {{{homepage}}}
       </div>
     {{else}}
 
-    {{!
-      Display each section, in order.
+    <header class="guide-section-header">
+      <h1>{{sections.0.header}}</h1>
 
-      The "root" element comes first in this loop, and can be detected using
-      the "#if @first" block as seen below.
-    }}
+      <nav class="index-links">
+        <h2>Contents</h2>
+        <ul>
+          {{#each sections}}
+            {{#unless @first}}
+            <li><a href="#guide-{{referenceURI}}">{{header}}</a></li>
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </nav>
+    </header>
 
-      <h1 id="#kssref-{{sections.0.referenceURI}}">{{sections.0.header}}</h1>
-      <h2>Jump to</h2>
-      <ul class="guide-jump-links">
-        {{#each sections}}
-          {{#unless @first}}
-          <li><a href="#kssref-{{referenceURI}}">{{header}}</a></li>
-          {{/unless}}
-        {{/each}}
-      </ul>
       {{#each sections}}
-        <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}"
+        <{{#if @first}}div{{else}}section{{/if}} id="guide-{{referenceURI}}"
                                                  class="guide-section guide-section--depth-{{depth}}">
 
           <div>
             {{#unless @first}}
-            <h{{depth}} id="#kssref-{{referenceURI}}">
+            <h{{depth}} id="#guide-{{referenceURI}}">
               {{header}}
             </h{{depth}}>
             {{/unless}}
@@ -209,10 +205,18 @@
 <script src="kss-assets/kss.js"></script>
 {{{scripts}}}
 
-
 <footer role="contentinfo">
   <div class="wrapper">
-    <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
+    <div class="footer-logo">
+      <img src="https://www.gov.au/alpha/assets/coatofarms-01.svg" alt="Australian Government Coat of Arms" />
+    </div>
+    <div class="footer-links">
+      <a href="https://www.dto.gov.au/privacy-statement/">Privacy Statement</a>
+      <br/>
+      <br/>
+      &copy; Commonwealth of Australia<br/>
+      <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md">Licensed under the MIT License.</a>
+    </div>
   </div>
 </footer>
 

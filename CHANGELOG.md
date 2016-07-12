@@ -2,6 +2,26 @@
 
 ## UI Kit "Kraken"
 
+### Next release (scheduled 2016-07-19)
+
+### 1.2.0 - 2016-07-12
+
+Adds or modifies:
+
+- New & improved Table examples
+- Minor style updates to List views
+- Controls bar now includes a Contrast style
+- Breadcrumbs now include an Inverted style
+- Rename 'Primary navigation' to 'Local navigation'
+- Global Navigation added
+- Local navigation (ex. Primary navigation) has new JavaScript behaviour and changes to its markup pattern
+- Updated instructions on how to include the CSS & JS Framework
+
+Bugfixes:
+
+- Fixed [#111](https://github.com/AusDTO/gov-au-ui-kit/issues/111) Single column layout width
+- Fixed [#99](https://github.com/AusDTO/gov-au-ui-kit/issues/99) Breadcrumbs icon not showing up
+
 ### 1.1.0 - 2016-07-05
 
 Adds or modifies:

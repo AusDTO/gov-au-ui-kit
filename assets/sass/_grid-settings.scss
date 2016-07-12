@@ -1,7 +1,7 @@
 /*
 Grid
 
-This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to create a consistent 16 column responsive grid layout with good defaults.
+This framework uses [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/) to create a consistent 16 column responsive grid layout with good defaults.
 
 Bourbon is a [SASS](http://sass-lang.com/) mixin library (it provides little styling). Neat is a flexible grid framework.
 
@@ -102,7 +102,9 @@ Style guide: Grid.5 Layout
 /*
 Wrapper class
 
-There is a wrapper class for escaping the outer (grid) container: `<div class="wrapper">`. This is currently used for the page `header` and `footer`.
+There is a wrapper class (`<div class="wrapper">`) for wrapping the contents of a block within the grid, while allowing its outer container to run the full viewport width.
+
+This is currently used for the page `header` and `footer`, and also for the [breadcrumbs](section-navigation.html#kssref-navigation-2-breadcrumbs).
 
 Style guide: Grid.6 Wrapper class
 */

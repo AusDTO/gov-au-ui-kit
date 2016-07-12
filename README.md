@@ -1,6 +1,6 @@
 # `gov-au-ui-kit`
 
-![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield)
+![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
 ## What is this?
 
@@ -8,32 +8,33 @@ UI Kit (`gov-au-ui-kit`) is 3 things:
 
 1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
 2. common-use templates (to come)
-3. a lean and frugal CSS/SCSS framework (found in `assets/sass/`) that you can
-include in your project in one of two ways:
+3. a lean and frugal CSS & JS framework (found in `assets/`) that you can
+include in your project:
 
-**Link to as a precompiled minified file**
+**Link to precompiled minified files**
 
 ```
 <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+<script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
 ```
 
-**Download and include the complete SCSS framework**
-
-This way you can access framework's variables and mixins
-
-```
-@import url('https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/_ui-kit.scss');
-```
-
-### Features & browser support
+### Features
 
 - [Normalize](https://necolas.github.io/normalize.css/).
-- Bourbon, version 4.2.7.
-- Neat, and settings for a grid framework with some good defaults.
+- [Bourbon](http://bourbon.io/), version 4.2.7.
+- [Neat](http://neat.bourbon.io/), and settings for a grid framework with some good defaults.
 - Basic styling for content with some good typographic coverage.
 - Basic styling for UI elements (eg `input`, `label`, etc).
-- UI components build on solid HTML foundation.
-- Built on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
+
+For a full list of features please see the [CHANGELOG](CHANGELOG.md).
+
+### Browser support
+
+Our components are built on a solid HTML foundation, opting on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
+
+We intend to support Internet Explorer 8+.
+
+We will provide precise version support information in the future.
 
 ## What this isn't
 
@@ -59,6 +60,7 @@ To build it yourself, begin by installing the system dependencies:
 Install node package dependencies:
 
 ```
+npm -g install gulp
 npm install
 ```
 

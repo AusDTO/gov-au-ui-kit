@@ -20,6 +20,7 @@ coverage
 
 # node-waf configuration
 .lock-wscript
+/kss-builder/kss-assets/kss.css
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
@@ -42,6 +43,7 @@ jspm_packages
 
 .sass-cache/
 *.css.map
+*.iml
 .idea
 build
 

@@ -1,7 +1,7 @@
 /*
 Typography
 
-This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to provide a responsive grid layout with basic content styling and good typographic defaults.
+Basic content styling with good typographic defaults.
 
 The framework aims to meet common government typographic needs:
 
@@ -287,7 +287,6 @@ a {
 
   &:hover,
   &:active {
-    border-bottom-color: lighten($highlight-colour, 30%);
     color: $highlight-colour;
   }
 
@@ -361,6 +360,10 @@ Style guide: Typography.5 Lists
 ul,
 ol {
   padding-left: 1.1 * $base-spacing;
+
+  ul {
+    list-style-type: disc;
+  }
 }
 
 ul,
@@ -561,4 +564,10 @@ q {
 
 cite {
   font-style: $base-font-style;
+}
+
+article {
+  h1:first-of-type {
+    margin-top: 0;
+  }
 }
