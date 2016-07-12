@@ -62,6 +62,14 @@ footer[role='contentinfo'] {
     li {
       line-height: 1.5em;
       list-style: none;
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        @extend p;
+      }
+
     }
 
   }
