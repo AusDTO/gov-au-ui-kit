@@ -267,6 +267,43 @@ Style guide: Navigation.2 Local Navigation
 }
 
 
+
+// This class is legacy as of v1.2
+// Marked for removal at 2.0
+.primary-nav {
+  .nav-heading {
+    color: $darker-aqua;
+    background: $lighter-grey;
+    margin: $base-spacing 0;
+
+    .chevron {
+      float: right;
+    }
+  }
+}
+
+// This class is legacy as of v1.2
+// Marked for removal at 2.0
+.js {
+  .primary-nav {
+    ul {
+      margin: 0;
+      display: none;
+      @include media($tablet) {
+        margin: inherit;
+        display: block;
+      }
+    }
+  }
+
+  .nav-heading {
+    @include media($tablet) {
+      display: none;
+    }
+  }
+}
+
+
 /*
 Breadcrumbs
 
