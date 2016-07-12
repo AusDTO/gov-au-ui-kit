@@ -2,11 +2,9 @@
 
 ## UI Kit "Kraken"
 
-### Next release (scheduled 2016-07-12)
+### Next release (scheduled 2016-07-19)
 
-Markup changes:
-
-- Local navigation (ex. Primary navigation) has new JavaScript behaviour and changes to its markup pattern
+### 1.2.0 - 2016-07-12
 
 Adds or modifies:
 
@@ -15,6 +13,8 @@ Adds or modifies:
 - Controls bar now includes a Contrast style
 - Breadcrumbs now include an Inverted style
 - Rename 'Primary navigation' to 'Local navigation'
+- Global Navigation added
+- Local navigation (ex. Primary navigation) has new JavaScript behaviour and changes to its markup pattern
 - Updated instructions on how to include the CSS & JS Framework
 
 Bugfixes:
