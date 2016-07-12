@@ -10,6 +10,8 @@ Adds or modifies:
 - Minor style updates to List views
 - Controls bar now includes a Contrast style
 - Breadcrumbs now include an Inverted style
+- Rename 'Primary navigation' to 'Local navigation' (Note: Styles still applied to markup using the class name `.primary-nav` but this may be removed in a future major release)
+- Updated instructions on how to include the CSS & JS Framework
 
 Bugfixes:
 
