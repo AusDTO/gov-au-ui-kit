@@ -1,4 +1,5 @@
 footer[role='contentinfo'] {
+
   @include pad($base-spacing 0);
   background-color: $non-white;
   border-top: 6px solid $border-contrast-colour;
@@ -27,8 +28,8 @@ footer[role='contentinfo'] {
       @include span-columns(9 of 12);
     }
 
-    @include media($tablet) {
-      ul {
+    ul {
+      @include media($tablet) {
         margin-top: 0;
       }
     }
@@ -45,8 +46,6 @@ footer[role='contentinfo'] {
       display: inline-block;
     }
   }
-
-
 
   /*
   Footer navigation
@@ -94,7 +93,7 @@ footer[role='contentinfo'] {
         h2,
         h3,
         h4 {
-          @extend p;
+          font-size: rem(16);
         }
       }
     }
