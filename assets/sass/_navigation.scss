@@ -196,7 +196,7 @@ Style guide: Navigation.2 Local Navigation
 
     @include media($tablet) {
       height: auto;
-      padding: 0 0 $base-spacing;
+      padding: $base-spacing 0;
     }
   }
 
