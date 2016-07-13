@@ -291,24 +291,16 @@ Style guide: List styles.4 Recurring phase list
     list-style: none;
     padding-bottom: $base-spacing;
     padding-top: 0;
-    position: relative;
   }
 
   a {
-    display: inline-block;
     font-size: 150%;
     font-weight: 700;
     line-height: $base-heading-leading;
-    margin-top: $small-spacing;
-
-    &:only-child {
-      margin-bottom: $small-spacing;
-    }
 
     span {
+      display: block;
       font-size: 65%;
-      position: absolute;
-      top: 0;
     }
   }
 }
