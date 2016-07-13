@@ -17,7 +17,7 @@ you encountered the issue. Include screenshots or any other information that you
 
 ### What browser and device I was using
 
-Include the browser and device you were using (if relevant to the feedback)
+Include the browser and device you were using while trying to complete your task (if relevant to the feedback)
 
 ## What I expected to see
 
