@@ -86,6 +86,12 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
             // Load this builder's extra Handlebars helpers.
             require("handlebars.moment").registerHelpers(this.Handlebars);
 
+            var fs = require('fs');
+            var helpersPath = __dirname + '/helpers/';
+            fs.readdirSync(helpersPath)
+              .filter(file => ~file.indexOf('.js'))
+              .forEach(file => require(helpersPath + file).register(this.Handlebars));
+
             // Allow a builder user to override the {{section [reference]}} helper
             // with the --extend setting. Since a user's handlebars helpers are
             // loaded first, we need to check if this helper already exists.

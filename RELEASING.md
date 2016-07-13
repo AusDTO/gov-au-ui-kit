@@ -26,8 +26,8 @@ Two separate deployed versions of the UI Kit will be maintained.
 
 | Branch | Server | URL |
 |--------|--------|-----|
-| develop | Staging | [http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/](http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/) |
-| master | Production | TBD |
+| develop | Staging | [http://gov-au-ui-kit-staging.apps.staging.digital.gov.au/kss/](http://gov-au-ui-kit-staging.apps.staging.digital.gov.au/kss/) |
+| master | Production | [http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/](http://gov-au-ui-kit.apps.staging.digital.gov.au/kss/)  |
 
 Production will always host the latest release and will be considered stable.
 Staging will host the current code at the develop branch and may not necessarily be stable.
