@@ -13,8 +13,11 @@ Use a title line as the title of your issue, then delete these lines.
 ## What I did
 
 Describe the task you were trying to complete, or the steps you carried out before
-you encountered the issue. Include screenshots, browser details or any other
-information that you think might be useful.
+you encountered the issue. Include screenshots or any other information that you think might be useful.
+
+### What browser and device I was using
+
+Include the browser and device you were using (if relevant to the feedback)
 
 ## What I expected to see
 
