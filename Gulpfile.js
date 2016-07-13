@@ -176,7 +176,13 @@ gulp.task('build.prod', function (callback) {
 gulp.task('watch', ['watch.build']);
 
 gulp.task('watch.build', function () {
-    gulp.watch([paths.assetsDir, paths.examplesDir, paths.kssBuilderDir, paths.readme, '!kss_builder/kss-assets/kss.css'],
+    gulp.watch([
+      paths.assetsDir,
+      paths.examplesDir,
+      paths.readme,
+      paths.kssBuilderDir,
+      '!./kss-builder/kss-assets/kss.css'
+    ],
         {verbose: true},
         ['build']);
 });
