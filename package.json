@@ -43,5 +43,8 @@
     "dom-serializer": "^0.1.0",
     "htmlparser2": "^3.9.1",
     "object-assign": "^4.1.0"
+  },
+  "devDependencies": {
+    "fs": "0.0.2"
   }
 }
