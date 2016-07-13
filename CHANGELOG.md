@@ -4,6 +4,16 @@
 
 ### Next release (scheduled 2016-07-19)
 
+Adds or modifies:
+
+- UI Kit version number added to Guide home page
+
+Bugfixes:
+
+- Fixed [#156](https://github.com/AusDTO/gov-au-ui-kit/issues/156) Looping Gulp build
+- Fixed [#159](https://github.com/AusDTO/gov-au-ui-kit/issues/159) Bouncing Local nav
+- Fixed [#136](https://github.com/AusDTO/gov-au-ui-kit/issues/136) Guide home page Local nav active styles
+
 ### 1.2.0 - 2016-07-12
 
 Adds or modifies:
