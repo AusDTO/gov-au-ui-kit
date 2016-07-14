@@ -297,6 +297,30 @@ kbd {
   font-size: $small-font-size;
 }
 
+/*
+Keyboard input
+
+Use when asking users to enter keyboard combinations, eg a shortcut to print the screen and copy it to clipboard.
+
+Further [W3C specification documentation](http://dev.w3.org/html5/spec/Overview.html#the-kbd-element).
+
+Markup: Abort! Abort! <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd>
+
+Style guide: Typography.10 Keyboard keys
+*/
+
+kbd {
+  display: inline-block;
+  border: solid 1px $light-aqua;
+  border-radius: $base-border-radius;
+  box-shadow: 0 1px 0 0 $light-aqua;
+  background-color: $non-white;
+  color: $dark-aqua;
+  text-align: center;
+  padding: 0 $small-spacing;
+  margin: 0 $tiny-spacing;
+}
+
 strong {
   font-weight: $bold-font-weight;
 
@@ -326,10 +350,6 @@ hr {
   border-color: $border-secondary-colour;
   border-style: solid;
   border-bottom: none;
-}
-
-img {
-  max-width: 100%;
 }
 
 /*
