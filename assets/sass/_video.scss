@@ -11,5 +11,7 @@
   iframe {
     @include position(absolute, 0 null null 0);
     @include size(100%);
+
+    border: none;
   }
 }
