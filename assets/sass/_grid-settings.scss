@@ -25,8 +25,8 @@ If you need an element not defined here you are probably not the only one&mdash;
 
 We define the grid placement for the following elements in `_block-elements.scss`:
 
-- `header`
-- `footer`
+- `header[role='banner']`
+- `footer[role='contentinfo']`
 - `main`
 - `article`
 - `aside`.
@@ -120,7 +120,7 @@ Style guide: Grid.7 Header & footer
 /*
 Accessibility
 
-Long lines reduce legibility. Lines of text should be no longer than 75 characters. Place text in narrower grid boxes to stop text lines from becoming too wide.
+Long lines reduce legibility. Lines of text should be no longer than 75 characters including spaces. Place text in narrower grid boxes to stop text lines from becoming too wide.
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 
