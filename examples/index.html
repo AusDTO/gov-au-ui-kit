@@ -155,10 +155,21 @@
 
       <p>More seriously, here is an accordion that uses the <code>details</code> and <code>summary</code> elements.</p>
 
-      <details class="open" open>
+      <details open>
         <summary aria-expanded="true">foobar</summary>
-        <p>I am a paragraph of text!</p>
+        <div class="accordion-panel">
+            <p>I am a paragraph of text!</p>
+        </div>
       </details>
+
+      <div class="accordion closed">
+        <a href="javascript:;" class="accordion-button" aria-expanded="true">foobar</a>
+        <div class="accordion-panel">
+            <p>I am a paragraph of text!</p>
+        </div>
+      </div>
+
+
 
       <blockquote>
         <p>Lorem ispum dolor sit amet.</p>

@@ -3,42 +3,65 @@ details,
   display: block;
   margin: $base-spacing 0;
 
-  summary {
-    position: relative;
-    margin: 0;
-    font-weight: $heading-font-weight;
+  &.open,
+  &[open] {
+    .accordion-panel {
+      display: block;
+    }
+
+    .accordion-button,
+    summary {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .accordion-panel {
+    display: none;
+    border: solid $small-spacing $lighter-aqua;
+    border-top: none;
     padding: $small-spacing;
-    background-color: $lighter-aqua;
+  }
 
-    &[aria-expanded='true']::before {
-      @extend .icon-arrow-right;
+  .accordion-button,
+  summary {
+    cursor: pointer;
+    display: block;
+    padding: $small-spacing;
+    border-bottom: none; //normalize from links
+    font-weight: $bold-font-weight;
 
-      content: '';
-      position: absolute;
-      right: $small-spacing;
-      top: $small-spacing;
-      bottom: $small-spacing;
-      width: $medium-spacing;
-      background-size: $small-spacing auto;
-      background-position: right;
-      background-repeat: no-repeat;
-    }
-
-    &[aria-expanded='false']::before {
-
-    }
-
-    &::-webkit-details-marker {
+    &::-webkit-details-marker { //remove vanila summary styles
       display: none;
     }
 
-    & + p,
-    & + ul,
-    & + ol,
-    & + blockquote
-    & + img {
-      margin: $medium-spacing ($base-spacing + $small-spacing);
-      background-color: $white;
+    //========== mostly copied from .local-nav-toggle with colour changes
+    position: relative;
+    width: 100%;
+    margin: $base-spacing 0 0;
+    text-align: left;
+
+    &,
+    &:hover {
+      background-color: $lighter-aqua;
+      color: $darker-aqua;
     }
+
+    &::before {
+      @extend .chevron-down-navy;
+      content: '';
+      position: absolute;
+      top: .5em;
+      bottom: .5em;
+      right: $small-spacing;
+      width: $medium-spacing;
+      background-repeat: no-repeat;
+      background-position: center center; //added this not in .local-nav-toggle
+      background-size: 100% auto;
+      transform: rotate(0deg);
+      transition: transform $transition-timing $transition-easing;
+    }
+    //==================
   }
 }
