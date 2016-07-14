@@ -30,6 +30,10 @@ Markup:
     <input name="textin" id="textin" type="text" />
   </p>
   <p>
+    <label for="numberin">A number input field:</label>
+    <input name="numberin" id="numberin" type="number" />
+  </p>
+  <p>
     <label for="textinvalid">An invalid field:</label>
     <input name="textinvalid" id="textinvalid" type="text" class="invalid" />
   </p>
@@ -142,6 +146,7 @@ form {
   }
 
   [type='text'],
+  [type='number'],
   [type='email'],
   [type='password'] {
     @extend %base-input;
