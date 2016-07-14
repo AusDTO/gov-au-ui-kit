@@ -283,7 +283,7 @@ Markup: templates/lists-highlighted.hbs
 Style guide: List styles.4 Highlighted List
 */
 
-.list-recurring {
+.list-highlighted {
   @extend %base-list;
 
   li {
