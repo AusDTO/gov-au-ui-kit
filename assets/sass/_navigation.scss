@@ -255,13 +255,6 @@ Style guide: Navigation.2 Local Navigation
       background-color: $nav-focus-colour;
     }
 
-    font-size: rem(16);
-
-    &:hover {
-      border-color: $border-contrast-colour;
-      background-color: $nav-focus-colour;
-    }
-
     &:active,
     &.active,
     &.is-active {
@@ -324,11 +317,9 @@ Breadcrumbs
 
 Use breadcrumbs to help the user understand where are in the service and how they got there.
 
-Default breadcrumbs appear on a light grey background, and are positioned directly underneath a page header or hero.
+Breadcrumbs appear on an aqua background, and are positioned directly underneath a page header or hero.
 
-The global navigation breadcrumbs (with the attribute `aria-label='breadcrumb'`) are hidden on small screens, and only displayed at `$tablet` breakpoint or bigger.
-
-The inverted style can be used on a darker coloured background. Make sure you check the [colour contrast guidance](http://gov-au-ui-kit.dev/section-colours.html#kssref-colours-3-colour-contrast) before choosing a colour combination.
+Breadcrumbs are hidden on small screens, and only displayed at `$tablet` breakpoint or bigger.
 
 Markup: templates/breadcrumbs.hbs
 
@@ -339,10 +330,17 @@ Style guide: Navigation.3 Breadcrumbs
   display: none;
   margin: 0;
   background-color: $aqua;
-  color: $grey;
+  color: $body-inverted-text-colour;
 
   @include media($tablet) {
     display: inline-block;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $body-inverted-text-colour;
   }
 
   ul {
@@ -355,44 +353,14 @@ Style guide: Navigation.3 Breadcrumbs
       display: inline-block;
       margin: 0;
       padding: 0;
-      color: $white;
-      font-size: rem(16);
 
-      a {
-        color: $white;
-      }
-
-      a:hover {
-        border-bottom-color: $white;
-      }
-
-    }
-
-    li:not(:last-child) {
-      @extend .icon-arrow-right;
-      margin-right: $small-spacing;
-      padding-right: $medium-spacing;
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: $tiny-spacing auto;
-    }
-  }
-
-  &[class$='--inverted'] {
-    background-color: transparent;
-    color: $body-inverted-text-colour;
-
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-      color: $body-inverted-text-colour;
-    }
-
-    ul {
-      li:not(:last-child) {
+      &:not(:last-child) {
         @extend .icon-arrow-right-white;
-        color: $body-inverted-text-colour;
+        margin-right: $small-spacing;
+        padding-right: $medium-spacing;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: $tiny-spacing auto;
       }
     }
   }
