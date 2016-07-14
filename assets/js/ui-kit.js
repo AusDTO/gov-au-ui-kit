@@ -4,14 +4,13 @@
 
     /**
      * Initialise the Global Nav collapse behaviour
-     * @param {array} elems - list of collapsible elements
+     * @param {array} elems - array of HTMLCollections representing collapsible elements
      */
     init: function(elems) {
+      console.log(elems);
       for (var i = 0; i < elems.length; i++) {
-        if (elems[i] !== null) {
-          this.initPanel(elems[i]);
-          this.initToggle(elems[i]);
-        }
+        this.initPanel(elems[i]);
+        this.initToggle(elems[i]);
       }
     },
 
@@ -20,8 +19,9 @@
      * @param {object} elem - the containing DOMElement
      */
     initPanel: function(elem) {
-      var panelLabel = elem.dataset.label || elem.className;
+      var panelLabel = elem.dataset ? elem.dataset.label ? elem.dataset.label : elem.className : elem.className;
 
+      console.log(elem);
       elem.id = panelLabel;
       elem.setAttribute('aria-expanded', 'false');
     },
@@ -61,10 +61,7 @@
 
   // Kick of the JavaScript party when the DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
-    CollapsibleNav.init([
-      document.getElementsByClassName('global-nav').item(0),
-      document.getElementsByClassName('local-nav').item(0)
-    ]);
+    CollapsibleNav.init(document.querySelectorAll('.global-nav, .local-nav'));
   });
 
 })(document);
