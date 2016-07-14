@@ -1,8 +1,44 @@
 details,
 .accordion {
   display: block;
+  margin: $base-spacing 0;
 
   summary {
+    position: relative;
+    margin: 0;
+    font-weight: $heading-font-weight;
+    padding: $small-spacing;
+    background-color: $lighter-aqua;
 
+    &[aria-expanded='true']::before {
+      @extend .icon-arrow-right;
+
+      content: '';
+      position: absolute;
+      right: $small-spacing;
+      top: $small-spacing;
+      bottom: $small-spacing;
+      width: $medium-spacing;
+      background-size: $small-spacing auto;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+
+    &[aria-expanded='false']::before {
+
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    & + p,
+    & + ul,
+    & + ol,
+    & + blockquote
+    & + img {
+      margin: $medium-spacing ($base-spacing + $small-spacing);
+      background-color: $white;
+    }
   }
 }
