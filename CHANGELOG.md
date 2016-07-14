@@ -10,6 +10,10 @@ Adds or modifies:
 - UI Kit version number added to Guide home page [styleguide]
 - Style changes to Local (primary) navigation
 - Style changes to Page footer
+- Accordions via the `details` and `summary` elements, as well as via a `.accordion` class when using definition lists.
+- Styling for keyboard (`kbd`) inline element.
+- Responsive video embeds (yet undocumented).
+- UI Kit version number added to Guide home page
 
 Bugfixes:
 
