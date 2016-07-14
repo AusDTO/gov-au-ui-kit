@@ -272,3 +272,35 @@ Style guide: List styles.3 Small list
     margin: 0;
   }
 }
+
+/*
+Highlighted List
+
+Lists with highlighted phrases work well for displaying large lists where many items contain the same recurring phrases.
+
+Markup: templates/lists-highlighted.hbs
+
+Style guide: List styles.4 Highlighted List
+*/
+
+.list-highlighted {
+  @extend %base-list;
+
+  li {
+    list-style: none;
+    border-bottom: 0;
+    padding-bottom: $base-spacing;
+    padding-top: 0;
+  }
+
+  a {
+    font-size: $large-font-size;
+    font-weight: $heading-font-weight;
+    line-height: $base-heading-leading;
+
+    span {
+      display: block;
+      font-size: $smaller-font-size;
+    }
+  }
+}
