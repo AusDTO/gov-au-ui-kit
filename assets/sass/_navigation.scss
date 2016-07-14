@@ -328,6 +328,7 @@ Style guide: Navigation.3 Breadcrumbs
 
 [class^='breadcrumbs'] {
   display: none;
+  width: 100%;
   margin: 0;
   background-color: $aqua;
   color: $body-inverted-text-colour;
