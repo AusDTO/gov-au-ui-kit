@@ -70,8 +70,7 @@ Markup changes:
 
 - Add new `<script>` tag to load Google Web Font Loader into `<head>`
 
-### 1.0.0 - 2016-06-29
-
+### 1.0.0 - 2016-06-30
 Guide MVP is now live ([1]).
 
 Adds:

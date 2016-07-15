@@ -173,6 +173,7 @@ $aqua:          #18788d;
 $dark-aqua:     darken($aqua, 5%);
 $darker-aqua:   darken($aqua, 10%);
 $light-aqua:    lighten($aqua, 30%);
+$lighter-aqua:  lighten($aqua, 60%);
 
 $navy:          #224a61;
 $dark-navy:     darken($navy, 10%);
@@ -221,6 +222,7 @@ $frame-colour:                  $light-grey;
 $primary-colour:                $light-navy;
 $highlight-colour:              $aqua;
 $focus-colour:                  $light-aqua;
+$nav-focus-colour:              $lighter-aqua;
 $error-colour:                  $red;
 $success-colour:                $green;
 
@@ -245,3 +247,4 @@ $controls-bg-colour:            $dark-navy;
 $controls-contrast-bg-colour:   $dark-maroon;
 $header-bg-colour:              $navy;
 $hero-bg-colour:                $aqua;
+$breadcrumbs-bg-colour:         $non-white;
