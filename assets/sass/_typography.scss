@@ -35,11 +35,6 @@ We are currently testing the open source [Open Sans font family](https://www.goo
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</em></p>
 </div>
-<div class="guide-example--type"><h3>Open Sans semi bold 600</h3>
-  <p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-  abcdefghijklmnopqrstuvwxyz<br />
-  1234567890(!@#s%g.,?:;)</strong></p>
-</div>
 <div class="guide-example--type"><h3>Open Sans bold 700</h3>
   <p><strong class="very-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
@@ -118,7 +113,7 @@ $tiny-spacing: $base-spacing / 4;
 
 // Font weights
 $base-font-weight: 400;
-$bold-font-weight: 600;
+$bold-font-weight: 700;
 $heading-font-weight: 700;
 
 // Font sizes
