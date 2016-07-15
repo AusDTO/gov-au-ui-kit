@@ -495,7 +495,7 @@ Style guide: Typography.8 Quotations
 blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
-  background-color: $lighter-grey;
+  background-color: $non-white;
   font-family: $base-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
