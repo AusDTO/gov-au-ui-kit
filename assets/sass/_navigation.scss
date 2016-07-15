@@ -332,7 +332,7 @@ Style guide: Navigation.3 Breadcrumbs
   display: none;
   width: 100%;
   margin: 0;
-  background-color: $background-contrast-colour;
+  background-color: $breadcrumbs-bg-colour;
   color: $body-text-colour;
 
   @include media($tablet) {
