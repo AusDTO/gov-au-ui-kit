@@ -17,51 +17,55 @@ details,
     }
   }
 
-  .accordion-panel {
-    display: none;
-    border: solid $small-spacing $lighter-aqua;
-    border-top: none;
-    padding: $small-spacing;
-  }
-
   .accordion-button,
   summary {
-    cursor: pointer;
     display: block;
-    padding: $small-spacing;
-    border-bottom: none; //normalize from links
-    font-weight: $bold-font-weight;
-
-    &::-webkit-details-marker { //remove vanila summary styles
-      display: none;
-    }
-
-    //========== mostly copied from .local-nav-toggle with colour changes
     position: relative;
     width: 100%;
     margin: $base-spacing 0 0;
+    padding: $small-spacing;
+    border-bottom: none;
+    border-top-right-radius: $tiny-border-radius;
+    border-top-left-radius: $tiny-border-radius;
+    background-color: $lighter-aqua;
+    color: $darker-aqua;
     text-align: left;
+    font-weight: $bold-font-weight;
+    cursor: pointer;
 
-    &,
+    // Remove vanilla summary styles.
+    &::-webkit-details-marker {
+      display: none;
+    }
+
     &:hover {
-      background-color: $lighter-aqua;
-      color: $darker-aqua;
+      background-color: $light-aqua;
+      color: $non-black;
     }
 
     &::before {
       @extend .chevron-down-navy;
+
       content: '';
       position: absolute;
       top: .5em;
-      bottom: .5em;
       right: $small-spacing;
+      bottom: .5em;
       width: $medium-spacing;
       background-repeat: no-repeat;
-      background-position: center center; //added this not in .local-nav-toggle
+      background-position: center center; // added this not in .local-nav-toggle
       background-size: 100% auto;
       transform: rotate(0deg);
       transition: transform $transition-timing $transition-easing;
     }
-    //==================
+  }
+
+  .accordion-panel {
+    display: none;
+    padding: $small-spacing $base-spacing;
+    border: solid $small-spacing $lighter-aqua;
+    border-top: none;
+    border-bottom-right-radius: $tiny-border-radius;
+    border-bottom-left-radius: $tiny-border-radius;
   }
 }
