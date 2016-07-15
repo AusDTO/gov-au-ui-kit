@@ -343,7 +343,7 @@ Style guide: Navigation.3 Breadcrumbs
   a:visited,
   a:hover,
   a:active {
-  color: $body-text-colour;
+    color: $body-text-colour;
   }
 
   ul {
@@ -367,6 +367,7 @@ Style guide: Navigation.3 Breadcrumbs
       }
     }
   }
+
   &[class$='--inverted'] {
     background-color: transparent;
     color: $body-inverted-text-colour;
