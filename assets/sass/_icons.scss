@@ -12,6 +12,10 @@
   @include inline-background-image('arrow-right-white');
 }
 
+.icon-arrow-right-aqua {
+  @include inline-background-image('arrow-right-aqua');
+}
+
 .bars {
   @include inline-background-image('bars');
 }

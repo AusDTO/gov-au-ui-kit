@@ -316,11 +316,18 @@ Style guide: List styles.5 See more link
 */
 
 .see-more {
-  @extend .icon-arrow-right;
+  @extend .icon-arrow-right-aqua;
   margin-right: $small-spacing;
   padding-right: $medium-spacing;
   background-repeat: no-repeat;
   background-position: right;
-  background-size: $tiny-spacing auto;
-  color: $aqua;
+  background-size: .8 * $small-spacing auto;
+  color: $button-colour;
+  border-bottom: none;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid;
+  }
 }
