@@ -317,9 +317,11 @@ Breadcrumbs
 
 Use breadcrumbs to help the user understand where are in the service and how they got there.
 
-Breadcrumbs appear on an aqua background, and are positioned directly underneath a page header or hero.
+Default breadcrumbs appear on a light grey background, and are positioned directly underneath a page header or hero.
 
 Breadcrumbs are hidden on small screens, and only displayed at `$tablet` breakpoint or bigger.
+
+The inverted style (`.breadcrumbs--inverted`) can be used on a darker coloured background. Make sure you check the [colour contrast guidance](http://gov-au-ui-kit.dev/section-colours.html#kssref-colours-3-colour-contrast) before choosing a colour combination.
 
 Markup: templates/breadcrumbs.hbs
 
@@ -330,8 +332,8 @@ Style guide: Navigation.3 Breadcrumbs
   display: none;
   width: 100%;
   margin: 0;
-  background-color: $aqua;
-  color: $body-inverted-text-colour;
+  background-color: $background-contrast-colour;
+  color: $body-text-colour;
 
   @include media($tablet) {
     display: inline-block;
@@ -341,7 +343,7 @@ Style guide: Navigation.3 Breadcrumbs
   a:visited,
   a:hover,
   a:active {
-    color: $body-inverted-text-colour;
+  color: $body-text-colour;
   }
 
   ul {
@@ -356,12 +358,30 @@ Style guide: Navigation.3 Breadcrumbs
       padding: 0;
 
       &:not(:last-child) {
-        @extend .icon-arrow-right-white;
+        @extend .icon-arrow-right;
         margin-right: $small-spacing;
         padding-right: $medium-spacing;
         background-repeat: no-repeat;
         background-position: right;
         background-size: $tiny-spacing auto;
+      }
+    }
+  }
+  &[class$='--inverted'] {
+    background-color: transparent;
+    color: $body-inverted-text-colour;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: $body-inverted-text-colour;
+    }
+
+    ul {
+      li:not(:last-child) {
+        @extend .icon-arrow-right-white;
+        color: $body-inverted-text-colour;
       }
     }
   }
