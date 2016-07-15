@@ -1,71 +1,93 @@
+/*
+Accordions
+
+Accordions are used as a disclosure widget from which the user can retrieve additional information.
+
+Longer pages can benefit users. Accordions shorten pages and reduce scrolling, but they increase the interaction cost by requiring people to decide on topic headings.
+
+Style guide: Accordions
+*/
+
+/*
+Using accordions
+
+Markup: templates/accordion.hbs
+
+Style guide: Accordions.1 Using accordions
+*/
 details,
 .accordion {
   display: block;
   margin: $base-spacing 0;
+  overflow: hidden;
+}
 
-  &.open,
-  &[open] {
-    .accordion-panel {
-      display: block;
-    }
+.accordion-button,
+summary {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: $base-spacing 0 0;
+  padding: $small-spacing;
+  border-bottom: none;
+  border-top-right-radius: $tiny-border-radius;
+  border-top-left-radius: $tiny-border-radius;
+  background-color: $lighter-aqua;
+  color: $darker-aqua;
+  text-align: left;
+  font-weight: $bold-font-weight;
+  cursor: pointer;
 
-    .accordion-button,
-    summary {
-      &::before {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  .accordion-button,
-  summary {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: $base-spacing 0 0;
-    padding: $small-spacing;
-    border-bottom: none;
-    border-top-right-radius: $tiny-border-radius;
-    border-top-left-radius: $tiny-border-radius;
-    background-color: $lighter-aqua;
-    color: $darker-aqua;
-    text-align: left;
-    font-weight: $bold-font-weight;
-    cursor: pointer;
-
-    // Remove vanilla summary styles.
-    &::-webkit-details-marker {
-      display: none;
-    }
-
-    &:hover {
-      background-color: $light-aqua;
-      color: $non-black;
-    }
-
-    &::before {
-      @extend .chevron-down-navy;
-
-      content: '';
-      position: absolute;
-      top: .5em;
-      right: $small-spacing;
-      bottom: .5em;
-      width: $medium-spacing;
-      background-repeat: no-repeat;
-      background-position: center center; // added this not in .local-nav-toggle
-      background-size: 100% auto;
-      transform: rotate(0deg);
-      transition: transform $transition-timing $transition-easing;
-    }
-  }
-
-  .accordion-panel {
+  // Remove vanilla summary styles.
+  &::-webkit-details-marker {
     display: none;
-    padding: $small-spacing $base-spacing;
-    border: solid $small-spacing $lighter-aqua;
-    border-top: none;
-    border-bottom-right-radius: $tiny-border-radius;
-    border-bottom-left-radius: $tiny-border-radius;
+  }
+
+  &:hover {
+    background-color: $light-aqua;
+    color: $non-black;
+  }
+
+  &::before {
+    @extend .chevron-down-navy;
+
+    content: '';
+    position: absolute;
+    top: .5em;
+    right: $small-spacing;
+    bottom: .5em;
+    width: $medium-spacing;
+    background-repeat: no-repeat;
+    background-position: center center; // added this not in .local-nav-toggle
+    background-size: 100% auto;
+    transform: rotate(0deg);
+    transition: transform $transition-timing $transition-easing;
+
+    [aria-expanded='true'] & {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+.accordion-panel {
+  display: block;
+  position: relative;
+  top: 0;
+  height: auto;
+  overflow: hidden;
+  padding: $small-spacing $base-spacing;
+  border: solid $small-spacing $lighter-aqua;
+  border-top: none;
+  border-bottom-right-radius: $tiny-border-radius;
+  border-bottom-left-radius: $tiny-border-radius;
+  transition: padding $transition-timing $transition-easing, border $transition-timing $transition-easing, position $transition-timing $transition-easing;
+
+  [aria-expanded='false'] & {
+    z-index: -1;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: $small-spacing * -2;
   }
 }
