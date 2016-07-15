@@ -316,15 +316,28 @@ Style guide: List styles.5 See more link
 */
 
 .see-more {
-  @extend .icon-arrow-right-aqua;
-  margin-right: $small-spacing;
-  padding-right: $medium-spacing;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: .8 * $small-spacing auto;
+  display: inline-block;
+  position: relative;
+  margin-right: $base-spacing;
+  font-weight: $heading-font-weight;
   color: $button-colour;
-  border-bottom: none;
-  font-weight: 600;
+  border-bottom: 1px solid transparent;
+
+  &::after {
+    @extend .icon-arrow-right-aqua;
+
+    content: '';
+    position: absolute;
+    display: block;
+    width: $medium-spacing;
+    height: $medium-spacing;
+    top: 0;
+    right: -($medium-spacing);
+    background-repeat: no-repeat;
+    background-position: right $tiny-spacing;
+    background-size: (0.8 * $small-spacing) auto;
+    border-bottom: none;
+  }
 
   &:hover,
   &:focus {
