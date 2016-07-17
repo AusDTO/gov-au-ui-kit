@@ -399,6 +399,7 @@ Markup: templates/skip-link.hbs
 
 Style guide: Navigation.4 Skip Links
 */
+
 .skip-to {
   position: relative;
   z-index: 99;
@@ -502,4 +503,71 @@ Style guide: Navigation.6 Inline Links
       color: $body-inverted-text-colour;
     }
   }
+}
+
+/*
+Inline navigation
+
+<span class="badge--error">WARNING</span>
+This feature is in early development.
+
+Markup: templates/inline-nav.hbs
+
+Style guide: Navigation.7 Inline navigation
+*/
+
+.inline-nav {
+  border-bottom: solid 1px $grey;
+  margin: ($base-spacing * 2) 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding: $small-spacing 1.5em;
+    padding-left: 0;
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-bottom: solid 4px transparent;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table-cell;
+  }
+
+  li {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    background: transparent;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: $small-spacing 1.5em;
+    border-bottom: solid 4px transparent;
+
+    &:hover,
+    &:focus {
+      color: $aqua;
+      border-bottom-color: $aqua;
+    }
+
+    &.is-active {
+      color: $dark-aqua; //Accessibility: can't be $aqua on $lighter-aqua
+      background-color: $lighter-aqua;
+      border-bottom-color: $aqua;
+    }
+  }
+
 }
