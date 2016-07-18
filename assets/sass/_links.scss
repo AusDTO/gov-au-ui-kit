@@ -3,15 +3,13 @@ Link & anchor styles
 
 Styling for various different types and classes of links.
 
-Note: this section is does not exhaustively cover all link and anchor styles; there are some that remain interspersed amongst the relevant partials they pertain to.
+Note: this section is does not exhaustively cover all link and anchor styles; there are some that remain interspersed amongst the relevant partials they pertain to (eg tag cloud links).
 
 Style guide: Links & anchors
 */
 
 /*
-Basic anchor style
-
-The basic, global, anchor styling.
+Basic anchor styles
 
 We may change the specificity of the styling if resetting the `border-bottom` becomes an issue.
 
@@ -20,7 +18,7 @@ This styling also inserts SVG/PNG icons after the link depending on the relation
 - `rel="external"` receives an external link icon
 - `rel="help"` receives a help icon
 
-The `help` keyword is contextually sensitive to the element it is attached to [W3C HTML5 specification on help links](https://www.w3.org/TR/html5/links.html#link-type-help):
+The `help` keyword is contextually sensitive to the element it is attached to ([W3C HTML5 specification on help links](https://www.w3.org/TR/html5/links.html#link-type-help)):
 
 > For `a` and `area` elements, the `help` keyword indicates that the referenced document provides further help information for the parent of the element defining the hyperlink, and its children.
 >
@@ -32,7 +30,7 @@ Therefore the `help` keyword can be useful when linking to a resource within a f
 
 Markup: templates/basic-links.hbs
 
-Style guide: Links & anchors.1 Basic style
+Style guide: Links & anchors.1 Basic styles
 */
 
 %base-link-icon--after {
@@ -58,9 +56,9 @@ a {
     color: $highlight-colour;
   }
 
-  &:visited {
-    color: $link-colour;
-  }
+  // &:visited {
+  //   color: $link-colour;
+  // }
 
   &[rel~='external'] {
     display: inline-block;
@@ -85,10 +83,10 @@ a {
       @extend .icon-help-link-orange;
       @extend %base-link-icon--after;
 
-      height: $medium-spacing;
+      height: $base-spacing;
       right: -($base-spacing);
       background-size: $medium-spacing auto;
-      background-position: right center;
+      background-position: right 3px;
     }
 
     &:hover,
