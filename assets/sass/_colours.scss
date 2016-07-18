@@ -11,7 +11,7 @@ Style guide: Colours
 */
 
 /*
-Palette
+Colours palette
 
 The framework uses colours for decoration and to distinguish different types of information on a page. This includes lighter and darker versions that are percentage variations of the original colours.
 
@@ -21,13 +21,7 @@ The Sass variables are also provided below, for reference.
   <div class="guide-colour">
     <div class="swatch bg-non-black"></div>
     <p class="text"> <strong>Non-black</strong><br/>
-      <small>$non-black<br/>#CC0000</small></p>
-  </div>
-
-  <div class="guide-colour">
-    <div class="swatch bg-dark-grey"></div>
-    <p class="text"> <strong>Dark-grey</strong><br/>
-      <small>$dark-grey<br/>#313131</small></p>
+      <small>$non-black<br/>#313131</small></p>
   </div>
 
   <div class="guide-colour">
@@ -98,15 +92,14 @@ The Sass variables are also provided below, for reference.
 </div>
 
 
-Style guide: Colours.1 Palette
+Style guide: Colours.1 Colours palette
 */
 
 // Colour constants
 
 $black:         #000;
-$non-black:     #222;
+$non-black:     #313131;
 $grey:          #6e6e6e;
-$dark-grey:     darken($grey, 25%);
 $light-grey:    lighten($grey, 30%);
 $non-white:     #f0f3f5;
 $white:         #fff;
@@ -200,7 +193,6 @@ The colour contrast ratio for text and interactive elements should be at least 4
 ### Accessible combinations
 <p class="guide-colour-block bg-black">white on black <span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-dark-grey">non-white on dark-grey<span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-grey">white on grey <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-grey">non-black on light-grey <span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-non-white">non-black on non-white <span class="invert">AAA</span></p>
@@ -253,8 +245,7 @@ $border-contrast-colour:        $navy;
 
 $box-shadow-colour:             rgba($non-black, 0.5);
 
-$body-text-colour:              $dark-grey;
-$body-secondary-text-colour:    $dark-grey;
+$body-text-colour:              $non-black;
 $body-inverted-text-colour:     $white;
 
 $badge-colour-default:          $grey;

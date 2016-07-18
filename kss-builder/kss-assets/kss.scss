@@ -145,16 +145,6 @@ code {
   }
 }
 
-.bg-dark-grey {
-  background-color: $dark-grey;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-grey;
-  }
-}
-
 .bg-light-grey {
   background-color: $light-grey;
   color: $non-black;
