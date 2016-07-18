@@ -9,11 +9,11 @@
 }
 
 .icon-arrow-right-white {
-  @include inline-background-image('arrow-right-white');
+  @include inline-background-image('arrow-right--white');
 }
 
 .icon-arrow-right-aqua {
-  @include inline-background-image('arrow-right-aqua');
+  @include inline-background-image('arrow-right--aqua');
 }
 
 .bars {
@@ -24,8 +24,16 @@
   @include inline-background-image('close');
 }
 
+.icon-external-link-aqua {
+  @include inline-background-image('external-link--aqua');
+}
+
+.icon-help-link-orange {
+  @include inline-background-image('question-circle--orange');
+}
+
 .chevron-down-navy {
-  @include inline-background-image('chevron-down-navy');
+  @include inline-background-image('chevron-down--navy');
 }
 
 // This class is legacy as of v1.2

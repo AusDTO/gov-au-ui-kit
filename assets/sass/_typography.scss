@@ -273,22 +273,6 @@ h6 {
   @extend h5;
 }
 
-a {
-  color: $link-colour;
-  text-decoration: none;
-  border-bottom: 1px solid;
-
-  &:visited {
-    color: $link-colour;
-  }
-
-  &:hover,
-  &:active {
-    color: $highlight-colour;
-  }
-
-}
-
 code,
 pre,
 samp,

@@ -175,6 +175,8 @@ $darker-aqua:   darken($aqua, 10%);
 $light-aqua:    lighten($aqua, 30%);
 $lighter-aqua:  lighten($aqua, 60%);
 
+$teal:          #00a1bb;
+
 $navy:          #224a61;
 $dark-navy:     darken($navy, 10%);
 $light-navy:    #327da9; //lighten($navy, 30%); Changed for WCAG:AA
@@ -220,8 +222,8 @@ $button-inverted-text-colour:   $navy;
 
 $frame-colour:                  $light-grey;
 $primary-colour:                $light-navy;
-$highlight-colour:              $aqua;
-$focus-colour:                  $light-aqua;
+$highlight-colour:              $teal;
+$focus-colour:                  $lighter-aqua;
 $nav-focus-colour:              $lighter-aqua;
 $error-colour:                  $red;
 $success-colour:                $green;

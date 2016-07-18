@@ -1,0 +1,139 @@
+/*
+Link & anchor styles
+
+Styling for various different types and classes of links.
+
+Note: this section is does not exhaustively cover all link and anchor styles; there are some that remain interspersed amongst the relevant partials they pertain to.
+
+Style guide: Links & anchors
+*/
+
+/*
+Basic anchor style
+
+The basic, global, anchor styling.
+
+We may change the specificity of the styling if resetting the `border-bottom` becomes an issue.
+
+This styling also inserts SVG/PNG icons after the link depending on the relation keyword (`rel`) the link has:
+
+- `rel="external"` receives an external link icon
+- `rel="help"` receives a help icon
+
+The `help` keyword is contextually sensitive to the element it is attached to [W3C HTML5 specification on help links](https://www.w3.org/TR/html5/links.html#link-type-help):
+
+> For `a` and `area` elements, the `help` keyword indicates that the referenced document provides further help information for the parent of the element defining the hyperlink, and its children.
+>
+> [&hellip;]
+>
+> For `link` elements, the `help` keyword indicates that the referenced document provides help for the page as a whole.
+
+Therefore the `help` keyword can be useful when linking to a resource within a form to provide further information or guidance on a specific form element.
+
+Markup: templates/basic-links.hbs
+
+Style guide: Links & anchors.1 Basic style
+*/
+
+%base-link-icon--after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: $medium-spacing;
+  height: $medium-spacing;
+  top: 0;
+  right: -($medium-spacing);
+  background-repeat: no-repeat;
+  background-position: right $tiny-spacing;
+  border-bottom: none;
+}
+
+a {
+  color: $link-colour;
+  text-decoration: none;
+  border-bottom: 1px solid;
+
+  &:hover,
+  &:active {
+    color: $highlight-colour;
+  }
+
+  &:visited {
+    color: $link-colour;
+  }
+
+  &[rel~='external'] {
+    display: inline-block;
+    position: relative;
+    margin-right: $base-spacing;
+
+    &::after {
+      @extend .icon-external-link-aqua;
+      @extend %base-link-icon--after;
+
+      background-size: (0.75 * $medium-spacing) auto;
+    }
+  }
+
+  &[rel='help'] {
+    display: inline-block;
+    position: relative;
+    margin-right: $base-spacing;
+    border-bottom: 1px solid transparent;
+
+    &::after {
+      @extend .icon-help-link-orange;
+      @extend %base-link-icon--after;
+
+      height: $medium-spacing;
+      right: -($base-spacing);
+      background-size: $medium-spacing auto;
+      background-position: right center;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid;
+      color: $highlight-colour;
+    }
+  }
+}
+
+/*
+See more link
+
+Some lists will show a feed of the latest or most relevant items. The see more link takes the user to the index page showing all of the items.
+
+This link style can also be used to link to the verbose or canonical and full version of a document.
+
+Markup: templates/see-more-link.hbs
+
+Style guide: Links & anchors.3 See more link
+*/
+
+.see-more {
+  display: inline-block;
+  position: relative;
+  margin-right: $base-spacing;
+  font-weight: $heading-font-weight;
+  border-bottom: 1px solid transparent;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $button-colour;
+  }
+
+  &::after {
+    @extend .icon-arrow-right-aqua;
+    @extend %base-link-icon--after;
+
+    background-size: (0.8 * $small-spacing) auto;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid;
+    color: $highlight-colour;
+  }
+}
