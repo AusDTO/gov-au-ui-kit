@@ -146,6 +146,13 @@ Style guide: List styles.2 Vertical list
 
   @extend %base-list;
 
+  &.no-border {
+    li:nth-child(-n+2) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -200,6 +207,13 @@ Style guide: List styles.2 Vertical list
 .list-vertical--thirds {
   @extend .list-vertical;
 
+  &.no-border {
+    li:nth-child(-n+3) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
   > li {
     @include media ($tablet) {
       flex: 0 0 31%;
@@ -209,6 +223,13 @@ Style guide: List styles.2 Vertical list
 
 .list-vertical--fourths {
   @extend .list-vertical;
+
+  &.no-border {
+    li:nth-child(-n+4) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
 
   > li {
     @include media ($tablet) {
