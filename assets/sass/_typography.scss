@@ -114,7 +114,7 @@ $tiny-spacing: $base-spacing / 4;
 // Font weights
 $base-font-weight: 400;
 $bold-font-weight: 700;
-$heading-font-weight: 700;
+$heading-font-weight: $bold-font-weight;
 
 // Font sizes
 $smaller-font-size: 62.5%;
