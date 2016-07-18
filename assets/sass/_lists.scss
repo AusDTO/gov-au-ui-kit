@@ -320,8 +320,13 @@ Style guide: List styles.5 See more link
   position: relative;
   margin-right: $base-spacing;
   font-weight: $heading-font-weight;
-  color: $button-colour;
   border-bottom: 1px solid transparent;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $button-colour;
+  }
 
   &::after {
     @extend .icon-arrow-right-aqua;
