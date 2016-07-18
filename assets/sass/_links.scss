@@ -49,11 +49,25 @@ Style guide: Links & anchors.1 Basic styles
 a {
   color: $link-colour;
   text-decoration: none;
-  border-bottom: 1px solid;
+  padding: 1px 2px;
+  border-bottom: 3px solid $light-aqua;
 
   &:hover,
   &:active {
-    color: $highlight-colour;
+    border-bottom: 3px solid transparent;
+    color: $black;
+    background-color: $lighter-aqua;
+    outline: 1px solid $lighter-aqua;
+
+    &:focus {
+      background-color: inherit;
+      outline: 0;
+    }
+  }
+
+  &:focus {
+    background-color: $yellow;
+    outline: 3px solid $yellow;
   }
 
   // &:visited {
