@@ -35,7 +35,15 @@ Style guide: List styles
     }
 
     a {
-      color: $aqua;
+      color: $link-hover-colour;
+      padding: 2px $tiny-spacing;
+      border: 1px solid $link-hover-colour;
+      border-radius: 2px;
+
+      &:hover {
+        color: $white;
+        background-color: $link-hover-colour;
+      }
     }
   }
 

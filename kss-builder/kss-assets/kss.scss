@@ -165,16 +165,6 @@ code {
   }
 }
 
-.bg-lighter-grey {
-  background-color: $lighter-grey;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $lighter-grey;
-  }
-}
-
 .bg-non-white {
   background-color: $non-white;
   color: $non-black;
@@ -235,6 +225,16 @@ code {
   }
 }
 
+.bg-lighter-aqua {
+  background-color: $lighter-aqua;
+  color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $lighter-aqua;
+  }
+}
+
 .bg-navy {
   background-color: $navy;
   color: $non-white;
@@ -255,17 +255,17 @@ code {
   }
 }
 
-.bg-light-navy {
-  background-color: $light-navy;
+.bg-maroon {
+  background-color: $maroon;
   color: $white;
 
   .invert {
     background-color: $white;
-    color: $light-navy;
+    color: $maroon;
   }
 }
 
-.bg-error {
+.bg-error-red {
   background-color: $red;
   color: $white;
 
@@ -285,7 +285,7 @@ code {
   }
 }
 
-.bg-success {
+.bg-success-green {
   background-color: $green;
   color: $white;
 
@@ -305,12 +305,30 @@ code {
   }
 }
 
-.bg-yellow {
+.bg-warning-yellow {
   background-color: $yellow;
-  color: $white;
 }
 
 .bg-light-yellow {
   background-color: $light-yellow;
-  color: $white;
+  color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $light-yellow;
+  }
+}
+
+.bg-info-blue {
+  background-color: $blue;
+}
+
+.bg-light-blue {
+  background-color: $light-blue;
+  color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $light-blue;
+  }
 }
