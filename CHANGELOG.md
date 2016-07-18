@@ -8,6 +8,8 @@ Adds or modifies:
 
 - Number support for `input`; make sure you use also use `type="number"`.
 - UI Kit version number added to Guide home page [styleguide]
+- Style changes to Local (primary) navigation
+- Style changes to Page footer
 
 Bugfixes:
 
@@ -70,8 +72,7 @@ Markup changes:
 
 - Add new `<script>` tag to load Google Web Font Loader into `<head>`
 
-### 1.0.0 - 2016-06-29
-
+### 1.0.0 - 2016-06-30
 Guide MVP is now live ([1]).
 
 Adds:

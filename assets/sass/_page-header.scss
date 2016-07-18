@@ -35,7 +35,9 @@
   }
 
   [class^='breadcrumbs'] {
+    width: auto;
     margin-right: $small-spacing;
+    background-color: transparent;
   }
 
   [role='button'] {

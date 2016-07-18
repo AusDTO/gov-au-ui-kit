@@ -18,12 +18,14 @@ var gulp = require('gulp'),
     ;
 
 var paths = {
-    assetsDir: './assets/**/*.*',
+    assets: './assets/**/*.*',
+    assetsDir: './assets',
     scssDir: './assets/sass/**/*.scss',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
     examplesDir: './examples/**/*.*',
     kssBuilderDir: './kss-builder/**/*.*',
+    images: './assets/img/**/*.+(png|svg|jpg)',
     scss: './assets/sass/ui-kit.scss',
     js: './assets/js/ui-kit.js',
     markdown: './*.md',
@@ -91,7 +93,7 @@ gulp.task('ui-kit.min.scss', ['svg2png'], function () {
         .pipe(gulp.dest(paths.outputAssets));
 });
 
-gulp.task('ui-kit.min.js',['svg2png'], function () {
+gulp.task('ui-kit.min.js', function () {
     return gulp.src(paths.js)
         .pipe(uglify())
         .pipe(gitVersion())
@@ -99,6 +101,17 @@ gulp.task('ui-kit.min.js',['svg2png'], function () {
             suffix: '.min'
         }))
         .pipe(gulp.dest(paths.outputAssets));
+});
+
+gulp.task('ui-kit.img', function() {
+  return gulp.src(paths.images)
+    .pipe(gulp.dest(paths.outputAssets + '/img/'));
+});
+
+gulp.task('svg2png', ['ui-kit.img'], function () {
+  return gulp.src(paths.assetsDir + '/img/icons/*.svg')
+    .pipe(svg2png())
+    .pipe(gulp.dest(paths.outputAssets + '/img/icons/'));
 });
 
 gulp.task('examples', function () {
@@ -200,10 +213,4 @@ gulp.task('webserver', function () {
         livereload: true,
         root: ['.', 'build']
     });
-});
-
-gulp.task('svg2png', function () {
-    return gulp.src('./assets/img/icons/*.svg')
-        .pipe(svg2png())
-        .pipe(gulp.dest('./build/latest/img/icons/'));
 });
