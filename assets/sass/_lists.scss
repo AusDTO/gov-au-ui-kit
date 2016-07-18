@@ -26,6 +26,7 @@ Style guide: List styles
       display: inline-block;
       margin: 0;
       padding: 0;
+      line-height: 2;
     }
 
     dt,
@@ -35,7 +36,15 @@ Style guide: List styles
     }
 
     a {
-      color: $aqua;
+      color: $teal;
+      padding: 2px $tiny-spacing;
+      border: 1px solid $teal;
+      border-radius: 2px;
+
+      &:hover {
+        color: $white;
+        background-color: $teal;
+      }
     }
   }
 
