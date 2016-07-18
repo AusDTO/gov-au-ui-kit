@@ -137,6 +137,8 @@ below the list item content.
 To make a list appear with three or four columns, use the classes `.vertical-list--thirds`
 and `.vertical-list--fourths` respectively.
 
+To remove the border-top from the first row of elements add the `.no-border` class to the `ul` element.
+
 Markup: templates/lists-vertical.hbs
 
 Style guide: List styles.2 Vertical list
