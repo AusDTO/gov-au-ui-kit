@@ -18,8 +18,13 @@ Style guide: Accordions.1 Using accordions
 details,
 .accordion {
   display: block;
-  margin: $base-spacing 0;
+  margin: $base-spacing 0 0;
   overflow: hidden;
+
+  & + details,
+  & + .accordion {
+    margin-top: $small-spacing;
+  }
 }
 
 .accordion-button,
@@ -27,7 +32,8 @@ summary {
   display: block;
   position: relative;
   width: 100%;
-  margin: $base-spacing 0 0;
+  height: auto;
+  margin: 0;
   padding: $small-spacing;
   border-bottom: none;
   border-top-right-radius: $tiny-border-radius;
