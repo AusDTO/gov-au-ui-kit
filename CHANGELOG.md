@@ -6,6 +6,7 @@
 
 Adds or modifies:
 
+- Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
 - “See more” link styling (currently documented under *§ List views*).
 - JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
 - Vertical Lists now have an option to remove the top border (documented *§ List views*)
