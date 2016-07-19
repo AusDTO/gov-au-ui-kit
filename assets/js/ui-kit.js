@@ -1,3 +1,5 @@
+var smoothScroll = require('smoothscroll');
+
 (function (document) {
 
   var CollapsibleNav = {
@@ -7,7 +9,6 @@
      * @param {array} elems - array of HTMLCollections representing collapsible elements
      */
     init: function(elems) {
-      console.log(elems);
       for (var i = 0; i < elems.length; i++) {
         this.initPanel(elems[i]);
         this.initToggle(elems[i]);
@@ -21,7 +22,6 @@
     initPanel: function(elem) {
       var panelLabel = elem.dataset ? elem.dataset.label ? elem.dataset.label : elem.className : elem.className;
 
-      console.log(elem);
       elem.id = panelLabel;
       elem.setAttribute('aria-expanded', 'false');
     },
@@ -62,6 +62,7 @@
   // Kick of the JavaScript party when the DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
     CollapsibleNav.init(document.querySelectorAll('.global-nav, .local-nav'));
+    ScrollingAnchorLinks.init();
   });
 
 })(document);

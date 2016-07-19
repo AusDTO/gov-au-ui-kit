@@ -20,7 +20,9 @@
   "preferGlobal": true,
   "license": "MIT",
   "dependencies": {
+    "css-select": "^1.2.0",
     "del": "^2.2.0",
+    "dom-serializer": "^0.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-connect": "^4.1.0",
@@ -33,16 +35,16 @@
     "gulp-svg2png": "^1.0.2",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
-    "node-sass": "^3.8.0",
     "handlebars.moment": "^1.0.4",
+    "htmlparser2": "^3.9.1",
     "kss": "^3.0.0-beta.14",
+    "node-sass": "^3.8.0",
+    "object-assign": "^4.1.0",
     "run-sequence": "^1.2.1",
     "sass-inline-svg": "^0.0.3",
+    "smoothscroll": "^0.2.2",
     "through2": "^2.0.1",
-    "css-select": "^1.2.0",
-    "dom-serializer": "^0.1.0",
-    "htmlparser2": "^3.9.1",
-    "object-assign": "^4.1.0"
+    "webpack-stream": "^3.2.0"
   },
   "devDependencies": {
     "fs": "0.0.2"
