@@ -3,7 +3,11 @@ Accordions
 
 Accordions are used as a disclosure widget from which the user can retrieve additional information.
 
-Longer pages can benefit users. Accordions shorten pages and reduce scrolling, but they increase the interaction cost by requiring people to decide on topic headings.
+Accordions can be useful in reducing the information "overload" of a page and reduce the need to scroll, but they increase the interaction cost by requiring people to decide on topic headings.
+
+Use succinct, but sufficiently descriptive accordion headings/labels to avoid making both discoverability and navigability of a page more difficult.
+
+<p class="callout"><strong>Note:</strong> Do not use accordions for glossaries&mdash;use <a href="/section-typography.html#guide-typography-5-lists">definition or description lists</a> instead.</p>
 
 Style guide: Accordions
 */
@@ -11,13 +15,21 @@ Style guide: Accordions
 /*
 Using accordions
 
-**Behaviour**
+In our implementation a text/string search for an accordion's content is possible, but note that when the accordion is collapsed the content still remains hidden.
+
+### Behaviour and ARIA
 
 The framework includes JavaScript behaviour to replace the browser default for `<details>`.
 
 Accordions can be set to be either open or closed initially by adding the `aria-expanded` property with a value of `true` or `false`.
 
+### Multiple accordions
+
 When multiple accordion elements are used, each `details` element should be given a unique `data-label` attribute.
+
+Additionally, it will be mandatory to provide an expand/collapse all link when building a series of accordions.
+
+<p class="callout--warning"><strong>Missing feature:</strong> we have not yet provided an expand/collapse all feature, but we intend to add in a near-future sprint.</p>
 
 Markup: templates/accordion.hbs
 
