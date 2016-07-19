@@ -2,6 +2,48 @@
 
 ## UI Kit "Kraken"
 
+### Next release (scheduled 2016-07-19)
+
+Adds or modifies:
+
+- Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
+- “See more” link styling (currently documented under *§ List views*).
+- JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
+- Vertical Lists now have an option to remove the top border (documented *§ List views*)
+- Number support for `input`; make sure you use also use `type="number"`.
+- Style changes to Local (primary) navigation.
+- Style changes to the page footer.
+- Accordions via the `details` and `summary` elements and documentation.
+- Styling for keyboard (`kbd`) inline element (documented under *§ Typography*).
+- Responsive video embeds (yet undocumented).
+- UI Kit version number added to Guide home page.
+
+Bugfixes:
+
+- Fixed [#175](https://github.com/AusDTO/gov-au-ui-kit/issues/175) `gulp watch` or `serve` not picking up on asset changes
+- Fixed [#171](https://github.com/AusDTO/gov-au-ui-kit/issues/171) Unused Open Sans weight 600
+- Fixed [#156](https://github.com/AusDTO/gov-au-ui-kit/issues/156) Looping Gulp build [styleguide]
+- Fixed [#159](https://github.com/AusDTO/gov-au-ui-kit/issues/159) Bouncing Local nav
+- Fixed [#136](https://github.com/AusDTO/gov-au-ui-kit/issues/136) Guide home page Local nav active styles [styleguide]
+
+### 1.2.0 - 2016-07-12
+
+Adds or modifies:
+
+- New & improved Table examples
+- Minor style updates to List views
+- Controls bar now includes a Contrast style
+- Breadcrumbs now include an Inverted style
+- Rename 'Primary navigation' to 'Local navigation'
+- Global Navigation added
+- Local navigation (ex. Primary navigation) has new JavaScript behaviour and changes to its markup pattern
+- Updated instructions on how to include the CSS & JS Framework
+
+Bugfixes:
+
+- Fixed [#111](https://github.com/AusDTO/gov-au-ui-kit/issues/111) Single column layout width
+- Fixed [#99](https://github.com/AusDTO/gov-au-ui-kit/issues/99) Breadcrumbs icon not showing up
+
 ### 1.1.0 - 2016-07-05
 
 Adds or modifies:
@@ -39,8 +81,7 @@ Markup changes:
 
 - Add new `<script>` tag to load Google Web Font Loader into `<head>`
 
-### 1.0.0 - 2016-06-29
-
+### 1.0.0 - 2016-06-30
 Guide MVP is now live ([1]).
 
 Adds:

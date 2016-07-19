@@ -30,6 +30,10 @@ Markup:
     <input name="textin" id="textin" type="text" />
   </p>
   <p>
+    <label for="numberin">A number input field:</label>
+    <input name="numberin" id="numberin" type="number" pattern="[0-9]*" />
+  </p>
+  <p>
     <label for="textinvalid">An invalid field:</label>
     <input name="textinvalid" id="textinvalid" type="text" class="invalid" />
   </p>
@@ -42,6 +46,9 @@ Markup:
     <input name="textdisabled" id="textdisabled" type="text" disabled />
   </p>
 </form>
+
+<strong>Tip:</strong> To show a number-pad on iPhones, when a number field is focussed, add a pattern attribute to the input element like this: <pre>pattern="[0-9]*"</pre>
+Source: <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html#memorable-dates">GOV.UK "Dates" design pattern</a>
 
 Style guide: Forms.0 Form controls.1 Text input
 */
@@ -137,11 +144,12 @@ form {
 
   .hint {
     display: block;
-    color: $body-secondary-text-colour;
+    color: $body-text-colour;
     font-size: rem(14);
   }
 
   [type='text'],
+  [type='number'],
   [type='email'],
   [type='password'] {
     @extend %base-input;

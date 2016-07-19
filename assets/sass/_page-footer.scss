@@ -1,21 +1,26 @@
 footer[role='contentinfo'] {
+
   @include pad($base-spacing 0);
+  background-color: $non-white;
+  border-top: 6px solid $border-contrast-colour;
 
-  background-color: $non-black;
-  color: $white;
+  ul {
+    padding: 0;
+  }
 
-  a {
-    color: $white;
+  li {
+    list-style: none;
   }
 
   .footer-logo {
+    margin: 0 0 $base-spacing;
 
     @include media($tablet) {
       @include span-columns(3 of 12);
     }
 
     img {
-      height: $base-spacing * 4;
+      max-height: $base-spacing * 4;
     }
   }
 
@@ -25,13 +30,23 @@ footer[role='contentinfo'] {
       @include span-columns(9 of 12);
     }
 
+    ul {
+      @include media($tablet) {
+        margin-top: 0;
+      }
+    }
+
+    li {
+      margin-right: $small-spacing;
+
+      @include media($mobile) {
+        display: inline-block;
+      }
+    }
+
     a {
       display: inline-block;
     }
-  }
-
-  hr {
-    margin: ($base-spacing * 2) 0;
   }
 
   /*
@@ -40,33 +55,49 @@ footer[role='contentinfo'] {
   A number of lists of links arranged horizontally. Displays two columns up to a
   $tablet breakpoint, and four columns beyond that.
 
+  The columns are managed by CSS flex boxes, allowing 1 to 4 columns.
+
   Markup: templates/footer-navigation.hbs
 
   Style guide: Navigation.Footer Navigation
   */
-  nav {
+  .footer-top {
+    border-bottom: 1px solid $border-colour;
+    margin-bottom: $base-spacing * 2;
+    padding-bottom: $base-spacing * 2;
 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    box-sizing: border-box;
+    nav {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
-    ul {
-      flex: 0 0 50%;
-      margin: 0;
-      padding: 0;
+      ul {
+        flex: 0 0 100%;
+        margin: 0;
+        padding-right: $base-spacing;
 
-      @include media($tablet) {
-        flex-basis: 25%;
+        @include media($mobile) {
+          flex-basis: 50%;
+        }
+
+        @include media($tablet) {
+          flex-basis: 25%;
+        }
+      }
+
+      li {
+        line-height: 1.5em;
+        list-style: none;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          font-size: rem(16);
+        }
       }
     }
-
-    li {
-      line-height: 1.5em;
-      list-style: none;
-    }
-
   }
-
 }

@@ -1,7 +1,7 @@
 /*
 Typography
 
-This framework uses [Bourbon](https://github.com/thoughtbot/bourbon) and [Neat](https://github.com/thoughtbot/neat) to provide a responsive grid layout with basic content styling and good typographic defaults.
+Basic content styling with good typographic defaults.
 
 The framework aims to meet common government typographic needs:
 
@@ -34,11 +34,6 @@ We are currently testing the open source [Open Sans font family](https://www.goo
   <p><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
   1234567890(!@#s%g.,?:;)</em></p>
-</div>
-<div class="guide-example--type"><h3>Open Sans semi bold 600</h3>
-  <p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-  abcdefghijklmnopqrstuvwxyz<br />
-  1234567890(!@#s%g.,?:;)</strong></p>
 </div>
 <div class="guide-example--type"><h3>Open Sans bold 700</h3>
   <p><strong class="very-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
@@ -118,11 +113,13 @@ $tiny-spacing: $base-spacing / 4;
 
 // Font weights
 $base-font-weight: 400;
-$bold-font-weight: 600;
-$heading-font-weight: 700;
+$bold-font-weight: 700;
+$heading-font-weight: $bold-font-weight;
 
 // Font sizes
+$smaller-font-size: 62.5%;
 $small-font-size: 87.5%;
+$large-font-size: 150%;
 
 // Font styles
 $base-font-style: normal;
@@ -287,8 +284,7 @@ a {
 
   &:hover,
   &:active {
-    border-bottom-color: lighten($highlight-colour, 30%);
-    color: $highlight-colour;
+    color: $link-hover-colour;
   }
 
 }
@@ -299,6 +295,30 @@ samp,
 kbd {
   font-family: $base-monospace;
   font-size: $small-font-size;
+}
+
+/*
+Keyboard input
+
+Use when asking users to enter keyboard combinations, eg a shortcut to print the screen and copy it to clipboard.
+
+Further [W3C specification documentation](http://dev.w3.org/html5/spec/Overview.html#the-kbd-element).
+
+Markup: Abort! Abort! <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd>
+
+Style guide: Typography.10 Keyboard keys
+*/
+
+kbd {
+  display: inline-block;
+  border: solid 1px $light-aqua;
+  border-radius: $base-border-radius;
+  box-shadow: 0 1px 0 0 $light-aqua;
+  background-color: $non-white;
+  color: $dark-aqua;
+  text-align: center;
+  padding: 0 $small-spacing;
+  margin: 0 $tiny-spacing;
 }
 
 strong {
@@ -327,13 +347,9 @@ strong {
 }
 
 hr {
-  border-color: $border-secondary-colour;
+  border-color: $border-colour;
   border-style: solid;
   border-bottom: none;
-}
-
-img {
-  max-width: 100%;
 }
 
 /*
@@ -360,7 +376,11 @@ Style guide: Typography.5 Lists
 
 ul,
 ol {
-  padding-left: 1.1 * $base-spacing;
+  padding-left: ($base-spacing + $small-spacing);
+
+  ul {
+    list-style-type: disc;
+  }
 }
 
 ul,
@@ -475,7 +495,7 @@ Style guide: Typography.8 Quotations
 blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
-  background-color: $lighter-grey;
+  background-color: $background-secondary-colour;
   font-family: $base-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
@@ -541,7 +561,7 @@ blockquote {
       text-transform: lowercase;
       font-variant: small-caps;
       letter-spacing: 1px;
-      color: $dark-grey;
+      color: $body-text-colour;
     }
   }
 
@@ -561,4 +581,10 @@ q {
 
 cite {
   font-style: $base-font-style;
+}
+
+article {
+  h1:first-of-type {
+    margin-top: 0;
+  }
 }

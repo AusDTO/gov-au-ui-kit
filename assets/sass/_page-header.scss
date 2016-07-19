@@ -1,88 +1,143 @@
-header[role='banner'] {
+[class^='controls'] {
+  padding: $tiny-spacing 0;
+  background-color: $controls-bg-colour;
+  color: $body-inverted-text-colour;
 
-  // If we move general anchor styling in _typography to sit under either article or main, we can avoid this reset.
-  .controls {
-    padding: $medium-spacing 0;
-    text-align: right;
-    background-color: $dark-navy;
-    color: $white;
+  section {
 
-    a {
-      color: $white;
+    @include span-columns(4 of 4);
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($desktop) {
+      @include span-columns(8 of 16);
+    }
+
+    &:first-child:last-child {
+      @include span-columns(4 of 4);
+
+      @include media($tablet) {
+        @include span-columns(12 of 12);
+      }
+
+      @include media($desktop) {
+        @include span-columns(16 of 16);
+      }
+    }
+
+    &.right {
+      @include media($tablet) {
+        text-align: right;
+      }
     }
   }
 
-  .govau--header {
-    padding: $medium-spacing 0;
-    background-color: $navy;
-    color: $white;
+  [class^='breadcrumbs'] {
+    width: auto;
+    margin-right: $small-spacing;
+    background-color: transparent;
+  }
 
-    .govau--logo {
-      padding-bottom: $medium-spacing;
+  [role='button'] {
+    @extend .inverted;
+    margin: 0;
+  }
 
-      @include media($tablet) {
-        float: left;
-        padding-bottom: 0;
-      }
+  &[class$='--contrast'] {
+    background-color: $controls-contrast-bg-colour;
+
+    [role='button']:hover,
+    [role='button']:focus {
+      color: $controls-contrast-bg-colour;
     }
+  }
+}
 
-    .logo {
-      @extend h3;
+.govau--header {
+  position: relative;
+  padding: $medium-spacing 0 ($base-spacing * 3);
+  padding-bottom: $medium-spacing;
+  background-color: $header-bg-colour;
+  color: $body-inverted-text-colour;
 
-      padding-bottom: 2px;
-      border-bottom: none;
-      color: $white;
-      font-family: $base-sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+  @include media($tablet) {
+    padding-bottom: $medium-spacing;
+  }
 
-      &:hover,
-      &:focus {
-        border-bottom: 1px;
-      }
-    }
+  .govau--logo {
+    float: left;
 
-    [class^='badge'] {
-      vertical-align: text-bottom;
-      margin-left: $tiny-spacing;
-    }
-
-    .feedback {
-      display: block;
-      @include media($tablet) {
-        float: right;
-      }
-    }
-
-    .button--feedback {
-      @extend button;
-      @extend .inverted;
-
-      margin: 0;
-
+    @include media($tablet) {
+      padding-bottom: 0;
     }
   }
 
-  .hero {
-    padding: ($base-spacing * 2) 0;
-    background-color: $aqua;
-    color: $white;
+  .logo {
+    @extend h3;
 
-    .site-title {
-      @extend h1;
+    padding-bottom: 2px;
+    border-bottom: none;
+    color: $body-inverted-text-colour;
+    font-family: $base-sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
-      margin: $tiny-spacing 0;
-      color: $white;
+    &:hover,
+    &:focus {
+      border-bottom: 1px;
     }
+  }
 
-    .tagline {
-      @extend h4;
-      font-weight: $base-font-weight;
-    }
+  [class^='badge'] {
+    vertical-align: text-bottom;
+    margin-left: $tiny-spacing;
+  }
+}
 
-    code,
-    a {
-      color: $white;
-    }
+.feedback {
+  display: none;
+
+  @include media($tablet) {
+    display: block;
+    float: right;
+    margin-left: $base-spacing;
+  }
+}
+
+.button--feedback {
+  @extend button;
+  @extend .inverted;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+
+  @include media($tablet) {
+    width: auto;
+    text-align: initial;
+  }
+}
+
+.hero {
+  padding: ($base-spacing * 2) 0;
+  background-color: $hero-bg-colour;
+  color: $body-inverted-text-colour;
+
+  .site-title {
+    @extend h1;
+
+    margin: $tiny-spacing 0;
+    color: $body-inverted-text-colour;
+  }
+
+  .tagline {
+    @extend h4;
+    font-weight: $base-font-weight;
+  }
+
+  code,
+  a {
+    color: $body-inverted-text-colour;
   }
 }

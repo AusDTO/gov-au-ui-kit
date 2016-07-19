@@ -16,7 +16,6 @@ Style guide: List styles
   list-style: none;
   margin: ($base-spacing * 2) 0;
   padding: 0;
-  border-top: solid 1px $border-colour;
 
   .tags {
     color: $grey;
@@ -36,7 +35,15 @@ Style guide: List styles
     }
 
     a {
-      color: $aqua;
+      color: $link-hover-colour;
+      padding: 2px $tiny-spacing;
+      border: 1px solid $link-hover-colour;
+      border-radius: 2px;
+
+      &:hover {
+        color: $white;
+        background-color: $link-hover-colour;
+      }
     }
   }
 
@@ -50,7 +57,7 @@ Style guide: List styles
     }
   }
 
-  li {
+  > li {
     padding: ($base-spacing * 1.5) 0;
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
@@ -87,7 +94,7 @@ Style guide: List styles.1 Horizontal list
 .list-horizontal {
   @extend %base-list;
 
-  li {
+  > li {
 
     @include media($tablet) {
       display: flex;
@@ -108,7 +115,13 @@ Style guide: List styles.1 Horizontal list
       }
     }
 
+    &:last-child {
+      border-bottom: none;
+    }
+
     &.hero-item {
+      border-top: solid 1px $border-colour;
+
       figure {
         @include media($tablet) {
           flex-basis: 65%;
@@ -132,6 +145,8 @@ below the list item content.
 To make a list appear with three or four columns, use the classes `.vertical-list--thirds`
 and `.vertical-list--fourths` respectively.
 
+To remove the border-top from the first row of elements add the `.no-border` class to the `ul` element.
+
 Markup: templates/lists-vertical.hbs
 
 Style guide: List styles.2 Vertical list
@@ -141,12 +156,21 @@ Style guide: List styles.2 Vertical list
 
   @extend %base-list;
 
+  &.no-border {
+    li:nth-child(-n+2) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  li {
+  > li {
 
+    border-top: 1px solid $border-colour;
+    border-bottom: none;
     flex: 0 0 100%;
 
     @include media($tablet) {
@@ -193,7 +217,14 @@ Style guide: List styles.2 Vertical list
 .list-vertical--thirds {
   @extend .list-vertical;
 
-  li {
+  &.no-border {
+    li:nth-child(-n+3) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  > li {
     @include media ($tablet) {
       flex: 0 0 31%;
     }
@@ -203,7 +234,14 @@ Style guide: List styles.2 Vertical list
 .list-vertical--fourths {
   @extend .list-vertical;
 
-  li {
+  &.no-border {
+    li:nth-child(-n+4) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  > li {
     @include media ($tablet) {
       flex: 0 0 22%;
     }
@@ -223,14 +261,16 @@ Style guide: List styles.3 Small list
 
 .list-small {
   @extend %base-list;
+  border-top: solid 1px $border-colour;
 
   a {
+    @extend .icon-arrow-right;
+
     display: block;
     padding: $small-spacing;
     padding-left: ($base-spacing * 2);
     border-bottom: none;
 
-    background-image: url($icon-arrow-r);
     background-repeat: no-repeat;
     background-position: $base-spacing ($small-spacing * 1.75);
     background-size: $tiny-spacing auto;
@@ -261,5 +301,82 @@ Style guide: List styles.3 Small list
   .meta {
     display: block;
     margin: 0;
+  }
+}
+
+/*
+Highlighted List
+
+Lists with highlighted phrases work well for displaying large lists where many items contain the same recurring phrases.
+
+Markup: templates/lists-highlighted.hbs
+
+Style guide: List styles.4 Highlighted List
+*/
+
+.list-highlighted {
+  @extend %base-list;
+
+  li {
+    list-style: none;
+    border-bottom: 0;
+    padding-bottom: $base-spacing;
+    padding-top: 0;
+  }
+
+  a {
+    font-size: $large-font-size;
+    font-weight: $heading-font-weight;
+    line-height: $base-heading-leading;
+
+    span {
+      display: block;
+      font-size: $smaller-font-size;
+    }
+  }
+}
+
+/*
+See more link
+
+Some lists will show a feed of the latest or most relevant items. The see more link takes the user to the index page showing all of the items.
+
+Markup: templates/see-more-link.hbs
+
+Style guide: List styles.5 See more link
+*/
+
+.see-more {
+  display: inline-block;
+  position: relative;
+  margin-right: $base-spacing;
+  font-weight: $heading-font-weight;
+  border-bottom: 1px solid transparent;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $button-colour;
+  }
+
+  &::after {
+    @extend .icon-arrow-right-aqua;
+
+    content: '';
+    position: absolute;
+    display: block;
+    width: $medium-spacing;
+    height: $medium-spacing;
+    top: 0;
+    right: -($medium-spacing);
+    background-repeat: no-repeat;
+    background-position: right $tiny-spacing;
+    background-size: (0.8 * $small-spacing) auto;
+    border-bottom: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid;
   }
 }

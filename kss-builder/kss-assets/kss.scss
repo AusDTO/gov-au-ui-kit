@@ -16,17 +16,14 @@
   }
 }
 
-.guide-jump-links {
-
-  @include media ($tablet) {
-    display: flex;
-    flex-wrap: wrap;
-
-    li {
-      flex-basis: 50%;
-    }
-
+.guide-section-nav {
+  @include media($tablet) {
+    margin-top: ($base-spacing * 4);
   }
+}
+
+.guide-section-header {
+  margin-bottom: $base-spacing * 2;
 }
 
 .guide-example {
@@ -118,15 +115,6 @@ code {
 }
 
 // Colour background classes
-.bg-black {
-  background-color: $black;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $black;
-  }
-}
 
 .bg-non-black {
   background-color: $non-black;
@@ -148,16 +136,6 @@ code {
   }
 }
 
-.bg-dark-grey {
-  background-color: $dark-grey;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-grey;
-  }
-}
-
 .bg-light-grey {
   background-color: $light-grey;
   color: $non-black;
@@ -165,16 +143,6 @@ code {
   .invert {
     background-color: $non-black;
     color: $light-grey;
-  }
-}
-
-.bg-lighter-grey {
-  background-color: $lighter-grey;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $lighter-grey;
   }
 }
 
@@ -238,6 +206,16 @@ code {
   }
 }
 
+.bg-lighter-aqua {
+  background-color: $lighter-aqua;
+  color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $lighter-aqua;
+  }
+}
+
 .bg-navy {
   background-color: $navy;
   color: $non-white;
@@ -258,17 +236,17 @@ code {
   }
 }
 
-.bg-light-navy {
-  background-color: $light-navy;
+.bg-maroon {
+  background-color: $maroon;
   color: $white;
 
   .invert {
     background-color: $white;
-    color: $light-navy;
+    color: $maroon;
   }
 }
 
-.bg-error {
+.bg-error-red {
   background-color: $red;
   color: $white;
 
@@ -288,7 +266,7 @@ code {
   }
 }
 
-.bg-success {
+.bg-success-green {
   background-color: $green;
   color: $white;
 
@@ -308,12 +286,30 @@ code {
   }
 }
 
-.bg-yellow {
+.bg-warning-yellow {
   background-color: $yellow;
-  color: $white;
 }
 
 .bg-light-yellow {
   background-color: $light-yellow;
-  color: $white;
+  color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $light-yellow;
+  }
+}
+
+.bg-info-blue {
+  background-color: $blue;
+}
+
+.bg-light-blue {
+  background-color: $light-blue;
+  color: $non-black;
+
+  .invert {
+    background-color: $non-black;
+    color: $light-blue;
+  }
 }
