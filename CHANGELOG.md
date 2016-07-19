@@ -6,6 +6,7 @@
 
 Adds or modifies:
 
+- Styles and behavior for Accordions
 - Number support for `input`; make sure you use also use `type="number"`.
 - UI Kit version number added to Guide home page [styleguide]
 - Style changes to Local (primary) navigation
