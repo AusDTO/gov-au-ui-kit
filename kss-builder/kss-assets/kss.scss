@@ -115,15 +115,6 @@ code {
 }
 
 // Colour background classes
-.bg-black {
-  background-color: $black;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $black;
-  }
-}
 
 .bg-non-black {
   background-color: $non-black;
