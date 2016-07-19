@@ -1,0 +1,119 @@
+/*
+Accordions
+
+Accordions are used as a disclosure widget from which the user can retrieve additional information.
+
+Accordions can be useful in reducing the information "overload" of a page and reduce the need to scroll, but they increase the interaction cost by requiring people to decide on topic headings.
+
+Use succinct, but sufficiently descriptive accordion headings/labels to avoid making both discoverability and navigability of a page more difficult.
+
+<p class="callout"><strong>Note:</strong> Do not use accordions for glossaries&mdash;use <a href="/section-typography.html#guide-typography-5-lists">definition or description lists</a> instead.</p>
+
+Style guide: Accordions
+*/
+
+/*
+Using accordions
+
+In our implementation a text/string search for an accordion's content is possible, but note that when the accordion is collapsed the content still remains hidden.
+
+### Behaviour and ARIA
+
+The framework includes JavaScript behaviour to replace the browser default for `<details>`.
+
+Accordions can be set to be either open or closed initially by adding the `aria-expanded` property with a value of `true` or `false`.
+
+### Multiple accordions
+
+When multiple accordion elements are used, each `details` element should be given a unique `data-label` attribute.
+
+Additionally, it will be mandatory to provide an expand/collapse all link when building a series of accordions.
+
+<p class="callout--warning"><strong>Missing feature:</strong> we have not yet provided an expand/collapse all feature, but we intend to add in a near-future sprint.</p>
+
+Markup: templates/accordion.hbs
+
+Style guide: Accordions.1 Using accordions
+*/
+details,
+.accordion {
+  display: block;
+  margin: $base-spacing 0 0;
+  overflow: hidden;
+
+  & + details,
+  & + .accordion {
+    margin-top: $small-spacing;
+  }
+}
+
+.accordion-button,
+summary {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: $small-spacing;
+  border-bottom: none;
+  border-top-right-radius: $tiny-border-radius;
+  border-top-left-radius: $tiny-border-radius;
+  background-color: $lighter-aqua;
+  color: $darker-aqua;
+  text-align: left;
+  font-weight: $bold-font-weight;
+  cursor: pointer;
+
+  // Remove vanilla summary styles.
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $light-aqua;
+    color: $non-black;
+  }
+
+  &::before {
+    @extend .chevron-down-navy;
+
+    content: '';
+    position: absolute;
+    top: .5em;
+    right: $small-spacing;
+    bottom: .5em;
+    width: $medium-spacing;
+    background-repeat: no-repeat;
+    background-position: center center; // added this not in .local-nav-toggle
+    background-size: 100% auto;
+    transform: rotate(0deg);
+    transition: transform $transition-timing $transition-easing;
+
+    [aria-expanded='true'] & {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+.accordion-panel {
+  display: block;
+  position: relative;
+  top: 0;
+  height: auto;
+  overflow: hidden;
+  padding: $small-spacing $base-spacing;
+  border: solid $small-spacing $lighter-aqua;
+  border-top: none;
+  border-bottom-right-radius: $tiny-border-radius;
+  border-bottom-left-radius: $tiny-border-radius;
+  transition: padding $transition-timing $transition-easing, border $transition-timing $transition-easing, position $transition-timing $transition-easing;
+
+  [aria-expanded='false'] & {
+    z-index: -1;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: $small-spacing * -2;
+  }
+}

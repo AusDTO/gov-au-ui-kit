@@ -2,46 +2,58 @@ var smoothScroll = require('smoothscroll');
 
 (function (document) {
 
-  var CollapsibleNav = {
+  var Collapsible = {
 
     /**
-     * Initialise the Global Nav collapse behaviour
+     * Initialise the Collapse behaviour
      * @param {array} elems - array of HTMLCollections representing collapsible elements
+     * @param {object} toggle - the element to be used as a toggle. If `null`, one is created
+     * @param {bool} collapsed - if `true`, panel is collapsed by default
      */
-    init: function(elems) {
+    init: function(elems, toggle, collapsed) {
       for (var i = 0; i < elems.length; i++) {
-        this.initPanel(elems[i]);
-        this.initToggle(elems[i]);
+        var toggleElem = toggle ? toggle.item(i) : null;
+        this.initPanel(elems[i], collapsed);
+        this.initToggle(elems[i], toggleElem);
       }
     },
 
     /**
      * Initialise the collapsible panel by setting its ID & 'aria-expanded' attributes
      * @param {object} elem - the containing DOMElement
+     * @param {bool} collapsed - if `true`, panel is collapsed by default
      */
-    initPanel: function(elem) {
+    initPanel: function(elem, collapsed) {
       var panelLabel = elem.dataset ? elem.dataset.label ? elem.dataset.label : elem.className : elem.className;
 
       elem.id = panelLabel;
-      elem.setAttribute('aria-expanded', 'false');
+
+      if (collapsed) {
+        elem.setAttribute('aria-expanded', 'false');
+      }
     },
 
     /**
      * Create a toggle element, attach an event listener and insert it into the DOM
      * @param {object} elem - containing element for collapsible nav
      */
-    initToggle: function(elem) {
-      var panelLabel = elem.dataset.label || elem.className,
-          toggle = document.createElement('button'),
+    initToggle: function(elem, toggle) {
+      var panelLabel = elem.dataset ? elem.dataset.label ? elem.dataset.label : elem.className : elem.className,
+          toggleElem = toggle || document.createElement('button'),
           self = this;
 
-      toggle.setAttribute('aria-controls', panelLabel);
-      toggle.className = panelLabel + '-toggle';
-      toggle.textContent = elem.dataset.toggleLabel || 'Menu';
-      toggle.targetElem = elem;
-      toggle.addEventListener('click', self.togglePanel);
+      // console.log(panelLabel, toggle);
 
-      elem.parentNode.insertBefore(toggle, elem);
+      toggleElem.setAttribute('aria-controls', panelLabel);
+      toggleElem.className = panelLabel + '-toggle';
+      toggleElem.textContent = elem.dataset.toggleLabel || 'Menu';
+      toggleElem.targetElem = elem;
+      toggleElem.addEventListener('click', self.togglePanel);
+
+      if (!toggle) {
+        elem.parentNode.insertBefore(toggleElem, elem);
+      }
+
     },
 
     /**
@@ -53,6 +65,14 @@ var smoothScroll = require('smoothscroll');
           elem = event.target.targetElem,
           expanded = elem.getAttribute('aria-expanded') === 'true';
 
+      event.preventDefault();
+
+      if (elem.hasAttribute('open')) {
+        elem.removeAttribute('open');
+      } else {
+        elem.setAttribute('open', '');
+      }
+
       toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
       elem.setAttribute('aria-expanded', expanded ? 'false' : 'true');
     }
@@ -61,8 +81,12 @@ var smoothScroll = require('smoothscroll');
 
   // Kick of the JavaScript party when the DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
-    CollapsibleNav.init(document.querySelectorAll('.global-nav, .local-nav'));
-    ScrollingAnchorLinks.init();
+    var navElements = document.querySelectorAll('.global-nav, .local-nav');
+    Collapsible.init(navElements, null, true);
+
+    var accordionElements = document.querySelectorAll('.accordion, details'),
+        accordionToggleElement = document.querySelectorAll('.accordion-button, summary');
+    Collapsible.init(accordionElements, accordionToggleElement, false);
   });
 
 })(document);

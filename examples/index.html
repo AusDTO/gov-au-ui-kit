@@ -144,6 +144,54 @@
     <article id="content" class="content-main">
       <h1>Article title that is quite a bit longer</h1>
       <p class="abstract">This is my <code>.abstract</code> text: the quick brown fox jumped over the lazy dog.</p>
+
+      <p>So, let us commence with some accordions:</p>
+
+      <div class="video">
+        <div class="video-wrapper">
+          <embed src="https://www.youtube.com/embed/w3lsDQD9_98?showinfo=0&iv_load_policy=3&controls=0" allowfullscreen>
+        </div>
+      </div>
+
+      <p>More seriously, here is an accordion that uses the <code>details</code> and <code>summary</code> elements.</p>
+
+      <details data-label="accordion-example" aria-expanded="false">
+        <summary>foobar</summary>
+        <div class="accordion-panel">
+            <p>I am a paragraph of text!</p>
+        </div>
+      </details>
+
+      <details open data-label="accordion-example-2" aria-expanded="true">
+        <summary>barfoo</summary>
+        <div class="accordion-panel">
+            <p>You can nest just about any common content inside an accordion, like lists, blockquotes, and more:</p>
+            <blockquote>
+              <p>And yet the system is not closed. One aperture remains: and through it the whole interplay of resemblances would be in danger of escaping from itself, or of remaining hidden in darkness, if there were not a further form of similitude to close the circle &mdash; to render it at once perfect and manifest.</p>
+              <footer>
+                <cite>Foucault, M. (1994). <em>The Order of Things: an archaeology of the human sciences</em>. New York: Vintage Books. pp 28&ndash;29.</cite>
+              </footer>
+            </blockquote>
+            <ol>
+              <li>first sorted list item</li>
+              <li>second sorted list item
+                <ol>
+                  <li>another item</li>
+                </ol>
+              </li>
+              <li>and another item</li>
+            </ol>
+        </div>
+      </details>
+
+      <blockquote>
+        <p>Pascal said things should line up; the rhythm of things must be maintained!</p>
+      </blockquote>
+
+      <p>Accordions can also be achieved using the <code>.accordion</code> class on a <code>dl</code> (definition list), using the <code>dt</code> effectively as the <code>summary</code>:</p>
+
+      <p>incoming&hellip;</p>
+
       <p>Vertical rhythm should be <strong>maintained</strong> between content elements:</p>
 
       <ul>
@@ -171,7 +219,7 @@
         <!-- Hero list item -->
         <li class="hero-item">
           <figure>
-            <img src="../kss-assets/img-placeholder.gif" alt="example image"/>
+            <img src="../kss-assets/img/img-placeholder.gif" alt="example image"/>
           </figure>
           <article>
             <h3>
@@ -186,7 +234,7 @@
         <!-- List item with an image -->
         <li>
           <figure>
-            <img src="../kss-assets/img-placeholder.gif" alt="example image" />
+            <img src="../kss-assets/img/img-placeholder.gif" alt="example image" />
           </figure>
           <article>
             <h3>
@@ -294,6 +342,8 @@
         <a href="#" role="button" class="contrast">Contrast button</a>
         <a href="#" role="button" class="disabled">Disabled</a>
       </p>
+
+      <p>It would be way cool to have <code>kbd</code> support, so that we can tell people how to <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd>, or how to win their games faster by mashing <kbd>F11</kbd>.</p>
 
       <h2>Quotations and citations</h2>
 

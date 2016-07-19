@@ -7,9 +7,13 @@
 Adds or modifies:
 
 - Number support for `input`; make sure you use also use `type="number"`.
-- UI Kit version number added to Guide home page [styleguide]
-- Style changes to Local (primary) navigation
-- Style changes to Page footer
+- UI Kit version number added to Guide home page [styleguide].
+- Style changes to Local (primary) navigation.
+- Style changes to Page footer.
+- Accordions via the `details` and `summary` elements and documentation.
+- Styling for keyboard (`kbd`) inline element (documented under *§ Typography*).
+- Responsive video embeds (yet undocumented).
+- UI Kit version number added to Guide home page.
 
 Bugfixes:
 
