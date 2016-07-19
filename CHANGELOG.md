@@ -6,6 +6,7 @@
 
 Adds or modifies:
 
+- Vertial Lists now have an option to remove the top border
 - Number support for `input`; make sure you use also use `type="number"`.
 - UI Kit version number added to Guide home page [styleguide]
 - Style changes to Local (primary) navigation
