@@ -437,6 +437,12 @@ Used to group a collection of text links, Index links can appear at the beginnin
 
 An optional heading is included in the markup example. Any level leading from `h2` to `h6` can be used. Use a heading level that's appropriate for your document outline.
 
+**Behaviour**
+
+Because these are internal links they trigger a smooth scroll down the page.
+
+This works in Firefox, Chrome, IE10, Opera and Safari. Unsupported browsers would just use the normal internal link behaviour.
+
 Markup: templates/index-links.hbs
 
 Style guide: Navigation.5 Index links
