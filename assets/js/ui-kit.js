@@ -43,10 +43,12 @@ var smoothScroll = require('smoothscroll');
           self = this;
 
       // console.log(panelLabel, toggle);
-
+      if (!toggle) {
+          toggleElem.textContent = elem.dataset.toggleLabel || 'Menu';
+      }
+      
       toggleElem.setAttribute('aria-controls', panelLabel);
       toggleElem.className = panelLabel + '-toggle';
-      toggleElem.textContent = elem.dataset.toggleLabel || 'Menu';
       toggleElem.targetElem = elem;
       toggleElem.addEventListener('click', self.togglePanel);
 
