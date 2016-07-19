@@ -198,7 +198,7 @@ gulp.task('watch', ['watch.build']);
 
 gulp.task('watch.build', function () {
     gulp.watch([
-      paths.assetsDir,
+      paths.assets,
       paths.examplesDir,
       paths.readme,
       paths.kssBuilderDir,
