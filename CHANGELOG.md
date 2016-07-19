@@ -10,7 +10,6 @@ Adds or modifies:
 - JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
 - Vertical Lists now have an option to remove the top border (documented *§ List views*)
 - Number support for `input`; make sure you use also use `type="number"`.
-- UI Kit version number added to Guide home page [styleguide].
 - Style changes to Local (primary) navigation.
 - Style changes to the page footer.
 - Accordions via the `details` and `summary` elements and documentation.
