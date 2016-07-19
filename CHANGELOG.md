@@ -6,15 +6,14 @@
 
 Adds or modifies:
 
-- Styles and behavior for Accordions
 - Number support for `input`; make sure you use also use `type="number"`.
-- UI Kit version number added to Guide home page [styleguide]
-- Style changes to Local (primary) navigation
-- Style changes to Page footer
-- Accordions via the `details` and `summary` elements, as well as via a `.accordion` class when using definition lists.
-- Styling for keyboard (`kbd`) inline element.
+- UI Kit version number added to Guide home page [styleguide].
+- Style changes to Local (primary) navigation.
+- Style changes to Page footer.
+- Accordions via the `details` and `summary` elements and documentation.
+- Styling for keyboard (`kbd`) inline element (documented under *§ Typography*).
 - Responsive video embeds (yet undocumented).
-- UI Kit version number added to Guide home page
+- UI Kit version number added to Guide home page.
 
 Bugfixes:
 
