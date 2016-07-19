@@ -11,6 +11,14 @@ Style guide: Accordions
 /*
 Using accordions
 
+**Behaviour**
+
+The framework includes JavaScript behaviour to replace the browser default for `<details>`.
+
+Accordions can be set to be either open or closed initially by adding the `aria-expanded` property with a value of `true` or `false`.
+
+When multiple accordion elements are used, each `details` element should be given a unique `data-label` attribute.
+
 Markup: templates/accordion.hbs
 
 Style guide: Accordions.1 Using accordions
