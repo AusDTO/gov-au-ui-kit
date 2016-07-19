@@ -15,7 +15,7 @@ Adds or modifies:
 - Accordions via the `details` and `summary` elements and documentation.
 - Styling for keyboard (`kbd`) inline element (documented under *§ Typography*).
 - Responsive video embeds (yet undocumented).
-- UI Kit version number added to Guide home page. [styleguide]
+- UI Kit version number added to Guide home page.
 
 Bugfixes:
 
