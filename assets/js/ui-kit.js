@@ -67,6 +67,12 @@ var smoothScroll = require('smoothscroll');
 
       event.preventDefault();
 
+      if (elem.hasAttribute('open')) {
+        elem.removeAttribute('open');
+      } else {
+        elem.setAttribute('open', '');
+      }
+
       toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
       elem.setAttribute('aria-expanded', expanded ? 'false' : 'true');
     }
