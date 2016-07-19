@@ -20,6 +20,7 @@ Adds or modifies:
 
 Bugfixes:
 
+- Fixed [#175](https://github.com/AusDTO/gov-au-ui-kit/issues/175) `gulp watch` or `serve` not picking up on asset changes
 - Fixed [#171](https://github.com/AusDTO/gov-au-ui-kit/issues/171) Unused Open Sans weight 600
 - Fixed [#156](https://github.com/AusDTO/gov-au-ui-kit/issues/156) Looping Gulp build [styleguide]
 - Fixed [#159](https://github.com/AusDTO/gov-au-ui-kit/issues/159) Bouncing Local nav
