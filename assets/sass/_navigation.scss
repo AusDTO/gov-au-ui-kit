@@ -153,7 +153,7 @@ Style guide: Navigation.2 Local Navigation
 
   &,
   &:hover {
-    background-color: $lighter-grey;
+    background-color: $background-secondary-colour;
     color: $darker-aqua;
   }
 
@@ -234,10 +234,10 @@ Style guide: Navigation.2 Local Navigation
   li {
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid $border-secondary-colour;
+    border-bottom: 1px solid $border-colour;
 
     &:first-child {
-      border-top: 1px solid $border-secondary-colour;
+      border-top: 1px solid $border-colour;
     }
   }
 
@@ -252,13 +252,13 @@ Style guide: Navigation.2 Local Navigation
 
     &:hover {
       border-color: $border-contrast-colour;
-      background-color: $nav-focus-colour;
+      background-color: $focus-colour;
     }
 
     &:active,
     &.active,
     &.is-active {
-      background-color: $nav-focus-colour;
+      background-color: $focus-colour;
     }
 
   }
@@ -271,7 +271,7 @@ Style guide: Navigation.2 Local Navigation
 .primary-nav {
   .nav-heading {
     color: $darker-aqua;
-    background: $lighter-grey;
+    background: $background-secondary-colour;
     margin: $base-spacing 0;
 
     .chevron {

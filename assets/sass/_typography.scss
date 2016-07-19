@@ -284,7 +284,7 @@ a {
 
   &:hover,
   &:active {
-    color: $highlight-colour;
+    color: $link-hover-colour;
   }
 
 }
@@ -347,7 +347,7 @@ strong {
 }
 
 hr {
-  border-color: $border-secondary-colour;
+  border-color: $border-colour;
   border-style: solid;
   border-bottom: none;
 }
@@ -495,7 +495,7 @@ Style guide: Typography.8 Quotations
 blockquote {
   margin: $medium-spacing 0;
   padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
-  background-color: $non-white;
+  background-color: $background-secondary-colour;
   font-family: $base-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
@@ -561,7 +561,7 @@ blockquote {
       text-transform: lowercase;
       font-variant: small-caps;
       letter-spacing: 1px;
-      color: $dark-grey;
+      color: $body-text-colour;
     }
   }
 
