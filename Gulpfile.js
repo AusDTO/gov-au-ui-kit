@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     inline = require('./lib/gulp-scss-inline.js'),
     connect = require('gulp-connect'),
-    svg2png = require('gulp-svg2png')
+    svg2png = require('gulp-svg2png'),
+    webpack = require('webpack-stream')
     ;
 
 var paths = {
@@ -67,6 +68,11 @@ gulp.task('ui-kit.scss', ['svg2png'], function () {
 
 gulp.task('ui-kit.js', function () {
     return gulp.src(paths.js)
+        .pipe(webpack({
+          output: {
+            filename: 'ui-kit.js',
+          }
+        }))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
@@ -95,11 +101,13 @@ gulp.task('ui-kit.min.scss', ['svg2png'], function () {
 
 gulp.task('ui-kit.min.js', function () {
     return gulp.src(paths.js)
+        .pipe(webpack({
+          output: {
+            filename: 'ui-kit.min.js',
+          }
+        }))
         .pipe(uglify())
         .pipe(gitVersion())
-        .pipe(rename({
-            suffix: '.min'
-        }))
         .pipe(gulp.dest(paths.outputAssets));
 });
 
