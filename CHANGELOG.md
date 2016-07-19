@@ -6,11 +6,13 @@
 
 Adds or modifies:
 
-- Vertial Lists now have an option to remove the top border
+- Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
+- “See more” link styling (currently documented under *§ List views*).
+- JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
+- Vertical Lists now have an option to remove the top border (documented *§ List views*)
 - Number support for `input`; make sure you use also use `type="number"`.
-- UI Kit version number added to Guide home page [styleguide].
 - Style changes to Local (primary) navigation.
-- Style changes to Page footer.
+- Style changes to the page footer.
 - Accordions via the `details` and `summary` elements and documentation.
 - Styling for keyboard (`kbd`) inline element (documented under *§ Typography*).
 - Responsive video embeds (yet undocumented).
@@ -18,6 +20,8 @@ Adds or modifies:
 
 Bugfixes:
 
+- Fixed [#175](https://github.com/AusDTO/gov-au-ui-kit/issues/175) `gulp watch` or `serve` not picking up on asset changes
+- Fixed [#171](https://github.com/AusDTO/gov-au-ui-kit/issues/171) Unused Open Sans weight 600
 - Fixed [#156](https://github.com/AusDTO/gov-au-ui-kit/issues/156) Looping Gulp build [styleguide]
 - Fixed [#159](https://github.com/AusDTO/gov-au-ui-kit/issues/159) Bouncing Local nav
 - Fixed [#136](https://github.com/AusDTO/gov-au-ui-kit/issues/136) Guide home page Local nav active styles [styleguide]
