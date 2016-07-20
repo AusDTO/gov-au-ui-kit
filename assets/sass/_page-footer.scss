@@ -26,8 +26,8 @@ footer[role='contentinfo'] {
 
   .footer-links {
 
-    @include media($mobile) {
-      @include span-columns(12 of 12);
+    @include media($tablet) {
+      @include span-columns(9 of 12);
     }
 
     ul {
@@ -38,9 +38,10 @@ footer[role='contentinfo'] {
 
     li {
       margin-right: $small-spacing;
+      display: block;
 
-      @include media($mobile) {
-        display: block;
+      @include media($tablet) {
+        display: inline-block;
       }
     }
 
