@@ -1,5 +1,6 @@
 %wrapper-padding {
   @include pad(0 $base-spacing);
+  width: 100%;
   box-sizing: content-box;
 
   * {
