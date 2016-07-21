@@ -461,14 +461,15 @@ li {
 
   ul,
   ol {
-    margin-top: ($small-spacing / 2);
+    margin-top: $tiny-spacing;
     margin-bottom: 0;
   }
 }
 
 dt {
+  display: inline-block;
   font-weight: $bold-font-weight;
-  margin-top: $medium-spacing;
+  margin-top: $tiny-spacing;
 
   &:first-of-type {
     margin-top: 0;
