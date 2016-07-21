@@ -480,8 +480,7 @@ Style guide: Navigation.5 Index links
   h4,
   h5,
   h6 {
-    @extend p;
-
+    font-size: rem(17);
     margin-top: $base-spacing;
     color: $grey;
     font-weight: $base-font-weight;
