@@ -84,6 +84,25 @@ main {
         @include span-columns(10 of 16);
         @include shift(2);
       }
+
+      &:first-child {
+
+        @include reset-layout-direction;
+
+        @include fill-parent;
+        @include shift(0);
+
+        @include media($tablet) {
+          @include span-columns(8 of 12);
+          @include shift(0);
+        }
+
+        @include media($desktop) {
+          @include span-columns(10 of 16);
+          @include shift(0);
+        }
+
+      }
     }
   }
 
