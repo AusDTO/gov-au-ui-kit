@@ -24,6 +24,7 @@ Style guide: List styles
     dt,
     dd {
       display: inline-block;
+      line-height: $double-leading;
       margin: 0;
       padding: 0;
     }
