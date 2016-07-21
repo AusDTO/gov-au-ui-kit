@@ -458,8 +458,9 @@ Style guide: Navigation.5 Index links
   h4,
   h5,
   h6 {
-    @extend h6;
-    margin: 0 0 $tiny-spacing;
+    @extend p;
+
+    margin-top: $base-spacing;
     color: $grey;
     font-weight: $base-font-weight;
   }
