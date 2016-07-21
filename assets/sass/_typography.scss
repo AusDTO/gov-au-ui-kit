@@ -439,6 +439,44 @@ Style guide: Typography.6 Callouts & warnings
   padding-left: $base-spacing - ($small-spacing / 2);
 }
 
+/*
+Calendar event callout
+
+A Calendar event callout can be used to highlight an upcoming event.
+
+Markup: templates/calendar-callout-example.hbs
+
+Style guide: Typography.6 Calendar event callout
+*/
+
+.callout--calendar-event {
+  background-color: $callout-bg-light-colour;
+  padding: $small-spacing $base-spacing $base-spacing;
+
+  time,
+  .event-name {
+    @extend h2;
+    margin: 0;
+  }
+
+  time {
+    display: block;
+    font-weight: 700;
+  }
+
+  .event-name {
+    font-weight: 300;
+  }
+
+  .next-event {
+    font-size: rem(16);
+    font-weight: 300;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
 
 /*
 Badges
