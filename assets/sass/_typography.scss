@@ -335,21 +335,21 @@ h4 {
   }
 }
 
-a {
-  color: $link-colour;
-  text-decoration: none;
-  border-bottom: 1px solid;
-
-  &:visited {
-    color: $link-colour;
-  }
-
-  &:hover,
-  &:active {
-    color: $link-hover-colour;
-  }
-
-}
+// a {
+//   color: $link-colour;
+//   text-decoration: none;
+//   border-bottom: 1px solid;
+//
+//   &:visited {
+//     color: $link-colour;
+//   }
+//
+//   &:hover,
+//   &:active {
+//     color: $link-hover-colour;
+//   }
+//
+// }
 
 code,
 pre,

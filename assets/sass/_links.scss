@@ -1,0 +1,50 @@
+@mixin colours($textcolor, $hoverbg, $hover-text) {
+  $templink-color: rgba($textcolor, 0.5);
+  color: $textcolor;
+
+  a {
+
+    &,
+    &:link {
+      color: $textcolor;
+      text-decoration: none;
+      border-bottom: solid 1px $hoverbg;
+      outline-color: none;
+      transition: all 100ms ease;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: $hoverbg;
+      color: $hover-text;
+      outline-width: 3 px;
+      outline-color: $hoverbg;
+      outline-style: solid;
+      border: none;
+      }
+    }
+
+  .templink {
+    outline: none;
+    color: $templink-color;
+    text-decoration: none;
+    border-bottom: solid 1px;
+    outline-color: none;
+    }
+  }
+
+
+
+
+// move these bad boys to their right contextual places
+
+.content-main,
+footer[role='contentinfo'] {
+  @include colours($non-black, $light-aqua, $non-black);
+}
+
+.govau--header,
+.hero {
+  @include colours($non-white, $light-aqua, $non-black);
+}
