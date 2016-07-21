@@ -182,10 +182,20 @@ Style guide: Navigation.2 Local Navigation
   }
 }
 
+.local-nav {
+  padding-top: 0;
+  @include media($tablet) {
+    padding: $base-spacing 0;
+  }
+}
+
+.primary-nav {
+  padding: $base-spacing 0;
+}
+
 .primary-nav,
 .local-nav {
   margin: 0 0 $base-spacing;
-  padding: $base-spacing 0;
   overflow: hidden;
   transition: padding ($transition-timing * 2) ease;
 
@@ -199,6 +209,15 @@ Style guide: Navigation.2 Local Navigation
       padding: $base-spacing 0;
     }
   }
+
+  h1 {
+    font-size: 1em;
+    font-weight: $base-font-weight;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: $base-leading;
+  }
+
 
   ul {
     margin: 0;
@@ -255,9 +274,12 @@ Style guide: Navigation.2 Local Navigation
       background-color: $focus-colour;
     }
 
-    &:active,
     &.active,
     &.is-active {
+      font-weight: $bold-font-weight;
+    }
+
+    &.current {
       background-color: $focus-colour;
     }
 
