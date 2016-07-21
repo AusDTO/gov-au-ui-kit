@@ -325,12 +325,13 @@ h4 {
   }
 
   h5 {
-    font-size: rem(16);
+    font-size: rem(17);
     font-weight: $heading-font-weight;
   }
 
   h6 {
-    @extend h5;
+    font-size: rem(17);
+    font-weight: $heading-font-weight;
   }
 }
 
