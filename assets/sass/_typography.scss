@@ -104,6 +104,7 @@ Style guide: Typography.3 Spacing
 $base-leading: 1.6;
 $base-heading-leading: 1.4;
 $small-leading: 1.2;
+$double-leading: 2;
 
 // Base spacing, relative to leading.
 $base-spacing: $base-leading * 1em;
@@ -496,8 +497,8 @@ Style guide: Typography.6 Callouts & warnings
 .callout--warning {
   @extend .callout;
 
-  border-left: ($small-spacing / 2) solid $red;
-  padding-left: $base-spacing - ($small-spacing / 2);
+  border-left: $tiny-spacing solid $red;
+  padding-left: $base-spacing - $tiny-spacing;
 }
 
 
@@ -606,7 +607,7 @@ blockquote {
 
   footer {
     margin-top: $medium-spacing;
-    padding-top: ($small-spacing / 2);
+    padding-top: $tiny-spacing;
     border-top: 1px solid $light-grey;
   }
 
@@ -633,7 +634,7 @@ blockquote {
 }
 
 q {
-  // Investigate: switching to html entitites?
+  // Investigate: switching to html entities?
   quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';
 }
 
