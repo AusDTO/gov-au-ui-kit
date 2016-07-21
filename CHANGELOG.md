@@ -2,7 +2,21 @@
 
 ## UI Kit "Kraken"
 
-### Next release (scheduled 2016-07-19)
+### Next release (scheduled 2016-07-26)
+
+UI-Kit:
+
+- …
+
+Bugfixes:
+
+- …
+
+Build environment:
+
+- Compiles icons into separate SCSS partial (`assets/sass/ui-kit-icons.scss`) (undocumented, experimental)
+
+### 1.3.0 - 2016-07-19
 
 Adds or modifies:
 
