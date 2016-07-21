@@ -189,10 +189,6 @@ Style guide: Navigation.2 Local Navigation
   }
 }
 
-.primary-nav {
-  padding: $base-spacing 0;
-}
-
 .primary-nav,
 .local-nav {
   margin: 0 0 $base-spacing;
@@ -291,6 +287,8 @@ Style guide: Navigation.2 Local Navigation
 // This class is legacy as of v1.2
 // Marked for removal at 2.0
 .primary-nav {
+  padding: $base-spacing 0;
+
   .nav-heading {
     color: $darker-aqua;
     background: $background-secondary-colour;
