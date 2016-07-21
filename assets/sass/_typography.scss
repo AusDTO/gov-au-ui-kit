@@ -377,6 +377,7 @@ kbd {
   background-color: $non-white;
   color: $dark-aqua;
   text-align: center;
+  font-size: $small-font-size;
   padding: 0 $small-spacing;
   margin: 0 $tiny-spacing;
 }
@@ -449,7 +450,7 @@ dt,
 dd {
   font-size: rem(17);
   margin-top: 0; // Check up on where margin-top is coming from...
-  margin-bottom: $small-spacing;
+  margin-bottom: $medium-spacing;
   line-height: $base-spacing;
 }
 
@@ -577,10 +578,6 @@ blockquote {
       text-align: center;
       margin: 0;
     }
-
-    &::after {
-      margin-top: -($tiny-spacing);
-    }
   }
 
   &::before,
@@ -594,6 +591,7 @@ blockquote {
 
   &::before {
     margin-left: -($small-spacing * 0.75);
+    padding-bottom: $tiny-spacing;
     content: open-quote;
   }
 
