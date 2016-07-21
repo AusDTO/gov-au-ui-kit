@@ -1,15 +1,88 @@
 /*
-List views
+List styles
 
-Each list style has optional layout items. Follow the markup patterns in the examples
-below to achieve the correct style and semantics.
+List styles make groups of similar content more usable and discoverable.
+
+All list styles can include all of the usual elements within each list item (eg other ordered and unordered lists).
+
+Style guide: List styles
+*/
+
+/*
+Horizontal style
+
+Markup: templates/lists-horizontal.hbs
+
+Style guide: List styles.1 Horizontal style
+*/
+
+/*
+Vertical style
+
+Markup: templates/lists-vertical.hbs
+
+Style guide: List styles.2 Vertical style
+*/
+
+/*
+Small list style
+
+Use small list style to display a large number of items.
+
+Markup: templates/lists-small.hbs
+
+Style guide: List styles.3 Small list style
+*/
+
+/*
+Highlighted list style
+
+Use highlighted lists style for lists with a large number of items with the same phases.
+
+Markup: templates/lists-highlighted.hbs
+
+Style guide: List styles.4 Highlighted list
+*/
+
+/*
+See more link
+
+Use `<a class="see-more">` to link to an index of all items.
+
+Markup: templates/see-more-link.hbs
+
+Style guide: List styles.5 See more link
+*/
+
+/*
+Old content
 
 - **Image**: omit the `figure` element if you don't need an image. Note: If you
 leave in a `figure` with no `img` you'll still get a left padding on your item
 - **Tags**: add tags to each item using a `footer.tags` and a `dl` element
 - **Meta**: use a `div.meta` to include supplementary information
 
-Style guide: List styles
+Old horizontal list
+
+A Horizontal list can have item(s) with a featured image. Note: If you
+leave in a `figure` with no `img` you'll still get a left padding on your item.
+
+- **Hero item**: by adding the `.hero-item` class to a list item, the layout
+changes to fit a wider image
+
+Vertical list
+
+The Vertical list suits content that fits into a column layout, and wraps with
+two list items on each row. Note: In browsers where [Flexbox layout](http://caniuse.com/#feat=flexbox)
+is not supported, this will appear as a Horizontal list except with the image
+below the list item content.
+
+To make a list appear with three or four columns, use the classes `.vertical-list--thirds`
+and `.vertical-list--fourths` respectively.
+
+To remove the border-top from the first row of elements add the `.no-border` class to the `ul` element
+
+Style guide: List styles.Z old content
 */
 
 %base-list {
@@ -77,20 +150,6 @@ Style guide: List styles
   }
 }
 
-/*
-Horizontal list
-
-A Horizontal list can have item(s) with a featured image. Note: If you
-leave in a `figure` with no `img` you'll still get a left padding on your item.
-
-- **Hero item**: by adding the `.hero-item` class to a list item, the layout
-changes to fit a wider image
-
-Markup: templates/lists-horizontal.hbs
-
-Style guide: List styles.1 Horizontal list
-*/
-
 .list-horizontal {
   @extend %base-list;
 
@@ -132,25 +191,6 @@ Style guide: List styles.1 Horizontal list
   }
 
 }
-
-
-/*
-Vertical list
-
-The Vertical list suits content that fits into a column layout, and wraps with
-two list items on each row. Note: In browsers where [Flexbox layout](http://caniuse.com/#feat=flexbox)
-is not supported, this will appear as a Horizontal list except with the image
-below the list item content.
-
-To make a list appear with three or four columns, use the classes `.vertical-list--thirds`
-and `.vertical-list--fourths` respectively.
-
-To remove the border-top from the first row of elements add the `.no-border` class to the `ul` element.
-
-Markup: templates/lists-vertical.hbs
-
-Style guide: List styles.2 Vertical list
-*/
 
 .list-vertical {
 
@@ -248,17 +288,6 @@ Style guide: List styles.2 Vertical list
   }
 }
 
-/*
-Small list
-
-These work well for displaying a larger number of list items with just a label
-and some meta information.
-
-Markup: templates/lists-small.hbs
-
-Style guide: List styles.3 Small list
-*/
-
 .list-small {
   @extend %base-list;
   border-top: solid 1px $border-colour;
@@ -304,16 +333,6 @@ Style guide: List styles.3 Small list
   }
 }
 
-/*
-Highlighted List
-
-Lists with highlighted phrases work well for displaying large lists where many items contain the same recurring phrases.
-
-Markup: templates/lists-highlighted.hbs
-
-Style guide: List styles.4 Highlighted List
-*/
-
 .list-highlighted {
   @extend %base-list;
 
@@ -335,16 +354,6 @@ Style guide: List styles.4 Highlighted List
     }
   }
 }
-
-/*
-See more link
-
-Some lists will show a feed of the latest or most relevant items. The see more link takes the user to the index page showing all of the items.
-
-Markup: templates/see-more-link.hbs
-
-Style guide: List styles.5 See more link
-*/
 
 .see-more {
   display: inline-block;
