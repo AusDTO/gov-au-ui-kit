@@ -17,12 +17,18 @@ Style guide: Accordions
 /*
 Usability
 
+### Designing accordions
+
 - Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
+- Use a succinct but descriptive accordion headings / labels.
+- Use [definition or description lists](section-typography.html#guide-typography-5-lists) for glossaries instead of accordions.
+
+### Implementing accordions
+
 - Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
 - JavaScript behaviour is used to replace the browser default for `<details>`.
-- Use [definition or description lists](section-typography.html#guide-typography-5-lists) for glossaries instead of accordions.
-- This framework allows a text/string search of accordion content, even when collapsed.
 - For multiple accordion elements each `details` element must have its own `data-label` attribute.
+- This framework allows a text/string search of accordion content, even when collapsed (string itself remains hidden until opened).
 
 Style guide: Accordions.1 Usability
 */
