@@ -1,22 +1,22 @@
-<header role="controls">
-  <section class="govau--header">
-    <div class="wrapper">
-      <div class="govau--logo">
-        <a href="/" class="logo">gov.au ui-kit</a> <span class="badge--default">draft</span>
-      </div>
-      <div class="feedback">
-        <a href="https://github.com/AusDTO/gov-au-ui-kit/issues/new" class="button--feedback">Give feedback</a>
-      </div>
-    </div>
-  </section>
-  {{# if homepage}}
-  <section class="hero">
-    <div class="wrapper">
-      <span class="site-title">{{options.title}}</span>
-      <p class="tagline">A living style guide of the UI-Kit <abbr title="Sassy CSS">SCSS</abbr> framework, built from the source, using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
-      <p>Documents UI-Kit release: <code>v{{package "version"}}</code></p>
-      <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
-    </div>
-  </section>
-  {{/if}}
+<header role="banner">
+<section class="controls--contrast">
+  <div class="wrapper">
+    <section>
+      <nav class="breadcrumbs--inverted" aria-label="controls-breadcrumb">
+        <ul>
+          <li><a href="#" title="Home">Editorial</a></li>
+          <li><a href="#" title="Menu1">PMC</a></li>
+          <li>Menu2</li>
+        </ul>
+      </nav>
+      <a href="#" role="button">Edit</a>
+    </section>
+    <section class="right">
+      <ul class="inline-links--inverted">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </section>
+  </div>
+</section>
 </header>
