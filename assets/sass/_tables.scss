@@ -138,10 +138,12 @@ Style guide: Tables.2 Accessibility
 
 .calendar-table {
   width: 100%;
+  margin-top: 2 * $base-spacing;
 
   caption {
-    @extend h3;
-    margin: $base-spacing 0;
+    font-size: rem(24);
+    font-weight: 700;
+    margin: 0 0 $small-spacing;
     text-align: left;
   }
 
@@ -183,7 +185,7 @@ Style guide: Tables.2 Accessibility
     }
 
     .date-info {
-      @extend p;
+      font-size: rem(16);
       display: block;
       font-weight: 300;
       margin-top: 0;
