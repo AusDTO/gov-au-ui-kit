@@ -1,9 +1,9 @@
 /*
 Accordions
 
-Use accordions to help users only see the content they need.
+Accordions help users find only the content they need.
 
-The **expand/collapse all** feature will be provided soon&mdash;this will be mandatory if using a series of accordions.
+The **expand/collapse all** feature will be provided soon&mdash;this will be mandatory if using a series of accordion elements.
 
 <hr />
 
@@ -15,21 +15,14 @@ Style guide: Accordions
 */
 
 /*
-Accessibility
-
-- JavaScript behaviour is used to replace the browser default for `<details>`.
-- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
-
-Style guide: Accordions.1 Accessibility
-*/
-
-/*
 Usability
 
 - Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
+- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
+- JavaScript behaviour is used to replace the browser default for `<details>`.
 - Use [definition or description lists](section-typography.html#guide-typography-5-lists) for glossaries instead of accordions.
 - This framework allows a text/string search of accordion content, even when collapsed.
-- For multiple accordion elements each `details` element use unique `data-label` attributes.
+- For multiple accordion elements each `details` element must have its own `data-label` attribute.
 
 Style guide: Accordions.1 Usability
 */
