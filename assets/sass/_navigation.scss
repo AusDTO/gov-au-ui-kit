@@ -526,22 +526,31 @@ Style guide: Navigation.7 Inline navigation
   h4,
   h5,
   h6 {
+    @include media($tablet) {
+      display: table-cell;
+    }
+
     font-size: 1em;
     font-weight: 400;
     margin: 0;
     padding: $small-spacing 1.5em;
     padding-left: 0;
-    display: table-cell;
     vertical-align: middle;
     white-space: nowrap;
     border-bottom: solid 4px transparent;
   }
 
   ul {
+    @include clearfix;
+    @include media($tablet) {
+      display: table-cell;
+      border-top: none;
+    }
     margin: 0;
     padding: 0;
     list-style: none;
-    display: table-cell;
+    display: block;
+    border-top: solid 1px $grey;
   }
 
   li {
@@ -552,7 +561,8 @@ Style guide: Navigation.7 Inline navigation
 
   a {
     background: transparent;
-    display: inline-block;
+    display: block;
+    float: left;
     vertical-align: bottom;
     padding: $small-spacing 1.5em;
     border-bottom: solid 4px transparent;
@@ -563,7 +573,7 @@ Style guide: Navigation.7 Inline navigation
       border-bottom-color: $aqua;
     }
 
-    &.is-active {
+    &.active {
       color: $dark-aqua; //Accessibility: can't be $aqua on $lighter-aqua
       background-color: $lighter-aqua;
       border-bottom-color: $aqua;
