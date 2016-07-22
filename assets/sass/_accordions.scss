@@ -73,7 +73,7 @@ summary {
   }
 
   &::before {
-    @extend .chevron-down-navy;
+    @extend .chevron-down--navy;
 
     content: '';
     position: absolute;

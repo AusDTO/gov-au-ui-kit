@@ -195,7 +195,7 @@ Style guide: Navigation.6 Footer navigation
   }
 
   &::before {
-    @extend .chevron-down-navy;
+    @extend .chevron-down--navy;
     content: '';
     position: absolute;
     top: .5em;
@@ -419,7 +419,7 @@ Style guide: Navigation.6 Footer navigation
 
     ul {
       li:not(:last-child) {
-        @extend .icon-arrow-right-white;
+        @extend .icon-arrow-right--white;
         color: $body-inverted-text-colour;
       }
     }
