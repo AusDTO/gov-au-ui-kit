@@ -1,9 +1,9 @@
 /*
 List styles
 
-List styles make groups of similar content more usable and discoverable.
+List styles make collections of similar content more usable and discoverable.
 
-You can add usual body elements within each list item (eg other ordered and unordered lists).
+You can add usual body elements within each list item (eg ordered and unordered lists).
 
 Use `<a class="see-more">` to link to an index of all items.
 
@@ -23,9 +23,9 @@ Style guide: List styles.1 Horizontal style
 /*
 Vertical style
 
-Vertical style provides multiple stacks (columns) of list items. By default 2 items show and other items wrap below.
+Vertical style provides multiple stacks (columns) of list items. By default, 2 items show and other items wrap below.
 
-You can show more columns of lists using:
+You can show more columns using:
 
 - `.vertical-list--thirds`&mdash;3 list items
 - `.vertical-list--fourths`&mdash;4 list items.
@@ -48,17 +48,17 @@ Style guide: List styles.3 Small list style
 */
 
 /*
-Formatting list items
+Designing lists
 
-You can use these with horizontal, vertical and small list styles:
+You can use these properties with horizontal, vertical and small list styles:
 
-- **image**&mdash;remove `figure` element if you don't need an image (`figure` with no `img` will create left padding)
+- **image**&mdash;use `figure` with `<img>` element (you can use the `figure` element without an image to create left padding)
 - **hero item**&mdash;add `.hero-item` class to a list item (the layout will change to fit the wider image)
 - **meta**&mdash;use a `div.meta` to include supplementary information
 - **tags**&mdash;use `footer.tags` and a `dl` element
 - **no border** on first list items&mdash;add the `.no-border` class to the `ul` element.
 
-Style guide: List styles.4 Formatting list items
+Style guide: List styles.4 Designing lists
 */
 
 /*
@@ -68,7 +68,7 @@ Add `list-highlighted` in the `ul` element of a horizontal or vertical list for 
 
 Markup: templates/lists-highlighted.hbs
 
-Style guide: List styles.4 Formatting list items.1  Highlighting words
+Style guide: List styles.4 Designing lists.1  Highlighting words
 */
 
 %base-list {
