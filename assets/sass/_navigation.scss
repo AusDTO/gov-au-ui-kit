@@ -3,8 +3,6 @@ Navigation
 
 Ensure users understand where they are in the service, where they have been and where they can go.
 
-Use the HTML `<nav>` element and ARIA tags to define clear and accessible navigation links for the page.
-
 <hr />
 
 This guidance is in part adapted from [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
@@ -15,18 +13,97 @@ Style guide: Navigation
 /*
 Global navigation
 
-Provides the highest level of navigation in the framework.
+The global navigation panel is collapsed (hidden) by default.
 
-### Behaviour
-
-The Global Navigation panel is collapsed (hidden) by default on all screen sizes. Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
-
-Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
+Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu without a hamburger button.
 
 Markup: templates/global-navigation.hbs
 
-Style guide: Navigation.1 Global Navigation
+Style guide: Navigation.1 Global navigation
 */
+
+/*
+Local navigation
+
+Use local navigation to help the user go straight to the specific content that meets their needs.
+
+Small screens (up to `$tablet` breakpoint) will see a toggle to expand the navigation panel. Older browsers (IE8 and lower) and those without JavaScript will see the expanded menu without a toggle button.
+
+Markup: templates/local-navigation.hbs
+
+Style guide: Navigation.2 Local navigation
+*/
+
+/*
+Breadcrumbs
+
+Breadcrumbs help the user understand where they are in the service and how they got there.
+
+They appear directly under a page header or hero, from `$tablet` breakpoint upwards.
+
+Markup: templates/breadcrumbs.hbs
+
+Style guide: Navigation.3 Breadcrumbs
+*/
+
+/*
+Contents links
+
+Contents links (index links) help users understand the page structure.
+
+A heading is optional&mdash;use `h2` to `h6` as appropriate to the page structure.
+
+Modern browsers get a smooth scroll down the page.
+
+Markup: templates/index-links.hbs
+
+Style guide: Navigation.4 Contents links
+*/
+
+/*
+Inline links
+
+You can present a list of links as a horizontal block using `ul.inline-links`.
+
+Markup: templates/inline-links.hbs
+
+Style guide: Navigation.5 Inline links
+*/
+
+/*
+Footer navigation
+
+Footers help users who reach the bottom of a page without finding what they want.
+
+Specific [guidance on footer design](section-footers.html) is in the UI-Kit.
+
+Markup: templates/footer-navigation.hbs
+
+Style guide: Navigation.6 Footer navigation
+*/
+
+/*
+Accessibility
+
+- All navigation must be keyboard accessible and include ARIA tags.
+- Use the HTML `<nav>` element for controls and active state (`class="active"`) to show which page the user is on.
+- Use short navigation links. They don't have to be the full page title.
+- Test with users to ensure the navigation hierarchy is not too long or too deep.
+- Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
+
+Style guide: Navigation.7 Accessibility
+*/
+
+/*
+Skip links
+
+Provide skip links to navigation and content to improve keyboard navigation.
+
+Markup: templates/skip-link.hbs
+
+Style guide: Navigation.7 Accessibility.1 Skip links
+*/
+
 .global-nav-toggle {
   position: relative;
   float: right;
@@ -119,30 +196,6 @@ Style guide: Navigation.1 Global Navigation
     }
   }
 }
-
-/*
-Local navigation
-
-The framework provides a vertical navigation menu that shows 3 levels of items.
-
-Ensure the side menu is accessible with a keyboard&mdash;users should be able to tab through every link. Use ARIA tags so screen readers can understand the menu.
-
-Use active state (`class="active"`) to show which page the user is on.
-
-Use short navigation links. They don't have to be the full page title.
-
-Test with users to ensure the navigation hierarchy is not too long or too deep.
-
-### Behaviour
-
-The Local Navigation panel is collapsed (hidden) by default on small screens (up to the `$tablet`). Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
-
-Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
-
-Markup: templates/local-navigation.hbs
-
-Style guide: Navigation.2 Local Navigation
-*/
 
 .local-nav-toggle {
   position: relative;
@@ -264,8 +317,6 @@ Style guide: Navigation.2 Local Navigation
   }
 }
 
-
-
 // This class is legacy as of v1.2
 // Marked for removal at 2.0
 .primary-nav {
@@ -310,23 +361,6 @@ Style guide: Navigation.2 Local Navigation
     }
   }
 }
-
-
-/*
-Breadcrumbs
-
-Use breadcrumbs to help the user understand where they are in the service and how they got there.
-
-Default breadcrumbs appear on a light grey background, and are positioned directly underneath a page header or hero.
-
-Breadcrumbs are hidden on small screens, and only displayed at `$tablet` breakpoint or bigger.
-
-The inverted style (`.breadcrumbs--inverted`) can be used on a darker coloured background. Make sure you check the [colour contrast guidance](http://gov-au-ui-kit.dev/section-colours.html#kssref-colours-3-colour-contrast) before choosing a colour combination.
-
-Markup: templates/breadcrumbs.hbs
-
-Style guide: Navigation.3 Breadcrumbs
-*/
 
 [class^='breadcrumbs'] {
   display: none;
@@ -388,17 +422,6 @@ Style guide: Navigation.3 Breadcrumbs
   }
 }
 
-/*
-Skip Links
-
-See. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">WCAG 2.4.1 Bypass Blocks</a>
-
-When this Success Criterion is not satisfied, it may be difficult for people with some disabilities to reach the main content of a Web page quickly and easily.
-
-Markup: templates/skip-link.hbs
-
-Style guide: Navigation.4 Skip Links
-*/
 .skip-to {
   position: relative;
   z-index: 99;
@@ -428,25 +451,6 @@ Style guide: Navigation.4 Skip Links
     }
   }
 }
-
-
-/*
-Index links
-
-Used to group a collection of text links, Index links can appear at the beginning of an article page as a table of contents, or as a group of links to related content.
-
-An optional heading is included in the markup example. Any level leading from `h2` to `h6` can be used. Use a heading level that's appropriate for your document outline.
-
-### Behaviour
-
-Because these are internal links they trigger a smooth scroll down the page.
-
-This works in Firefox, Chrome, IE10, Opera and Safari. Unsupported browsers would just use the normal internal link behaviour.
-
-Markup: templates/index-links.hbs
-
-Style guide: Navigation.5 Index links
-*/
 
 .index-links {
   margin: ($base-spacing * 2) 0 $base-spacing $small-spacing;
@@ -480,18 +484,6 @@ Style guide: Navigation.5 Index links
   }
 }
 
-
-/*
-Inline Links
-
-For when you'd like a list of links to appear on a single line, use `ul.inline-links`.
-
-When placing these links on a dark background, use `.inline-links--inverted.` Make sure you check the [colour contrast guidance](http://gov-au-ui-kit.dev/section-colours.html#kssref-colours-3-colour-contrast) before choosing a colour combination.
-
-Markup: templates/inline-links.hbs
-
-Style guide: Navigation.6 Inline Links
-*/
 [class^='inline-links'] {
   display: inline-block;
   list-style-type: none;
