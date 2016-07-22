@@ -3,13 +3,15 @@ List styles
 
 List styles make groups of similar content more usable and discoverable.
 
-All list styles can include all of the usual elements within each list item (eg other ordered and unordered lists).
+You can add usual body elements within each list item (eg other ordered and unordered lists).
 
 Style guide: List styles
 */
 
 /*
 Horizontal style
+
+Horizontal style provides a list of stacked items.
 
 Markup: templates/lists-horizontal.hbs
 
@@ -19,6 +21,13 @@ Style guide: List styles.1 Horizontal style
 /*
 Vertical style
 
+Vertical style provides multiple items on each row. By default 2 items show (other items wrap below). You can set to show more items using:
+
+- `.vertical-list--thirds`&mdash;3 items
+- `.vertical-list--fourths`&mdash;4 items.
+
+For [browsers that don't support Flexbox layout](http://caniuse.com/#feat=flexbox) this list style appears as horizontal style list, with images (if used) below the list item.
+
 Markup: templates/lists-vertical.hbs
 
 Style guide: List styles.2 Vertical style
@@ -27,7 +36,7 @@ Style guide: List styles.2 Vertical style
 /*
 Small list style
 
-Use small list style to display a large number of items.
+Use small list style for displaying large groups in small spaces.
 
 Markup: templates/lists-small.hbs
 
@@ -35,40 +44,31 @@ Style guide: List styles.3 Small list style
 */
 
 /*
-Highlighted list style
+Formatting list items
 
-Use highlighted lists style for lists with a large number of items with the same phases.
+You can add and remove list elements as required:
 
-Markup: templates/lists-highlighted.hbs
+- **Image**: remove `figure` element if you don't need an image (you can use `figure` with no `img` to get left padding).
+- **Tags**: use `footer.tags` and a `dl` element.
+- **Meta**: use a `div.meta` to include supplementary information.
+- **Hero item**: add `.hero-item` class to a list item (the layout will change to fit the wider image).
+- **See more**: use `<a class="see-more">` to link to an index of all items.
 
-Style guide: List styles.4 Highlighted list
+Style guide: List styles.4 Formatting list items
 */
 
 /*
-See more link
+Highlighting words
 
-Use `<a class="see-more">` to link to an index of all items.
+Use highlighted lists style for lists with a large number of items that repeat the same words.
 
-Markup: templates/see-more-link.hbs
+Markup: templates/lists-highlighted.hbs
 
-Style guide: List styles.5 See more link
+Style guide: List styles.4 Formatting list items.1  Highlighting words
 */
 
 /*
 Old content
-
-- **Image**: omit the `figure` element if you don't need an image. Note: If you
-leave in a `figure` with no `img` you'll still get a left padding on your item
-- **Tags**: add tags to each item using a `footer.tags` and a `dl` element
-- **Meta**: use a `div.meta` to include supplementary information
-
-Old horizontal list
-
-A Horizontal list can have item(s) with a featured image. Note: If you
-leave in a `figure` with no `img` you'll still get a left padding on your item.
-
-- **Hero item**: by adding the `.hero-item` class to a list item, the layout
-changes to fit a wider image
 
 Vertical list
 
