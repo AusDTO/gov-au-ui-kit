@@ -4,16 +4,17 @@
   linear-gradient(transparent, transparent);
 }
 
+// Generic icons
 .icon-arrow-right {
   @include inline-background-image('arrow-right');
 }
 
-.icon-arrow-right-white {
-  @include inline-background-image('arrow-right-white');
+.icon-arrow-right--white {
+  @include inline-background-image('arrow-right--white');
 }
 
-.icon-arrow-right-aqua {
-  @include inline-background-image('arrow-right-aqua');
+.icon-arrow-right--aqua {
+  @include inline-background-image('arrow-right--aqua');
 }
 
 .bars {
@@ -24,8 +25,13 @@
   @include inline-background-image('close');
 }
 
-.chevron-down-navy {
-  @include inline-background-image('chevron-down-navy');
+.chevron-down--navy {
+  @include inline-background-image('chevron-down--navy');
+}
+
+// Specific functions
+.icon-external-link--aqua {
+  @include inline-background-image('external-link--aqua');
 }
 
 // This class is legacy as of v1.2
