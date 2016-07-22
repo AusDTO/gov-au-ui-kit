@@ -27,7 +27,9 @@ Local navigation
 
 Use local navigation to help the user go straight to the specific content that meets their needs.
 
-Small screens (up to `$tablet` breakpoint) will see a toggle to expand the navigation panel. Older browsers (IE8 and lower) and those without JavaScript will see the expanded menu without a toggle button.
+Small screens (up to `$tablet` breakpoint) will see a toggle to expand the navigation panel.
+
+Older browsers (IE8 and lower) and those without JavaScript will see the expanded menu without a toggle button.
 
 Markup: templates/local-navigation.hbs
 
@@ -51,9 +53,9 @@ Contents links
 
 Contents links (index links) help users understand the page structure.
 
-A heading is optional&mdash;use `h2` to `h6` as appropriate to the page structure.
+A heading is optional&mdash;use the correct header level for the page structure.
 
-Modern browsers get a smooth scroll down the page.
+Users with modern browsers will see a smooth scroll down the page.
 
 Markup: templates/index-links.hbs
 
@@ -75,7 +77,18 @@ Footer navigation
 
 Footers help users who reach the bottom of a page without finding what they want.
 
-Specific [guidance on footer design](section-footers.html) is in the UI-Kit.
+This framework uses CSS Flexboxes to manage columns. It provides:
+
+- lists of links arranged horizontally
+- 2 columns for `$mobile` and `$tablet` breakpoint
+- 4 columns for `$desktop` breakpoint.
+
+### Usability
+
+- Footer grouping doesn't have to mirror the top level header navigation.
+- Important contact information should go in the footer eg general email or phone numbers.
+- Phone numbers should be clickable on a mobile device&mdash;use `tel:` in the link. Follow guidance on [how to write phone numbers](http://content-style-guide.apps.staging.digital.gov.au/az-indexes/p.html#phone-numbers).
+- Don't put physical addresses in the footer. Add them to a contact page that users can navigate to from the footer.
 
 Markup: templates/footer-navigation.hbs
 
