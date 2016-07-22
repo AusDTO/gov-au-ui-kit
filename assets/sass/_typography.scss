@@ -452,6 +452,7 @@ Style guide: Typography.6 Calendar event callout
 .callout--calendar-event {
   background-color: $callout-bg-light-colour;
   padding: $small-spacing $base-spacing $base-spacing;
+  margin: 2 * $base-spacing 0;
 
   time,
   .event-name {
