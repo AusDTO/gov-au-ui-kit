@@ -83,13 +83,6 @@ This framework uses CSS Flexboxes to manage columns. It provides:
 - 2 columns for `$mobile` and `$tablet` breakpoint
 - 4 columns for `$desktop` breakpoint.
 
-### Usability
-
-- Footer grouping doesn't have to mirror the top level header navigation.
-- Important contact information should go in the footer eg general email or phone numbers.
-- Phone numbers should be clickable on a mobile device&mdash;use `tel:` in the link. Follow guidance on [how to write phone numbers](http://content-style-guide.apps.staging.digital.gov.au/az-indexes/p.html#phone-numbers).
-- Don't put physical addresses in the footer. Add them to a contact page that users can navigate to from the footer.
-
 Markup: templates/footer-navigation.hbs
 
 Style guide: Navigation.6 Footer navigation
