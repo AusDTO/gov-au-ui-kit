@@ -7,7 +7,7 @@ Ask only 1 question per page.
 
 <hr />
 
-This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) and [GOV.UK design patterns](https://www.gov.uk/service-manual/user-centred-design/resources/patterns/) under [Open Government Licence v2.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/).
 
 Style guide: Forms
 */
@@ -19,9 +19,17 @@ Style guide: Forms.0 Form controls
 */
 
 /*
+Usability
+
+Style guide: Forms.1 Usability
+*/
+
+/*
 Text input
 
-A single line text input. By default users can enter any combination of letters, numbers or symbols.
+Single line text inputs. They can be limited to number input only using `numberin`.
+
+To trigger the num-pad on iPhones, add a pattern attribute to the input element: `pattern="[0-9]*"`.
 
 Markup:
 <form>
@@ -47,9 +55,6 @@ Markup:
   </p>
 </form>
 
-<strong>Tip:</strong> To show a number-pad on iPhones, when a number field is focussed, add a pattern attribute to the input element like this: <pre>pattern="[0-9]*"</pre>
-Source: <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html#memorable-dates">GOV.UK "Dates" design pattern</a>
-
 Style guide: Forms.0 Form controls.1 Text input
 */
 
@@ -60,17 +65,17 @@ Only ask for the information you absolutely need. Don't mark mandatory fields wi
 
 If you have to ask for optional information, mark the field labels with '(optional)'.
 
-Style guide: Forms.1 Optional & mandatory fields
+Style guide: Forms.1 Usability.1 Optional & mandatory fields
 */
 
 /*
 Labels
 
-All forms fields should have labels. Don't hide labels, unless the surrounding context makes them unnecessary.
-
-Tell the user what they need to enter into the field. Label text should be short and direct. Avoid colons at the end of labels.
-
-Align labels above their fields. They should be associated with form fields using the `for` attribute.
+- All forms fields should have labels.
+- Don't hide labels, unless the surrounding context makes them unnecessary.
+- Tell the user what they need to enter into the field. Label text should be short and direct.
+- Avoid colons at the end of labels.
+- Align labels above their fields. They should be associated with form fields using the `for` attribute.
 
 Markup:
 <form>
@@ -78,17 +83,15 @@ Markup:
   <input class="form-control" id="full-name" type="text" />
 </form>
 
-Style guide: Forms.2 Labels
+Style guide: Forms.1 Usability.2 Labels
 */
 
 /*
 Hint text
 
-Use hint text to give the user contextual help about how to provide the information.
-
-The hint text should be above the form field and always visible.
-
-Make sure screen readers can read hint text correctly (use the correct ARIA tags).
+- Use hint text to give the user contextual help about how to provide the information.
+- The hint text should be above the form field and always visible.
+- Use ARIA tags to make sure screen readers can read hint text correctly.
 
 Markup:
 <form>
@@ -97,7 +100,7 @@ Markup:
   <input type="text" id="name" aria-describedby="name-hint" />
 </form>
 
-Style guide: Forms.3 HintText
+Style guide: Forms.1 Usability.3 HintText
 */
 
 %base-input {
@@ -156,9 +159,9 @@ form {
   }
 
   /*
-  Textarea input
+  Text area input
 
-  A multi-line text input that can be resized vertically by the user.
+  The `<textarea>` element gives a multi-line text input the user can resize vertically.
 
   Markup:
   <form>
@@ -166,7 +169,7 @@ form {
     <textarea name="texta" id="texta"></textarea>
   </form>
 
-  Style guide: Forms.TextAreaInput
+  Style guide: Forms.0 Form controls.2 Text area input
   */
 
   textarea {
@@ -228,7 +231,7 @@ form {
   /*
 Radio button input
 
-A collection of mutually exclusive options.
+The `radio` input allows users to see all available choices at once and select exactly 1 option.
 
 Markup:
 <form>
@@ -241,8 +244,9 @@ Markup:
           </fieldset>
 </form>
 
-Style guide: Forms.RadioButtonInput
+Style guide: Forms.0 Form controls.3 Radio button input
 */
+
   input[type='radio'] {
     & + label {
       &::before {
@@ -282,7 +286,7 @@ Style guide: Forms.RadioButtonInput
   /*
 Checkbox input
 
-A collection of options where any number of options can be chosen.
+The `checkbox` input allows users to select 1 or more options from a visible list.
 
 Markup:
 <form>
@@ -297,7 +301,7 @@ Markup:
         </fieldset>
 </form>
 
-Style guide: Forms.CheckboxInput
+Style guide: Forms.0 Form controls.4 Checkbox input
 */
   input[type='checkbox'] + label {
     &::before {
