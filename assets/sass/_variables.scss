@@ -1,6 +1,6 @@
 $base-z-index: 0;
 $base-border-radius: 3px;
-$tiny-border-radius: ($base-border-radius / 3);
+$tiny-border-radius: 1px;
 $large-border-radius: ($base-border-radius * 4);
 
 $transition-timing: .2s;

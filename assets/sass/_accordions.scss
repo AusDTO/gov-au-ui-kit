@@ -102,7 +102,7 @@ summary {
   top: 0;
   height: auto;
   overflow: hidden;
-  padding: $small-spacing $base-spacing;
+  padding: $base-spacing $base-spacing $small-spacing;
   border: solid $small-spacing $lighter-aqua;
   border-top: none;
   border-bottom-right-radius: $tiny-border-radius;
