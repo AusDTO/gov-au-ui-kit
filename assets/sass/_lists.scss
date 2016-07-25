@@ -5,7 +5,7 @@ List styles make collections of similar content more usable and discoverable.
 
 You can add usual body elements within each list item (eg ordered and unordered lists).
 
-Use `<a class="see-more">` to link to an index of all items.
+Use `<a class="see-more">` after your list to link to an index of all items.
 
 Style guide: List styles
 */
@@ -23,9 +23,9 @@ Style guide: List styles.1 Horizontal style
 /*
 Vertical style
 
-Vertical style provides multiple stacks (columns) of list items. By default, 2 items show and other items wrap below.
+Vertical style provides multiple stacks (columns) of list items. By default the vertical lists are displayed in 2 columns.
 
-You can show more columns using:
+You can change the columns used by using:
 
 - `.vertical-list--thirds`&mdash;3 list items
 - `.vertical-list--fourths`&mdash;4 list items.
