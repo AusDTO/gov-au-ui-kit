@@ -34,6 +34,10 @@ Markup:
     <input name="numberin" id="numberin" type="number" pattern="[0-9]*" />
   </p>
   <p>
+    <label for="phonein">A phone number input field:</label>
+    <input name="phonein" id="phonein" type="tel" />
+  </p>
+  <p>
     <label for="textinvalid">An invalid field:</label>
     <input name="textinvalid" id="textinvalid" type="text" class="invalid" />
   </p>
@@ -150,6 +154,7 @@ form {
 
   [type='text'],
   [type='number'],
+  [type='tel'],
   [type='email'],
   [type='password'] {
     @extend %base-input;
