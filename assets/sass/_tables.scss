@@ -31,6 +31,32 @@ Markup:
 Style guide: Tables.1 Basic Tables
 */
 
+
+/*
+Calendar Tables
+
+Calendar tables are used to display a list of events or calendar items in tabular format.
+
+Markup:
+  <table class="calendar-table">
+    <caption>2016 public holidays</caption>
+    <tr>
+      <th scope="row"><time datetime="2016-01-01T02:30:00+00:00">Friday <span>1</span> January</time></th>
+      <td>New Year's Day</td>
+    </tr>
+    <tr>
+      <th scope="row"><time datetime="2016-01-06T02:30:00+00:00">Wednesday <span>6</span> January</time></th>
+      <td>Devonport Cup <span class="date-info">From 11:00 am in Devonport</span></td>
+    </tr>
+    <tr>
+      <th scope="row"><time datetime="2016-01-26T02:30:00+00:00">Tuesday <span>26</span> January</time></th>
+      <td>Australia Day</td>
+    </tr>
+  </table>
+
+Style guide: Tables.2 Calendar Table
+*/
+
 /*
 Complex Tables
 
@@ -84,8 +110,8 @@ Style guide: Tables.2 Accessibility
 
 
 .content-table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 
   tr:nth-child(even) {
     background-color: $non-white;
@@ -106,5 +132,71 @@ Style guide: Tables.2 Accessibility
 
   thead {
     border-bottom: solid 2px $grey;
+  }
+}
+
+
+.calendar-table {
+  width: 100%;
+  margin-top: 2 * $base-spacing;
+
+  caption {
+    margin: 0 0 $small-spacing;
+    font-size: rem(24);
+    font-weight: 700;
+    text-align: left;
+  }
+
+  tr {
+    border-bottom: $tiny-spacing solid $white;
+  }
+
+  th {
+    display: block;
+    width: 100%;
+    padding: $small-spacing $base-spacing;
+    text-transform: uppercase;
+    color: $aqua;
+
+    @include media($mobile) {
+      display: table-cell;
+      width: 6 * $base-spacing;
+    }
+
+    span {
+      font-size: rem(28);
+      font-weight: $heading-font-weight;
+      line-height: $base-heading-leading;
+      display: block;
+      margin: 0;
+    }
+  }
+
+  td {
+    display: block;
+    margin: 0;
+    padding: 0 $base-spacing $small-spacing;
+    font-size: rem(19);
+    font-weight: $heading-font-weight;
+    text-align: center;
+
+    @include media($mobile) {
+      display: table-cell;
+      padding-top: $small-spacing;
+      border-left: $tiny-spacing solid $white;
+      text-align: left;
+    }
+
+    .date-info {
+      display: block;
+      margin-top: 0;
+      font-weight: 300;
+      font-size: rem(16);
+    }
+  }
+
+  th,
+  td {
+    background-color: $background-secondary-colour;
   }
 }
