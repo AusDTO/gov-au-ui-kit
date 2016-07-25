@@ -17,7 +17,7 @@ Text input
 
 Single line text inputs.
 
-They can be limited to number input only by setting the `type` attribute to `number`. To trigger the num-pad on iPhones, add a pattern attribute to the input element: `pattern="[0-9]*"`.
+They can be limited to number input only by setting the `type` attribute to `number`. For telephone numbers set the `type` attribute to `tel`. To trigger the num-pad on iPhones, add a pattern attribute to the input element: `pattern="[0-9]*"`.
 
 Markup: templates/text-input-single-line.hbs
 
@@ -64,16 +64,20 @@ form {
 
   label {
     display: block;
+    margin-bottom: $tiny-spacing;
+    margin-top: $tiny-spacing;
   }
 
   .hint {
     display: block;
-    color: $body-text-colour;
+    margin-bottom: $tiny-spacing;
     font-size: rem(14);
+    color: $body-text-colour;
   }
 
   [type='text'],
   [type='number'],
+  [type='tel'],
   [type='email'],
   [type='password'] {
     @extend %base-input;
@@ -217,7 +221,7 @@ Markup:
     <label for="aaa">AAA</label>
     <input id="bbb" name="reply" type="checkbox" value="BBB"/>
     <label for="bbb">BBB</label>
-     <input id="ccc" name="reply" type="checkbox" value="CCC"/>
+    <input id="ccc" name="reply" type="checkbox" value="CCC"/>
     <label for="ccc">CCC</label>
   </fieldset>
 </form>
