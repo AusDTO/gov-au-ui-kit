@@ -105,7 +105,7 @@ main {
 
   ![Diagram of the layout with optional aside nav](kss-assets/img/img_grid_layout_nav.png)
 
-  By default the sidebar sits on the right hand side of the main content. When the sidebar contains content controls (e.g. filters), instead of navigation, it can sit on the left side. Use the class `.sidebar-has-controls` on the parent `main` element:
+  By default the sidebar sits to the right of the main content. When the sidebar contains content controls (eg filters), instead of navigation, it can sit on the left side. Use the class `.sidebar-has-controls` on the parent `main` element:
 
   ```
   <main class="sidebar-has-controls">
