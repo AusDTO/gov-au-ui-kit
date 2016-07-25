@@ -24,22 +24,14 @@
 }
 
 /*
-Wrapper class
-
-There is a wrapper class (`<div class="wrapper">`) for wrapping the contents of a block within the grid, while allowing its outer container to run the full viewport width.
-
-This is currently used for the page `header` and `footer`, and also for the [breadcrumbs](section-navigation.html#kssref-navigation-2-breadcrumbs).
-
-Style guide: Grid.6 Wrapper class
-*/
-
-.wrapper {
-  @include wrapper-padding;
-  @include outer-container;
-}
-
-/*
 Layout
+
+Maximum page width is set to 1200px. Gutters between the columns are a minimum of 32px.
+
+```
+$max-width: em(1200) !global;
+$gutter: em(32);
+```
 
 We define the grid placement for the following page layout elements:
 
@@ -59,8 +51,23 @@ The following diagram shows how the main content area takes up 12 of 16 columns 
 
 ![Diagram of the layout across 16 columns](kss-assets/img/img_grid_layout.png)
 
-Style guide: Grid.7 Layout
+Style guide: Grid.5 Layout
 */
+
+/*
+Wrapper class
+
+There is a wrapper class (`<div class="wrapper">`) for wrapping the contents of a block within the grid, while allowing its outer container to run the full viewport width.
+
+This is currently used for the page `header` and `footer`, and also for the [breadcrumbs](section-navigation.html#kssref-navigation-2-breadcrumbs).
+
+Style guide: Grid.5 Layout.1 Wrapper
+*/
+
+.wrapper {
+  @include wrapper-padding;
+  @include outer-container;
+}
 
 body {
   @include flex-layout;
@@ -92,7 +99,7 @@ main {
 
   ![Diagram of the layout with optional aside nav](kss-assets/img/img_grid_layout_nav.png)
 
-  Style guide: Grid.7 Layout
+  Style guide: Grid.6 Sidebar
   */
   @include direction-context(right-to-left) {
     .sidebar {
@@ -177,7 +184,7 @@ Header & footer
 
 The site header and footer are targeted by their ARIA roles, not a `class` or `id`. Use `banner` and `contentinfo` roles, respectively.
 
-Style guide: Grid.8 Header & footer
+Style guide: Grid.7 Header & footer
 */
 
 header {

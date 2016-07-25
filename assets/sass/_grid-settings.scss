@@ -13,32 +13,13 @@ Primary content is always contained in 12 columns. This allows for seamless intr
 
 The grid unit proportions, gutters and spacing are defined in `_grid-settings.scss`.
 
+If you need an element not defined here you are probably not the only one&mdash;please [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues) so we can provide it for everyone.
+
 <hr />
 
 This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 Style guide: Grid
-*/
-
-/*
-Extending settings
-
-If you need an element not defined here you are probably not the only one&mdash;please [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues) so we can provide it for everyone.
-
-Style guide: Grid.2 Extending settings
-*/
-
-/*
-Margins & gutters
-
-Maximum page width is set to 1200px. Gutters between the columns are a minimum of 32px.
-
-```
-$max-width: em(1200) !global;
-$gutter: em(32);
-```
-
-Style guide: Grid.3 Margins & gutters
 */
 
 $grid-columns: 4 !global;
@@ -66,7 +47,7 @@ $tablet: new-breakpoint(min-width 768px 12);
 $desktop: new-breakpoint(min-width $max-width 16);
 ```
 
-Style guide: Grid.4 Breakpoints
+Style guide: Grid.3 Breakpoints
 */
 
 @import 'vendor/neat/neat-helpers';
@@ -85,7 +66,7 @@ $visual-grid: true;
 
 See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/examples/).
 
-Style guide: Grid.5 Debugging
+Style guide: Grid.4 Debugging
 */
 
 // Toggle visibility of your grid columns for development/debugging.
