@@ -15,6 +15,11 @@ UI-Kit:
   - ‘Old’ headings retained and available when wrapped in a container with the class `.gov-speak` (demarcated for more complex typography, eg for annual reports).
   - Refactors numerous `@extends` to clean up CSS output + numerous minor code improvs.
 
+Styleguide:
+
+- Accordions section rewritten.
+- …
+
 Bugfixes:
 
 - …
