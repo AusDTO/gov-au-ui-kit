@@ -6,6 +6,7 @@
 
 UI-Kit:
 
+- New table style: calendar tables, for displaying a series of days and their events (eg public holidays).
 - Local nav (sidebar):
   - [undocumented] Adds new `.current` class for current page in the IA.
   - [incomplete & undocumented] Adds top-level item support.
