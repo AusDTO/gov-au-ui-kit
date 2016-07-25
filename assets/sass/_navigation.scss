@@ -3,7 +3,7 @@ Navigation
 
 Ensure users understand where they are in the service, where they have been and where they can go.
 
-<hr />
+***
 
 This guidance is in part adapted from [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
@@ -65,7 +65,7 @@ Style guide: Navigation.4 Contents links
 /*
 Inline links
 
-You can present a list of links as a horizontal block using `ul.inline-links`.
+You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.
 
 Markup: templates/inline-links.hbs
 
@@ -89,25 +89,26 @@ Style guide: Navigation.6 Footer navigation
 */
 
 /*
-Accessibility
-
-- All navigation must be keyboard accessible and include ARIA tags.
-- Use the HTML `<nav>` element for controls and active state (`class="active"`) to show which page the user is on.
-- Use short navigation links. They don't have to be the full page title.
-- Test with users to ensure the navigation hierarchy is not too long or too deep.
-- Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
-
-Style guide: Navigation.7 Accessibility
-*/
-
-/*
 Skip links
 
 Provide skip links to navigation and content.
 
+These are hidden visually by default but keyboard accessible.
+
+Include skip links between the opening of the `<body>` and the page `<header`.
+
+<p class="callout">
+  To test,
+  <a href="javascript:;">click to move focus to this</a> then press <kbd>Tab</kbd> to show:
+  <ul>
+    <li>Skip to main content</li>
+    <li>Skip to section navigation</li>
+  </ul>
+</p>
+
 Markup: templates/skip-link.hbs
 
-Style guide: Navigation.7 Accessibility.1 Skip links
+Style guide: Navigation.7 Skip links
 */
 
 .global-nav-toggle {
@@ -507,3 +508,15 @@ Style guide: Navigation.7 Accessibility.1 Skip links
     }
   }
 }
+
+/*
+Accessibility
+
+- All navigation must be keyboard accessible and include ARIA tags.
+- Use the HTML `<nav>` element for controls and the given state classes to show which page the user is on.
+- Use short navigation links. They don't have to be the full page title.
+- Test with users to ensure the navigation hierarchy is not too long or too deep.
+- Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
+
+Style guide: Navigation.8 Accessibility
+*/
