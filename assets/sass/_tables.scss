@@ -1,95 +1,23 @@
 /*
-Content tables
+Tables
 
-Tabular content arranged in rows and columns with column headings.
-An alternating row colour is provided to improve readability.
+Tables make data content easier to scan.
 
-Markup:
-  <table class="content-table">
-      <tr>
-        <th>Date</th>
-        <th>Event</th>
-        <th>Venue</th>
-      </tr>
-      <tr>
-        <td>12 February</td>
-        <td>Waltz with Strauss</td>
-        <td>Main Hall</td>
-      </tr>
-      <tr>
-        <td>24 March</td>
-        <td>The Obelisks</td>
-        <td>West Wing</td>
-      </tr>
-      <tr>
-        <td>14 April</td>
-        <td>The What</td>
-        <td>Main Hall</td>
-      </tr>
-  </table>
+This framework uses striped/zebra tables (alternating row colours).
 
-Style guide: Tables.1 Basic Tables
-*/
+***
 
+This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
-/*
-Calendar Tables
-
-Calendar tables are used to display a list of events or calendar items in tabular format.
-
-Markup:
-  <table class="calendar-table">
-    <caption>2016 public holidays</caption>
-    <tr>
-      <th scope="row"><time datetime="2016-01-01T02:30:00+00:00">Friday <span>1</span> January</time></th>
-      <td>New Year's Day</td>
-    </tr>
-    <tr>
-      <th scope="row"><time datetime="2016-01-06T02:30:00+00:00">Wednesday <span>6</span> January</time></th>
-      <td>Devonport Cup <span class="date-info">From 11:00 am in Devonport</span></td>
-    </tr>
-    <tr>
-      <th scope="row"><time datetime="2016-01-26T02:30:00+00:00">Tuesday <span>26</span> January</time></th>
-      <td>Australia Day</td>
-    </tr>
-  </table>
-
-Style guide: Tables.2 Calendar Table
+Style guide: Tables
 */
 
 /*
-Complex Tables
+Basic content tables
 
-Markup:
-  <table class="content-table">
-    <caption>Shelly's Daughters</caption>
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Birthday</th>
-      </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row">Jackie</th>
-      <td>5</td>
-      <td>April 5</td>
-    </tr>
-    <tr>
-      <th scope="row">Beth</th>
-      <td>8</td>
-      <td>January 14</td>
-    </tr>
-    <tr>
-      <th scope="row">Beth</th>
-      <td>8</td>
-      <td>January 14</td>
-    </tr>
-    </tbody>
-  </table>
+Markup: templates/table-examples.hbs
 
-Style guide: Tables.3 Complex Tables
+Style guide: Tables.1 Basic tables
 */
 
 table {
@@ -122,7 +50,13 @@ table {
   }
 }
 
+/*
+Calendar table variant
 
+Markup: templates/table-calendar.hbs
+
+Style guide: Tables.2 Calendar table variant
+*/
 .calendar-table {
   width: 100%;
   margin-top: 2 * $base-spacing;
@@ -191,15 +125,27 @@ table {
 /*
 Accessibility
 
-The HTML for tables needs to be carefully considered for accessibility.
-* Consider using the [`scope` attribute](https://www.w3.org/TR/html401/struct/tables.html#adef-scope) to associate the header to a row or column
-* Consider using a [`<caption>` element](https://www.w3.org/wiki/HTML/Elements/caption) to title the table
-* Avoid complex tables with multiple levels of headers and spanned cells
+Tables should be used for data, never design.
 
-[Further guidance on tables at w3.org](https://www.w3.org/WAI/tutorials/tables/)
+Consider more accessible ways to format content before using a table:
 
-### Table head, body, and foot
-The [`<thead>`, `<tbody>`, and `<tfoot>` elements](https://www.w3.org/TR/html401/struct/tables.html#h-11.2.3) provide no accessibility functionality but depending on browser support `<thead>` and `<tfoot>` may be repeated across pages when long tables are printed.
+- bullet points lists
+- numbered lists
+- definition lists.
 
-Style guide: Tables.4 Accessibility
+Avoid tables with multiple header levels and spanned cells.
+
+### Headers & captions
+
+Title tables using the [`<caption>` element](https://www.w3.org/wiki/HTML/Elements/caption) inside the `<table>` element.
+
+Row and column headers should be set with the [`scope` attribute](https://www.w3.org/TR/html401/struct/tables.html#adef-scope).
+
+Don't use `<thead>`, `<tbody>` and `<tfoot>`.
+
+***
+
+More [guidance on making accessible tables](https://www.w3.org/WAI/tutorials/tables/) is provided by the W3C.
+
+Style guide: Tables.3 Accessibility
 */
