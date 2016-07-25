@@ -18,8 +18,11 @@ UI-Kit:
 
 Styleguide:
 
-- Accordions section revised.
-- Tables section revised.
+We have revised a number of our styleguide sections, simplifying them while adding explicit accessibility guidance under a common heading. Sections revised:
+
+- Forms
+- Accordions
+- Tables
 
 Bugfixes:
 
