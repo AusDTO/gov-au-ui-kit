@@ -25,10 +25,10 @@ Vertical style
 
 Vertical style provides multiple stacks (columns) of list items. By default the vertical lists are displayed in 2 columns.
 
-You can change the columns used by using:
+You can change the number of columns used:
 
-- `.vertical-list--thirds`&mdash;3 list items
-- `.vertical-list--fourths`&mdash;4 list items.
+- `.vertical-list--thirds give 3 columns of list items
+- `.vertical-list--fourths give 4 columns of list items.
 
 For [browsers that don't support Flexbox layout](http://caniuse.com/#feat=flexbox) lists will appear as in horizontal style with images (if used) below each list item.
 
