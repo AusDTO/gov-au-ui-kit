@@ -9,9 +9,15 @@ This framework uses striped/zebra tables (alternating row colours).
 
 This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
+Style guide: Tables
+*/
+
+/*
+Basic content tables
+
 Markup: templates/table-examples.hbs
 
-Style guide: Tables
+Style guide: Tables.1 Basic tables
 */
 
 table {
@@ -49,7 +55,7 @@ Calendar table variant
 
 Markup: templates/table-calendar.hbs
 
-Style guide: Tables.1 Calendar table variant
+Style guide: Tables.2 Calendar table variant
 */
 .calendar-table {
   width: 100%;
@@ -141,5 +147,5 @@ Don't use `<thead>`, `<tbody>` and `<tfoot>`.
 
 More [guidance on making accessible tables](https://www.w3.org/WAI/tutorials/tables/) is provided by the W3C.
 
-Style guide: Tables.2 Accessibility
+Style guide: Tables.3 Accessibility
 */
