@@ -6,7 +6,14 @@
 
 UI-Kit:
 
-- …
+- Local nav (sidebar):
+  - [undocumented] Adds new `.current` class for current page in the IA.
+  - [incomplete & undocumented] Adds top-level item support.
+- Typography overhaul:
+  - Removes `margin-top` from most content elements (headings excluded).
+  - Support for heading styles stripped back, now covering `h1` to `h4` and resized.
+  - ‘Old’ headings retained and available when wrapped in a container with the class `.gov-speak` (demarcated for more complex typography, eg for annual reports).
+  - Refactors numerous `@extends` to clean up CSS output + numerous minor code improvs.
 
 Bugfixes:
 
