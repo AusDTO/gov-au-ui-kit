@@ -85,9 +85,18 @@
 
   .govau--logo {
     float: left;
+    position: relative;
 
     @include media($tablet) {
       padding-bottom: 0;
+    }
+
+    .brandbar {
+      position: absolute;
+      top: 42px;
+      right: 0;
+      width: 50px;
+      height: 5px;
     }
   }
 
@@ -124,7 +133,8 @@
   margin: ($base-spacing * 1.5) 0;
 
   h2 {
-    font-size: 1em;
+    font-size: rem(17); //Should this be a var?
+    font-weight: $bold-font-weight;
     margin-top: 0;
     padding: 0;
   }
