@@ -18,8 +18,8 @@ UI-Kit:
 
 Styleguide:
 
-- Accordions section rewritten.
-- …
+- Accordions section revised.
+- Tables section revised.
 
 Bugfixes:
 
