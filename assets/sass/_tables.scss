@@ -110,8 +110,8 @@ Style guide: Tables.2 Accessibility
 
 
 .content-table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 
   tr:nth-child(even) {
     background-color: $non-white;
@@ -141,9 +141,9 @@ Style guide: Tables.2 Accessibility
   margin-top: 2 * $base-spacing;
 
   caption {
+    margin: 0 0 $small-spacing;
     font-size: rem(24);
     font-weight: 700;
-    margin: 0 0 $small-spacing;
     text-align: left;
   }
 
@@ -152,11 +152,11 @@ Style guide: Tables.2 Accessibility
   }
 
   th {
-    color: $aqua;
     display: block;
+    width: 100%;
     padding: $small-spacing $base-spacing;
     text-transform: uppercase;
-    width: 100%;
+    color: $aqua;
 
     @include media($mobile) {
       display: table-cell;
@@ -164,7 +164,9 @@ Style guide: Tables.2 Accessibility
     }
 
     span {
-      @extend h2;
+      font-size: rem(28);
+      font-weight: $heading-font-weight;
+      line-height: $base-heading-leading;
       display: block;
       margin: 0;
     }
@@ -172,23 +174,24 @@ Style guide: Tables.2 Accessibility
 
   td {
     display: block;
-    @extend h4;
     margin: 0;
     padding: 0 $base-spacing $small-spacing;
+    font-size: rem(19);
+    font-weight: $heading-font-weight;
     text-align: center;
 
     @include media($mobile) {
-      border-left: $tiny-spacing solid $white;
       display: table-cell;
       padding-top: $small-spacing;
+      border-left: $tiny-spacing solid $white;
       text-align: left;
     }
 
     .date-info {
-      font-size: rem(16);
       display: block;
-      font-weight: 300;
       margin-top: 0;
+      font-weight: 300;
+      font-size: rem(16);
     }
   }
 
