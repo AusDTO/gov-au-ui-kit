@@ -35,7 +35,7 @@ $gutter: em(32);
 
 We define the grid placement for the following page layout elements:
 
-- `header[role='banner']`& `footer[role='contentinfo']`
+- `header[role='banner']` and `footer[role='contentinfo']`
 - `main.content-main`
 - `aside`.
 
@@ -50,6 +50,12 @@ For each new element you will need to set column properties for the breakpoints,
 The following diagram shows how the main content area takes up 12 of 16 columns at `$desktop` and above:
 
 ![Diagram of the layout across 16 columns](kss-assets/img/img_grid_layout.png)
+
+For iOS users ensure you set the `viewport` to the `device-width` in your `<head>` to ensure your site is responsive:
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
 Style guide: Grid.5 Layout
 */
