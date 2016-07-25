@@ -99,6 +99,19 @@ main {
 
   ![Diagram of the layout with optional aside nav](kss-assets/img/img_grid_layout_nav.png)
 
+  By default the sidebar sits on the right hand side of the main content. When the sidebar contains content controls (e.g. filters), instead of navigation, it can sit on the left side. Use the class `.sidebar-has-controls` on the parent `main` element:
+
+  ```
+  <main class="sidebar-has-controls">
+    <aside class="sidebar">
+    ...
+    </aside>
+    <article role="main" id="content" class="content-main">
+    ...
+    </article>
+  </main>
+  ```
+
   Style guide: Grid.6 Sidebar
   */
   @include direction-context(right-to-left) {
