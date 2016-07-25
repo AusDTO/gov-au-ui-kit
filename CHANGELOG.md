@@ -8,7 +8,10 @@ UI-Kit:
 
 - New table style: calendar tables, for displaying a series of days and their events (eg public holidays).
 - Local nav (sidebar):
+  - Now appears to the right of the main content space (not markup change required).
+  - Toggle-able to the left (as previously) by applying `.sidebar-has-controls` to the `<main>` element.
   - [undocumented] Adds new `.current` class for current page in the IA.
+  - [undocumented] [MARKUP CHANGE] `.is-active` has been replaced by `.active`.
   - [incomplete & undocumented] Adds top-level item support.
 - Typography overhaul:
   - Removes `margin-top` from most content elements (headings excluded).
