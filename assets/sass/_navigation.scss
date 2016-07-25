@@ -190,6 +190,10 @@ Style guide: Navigation.6 Footer navigation
       display: none;
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .local-nav-toggle {

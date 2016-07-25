@@ -65,13 +65,23 @@
 
   position: relative;
   padding: $medium-spacing 0 ($base-spacing * 3);
-  padding-bottom: $medium-spacing;
-  margin-bottom: 0;
-  background-color: $header-bg-colour;
+  padding-bottom: 0;
   color: $body-inverted-text-colour;
 
+  background-color: #134058;
+  background-image: url('../examples/header-bg.png');
+  background-position: top right;
+  background-repeat: repeat-y;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#004057+0,007b91+100
+  background: #004057; // Old browsers
+  background: -moz-linear-gradient(45deg,  #004057 0%, #007b91 100%); // FF3.6-15
+  background: -webkit-linear-gradient(45deg,  #004057 0%,#007b91 100%); // Chrome10-25,Safari5.1-6
+  background: linear-gradient(45deg,  #004057 0%,#007b91 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004057', endColorstr='#007b91',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+  */
+
   @include media($tablet) {
-    padding-bottom: $medium-spacing;
+    //  padding-bottom: $medium-spacing;
   }
 
   .govau--logo {
@@ -96,6 +106,74 @@
   [class^='badge'] {
     vertical-align: text-bottom;
     margin-left: $tiny-spacing;
+  }
+}
+
+//DELETE THIS:
+.visuallyhidden {
+  display: none;
+}
+
+.homeintro {
+  p {
+    font-size: rem(24);
+  }
+}
+
+.links-group {
+
+  margin: ($base-spacing * 1.5) 0;
+
+  h2 {
+    font-size: 1em;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  ul {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    width: 50%;
+    float: left;
+
+    @include media($tablet) {
+      width: 25%;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.brandbar {
+  background-color: $red;
+  height: 8px;
+  position: relative;
+
+  .b1 {
+    position: absolute;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    $bar-orange: #f38c22;
+    background-color: $bar-orange;
+  }
+
+  .b2 {
+    position: absolute;
+    left: 75%;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    $bar-gold: #fbc515;
+    background-color: $bar-gold;
   }
 }
 
