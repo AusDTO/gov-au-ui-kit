@@ -42,17 +42,13 @@ Style guide: Links & anchors.1 Basic styles
   color: $text-colour;
 
   a {
-
-    &,
-    &:link {
-      color: $text-colour;
-      text-decoration: none;
-      border-bottom: solid 1px $hover-bg-colour;
-      outline-color: transparent;
-      transition-timing-function: $transition-easing;
-      transition-duration: $transition-timing;
-      transition-property: background-color, color, outline-color;
-    }
+    color: $text-colour;
+    text-decoration: none;
+    border-bottom: solid 1px $hover-bg-colour;
+    outline-color: transparent;
+    transition-timing-function: $transition-easing;
+    transition-duration: $transition-timing;
+    transition-property: background-color, color, outline-color;
 
     &:hover,
     &:focus {
