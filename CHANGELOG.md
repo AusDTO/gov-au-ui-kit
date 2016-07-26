@@ -6,6 +6,7 @@
 
 UI-Kit:
 
+- Callouts: extends with a new class to highlight specific dates (`.callout--calendar-event`).
 - Text input `type` `tel` support.
 - New table style: calendar tables, for displaying a series of days and their events (eg public holidays).
 - Local nav (sidebar):
