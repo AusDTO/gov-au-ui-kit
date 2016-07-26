@@ -543,7 +543,7 @@ Style guide: Navigation.7 Skip links
 .links-group {
   @include outer-container;
   // margin: ($base-spacing * 1.5) 0;​
-  margin-top: 2em;
+  margin-top: 3em;
 
   h2 {
     font-size: 1em;
@@ -565,7 +565,6 @@ Style guide: Navigation.7 Skip links
 
     li {
       @include span-columns(4);
-      min-height: 48px;
       float: left;
 
       @include media ($mobile) {
