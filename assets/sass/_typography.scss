@@ -485,6 +485,8 @@ Callouts & warnings
 
 There is also a **calendar callout** to draw attention to things on specific dates.
 
+There is also a **reminder callout** to draw attention to things that are coming up.
+
 Markup: templates/callouts-examples.hbs
 
 Style guide: Typography.6 Callouts & warnings
@@ -534,6 +536,58 @@ Style guide: Typography.6 Callouts & warnings
     font-size: rem(17);
     font-weight: $base-font-weight;
     margin-bottom: $tiny-spacing;
+  }
+}
+
+.callout--reminder {
+  @extend %base-callout;
+  position: relative;
+
+  @include media($mobile) {
+    padding-left: 3.5 * $base-spacing;
+
+    h2,
+    h3,
+    h4 {
+      margin-top: $small-spacing;
+    }
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin-top: $tiny-spacing;
+  }
+
+  &:before {
+    background-image: url('https://cdn.rawgit.com/AusDTO/gov-au-images/master/savings-forward.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: ' ';
+    display: block;
+    height: 1.5 * $base-spacing;
+    left: 0;
+    margin-right: $base-spacing;
+    position: relative;
+    top: 0;
+    width: 1.5 * $base-spacing;
+
+    @include media($mobile) {
+      height: 2 * $base-spacing;
+      left: $medium-spacing;
+      position: absolute;
+      top: 1.5 * $base-spacing;
+      width: 2 * $base-spacing;
+    }
+  }
+
+  &.icon-back:before {
+    background-image: url('https://cdn.rawgit.com/AusDTO/gov-au-images/master/savings-back.png');
+  }
+
+  strong {
+    color: $callout-reminder-highlight;
+    display: block;
   }
 }
 
