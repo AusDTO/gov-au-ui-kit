@@ -41,7 +41,8 @@ Style guide: Links & anchors.1 Basic styles
   $link-disabled-color: rgba($text-colour, 0.5);
   color: $text-colour;
 
-  a {
+  a,
+  a:not([role='button']) {
     color: $text-colour;
     text-decoration: none;
     outline: none;
