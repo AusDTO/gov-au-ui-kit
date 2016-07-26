@@ -546,21 +546,17 @@ Style guide: Typography.6 Callouts & warnings
   @include media($mobile) {
     padding-left: 3.5 * $base-spacing;
 
-    h2,
-    h3,
-    h4 {
-      margin-top: $small-spacing;
+    .next-event {
+      margin-top: $tiny-spacing;
     }
   }
 
-  h2,
-  h3,
-  h4 {
+  .next-event {
     margin-top: $tiny-spacing;
   }
 
-  &:before {
-    background-image: url('https://cdn.rawgit.com/AusDTO/gov-au-images/master/savings-forward.png');
+  &::before {
+    background-image: url('../../assets/img/icons/savings-forward.svg');
     background-repeat: no-repeat;
     background-size: contain;
     content: ' ';
@@ -582,7 +578,7 @@ Style guide: Typography.6 Callouts & warnings
   }
 
   &.icon-back:before {
-    background-image: url('https://cdn.rawgit.com/AusDTO/gov-au-images/master/savings-back.png');
+    background-image: url('../../assets/img/icons/savings-back.svg');
   }
 
   strong {
