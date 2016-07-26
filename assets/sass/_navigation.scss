@@ -556,8 +556,15 @@ Style guide: Navigation.7 Skip links
     padding: 0;
     list-style: none;
 
+    // ul {
+    //   @include clearfix;
+    //   margin: 0;
+    //   padding: 0;
+    //   list-style: none;
+    // }
+
     li {
-      // @include span-columns(4);
+      @include span-columns(4);
       min-height: 48px;
       float: left;
 
