@@ -4,7 +4,7 @@
 
 ### Next release (scheduled 2016-07-26)
 
-UI-Kit:
+#### UI-Kit changes
 
 - Callouts: extends with a new class to highlight specific dates (`.callout--calendar-event`).
 - Text input `type` `tel` support.
@@ -21,17 +21,17 @@ UI-Kit:
   - ‘Old’ headings retained and available when wrapped in a container with the class `.gov-speak` (demarcated for more complex typography, eg for annual reports).
   - Refactors numerous `@extends` to clean up CSS output + numerous minor code improvs.
 
-Styleguide:
+#### Styleguide changes
 
-We have revised a number of our styleguide sections, simplifying them while adding explicit accessibility guidance under a common heading. Sections revised:
+Source references in the styleguide examples now link to the file & line in our GitHub repository. If you have feedback on our code please let get in touch. :)
+
+We have also revised a number of our styleguide sections, simplifying them while adding explicit accessibility guidance under a common heading. Sections revised:
 
 - Forms
 - Accordions
 - Tables
 
-Bugfixes:
-
-- …
+#### Other changes
 
 Build environment:
 
