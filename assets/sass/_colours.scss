@@ -215,12 +215,15 @@ $background-colour:             $white;
 $background-secondary-colour:   $non-white;
 
 $link-colour:                   $non-black;
-$link-hover-colour:             $aqua;
+$link-colour--hover:            $light-aqua;
 
-$button-colour:                 $aqua;
-$button-colour--hover:          $darker-aqua;
-$button-colour--active:         $dark-aqua;
-$button-colour--disabled:       $light-grey;
+$link-inverted-colour:          $white;
+$link-inverted-colour--hover:   $white;
+
+$button-bg-colour:              $aqua;
+$button-bg-colour--hover:       $darker-aqua;
+$button-bg-colour--active:      $dark-aqua;
+$button-bg-colour--disabled:    $light-grey;
 
 $button-inverted-colour:        $white;
 
@@ -228,7 +231,6 @@ $button-text-colour:            $white;
 $button-inverted-text-colour:   $navy;
 
 $focus-colour:                  $lighter-aqua;
-
 $error-colour:                  $red;
 $success-colour:                $green;
 $warning-colour:                $yellow;
@@ -245,11 +247,11 @@ $box-shadow-colour:             rgba($non-black, 0.5);
 $body-text-colour:              $non-black;
 $body-inverted-text-colour:     $white;
 
-$badge-colour-default:          $grey;
-$badge-colour-alpha:            $non-black;
-$badge-colour-beta:             $maroon;
-$badge-colour-error:            $error-colour;
-$badge-colour-success:          $green;
+$badge-colour--default:         $grey;
+$badge-colour--alpha:           $non-black;
+$badge-colour--beta:            $maroon;
+$badge-colour--error:           $error-colour;
+$badge-colour--success:         $green;
 
 $controls-bg-colour:            $dark-navy;
 $controls-contrast-bg-colour:   $maroon;

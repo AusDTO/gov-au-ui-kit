@@ -548,11 +548,11 @@ Style guide: Typography.7 Badges
 */
 
 $badges: (
-  'default':  $badge-colour-default,
-  'alpha':    $badge-colour-alpha,
-  'beta':     $badge-colour-beta,
-  'error':    $badge-colour-error,
-  'success':  $badge-colour-success,
+  'default':  $badge-colour--default,
+  'alpha':    $badge-colour--alpha,
+  'beta':     $badge-colour--beta,
+  'error':    $badge-colour--error,
+  'success':  $badge-colour--success,
 );
 
 @each $badge-type, $colour in $badges {

@@ -37,27 +37,23 @@ Style guide: Links & anchors.1 Basic styles
   border-bottom: 1px solid transparent;
 }
 
-@mixin colours($text-colour, $hover-bg-colour, $hover-text-colour) {
+@mixin link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
   $link-disabled-color: rgba($text-colour, 0.5);
   color: $text-colour;
 
   a {
     color: $text-colour;
     text-decoration: none;
+    outline: none;
     border-bottom: solid 1px $hover-bg-colour;
-    outline-color: transparent;
     transition-timing-function: $transition-easing;
-    transition-duration: $transition-timing;
-    transition-property: background-color, color, outline-color;
+    transition-duration: $transition-timing-fast;
+    transition-property: background-color, color;
 
     &:hover,
     &:focus {
-      outline: none;
       background-color: $hover-bg-colour;
       color: $hover-text-colour;
-      outline-width: 3px;
-      outline-color: $hover-bg-colour;
-      outline-style: solid;
     }
 
     &[rel~='external'] {
@@ -66,7 +62,7 @@ Style guide: Links & anchors.1 Basic styles
       margin-right: $base-spacing;
 
       &:hover {
-        border-bottom: 1px solid transparent;
+        border-color: transparent;
       }
 
       &::after {
@@ -74,13 +70,6 @@ Style guide: Links & anchors.1 Basic styles
         @extend %base-link-icon--after;
 
         background-size: (0.75 * $medium-spacing) auto;
-      }
-    }
-
-    &.button,
-    &[role='button'] {
-      &:hover {
-        border: 1px solid transparent;
       }
     }
 
@@ -98,33 +87,30 @@ Style guide: Links & anchors.1 Basic styles
       position: relative;
       margin-right: $base-spacing;
       font-weight: $heading-font-weight;
-      color: $button-colour;
+      color: $button-bg-colour;
 
       &::after {
         @extend %icon-arrow-right--aqua;
-
         content: '';
         position: absolute;
+        top: 0;
+        right: -($medium-spacing);
         display: block;
         width: $medium-spacing;
         height: $medium-spacing;
-        top: 0;
-        right: -($medium-spacing);
         background-repeat: no-repeat;
         background-position: right $tiny-spacing;
         background-size: (0.8 * $small-spacing) auto;
-        border-bottom: none;
       }
 
       &:hover,
       &:focus {
         color: $hover-text-colour;
-        border-bottom: 1px solid transparent;
       }
     }
   }
 
-  .disabled {
+  &.disabled {
     outline: none;
     color: $link-disabled-color;
     text-decoration: none;
@@ -137,19 +123,5 @@ Style guide: Links & anchors.1 Basic styles
 
 .content-main,
 footer[role='contentinfo'] {
-  @include colours($non-black, $light-aqua, $non-black);
-}
-
-.govau--header,
-.hero {
-  @include colours($non-white, $non-white, $non-black);
-
-  a {
-    &.button,
-    &[role='button'] {
-      &:hover {
-        border: 1px solid transparent;
-      }
-    }
-  }
+  @include link-colours($non-black, $light-aqua, $non-black);
 }

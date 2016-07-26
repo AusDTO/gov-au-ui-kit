@@ -63,6 +63,7 @@ Style guide: List styles.4 Highlighted word style
   padding: 0;
 
   .tags {
+    @include link-colours($button-bg-colour, v, $link-colour);
     color: $grey;
 
     dl,
@@ -81,21 +82,19 @@ Style guide: List styles.4 Highlighted word style
     }
 
     a {
-      color: $link-hover-colour;
       padding: 2px $tiny-spacing;
-      border: 1px solid $link-hover-colour;
+      border: 1px solid $button-bg-colour;
       border-radius: 2px;
 
-      &:hover {
-        color: $white;
-        background-color: $link-hover-colour;
+      &:hover,
+      &:focus {
+        border-color: $link-colour--hover;
       }
     }
   }
 
   .meta {
     font-size: $small-font-size;
-    //margin-top: $small-spacing;
     margin-bottom: $small-spacing;
 
     time {

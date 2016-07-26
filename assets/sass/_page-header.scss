@@ -1,4 +1,5 @@
 [class^='controls'] {
+  @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
   padding: $tiny-spacing 0;
   background-color: $controls-bg-colour;
   color: $body-inverted-text-colour;
@@ -56,6 +57,7 @@
 }
 
 .govau--header {
+  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
   position: relative;
   padding: $medium-spacing 0 ($base-spacing * 3);
   padding-bottom: $medium-spacing;
@@ -84,11 +86,6 @@
     font-family: $base-sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-
-    &:hover,
-    &:focus {
-      border-bottom: 1px;
-    }
   }
 
   [class^='badge'] {
@@ -122,6 +119,7 @@
 }
 
 .hero {
+  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
   padding: ($base-spacing * 2) 0;
   margin-bottom: 0;
   background-color: $hero-bg-colour;
@@ -139,8 +137,7 @@
     font-weight: $base-font-weight;
   }
 
-  code,
-  a {
+  code {
     color: $body-inverted-text-colour;
   }
 }
