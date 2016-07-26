@@ -123,11 +123,11 @@ Style guide: Navigation.1 Global Navigation
 /*
 Local navigation
 
-The framework provides a vertical navigation menu that shows 3 levels of items.
+The framework provides a vertical navigation menu that shows 4 levels of items.
 
 Ensure the side menu is accessible with a keyboard&mdash;users should be able to tab through every link. Use ARIA tags so screen readers can understand the menu.
 
-Use active state (`class="active"`) to show which page the user is on.
+Use active state (`class="is-active"`) to show which page the user is on.
 
 Use short navigation links. They don't have to be the full page title.
 
