@@ -64,8 +64,10 @@
   @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
 
   position: relative;
-  padding: $medium-spacing 0 ($base-spacing * 3);
-  padding-bottom: 0;
+  padding: $base-spacing 0 ($base-spacing * 3);
+  padding-bottom: $medium-spacing;
+  margin-bottom: 0;
+  background-color: $header-bg-colour;
   color: $body-inverted-text-colour;
 
   background-image: url('../examples/header-bg.png');
@@ -107,6 +109,11 @@
   [class^='badge'] {
     vertical-align: text-bottom;
     margin-left: $tiny-spacing;
+  }
+
+  .breadcrumbs,
+  .breadcrumbs--inverted {
+    margin-top: $medium-spacing;
   }
 }
 
@@ -153,32 +160,6 @@
   }
 }
 
-.brandbar {
-  background-color: $red;
-  height: 8px;
-  position: relative;
-
-  .b1 {
-    position: absolute;
-    left: 25%;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    $bar-orange: #f38c22;
-    background-color: $bar-orange;
-  }
-
-  .b2 {
-    position: absolute;
-    left: 75%;
-    top: 0;
-    bottom: 0;
-    width: 25%;
-    $bar-gold: #fbc515;
-    background-color: $bar-gold;
-  }
-}
-
 .feedback {
   display: none;
 
@@ -203,25 +184,35 @@
 }
 
 .hero,
-.hero-sml {
+.hero-sml,
+.hero-med {
   padding: ($base-spacing * 2) 0;
   margin-bottom: 0;
   background-color: $non-white;
-  color: $aqua;
+  color: $navy;
 
   &.corporate {
+    //^ class name from platforms
     background-color: $hero-bg-colour;
     color: $body-inverted-text-colour;
   }
 
   h1 {
-    font-size: rem(24);
+    font-size: rem(38);
     margin-top: 0;
+    max-width: 15em;
+    /*@include media($desktop) {
+      width: 60%;
+    }*/
   }
 
   p {
-    font-size: rem(17);
-    margin: 0;
+    font-size: rem(20);
+    margin-bottom: 0;
+    max-width: 30em;
+    /*@include media($desktop) {
+      width: 60%;
+    }*/
   }
 
   // Should this be deprecated?
@@ -245,4 +236,92 @@
 
 .hero-sml {
   padding: $medium-spacing 0;
+
+  p {
+    font-size: rem(17);
+  }
+}
+
+.hero-med {
+  padding: ($base-spacing * 1.5) 0;
+}
+
+/*
+  Prototype branding bar. Work in progress
+*/
+.brandbar {
+  $bar-morn-1: #e63426;
+  $bar-morn-2: #f38c22;
+  $bar-morn-3: #fbc515;
+
+  background-color: $bar-morn-1;
+  height: 8px;
+  position: relative;
+  transition: background-color ease 1s;
+
+  .b1 {
+    position: absolute;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: $bar-morn-2;
+  }
+
+  .b2 {
+    position: absolute;
+    left: 75%;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    background-color: $bar-morn-3;
+  }
+
+  &.dusk {
+    $bar-dusk-1: #a62355;
+    $bar-dusk-2: #f16a6a;
+    $bar-dusk-3: #9c0009;
+
+    background-color: $bar-dusk-1;
+
+    .b1 {
+      background-color: $bar-dusk-2;
+    }
+
+    .b2 {
+      background-color: $bar-dusk-3;
+    }
+  }
+
+  &.night {
+    $bar-night-1: #07457f;
+    $bar-night-2: #3e83c5;
+    $bar-night-3: #003567;
+
+    background-color: $bar-night-1;
+
+    .b1 {
+      background-color: $bar-night-2;
+    }
+
+    .b2 {
+      background-color: $bar-night-3;
+    }
+  }
+
+  &.noon {
+    $bar-noon-1: #0074b3;
+    $bar-noon-2: #9ad5f3;
+    $bar-noon-3: #44c2ef;
+
+    background-color: $bar-noon-1;
+
+    .b1 {
+      background-color: $bar-noon-2;
+    }
+
+    .b2 {
+      background-color: $bar-noon-3;
+    }
+  }
 }
