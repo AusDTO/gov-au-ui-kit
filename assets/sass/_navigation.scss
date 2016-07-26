@@ -538,6 +538,67 @@ Style guide: Navigation.7 Skip links
   }
 }
 
+
+/* Grouped links */
+.links-group {
+  // margin: ($base-spacing * 1.5) 0;​
+  margin-top: 2em;
+
+  h2 {
+    font-size: 1em;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .popular-now {
+    @include outer-container;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    // &.no-border {
+    //   li:nth-child(-n+4) {
+    //     border-top: none;
+    //     padding-top: 0;
+    //   }
+    // }
+
+    // @include media ($desktop) {
+    //   @include span-columns (16)
+    // }
+
+    li {
+      // @include span-columns(4);
+      float: left;
+
+      @include media ($desktop) {
+        @include span-columns(4);
+        @include omega(4n);
+        }
+
+      @include media ($tablet) {
+        @include span-columns(3);
+        @include omega(4n);
+        }
+
+      // @include media ($mobile) {
+      //   @include span-columns(3);
+      //   @include omega(4n);
+      //   }
+
+      //
+      // @include media($tablet) {
+      //   flex: 0 0 22%;
+      //   @include span-columns (4)
+      // }
+      }
+  }
+
+  a {
+    color: $white;
+  }
+}
+
 /*
 Accessibility
 
