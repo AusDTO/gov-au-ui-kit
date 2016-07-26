@@ -21,6 +21,18 @@ Style guide: List styles.1 Horizontal style
 */
 
 /*
+Horizontal shaded style
+
+Horizontal style can also be displayed in a shaded style.
+
+List items can be highlighted using `.highlighted`
+
+Markup: templates/lists-horizontal-shaded.hbs
+
+Style guide: List styles.2 Horizontal style shaded
+*/
+
+/*
 Vertical style
 
 Vertical style provides multiple columns of list items. By default the vertical lists are displayed in 2 columns.
@@ -168,6 +180,45 @@ Style guide: List styles.4 Highlighted word style
   }
 
 }
+
+.list-horizontal-shaded {
+  @extend %base-list;
+
+  li {
+    background-color: $shaded-list-bg-colour;
+    border: 0;
+    margin-bottom: $tiny-spacing;
+    padding: 1.5 * $small-spacing;
+
+    h2,
+    h3,
+    h4,
+    .list-item-title {
+      font-size: rem(20);
+    }
+
+    span {
+      display: block;
+      font-size: $small-font-size;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    &.highlighted {
+      background-color: $highlighted-list-bg-colour;
+
+      h2,
+      h3,
+      h4,
+      .list-item-title {
+        color: $highlighted-list-header-colour;
+      }
+    }
+  }
+}
+
 
 .list-vertical {
   @extend %base-list;
