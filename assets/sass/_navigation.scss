@@ -568,7 +568,7 @@ Style guide: Navigation.7 Skip links
       float: left;
 
       @include media ($mobile) {
-        @include span-columns(4 of 4);
+        @include span-columns(2 of 4);
         // @include omega(2n);
         }
 
