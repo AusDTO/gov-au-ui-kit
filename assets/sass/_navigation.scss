@@ -97,7 +97,7 @@ Style guide: Navigation.6 Footer navigation
   padding: 0;
 
   &::before {
-    @extend .bars;
+    @extend %icon-bars;
     content: '';
     position: absolute;
     top: .25em;
@@ -110,7 +110,7 @@ Style guide: Navigation.6 Footer navigation
 
   &[aria-expanded='true'] {
     &::before {
-      @extend .close;
+      @extend %icon-close;
     }
   }
 
@@ -195,7 +195,7 @@ Style guide: Navigation.6 Footer navigation
   }
 
   &::before {
-    @extend .chevron-down--navy;
+    @extend %icon-chevron-down--navy;
     content: '';
     position: absolute;
     top: .5em;
@@ -272,7 +272,7 @@ Style guide: Navigation.6 Footer navigation
 
       ul {
         a {
-          @extend .icon-arrow-right;
+          @extend %icon-arrow-right;
           padding-left: $base-spacing + $small-spacing;
           background-repeat: no-repeat;
           background-position: $base-spacing $small-spacing * 1.45;
@@ -396,7 +396,7 @@ Style guide: Navigation.6 Footer navigation
       padding: 0;
 
       &:not(:last-child) {
-        @extend .icon-arrow-right;
+        @extend %icon-arrow-right;
         margin-right: $small-spacing;
         padding-right: $medium-spacing;
         background-repeat: no-repeat;
@@ -419,7 +419,7 @@ Style guide: Navigation.6 Footer navigation
 
     ul {
       li:not(:last-child) {
-        @extend .icon-arrow-right--white;
+        @extend %icon-arrow-right--white;
         color: $body-inverted-text-colour;
       }
     }

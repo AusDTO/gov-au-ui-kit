@@ -74,7 +74,7 @@ Style guide: Links & anchors.1 Basic styles
       }
 
       &::after {
-        @extend .icon-external-link--aqua;
+        @extend %icon-external-link--aqua;
         @extend %base-link-icon--after;
 
         background-size: (0.75 * $medium-spacing) auto;
@@ -105,7 +105,7 @@ Style guide: Links & anchors.1 Basic styles
       color: $button-colour;
 
       &::after {
-        @extend .icon-arrow-right--aqua;
+        @extend %icon-arrow-right--aqua;
 
         content: '';
         position: absolute;
