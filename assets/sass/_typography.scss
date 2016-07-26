@@ -490,22 +490,26 @@ Markup: templates/callouts-examples.hbs
 Style guide: Typography.6 Callouts & warnings
 */
 
-.callout {
+%base-callout {
   margin: $base-spacing $small-spacing;
   padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
   border-radius: $tiny-border-radius;
   box-shadow: 0 0 8px $light-grey;
 }
 
+.callout {
+  @extend %base-callout;
+}
+
 .callout--warning {
-  @extend .callout;
+  @extend %base-callout;
 
   border-left: $tiny-spacing solid $red;
   padding-left: $base-spacing - $tiny-spacing;
 }
 
 .callout--calendar-event {
-  @extend .callout;
+  @extend %base-callout;
 
   padding-bottom: $small-spacing; // reset
   background-color: $callout-bg-light-colour;
