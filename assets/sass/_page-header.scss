@@ -71,16 +71,9 @@
   background-image: url('../examples/header-bg.png');
   background-position: top right;
   background-repeat: repeat-y;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#004057+0,007b91+100
-  background: #004057; // Old browsers
-  background: -moz-linear-gradient(45deg,  #004057 0%, #007b91 100%); // FF3.6-15
-  background: -webkit-linear-gradient(45deg,  #004057 0%,#007b91 100%); // Chrome10-25,Safari5.1-6
-  background: linear-gradient(45deg,  #004057 0%,#007b91 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004057', endColorstr='#007b91',GradientType=1 ); // IE6-9 fallback on horizontal gradient
-  */
 
   @include media($tablet) {
-    //  padding-bottom: $medium-spacing;
+    padding-bottom: 0;
   }
 
   .govau--logo {
@@ -209,13 +202,29 @@
   }
 }
 
-.hero {
-  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
+.hero,
+.hero-sml {
   padding: ($base-spacing * 2) 0;
   margin-bottom: 0;
-  background-color: $hero-bg-colour;
-  color: $body-inverted-text-colour;
+  background-color: $non-white;
+  color: $aqua;
 
+  &.corporate {
+    background-color: $hero-bg-colour;
+    color: $body-inverted-text-colour;
+  }
+
+  h1 {
+    font-size: rem(24);
+    margin-top: 0;
+  }
+
+  p {
+    font-size: rem(17);
+    margin: 0;
+  }
+
+  // Should this be deprecated?
   .site-title {
     @extend h1;
 
@@ -223,6 +232,7 @@
     color: $body-inverted-text-colour;
   }
 
+  // Should this be deprecated?
   .tagline {
     @extend h4;
     font-weight: $base-font-weight;
@@ -231,4 +241,8 @@
   code {
     color: $body-inverted-text-colour;
   }
+}
+
+.hero-sml {
+  padding: $medium-spacing 0;
 }
