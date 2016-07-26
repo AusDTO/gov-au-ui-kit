@@ -16,6 +16,13 @@
   }
 }
 
+.guide-section {
+  .wrapper {
+    box-sizing: border-box;;
+    min-width: 0;
+  }
+}
+
 .guide-section-nav {
   @include media($tablet) {
     margin-top: ($base-spacing * 4);

@@ -50,18 +50,7 @@ footer[role='contentinfo'] {
     }
   }
 
-  /*
-  Footer navigation
-
-  A number of lists of links arranged horizontally. Displays two columns up to a
-  $tablet breakpoint, and four columns beyond that.
-
-  The columns are managed by CSS flex boxes, allowing 1 to 4 columns.
-
-  Markup: templates/footer-navigation.hbs
-
-  Style guide: Navigation.Footer Navigation
-  */
+  // Footer navigation is documented in the navigation partial.
   .footer-top {
     border-bottom: 1px solid $border-colour;
     margin-bottom: $base-spacing * 2;
