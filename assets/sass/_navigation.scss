@@ -88,29 +88,6 @@ Markup: templates/footer-navigation.hbs
 Style guide: Navigation.6 Footer navigation
 */
 
-/*
-Skip links
-
-Provide skip links to navigation and content.
-
-These are hidden visually by default but keyboard accessible.
-
-Include skip links between the opening of the `<body>` and the page `<header`.
-
-<p class="callout">
-  To test,
-  <a href="javascript:;">click to move focus to this</a> then press <kbd>Tab</kbd> to show:
-  <ul>
-    <li>Skip to main content</li>
-    <li>Skip to section navigation</li>
-  </ul>
-</p>
-
-Markup: templates/skip-link.hbs
-
-Style guide: Navigation.7 Skip links
-*/
-
 .global-nav-toggle {
   position: relative;
   float: right;
@@ -448,6 +425,31 @@ Style guide: Navigation.7 Skip links
     }
   }
 }
+
+/*
+Skip links
+
+Provide skip links to navigation and content.
+
+These are hidden visually by default but keyboard accessible.
+
+Include skip links between the opening of the `<body>` and the page `<header>`.
+
+<div class="callout">
+  <p>To test,
+    <a href="javascript:;">click to move focus to this</a> then press <kbd>Tab</kbd> to show:
+  </p>
+  <ul>
+    <li>Skip to main content</li>
+    <li>Skip to section navigation</li>
+  </ul>
+  <p>(The example space will be visually empty until the skip links receive focus.)</p>
+</div>
+
+Markup: templates/skip-link.hbs
+
+Style guide: Navigation.7 Skip links
+*/
 
 .skip-to {
   position: relative;
