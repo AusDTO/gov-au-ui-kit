@@ -1,0 +1,26 @@
+/*
+Accessibility
+
+Styling tools for implementing accessibility measures.
+
+Style guide: Accessibility
+*/
+
+/*
+Hidden but accessible to screen-readers
+
+If you want to hide an element visually, but still have it
+read out by screen-readers, use the `a11y-hidden` class:
+
+```
+<span class="a11y-hidden">Hello screen-reader!</span>
+```
+
+Style guide: Accessibility.1 Hidden but accessible to screen-readers
+*/
+
+.a11y-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
