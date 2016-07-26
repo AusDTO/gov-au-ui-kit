@@ -59,6 +59,7 @@
   position: relative;
   padding: $medium-spacing 0 ($base-spacing * 3);
   padding-bottom: $medium-spacing;
+  margin-bottom: 0;
   background-color: $header-bg-colour;
   color: $body-inverted-text-colour;
 
@@ -121,6 +122,7 @@
 
 .hero {
   padding: ($base-spacing * 2) 0;
+  margin-bottom: 0;
   background-color: $hero-bg-colour;
   color: $body-inverted-text-colour;
 

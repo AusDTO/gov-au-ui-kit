@@ -1,6 +1,6 @@
 footer[role='contentinfo'] {
 
-  @include pad($base-spacing 0);
+  @include pad(( $base-spacing * 2 ) 0);
   background-color: $non-white;
   border-top: 6px solid $border-contrast-colour;
 
@@ -13,7 +13,7 @@ footer[role='contentinfo'] {
   }
 
   .footer-logo {
-    margin: 0 0 $base-spacing;
+    //margin: 0 0 $base-spacing;
 
     @include media($tablet) {
       @include span-columns(3 of 12);
@@ -26,7 +26,7 @@ footer[role='contentinfo'] {
 
   .footer-links {
 
-    @include media($mobile) {
+    @include media($tablet) {
       @include span-columns(9 of 12);
     }
 
@@ -38,8 +38,9 @@ footer[role='contentinfo'] {
 
     li {
       margin-right: $small-spacing;
+      display: block;
 
-      @include media($mobile) {
+      @include media($tablet) {
         display: inline-block;
       }
     }

@@ -104,6 +104,7 @@ Style guide: Typography.3 Spacing
 $base-leading: 1.6;
 $base-heading-leading: 1.4;
 $small-leading: 1.2;
+$double-leading: 2;
 
 // Base spacing, relative to leading.
 $base-spacing: $base-leading * 1em;
@@ -208,28 +209,31 @@ Markup: templates/heading-body-styles.hbs
 Style guide: Typography.2 Headings & body copy
 */
 
+// Styling for headings
+//
+// Note that we don't style h5 and h6.
+
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   line-height: $base-heading-leading;
-  font-weight: $heading-font-weight;
-  margin-bottom: $small-spacing * .5;
+  font-weight: $base-font-weight;
+  margin-bottom: $tiny-spacing;
   margin-top: $base-spacing;
 }
 
 h1 {
-  font-size: rem(32);
-  line-height: $small-leading;
+  // This needs to be changed to live in the 'header', where the breadcrumbs currently are (grey bar).
+  font-size: rem(24);
+  //line-height: $small-leading;
 
   @include media($tablet) {
-    font-size: rem(44);
+    font-size: rem(26);
   }
 
   @include media($desktop) {
-    font-size: rem(40);
+    font-size: rem(32);
   }
 
   &:first-of-type {
@@ -238,11 +242,12 @@ h1 {
 }
 
 h2 {
-  font-size: rem(28);
+  font-size: rem(32);
   line-height: $small-leading;
+  margin-top: $base-spacing;
 
   @include media($tablet) {
-    font-size: rem(32);
+    font-size: rem(44);
   }
 }
 
@@ -256,21 +261,78 @@ h3 {
 }
 
 h4 {
-  font-size: rem(19);
+  font-size: rem(18);
   font-weight: $heading-font-weight;
+}
 
-  @include media($tablet) {
-    font-size: rem(22);
+
+// Document this later.
+.gov-speak {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: $base-heading-leading;
+    font-weight: $heading-font-weight;
+    margin-bottom: $tiny-spacing;
+    margin-top: $base-spacing;
   }
-}
 
-h5 {
-  font-size: rem(16);
-  font-weight: $heading-font-weight;
-}
+  h1 {
+    font-size: rem(32);
+    line-height: $small-leading;
 
-h6 {
-  @extend h5;
+    @include media($tablet) {
+      font-size: rem(44);
+    }
+
+    @include media($desktop) {
+      font-size: rem(40);
+    }
+
+    &:first-of-type {
+      margin-top: $tiny-spacing;
+    }
+  }
+
+  h2 {
+    font-size: rem(28);
+    line-height: $small-leading;
+
+    @include media($tablet) {
+      font-size: rem(32);
+    }
+  }
+
+  h3 {
+    font-size: rem(24);
+    font-weight: $heading-font-weight;
+
+    @include media($tablet) {
+      font-size: rem(26);
+    }
+  }
+
+  h4 {
+    font-size: rem(19);
+    font-weight: $heading-font-weight;
+
+    @include media($tablet) {
+      font-size: rem(22);
+    }
+  }
+
+  h5 {
+    font-size: rem(17);
+    font-weight: $heading-font-weight;
+  }
+
+  h6 {
+    font-size: rem(17);
+    font-weight: $heading-font-weight;
+  }
 }
 
 a {
@@ -317,6 +379,7 @@ kbd {
   background-color: $non-white;
   color: $dark-aqua;
   text-align: center;
+  font-size: $small-font-size;
   padding: 0 $small-spacing;
   margin: 0 $tiny-spacing;
 }
@@ -331,19 +394,17 @@ strong {
 
 // For display font sizing.
 .display {
-  @extend h1;
+  @extend h2;
 }
 
 // More specialised typography.
 //
 // For abstracts or page introductory paragraphs.
 .abstract {
-  @extend h4;
-
+  font-size: rem(24);
   font-weight: $base-font-weight;
-  border-bottom: 1px solid;
-  padding-bottom: 1.3 * $base-spacing;
-  margin-bottom: 2 * $base-spacing;
+  border-bottom: 1px solid $border-colour;
+  padding-bottom: $medium-spacing;
 }
 
 hr {
@@ -389,8 +450,9 @@ dl,
 p,
 dt,
 dd {
-  margin-bottom: $small-spacing;
-  font-size: rem(16);
+  font-size: rem(17);
+  margin-top: 0; // Check up on where margin-top is coming from...
+  margin-bottom: $medium-spacing;
   line-height: $base-spacing;
 }
 
@@ -401,14 +463,15 @@ li {
 
   ul,
   ol {
-    margin-top: ($small-spacing / 2);
+    margin-top: $tiny-spacing;
     margin-bottom: 0;
   }
 }
 
 dt {
+  display: inline-block;
   font-weight: $bold-font-weight;
-  margin-top: $medium-spacing;
+  margin-top: $tiny-spacing;
 
   &:first-of-type {
     margin-top: 0;
@@ -435,8 +498,8 @@ Style guide: Typography.6 Callouts & warnings
 .callout--warning {
   @extend .callout;
 
-  border-left: ($small-spacing / 2) solid $red;
-  padding-left: $base-spacing - ($small-spacing / 2);
+  border-left: $tiny-spacing solid $red;
+  padding-left: $base-spacing - $tiny-spacing;
 }
 
 
@@ -518,10 +581,6 @@ blockquote {
       text-align: center;
       margin: 0;
     }
-
-    &::after {
-      margin-top: -($tiny-spacing);
-    }
   }
 
   &::before,
@@ -535,6 +594,7 @@ blockquote {
 
   &::before {
     margin-left: -($small-spacing * 0.75);
+    padding-bottom: $tiny-spacing;
     content: open-quote;
   }
 
@@ -548,7 +608,7 @@ blockquote {
 
   footer {
     margin-top: $medium-spacing;
-    padding-top: ($small-spacing / 2);
+    padding-top: $tiny-spacing;
     border-top: 1px solid $light-grey;
   }
 
@@ -575,7 +635,7 @@ blockquote {
 }
 
 q {
-  // Investigate: switching to html entitites?
+  // Investigate: switching to html entities?
   quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';
 }
 

@@ -182,10 +182,16 @@ Style guide: Navigation.2 Local Navigation
   }
 }
 
+.local-nav {
+  padding-top: 0;
+  @include media($tablet) {
+    padding: $base-spacing 0;
+  }
+}
+
 .primary-nav,
 .local-nav {
   margin: 0 0 $base-spacing;
-  padding: $base-spacing 0;
   overflow: hidden;
   transition: padding ($transition-timing * 2) ease;
 
@@ -199,6 +205,15 @@ Style guide: Navigation.2 Local Navigation
       padding: $base-spacing 0;
     }
   }
+
+  h1 {
+    font-size: 1em;
+    font-weight: $base-font-weight;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: $base-leading;
+  }
+
 
   ul {
     margin: 0;
@@ -255,9 +270,12 @@ Style guide: Navigation.2 Local Navigation
       background-color: $focus-colour;
     }
 
-    &:active,
     &.active,
     &.is-active {
+      font-weight: $bold-font-weight;
+    }
+
+    &.current {
       background-color: $focus-colour;
     }
 
@@ -269,6 +287,8 @@ Style guide: Navigation.2 Local Navigation
 // This class is legacy as of v1.2
 // Marked for removal at 2.0
 .primary-nav {
+  padding: $base-spacing 0;
+
   .nav-heading {
     color: $darker-aqua;
     background: $background-secondary-colour;
@@ -458,8 +478,8 @@ Style guide: Navigation.5 Index links
   h4,
   h5,
   h6 {
-    @extend h6;
-    margin: 0 0 $tiny-spacing;
+    font-size: rem(17);
+    margin-top: $base-spacing;
     color: $grey;
     font-weight: $base-font-weight;
   }

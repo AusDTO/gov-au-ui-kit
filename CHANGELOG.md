@@ -6,7 +6,27 @@
 
 UI-Kit:
 
-- …
+- Text input `type` `tel` support.
+- New table style: calendar tables, for displaying a series of days and their events (eg public holidays).
+- Local nav (sidebar):
+  - Now appears to the right of the main content space (not markup change required).
+  - Toggle-able to the left (as previously) by applying `.sidebar-has-controls` to the `<main>` element.
+  - [undocumented] Adds new `.current` class for current page in the IA.
+  - [undocumented] [MARKUP CHANGE] `.is-active` has been replaced by `.active`.
+  - [incomplete & undocumented] Adds top-level item support.
+- Typography overhaul:
+  - Removes `margin-top` from most content elements (headings excluded).
+  - Support for heading styles stripped back, now covering `h1` to `h4` and resized.
+  - ‘Old’ headings retained and available when wrapped in a container with the class `.gov-speak` (demarcated for more complex typography, eg for annual reports).
+  - Refactors numerous `@extends` to clean up CSS output + numerous minor code improvs.
+
+Styleguide:
+
+We have revised a number of our styleguide sections, simplifying them while adding explicit accessibility guidance under a common heading. Sections revised:
+
+- Forms
+- Accordions
+- Tables
 
 Bugfixes:
 
