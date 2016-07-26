@@ -69,7 +69,6 @@ Style guide: List styles.4 Highlighted word style
     dt,
     dd {
       display: inline-block;
-      line-height: $double-leading;
       margin: 0;
       padding: 0;
       line-height: $base-heading-leading * 1.5;

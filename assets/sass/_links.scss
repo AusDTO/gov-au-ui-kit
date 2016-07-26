@@ -49,7 +49,9 @@ Style guide: Links & anchors.1 Basic styles
       text-decoration: none;
       border-bottom: solid 1px $hoverbg;
       outline-color: transparent;
-      transition: all 100ms ease;
+      transition-timing-function: $transition-easing;
+      transition-duration: $transition-timing;
+      transition-property: background-color, color, outline-color;
     }
 
     &:hover,
