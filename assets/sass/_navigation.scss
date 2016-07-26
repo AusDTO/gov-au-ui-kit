@@ -539,7 +539,53 @@ Style guide: Navigation.7 Skip links
 }
 
 
-/* Grouped links */
+// /* Grouped links 1 */
+// .links-group {
+//   @include outer-container;
+//   // margin: ($base-spacing * 1.5) 0;​
+//   margin-top: 3em;
+//
+//   h2 {
+//     font-size: 1em;
+//     margin-top: 0;
+//     padding: 0;
+//   }
+//
+//   .popular-now {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//
+//     // ul {
+//     //   @include clearfix;
+//     //   margin: 0;
+//     //   padding: 0;
+//     //   list-style: none;
+//     // }
+//
+//     li {
+//       @include span-columns(4);
+//       float: left;
+//
+//       @include media ($mobile) {
+//         @include span-columns(2 of 4);
+//         // @include omega(2n);
+//         }
+//
+//       @include media ($tablet) {
+//         @include span-columns(3 of 12);
+//         @include omega(4n);
+//         }
+//
+//       @include media ($desktop) {
+//         @include span-columns(4 of 16);
+//         @include omega(4n);
+//         }
+//       }
+//   }
+// }
+
+/* Grouped links 2 */
 .links-group {
   @include outer-container;
   // margin: ($base-spacing * 1.5) 0;​
@@ -566,13 +612,14 @@ Style guide: Navigation.7 Skip links
     li {
       @include span-columns(4);
       float: left;
+      background-color: $aqua;
 
-      @include media ($mobile) {
+      @include media ($mobile-only) {
         @include span-columns(2 of 4);
-        // @include omega(2n);
+        @include omega(2n);
         }
 
-      @include media ($tablet) {
+      @include media ($tablet-only) {
         @include span-columns(3 of 12);
         @include omega(4n);
         }
