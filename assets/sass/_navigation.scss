@@ -558,25 +558,20 @@ Style guide: Navigation.7 Skip links
 
     li {
       // @include span-columns(4);
-      background-color: $aqua;
       min-height: 48px;
       float: left;
 
       @include media ($mobile) {
-        background-color: $maroon;
-        @include span-columns(2 of 4);
+        @include span-columns(4 of 4);
         // @include omega(2n);
         }
 
       @include media ($tablet) {
-        background-color: $red;
-        // flex: 0 0 22%;
         @include span-columns(3 of 12);
         @include omega(4n);
         }
 
       @include media ($desktop) {
-        background-color: $light-aqua;
         @include span-columns(4 of 16);
         @include omega(4n);
         }
