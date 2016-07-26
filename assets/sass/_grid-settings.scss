@@ -52,9 +52,9 @@ Style guide: Grid.3 Breakpoints
 
 @import 'vendor/neat/neat-helpers';
 $mobile: new-breakpoint(min-width 420px 8);
-$mobile-only: new-breakpoint(min-width 420px max-width (768px - 1))
+$mobile-only: new-breakpoint(min-width 420px max-width 768px - 1)
 $tablet: new-breakpoint(min-width 768px 12);
-$tablet-only: new-breakpoint(min-width 768px max-width (1200px - 1))
+$tablet-only: new-breakpoint(min-width 768px max-width 1200px - 1)
 $desktop: new-breakpoint(min-width $max-width 16);
 
 /*
