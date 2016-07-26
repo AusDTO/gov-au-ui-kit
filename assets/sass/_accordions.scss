@@ -1,40 +1,38 @@
 /*
 Accordions
 
-Accordions are used as a disclosure widget from which the user can retrieve additional information.
+Accordions help users find only the content they need.
 
-Accordions can be useful in reducing the information "overload" of a page and reduce the need to scroll, but they increase the interaction cost by requiring people to decide on topic headings.
+The **expand/collapse all** feature will be provided soon&mdash;this will be mandatory if using a series of accordion elements.
 
-Use succinct, but sufficiently descriptive accordion headings/labels to avoid making both discoverability and navigability of a page more difficult.
+<hr />
 
-<p class="callout"><strong>Note:</strong> Do not use accordions for glossaries&mdash;use <a href="/section-typography.html#guide-typography-5-lists">definition or description lists</a> instead.</p>
+This guidance is in part adapted from [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+
+Markup: templates/accordion.hbs
 
 Style guide: Accordions
 */
 
 /*
-Using accordions
+Usability
 
-In our implementation a text/string search for an accordion's content is possible, but note that when the accordion is collapsed the content still remains hidden.
+When designing or writing accordions:
 
-### Behaviour and ARIA
+- Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
+- Use a succinct but descriptive accordion headings / labels.
+- Use [definition or description lists](section-typography.html#guide-typography-5-lists) for glossaries instead of accordions.
 
-The framework includes JavaScript behaviour to replace the browser default for `<details>`.
+When implementing accordions:
 
-Accordions can be set to be either open or closed initially by adding the `aria-expanded` property with a value of `true` or `false`.
+- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
+- JavaScript behaviour is used to replace the browser default for `<details>`.
+- For multiple accordion elements each `details` element must have its own `data-label` attribute.
+- This framework allows a text/string search of accordion content, even when collapsed (string itself remains hidden until opened).
 
-### Multiple accordions
-
-When multiple accordion elements are used, each `details` element should be given a unique `data-label` attribute.
-
-Additionally, it will be mandatory to provide an expand/collapse all link when building a series of accordions.
-
-<p class="callout--warning"><strong>Missing feature:</strong> we have not yet provided an expand/collapse all feature, but we intend to add in a near-future sprint.</p>
-
-Markup: templates/accordion.hbs
-
-Style guide: Accordions.1 Using accordions
+Style guide: Accordions.1 Usability
 */
+
 details,
 .accordion {
   display: block;
@@ -102,7 +100,7 @@ summary {
   top: 0;
   height: auto;
   overflow: hidden;
-  padding: $small-spacing $base-spacing;
+  padding: $base-spacing $base-spacing $small-spacing;
   border: solid $small-spacing $lighter-aqua;
   border-top: none;
   border-bottom-right-radius: $tiny-border-radius;

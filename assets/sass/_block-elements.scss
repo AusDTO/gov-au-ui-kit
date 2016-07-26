@@ -1,4 +1,17 @@
-// Describe me so no evil shall be committed in wielding this class!
+%wrapper-padding {
+  @include pad(0 $base-spacing);
+  box-sizing: content-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  @include media($desktop) {
+    width: 100%;
+    min-width: $max-width;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -6,12 +19,8 @@ body {
 }
 
 .wrapper {
+  @extend %wrapper-padding;
   @include outer-container;
-  @include pad(0 $base-spacing);
-
-  @include media($desktop) {
-    @include pad(0);
-  }
 }
 
 header {
@@ -25,73 +34,106 @@ header {
 footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
-    min-width: 100%;
-    flex: none;
     @include pad(0 default);
     margin-top: ($base-spacing * 2);
+    min-width: 100%;
+    flex: none;
 
   }
 }
 
 main {
-  width: 100%;
+  @extend %wrapper-padding;
   @include outer-container;
-  @include pad(0 $base-spacing);
 
   // makes flex work in IE10/11 https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
   flex: 1 0 auto;
 
   @include media($tablet) {
-    @include pad(($base-spacing * 2) 0 0 0);
-  }
-
-  .content-main {
-    @include span-columns(4 of 4);
-
-    @include media($tablet) {
-      @include span-columns(8 of 12);
-    }
-
-    @include media($desktop) {
-      @include span-columns(9 of 16);
-      @include shift(1);
-    }
-
-    &:first-child {
-      @include media($tablet) {
-        @include span-columns(10 of 12);
-        @include shift(1);
-      }
-
-      @include media($desktop) {
-        @include span-columns(12 of 16);
-        @include shift(2);
-      }
-    }
-
+    padding-top: $base-spacing * 2;
   }
 
   .form-wrapper {
-    @include span-columns(4 of 4);
+    @include fill-parent;
 
     @include media($tablet) {
       @include span-columns(4 of 6);
     }
   }
-}
 
-.sidebar {
-  @include span-columns(4 of 4);
+  @include direction-context(right-to-left) {
+    .sidebar {
+      @include fill-parent;
 
-  @include media($tablet) {
-    @include span-columns(3 of 12);
+      @include media($tablet) {
+        @include span-columns(4 of 12);
+      }
+
+      @include media($desktop) {
+        @include span-columns(4 of 16);
+      }
+    }
+
+    .content-main {
+      @include fill-parent;
+
+      @include media($tablet) {
+        @include span-columns(8 of 12);
+      }
+
+      @include media($desktop) {
+        @include span-columns(10 of 16);
+        @include shift(2);
+      }
+
+      &:first-child {
+
+        @include reset-layout-direction;
+
+        @include fill-parent;
+        @include shift(0);
+
+        @include media($tablet) {
+          @include span-columns(8 of 12);
+          @include shift(0);
+        }
+
+        @include media($desktop) {
+          @include span-columns(10 of 16);
+          @include shift(0);
+        }
+
+      }
+    }
   }
 
-  @include media($desktop) {
-    @include span-columns(3 of 16);
-  }
-}
+  &.sidebar-has-controls {
+    @include reset-layout-direction;
 
-figure {
-  margin: 0;
+    .sidebar {
+      @include fill-parent;
+
+      @include media($tablet) {
+        @include span-columns(4 of 12);
+        margin-left: 0;
+      }
+
+      @include media($desktop) {
+        @include span-columns(4 of 16);
+      }
+    }
+
+    .content-main {
+      @include fill-parent;
+
+      @include media($tablet) {
+        @include span-columns(8 of 12);
+      }
+
+      @include media($desktop) {
+        @include span-columns(9 of 16);
+        @include shift(1);
+      }
+    }
+  }
 }

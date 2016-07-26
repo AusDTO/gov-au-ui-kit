@@ -24,6 +24,7 @@ Style guide: List styles
     dt,
     dd {
       display: inline-block;
+      line-height: $double-leading;
       margin: 0;
       padding: 0;
     }
@@ -49,7 +50,7 @@ Style guide: List styles
 
   .meta {
     font-size: $small-font-size;
-    margin-top: $small-spacing;
+    //margin-top: $small-spacing;
     margin-bottom: $small-spacing;
 
     time {
@@ -58,7 +59,7 @@ Style guide: List styles
   }
 
   > li {
-    padding: ($base-spacing * 1.5) 0;
+    padding: $base-spacing 0;
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
   }
@@ -74,6 +75,10 @@ Style guide: List styles
 
   h3 {
     @extend h4;
+  }
+
+  img {
+    display: block;
   }
 }
 
@@ -153,7 +158,6 @@ Style guide: List styles.2 Vertical list
 */
 
 .list-vertical {
-
   @extend %base-list;
 
   &.no-border {
@@ -169,7 +173,7 @@ Style guide: List styles.2 Vertical list
 
   > li {
 
-    border-top: 1px solid $border-colour;
+    border-top: 4px solid $border-colour;
     border-bottom: none;
     flex: 0 0 100%;
 
