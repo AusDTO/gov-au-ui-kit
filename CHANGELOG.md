@@ -6,7 +6,7 @@
 
 Adds or modifies:
 
-- `.visuallyhidden` class for visually hiding an element but having it available for screen readers
+- `.is-visuallyhidden` class for visually hiding an element but having it available for screen readers
 - Inline navigation - Alpha release
 - Number support for `input`; make sure you use also use `type="number"`.
 - UI Kit version number added to Guide home page [styleguide]

@@ -573,7 +573,7 @@ Style guide: Navigation.7 Inline navigation
       border-bottom-color: $aqua;
     }
 
-    &.active {
+    &.is-active {
       color: $dark-aqua; //Accessibility: can't be $aqua on $lighter-aqua
       background-color: $lighter-aqua;
       border-bottom-color: $aqua;
