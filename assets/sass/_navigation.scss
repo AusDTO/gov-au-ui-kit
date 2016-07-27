@@ -539,20 +539,21 @@ Style guide: Navigation.7 Skip links
 }
 
 /*
-Link groups
+Groups of links
 
-Use link groups to draw the user's attention to content somewhere else that will either anticipate their needs, or better meet them.
+Use groups of links to help users find content elsewhere that will meet their needs.
 
-Groups span from 4 down to 2 columns.
+Groups of links span from 2 columns (`$mobile`) up to 4 columns (`$tablet` and `$desktop`).
 
-You can use link groups:
+You can use groups of links:
 
 - in the header (eg listing popular links across the site)
 - anywhere within an `article` (eg as a list of related links).
 
-Style guide: Navigation.8 Link groups
-*/
+Markup: templates/groups-links.hbs
 
+Style guide: Navigation.8 Groups of links
+*/
 
 /* Grouped links 2 */
 .links-group {
