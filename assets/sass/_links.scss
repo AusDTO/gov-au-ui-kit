@@ -11,12 +11,11 @@ Style guide: Links & anchors
 /*
 Basic anchor styles
 
-We may change the specificity of the styling if resetting the `border-bottom` becomes an issue.
+The `:hover` and `:focus` styles are identical.
 
-This styling also inserts SVG/PNG icons after the link depending on the relation keyword (`rel`) the link has:
+Link styles are globally scoped with inverted style colours handled by a SASS mixin (eg in the page header).
 
-- `rel="external"` receives an external link icon
-- PDF file (roadmap maybe?)
+We have support to add icons to anchors (without further markup) via the `rel` attribute, currently only for external links (`rel="external"`).
 
 Markup: templates/basic-links.hbs
 
