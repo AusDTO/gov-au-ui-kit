@@ -47,6 +47,19 @@ Style guide: Buttons.1 Creating buttons
     &:active {
       background-color: $bg-colour--active;
     }
+
+    &[disabled],
+    &.disabled {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        cursor: not-allowed;
+        border-color: transparent;
+        background-color: $button-bg-colour--disabled;
+        color: $non-black;
+      }
+    }
   }
 }
 
@@ -62,23 +75,9 @@ Style guide: Buttons.1 Creating buttons
   text-decoration: none;
   font-weight: $bold-font-weight;
 
-  &[disabled],
-  &.disabled {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      cursor: not-allowed;
-      border-color: transparent;
-      background-color: $button-bg-colour--disabled;
-      color: $non-black;
-    }
-  }
-
   @include media($tablet) {
     margin: $small-spacing;
   }
-
 }
 
 button,
