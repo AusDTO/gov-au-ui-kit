@@ -48,7 +48,7 @@ Style guide: Links & anchors.1 Basic styles
     border-bottom: solid 1px $hover-bg-colour;
     transition-timing-function: $transition-easing;
     transition-duration: $transition-timing-fast;
-    transition-property: background-color, color;
+    transition-property: background-color, border-color, color;
 
     &:hover,
     &:focus {
