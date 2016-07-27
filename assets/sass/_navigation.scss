@@ -93,8 +93,12 @@ Style guide: Navigation.6 Footer navigation
   float: right;
   height: auto;
   margin: $tiny-spacing 0;
-  border-bottom: 1px solid;
   padding: 0;
+
+  .govau--header & {
+    border: 0;
+    border-bottom: 1px solid;
+  }
 
   &::before {
     @extend %icon-bars;
@@ -117,6 +121,7 @@ Style guide: Navigation.6 Footer navigation
   &,
   &:hover {
     background-color: transparent;
+    border-color: transparent;
   }
 }
 
@@ -166,9 +171,15 @@ Style guide: Navigation.6 Footer navigation
 
     a {
       display: block;
-      border-bottom: 0;
+      border: none;
       padding: $small-spacing 0 1em;
       color: $body-inverted-text-colour;
+
+      &:focus,
+      &:hover {
+        background-color: transparent;
+        color: $body-inverted-text-colour;
+      }
     }
   }
 
@@ -269,6 +280,7 @@ Style guide: Navigation.6 Footer navigation
 
       a {
         padding-left: $base-spacing;
+        border-bottom: 0;
       }
 
       ul {

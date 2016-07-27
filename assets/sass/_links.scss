@@ -41,8 +41,7 @@ Style guide: Links & anchors.1 Basic styles
   $link-disabled-color: rgba($text-colour, 0.5);
   color: $text-colour;
 
-  a,
-  a:not([role='button']) {
+  a {
     color: $text-colour;
     text-decoration: none;
     outline: none;
@@ -92,6 +91,7 @@ Style guide: Links & anchors.1 Basic styles
 
       &::after {
         @extend %icon-arrow-right--aqua;
+
         content: '';
         position: absolute;
         top: 0;
@@ -125,4 +125,5 @@ Style guide: Links & anchors.1 Basic styles
 .content-main,
 footer[role='contentinfo'] {
   @include link-colours($non-black, $light-aqua, $non-black);
+  @include button-colours($button-bg-colour, $button-bg-colour--hover, $button-bg-colour--active, $button-text-colour);
 }
