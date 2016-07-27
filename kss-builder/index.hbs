@@ -67,7 +67,7 @@
         <a href="/" class="logo">gov.au ui-kit</a> <span class="badge--default">draft</span>
       </div>
       <div class="feedback">
-        <a href="https://github.com/AusDTO/gov-au-ui-kit/issues/new" class="button--feedback">Give feedback</a>
+        <a href="https://github.com/AusDTO/gov-au-ui-kit/issues/new" class="button--feedback" role="button">Give feedback</a>
       </div>
     </div>
   </section>
@@ -111,7 +111,7 @@
       <h1>{{sections.0.header}}</h1>
 
       <nav class="index-links">
-        <h2>Contents</h2>
+        <h2>In this section</h2>
         <ul>
           {{#each sections}}
             {{#unless @first}}
@@ -192,7 +192,7 @@
 
           {{#if sourceFile.name}}
             <div class="kss-source">
-              Source: <code>{{sourceFile.name}}</code>, line {{sourceFile.line}}
+              Source on GitHub: <a href="https://github.com/AusDTO/gov-au-ui-kit/tree/master/assets/sass/{{sourceFile.name}}#L{{sourceFile.line}}" rel="external gh-source-ref"><code>{{sourceFile.name}}</code></a>, line {{sourceFile.line}}
             </div>
           {{/if}}
 

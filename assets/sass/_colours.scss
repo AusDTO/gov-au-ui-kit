@@ -1,11 +1,9 @@
 /*
 Colours
 
-The framework provides a basic palette of colours that are clear and accessible.
+A basic palette of colours that are clear and accessible.
 
-The colours are not finalised.
-
-If you need more guidance please [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues).
+We are finalising the colours&mdash;for help [log a GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues).
 
 Style guide: Colours
 */
@@ -13,9 +11,7 @@ Style guide: Colours
 /*
 Colours palette
 
-The framework uses colours for decoration and to distinguish different types of information on a page. This includes lighter and darker versions that are percentage variations of the original colours.
-
-The Sass variables are also provided below, for reference.
+Lighter and darker versions are percentage variations of the original colours (Sass variables are provided for reference).
 
 <div class="guide-colour-examples">
   <div class="guide-colour">
@@ -186,9 +182,9 @@ $blue:          #00bfe9;
 $light-blue:    #e8f5fa;
 
 /*
-Colour contrast
+Accessibility
 
-The colour contrast ratio for text and interactive elements should be at least 4.5:1 as [recommended by the W3C](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+The [recommended colour contrast ratio](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) for text and interactive elements should be at least 4.5:1.
 
 ### Accessible combinations
 <p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
@@ -210,7 +206,7 @@ The colour contrast ratio for text and interactive elements should be at least 4
 <p class="guide-colour-block bg-light-yellow">non-black on light-yellow <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-blue">non-black on light-blue <span class="invert">AA</span></p>
 
-Style guide: Colours.3 Colour contrast
+Style guide: Colours.3 Accessibility
 */
 
 // Colour variables
@@ -219,12 +215,15 @@ $background-colour:             $white;
 $background-secondary-colour:   $non-white;
 
 $link-colour:                   $non-black;
-$link-hover-colour:             $aqua;
+$link-colour--hover:            $light-aqua;
 
-$button-colour:                 $aqua;
-$button-colour--hover:          $darker-aqua;
-$button-colour--active:         $dark-aqua;
-$button-colour--disabled:       $light-grey;
+$link-inverted-colour:          $white;
+$link-inverted-colour--hover:   $white;
+
+$button-bg-colour:              $aqua;
+$button-bg-colour--hover:       $darker-aqua;
+$button-bg-colour--active:      $dark-aqua;
+$button-bg-colour--disabled:    $light-grey;
 
 $button-inverted-colour:        $white;
 
@@ -232,11 +231,12 @@ $button-text-colour:            $white;
 $button-inverted-text-colour:   $navy;
 
 $focus-colour:                  $lighter-aqua;
-
 $error-colour:                  $red;
 $success-colour:                $green;
 $warning-colour:                $yellow;
 $info-colour:                   $blue;
+
+$callout-bg-light-colour:       $lighter-aqua;
 
 $border-colour:                 $light-grey;
 $border-soft-colour:            rgba($light-grey, 0.5);
@@ -247,14 +247,16 @@ $box-shadow-colour:             rgba($non-black, 0.5);
 $body-text-colour:              $non-black;
 $body-inverted-text-colour:     $white;
 
-$badge-colour-default:          $grey;
-$badge-colour-alpha:            $non-black;
-$badge-colour-beta:             $maroon;
-$badge-colour-error:            $error-colour;
-$badge-colour-success:          $green;
+$badge-colour--default:         $grey;
+$badge-colour--alpha:           $non-black;
+$badge-colour--beta:            $maroon;
+$badge-colour--error:           $error-colour;
+$badge-colour--success:         $green;
 
 $controls-bg-colour:            $dark-navy;
 $controls-contrast-bg-colour:   $maroon;
 $header-bg-colour:              $navy;
 $hero-bg-colour:                $aqua;
 $breadcrumbs-bg-colour:         $non-white;
+
+$input-focus-colour:            $light-aqua;

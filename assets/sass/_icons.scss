@@ -4,33 +4,39 @@
   linear-gradient(transparent, transparent);
 }
 
-.icon-arrow-right {
+// Generic icons
+%icon-arrow-right {
   @include inline-background-image('arrow-right');
 }
 
-.icon-arrow-right-white {
-  @include inline-background-image('arrow-right-white');
+%icon-arrow-right--white {
+  @include inline-background-image('arrow-right--white');
 }
 
-.icon-arrow-right-aqua {
-  @include inline-background-image('arrow-right-aqua');
+%icon-arrow-right--aqua {
+  @include inline-background-image('arrow-right--aqua');
 }
 
-.bars {
+%icon-bars {
   @include inline-background-image('bars');
 }
 
-.close {
+%icon-close {
   @include inline-background-image('close');
 }
 
-.chevron-down-navy {
-  @include inline-background-image('chevron-down-navy');
+%icon-chevron-down--navy {
+  @include inline-background-image('chevron-down--navy');
+}
+
+// Specific functions
+%icon-external-link--aqua {
+  @include inline-background-image('external-link--aqua');
 }
 
 // This class is legacy as of v1.2
 // Marked for removal in v2.0
-.chevron {
+.icon-chevron {
   &::before {
     border-style: solid;
     border-width: 0.25em 0.25em 0 0;

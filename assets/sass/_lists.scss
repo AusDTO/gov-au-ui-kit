@@ -1,15 +1,60 @@
 /*
-List views
+List styles
 
-Each list style has optional layout items. Follow the markup patterns in the examples
-below to achieve the correct style and semantics.
+List styles make collections of similar content more usable and discoverable.
 
-- **Image**: omit the `figure` element if you don't need an image. Note: If you
-leave in a `figure` with no `img` you'll still get a left padding on your item
-- **Tags**: add tags to each item using a `footer.tags` and a `dl` element
-- **Meta**: use a `div.meta` to include supplementary information
+You can add usual body elements within each list item (eg ordered and unordered lists).
+
+Use `<a class="see-more">` after your list to link to an index of all items.
 
 Style guide: List styles
+*/
+
+/*
+Horizontal style
+
+Horizontal style provides a single column of list items.
+
+Markup: templates/lists-horizontal.hbs
+
+Style guide: List styles.1 Horizontal style
+*/
+
+/*
+Vertical style
+
+Vertical style provides multiple columns of list items. By default the vertical lists are displayed in 2 columns.
+
+You can change the number of columns used:
+
+- `.vertical-list--thirds` give 3 columns of list items
+- `.vertical-list--fourths` give 4 columns of list items.
+
+For [browsers that don't support Flexbox layout](http://caniuse.com/#feat=flexbox) lists will appear as in horizontal style with images (if used) below each list item.
+
+Markup: templates/lists-vertical.hbs
+
+Style guide: List styles.2 Vertical style
+*/
+
+/*
+Small list style
+
+Use small list style for large groups of list items.
+
+Markup: templates/lists-small.hbs
+
+Style guide: List styles.3 Small list style
+*/
+
+/*
+Highlighted words style
+
+Use highlighted words style for a list with repeating phrases.
+
+Markup: templates/lists-highlighted.hbs
+
+Style guide: List styles.4 Highlighted word style
 */
 
 %base-list {
@@ -18,6 +63,7 @@ Style guide: List styles
   padding: 0;
 
   .tags {
+    @include link-colours($button-bg-colour, v, $link-colour);
     color: $grey;
 
     dl,
@@ -26,6 +72,7 @@ Style guide: List styles
       display: inline-block;
       margin: 0;
       padding: 0;
+      line-height: $base-heading-leading * 1.5;
     }
 
     dt,
@@ -35,21 +82,19 @@ Style guide: List styles
     }
 
     a {
-      color: $link-hover-colour;
       padding: 2px $tiny-spacing;
-      border: 1px solid $link-hover-colour;
+      border: 1px solid $button-bg-colour;
       border-radius: 2px;
 
-      &:hover {
-        color: $white;
-        background-color: $link-hover-colour;
+      &:hover,
+      &:focus {
+        border-color: $link-colour--hover;
       }
     }
   }
 
   .meta {
     font-size: $small-font-size;
-    margin-top: $small-spacing;
     margin-bottom: $small-spacing;
 
     time {
@@ -58,7 +103,7 @@ Style guide: List styles
   }
 
   > li {
-    padding: ($base-spacing * 1.5) 0;
+    padding: $base-spacing 0;
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
   }
@@ -75,21 +120,11 @@ Style guide: List styles
   h3 {
     @extend h4;
   }
+
+  img {
+    display: block;
+  }
 }
-
-/*
-Horizontal list
-
-A Horizontal list can have item(s) with a featured image. Note: If you
-leave in a `figure` with no `img` you'll still get a left padding on your item.
-
-- **Hero item**: by adding the `.hero-item` class to a list item, the layout
-changes to fit a wider image
-
-Markup: templates/lists-horizontal.hbs
-
-Style guide: List styles.1 Horizontal list
-*/
 
 .list-horizontal {
   @extend %base-list;
@@ -133,27 +168,7 @@ Style guide: List styles.1 Horizontal list
 
 }
 
-
-/*
-Vertical list
-
-The Vertical list suits content that fits into a column layout, and wraps with
-two list items on each row. Note: In browsers where [Flexbox layout](http://caniuse.com/#feat=flexbox)
-is not supported, this will appear as a Horizontal list except with the image
-below the list item content.
-
-To make a list appear with three or four columns, use the classes `.vertical-list--thirds`
-and `.vertical-list--fourths` respectively.
-
-To remove the border-top from the first row of elements add the `.no-border` class to the `ul` element.
-
-Markup: templates/lists-vertical.hbs
-
-Style guide: List styles.2 Vertical list
-*/
-
 .list-vertical {
-
   @extend %base-list;
 
   &.no-border {
@@ -169,7 +184,7 @@ Style guide: List styles.2 Vertical list
 
   > li {
 
-    border-top: 1px solid $border-colour;
+    border-top: 4px solid $border-colour;
     border-bottom: none;
     flex: 0 0 100%;
 
@@ -248,23 +263,12 @@ Style guide: List styles.2 Vertical list
   }
 }
 
-/*
-Small list
-
-These work well for displaying a larger number of list items with just a label
-and some meta information.
-
-Markup: templates/lists-small.hbs
-
-Style guide: List styles.3 Small list
-*/
-
 .list-small {
   @extend %base-list;
   border-top: solid 1px $border-colour;
 
   a {
-    @extend .icon-arrow-right;
+    @extend %icon-arrow-right;
 
     display: block;
     padding: $small-spacing;
@@ -304,16 +308,6 @@ Style guide: List styles.3 Small list
   }
 }
 
-/*
-Highlighted List
-
-Lists with highlighted phrases work well for displaying large lists where many items contain the same recurring phrases.
-
-Markup: templates/lists-highlighted.hbs
-
-Style guide: List styles.4 Highlighted List
-*/
-
 .list-highlighted {
   @extend %base-list;
 
@@ -333,50 +327,5 @@ Style guide: List styles.4 Highlighted List
       display: block;
       font-size: $smaller-font-size;
     }
-  }
-}
-
-/*
-See more link
-
-Some lists will show a feed of the latest or most relevant items. The see more link takes the user to the index page showing all of the items.
-
-Markup: templates/see-more-link.hbs
-
-Style guide: List styles.5 See more link
-*/
-
-.see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: $base-spacing;
-  font-weight: $heading-font-weight;
-  border-bottom: 1px solid transparent;
-
-  &:link,
-  &:visited,
-  &:active {
-    color: $button-colour;
-  }
-
-  &::after {
-    @extend .icon-arrow-right-aqua;
-
-    content: '';
-    position: absolute;
-    display: block;
-    width: $medium-spacing;
-    height: $medium-spacing;
-    top: 0;
-    right: -($medium-spacing);
-    background-repeat: no-repeat;
-    background-position: right $tiny-spacing;
-    background-size: (0.8 * $small-spacing) auto;
-    border-bottom: none;
-  }
-
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid;
   }
 }

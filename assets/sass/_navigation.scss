@@ -3,9 +3,7 @@ Navigation
 
 Ensure users understand where they are in the service, where they have been and where they can go.
 
-Use the HTML `<nav>` element and ARIA tags to define clear and accessible navigation links for the page.
-
-<hr />
+***
 
 This guidance is in part adapted from [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
@@ -15,28 +13,95 @@ Style guide: Navigation
 /*
 Global navigation
 
-Provides the highest level of navigation in the framework.
+The global navigation panel is collapsed (hidden) by default.
 
-### Behaviour
-
-The Global Navigation panel is collapsed (hidden) by default on all screen sizes. Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
-
-Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
+Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu without a hamburger button.
 
 Markup: templates/global-navigation.hbs
 
-Style guide: Navigation.1 Global Navigation
+Style guide: Navigation.1 Global navigation
 */
+
+/*
+Local navigation
+
+Use local navigation to help the user go straight to the specific content that meets their needs.
+
+Small screens (up to `$tablet` breakpoint) will see a toggle to expand the navigation panel.
+
+Older browsers (IE8 and lower) and those without JavaScript will see the expanded menu without a toggle button.
+
+Markup: templates/local-navigation.hbs
+
+Style guide: Navigation.2 Local navigation
+*/
+
+/*
+Breadcrumbs
+
+Breadcrumbs help the user understand where they are in the service and how they got there.
+
+They appear directly under a page header or hero, from `$tablet` breakpoint upwards.
+
+Markup: templates/breadcrumbs.hbs
+
+Style guide: Navigation.3 Breadcrumbs
+*/
+
+/*
+Contents links
+
+Contents links (index links) help users understand the page structure.
+
+A heading is optional&mdash;use the correct header level for the page structure.
+
+Users with modern browsers will see a smooth scroll down the page.
+
+Markup: templates/index-links.hbs
+
+Style guide: Navigation.4 Contents links
+*/
+
+/*
+Inline links
+
+You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.
+
+Markup: templates/inline-links.hbs
+
+Style guide: Navigation.5 Inline links
+*/
+
+/*
+Footer navigation
+
+Footers help users who reach the bottom of a page without finding what they want.
+
+This framework uses CSS Flexboxes to manage columns. It provides:
+
+- lists of links arranged horizontally
+- 2 columns for `$mobile` and `$tablet` breakpoint
+- 4 columns for `$desktop` breakpoint.
+
+Markup: templates/footer-navigation.hbs
+
+Style guide: Navigation.6 Footer navigation
+*/
+
 .global-nav-toggle {
   position: relative;
   float: right;
   height: auto;
   margin: $tiny-spacing 0;
-  border-bottom: 1px solid;
   padding: 0;
 
+  .govau--header & {
+    border: 0;
+    border-bottom: 1px solid;
+  }
+
   &::before {
-    @extend .bars;
+    @extend %icon-bars;
     content: '';
     position: absolute;
     top: .25em;
@@ -49,13 +114,14 @@ Style guide: Navigation.1 Global Navigation
 
   &[aria-expanded='true'] {
     &::before {
-      @extend .close;
+      @extend %icon-close;
     }
   }
 
   &,
   &:hover {
     background-color: transparent;
+    border-color: transparent;
   }
 }
 
@@ -105,9 +171,15 @@ Style guide: Navigation.1 Global Navigation
 
     a {
       display: block;
-      border-bottom: 0;
+      border: none;
       padding: $small-spacing 0 1em;
       color: $body-inverted-text-colour;
+
+      &:focus,
+      &:hover {
+        background-color: transparent;
+        color: $body-inverted-text-colour;
+      }
     }
   }
 
@@ -119,30 +191,6 @@ Style guide: Navigation.1 Global Navigation
     }
   }
 }
-
-/*
-Local navigation
-
-The framework provides a vertical navigation menu that shows 3 levels of items.
-
-Ensure the side menu is accessible with a keyboard&mdash;users should be able to tab through every link. Use ARIA tags so screen readers can understand the menu.
-
-Use active state (`class="active"`) to show which page the user is on.
-
-Use short navigation links. They don't have to be the full page title.
-
-Test with users to ensure the navigation hierarchy is not too long or too deep.
-
-### Behaviour
-
-The Local Navigation panel is collapsed (hidden) by default on small screens (up to the `$tablet`). Users that have JavaScript enabled in modern browsers (down to IE 9) will see a collapsed panel and a toggle for hiding and showing the menu.
-
-Users without JavaScript or on IE8 or older will see an expanded navigation panel and no toggle.
-
-Markup: templates/local-navigation.hbs
-
-Style guide: Navigation.2 Local Navigation
-*/
 
 .local-nav-toggle {
   position: relative;
@@ -158,7 +206,7 @@ Style guide: Navigation.2 Local Navigation
   }
 
   &::before {
-    @extend .chevron-down-navy;
+    @extend %icon-chevron-down--navy;
     content: '';
     position: absolute;
     top: .5em;
@@ -182,10 +230,16 @@ Style guide: Navigation.2 Local Navigation
   }
 }
 
+.local-nav {
+  padding-top: 0;
+  @include media($tablet) {
+    padding: $base-spacing 0;
+  }
+}
+
 .primary-nav,
 .local-nav {
   margin: 0 0 $base-spacing;
-  padding: $base-spacing 0;
   overflow: hidden;
   transition: padding ($transition-timing * 2) ease;
 
@@ -200,7 +254,17 @@ Style guide: Navigation.2 Local Navigation
     }
   }
 
+  h1 {
+    font-size: 1em;
+    font-weight: $base-font-weight;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: $base-leading;
+  }
+
+
   ul {
+    @include link-colours($link-colour, $focus-colour, $link-colour);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -216,11 +280,12 @@ Style guide: Navigation.2 Local Navigation
 
       a {
         padding-left: $base-spacing;
+        border-bottom: 0;
       }
 
       ul {
         a {
-          @extend .icon-arrow-right;
+          @extend %icon-arrow-right;
           padding-left: $base-spacing + $small-spacing;
           background-repeat: no-repeat;
           background-position: $base-spacing $small-spacing * 1.45;
@@ -229,46 +294,49 @@ Style guide: Navigation.2 Local Navigation
       }
     }
 
-  }
+    li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid $border-colour;
 
-  li {
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid $border-colour;
-
-    &:first-child {
-      border-top: 1px solid $border-colour;
-    }
-  }
-
-  a {
-    display: block;
-    border: none;
-    border-left: 4px solid transparent;
-    padding: $medium-spacing / 2 $small-spacing;
-    background-color: $background-colour;
-    text-decoration: none;
-    color: $non-black;
-
-    &:hover {
-      border-color: $border-contrast-colour;
-      background-color: $focus-colour;
+      &:first-child {
+        border-top: 1px solid $border-colour;
+      }
     }
 
-    &:active,
-    &.active,
-    &.is-active {
-      background-color: $focus-colour;
+    a {
+      display: block;
+      border: none;
+      border-left: 4px solid transparent;
+      border-bottom: none;
+      padding: $medium-spacing / 2 $small-spacing;
+      text-decoration: none;
+      transition: border-color $transition-timing-fast $transition-easing;
+
+      &:hover {
+        border-color: $border-contrast-colour;
+      }
+
+      &.active,
+      &.is-active {
+        font-weight: $bold-font-weight;
+      }
+
+      &.current {
+        background-color: $focus-colour;
+      }
+
     }
 
   }
+
 }
-
-
 
 // This class is legacy as of v1.2
 // Marked for removal at 2.0
 .primary-nav {
+  padding: $base-spacing 0;
+
   .nav-heading {
     color: $darker-aqua;
     background: $background-secondary-colour;
@@ -311,24 +379,8 @@ Style guide: Navigation.2 Local Navigation
   }
 }
 
-
-/*
-Breadcrumbs
-
-Use breadcrumbs to help the user understand where they are in the service and how they got there.
-
-Default breadcrumbs appear on a light grey background, and are positioned directly underneath a page header or hero.
-
-Breadcrumbs are hidden on small screens, and only displayed at `$tablet` breakpoint or bigger.
-
-The inverted style (`.breadcrumbs--inverted`) can be used on a darker coloured background. Make sure you check the [colour contrast guidance](http://gov-au-ui-kit.dev/section-colours.html#kssref-colours-3-colour-contrast) before choosing a colour combination.
-
-Markup: templates/breadcrumbs.hbs
-
-Style guide: Navigation.3 Breadcrumbs
-*/
-
 [class^='breadcrumbs'] {
+  @include link-colours($link-colour, $link-colour--hover);
   display: none;
   width: 100%;
   margin: 0;
@@ -337,13 +389,6 @@ Style guide: Navigation.3 Breadcrumbs
 
   @include media($tablet) {
     display: inline-block;
-  }
-
-  a:link,
-  a:visited,
-  a:hover,
-  a:active {
-    color: $body-text-colour;
   }
 
   ul {
@@ -358,7 +403,7 @@ Style guide: Navigation.3 Breadcrumbs
       padding: 0;
 
       &:not(:last-child) {
-        @extend .icon-arrow-right;
+        @extend %icon-arrow-right;
         margin-right: $small-spacing;
         padding-right: $medium-spacing;
         background-repeat: no-repeat;
@@ -369,19 +414,13 @@ Style guide: Navigation.3 Breadcrumbs
   }
 
   &[class$='--inverted'] {
+    @include link-colours($link-inverted-colour, $link-inverted-colour--hover, $link-colour);
     background-color: transparent;
     color: $body-inverted-text-colour;
 
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-      color: $body-inverted-text-colour;
-    }
-
     ul {
       li:not(:last-child) {
-        @extend .icon-arrow-right-white;
+        @extend %icon-arrow-right--white;
         color: $body-inverted-text-colour;
       }
     }
@@ -389,17 +428,32 @@ Style guide: Navigation.3 Breadcrumbs
 }
 
 /*
-Skip Links
+Skip links
 
-See. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">WCAG 2.4.1 Bypass Blocks</a>
+Provide skip links to navigation and content.
 
-When this Success Criterion is not satisfied, it may be difficult for people with some disabilities to reach the main content of a Web page quickly and easily.
+These are hidden visually by default but keyboard accessible.
+
+Include skip links between the opening of the `<body>` and the page `<header>`.
+
+<div class="callout">
+  <p>To test,
+    <a href="javascript:;">click to move focus to this</a> then press <kbd>Tab</kbd> to show:
+  </p>
+  <ul>
+    <li>Skip to main content</li>
+    <li>Skip to section navigation</li>
+  </ul>
+  <p>(The example space will be visually empty until the skip links receive focus.)</p>
+</div>
 
 Markup: templates/skip-link.hbs
 
-Style guide: Navigation.4 Skip Links
+Style guide: Navigation.7 Skip links
 */
+
 .skip-to {
+  @include link-colours($link-colour, $link-colour--hover);
   position: relative;
   z-index: 99;
 
@@ -412,7 +466,7 @@ Style guide: Navigation.4 Skip Links
     padding: 0;
     position: absolute;
     width: 1px;
-    background-color: $white;
+    border-radius: $tiny-border-radius;
 
     &:active,
     &:focus {
@@ -429,25 +483,6 @@ Style guide: Navigation.4 Skip Links
   }
 }
 
-
-/*
-Index links
-
-Used to group a collection of text links, Index links can appear at the beginning of an article page as a table of contents, or as a group of links to related content.
-
-An optional heading is included in the markup example. Any level leading from `h2` to `h6` can be used. Use a heading level that's appropriate for your document outline.
-
-### Behaviour
-
-Because these are internal links they trigger a smooth scroll down the page.
-
-This works in Firefox, Chrome, IE10, Opera and Safari. Unsupported browsers would just use the normal internal link behaviour.
-
-Markup: templates/index-links.hbs
-
-Style guide: Navigation.5 Index links
-*/
-
 .index-links {
   margin: ($base-spacing * 2) 0 $base-spacing $small-spacing;
   border-left: $tiny-spacing solid $non-white;
@@ -458,8 +493,8 @@ Style guide: Navigation.5 Index links
   h4,
   h5,
   h6 {
-    @extend h6;
-    margin: 0 0 $tiny-spacing;
+    font-size: rem(17);
+    margin-top: $base-spacing;
     color: $grey;
     font-weight: $base-font-weight;
   }
@@ -480,18 +515,6 @@ Style guide: Navigation.5 Index links
   }
 }
 
-
-/*
-Inline Links
-
-For when you'd like a list of links to appear on a single line, use `ul.inline-links`.
-
-When placing these links on a dark background, use `.inline-links--inverted.` Make sure you check the [colour contrast guidance](http://gov-au-ui-kit.dev/section-colours.html#kssref-colours-3-colour-contrast) before choosing a colour combination.
-
-Markup: templates/inline-links.hbs
-
-Style guide: Navigation.6 Inline Links
-*/
 [class^='inline-links'] {
   display: inline-block;
   list-style-type: none;
@@ -509,3 +532,15 @@ Style guide: Navigation.6 Inline Links
     }
   }
 }
+
+/*
+Accessibility
+
+- All navigation must be keyboard accessible and include ARIA tags.
+- Use the HTML `<nav>` element for controls and the given state classes to show which page the user is on.
+- Use short navigation links. They don't have to be the full page title.
+- Test with users to ensure the navigation hierarchy is not too long or too deep.
+- Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
+
+Style guide: Navigation.8 Accessibility
+*/
