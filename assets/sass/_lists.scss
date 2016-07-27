@@ -165,8 +165,39 @@ Style guide: List styles.4 Highlighted word style
       }
     }
 
-  }
+    &.panel-item {
+      background-color: $shaded-list-bg-colour;
+      border: 0;
+      margin-bottom: $tiny-spacing;
+      padding: 1.5 * $small-spacing;
 
+      h2,
+      h3,
+      h4,
+      .list-item-title {
+        font-size: rem(20);
+      }
+
+      span {
+        display: block;
+        font-size: $small-font-size;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &.highlighted {
+      background-color: $highlighted-list-bg-colour;
+
+      h2,
+      h3,
+      h4,
+      .list-item-title {
+        color: $highlighted-list-header-colour;
+      }
+    }
+  }
 }
 
 .list-vertical {
@@ -373,6 +404,7 @@ You can use these properties with **horizontal**, **vertical** and **small list*
 
 - **image**&mdash;use `figure` with `<img>` element (you can use the `figure` element without an image to create left padding)
 - **hero item**&mdash;add `.hero-item` class to a list item (the layout will change to fit the wider image)
+- **panel item**&mdash;add `.panel-item` class to a list item (the list item style will change)
 - **meta**&mdash;use a `div.meta` to include supplementary information
 - **tags**&mdash;use `footer.tags` and a `dl` element
 - **no border** on first list items&mdash;add the `.no-border` class to the `ul` element.
