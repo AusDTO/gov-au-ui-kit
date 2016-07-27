@@ -6,6 +6,11 @@
 
 #### UI-Kit changes
 
+- Links and buttons:
+  - Improved styling throughout, inc. on inverted colours (eg light text on darker bg).
+  - Added `:focus` styles (identical to `:hover`).
+  - Refactor of anchor styling into `_lists.scss` partial.
+  - Adds an icon to anchors with `rel="external"`.
 - Callouts: extends with a new class to highlight specific dates (`.callout--calendar-event`).
 - Text input `type` `tel` support.
 - New table style: calendar tables, for displaying a series of dates and their events (eg public holidays).
