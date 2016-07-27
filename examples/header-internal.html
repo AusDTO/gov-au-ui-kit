@@ -57,7 +57,7 @@
         <div class="govau--logo">
           <img src="../latest/img/icons/logo-govau-full-2x.png" alt="" width="205"/>
 
-          <div class="brandbar">
+          <div id="test" class="brandbar noon"><!--ID is temp for example-->
             <div class="b1"></div>
             <div class="b2"></div>
           </div>
@@ -134,361 +134,199 @@
       </nav>
     </aside>
 
-    <article id="content" class="content-main">
-      <h1>Article title that is quite a bit longer</h1>
-      <p class="abstract">This is my <code>.abstract</code> text: the quick brown fox jumped over the lazy dog.</p>
 
-      <p>So, let us commence with some accordions:</p>
+    <form id="myform" action="#">
+      <select id="bgcolor">
+        <option value="">Noon</option>
+        <option value="dusk">Dusk</option>
+        <option value="night">Night</option>
+        <option value="dawn">Dawn</option>
+      </select>
+     </form>
+    <script>
+      document.getElementById('bgcolor').onchange = function(){
+          document.querySelectorAll('.brandbar').item(0).className = 'brandbar ' + this.value;
+          document.querySelectorAll('.govau--text').item(0).className = 'govau--text ' + this.value;
+      };
+    </script>
+    
+      <article class="main-content content-main" id="main-content">
 
-      <div class="video">
-        <div class="video-wrapper">
-          <embed src="https://www.youtube.com/embed/w3lsDQD9_98?showinfo=0&iv_load_policy=3&controls=0" allowfullscreen>
-        </div>
-      </div>
+        <header><h1>Our role</h1></header>
 
-      <p>More seriously, here is an accordion that uses the <code>details</code> and <code>summary</code> elements.</p>
+        <p class="abstract">Through our advice and programs we aim to make communication technologies and the arts better for all Australians.</p>
 
-      <details data-label="accordion-example" aria-expanded="false">
-        <summary>foobar</summary>
-        <div class="accordion-panel">
-            <p>I am a paragraph of text!</p>
-        </div>
-      </details>
-
-      <details open data-label="accordion-example-2" aria-expanded="true">
-        <summary>barfoo</summary>
-        <div class="accordion-panel">
-            <p>You can nest just about any common content inside an accordion, like lists, blockquotes, and more:</p>
-            <blockquote>
-              <p>And yet the system is not closed. One aperture remains: and through it the whole interplay of resemblances would be in danger of escaping from itself, or of remaining hidden in darkness, if there were not a further form of similitude to close the circle &mdash; to render it at once perfect and manifest.</p>
-              <footer>
-                <cite>Foucault, M. (1994). <em>The Order of Things: an archaeology of the human sciences</em>. New York: Vintage Books. pp 28&ndash;29.</cite>
-              </footer>
-            </blockquote>
+      <nav class="index-links">
+          <div>
+            <h2>Contents</h2>
             <ol>
-              <li>first sorted list item</li>
-              <li>second sorted list item
-                <ol>
-                  <li>another item</li>
-                </ol>
-              </li>
-              <li>and another item</li>
+              <li><a href="#What we do">What we do</a></li>
+              <li><a href="#Information and services">Information and services</a></li>
+              <li><a href="#Portfolio agencies we work with">Portfolio agencies we work with</a></li>
             </ol>
-        </div>
-      </details>
+          </div>
+        </nav>
 
-      <blockquote>
-        <p>Pascal said things should line up; the rhythm of things must be maintained!</p>
-      </blockquote>
+      <h2 id="What we do">What we do</h2>
 
-      <p>Accordions can also be achieved using the <code>.accordion</code> class on a <code>dl</code> (definition list), using the <code>dt</code> effectively as the <code>summary</code>:</p>
+      <p>We help the communications sector stay competitive and innovative by providing advice, delivering programs and conducting research.</p>
 
-      <p>incoming&hellip;</p>
+      <p>We also manage programs that encourage artists, support Australia’s cultural heritage and help everyone experience arts and culture.</p>
 
-      <p>Vertical rhythm should be <strong>maintained</strong> between content elements:</p>
+      <h2 id="Information and services">Information and services</h2>
+
+      <p>We provide information and deliver services related to communications and the arts.</p>
+
+      <h3 id="internet">Internet</h3>
+
+      <p><strong><a href="#">Internet gambling</a></strong><br>
+      Information about online gambling.</p>
+
+      <p><strong><a href="#">Internet governance</a></strong><br>
+      Information on the laws and rules that apply to the internet.</p>
+
+      <p><strong><a href="#">Spam</a></strong><br>
+      Information on how to reduce internet spam.</p>
+
+      <p><strong><a href="#">Broadband</a></strong><br>
+      Information about the nbn and internet service providers.</p>
+
+      <p><strong><a href="#">Online safety</a></strong><br>
+      Information on cyber security and staying safe online.</p>
+
+      <h3 id="television">Television</h3>
+
+      <p><strong><a href="#">Television (TV) reception</a></strong><br>
+      Information on improving television reception.</p>
+
+      <p><strong><a href="#">Television (TV) and radio services</a></strong><br>
+      Information on television and radio services.</p>
+
+      <h3 id="phone">Phone</h3>
+
+      <p><strong><a href="#">Phone</a></strong><br>
+      Information about landline, mobile and satellite phone services.</p>
+
+      <h3 id="radio">Radio</h3>
+
+      <p><strong><a href="#">Radio and television (TV) services</a></strong><br>
+      Information about radio and television (TV) services.</p>
+
+      <p><strong><a href="#">Radio and television (TV) content rules</a></strong><br>
+      Information about media complaints and laws.</p>
+
+      <h3 id="post">Post</h3>
+
+      <p><strong><a href="#">Postal services</a></strong><br>
+      Information about postal services.</p>
+
+      <h3 id="spectrum">Spectrum</h3>
+
+      <p><strong><a href="#">Spectrum</a></strong><br>
+      Information about the electromagnetic spectrum.</p>
+
+      <h3 id="copyright">Copyright</h3>
+
+      <p><strong><a href="#">Intellectual property (IP)</a></strong><br>
+      Information about protecting and registering intellectual property.</p>
+
+      <h3 id="classification">Classification</h3>
+
+      <p><strong><a href="#">Classification</a></strong><br>
+      Information about media ratings.</p>
+
+      <h3 id="arts">Arts</h3>
+
+      <p><strong><a href="#">The Arts</a></strong><br>
+      Information about the arts including funding.</p>
+
+      <h3 id="media-ownership">Media ownership</h3>
+
+      <p><strong><a href="#">Media ownership laws</a></strong><br>
+      Information about media ownership laws.</p>
+
+      <h2 id="Portfolio agencies we work with">Portfolio agencies we work with</h2>
+
+      <p>We work closely with other Government agencies within the Communications portfolio to provide all Australians with information and services.</p>
+
+      <p>A portfolio is an area of responsibility for how Australia is run. The Communications portfolio is led by the <a href="/comms-minister/index.html">Minister for Communications</a>.</p>
 
       <ul>
-        <li>an unsorted list item</li>
-        <li>another unsorted list item</li>
-      </ul>
-
-      <p>A paragraph with a badge: <span class="badge--beta">beta</span></p>
-
-      <p>Sorted list:</p>
-
-      <ol>
-        <li>first sorted list item</li>
-        <li>second sorted list item
-          <ol>
-            <li>another item</li>
-          </ol>
-        </li>
-        <li>and another item</li>
-      </ol>
-
-      <!-- List with image -->
-      <ul class="list-horizontal">
-
-        <!-- Hero list item -->
-        <li class="hero-item">
-          <figure>
-            <img src="../kss-assets/img/img-placeholder.gif" alt="example image"/>
-          </figure>
-          <article>
-            <h3>
-              <a href="#">Hero list item</a>
-            </h3>
-
-            <p>Can be paired with horizontal list items for emphasis</p>
-
-          </article>
-        </li>
-
-        <!-- List item with an image -->
         <li>
-          <figure>
-            <img src="../kss-assets/img/img-placeholder.gif" alt="example image" />
-          </figure>
-          <article>
-            <h3>
-              <a href="#">About The Digital Transformation Office</a>
-            </h3>
-
-            <div class="meta">
-              <time datetime="2016-05-08 00:00">08 May 2016</time>
-              <a href="#" rel="author">Author</a>
-            </div>
-
-            <p>The Digital Transformation Office (DTO) was established as an executive agency in July 2015. Its mission is to lead the transformation of government services to deliver a better experience for Australians.</p>
-
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
+          <p><strong><a href="javascript:void(0)">Australia Council for the Arts</a></strong><br>
+      The Australian Government’s arts funding and advisory body.</p>
         </li>
-
-        <!-- List item with no image where there should be one -->
         <li>
-          <figure>
-          </figure>
-          <article>
-            <h3>
-              <a href="#">About The Digital Transformation Office</a>
-            </h3>
-
-            <div class="meta">
-              <time datetime="2016-05-08 00:00">08 May 2016</time>
-              <a href="#" rel="author">Author</a>
-            </div>
-
-            <p>The Digital Transformation Office (DTO) was established as an executive agency in July 2015. Its mission is to lead the transformation of government services to deliver a better experience for Australians.</p>
-
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
+          <p><strong><a href="javascript:void(0)">Australia Post</a></strong><br>
+      Providing reliable and affordable postal, retail, financial and travel services.</p>
         </li>
-
-        <!-- List item with no image -->
         <li>
-          <article>
-            <h3>
-              <a href="#">About The Digital Transformation Office</a>
-            </h3>
-
-            <div class="meta">
-              <time datetime="2016-05-08 00:00">08 May 2016</time> <a href="#" rel="author">Author</a>
-            </div>
-
-            <p>The Digital Transformation Office (DTO) was established as an executive agency in July 2015. Its mission is to lead the transformation of government services to deliver a better experience for Australians.</p>
-
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-                <dd><a href="#">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
+          <p><strong><a href="javascript:void(0)">Australian Broadcasting corporation (ABC)</a></strong><br>
+      Australia’s public broadcaster, including national and local television and radio programs.</p>
         </li>
-
-        <!-- List item  -->
         <li>
-          <article>
-            <h3>
-              <a href="#">About The Digital Transformation Office</a>
-            </h3>
-
-            <p>The Digital Transformation Office (DTO)</p>
-
-          </article>
+          <p><strong><a href="javascript:void(0)">Australian Communications and Media Authority (ACMA)</a></strong><br>
+      Responsible for the regulation of broadcasting, the internet, radiocommunications and telecommunications.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australian Film Television and Radio School (AFTRS)</a></strong><br>
+      The leading institution for the education and training of creative talent.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australian National Maritime Museum</a></strong><br>
+      Australia’s national centre for maritime collections, exhibitions, research and archaeology.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Bundanon Trust</a></strong><br>
+      Supporting artists and encouraging people to engage with the arts through education, exhibitions and performances.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australia Business Arts Foundation (operating as Creative Partnerships Australia)</a></strong><br>
+      Bringing artists, donors, businesses and arts organisations together to promote a more sustainable and vibrant arts sector.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">The Museum of Australian Democracy</a></strong><br>
+      Helping people to understand Australia’s social and political history.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Film and Sound Archive</a></strong><br>
+      Collecting, preserving and sharing our rich audio-visual heritage.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Gallery of Australia (NGA)</a></strong><br>
+      Australia’s national cultural institution for the visual arts.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Library of Australia (NLA)</a></strong><br>
+      Making sure that important documentary resources are collected, preserved and made available to everyone.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Museum of Australia</a></strong><br>
+      A social history museum exploring the land, nation and people of Australia.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Portrait Gallery Australia (NPGA)</a></strong><br>
+      The national collection of portraits of Australians reflects the breadth and energy of Australian culture and endeavour.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">NBN Co Limited</a></strong><br>
+      Delivering Australia’s first national, open access broadband network to all Australians.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Office of the Children’s e-Safety Commissioner</a></strong><br>
+      Helping young people have safe, positive experiences online.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Screen Australia</a></strong><br>
+      Funding the production of everything from feature films to documentaries, television drama, children’s programs and online series.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Special broadcasting service (SBS)</a></strong><br>
+      Australia’s multicultural and multilingual broadcaster.</p>
         </li>
       </ul>
 
-      <h2>Buttons and links</h2>
-
-      <p>A <a href="#">text link</a> can appear within a chunk of text, or within any text element. Buttons can be grouped
-        together:</p>
-
-      <p>
-        <a href="#" role="button">Primary Button</a>
-        <a href="#" role="button" class="contrast">Contrast button</a>
-        <a href="#" role="button" class="disabled">Disabled</a>
-      </p>
-
-      <p>It would be way cool to have <code>kbd</code> support, so that we can tell people how to <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd>, or how to win their games faster by mashing <kbd>F11</kbd>.</p>
-
-      <h2>Quotations and citations</h2>
-
-      <p>We need to be able to cater for both block quotations, as well as in-line quotations via the <code>q</code>
-        element, because Simon said <q>yo dawg, get them quotes on yo!</q></p>
-
-      <p>The <code>q</code> element is unlikely to see a lot of use, unless we play with the editors to be used for
-        authoring and editing things. The other issue with using the <code>content</code> property is that text selection
-        of its contents is not available, so the opening and closing quotation marks are not selectable.</p>
-
-      <p>Time for a <code>blockquote</code>, which are distinct from in-line qutoations via the <code>q</code> element.
-      </p>
-
-      <blockquote>
-        <p>Blockquotes are block-level elements that contain in-line elements.</p>
-        <p>This means we can place multiple paragraphs, lists, etc. into a block quotation. We can also use it nest
-          another blockquote, like so:</p>
-        <blockquote>
-          <p><em>How far the moral sphere extends.</em>&mdash;As soon as we see a new image, we immediately construct it
-            with the aid of all our previous experiences, <em>depending on the degree</em> of our honesty and justice. All
-            experiences are moral experiences, even in the realm of sense perception.</p>
-          <footer>
-            <cite>1887, Nietzsche (1974). <em>The Gay Science</em> [second edition], &sect; 114. Translated from the
-              German by W. Kaufmann. New York: Vintage Books.</cite>
-          </footer>
-        </blockquote>
-        <p>While inside the block quotation, let us test a few other nested elements:</p>
-        <ul>
-          <li>first sorted list item</li>
-          <li>second sorted list item
-            <ol>
-              <li>another item</li>
-              <li>and again&hellip;</li>
-            </ol>
-          </li>
-          <li>and another item</li>
-        </ul>
-        <p>The other thing that is worth noting is that we can place the <code>footer</code> element contextually inside
-          other block-level elements; they are not restricted to a single use per page. This allows us to use
-          <code>footer</code> inside a <code>blockquote</code>, and within that we can provide a citation via the <code>cite</code>
-          element.</p>
-        <footer>
-          <cite><a href="link">Citation source</a></cite>
-        </footer>
-      </blockquote>
-
-      <p>We can draw attention to a quotation by using the <code>.pullquote</code> class for a block quotation.</p>
-
-      <blockquote class="pullquote">
-        <p><em>Mystical explanations.</em>&mdash;Mystical explanations are considered deep. The truth is that they are not
-          even superficial.</p>
-      </blockquote>
-
-      <h3>Heading Level 3</h3>
-      <p>As well as definition lists:</p>
-
-      <dl>
-        <dt>Definition term 1</dt>
-        <dd>Definition description</dd>
-        <dd>A single definition term can have many definitions.</dd>
-
-        <dt>Second definition term</dt>
-        <dd>Another definition.</dd>
-      </dl>
-
-      <h4>Heading Level 4</h4>
-
-      <p>These interespersed elements aim to show the <em>vertical rhythm</em> between various content elements, using
-        predominately margin-bottom, and only margin-top in the instances where it would be too cumbersome or hacky to try
-        continue with just margin-bottom.</p>
-
-      <p class="callout">This is a callout.</p>
-
-      <p class="callout--warning">This is a warning callout.</p>
-
-      <p>This makes maintaining the vertical rhythm between content easier, and avoids spacing bugs, as well as sizing
-        bugs that aren't immediately apparent when just testing with a few paragraphs and headings.</p>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet
-        ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
-        doloribus!</p>
-      <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero
-        expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-      <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae
-        tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-      <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident
-        delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel
-        odio?</p>
-
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
-        <li>Laboriosam quaerat sapiente minima nam minus similique illum architecto et!</li>
-        <li>Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!</li>
-        <li>Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
-      </ul>
-
-      <h5>Heading Level 5</h5>
-
-      <ol>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.</li>
-        <li>Laboriosam quaerat sapiente minima nam minus similique illum architecto et!</li>
-        <li>Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!</li>
-        <li>Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!</li>
-      </ol>
-
-      <section class="form-wrapper">
-
-        <h2>Contact Us</h2>
-        <form>
-          <p>
-            <label for="name">Your name</label>
-            <input type="text" id="name"/>
-          </p>
-          <p>
-            <label for="colour">Your favourite colour</label>
-            <input type="text" id="colour" disabled/>
-          </p>
-          <p>
-            <label for="contact">Your contact</label>
-            <span class="hint" id="name-hint">Please provide an email address.</span>
-            <input type="email" id="contact" aria-describedby="name-hint" required/>
-          </p>
-
-          <fieldset id="reply">
-            <legend>Would you like a reply?</legend>
-            <input id="yes" name="reply" type="radio" value="Yes"/>
-            <label for="yes">Yes</label>
-            <input id="no" name="reply" type="radio" value="No"/>
-            <label for="no">No</label>
-            <input id="maybe" name="reply" type="radio" value="Maybe"/>
-            <label for="maybe">Maybe</label>
-          </fieldset>
-
-          <fieldset id="comms">
-            <legend>What method(s) of communication do you prefer?</legend>
-            <input id="radio" name="comms" type="checkbox" value="Radio"/>
-            <label for="radio">Radio</label>
-            <input id="telephone" name="comms" type="checkbox" value="Telephone"/>
-            <label for="telephone">Telephone</label>
-          </fieldset>
-
-          <p>
-            <label for="message">Your message</label>
-            <textarea id="message"></textarea>
-          </p>
-          <input type="submit" value="Submit"/>
-          <input type="reset" value="Reset"/>
-        </form>
-
-      </section>
-
-    </article>
+      </article>
   </main>
 
   <footer role="contentinfo">

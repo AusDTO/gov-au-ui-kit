@@ -95,6 +95,27 @@
     }
   }
 
+  .govau--text {
+    background-image: url('../latest/img/icons/logo-gov-au-2x.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 269px;
+    height: 51px;
+
+    &.dusk {
+      background-image: url('../latest/img/icons/logo-gov-au-2x-dusk.png');
+    }
+
+    &.dawn {
+      background-image: url('../latest/img/icons/logo-gov-au-2x-dawn.png');
+    }
+
+    &.night {
+      background-image: url('../latest/img/icons/logo-gov-au-2x-night.png');
+    }
+  }
+
   .logo {
     font-size: rem(24);
     font-weight: $heading-font-weight;
@@ -198,21 +219,23 @@
   }
 
   h1 {
-    font-size: rem(38);
+    font-size: rem(28);
     margin-top: 0;
     max-width: 15em;
-    /*@include media($desktop) {
-      width: 60%;
-    }*/
+
+    @include media($tablet) {
+      font-size: rem(38);
+    }
   }
 
   p {
-    font-size: rem(20);
+    font-size: rem(18);
     margin-bottom: 0;
     max-width: 30em;
-    /*@include media($desktop) {
-      width: 60%;
-    }*/
+
+    @include media($tablet) {
+      font-size: rem(20);
+    }
   }
 
   // Should this be deprecated?
@@ -250,14 +273,12 @@
   Prototype branding bar. Work in progress
 */
 .brandbar {
-  $bar-morn-1: #e63426;
-  $bar-morn-2: #f38c22;
-  $bar-morn-3: #fbc515;
-
-  background-color: $bar-morn-1;
+  $bar-noon-1: #00a1bb;
+  $bar-noon-2: #b2e5ff;
+  $bar-noon-3: #44c2ef;
+  background-color: $bar-noon-1;
   height: 8px;
   position: relative;
-  transition: background-color ease 1s;
 
   .b1 {
     position: absolute;
@@ -265,7 +286,7 @@
     top: 0;
     bottom: 0;
     width: 50%;
-    background-color: $bar-morn-2;
+    background-color: $bar-noon-2;
   }
 
   .b2 {
@@ -274,7 +295,7 @@
     top: 0;
     bottom: 0;
     width: 25%;
-    background-color: $bar-morn-3;
+    background-color: $bar-noon-3;
   }
 
   &.dusk {
@@ -294,9 +315,9 @@
   }
 
   &.night {
-    $bar-night-1: #07457f;
+    $bar-night-1: #005ba8;
     $bar-night-2: #3e83c5;
-    $bar-night-3: #003567;
+    $bar-night-3: #002a42;
 
     background-color: $bar-night-1;
 
@@ -309,19 +330,19 @@
     }
   }
 
-  &.noon {
-    $bar-noon-1: #0074b3;
-    $bar-noon-2: #9ad5f3;
-    $bar-noon-3: #44c2ef;
+  &.dawn {
+    $bar-dawn-1: #e63426;
+    $bar-dawn-2: #f38c22;
+    $bar-dawn-3: #fbc515;
 
-    background-color: $bar-noon-1;
+    background-color: $bar-dawn-1;
 
     .b1 {
-      background-color: $bar-noon-2;
+      background-color: $bar-dawn-2;
     }
 
     .b2 {
-      background-color: $bar-noon-3;
+      background-color: $bar-dawn-3;
     }
   }
 }
