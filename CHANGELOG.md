@@ -2,7 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### Next release (scheduled 2016-07-26)
+### 1.4.0 - 2016-07-27
 
 #### UI-Kit changes
 
