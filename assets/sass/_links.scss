@@ -72,16 +72,16 @@ Style guide: Link styles.1 Hover links
       }
     }
 
-/*
-See more link
+    /*
+    See more link
 
-Use see more links at the end of [lists](section-list-styles.html),
-to take the user to a index page of all items.
+    Use see more links at the end of [lists](section-list-styles.html),
+    to take the user to a index page of all items.
 
-Markup: <a class="see-more" href="#">See more</a>
+    Markup: <a class="see-more" href="#">See more</a>
 
-Style guide: Link styles.2 See more link
-*/
+    Style guide: Link styles.2 See more link
+    */
 
     &.see-more {
       display: inline-block;
