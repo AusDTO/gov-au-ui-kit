@@ -6,14 +6,17 @@
 
 #### UI-Kit changes
 
+- Links and buttons:
+  - Improved styling throughout, inc. on inverted colours (eg light text on darker bg).
+  - Added `:focus` styles (identical to `:hover`).
+  - Refactor of anchor styling into `_lists.scss` partial.
+  - Adds an icon to anchors with `rel="external"`.
 - Callouts: extends with a new class to highlight specific dates (`.callout--calendar-event`).
 - Text input `type` `tel` support.
 - New table style: calendar tables, for displaying a series of dates and their events (eg public holidays).
 - Local nav (sidebar):
   - Now appears to the right of the main content space (not markup change required).
   - Toggle-able to the left (as previously) by applying `.sidebar-has-controls` to the `<main>` element.
-  - [undocumented] Adds new `.current` class for current page in the IA.
-  - [incomplete & undocumented] Adds top-level item support.
 - Typography overhaul:
   - Removes `margin-top` from most content elements (headings excluded).
   - Support for heading styles stripped back, now covering `h1` to `h4` and resized.
@@ -34,7 +37,7 @@ We have also revised a number of our styleguide sections, simplifying them while
 
 Build environment:
 
-- Compiles icons into separate SCSS partial (`assets/sass/ui-kit-icons.scss`) (undocumented, experimental)
+- Compiles icons into separate SCSS partial (`assets/sass/ui-kit-icons.scss`) [undocumented, experimental]
 
 ### 1.3.0 - 2016-07-19
 

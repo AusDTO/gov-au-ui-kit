@@ -335,21 +335,21 @@ h4 {
   }
 }
 
-a {
-  color: $link-colour;
-  text-decoration: none;
-  border-bottom: 1px solid;
-
-  &:visited {
-    color: $link-colour;
-  }
-
-  &:hover,
-  &:active {
-    color: $link-hover-colour;
-  }
-
-}
+// a {
+//   color: $link-colour;
+//   text-decoration: none;
+//   border-bottom: 1px solid;
+//
+//   &:visited {
+//     color: $link-colour;
+//   }
+//
+//   &:hover,
+//   &:active {
+//     color: $link-hover-colour;
+//   }
+//
+// }
 
 code,
 pre,
@@ -548,11 +548,11 @@ Style guide: Typography.7 Badges
 */
 
 $badges: (
-  'default':  $badge-colour-default,
-  'alpha':    $badge-colour-alpha,
-  'beta':     $badge-colour-beta,
-  'error':    $badge-colour-error,
-  'success':  $badge-colour-success,
+  'default':  $badge-colour--default,
+  'alpha':    $badge-colour--alpha,
+  'beta':     $badge-colour--beta,
+  'error':    $badge-colour--error,
+  'success':  $badge-colour--success,
 );
 
 @each $badge-type, $colour in $badges {

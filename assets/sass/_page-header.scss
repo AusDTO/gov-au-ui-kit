@@ -1,4 +1,7 @@
 [class^='controls'] {
+  @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
+  @include button-colours($controls-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $controls-bg-colour);
+
   padding: $tiny-spacing 0;
   background-color: $controls-bg-colour;
   color: $body-inverted-text-colour;
@@ -41,11 +44,12 @@
   }
 
   [role='button'] {
-    @extend .inverted;
     margin: 0;
   }
 
   &[class$='--contrast'] {
+    @include button-colours($controls-contrast-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $controls-contrast-bg-colour);
+
     background-color: $controls-contrast-bg-colour;
 
     [role='button']:hover,
@@ -56,6 +60,9 @@
 }
 
 .govau--header {
+  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
+  @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
+
   position: relative;
   padding: $medium-spacing 0 ($base-spacing * 3);
   padding-bottom: $medium-spacing;
@@ -76,19 +83,14 @@
   }
 
   .logo {
-    @extend h3;
-
+    font-size: rem(24);
+    font-weight: $heading-font-weight;
     padding-bottom: 2px;
-    border-bottom: none;
+    border-bottom: 0;
     color: $body-inverted-text-colour;
     font-family: $base-sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-
-    &:hover,
-    &:focus {
-      border-bottom: 1px;
-    }
   }
 
   [class^='badge'] {
@@ -108,8 +110,8 @@
 }
 
 .button--feedback {
-  @extend button;
   @extend .inverted;
+  
   margin: 0;
   width: 100%;
   text-align: center;
@@ -121,6 +123,7 @@
 }
 
 .hero {
+  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
   padding: ($base-spacing * 2) 0;
   margin-bottom: 0;
   background-color: $hero-bg-colour;
@@ -138,8 +141,7 @@
     font-weight: $base-font-weight;
   }
 
-  code,
-  a {
+  code {
     color: $body-inverted-text-colour;
   }
 }
