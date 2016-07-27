@@ -1,25 +1,25 @@
 /*
-Link & anchor styles
+Link styles
 
-Styling for various different types and classes of links.
+Styling for types and classes of links.
 
-Note: this section is does not exhaustively cover all link and anchor styles; there are some that remain interspersed amongst the relevant partials they pertain to (eg tag cloud links).
+There are other styles documented elsewhere (eg tag cloud links).
 
-Style guide: Links & anchors
+Style guide: Link styles
 */
 
 /*
-Basic anchor styles
+Hover, focus & external links
 
 The `:hover` and `:focus` styles are identical.
 
-Link styles are globally scoped with inverted style colours handled by a SASS mixin (eg in the page header).
+Inverted colour versions of `:hover` and `:focus` are created using `@mixin link-colours` where required (eg in the page header). The `_buttons.scss` partial includes a similar mixin: `@mixin button-colours`.
 
-We have support to add icons to anchors (without further markup) via the `rel` attribute, currently only for external links (`rel="external"`).
+Link to external sites using `rel="external"`.
 
 Markup: templates/basic-links.hbs
 
-Style guide: Links & anchors.1 Basic styles
+Style guide: Link styles.1 Hover links
 */
 
 // A base extend that provides the styling for icons at the end of a link.
@@ -72,15 +72,17 @@ Style guide: Links & anchors.1 Basic styles
       }
     }
 
-    /*
-    See more link
+/*
+See more link
 
-    Some lists will show a feed of the latest or most relevant items. The see more link takes the user to the index page showing all of the items.
+Use see more links at the end of [lists](section-list-styles.html),
+to take the user to a index page of all items.
 
-    Markup: <a class="see-more" href="#">See more</a>
+Markup: <a class="see-more" href="#">See more</a>
 
-    Style guide: Links & anchors.2 See more link
-    */
+Style guide: Link styles.2 See more link
+*/
+
     &.see-more {
       display: inline-block;
       position: relative;
