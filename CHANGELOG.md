@@ -2,14 +2,14 @@
 
 ## UI Kit "Kraken"
 
-### 1.5.0 - Unreleased
+### 1.5.0 - 2016-07-28
 
 #### UI-Kit changes
 
-- Iconography
-  -  Removed ui-kit-icons.css output file
-  -  Added images.zip build output containing images used
 - Groups of links added (documented *§ Navigation*)
+- Iconography (undocumented, experimental)
+  -  Removed ui-kit-icons.css output file
+  -  Added images.zip build output containing images used (`gulp build.prod`)
 
 ### 1.4.0 - 2016-07-27
 
