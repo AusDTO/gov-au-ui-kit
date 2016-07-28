@@ -539,6 +539,53 @@ Style guide: Navigation.7 Skip links
 }
 
 /*
+Groups of links
+
+Use groups of links to help users find content elsewhere that will meet their needs.
+
+Groups of links span from 2 columns (`$mobile`) up to 4 columns (`$tablet` and `$desktop`).
+
+You can use groups of links:
+
+- in the header (eg listing popular links across the site)
+- anywhere within an `article` (eg as a list of related topics).
+
+Markup: templates/groups-links.hbs
+
+Style guide: Navigation.8 Group of links
+*/
+
+.links-group {
+  @include outer-container;
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      @include span-columns(4);
+      float: left;
+      margin-top: 0.5em;
+
+      @include media ($mobile-only) {
+        @include span-columns(2 of 4);
+        @include omega(2n);
+        }
+
+      @include media ($tablet-only) {
+        @include span-columns(3 of 12);
+        @include omega(4n);
+        }
+
+      @include media ($desktop) {
+        @include span-columns(4 of 16);
+        @include omega(4n);
+        }
+      }
+  }
+}
+
+/*
 Accessibility
 
 - All navigation must be keyboard accessible and include ARIA tags.
