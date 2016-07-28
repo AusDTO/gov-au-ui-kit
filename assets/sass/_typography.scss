@@ -62,10 +62,10 @@ $base-font-family: $base-sans-serif;
 Spacing
 
 The framework uses the base font's line height value (set using `$base-leading: 1.6`) to calculate 4 spacing values:
-- `$base-spacing`: `$base-leading` * 1em
-- `$medium-spacing`: `$base-spacing` * 0.75
-- `$small-spacing`: `$base-spacing` / 2
-- `$tiny-spacing`: `$base-spacing` / 4.
+- `$base-spacing: $base-leading * 1em`
+- `$medium-spacing: $base-spacing * 0.75`
+- `$small-spacing: $base-spacing / 2`
+- `$tiny-spacing: $base-spacing / 4`.
 
 These values are used to ensure horizontal and vertical rhythm through pages.
 
