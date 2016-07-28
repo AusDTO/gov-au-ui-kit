@@ -61,17 +61,20 @@ $base-font-family: $base-sans-serif;
 /*
 Spacing
 
-The framework uses the base font's line height value (set using `$base-leading: 1.6`) to calculate 4 spacing values:
+The framework uses the base font's `line-height` (*leading*, or line spacing) value (set using `$base-leading: 1.6`) to calculate 5 spacing values:
 - `$base-spacing: $base-leading * 1em`
+- `$large-spacing: $base-spacing * 2`
 - `$medium-spacing: $base-spacing * 0.75`
 - `$small-spacing: $base-spacing / 2`
 - `$tiny-spacing: $base-spacing / 4`.
 
 These values are used to ensure horizontal and vertical rhythm through pages.
 
-Don't apply a `font-size` to a container element (eg `footer`). All container spacing variables should be the same.
+<p class="callout">Because these variables are sized in ems they are relative to the font size of an element the spacing variables are applied to. Don’t apply a <code>font-size</code> to a container element (eg a <code>footer</code>).</p>
 
 We are likely to change the `$base-spacing` unit to give a figure easier to multiply and divide.
+
+We may change the unit from ems to rems for consistency in calculations over relational proportionality in sizing.
 
 Style guide: Typography.3 Spacing
 */
@@ -84,6 +87,7 @@ $double-leading: 2;
 
 // Base spacing, relative to leading.
 $base-spacing: $base-leading * 1em;
+$large-spacing: $base-spacing * 2;
 $medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;
 $tiny-spacing: $base-spacing / 4;
@@ -437,6 +441,8 @@ The framework provides list styles for:
 - ordered lists (numbered)
 - definition lists (terms and definitions).
 
+More [elaborate list styles are also available](/section-typography.html#guide-typography-6-callouts-warnings).
+
 Markup: templates/list-examples.hbs
 
 Style guide: Typography.4 Lists
@@ -490,9 +496,11 @@ Callouts & warnings
 
 There are 3 classes for drawing the user's attention:
 
-- `<p class="callout">`
-- `<p class="callout--warning">` for warnings
-- `<div class="callout--calendar-event">` for dates.
+- `.callout`
+- `.callout--warning` for warnings
+- `.callout--calendar-event` for dates.
+
+You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>` or an `<aside>`.
 
 Markup: templates/callouts-examples.hbs
 
@@ -549,7 +557,7 @@ Style guide: Typography.5 Callouts & warnings
 /*
 Badges
 
-There is styling for `badges` to indicate status.
+There is styling for badges to indicate status.
 
 Markup: templates/badges.hbs
 
