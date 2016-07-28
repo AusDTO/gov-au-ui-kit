@@ -59,6 +59,24 @@
   }
 }
 
+.govau--header,
+.prerelease-govau--header {
+  .links-group {
+    margin: ($base-spacing * 1.5) 0;
+
+    h2 {
+      font-size: rem(17);
+      font-weight: $bold-font-weight;
+      margin-top: 0;
+      padding: 0;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+}
+
 .govau--header {
   @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
   @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
@@ -187,48 +205,6 @@
 .homeintro {
   p {
     font-size: rem(24);
-  }
-}
-
-.links-group {
-
-  margin: ($base-spacing * 1.5) 0;
-
-  h2 {
-    font-size: rem(17); //Should this be a var?
-    font-weight: $bold-font-weight;
-    margin-top: 0;
-    padding: 0;
-  }
-
-  ul {
-    @include clearfix;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    width: 50%;
-    float: left;
-
-    @include media($tablet) {
-      width: 25%;
-    }
-  }
-
-  a {
-    color: $white;
-  }
-}
-
-.feedback {
-  display: none;
-
-  @include media($tablet) {
-    display: block;
-    float: right;
-    margin-left: $base-spacing;
   }
 }
 

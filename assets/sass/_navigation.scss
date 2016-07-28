@@ -552,23 +552,13 @@ You can use groups of links:
 
 Markup: templates/groups-links.hbs
 
-Style guide: Navigation.8 Groups of links
+Style guide: Navigation.8 Group of links
 */
 
-/* Grouped links 2 */
 .links-group {
   @include outer-container;
-  margin-top: 3em;
 
-  h2 {
-    font-size: 1em;
-    margin-top: 0;
-    padding: 0;
-  }
-
-  // this is a ul class that i'm not sure if it's necessary...
-
-  .popular-now {
+  ul {
     padding: 0;
     list-style: none;
 
