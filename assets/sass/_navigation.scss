@@ -504,7 +504,8 @@ Style guide: Navigation.7 Skip links
     font-weight: $base-font-weight;
   }
 
-  ul {
+  ul,
+  ol {
     list-style-type: none;
     margin: $base-spacing 0 0;
     padding: 0;
