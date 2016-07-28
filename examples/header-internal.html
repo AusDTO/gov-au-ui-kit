@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]>
+<html lang="en" class="ie6 no-js">    <![endif]-->
+<!--[if IE 7 ]>
+<html lang="en" class="ie7 no-js">    <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" class="ie8 no-js">    <![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" class="ie9 no-js">    <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js"><!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- viewport declaration must be included in <head> for media queries to work correctly on real devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Example Pages</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Open+Sans:400italic,700,400:latin,latin-ext']
+      }
+    });
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="../latest/ui-kit.css"/>
+
+  <!--[if lt IE 9]>
+  <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+          crossorigin="anonymous"></script>
+  <script type="text/javascript"
+          src="//cdnjs.cloudflare.com/ajax/libs/corysimmons-selectivizr2/1.0.8/selectivizr2.min.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
+  <script type='text/javascript'
+          src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="../latest/ui-kit.js"></script>
+
+</head>
+<body>
+
+  <div class="skip-to">
+    <a href="#content">Skip to main content</a>
+    <a href="#nav">Skip to section navigation</a>
+  </div>
+
+  <header role="banner">
+
+    <section class="prerelease-govau--header">
+      <div class="wrapper">
+        <div class="govau--logo">
+          <img src="../latest/img/icons/logo-govau-full-2x.png" alt="" width="205"/>
+
+          <div id="test" class="brandbar noon"><!--ID is temp for example-->
+            <div class="b1"></div>
+            <div class="b2"></div>
+          </div>
+        </div>
+      </div><!--wrapper-->
+
+      <nav class="breadcrumbs--inverted" aria-label="breadcrumb">
+        <div class="wrapper">
+          <ul>
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="Menu1">Menu1</a></li>
+            <li>Menu2</li>
+          </ul>
+        </div>
+      </nav>
+
+    </section>
+  </header>
+
+  <div class="hero-sml corporate">
+    <div class="wrapper">
+      <p>Department of Communications and the Arts</p>
+    </div>
+  </div>
+
+  <div class="hero-sml">
+    <div class="wrapper">
+      <p>Department of Communications and the Arts</p>
+    </div>
+  </div>
+
+  <main>
+    <aside class="sidebar" id="nav">
+      <nav class="local-nav" aria-label="main navigation">
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Purpose</a></li>
+          <li>
+            <a href="#">Foundations</a>
+            <ul class="sub-nav-list">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Design principles</a></li>
+              <li><a href="#">Grid</a></li>
+              <li>
+                <a href="#">Typography</a>
+                <ul class="sub-sub-nav-list">
+                  <li><a href="#">Line height and spacing</a></li>
+                  <li><a href="#">Typesetting</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Text accessibility</a></li>
+              <li><a href="#">Links</a></li>
+              <li><a href="#">Lists</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+
+    <form id="myform" action="#">
+      <select id="bgcolor">
+        <option value="">Noon</option>
+        <option value="dusk">Dusk</option>
+        <option value="night">Night</option>
+        <option value="dawn">Dawn</option>
+      </select>
+     </form>
+    <script>
+      document.getElementById('bgcolor').onchange = function(){
+          document.querySelectorAll('.brandbar').item(0).className = 'brandbar ' + this.value;
+          document.querySelectorAll('.govau--text').item(0).className = 'govau--text ' + this.value;
+      };
+    </script>
+
+      <article class="main-content content-main" id="main-content">
+
+        <header><h1>Our role</h1></header>
+
+        <p class="abstract">Through our advice and programs we aim to make communication technologies and the arts better for all Australians.</p>
+
+      <nav class="index-links">
+          <div>
+            <h2>Contents</h2>
+            <ol>
+              <li><a href="#x1">What we do</a></li>
+              <li><a href="#”">Information and services</a></li>
+              <li><a href="#">Portfolio agencies we work with</a></li>
+            </ol>
+          </div>
+        </nav>
+
+      <h2 id="x1">What we do</h2>
+
+      <p>We help the communications sector stay competitive and innovative by providing advice, delivering programs and conducting research.</p>
+
+      <p>We also manage programs that encourage artists, support Australia’s cultural heritage and help everyone experience arts and culture.</p>
+
+      <h2 id="x2">Information and services</h2>
+
+      <p>We provide information and deliver services related to communications and the arts.</p>
+
+      <h3 id="internet">Internet</h3>
+
+      <p><strong><a href="#">Internet gambling</a></strong><br>
+      Information about online gambling.</p>
+
+      <p><strong><a href="#">Internet governance</a></strong><br>
+      Information on the laws and rules that apply to the internet.</p>
+
+      <p><strong><a href="#">Spam</a></strong><br>
+      Information on how to reduce internet spam.</p>
+
+      <p><strong><a href="#">Broadband</a></strong><br>
+      Information about the nbn and internet service providers.</p>
+
+      <p><strong><a href="#">Online safety</a></strong><br>
+      Information on cyber security and staying safe online.</p>
+
+      <h3 id="television">Television</h3>
+
+      <p><strong><a href="#">Television (TV) reception</a></strong><br>
+      Information on improving television reception.</p>
+
+      <p><strong><a href="#">Television (TV) and radio services</a></strong><br>
+      Information on television and radio services.</p>
+
+      <h3 id="phone">Phone</h3>
+
+      <p><strong><a href="#">Phone</a></strong><br>
+      Information about landline, mobile and satellite phone services.</p>
+
+      <h3 id="radio">Radio</h3>
+
+      <p><strong><a href="#">Radio and television (TV) services</a></strong><br>
+      Information about radio and television (TV) services.</p>
+
+      <p><strong><a href="#">Radio and television (TV) content rules</a></strong><br>
+      Information about media complaints and laws.</p>
+
+      <h3 id="post">Post</h3>
+
+      <p><strong><a href="#">Postal services</a></strong><br>
+      Information about postal services.</p>
+
+      <h3 id="spectrum">Spectrum</h3>
+
+      <p><strong><a href="#">Spectrum</a></strong><br>
+      Information about the electromagnetic spectrum.</p>
+
+      <h3 id="copyright">Copyright</h3>
+
+      <p><strong><a href="#">Intellectual property (IP)</a></strong><br>
+      Information about protecting and registering intellectual property.</p>
+
+      <h3 id="classification">Classification</h3>
+
+      <p><strong><a href="#">Classification</a></strong><br>
+      Information about media ratings.</p>
+
+      <h3 id="arts">Arts</h3>
+
+      <p><strong><a href="#">The Arts</a></strong><br>
+      Information about the arts including funding.</p>
+
+      <h3 id="media-ownership">Media ownership</h3>
+
+      <p><strong><a href="#">Media ownership laws</a></strong><br>
+      Information about media ownership laws.</p>
+
+      <h2 id="x3">Portfolio agencies we work with</h2>
+
+      <p>We work closely with other Government agencies within the Communications portfolio to provide all Australians with information and services.</p>
+
+      <p>A portfolio is an area of responsibility for how Australia is run. The Communications portfolio is led by the <a href="/comms-minister/index.html">Minister for Communications</a>.</p>
+
+      <ul>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australia Council for the Arts</a></strong><br>
+      The Australian Government’s arts funding and advisory body.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australia Post</a></strong><br>
+      Providing reliable and affordable postal, retail, financial and travel services.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australian Broadcasting corporation (ABC)</a></strong><br>
+      Australia’s public broadcaster, including national and local television and radio programs.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australian Communications and Media Authority (ACMA)</a></strong><br>
+      Responsible for the regulation of broadcasting, the internet, radiocommunications and telecommunications.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australian Film Television and Radio School (AFTRS)</a></strong><br>
+      The leading institution for the education and training of creative talent.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australian National Maritime Museum</a></strong><br>
+      Australia’s national centre for maritime collections, exhibitions, research and archaeology.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Bundanon Trust</a></strong><br>
+      Supporting artists and encouraging people to engage with the arts through education, exhibitions and performances.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Australia Business Arts Foundation (operating as Creative Partnerships Australia)</a></strong><br>
+      Bringing artists, donors, businesses and arts organisations together to promote a more sustainable and vibrant arts sector.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">The Museum of Australian Democracy</a></strong><br>
+      Helping people to understand Australia’s social and political history.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Film and Sound Archive</a></strong><br>
+      Collecting, preserving and sharing our rich audio-visual heritage.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Gallery of Australia (NGA)</a></strong><br>
+      Australia’s national cultural institution for the visual arts.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Library of Australia (NLA)</a></strong><br>
+      Making sure that important documentary resources are collected, preserved and made available to everyone.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Museum of Australia</a></strong><br>
+      A social history museum exploring the land, nation and people of Australia.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">National Portrait Gallery Australia (NPGA)</a></strong><br>
+      The national collection of portraits of Australians reflects the breadth and energy of Australian culture and endeavour.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">NBN Co Limited</a></strong><br>
+      Delivering Australia’s first national, open access broadband network to all Australians.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Office of the Children’s e-Safety Commissioner</a></strong><br>
+      Helping young people have safe, positive experiences online.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Screen Australia</a></strong><br>
+      Funding the production of everything from feature films to documentaries, television drama, children’s programs and online series.</p>
+        </li>
+        <li>
+          <p><strong><a href="javascript:void(0)">Special broadcasting service (SBS)</a></strong><br>
+      Australia’s multicultural and multilingual broadcaster.</p>
+        </li>
+      </ul>
+
+      </article>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrapper">
+      <section class="footer-top">
+        <nav>
+          <ul>
+            <li><h3>Title header</h3></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+          </ul>
+          <ul>
+            <li><h3>Title header</h3></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+          </ul>
+          <ul>
+            <li><h3>Title header</h3></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+          </ul>
+          <ul>
+            <li><h3>Title header</h3></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+            <li><a href="javascript:void(0)">This is a footer link</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section>
+        <div class="footer-logo">
+          <img alt="Australian Government Coat of Arms" src="/latest/img/coat-of-arms.png">
+        </div>
+        <div class="footer-links">
+          <nav>
+            <ul>
+              <li><a href="javascript:void(0)">Example global link</a></li>
+              <li><a href="javascript:void(0)">Example global link</a></li>
+              <li><a href="javascript:void(0)">Example global link</a></li>
+              <li><a href="javascript:void(0)">Example global link</a></li>
+              <li><a href="javascript:void(0)">Example global link</a></li>
+            </ul>
+          </nav>
+          <p>&copy; Commonwealth of Australia <br>
+          <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md">Licensed under the MIT License.</a></p>
+        </div>
+      </section>
+      </div>
+    </footer>
+
+  </body>
+</html>
