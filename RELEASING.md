@@ -54,6 +54,11 @@ Using git-flow create a release branch:
 
 Make sure that wherever the version is stored or set in the code, the version now matches the version for this release.
 
+Files impacted:
+
+- `package.json`, line 3
+- `assets/sass/ui-kit.scss`, line 3
+
 ### Ensure the changelog is up to date
 
 Describe the version and list changes that we made (review the sprint in Jira if required).

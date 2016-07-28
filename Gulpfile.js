@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     inline = require('./lib/gulp-scss-inline.js'),
     connect = require('gulp-connect'),
     svg2png = require('gulp-svg2png'),
-    webpack = require('webpack-stream')
+    webpack = require('webpack-stream'),
+    zip = require('gulp-zip')
     ;
 
 var paths = {
@@ -28,7 +29,6 @@ var paths = {
     kssBuilderDir: './kss-builder/**/*.*',
     images: './assets/img/**/*.+(png|svg|jpg)',
     scss: './assets/sass/ui-kit.scss',
-    iconsScss: './assets/sass/ui-kit-icons.scss',
     js: './assets/js/ui-kit.js',
     markdown: './*.md',
     readme: './README.md',
@@ -60,7 +60,7 @@ gulp.task('ui-kit.scss', ['svg2png'], function () {
     return gulp.src(paths.scss)
         .pipe(sass({
             functions: {
-                inline: inline('./')
+                "asset-data-url": inline('./')
             }
         }).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
@@ -68,23 +68,16 @@ gulp.task('ui-kit.scss', ['svg2png'], function () {
         .pipe(gulp.dest(paths.outputAssets));
 });
 gulp.task('ui-kit.icons', ['svg2png'], function () {
-    return gulp.src(paths.iconsScss)
-        .pipe(sass({
-            functions: {
-                inline: inline('./')
-            }
-        }).on('error', sass.logError))
-        .pipe(autoprefixer(options.autoprefixer))
-        .pipe(gitVersion())
+    return gulp.src(paths.images)
         .pipe(gulp.dest(paths.outputAssets));
 });
 
 gulp.task('ui-kit.js', function () {
     return gulp.src(paths.js)
         .pipe(webpack({
-          output: {
-            filename: 'ui-kit.js',
-          }
+            output: {
+                filename: 'ui-kit.js',
+            }
         }))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
@@ -100,8 +93,8 @@ gulp.task('ui-kit.min', function () {
     gulp.start(['ui-kit.min.scss', 'ui-kit.min.js']);
 });
 
-gulp.task('ui-kit.min.scss', ['ui-kit.scss','ui-kit.icons', 'svg2png'], function () {
-    return gulp.src([paths.outputCSS,"!./**/*.min.css"])
+gulp.task('ui-kit.min.scss', ['ui-kit.scss', 'ui-kit.icons', 'svg2png'], function () {
+    return gulp.src([paths.outputCSS, "!./**/*.min.css"])
         .pipe(cssnano())
         .pipe(gitVersion())
         .pipe(rename({
@@ -113,24 +106,29 @@ gulp.task('ui-kit.min.scss', ['ui-kit.scss','ui-kit.icons', 'svg2png'], function
 gulp.task('ui-kit.min.js', function () {
     return gulp.src(paths.js)
         .pipe(webpack({
-          output: {
-            filename: 'ui-kit.min.js',
-          }
+            output: {
+                filename: 'ui-kit.min.js',
+            }
         }))
         .pipe(uglify())
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
+gulp.task('ui-kit.img', function () {
+    return gulp.src(paths.images)
+        .pipe(gulp.dest(paths.outputAssets + '/img/'));
+});
 
-gulp.task('ui-kit.img', function() {
-  return gulp.src(paths.images)
-    .pipe(gulp.dest(paths.outputAssets + '/img/'));
+gulp.task('ui-kit.img.zip', ['ui-kit.min.scss'], function () {
+    return gulp.src(paths.outputAssets + '/img/**/*')
+        .pipe(zip('images.zip'))
+        .pipe(gulp.dest(paths.outputAssets));
 });
 
 gulp.task('svg2png', ['ui-kit.img'], function () {
-  return gulp.src(paths.assetsDir + '/img/icons/*.svg')
-    .pipe(svg2png())
-    .pipe(gulp.dest(paths.outputAssets + '/img/icons/'));
+    return gulp.src(paths.assetsDir + '/img/icons/*.svg')
+        .pipe(svg2png())
+        .pipe(gulp.dest(paths.outputAssets + '/img/icons/'));
 });
 
 gulp.task('examples', function () {
@@ -172,7 +170,7 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
         homepage: '../../README.md',
         builder: 'kss-builder'
     });
-    kssresult.then(function(v) {
+    kssresult.then(function (v) {
         //console.log(v); // true
         gulp.src('./build/*.html').pipe(connect.reload());
     });
@@ -183,7 +181,7 @@ gulp.task('styleguide.scss', ['svg2png'], function () {
     return gulp.src(paths.kssScssDir)
         .pipe(sass({
             functions: {
-                inline: inline('./')
+                "asset-data-url": inline('./')
             }
         }).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
@@ -201,7 +199,7 @@ gulp.task('build', ['lint', 'ui-kit', 'markdown', 'examples', 'styleguide']);
 
 gulp.task('build.prod', function (callback) {
     runSequence('clean',
-        ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.icons', 'ui-kit.scssmerge', 'markdown', 'htmlvalidate'],
+        ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.img.zip', 'ui-kit.scssmerge', 'markdown', 'htmlvalidate'],
         callback);
 });
 
@@ -209,19 +207,19 @@ gulp.task('watch', ['watch.build']);
 
 gulp.task('watch.build', function () {
     gulp.watch([
-      paths.assets,
-      paths.examplesDir,
-      paths.readme,
-      paths.kssBuilderDir,
-      '!./kss-builder/kss-assets/kss.css'
-    ],
+            paths.assets,
+            paths.examplesDir,
+            paths.readme,
+            paths.kssBuilderDir,
+            '!./kss-builder/kss-assets/kss.css'
+        ],
         {verbose: true},
         ['build']);
 });
 
-gulp.task('serve', ['webserver', 'build','watch.build', 'livereload']);
+gulp.task('serve', ['webserver', 'build', 'watch.build', 'livereload']);
 
-gulp.task('livereload', function() {
+gulp.task('livereload', function () {
     gulp.watch(['./build/latest/'], () => {
         gulp.src('./build/latest/**/*').pipe(connect.reload());
     });

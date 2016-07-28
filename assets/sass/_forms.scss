@@ -42,7 +42,7 @@ Style guide: Forms.1 Text input
   }
 
   &:focus {
-    outline: 2px solid $focus-colour;
+    outline: 2px solid $input-focus-colour;
   }
 
   &:disabled,

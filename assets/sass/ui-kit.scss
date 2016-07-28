@@ -1,3 +1,9 @@
+/*
+
+UI-Kit version: 1.5.0
+
+*/
+
 @import 'vendor/entity';
 @import 'vendor/normalize';
 @import 'vendor/bourbon/bourbon';
@@ -10,9 +16,10 @@
 @import 'icons';
 @import 'colours';
 @import 'typography';
+@import 'buttons';
+@import 'links';
 @import 'tables';
 @import 'block-elements';
-@import 'buttons';
 @import 'forms';
 @import 'navigation';
 @import 'lists';

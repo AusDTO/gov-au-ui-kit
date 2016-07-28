@@ -63,15 +63,16 @@ Style guide: List styles.4 Highlighted word style
   padding: 0;
 
   .tags {
+    @include link-colours($button-bg-colour, v, $link-colour);
     color: $grey;
 
     dl,
     dt,
     dd {
       display: inline-block;
-      line-height: $double-leading;
       margin: 0;
       padding: 0;
+      line-height: $base-heading-leading * 1.5;
     }
 
     dt,
@@ -81,21 +82,19 @@ Style guide: List styles.4 Highlighted word style
     }
 
     a {
-      color: $link-hover-colour;
       padding: 2px $tiny-spacing;
-      border: 1px solid $link-hover-colour;
+      border: 1px solid $button-bg-colour;
       border-radius: 2px;
 
-      &:hover {
-        color: $white;
-        background-color: $link-hover-colour;
+      &:hover,
+      &:focus {
+        border-color: $link-colour--hover;
       }
     }
   }
 
   .meta {
     font-size: $small-font-size;
-    //margin-top: $small-spacing;
     margin-bottom: $small-spacing;
 
     time {
@@ -269,7 +268,7 @@ Style guide: List styles.4 Highlighted word style
   border-top: solid 1px $border-colour;
 
   a {
-    @extend .icon-arrow-right;
+    @extend %icon-arrow-right;
 
     display: block;
     padding: $small-spacing;
@@ -330,52 +329,3 @@ Style guide: List styles.4 Highlighted word style
     }
   }
 }
-
-.see-more {
-  display: inline-block;
-  position: relative;
-  margin-right: $base-spacing;
-  font-weight: $heading-font-weight;
-  border-bottom: 1px solid transparent;
-
-  &:link,
-  &:visited,
-  &:active {
-    color: $button-colour;
-  }
-
-  &::after {
-    @extend .icon-arrow-right-aqua;
-
-    content: '';
-    position: absolute;
-    display: block;
-    width: $medium-spacing;
-    height: $medium-spacing;
-    top: 0;
-    right: -($medium-spacing);
-    background-repeat: no-repeat;
-    background-position: right $tiny-spacing;
-    background-size: (0.8 * $small-spacing) auto;
-    border-bottom: none;
-  }
-
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid;
-  }
-}
-
-/*
-Designing lists
-
-You can use these properties with **horizontal**, **vertical** and **small list** styles:
-
-- **image**&mdash;use `figure` with `<img>` element (you can use the `figure` element without an image to create left padding)
-- **hero item**&mdash;add `.hero-item` class to a list item (the layout will change to fit the wider image)
-- **meta**&mdash;use a `div.meta` to include supplementary information
-- **tags**&mdash;use `footer.tags` and a `dl` element
-- **no border** on first list items&mdash;add the `.no-border` class to the `ul` element.
-
-Style guide: List styles.5 Designing lists
-*/
