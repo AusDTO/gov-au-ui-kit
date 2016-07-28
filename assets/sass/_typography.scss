@@ -61,20 +61,24 @@ $base-font-family: $base-sans-serif;
 /*
 Spacing
 
-The framework uses the base font's `line-height` (*leading*, or line spacing) value (set using `$base-leading: 1.6`) to calculate 5 spacing values:
+The framework sets spacing variables in ems relative to the base font's leading. This ensures horizontal and vertical rhythm through pages.
+
+<p class="callout">Spacing will change in relation to the font size of the elements that use them. So don’t apply a <code>font-size</code> to a container element (eg a <code>footer</code>).</p>
+
+The base font's leading (`line-height`) is set using the variable `$base-leading` (`$base-leading: 1.6`).
+
+`$base-leading` is used to calculate 5 spacing values in ems:
+
 - `$base-spacing: $base-leading * 1em`
 - `$large-spacing: $base-spacing * 2`
 - `$medium-spacing: $base-spacing * 0.75`
 - `$small-spacing: $base-spacing / 2`
 - `$tiny-spacing: $base-spacing / 4`.
 
-These values are used to ensure horizontal and vertical rhythm through pages.
+We may change:
 
-<p class="callout">Because these variables are sized in ems they are relative to the font size of an element the spacing variables are applied to. Don’t apply a <code>font-size</code> to a container element (eg a <code>footer</code>).</p>
-
-We are likely to change the `$base-spacing` unit to give a figure easier to multiply and divide.
-
-We may change the unit from ems to rems for consistency in calculations over relational proportionality in sizing.
+- `$base-spacing` to a figure that is easier to multiply and divide
+- to using rems insted of ems, for consistency in calculations (in preference to relational proportionality in sizing).
 
 Style guide: Typography.3 Spacing
 */
@@ -441,7 +445,7 @@ The framework provides list styles for:
 - ordered lists (numbered)
 - definition lists (terms and definitions).
 
-More [elaborate list styles are also available](/section-typography.html#guide-typography-6-callouts-warnings).
+More [complex list styles](section-list-styles.html) are available.
 
 Markup: templates/list-examples.hbs
 
