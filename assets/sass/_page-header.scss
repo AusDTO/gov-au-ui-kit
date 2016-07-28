@@ -59,7 +59,7 @@
   }
 }
 
-.govau--header {
+.prerelease-govau--header {
   @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
   @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
 
