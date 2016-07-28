@@ -1,6 +1,6 @@
 [class^='controls'] {
   @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
-  @include button-colours($controls-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $controls-bg-colour);
+  @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $controls-bg-colour);
 
   padding: $tiny-spacing 0;
   background-color: $controls-bg-colour;
@@ -59,6 +59,46 @@
   }
 }
 
+.govau--header {
+  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
+  @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
+
+  position: relative;
+  padding: $medium-spacing 0 ($base-spacing * 3);
+  padding-bottom: $medium-spacing;
+  margin-bottom: 0;
+  background-color: $header-bg-colour;
+  color: $body-inverted-text-colour;
+
+  @include media($tablet) {
+    padding-bottom: $medium-spacing;
+  }
+
+  .govau--logo {
+    float: left;
+
+    @include media($tablet) {
+      padding-bottom: 0;
+    }
+  }
+
+  .logo {
+    font-size: rem(24);
+    font-weight: $heading-font-weight;
+    padding-bottom: 2px;
+    border-bottom: 0;
+    color: $body-inverted-text-colour;
+    font-family: $base-sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  [class^='badge'] {
+    vertical-align: text-bottom;
+    margin-left: $tiny-spacing;
+  }
+}
+
 .prerelease-govau--header {
   @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
   @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
@@ -79,7 +119,7 @@
   }
 
   .govau--logo {
-    float: left;
+    display: inline-block;
     position: relative;
 
     @include media($tablet) {
@@ -208,6 +248,8 @@
 .hero,
 .hero-sml,
 .hero-med {
+  @include link-colours($non-black, $light-aqua, $non-black);
+
   padding: ($base-spacing * 2) 0;
   margin-bottom: 0;
   background-color: $non-white;
@@ -244,17 +286,12 @@
     @extend h1;
 
     margin: $tiny-spacing 0;
-    color: $body-inverted-text-colour;
   }
 
   // Should this be deprecated?
   .tagline {
     @extend h4;
     font-weight: $base-font-weight;
-  }
-
-  code {
-    color: $body-inverted-text-colour;
   }
 }
 
