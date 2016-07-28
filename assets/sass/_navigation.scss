@@ -190,6 +190,10 @@ Style guide: Navigation.6 Footer navigation
       display: none;
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .local-nav-toggle {
@@ -401,6 +405,7 @@ Style guide: Navigation.6 Footer navigation
       display: inline-block;
       margin: 0;
       padding: 0;
+      font-size: rem(14);
 
       &:not(:last-child) {
         @extend %icon-arrow-right;
