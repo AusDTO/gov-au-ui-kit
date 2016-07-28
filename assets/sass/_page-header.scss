@@ -208,6 +208,16 @@
   }
 }
 
+.feedback {
+  display: none;
+
+  @include media($tablet) {
+    display: block;
+    float: right;
+    margin-left: $base-spacing;
+  }
+}
+
 .button--feedback {
   @extend .inverted;
 
