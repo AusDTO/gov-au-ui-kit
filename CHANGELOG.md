@@ -2,13 +2,14 @@
 
 ## UI Kit "Kraken"
 
-### Unreleased
+### 1.5.0 - Unreleased
 
 #### UI-Kit changes
 
 - Iconography
   -  Removed ui-kit-icons.css output file
   -  Added images.zip build output containing images used
+- Groups of links added (documented *§ Navigation*)
 
 ### 1.4.0 - 2016-07-27
 
