@@ -4,6 +4,13 @@
 
 ### `develop` as of 2016-07-28
 
+UI-Kit changes
+
+- Added `.is-visuallyhidden` helper class to `_accessibility.scss` (`.visuallyhidden` to be deprecated in v2.0)
+- Local navigation markup and style change
+  - Now includes a semantically correct menu heading
+  - Top level of navigation has new styles
+
 Bugfixes:
 
 - Fixed flexbox alignment on vertical list style final row.
