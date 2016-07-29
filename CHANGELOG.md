@@ -4,9 +4,15 @@
 
 ### `develop` as of 2016-07-28
 
-Minor:
+Bugfixes:
 
+- Fixed missing button styling for `input` of the types `submit` and `reset`.
+- Fixed margin spacing after `.abstract` when used on a wrapping element.
+- Fixed [#179](https://github.com/AusDTO/gov-au-ui-kit/issues/179): enlarges buttons at smaller breakpoints for easier clicking.
+- Fixed [#165](https://github.com/AusDTO/gov-au-ui-kit/issues/165): default margins on buttons at mobile breakpoint.
+- Header type and spacing fixes for `.site-title` and `.tagline`.
 - Index links (`.index-links`) now support `ol`s.
+- Removes further poor uses of `@extend` to clean up output CSS.
 
 Styleguide:
 
