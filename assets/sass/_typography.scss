@@ -1,21 +1,9 @@
 /*
 Typography
 
-Basic content styling with good typographic defaults.
+This framework uses basic styling and good typographic defaults for clear and consistent content.
 
-The framework aims to meet common government typographic needs:
-
-- clear and consistent headings and labels
-- legible body paragraphs
-- easy-to-use input fields.
-
-It is designed to provide:
-
-- the highest standards of usability and accessibility
-- a consistent visual voice of credibility and warmth
-- ease-of-use across Australian Government digital platforms.
-
-The following guidance may change to apply only to content inside an `article`.
+This guidance may change to apply to only content inside an `article`.
 
 Style guide: Typography
 */
@@ -23,7 +11,7 @@ Style guide: Typography
 /*
 Typeface
 
-We are currently testing the open source [Open Sans font family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles:
+We are currently testing the open source [Open Sans family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles.
 
 <div class="guide-example--type"><h3>Open Sans regular 400</h3>
   <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
@@ -41,9 +29,7 @@ We are currently testing the open source [Open Sans font family](https://www.goo
   1234567890(!@#s%g.,?:;)</strong></p>
 </div>
 
-The framework is likely to change to a different primary typeface. We are currently testing the use of webfonts generally.
-
-We aim to spend a spike in the future to properly test and optimise any usage of webfonts.
+We are likely to change this to a different primary typeface.
 
 Style guide: Typography.1 Typeface
 */
@@ -57,9 +43,11 @@ $base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
 $base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 ```
 
-We have not decided on using a webfont but the font stacks should still achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
+We are currently testing the use of webfonts.
 
-Currently you will need to load webfonts through the [Google Web Font Loader](https://github.com/typekit/webfontloader) via `<script>` to provide Open Sans via the HTML `head` to support both modern browsers, and Internet Explorer.
+The font stacks should still achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
+
+You need to load webfonts through the [Google Web Font Loader](https://github.com/typekit/webfontloader) via `<script>` to add Open Sans via the HTML `head`. This supports modern browsers and older versions of Internet Explorer.
 
 Style guide: Typography.1 Typeface.1 Font stacks
 */
@@ -73,29 +61,24 @@ $base-font-family: $base-sans-serif;
 /*
 Spacing
 
-Spacing is relative to the `line-height` (leading) of the font size.
+The framework sets spacing variables in ems relative to the base font's leading. This ensures horizontal and vertical rhythm through pages.
 
-```
-$base-leading: 1.6;
-$base-heading-leading: 1.4;
+<p class="callout">Spacing will change in relation to the font size of the elements that use them. So don’t apply a <code>font-size</code> to a container element (eg a <code>footer</code>).</p>
 
-html {
-  color: $body-text-colour;
-  line-height: $base-leading;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
-}
-```
+The base font's leading (`line-height`) is set using the variable `$base-leading` (`$base-leading: 1.6`).
 
-The values are anchored to the `base-leading` (which is unit-less) and act as a multiplier of the font size. The `$base-spacing` unit is then set in ems (ie by * 1em).
+`$base-leading` is used to calculate 5 spacing values in ems:
 
-```
-$base-spacing: $base-leading * 1em;
-$medium-spacing: $base-spacing * 0.75;
-$small-spacing: $base-spacing / 2;
-```
+- `$base-spacing: $base-leading * 1em`
+- `$large-spacing: $base-spacing * 2`
+- `$medium-spacing: $base-spacing * 0.75`
+- `$small-spacing: $base-spacing / 2`
+- `$tiny-spacing: $base-spacing / 4`.
 
-We are likely to change the `$base-spacing` unit to give a figure easier to multiply and divide.
+We may change:
+
+- `$base-spacing` to a figure that is easier to multiply and divide
+- to using rems instead of ems, for consistency in calculations (in preference to relational proportionality in sizing).
 
 Style guide: Typography.3 Spacing
 */
@@ -108,6 +91,7 @@ $double-leading: 2;
 
 // Base spacing, relative to leading.
 $base-spacing: $base-leading * 1em;
+$large-spacing: $base-spacing * 2;
 $medium-spacing: $base-spacing * 0.75;
 $small-spacing: $base-spacing / 2;
 $tiny-spacing: $base-spacing / 4;
@@ -135,28 +119,73 @@ html {
 /*
 Headings & body copy
 
-The type sizes are designed for legibility and readability. We are currently testing this.
+The types sizes are based on a perfect fourth modular scale.
 
-They are initially based on a perfect fourth modular scale.
+Use `.gov-speak` styles for complex content, for example annual reports.
+
+We are currently testing all styles for legibility and readability.
 
 ### Breakpoints
 
-- Mobile (extra small devices): 8 columns, 420px maximum
-- Tablet (small devices): 12 columns, 768px maximum
-- Desktop (medium devices): 16 columns, 1200px maximum
+- Mobile (extra small devices): 8 columns, 420px maximum.
+- Tablet (small devices): 12 columns, 768px maximum.
+- Desktop (medium devices): 16 columns, 1200px maximum.
 
-### Font size & line heights default settings
-
-Use relative units to allow for variety across users' browsers and device screens.
-
- This table shows font size and line height (size/line-height) in pixels and ems.
+### Font size defaults
 
 <table class="content-table">
+  <caption>Global styles</caption>
   <tr>
     <th>Style</th>
-    <th>Mobile</th>
+    <th>Mobile (default)</th>
     <th>Tablet</th>
     <th>Desktop</th>
+  </tr>
+  <tr>
+    <td>p, ol, ul, dt, dd, dl</td>
+    <td>17px</td>
+    <td>17px</td>
+    <td>17px</td>
+  </tr>
+  <tr>
+    <td>h1</td>
+    <td>24px</td>
+    <td>26px<br></td>
+    <td>32px</td>
+  </tr>
+  <tr>
+    <td>h2</td>
+    <td>32px</td>
+    <td>44px</td>
+    <td>44px</td>
+  </tr>
+  <tr>
+    <td>h3</td>
+    <td>24px</td>
+    <td>26px</td>
+    <td>26px</td>
+  </tr>
+  <tr>
+    <td>h4, h5, h6</td>
+    <td>18px</td>
+    <td>18px</td>
+    <td>18px</td>
+  </tr>
+</table>
+
+<table class="content-table">
+  <caption><code>.gov-speak</code> style</caption>
+  <tr>
+    <th>Style</th>
+    <th>Mobile (default)</th>
+    <th>Tablet</th>
+    <th>Desktop</th>
+  </tr>
+  <tr>
+    <td>p, ol, ul, dt, dd, dl</td>
+    <td>17px</td>
+    <td>17px</td>
+    <td>17px</td>
   </tr>
   <tr>
     <td>h1</td>
@@ -194,15 +223,9 @@ Use relative units to allow for variety across users' browsers and device screen
     <td>16px</td>
     <td>16px</td>
   </tr>
-  <tr>
-    <td>p</td>
-    <td>16px</td>
-    <td>16px</td>
-    <td>16px</td>
-  </tr>
 </table>
 
-### Base size examples
+### Base size examples&mdash;global styles
 
 Markup: templates/heading-body-styles.hbs
 
@@ -224,9 +247,7 @@ h4 {
 }
 
 h1 {
-  // This needs to be changed to live in the 'header', where the breadcrumbs currently are (grey bar).
   font-size: rem(24);
-  //line-height: $small-leading;
 
   @include media($tablet) {
     font-size: rem(26);
@@ -265,6 +286,10 @@ h4 {
   font-weight: $heading-font-weight;
 }
 
+h5,
+h6 {
+  @extend h4;
+}
 
 // Document this later.
 .gov-speak {
@@ -360,15 +385,13 @@ kbd {
 }
 
 /*
-Keyboard input
+Show keyboard input
 
-Use when asking users to enter keyboard combinations, eg a shortcut to print the screen and copy it to clipboard.
+Use the [`<kbd>` element](http://w3c.github.io/html/textlevel-semantics.html#the-kbd-element) to show users which key to press.
 
-Further [W3C specification documentation](http://dev.w3.org/html5/spec/Overview.html#the-kbd-element).
+Markup: Copy text to clipboard using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-Markup: Abort! Abort! <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd>
-
-Style guide: Typography.10 Keyboard keys
+Style guide: Typography.8 Keyboard input
 */
 
 kbd {
@@ -405,6 +428,7 @@ strong {
   font-weight: $base-font-weight;
   border-bottom: 1px solid $border-colour;
   padding-bottom: $medium-spacing;
+  margin-bottom: $medium-spacing;
 }
 
 hr {
@@ -414,25 +438,19 @@ hr {
 }
 
 /*
-Horizontal & vertical rhythm
-
-Combinations of these elements have been tested to maintain vertical rhythm between content.
-
-Style guide: Typography.4 Horizontal & vertical rhythm
-*/
-
-/*
 Lists
 
-List styles have been developed for:
+The framework provides list styles for:
 
 - unordered lists (bullet point lists)
 - ordered lists (numbered)
 - definition lists (terms and definitions).
 
+More [complex list styles](section-list-styles.html) are available.
+
 Markup: templates/list-examples.hbs
 
-Style guide: Typography.5 Lists
+Style guide: Typography.4 Lists
 */
 
 ul,
@@ -481,13 +499,17 @@ dt {
 /*
 Callouts & warnings
 
-**Callouts** and **warning callouts** can be used to draw the user's attention to a specific piece of content.
+There are 3 classes for drawing the user's attention:
 
-There is also a **calendar callout** to draw attention to things on specific dates.
+- `.callout`
+- `.callout--warning` for warnings
+- `.callout--calendar-event` for dates.
+
+You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>` or an `<aside>`.
 
 Markup: templates/callouts-examples.hbs
 
-Style guide: Typography.6 Callouts & warnings
+Style guide: Typography.5 Callouts & warnings
 */
 
 %base-callout {
@@ -540,11 +562,11 @@ Style guide: Typography.6 Callouts & warnings
 /*
 Badges
 
-The framework provides styling for `badges` to indicate status.
+There is styling for badges to indicate status.
 
 Markup: templates/badges.hbs
 
-Style guide: Typography.7 Badges
+Style guide: Typography.6 Badges
 */
 
 $badges: (
@@ -571,7 +593,7 @@ $badges: (
 /*
 Quotations
 
-The framework provides 2 ways of using quotes:
+There are 2 ways of using quotes:
 
 - **in-line quoting** using `q` element (adds quotation marks to either side of the in-line quotation)
 - **block quotes** via `blockquote`:
@@ -586,7 +608,7 @@ The framework provides 2 ways of using quotes:
 
 Markup: templates/quotation-examples.hbs
 
-Style guide: Typography.8 Quotations
+Style guide: Typography.7 Quotations
 */
 
 blockquote {
@@ -601,11 +623,15 @@ blockquote {
     background-color: $background-colour;
 
     p {
-      @extend h3;
-
+      font-size: rem(24);
       line-height: $base-leading;
       text-align: center;
       font-weight: $base-font-weight;
+      margin-top: $base-spacing;
+
+      @include media($tablet) {
+        font-size: rem(26);
+      }
     }
 
     // Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2

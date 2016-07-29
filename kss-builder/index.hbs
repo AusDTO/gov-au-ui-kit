@@ -88,13 +88,15 @@
     <nav class="local-nav" aria-label="main navigation">
       <ul>
         <li>
-          <a href="/" {{# if homepage}}class="is-active"{{/if}}>Getting started</a>
+          <a href="#" class="is-active">Getting started</a>
+          <ul>
+            {{#each menu}}
+              <li>
+                <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active is-current"{{/if}}>{{header}}</a>
+              </li>
+            {{/each}}
+          </ul>
         </li>
-        {{#each menu}}
-          <li>
-            <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active"{{/if}}>{{header}}</a>
-          </li>
-        {{/each}}
       </ul>
     </nav>
   </aside>
