@@ -2,6 +2,16 @@
 
 ## UI Kit "Kraken"
 
+### `develop` as of 2016-07-28
+
+Minor:
+
+- Index links (`.index-links`) now support `ol`s.
+
+Styleguide:
+
+- Typography section revised.
+
 ### 1.5.0 - 2016-07-28
 
 #### UI-Kit changes
