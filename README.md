@@ -5,7 +5,12 @@
 ## Disclaimer
 GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
 
-We will start accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
+We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) over [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance).
+
+We will start structured accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
+
+We intend to support Internet Explorer 8+.
+
 ## What is this?
 
 UI Kit (`gov-au-ui-kit`) is 3 things:
@@ -31,14 +36,6 @@ include in your project:
 - Basic styling for UI elements (eg `input`, `label`, etc).
 
 For a full list of features please see the [CHANGELOG](CHANGELOG.md).
-
-### Browser support
-
-Our components are built on a solid HTML foundation, opting on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
-
-We intend to support Internet Explorer 8+.
-
-We will provide precise version support information in the future.
 
 ## What this isn't
 
