@@ -197,7 +197,7 @@
   }
 }
 
-//DELETE THIS:
+//DELETE THIS after _helpers/_accessibility gets merged.
 .visuallyhidden {
   display: none;
 }
@@ -259,25 +259,23 @@
 
   p {
     font-size: rem(18);
-    margin-bottom: 0;
     max-width: 30em;
+    margin-bottom: $small-spacing;
 
     @include media($tablet) {
       font-size: rem(20);
     }
   }
 
-  // Should this be deprecated?
   .site-title {
     @extend h1;
 
-    margin: $tiny-spacing 0;
+    display: block;
+    margin-bottom: $tiny-spacing;
   }
 
-  // Should this be deprecated?
   .tagline {
-    @extend h4;
-    font-weight: $base-font-weight;
+    font-size: $large-font-size;
   }
 }
 
