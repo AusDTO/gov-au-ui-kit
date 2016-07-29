@@ -626,6 +626,7 @@ blockquote {
       line-height: $base-leading;
       text-align: center;
       font-weight: $base-font-weight;
+      margin-top: $base-spacing;
 
       @include media($tablet) {
         font-size: rem(26);
