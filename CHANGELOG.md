@@ -6,6 +6,7 @@
 
 Bugfixes:
 
+- Fixed flexbox alignment on vertical list style final row.
 - Fixed missing button styling for `input` of the types `submit` and `reset`.
 - Fixed margin spacing after `.abstract` when used on a wrapping element.
 - Fixed [#179](https://github.com/AusDTO/gov-au-ui-kit/issues/179): enlarges buttons at smaller breakpoints for easier clicking.
