@@ -247,9 +247,7 @@ h4 {
 }
 
 h1 {
-  // This needs to be changed to live in the 'header', where the breadcrumbs currently are (grey bar).
   font-size: rem(24);
-  //line-height: $small-leading;
 
   @include media($tablet) {
     font-size: rem(26);
@@ -624,11 +622,14 @@ blockquote {
     background-color: $background-colour;
 
     p {
-      @extend h3;
-
+      font-size: rem(24);
       line-height: $base-leading;
       text-align: center;
       font-weight: $base-font-weight;
+
+      @include media($tablet) {
+        font-size: rem(26);
+      }
     }
 
     // Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
