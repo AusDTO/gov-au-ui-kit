@@ -88,14 +88,11 @@
     <nav class="local-nav" aria-label="main navigation">
       <ul>
         <li>
-          <a href="#" class="is-active">GOV.AU UI-KIT</a>
+          <a href="#" class="is-active">Getting started</a>
           <ul>
-            <li>
-              <a href="/" {{# if homepage}}class="is-active"{{/if}}>Getting started</a>
-            </li>
             {{#each menu}}
               <li>
-                <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active"{{/if}}>{{header}}</a>
+                <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active is-current"{{/if}}>{{header}}</a>
               </li>
             {{/each}}
           </ul>
