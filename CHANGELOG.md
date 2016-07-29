@@ -4,7 +4,12 @@
 
 ### `develop` as of 2016-07-28
 
-Bugfixes:
+#### UI-Kit changes/additions:
+
+- `.is-visuallyhidden` class for visually hiding an element but having it available for screen readers (we will deprecate `.visuallyhidden` in the future).
+- Inline tab-style navigation (documented under *§ Navigation*) [experimental].
+
+#### Bugfixes:
 
 - Fixed flexbox alignment on vertical list style final row.
 - Fixed missing button styling for `input` of the types `submit` and `reset`.
@@ -15,7 +20,7 @@ Bugfixes:
 - Index links (`.index-links`) now support `ol`s.
 - Removes further poor uses of `@extend` to clean up output CSS.
 
-Styleguide:
+#### Styleguide:
 
 - Typography section revised.
 
@@ -69,10 +74,15 @@ Build environment:
 
 Adds or modifies:
 
+<<<<<<< 1d19be48a9c217b250c68ef00c6333b25cdfd2f6
 - Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
 - “See more” link styling (currently documented under *§ List views*).
 - JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
 - Vertical Lists now have an option to remove the top border (documented *§ List views*)
+=======
+- `.reader` class for visually hiding an element but having it available for screen readers
+- Inline navigation - Alpha release
+>>>>>>> Start of inline nav feature
 - Number support for `input`; make sure you use also use `type="number"`.
 - Style changes to Local (primary) navigation.
 - Style changes to the page footer.

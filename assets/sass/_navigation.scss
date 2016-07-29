@@ -19,7 +19,7 @@ Older browsers (IE8 and lower) and those without JavaScript will get an expanded
 
 Markup: templates/global-navigation.hbs
 
-Style guide: Navigation.1 Global navigation
+Style guide: Navigation.01 Global navigation
 */
 
 /*
@@ -33,7 +33,7 @@ Older browsers (IE8 and lower) and those without JavaScript will see the expande
 
 Markup: templates/local-navigation.hbs
 
-Style guide: Navigation.2 Local navigation
+Style guide: Navigation.02 Local navigation
 */
 
 /*
@@ -45,7 +45,7 @@ They appear directly under a page header or hero, from `$tablet` breakpoint upwa
 
 Markup: templates/breadcrumbs.hbs
 
-Style guide: Navigation.3 Breadcrumbs
+Style guide: Navigation.03 Breadcrumbs
 */
 
 /*
@@ -59,7 +59,7 @@ Users with modern browsers will see a smooth scroll down the page.
 
 Markup: templates/index-links.hbs
 
-Style guide: Navigation.4 Contents links
+Style guide: Navigation.04 Contents links
 */
 
 /*
@@ -69,7 +69,7 @@ You can present a list of links as a horizontal block using an unsorted list wit
 
 Markup: templates/inline-links.hbs
 
-Style guide: Navigation.5 Inline links
+Style guide: Navigation.05 Inline links
 */
 
 /*
@@ -85,7 +85,7 @@ This framework uses CSS Flexboxes to manage columns. It provides:
 
 Markup: templates/footer-navigation.hbs
 
-Style guide: Navigation.6 Footer navigation
+Style guide: Navigation.06 Footer navigation
 */
 
 .global-nav-toggle {
@@ -454,7 +454,7 @@ Include skip links between the opening of the `<body>` and the page `<header>`.
 
 Markup: templates/skip-link.hbs
 
-Style guide: Navigation.7 Skip links
+Style guide: Navigation.09 Skip links
 */
 
 .skip-to {
@@ -553,7 +553,7 @@ You can use groups of links:
 
 Markup: templates/groups-links.hbs
 
-Style guide: Navigation.8 Group of links
+Style guide: Navigation.08 Group of links
 */
 
 .links-group {
@@ -587,6 +587,73 @@ Style guide: Navigation.8 Group of links
 }
 
 /*
+Tab-style navigation
+
+<span class="badge--error">WARNING</span>
+This feature is in early development.
+
+Markup: templates/tab-style-nav.hbs
+
+Style guide: Navigation.07 Tab-style navigation
+*/
+
+.inline-tab-nav {
+  border-bottom: solid 1px $grey;
+  margin: ($base-spacing * 2) 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding: $small-spacing 1.5em;
+    padding-left: 0;
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-bottom: solid 4px transparent;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table-cell;
+  }
+
+  li {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    background: transparent;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: $small-spacing 1.5em;
+    border-bottom: solid 4px transparent;
+
+    &:hover,
+    &:focus {
+      color: $non-black;
+      border-bottom-color: $aqua;
+    }
+
+    &.is-active {
+      color: $dark-aqua; //Accessibility: can't be $aqua on $lighter-aqua
+      background-color: $lighter-aqua;
+      border-bottom-color: $aqua;
+    }
+  }
+
+}
+
+/*
 Accessibility
 
 - All navigation must be keyboard accessible and include ARIA tags.
@@ -595,5 +662,5 @@ Accessibility
 - Test with users to ensure the navigation hierarchy is not too long or too deep.
 - Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
 
-Style guide: Navigation.8 Accessibility
+Style guide: Navigation.10 Accessibility
 */
