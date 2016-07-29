@@ -74,6 +74,7 @@ Build environment:
 
 Adds or modifies:
 
+<<<<<<< e0da93c6e08e5ffa6c1351f1ab5d97ee2d47b40d
 <<<<<<< 597d8d58d1ed8885d2aba8773ac71c1c4c293982
 <<<<<<< 1d19be48a9c217b250c68ef00c6333b25cdfd2f6
 - Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
@@ -85,6 +86,9 @@ Adds or modifies:
 =======
 - `.visuallyhidden` class for visually hiding an element but having it available for screen readers
 >>>>>>> Mobile styles and change to reader class name
+=======
+- `.is-visuallyhidden` class for visually hiding an element but having it available for screen readers
+>>>>>>> Classes match to branch #205
 - Inline navigation - Alpha release
 >>>>>>> Start of inline nav feature
 - Number support for `input`; make sure you use also use `type="number"`.
