@@ -78,7 +78,7 @@ The base font's leading (`line-height`) is set using the variable `$base-leading
 We may change:
 
 - `$base-spacing` to a figure that is easier to multiply and divide
-- to using rems insted of ems, for consistency in calculations (in preference to relational proportionality in sizing).
+- to using rems instead of ems, for consistency in calculations (in preference to relational proportionality in sizing).
 
 Style guide: Typography.3 Spacing
 */
@@ -120,6 +120,8 @@ html {
 Headings & body copy
 
 The types sizes are based on a perfect fourth modular scale.
+
+Typographic styles defined within the `.gov-speak` wrapper are set aside for more complex styling needs, eg annual reports.
 
 We are currently testing these for legibility and readability.
 
