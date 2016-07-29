@@ -2,40 +2,51 @@
 
 ## UI Kit "Kraken"
 
-### Next release (scheduled 2016-07-26)
+### 1.5.0 - 2016-07-28
 
-UI-Kit:
+#### UI-Kit changes
 
+- Groups of links added (documented *§ Navigation*)
+- Iconography (undocumented, experimental)
+  -  Removed ui-kit-icons.css output file
+  -  Added images.zip build output containing images used (`gulp build.prod`)
+
+### 1.4.0 - 2016-07-27
+
+#### UI-Kit changes
+
+- Links and buttons:
+  - Improved styling throughout, inc. on inverted colours (eg light text on darker bg).
+  - Added `:focus` styles (identical to `:hover`).
+  - Refactor of anchor styling into `_lists.scss` partial.
+  - Adds an icon to anchors with `rel="external"`.
 - Callouts: extends with a new class to highlight specific dates (`.callout--calendar-event`).
 - Text input `type` `tel` support.
-- New table style: calendar tables, for displaying a series of days and their events (eg public holidays).
+- New table style: calendar tables, for displaying a series of dates and their events (eg public holidays).
 - Local nav (sidebar):
   - Now appears to the right of the main content space (not markup change required).
   - Toggle-able to the left (as previously) by applying `.sidebar-has-controls` to the `<main>` element.
-  - [undocumented] Adds new `.current` class for current page in the IA.
-  - [undocumented] [MARKUP CHANGE] `.is-active` has been replaced by `.active`.
-  - [incomplete & undocumented] Adds top-level item support.
 - Typography overhaul:
   - Removes `margin-top` from most content elements (headings excluded).
   - Support for heading styles stripped back, now covering `h1` to `h4` and resized.
   - ‘Old’ headings retained and available when wrapped in a container with the class `.gov-speak` (demarcated for more complex typography, eg for annual reports).
   - Refactors numerous `@extends` to clean up CSS output + numerous minor code improvs.
 
-Styleguide:
+#### Styleguide changes
 
-We have revised a number of our styleguide sections, simplifying them while adding explicit accessibility guidance under a common heading. Sections revised:
+Source references in the styleguide examples now link to the file & line in our GitHub repository. If you have feedback on our code please let get in touch. :)
+
+We have also revised a number of our styleguide sections, simplifying them while adding explicit accessibility guidance under a common heading. Sections revised:
 
 - Forms
 - Accordions
 - Tables
 
-Bugfixes:
-
-- …
+#### Other changes
 
 Build environment:
 
-- Compiles icons into separate SCSS partial (`assets/sass/ui-kit-icons.scss`) (undocumented, experimental)
+- Compiles icons into separate SCSS partial (`assets/sass/ui-kit-icons.scss`) [undocumented, experimental]
 
 ### 1.3.0 - 2016-07-19
 

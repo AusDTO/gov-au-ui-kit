@@ -4,6 +4,7 @@ $tiny-border-radius: 1px;
 $large-border-radius: ($base-border-radius * 4);
 
 $transition-timing: .2s;
+$transition-timing-fast: $transition-timing / 2;
 $transition-easing: ease-in-out;
 
 // Spacing is governed by _typography.

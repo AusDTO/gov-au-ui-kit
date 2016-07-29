@@ -61,19 +61,22 @@ summary {
   text-align: left;
   font-weight: $bold-font-weight;
   cursor: pointer;
+  transition: background-color $transition-timing-fast $transition-easing;
 
   // Remove vanilla summary styles.
   &::-webkit-details-marker {
     display: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     background-color: $light-aqua;
     color: $non-black;
   }
 
   &::before {
-    @extend .chevron-down-navy;
+    @extend %icon-chevron-down--navy;
 
     content: '';
     position: absolute;
