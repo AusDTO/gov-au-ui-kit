@@ -180,7 +180,7 @@ Style guide: List styles.4 Highlighted word style
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   > li {
 
