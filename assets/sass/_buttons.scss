@@ -34,7 +34,8 @@ Style guide: Buttons.1 Creating buttons
 @mixin button-colours($bg-colour, $bg-colour--hover, $bg-colour--active, $text-colour, $text-colour--hover: $text-colour) {
   button,
   a[role='button'],
-  input[role='button'] {
+  input[type='submit'],
+  input[type='reset'] {
     background-color: $bg-colour;
     color: $text-colour;
     border: 1px solid $bg-colour--hover;
