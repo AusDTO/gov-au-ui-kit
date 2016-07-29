@@ -51,7 +51,7 @@ table {
 }
 
 /*
-Calendar table variant
+Calendar table
 
 Markup: templates/table-calendar.hbs
 
@@ -141,9 +141,7 @@ Title tables using the [`<caption>` element](https://www.w3.org/wiki/HTML/Elemen
 
 Row and column headers should be set with the [`scope` attribute](https://www.w3.org/TR/html401/struct/tables.html#adef-scope).
 
-Don't use `<thead>`, `<tbody>` and `<tfoot>`.
-
-***
+Don't use `<thead>`, `<tbody>` or `<tfoot>`.
 
 More [guidance on making accessible tables](https://www.w3.org/WAI/tutorials/tables/) is provided by the W3C.
 
