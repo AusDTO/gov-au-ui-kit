@@ -74,6 +74,7 @@ Build environment:
 
 Adds or modifies:
 
+<<<<<<< HEAD
 <<<<<<< e0da93c6e08e5ffa6c1351f1ab5d97ee2d47b40d
 <<<<<<< 597d8d58d1ed8885d2aba8773ac71c1c4c293982
 <<<<<<< 1d19be48a9c217b250c68ef00c6333b25cdfd2f6
@@ -91,6 +92,10 @@ Adds or modifies:
 >>>>>>> Classes match to branch #205
 - Inline navigation - Alpha release
 >>>>>>> Start of inline nav feature
+=======
+- `.is-visuallyhidden` class for visually hiding an element but having it available for screen readers
+- Inline navigation - Alpha release
+>>>>>>> 8506a1ba7a6d51f46a38e715d89ac19539216468
 - Number support for `input`; make sure you use also use `type="number"`.
 - Style changes to Local (primary) navigation.
 - Style changes to the page footer.
