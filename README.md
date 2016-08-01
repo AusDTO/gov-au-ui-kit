@@ -7,7 +7,7 @@ GOV-AU UI-Kit is currently in early draft release. You can help us build it by [
 
 We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) over [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance).
 
-We will start structured accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
+We will start structured and more thorough accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
 
 We intend to support Internet Explorer 8+.
 
