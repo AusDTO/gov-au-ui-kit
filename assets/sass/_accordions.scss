@@ -5,7 +5,7 @@ Accordions help users find only the content they need.
 
 The **expand/collapse all** feature will be provided soon&mdash;this will be mandatory if using a series of accordion elements.
 
-<hr />
+***
 
 This guidance is in part adapted from [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
@@ -81,11 +81,11 @@ summary {
     content: '';
     position: absolute;
     top: .5em;
-    right: $small-spacing;
     bottom: .5em;
+    right: $small-spacing;
     width: $medium-spacing;
     background-repeat: no-repeat;
-    background-position: center center; // added this not in .local-nav-toggle
+    background-position: center center;
     background-size: 100% auto;
     transform: rotate(0deg);
     transition: transform $transition-timing $transition-easing;
