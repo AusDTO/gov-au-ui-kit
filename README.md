@@ -2,6 +2,15 @@
 
 ![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
+## Disclaimer
+GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
+
+We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) over [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance).
+
+We will start structured and more thorough accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
+
+We intend to support Internet Explorer 8+.
+
 ## What is this?
 
 UI Kit (`gov-au-ui-kit`) is 3 things:
@@ -27,14 +36,6 @@ include in your project:
 - Basic styling for UI elements (eg `input`, `label`, etc).
 
 For a full list of features please see the [CHANGELOG](CHANGELOG.md).
-
-### Browser support
-
-Our components are built on a solid HTML foundation, opting on a [philosophy of progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (as opposed to [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance)).
-
-We intend to support Internet Explorer 8+.
-
-We will provide precise version support information in the future.
 
 ## What this isn't
 
@@ -98,7 +99,7 @@ Some of the key libraries we use are:
 ## Make gov-au-ui-kit better
 
 - Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
-- Contribute to this repository. Please see the [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
+- Contribute to this repository. Please see [CONTRIBUTING.md](CONTRIBUTING.md), [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
 - Contact us on slack in `#govau-guide`.
 
 ## Project goal

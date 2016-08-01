@@ -2,6 +2,21 @@
 
 ## UI Kit "Kraken"
 
+### 1.7.0 - 2016-08-01
+
+Styleguide:
+
+- Added a disclaimer regarding accessibility and browser support.
+- Updated Australian Coat of Arms image that appears in site footer
+
+Bugfixes:
+
+- Fixed [#232](https://github.com/AusDTO/gov-au-ui-kit/issues/232): local navigation mobile styling and chevron toggle displacement.
+- Added a disclaimer regarding accessibility and browser support.
+- Fixed [#230](https://github.com/AusDTO/gov-au-ui-kit/issues/230): Margins between vertical list items.
+- Fixed [#203](https://github.com/AusDTO/gov-au-ui-kit/issues/203): Abstract style doesn't apply to nested paragraphs.
+- Fixed [#227](https://github.com/AusDTO/gov-au-ui-kit/issues/227): No visual differentiation between h1 and .abstract on section page in mobile browser.
+
 ### 1.6.0 as of 2016-07-29
 
 UI-Kit changes
