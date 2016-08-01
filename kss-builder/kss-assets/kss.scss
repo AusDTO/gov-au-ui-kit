@@ -49,15 +49,15 @@
   padding: 2em;
   overflow: auto;
 
-  h4 {
-    margin-top: 0;
-  }
-
   p {
     font-size: 2em;
   }
 
-  p:last-child {
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
     margin-bottom: 0;
   }
 }
