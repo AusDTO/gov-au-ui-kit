@@ -2,6 +2,12 @@
 
 ## UI Kit "Kraken"
 
+### 1.7.1 - 2016-08-01
+
+Bugfixes:
+
+- Fixed [#240](https://github.com/AusDTO/gov-au-ui-kit/issues/240): Menu toggles don't work in IE9.
+
 ### 1.7.0 - 2016-08-01
 
 Styleguide:
