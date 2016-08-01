@@ -234,7 +234,7 @@ Style guide: Typography.2 Headings & body copy
 
 // Styling for headings
 //
-// Note that we don't style h5 and h6.
+// Note that we style h5 and h6 are identical to h4.
 
 h1,
 h2,
@@ -248,9 +248,10 @@ h4 {
 
 h1 {
   font-size: rem(24);
+  margin-bottom: $small-spacing;
 
   @include media($tablet) {
-    font-size: rem(26);
+    font-size: rem(28);
   }
 
   @include media($desktop) {
@@ -410,6 +411,7 @@ kbd {
 strong {
   font-weight: $bold-font-weight;
 
+  // Huh?
   &.very-bold {
     font-weight: $heading-font-weight;
   }
@@ -424,11 +426,39 @@ strong {
 //
 // For abstracts or page introductory paragraphs.
 .abstract {
-  font-size: rem(24);
-  font-weight: $base-font-weight;
+  margin: $medium-spacing 0 ($base-spacing * 1.25);
   border-bottom: 1px solid $border-colour;
+
+  p {
+    font-size: rem(19);
+    font-weight: $base-font-weight;
+
+    @include media($tablet) {
+      font-size: rem(21);
+    }
+
+    @include media($desktop) {
+      font-size: rem(24);
+    }
+  }
+}
+
+// To be deprecated as of v2.0
+//
+// We are retaining this so that p.abstract is possible. Please use div.abstract p.
+p.abstract {
+  margin: $small-spacing 0 ($medium-spacing * 1.25);
   padding-bottom: $medium-spacing;
-  margin-bottom: $medium-spacing;
+  border-bottom: 1px solid $border-colour;
+  font-size: rem(19);
+
+  @include media($tablet) {
+    font-size: rem(21);
+  }
+
+  @include media($desktop) {
+    font-size: rem(24);
+  }
 }
 
 hr {
@@ -468,10 +498,14 @@ dl,
 p,
 dt,
 dd {
-  font-size: rem(17);
+  font-size: rem(16);
   margin-top: 0; // Check up on where margin-top is coming from...
   margin-bottom: $medium-spacing;
   line-height: $base-spacing;
+
+  @include media($tablet) {
+    font-size: rem(17);
+  }
 }
 
 li {
