@@ -2,6 +2,10 @@
 
 ## UI Kit "Kraken"
 
+### `develop` of 2016-07-30
+
+Added a disclaimer regarding accessibility and browser support.
+
 ### 1.6.0 as of 2016-07-29
 
 UI-Kit changes
