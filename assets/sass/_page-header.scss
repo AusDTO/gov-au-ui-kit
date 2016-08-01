@@ -262,10 +262,6 @@
     }
   }
 
-  :last-child {
-    margin-bottom: 0;
-  }
-
   .site-title {
     @extend h1;
 
@@ -277,6 +273,17 @@
   .tagline {
     font-size: $large-font-size;
   }
+
+  .wrapper {
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 .hero-sml {
