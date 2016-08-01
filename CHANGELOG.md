@@ -2,6 +2,12 @@
 
 ## UI Kit "Kraken"
 
+### 1.8.0 - Unreleased
+
+UI-Kit changes
+
+- Style changes to Calendar Event Callout class `.callout--calendar-event` (documented under *§ Typography*).
+
 ### 1.7.1 - 2016-08-01
 
 Bugfixes:
