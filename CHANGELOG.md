@@ -11,6 +11,7 @@ Bugfixes:
 Styleguide:
 
 - Added a disclaimer regarding accessibility and browser support.
+- Updated Australian Coat of Arms image that appears in site footer
 
 
 ### 1.6.0 as of 2016-07-29
