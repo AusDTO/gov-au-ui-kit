@@ -63,7 +63,7 @@ Style guide: List styles.4 Highlighted word style
   padding: 0;
 
   .tags {
-    @include link-colours($button-bg-colour, v, $link-colour);
+    @include link-colours($button-bg-colour, $link-colour--hover, $link-colour);
     color: $grey;
 
     dl,
