@@ -46,7 +46,7 @@ var smoothScroll = require('smoothscroll');
       if (!toggle) {
           toggleElem.textContent = elem.dataset.toggleLabel || 'Menu';
       }
-      
+
       toggleElem.setAttribute('aria-controls', panelLabel);
       toggleElem.className = panelLabel + '-toggle';
       toggleElem.targetElem = elem;
