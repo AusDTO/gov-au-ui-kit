@@ -216,6 +216,7 @@ Style guide: Navigation.6 Footer navigation
 
   &::before {
     @extend %icon-chevron-down--navy;
+
     content: '';
     position: absolute;
     top: .5em;
@@ -224,6 +225,7 @@ Style guide: Navigation.6 Footer navigation
     width: $medium-spacing;
     background-repeat: no-repeat;
     background-size: 100% auto;
+    background-position: center center;
     transform: rotate(0deg);
     transition: transform $transition-timing $transition-easing;
   }
