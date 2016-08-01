@@ -248,6 +248,7 @@ h4 {
 
 h1 {
   font-size: rem(24);
+  font-weight: $bold-font-weight;
   margin-bottom: $small-spacing;
 
   @include media($tablet) {
