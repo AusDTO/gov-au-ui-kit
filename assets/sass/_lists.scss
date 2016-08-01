@@ -168,6 +168,8 @@ Style guide: List styles.4 Highlighted word style
 
 }
 
+$list-vertical-gutter: 4%;
+
 .list-vertical {
   @extend %base-list;
 
@@ -190,10 +192,10 @@ Style guide: List styles.4 Highlighted word style
     flex: 0 0 100%;
 
     @include media($tablet) {
-      flex-basis: (96% / 2);
+      flex-basis: ((100% - $list-vertical-gutter) / 2);
 
       &:not(:nth-child(2n)) {
-        margin-right: 4%;
+        margin-right: $list-vertical-gutter;
       }
     }
 
@@ -246,14 +248,14 @@ Style guide: List styles.4 Highlighted word style
 
   > li {
     @include media($tablet) {
-      flex: 0 0 (92% / 3);
+      flex: 0 0 ((100% - $list-vertical-gutter * 2) / 3);
 
       &:not(:nth-child(2n)) {
         margin-right: 0;
       }
 
       &:not(:nth-child(3n)) {
-        margin-right: 4%;
+        margin-right: $list-vertical-gutter;
       }
     }
   }
@@ -271,7 +273,7 @@ Style guide: List styles.4 Highlighted word style
 
   > li {
     @include media($tablet) {
-      flex: 0 0 (88% / 4);
+      flex: 0 0 ((100% - $list-vertical-gutter * 3) / 4);
 
       &:not(:nth-child(2n)),
       &:not(:nth-child(3n)) {
@@ -279,7 +281,7 @@ Style guide: List styles.4 Highlighted word style
       }
 
       &:not(:nth-child(4n)) {
-        margin-right: 4%;
+        margin-right: $list-vertical-gutter;
       }
     }
   }
