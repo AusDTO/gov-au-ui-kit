@@ -1,4 +1,3 @@
-var flexibility = require('flexibility');
 var smoothScroll = require('smoothscroll');
 
 (function (document) {

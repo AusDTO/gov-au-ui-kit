@@ -23,7 +23,6 @@
     "css-select": "^1.2.0",
     "del": "^2.2.0",
     "dom-serializer": "^0.1.0",
-    "flexibility": "^2.0.1",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
