@@ -7,6 +7,7 @@
 Styleguide:
 
 - Added a disclaimer regarding accessibility and browser support.
+- Updated Australian Coat of Arms image that appears in site footer
 
 Bugfixes:
 

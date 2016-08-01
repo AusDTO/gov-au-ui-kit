@@ -20,7 +20,7 @@ footer[role='contentinfo'] {
     }
 
     img {
-      max-height: $base-spacing * 4;
+      max-height: 7em; //was $base-spacing * 4;
     }
   }
 
