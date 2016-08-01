@@ -186,10 +186,15 @@ Style guide: List styles.4 Highlighted word style
 
     border-top: 4px solid $border-colour;
     border-bottom: none;
+    margin: 0;
     flex: 0 0 100%;
 
     @include media($tablet) {
-      flex-basis: 48%;
+      flex-basis: (96% / 2);
+
+      &:not(:nth-child(2n)) {
+        margin-right: 4%;
+      }
     }
 
     article {
@@ -240,8 +245,16 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    @include media ($tablet) {
-      flex: 0 0 31%;
+    @include media($tablet) {
+      flex: 0 0 (92% / 3);
+
+      &:not(:nth-child(2n)) {
+        margin-right: 0;
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: 4%;
+      }
     }
   }
 }
@@ -257,8 +270,17 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    @include media ($tablet) {
-      flex: 0 0 22%;
+    @include media($tablet) {
+      flex: 0 0 (88% / 4);
+
+      &:not(:nth-child(2n)),
+      &:not(:nth-child(3n)) {
+        margin-right: 0;
+      }
+
+      &:not(:nth-child(4n)) {
+        margin-right: 4%;
+      }
     }
   }
 }

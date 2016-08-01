@@ -2,9 +2,16 @@
 
 ## UI Kit "Kraken"
 
-### `develop` of 2016-07-30
+### 1.7.0 (unreleased)
 
-Added a disclaimer regarding accessibility and browser support.
+Bugfixes:
+
+- Fixed [#230](https://github.com/AusDTO/gov-au-ui-kit/issues/230): margins between vertical list items
+
+Styleguide:
+
+- Added a disclaimer regarding accessibility and browser support.
+
 
 ### 1.6.0 as of 2016-07-29
 
