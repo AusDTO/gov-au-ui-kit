@@ -36,8 +36,8 @@
 .guide-example {
   border: solid 5px $non-white;
   margin: $base-spacing 0;
+  margin-bottom: 0;
   padding: $base-spacing;
-
 }
 
 .guide-example--type {
@@ -69,6 +69,7 @@ pre {
   overflow: scroll;
   background-color: $non-white;
   padding: $small-spacing;
+  max-height: 15.9em;
 }
 
 pre,
