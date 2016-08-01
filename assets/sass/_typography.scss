@@ -443,6 +443,24 @@ strong {
   }
 }
 
+// To be deprecated as of v2.0
+//
+// We are retaining this so that p.abstract is possible. Please use div.abstract p.
+p.abstract {
+  margin: $small-spacing 0 ($medium-spacing * 1.25);
+  padding-bottom: $medium-spacing;
+  border-bottom: 1px solid $border-colour;
+  font-size: rem(19);
+
+  @include media($tablet) {
+    font-size: rem(21);
+  }
+
+  @include media($desktop) {
+    font-size: rem(24);
+  }
+}
+
 hr {
   border-color: $border-colour;
   border-style: solid;
