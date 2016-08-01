@@ -262,6 +262,10 @@
     }
   }
 
+  :last-child {
+    margin-bottom: 0;
+  }
+
   .site-title {
     @extend h1;
 
