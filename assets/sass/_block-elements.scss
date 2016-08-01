@@ -86,6 +86,10 @@ main {
         @include shift(2);
       }
 
+      &:focus {
+        outline: none; //DESIGN-278
+      }
+
       &:first-child {
 
         @include reset-layout-direction;
