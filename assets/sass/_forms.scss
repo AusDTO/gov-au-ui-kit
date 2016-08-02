@@ -48,7 +48,8 @@ Style guide: Forms.1 Text input
   &:disabled,
   &[disabled] {
     cursor: not-allowed;
-    opacity: .5;
+    background: $non-white;
+    border: 2px solid $light-grey;
   }
 
 }
