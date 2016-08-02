@@ -466,6 +466,8 @@ hr {
   border-color: $border-colour;
   border-style: solid;
   border-bottom: none;
+  margin-top: $base-spacing;
+  margin-bottom: $base-spacing;
 }
 
 /*
@@ -568,7 +570,9 @@ Style guide: Typography.5 Callouts & warnings
 .callout--calendar-event {
   @extend %base-callout;
 
-  padding-bottom: $small-spacing; // reset
+  margin-left: 0;
+  box-shadow: none;
+  padding-bottom: $small-spacing;
   background-color: $callout-bg-light-colour;
 
   time,

@@ -2,6 +2,23 @@
 
 ## UI Kit "Kraken"
 
+### 1.7.2 - 2016-08-02
+
+UI-Kit changes
+
+- Style changes to Calendar Event Callout class `.callout--calendar-event` (documented under *§ Typography*).
+- Hero content styles updated to reduce top and bottom padding.
+
+Styleguide:
+
+- Minor bugfixes (broken links, code blocks now have a height, etc.).
+
+### 1.7.1 - 2016-08-01
+
+Bugfixes:
+
+- Fixed [#240](https://github.com/AusDTO/gov-au-ui-kit/issues/240): Menu toggles don't work in IE9.
+
 ### 1.7.0 - 2016-08-01
 
 Styleguide:

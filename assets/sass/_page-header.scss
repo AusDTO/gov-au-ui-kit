@@ -147,7 +147,7 @@
     .brandbar {
       position: absolute;
       top: 42px;
-      right: 0;
+      right: 66px;
       width: 50px;
       height: 5px;
     }
@@ -159,7 +159,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    width: 269px;
+    width: 337px;
     height: 51px;
 
     &.dusk {
@@ -245,7 +245,7 @@
   h1 {
     font-size: rem(28);
     margin-top: 0;
-    max-width: 15em;
+    max-width: 20em;
 
     @include media($tablet) {
       font-size: rem(38);
@@ -273,6 +273,17 @@
   .tagline {
     font-size: $large-font-size;
   }
+
+  .wrapper {
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 .hero-sml {
