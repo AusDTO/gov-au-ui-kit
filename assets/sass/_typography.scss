@@ -568,7 +568,9 @@ Style guide: Typography.5 Callouts & warnings
 .callout--calendar-event {
   @extend %base-callout;
 
-  padding-bottom: $small-spacing; // reset
+  margin-left: 0;
+  box-shadow: none;
+  padding-bottom: $small-spacing;
   background-color: $callout-bg-light-colour;
 
   time,
