@@ -245,7 +245,7 @@
   h1 {
     font-size: rem(28);
     margin-top: 0;
-    max-width: 15em;
+    max-width: 20em;
 
     @include media($tablet) {
       font-size: rem(38);
@@ -273,6 +273,17 @@
   .tagline {
     font-size: $large-font-size;
   }
+
+  .wrapper {
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 .hero-sml {
