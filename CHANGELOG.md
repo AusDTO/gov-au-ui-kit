@@ -9,6 +9,10 @@ UI-Kit changes
 - Style changes to Calendar Event Callout class `.callout--calendar-event` (documented under *§ Typography*).
 - Hero content styles updated to reduce top and bottom padding.
 
+Styleguide:
+
+- Minor bugfixes (broken links, code blocks now have a height, etc.).
+
 ### 1.7.1 - 2016-08-01
 
 Bugfixes:
