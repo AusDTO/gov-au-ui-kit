@@ -2,6 +2,10 @@
 
 ## UI Kit "Kraken"
 
+### `develop` as of 2016-08-02
+
+- Improved visibility of disabled text field inputs via greying-out.
+
 ### 1.7.2 - 2016-08-02
 
 UI-Kit changes
