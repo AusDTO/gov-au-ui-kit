@@ -31,7 +31,7 @@ The framework provides a vertical navigation menu. Home page is always at top, f
 
 Small screens (up to `$tablet` breakpoint) will see the menu closed (unexpanded) by default.
 
-Older browsers (IE8 and lower) and those without JavaScript will see an expanded menu. It is not able to be closed.
+Older browsers (IE8 and lower) and those without JavaScript will see an expanded menu. It will not be able to be closed.
 
 Use active state (`class="is-active"`) to show (in bold) where the user is.
 
