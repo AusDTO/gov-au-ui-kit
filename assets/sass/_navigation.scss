@@ -27,13 +27,13 @@ Local navigation
 
 Use local navigation to help the user go straight to the specific content that meets their needs.
 
-The framework provides a vertical navigation menu that shows 4 levels of items.
+The framework provides a vertical navigation menu. Home page is always at top, followed by up to 3 levels of navigation.
 
-Small screens (up to `$tablet` breakpoint) will see a toggle to expand the navigation panel.
+Small screens (up to `$tablet` breakpoint) will see the menu closed (unexpanded) by default.
 
-Older browsers (IE8 and lower) and those without JavaScript will see the expanded menu without a toggle button.
+Older browsers (IE8 and lower) and those without JavaScript will see an expanded menu. It is not able to be closed.
 
-Use active state (`class="is-active"`) to show which page the user is on.
+Use active state (`class="is-active"`) to show (in bold) where the user is.
 
 Markup: templates/local-navigation.hbs
 
