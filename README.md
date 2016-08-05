@@ -28,28 +28,30 @@ GOV-AU UI-Kit is currently in early draft release. You can help us build it by [
 - Basic styling for content with some good typographic coverage.
 - Basic styling for UI elements (eg `input`, `label`, etc).
 
-For a full list of features please see the [CHANGELOG](CHANGELOG.md).
+For a full list of features see the [CHANGELOG](CHANGELOG.md).
 
 ### Accessibility
+UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
 
-We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) over [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance).
+The framework is built on a solid accessible HTML foundation. We follow a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> to produce accessible components by default.
 
-- we intend to be WCAG2 AA compliant, striving for AAA where viable
-- we strive to make accessible features from the get-go
-- we have some automated build tools that aid in writing standards-compliant code (linting and html5 validation)
-- we are currently (give date) working on adding automated accessibility testing of our example templates
-- we will provide detailed information on accessibility compliance (eg AA or AAA) and specific guidance per framework feature
-- we intend to test the framework with a range of users directly
-- we intend to be audited for accessibility compliance
+Currently (August 2016) we are using automated build tools to write accessible code: linting and HTML5 validation.
 
-We will then document the level of accessibility and browser compatibility.
+We are working on:
+
+- automated accessibility testing of our examples templates
+- documenting accessibility compliance and guidance for each component
+- testing the framework with users to find barriers
+- preparing for an audit of the framework.
 
 ### Browser support
 
-- similarly, we will soon (give ~date) begin automated testing across browsers as part of our build process
-- in terms of scope we will test all components (CSS, JS and markup)
-- we intend to provide detailed information on browser support per component in the framework
-- we may add a top-level view browser support matrix/table here in the future
+We are working on:
+
+- automated browser testing as part of our build process
+- manual testing of all CSS, JS and markup
+- documenting browser support for each component
+- agreeing a browser support matrix (likely).
 
 ## What this isn't
 
