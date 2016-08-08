@@ -17,8 +17,7 @@ var gulp = require('gulp'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
     zip = require('gulp-zip'),
-    mocha = require('gulp-mocha'),
-    axe = require('axe-core')
+    mocha = require('gulp-mocha')
     ;
 
 var paths = {
