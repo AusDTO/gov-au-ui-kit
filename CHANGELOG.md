@@ -2,15 +2,20 @@
 
 ## UI Kit "Kraken"
 
-### `develop` as of 2016-08-02
+### `develop` as of 2016-08-08
 
-Ui-kit changes
+#### Ui-kit changes
 
 - Improved visibility of disabled text field inputs via greying-out.
 
-Styleguide:
+#### Styleguide
 
+- Updated documentation for `.local-nav` for `.is-active` and `.is-current` usage.
 - Improvements to *§ Tables*.
+
+#### Bugfixes
+
+- Fixed [#xxx](https://github.com/AusDTO/gov-au-ui-kit/issues/xxx): issue title
 
 ### 1.7.2 - 2016-08-02
 
