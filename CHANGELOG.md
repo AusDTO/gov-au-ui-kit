@@ -15,7 +15,7 @@
 
 #### Bugfixes
 
-- Fixed [#xxx](https://github.com/AusDTO/gov-au-ui-kit/issues/xxx): issue title
+- Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues
 
 ### 1.7.2 - 2016-08-02
 
