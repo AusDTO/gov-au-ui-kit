@@ -10,6 +10,7 @@
 
 #### Styleguide
 
+- Updated markup documentation for skip links to use `nav` instead of `div` (does not break; targeted by the `.skip-to` class).
 - Updated documentation for `.local-nav` for `.is-active` and `.is-current` usage.
 - Improvements to *§ Tables*.
 
