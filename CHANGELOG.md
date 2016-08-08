@@ -2,11 +2,12 @@
 
 ## UI Kit "Kraken"
 
-### `develop` as of 2016-08-02
+### `develop` as of 2016-08-08
 
 Ui-kit changes
 
 - Improved visibility of disabled text field inputs via greying-out.
+- Updated documentation for `.local-nav` for `.is-active` and `.is-current` usage.
 
 Styleguide:
 
