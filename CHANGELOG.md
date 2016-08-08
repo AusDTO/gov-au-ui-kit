@@ -16,6 +16,7 @@
 #### Bugfixes
 
 - Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues
+- Fixed [#255](https://github.com/AusDTO/gov-au-ui-kit/issues/255): SVG's don't have `xml` tag
 
 ### 1.7.2 - 2016-08-02
 
