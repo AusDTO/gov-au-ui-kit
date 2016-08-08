@@ -45,11 +45,13 @@
 </head>
 <body>
 
-  <div class="skip-to">
+  <nav class="skip-to">
     <a href="#content">Skip to main content</a>
     <a href="#nav">Skip to section navigation</a>
-  </div>
+  </nav>
 
+
+  <!-- ========== Page header ========== -->
   <header role="banner">
 
     <section class="prerelease-govau--header">
@@ -64,7 +66,7 @@
         </div>
 
         <div class="feedback" tabindex="1">
-          <a href="#" class="button--feedback">Give feedback</a>
+          <a href="#content" class="button--feedback">Give feedback</a>
         </div>
 
       </div><!--wrapper-->
@@ -72,7 +74,7 @@
       <nav class="breadcrumbs--inverted" aria-label="breadcrumb">
         <div class="wrapper">
           <ul>
-              <li><a href="#demo">Home</a></li>
+              <li><a href="#content">Home</a></li>
               <li class="current">Television (TV) reception</li>
           </ul>
         </div>
@@ -82,7 +84,7 @@
   </header>
 
 
-<!-- ========== Hero ========== -->
+  <!-- ========== Hero ========== -->
   <div class="hero-med">
     <div class="wrapper">
       <h1>Television (TV) reception</h1>
@@ -91,21 +93,21 @@
   </div>
 
 
-  <main>
-<!-- ========== Main Page Row ========== -->
+  <!-- ========== Main Page Row ========== -->
+  <main role="main">
     <aside class="sidebar" id="nav">
 
-<!-- ========== Nav ========== -->
+      <!-- ========== Nav ========== -->
       <nav class="local-nav" aria-label="main navigation">
         <h1 class="is-visuallyhidden">Menu</h1>
         <ul>
-          <li><a class="is-active is-current" href="#demo">Television (TV) reception</a>
+          <li><a class="is-active is-current" href="#content">Television (TV) reception</a>
             <ul>
               <li><a href="topic-content.html">Setting up digital TV</a></li>
-              <li><a href="#demo">Troubleshooting TV reception</a></li>
-              <li><a href="#demo">Areas with temporary reception issues</a></li>
-              <li><a href="#demo">Retransmitting TV channels</a></li>
-              <li><a href="#demo">News</a></li>
+              <li><a href="#content">Troubleshooting TV reception</a></li>
+              <li><a href="#content">Areas with temporary reception issues</a></li>
+              <li><a href="#content">Retransmitting TV channels</a></li>
+              <li><a href="#content">News</a></li>
             </ul>
           </li>
         </ul>
@@ -113,81 +115,83 @@
 
     </aside>
 
-
-    <article class="main-content content-main" id="main-content">
-<!-- ========== Content ========== -->
-
+    <!-- ========== Content ========== -->
+    <article id="content" class="content-main">
+      <header>
         <h2>{{Title TBC}}</h2>
+      </header>
 
-        <h3><a href="#">Setting up digital TV</a></h3>
-        <p>Find out how to get free-to-air TV using an antenna or a satellite dish.</p>
+      <dl>
+        <dt><a href="#content">Setting up digital TV</a></dt>
+        <dd>Find out how to get free-to-air TV using an antenna or a satellite dish.</dd>
 
-        <h3><a href="#">Troubleshooting TV reception</a></h3>
+        <dt><a href="#content">Troubleshooting TV reception</a></dt>
         <p>Follow these steps to fix TV reception and signal issues.</p>
 
-        <h3><a href="#">Areas with temporary reception issues</a></h3>
-        <p>Check to see if your area has poor TV reception because of temporary issues such as planned maintenance or storm damage.</p>
+        <dt><a href="#content">Areas with temporary reception issues</a></dt>
+        <dd>Check to see if your area has poor TV reception because of temporary issues such as planned maintenance or storm damage.</p>
 
-        <h3><a href="#">Retransmitting TV channels</a></h3>
-        <p>In remote areas with poor TV reception, local organisations can apply to retransmit channels.</p>
+        <dt><a href="#content">Retransmitting TV channels</a></dt>
+        <dd>In remote areas with poor TV reception, local organisations can apply to retransmit channels.</dd>
+      </dl>
 
+      <h2>News</h2>
+      <p>Announcements, media releases, interviews, speeches and more.</p>
 
-        <h2>News</h2>
-        <p>Announcements, media releases, interviews, speeches and more.</p>
-        <ul class='list-vertical--thirds'>
-            <li>
-                <article>
-                    <h3><a href="#demo">A warm reception for viewers in the Hunter</a></h3>
-                    <div class='meta'>22 July 2016</div>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <h3><a href="#demo">Sydney – final countdown to digital-only TV has begun</a></h3>
-                    <div class='meta'>13 November 2013</div>
-                </article>
-            </li>
-        </ul>
-        <p><a class="see-more" href="/television-tv-reception/news">More news</a></p>
+      <ul class='list-vertical--thirds'>
+        <li>
+          <article>
+            <h3><a href="#content">A warm reception for viewers in the Hunter</a></h3>
+            <div class="meta">22 July 2016</div>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3><a href="#content">Sydney – final countdown to digital-only TV has begun</a></h3>
+            <div class="meta">13 November 2013</div>
+          </article>
+        </li>
+      </ul>
 
+      <p><a class="see-more" href="/television-tv-reception/news">More news</a></p>
 
-<!-- ========== End Content ========== -->
     </article>
+    <!-- ========== end Content ========== -->
   </main>
 
 
-<!-- ========== footer ========== -->
+  <!-- ========== Page footer ========== -->
   <footer role="contentinfo">
     <div class="wrapper">
       <section class="footer-top">
         <nav>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
         </nav>
       </section>
@@ -198,19 +202,19 @@
         <div class="footer-links">
           <nav>
             <ul>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
             </ul>
           </nav>
           <p>&copy; Commonwealth of Australia <br>
           <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md">Licensed under the MIT License.</a></p>
         </div>
       </section>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-  </body>
+</body>
 </html>
