@@ -45,13 +45,14 @@
 </head>
 <body>
 
-  <div class="skip-to">
+  <nav class="skip-to">
     <a href="#content">Skip to main content</a>
     <a href="#nav">Skip to section navigation</a>
-  </div>
+  </nav>
 
+
+  <!-- ========== Page header ========== -->
   <header role="banner">
-
     <section class="prerelease-govau--header">
       <div class="wrapper">
         <div class="govau--logo">
@@ -64,7 +65,7 @@
         </div>
 
         <div class="feedback" tabindex="1">
-          <a href="#" class="button-feedback">Give feedback</a>
+          <a href="#content" class="button-feedback">Give feedback</a>
         </div>
 
       </div><!--wrapper-->
@@ -72,8 +73,8 @@
       <nav class="breadcrumbs--inverted" aria-label="breadcrumb">
         <div class="wrapper">
           <ul>
-              <li><a href="#demo">Home</a></li>
-              <li class="current">Minister for Communications</li>
+            <li><a href="#content">Home</a></li>
+            <li class="current">Minister for Communications</li>
           </ul>
         </div>
       </nav>
@@ -82,7 +83,7 @@
   </header>
 
 
-<!-- ========== Hero ========== -->
+  <!-- ========== Hero ========== -->
   <div class="hero-med corporate">
     <div class="wrapper">
       <h1>Minister for Communications</h1>
@@ -91,20 +92,20 @@
   </div>
 
 
+  <!-- ========== Main page row ========== -->
   <main>
-<!-- ========== Main Page Row ========== -->
     <aside class="sidebar" id="nav">
 
-<!-- ========== Nav ========== -->
+      <!-- ========== Nav ========== -->
       <nav class="local-nav" aria-label="main navigation">
         <h1 class="is-visuallyhidden">Menu</h1>
         <ul>
-          <li> <a class="is-active is-current" href="#demo">Minister for Communications</a>
+          <li><a class="is-active is-current" href="#content">Minister for Communications</a>
             <ul>
-              <li> <a href="ministers-content.html"> Responsibilities </a> </li>
-              <li> <a href="profile.html"> About the minister </a> </li>
-              <li> <a href="news-section-listing.html"> News </a> </li>
-              <li> <a href="#demo"> Contact </a> </li>
+              <li><a href="ministers-content.html">Responsibilities </a></li>
+              <li><a href="profile.html">About the minister</a></li>
+              <li><a href="news-section-listing.html">News</a></li>
+              <li><a href="#content">Contact</a></li>
             </ul>
           </li>
         </ul>
@@ -112,96 +113,100 @@
 
     </aside>
 
-
-    <article class="main-content content-main" id="main-content">
-<!-- ========== Content ========== -->
+    <!-- ========== Content ========== -->
+    <article id="content" class="content-main">
 
       <h2 id="about-the-minister">About the minister</h2>
       <p>
         <img src="https://raw.githubusercontent.com/AusDTO/gov-au-images/master/ministers/mitch-fifield-hero.jpg" alt="Senator the Hon Mitch Fifield">
       </p>
-      <p>
-        <strong>Senator the Hon Mitch Fifield</strong><br>
-        Liberal Party of Australia<br>
-        Senator Fifield was appointed Minister for Communications and Minister for the Arts on 21 September 2015.
-      </p>
-      <p><a href="#demo">More about the minister</a></p>
+
+      <h3>Senator the Hon Mitch Fifield</h3>
+      <p>Liberal Party of Australia</p>
+      <p>Senator Fifield was appointed Minister for Communications and Minister for the Arts on 21 September 2015.</p>
+      <p><a class="see-more" href="#content">More about the minister</a></p>
 
       <h2 id="responsibilities">Responsibilities</h2>
-      <p>The minister leads the <a href="#demo">Department of Communications and the Arts</a> and other agencies within the government's Communications portfolio.</p>
+      <p>The minister leads the <a href="#content">Department of Communications and the Arts</a> and other agencies within the government's Communications portfolio.</p>
       <p>The minister works with the community, government organisations and professional associations to create and update communication laws.</p>
-      <p><a href="#demo">More about responsibilities</a></p>
+      <p><a class="see-more" href="#content">More about responsibilities</a></p>
 
       <h2 id="contact">Contact</h2>
-      <p><strong>Parliament Office</strong><br>
-      Email: <a href="mailto:minister@communications.gov.au">minister@communications.gov.au</a><br>
-      Phone: <a href="tel:0262777480">02 6277 7480</a> </p>
+      <p>Parliament Office:</p>
 
-      <p><a href="#demo">More contact details</a></p>
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:minister@communications.gov.au">minister@communications.gov.au</a></dd>
 
-      <h2>News</h2>
+        <dt>Phone</dt>
+        <dd><a href="tel:0262777480">02 6277 7480</a></dd>
+      </dl>
+
+      <p><a class="see-more" href="#content">More contact details</a></p>
+
+      <h2 id="news">News</h2>
       <p>Announcements, media releases, interviews, speeches and more.</p>
 
       <ul class="list-vertical--thirds">
         <li>
           <article>
-            <h3><a href="#demo">Australian Government support for Confluence: Festival of India 2016</a></h3>
+            <h3><a href="#content">Australian Government support for Confluence: Festival of India 2016</a></h3>
             <div class="meta">26 July 2016</div>
           </article>
         </li>
         <li>
           <article>
-            <h3><a href="#demo">Year of achievement for Children’s eSafety Commissioner</a></h3>
+            <h3><a href="#content">Year of achievement for Children’s eSafety Commissioner</a></h3>
             <div class="meta">26 July 2016</div>
           </article>
         </li>
         <li>
           <article>
-            <h3><a href="#demo">Sydney – final countdown to digital-only TV has begun</a></h3>
+            <h3><a href="#content">Sydney &mdash; final countdown to digital-only TV has begun</a></h3>
             <div class="meta">13 November 2013</div>
           </article>
         </li>
       </ul>
 
-      <p><a class="see-more" href="#demo">More news</a></p>
+      <p><a class="see-more" href="#content">More news</a></p>
 
-<!-- ========== End Content ========== -->
+      <!-- ========== end Content ========== -->
     </article>
   </main>
 
 
-<!-- ========== footer ========== -->
+  <!-- ========== Page footer ========== -->
   <footer role="contentinfo">
     <div class="wrapper">
       <section class="footer-top">
         <nav>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
           <ul>
-            <li><h3>Title header</h3></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
-            <li><a href="#demo">This is a footer link</a></li>
+            <li><h2>Title header</h2></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">This is a footer link</a></li>
           </ul>
         </nav>
       </section>
@@ -212,11 +217,11 @@
         <div class="footer-links">
           <nav>
             <ul>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
-              <li><a href="#demo">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
+              <li><a href="#content">Example global link</a></li>
             </ul>
           </nav>
           <p>&copy; Commonwealth of Australia <br>
