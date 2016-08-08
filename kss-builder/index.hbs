@@ -75,7 +75,7 @@
   <section class="hero">
     <div class="wrapper">
       <span class="site-title">{{options.title}}</span>
-      <p class="tagline">A living style guide of the UI-Kit <abbr title="Sassy CSS">SCSS</abbr> framework, built from the source, using <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
+      <p class="tagline">A living style guide of the UI-Kit <abbr title="Sassy CSS">SCSS</abbr> framework, built from the source, using <a href="http://warpspire.com/kss/" rel="external"><abbr title="Knyle Style Sheets">KSS</abbr></a>.</p>
       <p>Documents UI-Kit release: <code>v{{package "version"}}</code></p>
       <p>Last updated: <time datetime="{{moment "" ""}}">{{moment "" "DD MMMM Y"}}</time></p>
     </div>
@@ -88,13 +88,15 @@
     <nav class="local-nav" aria-label="main navigation">
       <ul>
         <li>
-          <a href="/" {{# if homepage}}class="is-active"{{/if}}>Getting started</a>
+          <a href="index.html" class="is-active">Getting started</a>
+          <ul>
+            {{#each menu}}
+              <li>
+                <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active is-current"{{/if}}>{{header}}</a>
+              </li>
+            {{/each}}
+          </ul>
         </li>
-        {{#each menu}}
-          <li>
-            <a href="section-{{referenceURI}}.html" {{#if isActive}}class="is-active"{{/if}}>{{header}}</a>
-          </li>
-        {{/each}}
       </ul>
     </nav>
   </aside>
@@ -208,14 +210,20 @@
 
 <footer role="contentinfo">
   <div class="wrapper">
-    <div class="footer-logo">
-      <img alt="Australian Government Coat of Arms" src="/latest/img/coat-of-arms.png">
-    </div>
-    <div class="footer-links">
-      <a href="https://www.dto.gov.au/privacy-statement/">Privacy Statement</a>
-      <p>&copy; Commonwealth of Australia <br>
-      <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md">Licensed under the MIT License.</a></p>
-    </div>
+    <section>
+      <div class="footer-logo">
+        <img alt="Australian Government Coat of Arms" src="/latest/img/coat-of-arms.png">
+      </div>
+      <div class="footer-links">
+        <nav>
+          <ul>
+            <li><a href="https://www.dto.gov.au/privacy-statement/" rel="external">Privacy Statement</a></li>
+          </ul>
+        </nav>
+        <p>&copy; Commonwealth of Australia <br>
+        <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md" rel="external license">Licensed under the MIT License.</a></p>
+      </div>
+    </section>
   </div>
 </footer>
 

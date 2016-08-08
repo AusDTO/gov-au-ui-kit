@@ -30,7 +30,7 @@ You can change the number of columns used:
 - `.vertical-list--thirds` give 3 columns of list items
 - `.vertical-list--fourths` give 4 columns of list items.
 
-For [browsers that don't support Flexbox layout](http://caniuse.com/#feat=flexbox) lists will appear as in horizontal style with images (if used) below each list item.
+For <a href="http://caniuse.com/#feat=flexbox" rel="external">browsers that don't support Flexbox layout</a> lists will appear as in horizontal style with images (if used) below each list item.
 
 Markup: templates/lists-vertical.hbs
 
@@ -63,7 +63,7 @@ Style guide: List styles.4 Highlighted word style
   padding: 0;
 
   .tags {
-    @include link-colours($button-bg-colour, v, $link-colour);
+    @include link-colours($button-bg-colour, $link-colour--hover, $link-colour);
     color: $grey;
 
     dl,
@@ -168,6 +168,8 @@ Style guide: List styles.4 Highlighted word style
 
 }
 
+$list-vertical-gutter: 4%;
+
 .list-vertical {
   @extend %base-list;
 
@@ -186,10 +188,15 @@ Style guide: List styles.4 Highlighted word style
 
     border-top: 4px solid $border-colour;
     border-bottom: none;
+    margin: 0;
     flex: 0 0 100%;
 
     @include media($tablet) {
-      flex-basis: 48%;
+      flex-basis: ((100% - $list-vertical-gutter) / 2);
+
+      &:not(:nth-child(2n)) {
+        margin-right: $list-vertical-gutter;
+      }
     }
 
     article {
@@ -240,8 +247,16 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    @include media ($tablet) {
-      flex: 0 0 31%;
+    @include media($tablet) {
+      flex: 0 0 ((100% - $list-vertical-gutter * 2) / 3);
+
+      &:not(:nth-child(2n)) {
+        margin-right: 0;
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: $list-vertical-gutter;
+      }
     }
   }
 }
@@ -257,8 +272,17 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    @include media ($tablet) {
-      flex: 0 0 22%;
+    @include media($tablet) {
+      flex: 0 0 ((100% - $list-vertical-gutter * 3) / 4);
+
+      &:not(:nth-child(2n)),
+      &:not(:nth-child(3n)) {
+        margin-right: 0;
+      }
+
+      &:not(:nth-child(4n)) {
+        margin-right: $list-vertical-gutter;
+      }
     }
   }
 }

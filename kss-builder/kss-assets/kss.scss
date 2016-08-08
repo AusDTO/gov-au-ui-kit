@@ -14,6 +14,16 @@
   @include media($desktop) {
     width: 45em;
   }
+
+  /*
+    NOTE
+    Width issues with <PRE> are caused by lack of width set on <main> & .wrapper
+    Test with:
+        main, .wrapper { width: 90%; }
+        pre { width: 100% }
+    This is probably worth correcting as it may be causing other unforeseen consciences.
+    ~Tb
+  */
 }
 
 .guide-section {
@@ -36,8 +46,8 @@
 .guide-example {
   border: solid 5px $non-white;
   margin: $base-spacing 0;
+  margin-bottom: 0;
   padding: $base-spacing;
-
 }
 
 .guide-example--type {
@@ -49,15 +59,15 @@
   padding: 2em;
   overflow: auto;
 
-  h4 {
-    margin-top: 0;
-  }
-
   p {
     font-size: 2em;
   }
 
-  p:last-child {
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
     margin-bottom: 0;
   }
 }
@@ -69,6 +79,7 @@ pre {
   overflow: scroll;
   background-color: $non-white;
   padding: $small-spacing;
+  max-height: 15.9em;
 }
 
 pre,
