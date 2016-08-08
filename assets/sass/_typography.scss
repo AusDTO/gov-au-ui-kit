@@ -11,7 +11,7 @@ Style guide: Typography
 /*
 Typeface
 
-We are currently testing the open source [Open Sans family](https://www.google.com/fonts/specimen/Open+Sans) in 3 styles.
+We are currently testing the open source <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans family</a> in 3 styles.
 
 <div class="guide-example--type"><h3>Open Sans regular 400</h3>
   <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
@@ -47,7 +47,7 @@ We are currently testing the use of webfonts.
 
 The font stacks should still achieve a high degree of coverage across a range of browsers and operating systems using the fall-backs (roughly 95% coverage).
 
-You need to load webfonts through the [Google Web Font Loader](https://github.com/typekit/webfontloader) via `<script>` to add Open Sans via the HTML `head`. This supports modern browsers and older versions of Internet Explorer.
+You need to load webfonts through the <a href="https://github.com/typekit/webfontloader" rel="external">Google Web Font Loader</a> via `<script>` to add Open Sans via the HTML `head`. This supports modern browsers and older versions of Internet Explorer.
 
 Style guide: Typography.1 Typeface.1 Font stacks
 */
@@ -389,7 +389,7 @@ kbd {
 /*
 Show keyboard input
 
-Use the [`<kbd>` element](http://w3c.github.io/html/textlevel-semantics.html#the-kbd-element) to show users which key to press.
+Use the <a href="http://w3c.github.io/html/textlevel-semantics.html#the-kbd-element" rel="external"><code>kbd</code> element</a> to show users which key to press.
 
 Markup: Copy text to clipboard using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
