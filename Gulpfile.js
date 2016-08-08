@@ -16,7 +16,9 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
-    zip = require('gulp-zip')
+    zip = require('gulp-zip'),
+    mocha = require('gulp-mocha'),
+    axe = require('axe-core')
     ;
 
 var paths = {
@@ -161,6 +163,11 @@ gulp.task('htmlvalidate', ['examples', 'styleguide'], function (cb) {
             throw err;
         }
     }
+});
+
+gulp.task('test', function() {
+    return gulp.src(['test/test.js'], { read: false })
+        .pipe(mocha());
 });
 
 gulp.task('styleguide', ['styleguide.scss'], function () {
