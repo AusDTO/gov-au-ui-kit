@@ -1,6 +1,6 @@
 footer[role='contentinfo'] {
-
   @include pad(( $base-spacing * 2 ) 0);
+
   background-color: $non-white;
   border-top: 6px solid $border-contrast-colour;
 
@@ -13,8 +13,6 @@ footer[role='contentinfo'] {
   }
 
   .footer-logo {
-    //margin: 0 0 $base-spacing;
-
     @include media($tablet) {
       @include span-columns(3 of 12);
     }
@@ -25,7 +23,6 @@ footer[role='contentinfo'] {
   }
 
   .footer-links {
-
     @include media($tablet) {
       @include span-columns(9 of 12);
     }
@@ -37,8 +34,8 @@ footer[role='contentinfo'] {
     }
 
     li {
-      margin-right: $small-spacing;
       display: block;
+      margin-right: $small-spacing;
 
       @include media($tablet) {
         display: inline-block;
@@ -52,13 +49,13 @@ footer[role='contentinfo'] {
 
   // Footer navigation is documented in the navigation partial.
   .footer-top {
-    border-bottom: 1px solid $border-colour;
     margin-bottom: $base-spacing * 2;
     padding-bottom: $base-spacing * 2;
+    border-bottom: 1px solid $border-colour;
 
     nav {
-      box-sizing: border-box;
       display: flex;
+      box-sizing: border-box;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -86,6 +83,7 @@ footer[role='contentinfo'] {
         h3,
         h4 {
           font-size: rem(16);
+          font-weight: $heading-font-weight;
         }
       }
     }
