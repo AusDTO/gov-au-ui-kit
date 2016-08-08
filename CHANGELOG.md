@@ -2,9 +2,19 @@
 
 ## UI Kit "Kraken"
 
+### `develop` as of 2016-08-02
+
+Ui-kit changes
+
+- Improved visibility of disabled text field inputs via greying-out.
+
+Styleguide:
+
+- Improvements to *§ Tables*.
+
 ### 1.7.2 - 2016-08-02
 
-UI-Kit changes
+UI-Kit changes:
 
 - Style changes to Calendar Event Callout class `.callout--calendar-event` (documented under *§ Typography*).
 - Hero content styles updated to reduce top and bottom padding.

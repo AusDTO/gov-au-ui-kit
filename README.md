@@ -1,6 +1,6 @@
 # `gov-au-ui-kit`
 
-![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
+![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
 ## Disclaimer
 GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
