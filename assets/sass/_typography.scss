@@ -513,8 +513,6 @@ dd {
 
 li {
   margin-bottom: ($small-spacing / 1.5);
-  margin-left: -($small-spacing / 4);
-  padding-left: ($small-spacing / 4);
 
   ul,
   ol {
@@ -652,7 +650,7 @@ Style guide: Typography.7 Quotations
 
 blockquote {
   margin: $medium-spacing 0;
-  padding: $small-spacing ($base-spacing + ($small-spacing * 0.75));
+  padding: $small-spacing ($base-spacing + $small-spacing);
   background-color: $background-secondary-colour;
   font-family: $base-serif;
   quotes: '\201C''\201D''\2018''\2019';
