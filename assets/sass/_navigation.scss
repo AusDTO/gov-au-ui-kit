@@ -591,8 +591,13 @@ Style guide: Navigation.08 Group of links
 /*
 Tab-style navigation
 
-<span class="badge--error">WARNING</span>
-This feature is in early development.
+The tab-style navigation is intended to be used in the main content area for indicating links which are directly related to the current page.
+
+At this stage in development this feature does not support traditional tabbed content (client-side context switch) but is purely a list of links styled in a horizontal list.
+
+Overflowing links wrap down to the next line on smaller devices.
+
+Use `class="is-current"` for the current location.
 
 Markup: templates/tab-style-nav.hbs
 
@@ -657,6 +662,7 @@ Style guide: Navigation.07 Tab-style navigation
       border-bottom-color: $aqua;
     }
 
+    &.is-current,
     &.is-active {
       color: $dark-aqua; //Accessibility: can't be $aqua on $lighter-aqua
       background-color: $lighter-aqua;
