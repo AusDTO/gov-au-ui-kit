@@ -17,6 +17,14 @@ Horizontal style provides a single column of list items.
 
 Markup: templates/lists-horizontal.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: List styles.1 Horizontal style
 */
 
@@ -34,6 +42,14 @@ For <a href="http://caniuse.com/#feat=flexbox" rel="external">browsers that don'
 
 Markup: templates/lists-vertical.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: List styles.2 Vertical style
 */
 
@@ -44,6 +60,14 @@ Use small list style for large groups of list items.
 
 Markup: templates/lists-small.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: List styles.3 Small list style
 */
 
@@ -53,6 +77,14 @@ Highlighted words style
 Use highlighted words style for a list with repeating phrases.
 
 Markup: templates/lists-highlighted.hbs
+
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
 
 Style guide: List styles.4 Highlighted word style
 */

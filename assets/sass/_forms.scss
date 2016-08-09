@@ -21,6 +21,14 @@ They can be limited to number input only by setting the `type` attribute to `num
 
 Markup: templates/text-input-single-line.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: Forms.1 Text input
 */
 
@@ -94,6 +102,14 @@ form {
     <label for="texta">An input for longer responses</label>
     <textarea name="texta" id="texta"></textarea>
   </form>
+
+  <div class="guide-micro-callout">
+    <h3> Accessibility notes:​</h3>
+    **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+    **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+    **Untested** WCAG:AA manual compliance<br/>
+    **Untested** Supported browsers tested
+  </div>
 
   Style guide: Forms.2 Text area input
   */
@@ -170,6 +186,14 @@ form {
       <label for="no">No</label>
     </fieldset>
   </form>
+  
+  <div class="guide-micro-callout">
+    <h3> Accessibility notes:​</h3>
+    **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+    **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+    **Untested** WCAG:AA manual compliance<br/>
+    **Untested** Supported browsers tested
+  </div>
 
   Style guide: Forms.3 Radio button input
   */
@@ -227,6 +251,14 @@ Markup:
     <label for="ccc">CCC</label>
   </fieldset>
 </form>
+
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
 
 Style guide: Forms.4 Checkbox input
 */

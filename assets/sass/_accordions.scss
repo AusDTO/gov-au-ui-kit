@@ -30,6 +30,14 @@ When implementing accordions:
 - For multiple accordion elements each `details` element must have its own `data-label` attribute.
 - This framework allows a text/string search of accordion content, even when collapsed (string itself remains hidden until opened).
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: Accordions.1 Usability
 */
 

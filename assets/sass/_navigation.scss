@@ -19,6 +19,14 @@ Older browsers (IE8 and lower) and those without JavaScript will get an expanded
 
 Markup: templates/global-navigation.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: Navigation.1 Global navigation
 */
 
@@ -37,6 +45,14 @@ Use active state to show where the user is. Use `class="is-active"` for each cli
 
 Markup: templates/local-navigation.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: Navigation.2 Local navigation
 */
 
@@ -48,6 +64,14 @@ Breadcrumbs help the user understand where they are in the service and how they 
 They appear directly under a page header or hero, from `$tablet` breakpoint upwards.
 
 Markup: templates/breadcrumbs.hbs
+
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
 
 Style guide: Navigation.3 Breadcrumbs
 */
@@ -63,6 +87,14 @@ Users with modern browsers will see a smooth scroll down the page.
 
 Markup: templates/index-links.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: Navigation.4 Contents links
 */
 
@@ -72,6 +104,14 @@ Inline links
 You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.
 
 Markup: templates/inline-links.hbs
+
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
 
 Style guide: Navigation.5 Inline links
 */
@@ -88,6 +128,14 @@ This framework uses CSS Flexboxes to manage columns. It provides:
 - 4 columns for `$desktop` breakpoint.
 
 Markup: templates/footer-navigation.hbs
+
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
 
 Style guide: Navigation.6 Footer navigation
 */
@@ -456,6 +504,14 @@ Include skip links between the opening of the `<body>` and the page `<header>`.
 
 Markup: templates/skip-link.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: Navigation.7 Skip links
 */
 
@@ -554,6 +610,14 @@ You can use groups of links:
 - anywhere within an `article` (eg as a list of related topics).
 
 Markup: templates/groups-links.hbs
+
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
 
 Style guide: Navigation.8 Group of links
 */

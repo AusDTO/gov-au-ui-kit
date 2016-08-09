@@ -19,6 +19,14 @@ Link to external sites using `rel="external"`.
 
 Markup: templates/basic-links.hbs
 
+<div class="guide-micro-callout">
+  <h3> Accessibility notes:​</h3>
+  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+  **Untested** WCAG:AA manual compliance<br/>
+  **Untested** Supported browsers tested
+</div>
+
 Style guide: Link styles.1 Hover links
 */
 
@@ -79,6 +87,14 @@ Style guide: Link styles.1 Hover links
     to take the user to a index page of all items.
 
     Markup: <a class="see-more" href="#">See more</a>
+
+    <div class="guide-micro-callout">
+      <h3> Accessibility notes:​</h3>
+      **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+      **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+      **Untested** WCAG:AA manual compliance<br/>
+      **Untested** Supported browsers tested
+    </div>
 
     Style guide: Link styles.2 See more link
     */
