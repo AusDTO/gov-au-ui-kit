@@ -23,10 +23,13 @@ describe('Accessibility tests', function() {
     function runTests() {
       let pages = htmlFiles(),
         totalPages = pages.length,
+        test = pally(),
         runTest = function() {
           let url = 'http://localhost:3000/' + pages.shift();
           console.log(msg.info('Testing page', totalPages - pages.length, 'of', totalPages, url, '...'));
-          pa11y().run(url, function(error, results) {
+
+
+          test.run(url, function(error, results) {
             if (error) {
               console.log(msg.error(error));
             } else {
@@ -39,6 +42,8 @@ describe('Accessibility tests', function() {
               server.close();
             }
           });
+
+
         };
       runTest();
     }
