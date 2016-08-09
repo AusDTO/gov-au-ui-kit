@@ -46,6 +46,8 @@ main {
   @extend %wrapper-padding;
   @include outer-container;
 
+  margin: 0;
+
   // makes flex work in IE10/11 https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
   flex: 1 0 auto;
 
