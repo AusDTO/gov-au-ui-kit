@@ -10,12 +10,14 @@
 
 #### Styleguide
 
+- Updated markup documentation for skip links to use `nav` instead of `div` (does not break; targeted by the `.skip-to` class).
 - Updated documentation for `.local-nav` for `.is-active` and `.is-current` usage.
 - Improvements to *§ Tables*.
 
 #### Bugfixes
 
 - Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues
+- Fixed [#255](https://github.com/AusDTO/gov-au-ui-kit/issues/255): SVG's don't have `xml` tag
 
 ### 1.7.2 - 2016-08-02
 
