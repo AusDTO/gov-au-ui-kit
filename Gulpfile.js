@@ -167,7 +167,7 @@ gulp.task('htmlvalidate', ['examples', 'styleguide'], function (cb) {
 gulp.task('test', function() {
     return gulp.src(['test/pa11y.js'], { read: false })
         .pipe(mocha({
-          timeout: 100000
+          timeout: 30000
         }));
 });
 
