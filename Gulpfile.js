@@ -165,8 +165,10 @@ gulp.task('htmlvalidate', ['examples', 'styleguide'], function (cb) {
 });
 
 gulp.task('test', function() {
-    return gulp.src(['test/test.js'], { read: false })
-        .pipe(mocha());
+    return gulp.src(['test/pa11y.js'], { read: false })
+        .pipe(mocha({
+          timeout: 100000
+        }));
 });
 
 gulp.task('styleguide', ['styleguide.scss'], function () {
