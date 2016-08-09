@@ -48,13 +48,23 @@ Style guide: List styles.3 Small list style
 */
 
 /*
+Numbered list style
+
+Use numbered list style to present lists in which the order of list items is semantically significant.
+
+Markup: templates/lists-numbered.hbs
+
+Style guide: List styles.4 Numbered list style
+*/
+
+/*
 Highlighted words style
 
 Use highlighted words style for a list with repeating phrases.
 
 Markup: templates/lists-highlighted.hbs
 
-Style guide: List styles.4 Highlighted word style
+Style guide: List styles.5 Highlighted word style
 */
 
 %base-list {
@@ -330,6 +340,28 @@ $list-vertical-gutter: 4%;
     display: block;
     margin: 0;
   }
+}
+
+.list-numbered {
+  counter-reset: item;
+
+  li {
+    display: block;
+    position: relative;
+  }
+
+  li:before {
+    content: counter(item) " ";
+    counter-increment: item;
+    width: 1.85em;
+    height: 1.85em;
+    border: solid 2px #327da9;
+    border-radius: 3em;
+    left: -2em;
+    position: absolute;
+    top: -0.1em;
+    text-align: center;
+  }  
 }
 
 .list-highlighted {
