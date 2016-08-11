@@ -30,6 +30,22 @@ When implementing accordions:
 - For multiple accordion elements each `details` element must have its own `data-label` attribute.
 - This framework allows a text/string search of accordion content, even when collapsed (string itself remains hidden until opened).
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: Accordions.1 Usability
 */
 
@@ -117,4 +133,9 @@ summary {
     padding-bottom: 0;
     top: $small-spacing * -2;
   }
+
+  :first-child {
+    margin-top: 0;
+  }
+
 }

@@ -206,6 +206,22 @@ The <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-con
 <p class="guide-colour-block bg-light-yellow">non-black on light-yellow <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-blue">non-black on light-blue <span class="invert">AA</span></p>
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: Colours.3 Accessibility
 */
 
