@@ -143,33 +143,6 @@ We are wary about breaking changes. We will work to ensure we will gracefully de
 
 We may create an installer wrapper (likely node-based), or release via git submodules.
 
-## Milestones
-
-### 1st general goal
-
-Meet the general look and feel of the <a href="http://gov.au/alpha" rel="external">gov.au alpha</a> with room for some improvements.
-
-This will allow us to establish the basics of the framework while meeting a relatively easily met static target.
-
-We are focused on:
-
-- establishing the basic framework
-- provide UI styling for `input`, `label`, etc
-- styling for other buttons, next/previous, etc
-- some sane basics for high level block elements inc. `main`, `article`, `header`, and `footer`
-- styling for primary and secondary `nav`.
-
-### Future… (coming roadmap)
-
-Iterate in 2 ways:
-
-- look and feel under the direction of the designers from the GOV.AU Guides team
-- styling for commonly used and requested things that builders from other Digital Transformation Office teams need, including:
-  - styling for calendars
-  - styling for common web application elements
-  - extensive testing
-  - templates.
-
 ## Copyright & license
 
 Copyright Digital Transformation Office. <a href="(https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE" rel="external license">Licensed under the MIT license</a>.
