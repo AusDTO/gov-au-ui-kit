@@ -22,13 +22,18 @@ They can be limited to number input only by setting the `type` attribute to `num
 Markup: templates/text-input-single-line.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility notes</summary>
+  <summary>Accessibility & browser testing</summary>
   <div class="accordion-panel">
-
-    <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
-    **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
-    **Untested** WCAG:AA manual compliance<br/>
-    **Untested** Supported browsers tested</p>
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
   </div>
 </details>
 
@@ -107,13 +112,18 @@ form {
   </form>
 
   <details data-label="accordion-accessibility" aria-expanded="false">
-    <summary>Accessibility notes</summary>
+    <summary>Accessibility & browser testing</summary>
     <div class="accordion-panel">
-
-      <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
-      **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
-      **Untested** WCAG:AA manual compliance<br/>
-      **Untested** Supported browsers tested</p>
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
     </div>
   </details>
 
@@ -194,13 +204,18 @@ form {
   </form>
 
   <details data-label="accordion-accessibility" aria-expanded="false">
-    <summary>Accessibility notes</summary>
+    <summary>Accessibility & browser testing</summary>
     <div class="accordion-panel">
-
-      <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
-      **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
-      **Untested** WCAG:AA manual compliance<br/>
-      **Untested** Supported browsers tested</p>
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
     </div>
   </details>
 
@@ -262,13 +277,18 @@ Markup:
 </form>
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility notes</summary>
+  <summary>Accessibility & browser testing</summary>
   <div class="accordion-panel">
-
-    <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
-    **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
-    **Untested** WCAG:AA manual compliance<br/>
-    **Untested** Supported browsers tested</p>
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
   </div>
 </details>
 
