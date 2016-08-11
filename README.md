@@ -16,7 +16,7 @@ We intend to support Internet Explorer 8+.
 UI Kit (`gov-au-ui-kit`) is 3 things:
 
 1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
-2. common-use templates (to come)
+2. common-use [HTML templates](/examples)
 3. a lean and frugal CSS & JS framework (found in `assets/`) that you can
 include in your project:
 
