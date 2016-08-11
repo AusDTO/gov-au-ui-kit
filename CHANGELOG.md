@@ -11,6 +11,7 @@
 
 #### Styleguide
 
+- Updated accessibility and browser support information in the README (homepage).
 - Updated markup documentation for skip links to use `nav` instead of `div` (does not break; targeted by the `.skip-to` class).
 - Updated example pages `/examples` to better reflect GOV.AU layouts and highlight missing components.
 - Updated documentation for `.local-nav` for `.is-active` and `.is-current` usage.
