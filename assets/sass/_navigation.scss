@@ -20,7 +20,7 @@ Older browsers (IE8 and lower) and those without JavaScript will get an expanded
 Markup: templates/global-navigation.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -54,7 +54,7 @@ Use active state to show where the user is. Use `class="is-active"` for each cli
 Markup: templates/local-navigation.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -82,7 +82,7 @@ They appear directly under a page header or hero, from `$tablet` breakpoint upwa
 Markup: templates/breadcrumbs.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -112,7 +112,7 @@ Users with modern browsers will see a smooth scroll down the page.
 Markup: templates/index-links.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -138,7 +138,7 @@ You can present a list of links as a horizontal block using an unsorted list wit
 Markup: templates/inline-links.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -170,7 +170,7 @@ This framework uses CSS Flexboxes to manage columns. It provides:
 Markup: templates/footer-navigation.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -553,7 +553,7 @@ Include skip links between the opening of the `<body>` and the page `<header>`.
 Markup: templates/skip-link.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -668,7 +668,7 @@ You can use groups of links:
 Markup: templates/groups-links.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>

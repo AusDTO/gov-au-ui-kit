@@ -20,7 +20,7 @@ Link to external sites using `rel="external"`.
 Markup: templates/basic-links.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -97,7 +97,7 @@ Style guide: Link styles.1 Hover links
     Markup: <a class="see-more" href="#">See more</a>
 
     <details data-label="accordion-accessibility" aria-expanded="false">
-      <summary>Accessibility & browser testing</summary>
+      <summary>Accessibility &amp; browser testing</summary>
       <div class="accordion-panel">
       <strong>Passed</strong>:
         <ul>

@@ -18,7 +18,7 @@ Horizontal style provides a single column of list items.
 Markup: templates/lists-horizontal.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -51,7 +51,7 @@ For <a href="http://caniuse.com/#feat=flexbox" rel="external">browsers that don'
 Markup: templates/lists-vertical.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
@@ -77,7 +77,7 @@ Use small list style for large groups of list items.
 Markup: templates/lists-small.hbs
 
 <details data-label="accordion-accessibility" aria-expanded="false">
-  <summary>Accessibility & browser testing</summary>
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
     <ul>
