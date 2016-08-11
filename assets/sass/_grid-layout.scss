@@ -226,13 +226,16 @@ Long lines reduce legibility. Lines of text should be no longer than 75 characte
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 
-<div class="guide-micro-callout">
-  <h3> Accessibility notes:​</h3>
-  **Pass** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
-  **Pass** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
-  **Untested** WCAG:AA manual compliance<br/>
-  **Untested** Supported browsers tested
-</div>
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility notes</summary>
+  <div class="accordion-panel">
+
+    <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+    **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+    **Untested** WCAG:AA manual compliance<br/>
+    **Untested** Supported browsers tested</p>
+  </div>
+</details>
 
 Style guide: Grid.8 Accessibility
 */
