@@ -7,12 +7,15 @@
 #### Ui-kit changes
 
 - Improved visibility of disabled text field inputs via greying-out.
+- Refactored `_block-elements` partial, now named `_grid-layout` with `wrapper-padding` mixin.
 
 #### Styleguide
 
 - Updated markup documentation for skip links to use `nav` instead of `div` (does not break; targeted by the `.skip-to` class).
+- Updated example pages `/examples` to better reflect GOV.AU layouts and highlight missing components.
 - Updated documentation for `.local-nav` for `.is-active` and `.is-current` usage.
 - Improvements to *§ Tables*.
+- Code snippets displayed in `<pre>` elements now full-width.
 
 #### Bugfixes
 

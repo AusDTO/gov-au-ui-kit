@@ -1,10 +1,7 @@
 @mixin wrapper-padding {
   @include pad(0 $base-spacing);
-  box-sizing: content-box;
-
-  * {
-    box-sizing: border-box;
-  }
+  width: 100%;
+  box-sizing: border-box;
 
   @include media($desktop) {
     width: 100%;
@@ -80,7 +77,7 @@ body {
 }
 
 main {
-  @extend %wrapper-padding;
+  @include wrapper-padding;
   @include outer-container;
 
   // makes flex work in IE10/11 https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
