@@ -1,29 +1,7 @@
 @import './../../assets/sass/ui-kit';
 
 %scrolling-example {
-  width: 17em;
-
-  @include media($mobile) {
-    width: 25em;
-  }
-
-  @include media($tablet) {
-    width: 35em;
-  }
-
-  @include media($desktop) {
-    width: 45em;
-  }
-
-  /*
-    NOTE
-    Width issues with <PRE> are caused by lack of width set on <main> & .wrapper
-    Test with:
-        main, .wrapper { width: 90%; }
-        pre { width: 100% }
-    This is probably worth correcting as it may be causing other unforeseen consciences.
-    ~Tb
-  */
+  width: 100%;
 }
 
 .guide-section {
