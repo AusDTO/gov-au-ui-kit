@@ -2,15 +2,6 @@
 
 ![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
-## Disclaimer
-GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
-
-We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a>.
-
-We will start structured and more thorough accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
-
-We intend to support Internet Explorer 8+.
-
 ## What is this?
 
 UI Kit (`gov-au-ui-kit`) is 3 things:
@@ -27,6 +18,8 @@ include in your project:
 <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
 ```
 
+GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
+
 ### Features
 
 - <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize</a>.
@@ -36,6 +29,27 @@ include in your project:
 - Basic styling for UI elements (eg `input`, `label`, etc).
 
 For a full list of features please see the [CHANGELOG](CHANGELOG.md).
+
+### Accessibility
+
+We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) over [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance).
+
+- we intend to be WCAG2 AA compliant, striving for AAA where viable
+- we strive to make accessible features from the get-go
+- we have some automated build tools that aid in writing standards-compliant code (linting and html5 validation)
+- we are currently (give date) working on adding automated accessibility testing of our example templates
+- we will provide detailed information on accessibility compliance (eg AA or AAA) and specific guidance per framework feature
+- we intend to test the framework with a range of users directly
+- we intend to be audited for accessibility compliance
+
+We will then document the level of accessibility and browser compatibility.
+
+### Browser support
+
+- similarly, we will soon (give ~date) begin automated testing across browsers as part of our build process
+- in terms of scope we will test all components (CSS, JS and markup)
+- we intend to provide detailed information on browser support per component in the framework
+- we may add a top-level view browser support matrix/table here in the future
 
 ## What this isn't
 
