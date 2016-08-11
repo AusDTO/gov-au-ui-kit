@@ -1,10 +1,7 @@
 @mixin wrapper-padding {
   @include pad(0 $base-spacing);
-  box-sizing: content-box;
-
-  * {
-    box-sizing: border-box;
-  }
+  width: 100%;
+  box-sizing: border-box;
 
   @include media($desktop) {
     width: 100%;
@@ -80,7 +77,7 @@ body {
 }
 
 main {
-  @extend %wrapper-padding;
+  @include wrapper-padding;
   @include outer-container;
 
   // makes flex work in IE10/11 https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
@@ -228,6 +225,22 @@ Accessibility
 Long lines reduce legibility. Lines of text should be no longer than 75 characters including spaces. Place text in narrower grid boxes to stop text lines from becoming too wide.
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: Grid.8 Accessibility
 */
