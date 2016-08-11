@@ -8,7 +8,8 @@ const glob = require('glob'),
   assert = require('assert');
 
 const paths = {
-  output: './build/'
+  output: './build/',
+  pa11yConfig: path.join(process.cwd(), 'pa11y.js')
 };
 
 const msg = {
@@ -22,12 +23,12 @@ describe('Accessibility tests', function() {
 
     function runTests() {
       let pages = htmlFiles(),
-        totalPages = pages.length,
-        test = pally(),
+        pagesCount = pages.length,
+        options = require(paths.pa11yConfig),
+        test = pa11y(options),
         runTest = function() {
           let url = 'http://localhost:3000/' + pages.shift();
-          console.log(msg.info('Testing page', totalPages - pages.length, 'of', totalPages, url, '...'));
-
+          console.log(msg.info('Testing page', pagesCount - pages.length, 'of', pagesCount, url, '...'));
 
           test.run(url, function(error, results) {
             if (error) {
@@ -40,11 +41,11 @@ describe('Accessibility tests', function() {
               runTest();
             } else {
               server.close();
+              done();
             }
           });
-
-
         };
+
       runTest();
     }
 
@@ -56,7 +57,6 @@ describe('Accessibility tests', function() {
         console.log('\n' + msg.error('Error found at ' + error.selector), '\n' + error.context + '\n' + error.message);
       }
       assert.equal(errorCount, 0);
-      done();
     }
 
     function htmlFiles() {
