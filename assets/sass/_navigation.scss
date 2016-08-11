@@ -67,13 +67,13 @@ Style guide: Navigation.04 Contents links
 */
 
 /*
-Inline links
+Inline links block
 
 You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.
 
 Markup: templates/inline-links.hbs
 
-Style guide: Navigation.05 Inline links
+Style guide: Navigation.05 Inline links block
 */
 
 /*
@@ -589,19 +589,19 @@ Style guide: Navigation.08 Group of links
 }
 
 /*
-Tab-style navigation
+Tab navigation (experimental)
 
-The tab-style navigation is intended to be used in the main content area for indicating links which are directly related to the current page.
+Use tab navigation to style a links list as horizontal tabs. Tabs wrap on top of each other for smaller breakpoints.
 
-At this stage in development this feature does not support traditional tabbed content (client-side context switch) but is purely a list of links styled in a horizontal list.
+Use tab navigation in the main content area only.
 
-Overflowing links wrap down to the next line on smaller devices.
+Client-side context is not affected by the tabs.
 
-Use `class="is-current"` for the current location.
+Set current location using `class="is-current"`.
 
 Markup: templates/tab-style-nav.hbs
 
-Style guide: Navigation.07 Tab-style navigation
+Style guide: Navigation.07 Tab navigation
 */
 
 .inline-tab-nav {
