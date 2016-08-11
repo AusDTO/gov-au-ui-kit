@@ -21,6 +21,7 @@
 
 - Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues
 - Fixed [#255](https://github.com/AusDTO/gov-au-ui-kit/issues/255): SVG's don't have `xml` tag
+- Fixed [#274](https://github.com/AusDTO/gov-au-ui-kit/issues/274): Typo in Examples landing page
 
 ### 1.7.2 - 2016-08-02
 
