@@ -199,11 +199,46 @@ Style guide: List styles.4 Highlighted word style
       display: flex;
     }
 
-    figure {
+    figure,
+    .item-title {
 
       @include media($tablet) {
         flex: 0 0 35%;
         margin-right: $base-spacing;
+      }
+    }
+
+    .item-title {
+      font-size: rem(32);
+      margin-right: 1.5 * $tiny-spacing;
+
+      @include media($tablet) {
+        font-size: rem(44);
+      }
+
+      span {
+        display: block;
+        font-size: rem(17);
+      }
+    }
+
+    .item-body {
+      list-style: none;
+      margin-top: 0;
+      padding-left: 0;
+
+      ul {
+        list-style: none;
+        margin-bottom: $small-spacing;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 0;
+      }
+
+      .note {
+        margin-top: $small-spacing;
       }
     }
 
