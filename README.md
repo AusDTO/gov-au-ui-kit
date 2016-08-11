@@ -31,15 +31,16 @@ GOV-AU UI-Kit is currently in early draft release. You can help us build it by [
 For a full list of features see the [CHANGELOG](CHANGELOG.md).
 
 ### Accessibility
+
 UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
 
 The framework is built on a solid accessible HTML foundation. We follow a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> to produce accessible components by default.
 
-Currently (August 2016) we are using automated build tools to write accessible code: linting and HTML5 validation.
+Currently (August 2016) we are using automated build tools to write accessible code (linting and HTML5 validation).
 
 We are working on:
 
-- automated accessibility testing of our examples templates
+- automated accessibility testing of our examples templates (`examples/`)
 - documenting accessibility compliance and guidance for each component
 - testing the framework with users to find barriers
 - preparing for an audit of the framework.
@@ -51,7 +52,7 @@ We are working on:
 - automated browser testing as part of our build process
 - manual testing of all CSS, JS and markup
 - documenting browser support for each component
-- agreeing a browser support matrix (likely).
+- composing a browser support matrix.
 
 ## What this isn't
 
