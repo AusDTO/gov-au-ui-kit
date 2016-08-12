@@ -26,6 +26,6 @@ Include a high-level description for what the pull request fixes and links to Gi
   - [ ] Cross-browser tested against standard browser matrix (TBD)
   - [ ] Tested on multiple devices (TBD)
   - [ ] HTML5 validation (CircleCI)
-  - [ ] Accessibility testing & WCAG2 compliance (manual/auto TBD)
+  - [ ] Accessibility testing & WCAG2 compliance (`gulp test`)
 - [ ] Stakeholder/PO review
 - [ ] CHANGELOG updated
