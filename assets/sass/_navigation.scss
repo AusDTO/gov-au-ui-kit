@@ -5,7 +5,7 @@ Ensure users understand where they are in the service, where they have been and 
 
 ***
 
-This guidance is in part adapted from [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+This guidance is in part adapted from <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
 
 Style guide: Navigation
 */
@@ -19,6 +19,22 @@ Older browsers (IE8 and lower) and those without JavaScript will get an expanded
 
 Markup: templates/global-navigation.hbs
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: Navigation.1 Global navigation
 */
 
@@ -27,15 +43,31 @@ Local navigation
 
 Use local navigation to help the user go straight to the specific content that meets their needs.
 
-The framework provides a vertical navigation menu that shows 4 levels of items.
+The framework provides a vertical navigation menu. The home page title is always at top, followed by up to 3 levels of navigation.
 
-Small screens (up to `$tablet` breakpoint) will see a toggle to expand the navigation panel.
+Small screens (up to `$tablet` breakpoint) will see the menu closed (unexpanded) by default.
 
-Older browsers (IE8 and lower) and those without JavaScript will see the expanded menu without a toggle button.
+Older browsers (IE8 and lower) and those without JavaScript will see an expanded menu. It will not be able to be closed.
 
-Use active state (`class="is-active"`) to show which page the user is on.
+Use active state to show where the user is. Use `class="is-active"` for each clicked menu item. Use  `class="is-active is-current"` for the current location.
 
 Markup: templates/local-navigation.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: Navigation.2 Local navigation
 */
@@ -48,6 +80,22 @@ Breadcrumbs help the user understand where they are in the service and how they 
 They appear directly under a page header or hero, from `$tablet` breakpoint upwards.
 
 Markup: templates/breadcrumbs.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: Navigation.3 Breadcrumbs
 */
@@ -63,15 +111,47 @@ Users with modern browsers will see a smooth scroll down the page.
 
 Markup: templates/index-links.hbs
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: Navigation.4 Contents links
 */
 
 /*
-Inline links
+Inline links block
 
 You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.
 
 Markup: templates/inline-links.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: Navigation.5 Inline links
 */
@@ -88,6 +168,22 @@ This framework uses CSS Flexboxes to manage columns. It provides:
 - 4 columns for `$desktop` breakpoint.
 
 Markup: templates/footer-navigation.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: Navigation.6 Footer navigation
 */
@@ -456,6 +552,22 @@ Include skip links between the opening of the `<body>` and the page `<header>`.
 
 Markup: templates/skip-link.hbs
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: Navigation.7 Skip links
 */
 
@@ -555,6 +667,22 @@ You can use groups of links:
 
 Markup: templates/groups-links.hbs
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: Navigation.8 Group of links
 */
 
@@ -589,6 +717,90 @@ Style guide: Navigation.8 Group of links
 }
 
 /*
+Tab navigation (experimental)
+
+Use tab navigation to style a links list as horizontal tabs. Tabs wrap on top of each other for smaller breakpoints.
+
+Use tab navigation in the main content area only.
+
+Client-side context is not affected by the tabs.
+
+Set current location using `class="is-current"`.
+
+Markup: templates/tab-style-nav.hbs
+
+Style guide: Navigation.07 Tab navigation
+*/
+
+.inline-tab-nav {
+  border-bottom: solid 1px $grey;
+  margin: ($base-spacing * 2) 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include media($tablet) {
+      display: table-cell;
+    }
+
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding: $small-spacing 1.5em;
+    padding-left: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-bottom: solid 4px transparent;
+  }
+
+  ul {
+    @include clearfix;
+    @include media($tablet) {
+      display: table-cell;
+      border-top: none;
+    }
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    border-top: solid 1px $grey;
+  }
+
+  li {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    background: transparent;
+    display: block;
+    float: left;
+    vertical-align: bottom;
+    padding: $small-spacing 1.5em;
+    border-bottom: solid 4px transparent;
+
+    &:hover,
+    &:focus {
+      color: $non-black;
+      border-bottom-color: $aqua;
+    }
+
+    &.is-current,
+    &.is-active {
+      color: $dark-aqua; //Accessibility: can't be $aqua on $lighter-aqua
+      background-color: $lighter-aqua;
+      border-bottom-color: $aqua;
+    }
+  }
+
+}
+
+/*
 Accessibility
 
 - All navigation must be keyboard accessible and include ARIA tags.
@@ -597,5 +809,5 @@ Accessibility
 - Test with users to ensure the navigation hierarchy is not too long or too deep.
 - Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
 
-Style guide: Navigation.9 Accessibility
+Style guide: Navigation.10 Accessibility
 */

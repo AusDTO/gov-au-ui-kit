@@ -1,22 +1,13 @@
 # `gov-au-ui-kit`
 
-![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
-
-## Disclaimer
-GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
-
-We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) over [graceful degradation](https://en.wikipedia.org/wiki/Fault_tolerance).
-
-We will start structured and more thorough accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
-
-We intend to support Internet Explorer 8+.
+![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
 ## What is this?
 
 UI Kit (`gov-au-ui-kit`) is 3 things:
 
 1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
-2. common-use templates (to come)
+2. common-use [HTML templates](/examples)
 3. a lean and frugal CSS & JS framework (found in `assets/`) that you can
 include in your project:
 
@@ -27,15 +18,41 @@ include in your project:
 <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
 ```
 
+GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
+
 ### Features
 
-- [Normalize](https://necolas.github.io/normalize.css/).
-- [Bourbon](http://bourbon.io/), version 4.2.7.
-- [Neat](http://neat.bourbon.io/), and settings for a grid framework with some good defaults.
+- <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize</a>.
+- <a href="http://bourbon.io/" rel="external">Bourbon</a>, version 4.2.7.
+- <a href="http://neat.bourbon.io/" rel="external">Neat</a>, and settings for a grid framework with some good defaults.
 - Basic styling for content with some good typographic coverage.
 - Basic styling for UI elements (eg `input`, `label`, etc).
 
-For a full list of features please see the [CHANGELOG](CHANGELOG.md).
+For a full list of features see the [CHANGELOG](CHANGELOG.md).
+
+### Accessibility
+
+UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
+
+The framework is built on a solid accessible HTML foundation. We follow a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> to produce accessible components by default.
+
+Currently (August 2016) we are using automated build tools to write accessible code (linting and HTML5 validation).
+
+We are working on:
+
+- automated accessibility testing of our examples templates (`examples/`)
+- documenting accessibility compliance and guidance for each component
+- testing the framework with users to find barriers
+- preparing for an audit of the framework.
+
+### Browser support
+
+We are working on:
+
+- automated browser testing as part of our build process
+- manual testing of all CSS, JS and markup
+- documenting browser support for each component
+- composing a browser support matrix.
 
 ## What this isn't
 
@@ -47,9 +64,9 @@ Teams building Australian Government sites. This was designed for GOV.AU teams, 
 
 ## How is this related to the Digital Service Standard?
 
-The [Digital Service Standard](https://www.dto.gov.au/standard/) requires teams to [build services using common design patterns](https://www.dto.gov.au/standard/6-consistent-and-responsive/). This is draft work on the framework and guidance that will eventually become the design patterns for digital content.
+The <a href="https://www.dto.gov.au/standard/" rel="external">Digital Service Standard</a> requires teams to <a href="https://www.dto.gov.au/standard/6-consistent-and-responsive/" rel="external">build services using common design patterns</a>. This is draft work on the framework and guidance that will eventually become the design patterns for digital content.
 
-You should use this with the [draft **Content Style Guide**](http://content-style-guide.apps.staging.digital.gov.au/) for Digital Transformation Office projects.
+You should use this with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">draft <strong>Content Style Guide</strong></a> for Digital Transformation Office projects.
 
 ## Build the Guide yourself
 
@@ -76,11 +93,11 @@ at `./build/latest/ui-kit.css`.
 
 We have automated the build, with a few additions:
 
-- `sass-lint` for [linting](https://en.wikipedia.org/wiki/Lint_(software)
-- `cssnano` for [CSS compression](http://cssnano.co/)
-- `autoprefixer` for adding [CSS vendor prefixes](https://autoprefixer.github.io/)
-- `AusDTO/gulp-html` for [HTML validation](https://github.com/AusDTO/gulp-html)
-- `kss` for auto-building a [living style guide](http://warpspire.com/kss/)
+- `sass-lint` for <a href="https://en.wikipedia.org/wiki/Lint_(software)" rel="external">linting</a>
+- `cssnano` for <a href="http://cssnano.co/" rel="external">CSS compression</a>
+- `autoprefixer` for adding <a href="https://autoprefixer.github.io/" rel="external">CSS vendor prefixes</a>
+- `AusDTO/gulp-html` for <a href="https://github.com/AusDTO/gulp-html" rel="external">HTML validation</a>
+- `kss` for auto-building a <a href="http://warpspire.com/kss/" rel="external">living style guide</a>
 
 Our CI build is available as a shell script at `bin/cibuild.sh`.
 
@@ -94,13 +111,13 @@ Some of the key libraries we use are:
 - `kss ^3.0.0-beta.14`
 - `sass-lint ^1.7.0`
 
-`^` = compatible with version (see [semver](https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004)).
+`^` = compatible with version (see <a href="https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004" rel="external">semver</a>).
 
 ## Make gov-au-ui-kit better
 
-- Create a new [GitHub issue](https://github.com/AusDTO/gov-au-ui-kit/issues/new), or comment on [existing issues](https://github.com/AusDTO/gov-au-ui-kit/issues).
-- Contribute to this repository. Please see [CONTRIBUTING.md](CONTRIBUTING.md), [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see [Block Element Modifier](http://getbem.com/)), first.
-- Contact us on slack in `#govau-guide`.
+- Contribute to our <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">GitHub issue register</a> by logging new issues and joining the discussion.
+- Contribute to this repository. Please see [CONTRIBUTING.md](CONTRIBUTING.md), [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see <a href="http://getbem.com/" rel="external">Block Element Modifier</a>), first.
+- Contact us via the DTO slack in `#govau-guide`.
 
 ## Project goal
 
@@ -126,39 +143,12 @@ We are wary about breaking changes. We will work to ensure we will gracefully de
 
 We may create an installer wrapper (likely node-based), or release via git submodules.
 
-## Milestones
-
-### 1st general goal
-
-Meet the general look and feel of the [gov.au alpha](http://gov.au/alpha), with room for some improvements.
-
-This will allow us to establish the basics of the framework while meeting a relatively easily met static target.
-
-We are focused on:
-
-- establishing the basic framework
-- provide UI styling for `input`, `label`, etc
-- styling for other buttons, next/previous, etc
-- some sane basics for high level block elements inc. `main`, `article`, `header`, and `footer`
-- styling for primary and secondary `nav`.
-
-### Future… (coming roadmap)
-
-Iterate in 2 ways:
-
-- look and feel under the direction of the designers from the GOV.AU Guides team
-- styling for commonly used and requested things that builders from other Digital Transformation Office teams need, including:
-  - styling for calendars
-  - styling for common web application elements
-  - extensive testing
-  - templates.
-
 ## Copyright & license
 
-Copyright Digital Transformation Office. [Licensed under the MIT license](https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE).
+Copyright Digital Transformation Office. <a href="(https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE" rel="external license">Licensed under the MIT license</a>.
 
-This repository includes [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/) and [Normalize.css](https://necolas.github.io/normalize.css/). All also use the MIT license.
+This repository includes <a href="http://bourbon.io/" rel="external">Bourbon</a>, <a href="http://neat.bourbon.io/" rel="external">Neat</a> and <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize.css</a>. All also use the MIT license.
 
 ![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
 
-gov-au-ui-kit is maintained and funded by the [Digital Transformation Office](https://www.dto.gov.au/).
+gov-au-ui-kit is maintained and funded by the <a href="https://www.dto.gov.au/" rel="external">Digital Transformation Office</a>.

@@ -2,9 +2,32 @@
 
 ## UI Kit "Kraken"
 
+### 1.7.3 2016-08-08
+
+#### UI-kit changes
+
+- Improved visibility of disabled text field inputs via greying-out.
+- Refactored `_block-elements` partial, now named `_grid-layout` with `wrapper-padding` mixin.
+- Added an experimental inline tab element (documented under *§ Tab navigation (experimental)*).
+
+#### Styleguide
+
+- Updated accessibility and browser support information in the README (homepage).
+- Updated markup documentation for skip links to use `nav` instead of `div` (does not break; targeted by the `.skip-to` class).
+- Updated example pages `/examples` to better reflect GOV.AU layouts and highlight missing components.
+- Updated documentation for `.local-nav` for `.is-active` and `.is-current` usage.
+- Improvements to *§ Tables*.
+- Code snippets displayed in `<pre>` elements now full-width.
+
+#### Bugfixes
+
+- Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues
+- Fixed [#255](https://github.com/AusDTO/gov-au-ui-kit/issues/255): SVG's don't have `xml` tag
+- Fixed [#274](https://github.com/AusDTO/gov-au-ui-kit/issues/274): Typo in Examples landing page
+
 ### 1.7.2 - 2016-08-02
 
-UI-Kit changes
+UI-Kit changes:
 
 - Style changes to Calendar Event Callout class `.callout--calendar-event` (documented under *§ Typography*).
 - Hero content styles updated to reduce top and bottom padding.
@@ -43,7 +66,12 @@ UI-Kit changes
   - Now includes a semantically correct menu heading
   - Top level of navigation has new styles
 
-Bugfixes:
+#### UI-Kit changes/additions:
+
+- `.is-visuallyhidden` class for visually hiding an element but having it available for screen readers (we will deprecate `.visuallyhidden` in the future).
+- Inline tab-style navigation (documented under *§ Navigation*) [experimental].
+
+#### Bugfixes:
 
 - Fixed flexbox alignment on vertical list style final row.
 - Fixed missing button styling for `input` of the types `submit` and `reset`.
@@ -54,7 +82,7 @@ Bugfixes:
 - Index links (`.index-links`) now support `ol`s.
 - Removes further poor uses of `@extend` to clean up output CSS.
 
-Styleguide:
+#### Styleguide:
 
 - Typography section revised.
 
@@ -108,10 +136,14 @@ Build environment:
 
 Adds or modifies:
 
+
 - Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
 - “See more” link styling (currently documented under *§ List views*).
 - JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
 - Vertical Lists now have an option to remove the top border (documented *§ List views*)
+- `.reader` class for visually hiding an element but having it available for screen readers
+- `.visuallyhidden` class for visually hiding an element but having it available for screen readers
+- Inline navigation - Alpha release
 - Number support for `input`; make sure you use also use `type="number"`.
 - Style changes to Local (primary) navigation.
 - Style changes to the page footer.

@@ -17,6 +17,22 @@ Horizontal style provides a single column of list items.
 
 Markup: templates/lists-horizontal.hbs
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: List styles.1 Horizontal style
 */
 
@@ -30,9 +46,25 @@ You can change the number of columns used:
 - `.vertical-list--thirds` give 3 columns of list items
 - `.vertical-list--fourths` give 4 columns of list items.
 
-For [browsers that don't support Flexbox layout](http://caniuse.com/#feat=flexbox) lists will appear as in horizontal style with images (if used) below each list item.
+For <a href="http://caniuse.com/#feat=flexbox" rel="external">browsers that don't support Flexbox layout</a> lists will appear as in horizontal style with images (if used) below each list item.
 
 Markup: templates/lists-vertical.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: List styles.2 Vertical style
 */
@@ -44,6 +76,22 @@ Use small list style for large groups of list items.
 
 Markup: templates/lists-small.hbs
 
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
 Style guide: List styles.3 Small list style
 */
 
@@ -53,6 +101,17 @@ Highlighted words style
 Use highlighted words style for a list with repeating phrases.
 
 Markup: templates/lists-highlighted.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility notes</summary>
+  <div class="accordion-panel">
+
+    <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+    **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+    **Untested** WCAG:AA manual compliance<br/>
+    **Untested** Supported browsers tested</p>
+  </div>
+</details>
 
 Style guide: List styles.4 Highlighted word style
 */

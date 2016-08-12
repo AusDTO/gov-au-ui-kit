@@ -5,17 +5,38 @@ Tables make data content easier to scan.
 
 This framework uses striped/zebra tables (alternating row colours).
 
+Use `<thead>`, `<tbody>` and `<tfoot>` to improve how browsers display tables. They don't make tables more accessible.
+
+There is
+<a href="https://www.w3.org/WAI/tutorials/tables/" rel="external">guidance on making tables</a> provided by the W3C.
+
 ***
 
-This guidance is in part adapted from [GOV.UK elements](http://govuk-elements.herokuapp.com/) under [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), and [18F Draft US Web Design Standards](https://standards.usa.gov/getting-started/) under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+This guidance is in part adapted from <a href="http://govuk-elements.herokuapp.com/" rel="external">GOV.UK elements</a> under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external">Open Government Licence v3.0</a>, and <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
 
 Style guide: Tables
 */
 
 /*
-Basic content tables
+Basic table
 
 Markup: templates/table-examples.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: Tables.1 Basic tables
 */
@@ -51,9 +72,25 @@ table {
 }
 
 /*
-Calendar table variant
+Calendar table
 
 Markup: templates/table-calendar.hbs
+
+<details data-label="accordion-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
 Style guide: Tables.2 Calendar table variant
 */
@@ -137,15 +174,9 @@ Avoid tables with multiple header levels and spanned cells.
 
 ### Headers & captions
 
-Title tables using the [`<caption>` element](https://www.w3.org/wiki/HTML/Elements/caption) inside the `<table>` element.
+Title tables using the <a href="https://www.w3.org/wiki/HTML/Elements/caption" rel="external">`<caption>` element</a> inside the `<table>` element.
 
-Row and column headers should be set with the [`scope` attribute](https://www.w3.org/TR/html401/struct/tables.html#adef-scope).
-
-Don't use `<thead>`, `<tbody>` and `<tfoot>`.
-
-***
-
-More [guidance on making accessible tables](https://www.w3.org/WAI/tutorials/tables/) is provided by the W3C.
+Row and column headers should be set with the <a href="https://www.w3.org/TR/html401/struct/tables.html#adef-scope" rel="external">`scope` attribute</a>.
 
 Style guide: Tables.3 Accessibility
 */
