@@ -135,28 +135,14 @@ Build environment:
 
 Adds or modifies:
 
-<<<<<<< HEAD
-<<<<<<< e0da93c6e08e5ffa6c1351f1ab5d97ee2d47b40d
-<<<<<<< 597d8d58d1ed8885d2aba8773ac71c1c4c293982
-<<<<<<< 1d19be48a9c217b250c68ef00c6333b25cdfd2f6
+
 - Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
 - “See more” link styling (currently documented under *§ List views*).
 - JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
 - Vertical Lists now have an option to remove the top border (documented *§ List views*)
-=======
 - `.reader` class for visually hiding an element but having it available for screen readers
-=======
 - `.visuallyhidden` class for visually hiding an element but having it available for screen readers
->>>>>>> Mobile styles and change to reader class name
-=======
-- `.is-visuallyhidden` class for visually hiding an element but having it available for screen readers
->>>>>>> Classes match to branch #205
 - Inline navigation - Alpha release
->>>>>>> Start of inline nav feature
-=======
-- `.is-visuallyhidden` class for visually hiding an element but having it available for screen readers
-- Inline navigation - Alpha release
->>>>>>> 8506a1ba7a6d51f46a38e715d89ac19539216468
 - Number support for `input`; make sure you use also use `type="number"`.
 - Style changes to Local (primary) navigation.
 - Style changes to the page footer.
