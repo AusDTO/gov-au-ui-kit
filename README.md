@@ -2,15 +2,6 @@
 
 ![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
-## Disclaimer
-GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
-
-We are being guided by accessibility and browser support best practices. We are building on a solid HTML foundation and following a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a>.
-
-We will start structured and more thorough accessibility and cross browser testing of the framework soon. We will then document the level of accessibility and browser compatibility.
-
-We intend to support Internet Explorer 8+.
-
 ## What is this?
 
 UI Kit (`gov-au-ui-kit`) is 3 things:
@@ -27,6 +18,8 @@ include in your project:
 <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
 ```
 
+GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
+
 ### Features
 
 - <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize</a>.
@@ -35,7 +28,31 @@ include in your project:
 - Basic styling for content with some good typographic coverage.
 - Basic styling for UI elements (eg `input`, `label`, etc).
 
-For a full list of features please see the [CHANGELOG](CHANGELOG.md).
+For a full list of features see the [CHANGELOG](CHANGELOG.md).
+
+### Accessibility
+
+UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
+
+The framework is built on a solid accessible HTML foundation. We follow a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> to produce accessible components by default.
+
+Currently (August 2016) we are using automated build tools to write accessible code (linting and HTML5 validation).
+
+We are working on:
+
+- automated accessibility testing of our examples templates (`examples/`)
+- documenting accessibility compliance and guidance for each component
+- testing the framework with users to find barriers
+- preparing for an audit of the framework.
+
+### Browser support
+
+We are working on:
+
+- automated browser testing as part of our build process
+- manual testing of all CSS, JS and markup
+- documenting browser support for each component
+- composing a browser support matrix.
 
 ## What this isn't
 
@@ -125,33 +142,6 @@ We are wary about breaking changes. We will work to ensure we will gracefully de
 ### Installer/wrapper
 
 We may create an installer wrapper (likely node-based), or release via git submodules.
-
-## Milestones
-
-### 1st general goal
-
-Meet the general look and feel of the <a href="http://gov.au/alpha" rel="external">gov.au alpha</a> with room for some improvements.
-
-This will allow us to establish the basics of the framework while meeting a relatively easily met static target.
-
-We are focused on:
-
-- establishing the basic framework
-- provide UI styling for `input`, `label`, etc
-- styling for other buttons, next/previous, etc
-- some sane basics for high level block elements inc. `main`, `article`, `header`, and `footer`
-- styling for primary and secondary `nav`.
-
-### Future… (coming roadmap)
-
-Iterate in 2 ways:
-
-- look and feel under the direction of the designers from the GOV.AU Guides team
-- styling for commonly used and requested things that builders from other Digital Transformation Office teams need, including:
-  - styling for calendars
-  - styling for common web application elements
-  - extensive testing
-  - templates.
 
 ## Copyright & license
 
