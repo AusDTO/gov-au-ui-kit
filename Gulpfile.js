@@ -17,7 +17,7 @@ var gulp = require('gulp'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
     zip = require('gulp-zip'),
-    mocha = require('gulp-mocha')
+    exec = require('child_process').exec
     ;
 
 var paths = {
@@ -165,16 +165,10 @@ gulp.task('htmlvalidate', ['examples', 'styleguide'], function (cb) {
 });
 
 gulp.task('test', function() {
-    return gulp.src(['test/pa11y.js'], { read: false })
-        .pipe(mocha({
-          timeout: 60000
-        }))
-        .once('error', () => {
-            process.exit(1);
-        })
-        .once('end', () => {
-            process.exit();
-        });
+    return exec('node test/pa11y.js', function(err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+    });
 });
 
 gulp.task('styleguide', ['styleguide.scss'], function () {
