@@ -200,7 +200,7 @@ Style guide: List styles.4 Highlighted word style
     }
 
     figure,
-    .item-title {
+    .offset-title {
 
       @include media($tablet) {
         flex: 0 0 35%;
@@ -208,37 +208,26 @@ Style guide: List styles.4 Highlighted word style
       }
     }
 
-    .item-title {
-      font-size: rem(32);
-      margin-right: 1.5 * $tiny-spacing;
+    .offset-title {
+      h2,
+      h3,
+      h4 {
+        font-size: rem(24);
 
-      @include media($tablet) {
-        font-size: rem(44);
+        @include media($tablet) {
+          font-size: rem(36);
+        }
+
+        span {
+          display: block;
+          font-size: rem(17);
+        }
       }
 
-      span {
-        display: block;
-        font-size: rem(17);
-      }
-    }
-
-    .item-body {
-      list-style: none;
-      margin-top: 0;
-      padding-left: 0;
-
-      ul {
+      + article ul {
         list-style: none;
-        margin-bottom: $small-spacing;
+        margin-top: 0;
         padding-left: 0;
-      }
-
-      li {
-        margin-bottom: 0;
-      }
-
-      .note {
-        margin-top: $small-spacing;
       }
     }
 
@@ -251,6 +240,27 @@ Style guide: List styles.4 Highlighted word style
 
     &:last-child {
       border-bottom: none;
+    }
+
+    &.offset-item {
+      border-bottom: 0;
+      border-top: solid 1px $border-colour;
+      padding-left: $base-spacing;
+      padding-right: $base-spacing;
+
+      &:last-child {
+        border-bottom: solid 1px $border-colour;
+      }
+    }
+
+    &.highlighted-item {
+      background-color: $callout-bg-light-colour;
+
+      .offset-title h2,
+      .offset-title h3,
+      .offset-title h4 {
+        font-size: rem(70);
+      }
     }
 
     &.hero-item {
