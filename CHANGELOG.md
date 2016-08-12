@@ -8,7 +8,7 @@
 
 - Improved visibility of disabled text field inputs via greying-out.
 - Refactored `_block-elements` partial, now named `_grid-layout` with `wrapper-padding` mixin.
-- Added an experimental inline tab element (documented under *§ Tab navigation (experimental))
+- Added an experimental inline tab element (documented under *§ Tab navigation (experimental)*).
 
 #### Styleguide
 
