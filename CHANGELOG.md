@@ -2,12 +2,13 @@
 
 ## UI Kit "Kraken"
 
-### `develop` as of 2016-08-08
+### 1.7.3 2016-08-08
 
-#### Ui-kit changes
+#### UI-kit changes
 
 - Improved visibility of disabled text field inputs via greying-out.
 - Refactored `_block-elements` partial, now named `_grid-layout` with `wrapper-padding` mixin.
+- Added an experimental inline tab element (documented under *§ Tab navigation (experimental))
 
 #### Styleguide
 
