@@ -46,6 +46,7 @@
     "kss": "^3.0.0-beta.14",
     "node-sass": "^3.8.0",
     "object-assign": "^4.1.0",
+    "pa11y": "^4.0.0",
     "path": "^0.12.7",
     "run-sequence": "^1.2.1",
     "sass-inline-svg": "^0.0.3",
