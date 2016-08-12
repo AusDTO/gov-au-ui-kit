@@ -90,6 +90,12 @@ Run a build:
 gulp build
 ```
 
+Run accessibility tests:
+
+```
+node test/pa11y.js
+```
+
 The compiled style guide can be found at `./build/index.html` and the UI Kit CSS
 at `./build/latest/ui-kit.css`.
 

@@ -164,13 +164,6 @@ gulp.task('htmlvalidate', ['examples', 'styleguide'], function (cb) {
     }
 });
 
-gulp.task('test', function() {
-    return exec('node test/pa11y.js', function(err, stdout, stderr) {
-      console.log(stdout);
-      console.log(stderr);
-    });
-});
-
 gulp.task('styleguide', ['styleguide.scss'], function () {
     var kssresult = kss({
         source: 'assets/sass',
