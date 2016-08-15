@@ -53,7 +53,7 @@ Style guide: Link styles.1 Hover links
 }
 
 @mixin link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
-  $link-disabled-color: rgba($text-colour, 0.5);
+  $link-disabled-colour: transparentize($text-colour, 0.4);
   color: $text-colour;
 
   a {
@@ -142,14 +142,48 @@ Style guide: Link styles.1 Hover links
         color: $hover-text-colour;
       }
     }
-  }
 
-  &.disabled {
-    outline: none;
-    color: $link-disabled-color;
-    text-decoration: none;
-    border-bottom: solid 1px;
-    outline-color: transparent;
+    /*
+    Disabled link (prototyping)
+
+    Apply the `.disabled` class to 'grey-out' a link as not functional.
+
+    Because the link is still technically functional it's advised this class is only used during prototyping and testing; do not use this for production.
+
+    Markup: <a class="disabled" href="#">Non-existent functionality</a>
+
+    <details data-label="accordion-accessibility" aria-expanded="false">
+      <summary>Accessibility &amp; browser testing</summary>
+      <div class="accordion-panel">
+      <strong>Passed</strong>:
+        <ul>
+          <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+          <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+        </ul>
+      <strong>Untested</strong>:
+        <ul>
+          <li>WCAG:AA manual</li>
+          <li>Browser support &mdash; automated and manual</li>
+        </ul>
+      </div>
+    </details>
+
+    Style guide: Link styles.3 Disabled link
+    */
+
+    &.disabled {
+      outline: none;
+      color: $link-disabled-colour;
+      text-decoration: none;
+      border-bottom: solid 1px;
+      outline-color: transparent;
+      cursor: not-allowed;;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
   }
 }
 
