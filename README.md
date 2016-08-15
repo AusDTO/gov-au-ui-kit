@@ -46,6 +46,7 @@ We are working on:
 - preparing for an audit of the framework.
 
 ### Browser support
+See [BROWSER-SUPPORT.md](BROWSER-SUPPORT.md) for more details on levels of support and testing.
 
 We are working on:
 
