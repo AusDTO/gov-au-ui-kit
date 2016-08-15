@@ -253,13 +253,9 @@
   }
 
   p {
-    font-size: rem(18);
+    font-size: rem(24);
     max-width: 30em;
     margin-bottom: $small-spacing;
-
-    @include media($tablet) {
-      font-size: rem(20);
-    }
   }
 
   .site-title {
@@ -290,7 +286,8 @@
   padding: $medium-spacing 0;
 
   p {
-    font-size: rem(17);
+    font-size: rem(19);
+    font-weight: $bold-font-weight;
   }
 }
 

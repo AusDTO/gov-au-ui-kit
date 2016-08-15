@@ -82,6 +82,9 @@
     "wsh"           : false,    // Windows Scripting Host
     "yui"           : false,    // Yahoo User Interface
 
+    // ES Version
+    "esversion"     : 6,        // ECMAScript 6
+
     // Custom Globals
     "globals"       : {}        // additional predefined global variables
 }

@@ -8,7 +8,9 @@
 
 - Improved visibility of disabled text field inputs via greying-out.
 - Refactored `_block-elements` partial, now named `_grid-layout` with `wrapper-padding` mixin.
+- Replaced `.visuallyhidden` helper class to `_accessibility.scss` (undocumented, added as a convenience)
 - Added an experimental inline tab element (documented under *§ Tab navigation (experimental)*).
+- Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `node test/pa11y.js`).
 
 #### Styleguide
 
@@ -23,6 +25,7 @@
 
 - Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues
 - Fixed [#255](https://github.com/AusDTO/gov-au-ui-kit/issues/255): SVG's don't have `xml` tag
+- Fixed [#271](https://github.com/AusDTO/gov-au-ui-kit/issues/271): Insufficient colour contrast in Hero
 - Fixed [#274](https://github.com/AusDTO/gov-au-ui-kit/issues/274): Typo in Examples landing page
 
 ### 1.7.2 - 2016-08-02

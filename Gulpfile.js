@@ -60,7 +60,7 @@ gulp.task('ui-kit.scss', ['svg2png'], function () {
     return gulp.src(paths.scss)
         .pipe(sass({
             functions: {
-                "asset-data-url": inline('./')
+                'asset-data-url': inline('./')
             }
         }).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
@@ -94,7 +94,7 @@ gulp.task('ui-kit.min', function () {
 });
 
 gulp.task('ui-kit.min.scss', ['ui-kit.scss', 'ui-kit.icons', 'svg2png'], function () {
-    return gulp.src([paths.outputCSS, "!./**/*.min.css"])
+    return gulp.src([paths.outputCSS, '!./**/*.min.css'])
         .pipe(cssnano())
         .pipe(gitVersion())
         .pipe(rename({
@@ -170,8 +170,7 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
         homepage: '../../README.md',
         builder: 'kss-builder'
     });
-    kssresult.then(function (v) {
-        //console.log(v); // true
+    kssresult.then(function () {
         gulp.src('./build/*.html').pipe(connect.reload());
     });
 
@@ -181,7 +180,7 @@ gulp.task('styleguide.scss', ['svg2png'], function () {
     return gulp.src(paths.kssScssDir)
         .pipe(sass({
             functions: {
-                "asset-data-url": inline('./')
+                'asset-data-url': inline('./')
             }
         }).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
