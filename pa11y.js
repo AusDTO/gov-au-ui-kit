@@ -3,7 +3,7 @@
 
 const options = {
   timeout: 60000,
-  hideElements: '.skip-to, .is-visuallyhidden'
+  hideElements: '.skip-to, .is-visuallyhidden, .visuallyhidden'
 };
 
 module.exports = options;
