@@ -42,7 +42,7 @@ function displayResults(results) {
     while (errors.length) {
       testErrors++;
       let error = errors.shift();
-      console.log('\n' + msg.error('✘', 'Error found at ' + error.selector), '\n' + error.context + '\n' + error.message);
+      console.log(msg.error('✘', 'Error found at ' + error.selector), '\n' + error.context + '\n' + error.message);
     }
   } else {
     console.log(msg.success('✔', 'No errors'));
@@ -61,23 +61,27 @@ function runTest(url, done) {
   });
 }
 
-function runTests() {
-  let urls = buildUrls(htmlFiles());
-  console.log(msg.info('Starting tests for', urls.length, 'pages', '\n'));
+function buildTestQueue() {
+  let queue = async.queue(runTest, options.concurrency),
+      urls = buildUrls(htmlFiles());
+
+  console.log(msg.success('Starting tests for', urls.length, 'pages', '\n'));
+  queue.drain = testsFinished(urls);
   queue.push(urls);
 }
 
-var test = pa11y(require(options.pa11y));
+function testsFinished(urls) {
+  return function() {
+    console.log(msg.success('All done!', testErrors, 'errors found on', urls.length, 'pages.'));
+    server.close();
+  }
+}
+
+const test = pa11y(require(options.pa11y));
 
 var testErrors = 0;
 
-var queue = async.queue(runTest, options.concurrency);
-queue.drain = function() {
-  console.log(msg.info('All done! Total errors:', testErrors));
-  server.close();
-};
-
-var app = express();
+const app = express();
 app.use('/build', express.static('build'));
 
-var server = app.listen(options.port, runTests);
+const server = app.listen(options.port, buildTestQueue);
