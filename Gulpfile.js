@@ -16,8 +16,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
-    zip = require('gulp-zip'),
-    exec = require('child_process').exec
+    zip = require('gulp-zip')
     ;
 
 var paths = {
