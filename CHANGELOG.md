@@ -2,15 +2,20 @@
 
 ## UI Kit "Kraken"
 
+### `develop` as of 2016-08-15
+
+#### Accessibility testing
+
+Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `node test/pa11y.js`).
+
 ### 1.7.3 2016-08-08
 
-#### UI-kit changes
+#### UI-Kit changes
 
 - Improved visibility of disabled text field inputs via greying-out.
 - Refactored `_block-elements` partial, now named `_grid-layout` with `wrapper-padding` mixin.
 - Replaced `.visuallyhidden` helper class to `_accessibility.scss` (undocumented, added as a convenience)
 - Added an experimental inline tab element (documented under *§ Tab navigation (experimental)*).
-- Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `node test/pa11y.js`).
 
 #### Styleguide
 
