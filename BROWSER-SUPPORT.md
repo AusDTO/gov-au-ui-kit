@@ -35,8 +35,8 @@ Most browsers not in the "fully supported" categories, within reason.
 | Chrome         | Desktop: Win.10 | 49              | Full    | Untested |
 | Firefox        | Desktop         | 40              | Full    | Untested |
 | Edge           | Desktop         | -               | ?       | Untested |
-| IE             | Desktop         | 8+              | Full    | Untested |
-| IE             | Desktop         | <8              | Basic   | Untested |
+| IE             | Desktop         | 9+              | Full    | Untested |
+| IE             | Desktop         | <9              | Basic   | Untested |
 | Safari         | Desktop         | 8               | ?       | Untested |
 | iOS Safari     | iPhone?         | 8.4             | ?       | Untested |
 | Chrome Android | ?               | 51              | Full    | Untested |
