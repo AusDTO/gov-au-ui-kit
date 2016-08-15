@@ -96,6 +96,8 @@ Run accessibility tests:
 node test/pa11y.js
 ```
 
+*Note:* Check [Pa11y's requirements](https://github.com/pa11y/pa11y#requirements) to make sure you have the necessary dependencies installed to run the automated accessibility tests.
+
 The compiled style guide can be found at `./build/index.html` and the UI Kit CSS
 at `./build/latest/ui-kit.css`.
 
