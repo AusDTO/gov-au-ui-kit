@@ -29,14 +29,6 @@ For browsers in this category:
 Most browsers not in the "fully supported" categories, within reason.
 
 
-
-## Testing:
-### Manual tests
-* ??
-
-### Automated tests
-* ??
-
 | Browser        | Device: OS      | Minimum Version | Support | Tested   |
 |----------------|-----------------|-----------------|---------|----------|
 | Chrome         | Desktop: OS.X   | 49              | Full    | Untested |
