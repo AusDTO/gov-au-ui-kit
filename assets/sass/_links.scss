@@ -3,7 +3,7 @@ Link styles
 
 Styling for types and classes of links.
 
-There are other styles documented elsewhere (eg tag cloud links).
+There are other link styles documented elsewhere (for example [tags in list styles](http://gov-au-ui-kit.apps.staging.digital.gov.au/section-list-styles.html)).
 
 Style guide: Link styles
 */
@@ -53,7 +53,7 @@ Style guide: Link styles.1 Hover links
 }
 
 @mixin link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
-  $link-disabled-color: rgba($text-colour, 0.5);
+  $link-disabled-colour: transparentize($text-colour, 0.4);
   color: $text-colour;
 
   a {
@@ -144,12 +144,46 @@ Style guide: Link styles.1 Hover links
     }
   }
 
-  &.disabled {
-    outline: none;
-    color: $link-disabled-color;
-    text-decoration: none;
-    border-bottom: solid 1px;
-    outline-color: transparent;
+  /*
+  Placeholder links (prototyping)
+
+  Use placeholder links (greyed out links) to show actions that users can't currently take.
+
+  Your content should explain why the action isn't available and when it will be.
+
+  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
+
+  Markup: <p><span class="placeholder-link">Draft news item</span></p>
+  <p><a href="#">News item</a><p>
+
+  <details data-label="placeholder-links-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.3 Placeholder links
+  */
+
+  // Specifying a span here explicitly to avoid a.placeholder-link usage.
+  span.placeholder-link {
+    color: $link-disabled-colour;
+    border-bottom: none;
+    cursor: not-allowed;
+
+    &:hover {
+      cursor: not-allowed;
+    }
   }
 }
 
