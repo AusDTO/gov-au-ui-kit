@@ -38,7 +38,7 @@ var smoothScroll = require('smoothscroll');
      * @param {object} elem - containing element for collapsible nav
      */
     initToggle: function(elem, toggle) {
-      var panelLabel = elem.getAttribute('data-label'),
+      var panelLabel = elem.getAttribute('data-label') ? elem.getAttribute('data-label') : elem.className,
           toggleElem = toggle || document.createElement('button'),
           self = this;
 
