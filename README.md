@@ -159,6 +159,6 @@ Copyright Digital Transformation Office. <a href="(https://github.com/AusDTO/gov
 
 This repository includes <a href="http://bourbon.io/" rel="external">Bourbon</a>, <a href="http://neat.bourbon.io/" rel="external">Neat</a> and <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize.css</a>. All also use the MIT license.
 
-![](https://www.dto.gov.au/images/govt-crest.png "logo of the DTO")
+![Australian Government Digital Transformation Office logo](https://www.dto.gov.au/images/govt-crest.png)
 
 gov-au-ui-kit is maintained and funded by the <a href="https://www.dto.gov.au/" rel="external">Digital Transformation Office</a>.
