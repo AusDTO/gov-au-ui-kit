@@ -21,7 +21,7 @@ They can be limited to number input only by setting the `type` attribute to `num
 
 Markup: templates/text-input-single-line.hbs
 
-<details data-label="accordion-accessibility" aria-expanded="false">
+<details data-label="text-input-single-line-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -111,7 +111,7 @@ form {
     <textarea name="texta" id="texta"></textarea>
   </form>
 
-  <details data-label="accordion-accessibility" aria-expanded="false">
+  <details data-label="text-area-input-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
     <div class="accordion-panel">
     <strong>Passed</strong>:
@@ -203,7 +203,7 @@ form {
     </fieldset>
   </form>
 
-  <details data-label="accordion-accessibility" aria-expanded="false">
+  <details data-label="radio-button-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
     <div class="accordion-panel">
     <strong>Passed</strong>:
@@ -276,7 +276,7 @@ Markup:
   </fieldset>
 </form>
 
-<details data-label="accordion-accessibility" aria-expanded="false">
+<details data-label="checkbox-input-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
