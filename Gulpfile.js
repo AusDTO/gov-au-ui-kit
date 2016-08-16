@@ -16,7 +16,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
-    zip = require('gulp-zip')
+    zip = require('gulp-zip'),
+    wrap = require('gulp-wrap')
     ;
 
 var paths = {
@@ -132,8 +133,9 @@ gulp.task('svg2png', ['ui-kit.img'], function () {
 });
 
 gulp.task('examples', function () {
-    return gulp.src(paths.examplesDir)
-        .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
+    return gulp.src('./examples/*.html')
+      .pipe(wrap({ src: 'examples/layouts/default.html' }))
+      .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
 });
 
 gulp.task('markdown', function () {
