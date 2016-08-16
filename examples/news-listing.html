@@ -101,11 +101,13 @@
         <h2>Refine by:</h2>
         <p><a href="#content">{{Clear all}}</a></p>
         <p><a href="#content">{{Collapse/expand all}}</a></p>
-        <details open data-label="accordion-topic-filter" aria-expanded="true">
-          <summary>Topic</summary>
-          <div class="accordion-panel">
-            <form>
+
+        <form>
+          <details open data-label="accordion-topic-filter" aria-expanded="true">
+            <summary>Topic</summary>
+            <div class="accordion-panel">
               <fieldset>
+
                 <legend class="is-visuallyhidden">Filter by Topic</legend>
 
                 <input id="aaa" name="reply" type="checkbox" value="AAA"/>
@@ -136,14 +138,12 @@
                 <label for="iii">Working in Australia</label>
 
               </fieldset>
-            </form>
-          </div>
-        </details>
+            </div>
+          </details>
 
-        <details open data-label="accordion-topic-filter-2" aria-expanded="true">
-          <summary>Department</summary>
-          <div class="accordion-panel">
-            <form>
+          <details open data-label="accordion-topic-filter-2" aria-expanded="true">
+            <summary>Department</summary>
+            <div class="accordion-panel">
               <fieldset>
                 <legend class="is-visuallyhidden">Filter by Topic</legend>
 
@@ -184,14 +184,12 @@
                 <label for="lll1">Sport</label>
 
               </fieldset>
-            </form>
-          </div>
-        </details>
+            </div>
+          </details>
 
-        <details open data-label="accordion-date-filter" aria-expanded="true">
-          <summary>Date</summary>
-          <div class="accordion-panel">
-            <form>
+          <details open data-label="accordion-date-filter" aria-expanded="true">
+            <summary>Date</summary>
+            <div class="accordion-panel">
               <fieldset>
                 <legend class="is-visuallyhidden">Filter by date</legend>
 
@@ -208,14 +206,11 @@
                 <label for="mmm">Last year</label>
 
               </fieldset>
-            </form>
-          </div>
-        </details>
+            </div>
+          </details>
 
-        <button role="button">Update news results</button>
-        <!-- We have a11y errors on providing a button for each of the above form groupings... -->
-        <!-- And button styling isn't being applied to this button. -->
-
+          <button role="button">Update news results</button>
+        </form>
       </nav>
       <!-- ========== end Nav ========== -->
     </aside>
