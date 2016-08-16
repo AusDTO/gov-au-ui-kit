@@ -26,8 +26,8 @@ var paths = {
     scssDir: './assets/sass/**/*.scss',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
-    examplesDir: './examples/**/*.html',
-    examplesLayoutsDir: './examples/layouts/*.html',
+    examplesDir: './examples/*.html',
+    examplesTemplatesDir: './examples/layouts',
     kssBuilderDir: './kss-builder/**/*.*',
     images: './assets/img/**/*.+(png|svg|jpg)',
     scss: './assets/sass/ui-kit.scss',
@@ -135,7 +135,7 @@ gulp.task('svg2png', ['ui-kit.img'], function () {
 
 gulp.task('examples', function () {
     return gulp.src(paths.examplesDir)
-      .pipe(wrap({ src: paths.examplesLayoutsDir + 'default.html' }))
+      .pipe(wrap({ src: paths.examplesTemplatesDir + '/default.html' }))
       .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
 });
 
@@ -211,7 +211,7 @@ gulp.task('watch.build', function () {
     gulp.watch([
             paths.assets,
             paths.examplesDir,
-            paths.examplesLayoutsDir,
+            paths.examplesTemplatesDir,
             paths.readme,
             paths.kssBuilderDir,
             '!./kss-builder/kss-assets/kss.css'
