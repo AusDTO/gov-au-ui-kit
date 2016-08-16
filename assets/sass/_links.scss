@@ -142,47 +142,44 @@ Style guide: Link styles.1 Hover links
         color: $hover-text-colour;
       }
     }
+  }
 
-    /*
-    Disabled link (prototyping)
+  /*
+  Placeholder link (prototyping)
 
-    Apply the `.disabled` class to 'grey-out' a link as not functional.
+  Placeholder links are ‘greyed-out’ to visually distinguish non-functional links.
 
-    Because the link is still technically functional it's advised this class is only used during prototyping and testing; do not use this for production.
+  <p class="callout">You can’t apply this class to an anchor (`<a>`) element; instead apply it to a `<span>`.</p>
 
-    Markup: <a class="disabled" href="#">Non-existent functionality</a>
+  Markup: <span class="placeholder-link">Non-existent functionality</span>
 
-    <details data-label="accordion-accessibility" aria-expanded="false">
-      <summary>Accessibility &amp; browser testing</summary>
-      <div class="accordion-panel">
-      <strong>Passed</strong>:
-        <ul>
-          <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-          <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-        </ul>
-      <strong>Untested</strong>:
-        <ul>
-          <li>WCAG:AA manual</li>
-          <li>Browser support &mdash; automated and manual</li>
-        </ul>
-      </div>
-    </details>
+  <details data-label="placeholder-links-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
 
-    Style guide: Link styles.3 Disabled link
-    */
+  Style guide: Link styles.3 Placeholder link
+  */
 
-    &.disabled {
-      outline: none;
-      color: $link-disabled-colour;
-      text-decoration: none;
-      border-bottom: solid 1px;
-      outline-color: transparent;
-      cursor: not-allowed;;
+  // Specifying a span here explicitly to avoid a.placeholder-link usage.
+  span.placeholder-link {
+    color: $link-disabled-colour;
+    border-bottom: solid 1px $hover-bg-colour;
+    cursor: not-allowed;
 
-      &:hover,
-      &:focus {
-        background-color: transparent;
-      }
+    &:hover {
+      cursor: not-allowed;
     }
   }
 }
