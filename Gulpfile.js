@@ -136,7 +136,7 @@ gulp.task('svg2png', ['ui-kit.img'], function () {
 gulp.task('examples', function () {
     return gulp.src(paths.examplesDir)
       .pipe(wrap({ src: paths.examplesTemplatesDir + '/default.html' }))
-      .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
+      .pipe(gulp.dest(paths.outputHTML + '/latest/examples')).pipe(connect.reload());
 });
 
 gulp.task('markdown', function () {
