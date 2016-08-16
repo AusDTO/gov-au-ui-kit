@@ -178,7 +178,7 @@ Style guide: Link styles.1 Hover links
   // Specifying a span here explicitly to avoid a.placeholder-link usage.
   span.placeholder-link {
     color: $link-disabled-colour;
-    border-bottom: solid 1px transparentize($hover-bg-colour, 0.4);
+    border-bottom: none;
     cursor: not-allowed;
 
     &:hover {
