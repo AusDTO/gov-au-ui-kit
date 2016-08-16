@@ -3,7 +3,7 @@ Link styles
 
 Styling for types and classes of links.
 
-There are other styles documented elsewhere (eg tag cloud links).
+There are other link styles documented elsewhere (for example [tags in list styles](http://gov-au-ui-kit.apps.staging.digital.gov.au/section-list-styles.html)).
 
 Style guide: Link styles
 */
@@ -145,13 +145,16 @@ Style guide: Link styles.1 Hover links
   }
 
   /*
-  Placeholder link (prototyping)
+  Placeholder links (prototyping)
 
-  Placeholder links are ‘greyed-out’ to visually distinguish non-functional links.
+  Use placeholder links (greyed out links) to show actions that users can't currently take.
 
-  <p class="callout">You can’t apply this class to an anchor (`<a>`) element; instead apply it to a `<span>`.</p>
+  Your content should explain why the action isn't available and when it will be.
 
-  Markup: <span class="placeholder-link">Non-existent functionality</span>
+  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
+
+  Markup: <p><span class="placeholder-link">Draft news item</span></p>
+  <p><a href="#">News item</a><p>
 
   <details data-label="placeholder-links-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
@@ -169,7 +172,7 @@ Style guide: Link styles.1 Hover links
     </div>
   </details>
 
-  Style guide: Link styles.3 Placeholder link
+  Style guide: Link styles.3 Placeholder links
   */
 
   // Specifying a span here explicitly to avoid a.placeholder-link usage.
