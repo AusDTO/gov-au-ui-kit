@@ -63,12 +63,15 @@ details,
 
 .accordion-button,
 summary {
+  @include clearfix;
+
   display: block;
   position: relative;
   width: 100%;
   height: auto;
   margin: 0;
   padding: $small-spacing;
+  padding-right: 2.8em;
   border-bottom: none;
   border-top-right-radius: $tiny-border-radius;
   border-top-left-radius: $tiny-border-radius;
@@ -82,6 +85,24 @@ summary {
   // Remove vanilla summary styles.
   &::-webkit-details-marker {
     display: none;
+  }
+
+  .label {
+    /*float: left;*/
+    border-bottom: 1px solid;
+  }
+
+  .badge {
+    float: right;
+    /* Same as .badge* in _typography.scss */
+    display: inline-block;
+    background-color: $darker-aqua;
+    border-radius: $large-border-radius;
+    padding: $tiny-spacing $small-spacing;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: $lighter-aqua;
+    font-size: rem(14);
   }
 
   &:hover,
