@@ -24,7 +24,7 @@ var smoothScroll = require('smoothscroll');
      * @param {bool} collapsed - if `true`, panel is collapsed by default
      */
     initPanel: function(elem, collapsed) {
-      var panelLabel = elem.dataset ? elem.getAttribute('label') ? elem.getAttribute('label') : elem.className : elem.className;
+      var panelLabel = elem.getAttribute('data-label');
 
       elem.id = panelLabel;
 
@@ -38,13 +38,12 @@ var smoothScroll = require('smoothscroll');
      * @param {object} elem - containing element for collapsible nav
      */
     initToggle: function(elem, toggle) {
-      var panelLabel = elem.dataset ? elem.getAttribute('label') ? elem.getAttribute('label') : elem.className : elem.className,
+      var panelLabel = elem.getAttribute('data-label') ? elem.getAttribute('data-label') : elem.className,
           toggleElem = toggle || document.createElement('button'),
           self = this;
 
-      // console.log(panelLabel, toggle);
       if (!toggle) {
-          toggleElem.textContent = elem.getAttribute('toggleLabel') || 'Menu';
+          toggleElem.textContent = elem.getAttribute('data-toggle-label') || 'Menu';
       }
 
       toggleElem.setAttribute('aria-controls', panelLabel);

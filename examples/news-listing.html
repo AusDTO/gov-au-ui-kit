@@ -1,456 +1,396 @@
-<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<!--[if lt IE 7 ]>
-<html lang="en" class="ie6 no-js">    <![endif]-->
-<!--[if IE 7 ]>
-<html lang="en" class="ie7 no-js">    <![endif]-->
-<!--[if IE 8 ]>
-<html lang="en" class="ie8 no-js">    <![endif]-->
-<!--[if IE 9 ]>
-<html lang="en" class="ie9 no-js">    <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" class="no-js"><!--<![endif]-->
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <!-- viewport declaration must be included in <head> for media queries to work correctly on real devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News listing (global)</title>
+<!-- ========== Page header ========== -->
+<header role="banner">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Open+Sans:400italic,700,400:latin,latin-ext']
-      }
-    });
-  </script>
-
-  <link rel="stylesheet" type="text/css" href="../latest/ui-kit.css"/>
-
-  <!--[if lt IE 9]>
-  <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-          crossorigin="anonymous"></script>
-  <script type="text/javascript"
-          src="//cdnjs.cloudflare.com/ajax/libs/corysimmons-selectivizr2/1.0.8/selectivizr2.min.js"></script>
-  <![endif]-->
-  <!--[if lte IE 9]>
-  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
-  <script type='text/javascript'
-          src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
-  <![endif]-->
-
-  <script type="text/javascript" src="../latest/ui-kit.js"></script>
-
-</head>
-<body>
-
-  <nav class="skip-to">
-    <a href="#content">Skip to main content</a> <a href="#nav">Skip to section navigation</a>
-  </nav>
-
-
-  <!-- ========== Page header ========== -->
-  <header role="banner">
-
-    <section class="prerelease-govau--header">
-      <div class="wrapper">
-        <div class="govau--logo">
-          <img src="../latest/img/icons/logo-govau-full-2x.png" alt="gov.au crest logo" width="270"/>
-
-          <div id="test" class="brandbar default"><!--ID is temp for example-->
-            <div class="b1"></div>
-            <div class="b2"></div>
-          </div>
-        </div>
-
-        <div class="feedback" tabindex="1">
-          <a href="#content" class="button--feedback">Give feedback</a>
-        </div>
-
-      </div><!--wrapper-->
-
-      <nav class="breadcrumbs--inverted" aria-label="breadcrumb">
-        <div class="wrapper">
-          <ul>
-              <li><a href="#content">Home</a></li>
-              <li class="current">News</li>
-          </ul>
-        </div>
-      </nav>
-
-    </section>
-  </header>
-
-
-  <!-- ========== Hero ========== -->
-  <div class="hero-med">
+  <section class="prerelease-govau--header">
     <div class="wrapper">
-      <h1>News</h1>
-      <p>Announcements, media releases, interviews, speeches and more from the Australian Government.</p>
-    </div>
+      <div class="govau--logo">
+        <img src="../latest/img/icons/logo-govau-full-2x.png" alt="gov.au crest logo" width="270"/>
+
+        <div id="test" class="brandbar default"><!--ID is temp for example-->
+          <div class="b1"></div>
+          <div class="b2"></div>
+        </div>
+      </div>
+
+      <div class="feedback" tabindex="1">
+        <a href="#content" class="button--feedback">Give feedback</a>
+      </div>
+
+    </div><!--wrapper-->
+
+    <nav class="breadcrumbs--inverted" aria-label="breadcrumb">
+      <div class="wrapper">
+        <ul>
+            <li><a href="#content">Home</a></li>
+            <li class="current">News</li>
+        </ul>
+      </div>
+    </nav>
+
+  </section>
+</header>
+
+
+<!-- ========== Hero ========== -->
+<div class="hero-med">
+  <div class="wrapper">
+    <h1>News</h1>
+    <p>Announcements, media releases, interviews, speeches and more from the Australian Government.</p>
   </div>
+</div>
 
 
-  <!-- ========== Main Page Row ========== -->
-  <main class="sidebar-has-controls">
+<!-- ========== Main Page Row ========== -->
+<main class="sidebar-has-controls">
 
-    <aside class="sidebar" id="nav">
-      <!-- ========== Nav ========== -->
-      <nav>
-        <h2>Refine by:</h2>
-        <p><a href="#content">{{Clear all}}</a></p>
-        <p><a href="#content">{{Collapse/expand all}}</a></p>
-        <details open data-label="accordion-example" aria-expanded="true">
+  <aside class="sidebar" id="nav">
+    <!-- ========== Nav ========== -->
+    <nav>
+      <h2>Refine by:</h2>
+      <p><a href="#content">{{Clear all}}</a></p>
+      <p><a href="#content">{{Collapse/expand all}}</a></p>
+
+      <form>
+        <details open data-label="accordion-topic-filter" aria-expanded="true">
           <summary>Topic</summary>
           <div class="accordion-panel">
-            <form>
-              <fieldset>
-                <legend class="is-visuallyhidden">Filter by Topic</legend>
+            <fieldset>
 
-                <input id="aaa" name="reply" type="checkbox" value="AAA"/>
-                <label for="aaa">All</label>
+              <legend class="is-visuallyhidden">Filter by Topic</legend>
 
-                <input id="bbb" name="reply" type="checkbox" value="BBB"/>
-                <label for="bbb">Adoption</label>
+              <input id="aaa" name="reply" type="checkbox" value="AAA"/>
+              <label for="aaa">All</label>
 
-                <input id="ccc" name="reply" type="checkbox" value="CCC"/>
-                <label for="ccc">Ageing and aged care</label>
+              <input id="bbb" name="reply" type="checkbox" value="BBB"/>
+              <label for="bbb">Adoption</label>
 
-                <input id="ddd" name="reply" type="checkbox" value="DDD"/>
-                <label for="ddd">Bullying</label>
+              <input id="ccc" name="reply" type="checkbox" value="CCC"/>
+              <label for="ccc">Ageing and aged care</label>
 
-                <input id="eee" name="reply" type="checkbox" value="EEE"/>
-                <label for="eee">Consumer protection</label>
+              <input id="ddd" name="reply" type="checkbox" value="DDD"/>
+              <label for="ddd">Bullying</label>
 
-                <input id="fff" name="reply" type="checkbox" value="FFF"/>
-                <label for="fff">Cybersecurity</label>
+              <input id="eee" name="reply" type="checkbox" value="EEE"/>
+              <label for="eee">Consumer protection</label>
 
-                <input id="ggg" name="reply" type="checkbox" value="GGG"/>
-                <label for="ggg">Food standards and safety</label>
+              <input id="fff" name="reply" type="checkbox" value="FFF"/>
+              <label for="fff">Cybersecurity</label>
 
-                <input id="hhh" name="reply" type="checkbox" value="HHH"/>
-                <label for="hhh">Visiting Australia</label>
+              <input id="ggg" name="reply" type="checkbox" value="GGG"/>
+              <label for="ggg">Food standards and safety</label>
 
-                <input id="iii" name="reply" type="checkbox" value="III"/>
-                <label for="iii">Working in Australia</label>
+              <input id="hhh" name="reply" type="checkbox" value="HHH"/>
+              <label for="hhh">Visiting Australia</label>
 
-              </fieldset>
-            </form>
+              <input id="iii" name="reply" type="checkbox" value="III"/>
+              <label for="iii">Working in Australia</label>
+
+            </fieldset>
           </div>
         </details>
 
-        <details open data-label="accordion-example" aria-expanded="true">
+        <details open data-label="accordion-topic-filter-2" aria-expanded="true">
           <summary>Department</summary>
           <div class="accordion-panel">
-            <form>
-              <fieldset>
-                <legend class="is-visuallyhidden">Filter by Topic</legend>
+            <fieldset>
+              <legend class="is-visuallyhidden">Filter by Topic</legend>
 
-                <input id="aaa1" name="reply" type="checkbox" value="AAA1"/>
-                <label for="aaa1">All</label>
+              <input id="aaa1" name="reply" type="checkbox" value="AAA1"/>
+              <label for="aaa1">All</label>
 
-                <input id="bbb1" name="reply" type="checkbox" value="BBB1"/>
-                <label for="bbb1">Aged Care</label>
+              <input id="bbb1" name="reply" type="checkbox" value="BBB1"/>
+              <label for="bbb1">Aged Care</label>
 
-                <input id="ccc1" name="reply" type="checkbox" value="CCC1"/>
-                <label for="ccc1">The Arts</label>
+              <input id="ccc1" name="reply" type="checkbox" value="CCC1"/>
+              <label for="ccc1">The Arts</label>
 
-                <input id="ddd1" name="reply" type="checkbox" value="DDD1"/>
-                <label for="ddd1">Communications</label>
+              <input id="ddd1" name="reply" type="checkbox" value="DDD1"/>
+              <label for="ddd1">Communications</label>
 
-                <input id="eee1" name="reply" type="checkbox" value="EEE1"/>
-                <label for="eee1">Finance</label>
+              <input id="eee1" name="reply" type="checkbox" value="EEE1"/>
+              <label for="eee1">Finance</label>
 
-                <input id="fff1" name="reply" type="checkbox" value="FFF1"/>
-                <label for="fff1">Health</label>
+              <input id="fff1" name="reply" type="checkbox" value="FFF1"/>
+              <label for="fff1">Health</label>
 
-                <input id="ggg1" name="reply" type="checkbox" value="GGG1"/>
-                <label for="ggg1">Human Services</label>
+              <input id="ggg1" name="reply" type="checkbox" value="GGG1"/>
+              <label for="ggg1">Human Services</label>
 
-                <input id="hhh1" name="reply" type="checkbox" value="HHH1"/>
-                <label for="hhh1">Immigration and Border Protection</label>
+              <input id="hhh1" name="reply" type="checkbox" value="HHH1"/>
+              <label for="hhh1">Immigration and Border Protection</label>
 
-                <input id="iii1" name="reply" type="checkbox" value="III1"/>
-                <label for="iii1">Industry, Innovation and Science</label>
+              <input id="iii1" name="reply" type="checkbox" value="III1"/>
+              <label for="iii1">Industry, Innovation and Science</label>
 
-                <input id="jjj1" name="reply" type="checkbox" value="JJJ1"/>
-                <label for="jjj1">Small Business</label>
+              <input id="jjj1" name="reply" type="checkbox" value="JJJ1"/>
+              <label for="jjj1">Small Business</label>
 
-                <input id="kkk1" name="reply" type="checkbox" value="KKK1"/>
-                <label for="kkk1">Social Services</label>
+              <input id="kkk1" name="reply" type="checkbox" value="KKK1"/>
+              <label for="kkk1">Social Services</label>
 
-                <input id="lll1" name="reply" type="checkbox" value="LLL1"/>
-                <label for="lll1">Sport</label>
+              <input id="lll1" name="reply" type="checkbox" value="LLL1"/>
+              <label for="lll1">Sport</label>
 
-              </fieldset>
-            </form>
+            </fieldset>
           </div>
         </details>
 
-        <details open data-label="accordion-example" aria-expanded="true">
+        <details open data-label="accordion-date-filter" aria-expanded="true">
           <summary>Date</summary>
           <div class="accordion-panel">
-            <form>
-              <fieldset>
-                <legend class="is-visuallyhidden">Filter by date</legend>
+            <fieldset>
+              <legend class="is-visuallyhidden">Filter by date</legend>
 
-                <input id="jjj" name="date" type="radio" value="JJJ"/>
-                <label for="jjj">Last week</label>
+              <input id="jjj" name="date" type="radio" value="JJJ"/>
+              <label for="jjj">Last week</label>
 
-                <input id="kkk" name="date" type="radio" value="KKK"/>
-                <label for="kkk">Last month</label>
+              <input id="kkk" name="date" type="radio" value="KKK"/>
+              <label for="kkk">Last month</label>
 
-                <input id="lll" name="date" type="radio" value="LLL"/>
-                <label for="lll">Last 3 months</label>
+              <input id="lll" name="date" type="radio" value="LLL"/>
+              <label for="lll">Last 3 months</label>
 
-                <input id="mmm" name="date" type="radio" value="MMM"/>
-                <label for="mmm">Last year</label>
+              <input id="mmm" name="date" type="radio" value="MMM"/>
+              <label for="mmm">Last year</label>
 
-              </fieldset>
-            </form>
+            </fieldset>
           </div>
         </details>
 
         <button role="button">Update news results</button>
-        <!-- We have a11y errors on providing a button for each of the above form groupings... -->
-        <!-- And button styling isn't being applied to this button. -->
+      </form>
+    </nav>
+    <!-- ========== end Nav ========== -->
+  </aside>
 
-      </nav>
-      <!-- ========== end Nav ========== -->
-    </aside>
+  <!-- ========== Content ========== -->
+  <article id="content" class="content-main">
 
-    <!-- ========== Content ========== -->
-    <article id="content" class="content-main">
+    <nav class="inline-nav">
+      <h3>Sort by:</h3>
+      <ul>
+        <li><a href="#content"><span class="is-visuallyhidden">Sort by </span>Most recent</a></li>
+        <li><a href="#content"><span class="is-visuallyhidden">Sort by </span>Oldest to newest</a></li>
+        <li><a href="#content"><span class="is-visuallyhidden">Sort by </span>A to Z</a></li>
+      </ul>
+    </nav>
 
-      <nav class="inline-nav">
-        <h3>Sort by:</h3>
+    <ul class="list-horizontal">
+      <li>
+        <article>
+          <h3><a href="#content">Sky News First Edition interview with Senator Mathias Cormann</a></h3>
+          <div class="meta">
+            <time datetime="2016-07-29">29 July 2016</time>
+            <a rel="author" href="#content">Minister for Finance</a> </div>
+          <p> A transcript of the interview by journalist Kieran Gilbert on topics including Kevin Rudd and the United Nations, immigration and the Royal Commission into Northern Territory Youth Detention.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Minister for Health and Aged Care welcomes Whitecoat joint venture</a></h3>
+          <div class="meta">
+            <time datetime="2016-07-29">29 July 2016</time>
+            <a rel="author" href="#content">Minister for Health and Aged Care</a> </div>
+          <p> Minister Ley welcomes the announcement from some private health insurers that more information will be made available to Australians about their health services.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Border clearance advice for religious pilgrims</a></h3>
+          <div class="meta">
+            <time datetime="2016-07-29">29 July 2016</time>
+            <a rel="author" href="#content">Department of Immigration and Border Protection</a>
+          </div>
+          <p> We recognise the importance of religious events such as the Hajj, Umrah and Arba’een and the right to travel for such events.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Nola Marino re-appointed as Chief Government Whip</a></h3>
+          <div class="meta">
+            <time datetime="2016-07-29">29 July 2016</time>
+            <a rel="author" href="#content">Prime Minister</a> </div>
+          <p> I am pleased to announce the re-appointment of Ms Nola Marino as the Chief Government Whip.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Thousands of Australians now free of Hepatitis C</a></h3>
+          <div class="meta">
+            <time datetime="2016-07-28">28 July 2016</time>
+            <a rel="author" href="#content">Minister for Health and Aged Care</a> </div>
+          <p> The Australian Government’s commitment to put an end to the Hep C virus is paying off.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Immigration and customs functions in Norfolk Island</a></h3>
+          <div class="meta">
+            <time datetime="2016-07-11">11 July 2016</time>
+            <a rel="author" href="#content">Department of Immigration and Border Protection</a> </div>
+          <p> The Department of Immigration and Border Protection is delivering immigration and customs functions on Norfolk Island.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Whole of Australian Government (WoAG) Accommodation Arrangement</a></h3>
+          <div class="meta">
+            <time datetime="2016-05-10">10 May 2016</time>
+            <a rel="author" href="#content">Department of Finance</a> </div>
+          <p> The Department of Finance is seeking comments on a discussion paper that may shape a future accommodation program for the Australian Government.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Aged under 15: what does it mean for classifications?</a></h3>
+          <div class="meta">
+            <time datetime="2016-05-06">06 May 2016</time>
+            <a rel="author" href="agency-landing.html">Department of Communications and the Arts</a> </div>
+          <p> Classifications help you to make informed decisions about what you and your children see and play.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3><a href="#content">Sydney – final countdown to digital-only TV has begun</a></h3>
+          <div class="meta">
+            <time datetime="2013-11-13">13 November 2013</time>
+            <a rel="author" href="ministers-landing.html">Minister for Communications</a> </div>
+          <p> Sydney and surrounding areas will switch to digital-only TV at 9am on 3 December 2013.</p>
+          <footer class="tags">
+            <dl>
+              <dt>Topics:</dt>
+                <dd><a href="#content">Television (TV) reception</a></dd>
+                <dd><a href="#content">Tag Name</a></dd>
+            </dl>
+          </footer>
+        </article>
+      </li>
+
+    </ul>
+
+    <h1>{{Pagination}}</h1>
+
+  </article>
+  <!-- ========== end Content ========== -->
+</main>
+
+
+<!-- ========== Page footer ========== -->
+<footer role="contentinfo">
+  <div class="wrapper">
+    <section class="footer-top">
+      <nav>
         <ul>
-          <li><a href="#content"><span class="is-visuallyhidden">Sort by </span>Most recent</a></li>
-          <li><a href="#content"><span class="is-visuallyhidden">Sort by </span>Oldest to newest</a></li>
-          <li><a href="#content"><span class="is-visuallyhidden">Sort by </span>A to Z</a></li>
+          <li><h2>Title header</h2></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+        </ul>
+        <ul>
+          <li><h2>Title header</h2></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+        </ul>
+        <ul>
+          <li><h2>Title header</h2></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+        </ul>
+        <ul>
+          <li><h2>Title header</h2></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
+          <li><a href="#content">This is a footer link</a></li>
         </ul>
       </nav>
-
-      <ul class="list-horizontal">
-        <li>
-          <article>
-            <h3><a href="#content">Sky News First Edition interview with Senator Mathias Cormann</a></h3>
-            <div class="meta">
-              <time datetime="2016-07-29">29 July 2016</time>
-              <a rel="author" href="#content">Minister for Finance</a> </div>
-            <p> A transcript of the interview by journalist Kieran Gilbert on topics including Kevin Rudd and the United Nations, immigration and the Royal Commission into Northern Territory Youth Detention.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Minister for Health and Aged Care welcomes Whitecoat joint venture</a></h3>
-            <div class="meta">
-              <time datetime="2016-07-29">29 July 2016</time>
-              <a rel="author" href="#content">Minister for Health and Aged Care</a> </div>
-            <p> Minister Ley welcomes the announcement from some private health insurers that more information will be made available to Australians about their health services.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Border clearance advice for religious pilgrims</a></h3>
-            <div class="meta">
-              <time datetime="2016-07-29">29 July 2016</time>
-              <a rel="author" href="#content">Department of Immigration and Border Protection</a>
-            </div>
-            <p> We recognise the importance of religious events such as the Hajj, Umrah and Arba’een and the right to travel for such events.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Nola Marino re-appointed as Chief Government Whip</a></h3>
-            <div class="meta">
-              <time datetime="2016-07-29">29 July 2016</time>
-              <a rel="author" href="#content">Prime Minister</a> </div>
-            <p> I am pleased to announce the re-appointment of Ms Nola Marino as the Chief Government Whip.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Thousands of Australians now free of Hepatitis C</a></h3>
-            <div class="meta">
-              <time datetime="2016-07-28">28 July 2016</time>
-              <a rel="author" href="#content">Minister for Health and Aged Care</a> </div>
-            <p> The Australian Government’s commitment to put an end to the Hep C virus is paying off.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Immigration and customs functions in Norfolk Island</a></h3>
-            <div class="meta">
-              <time datetime="2016-07-11">11 July 2016</time>
-              <a rel="author" href="#content">Department of Immigration and Border Protection</a> </div>
-            <p> The Department of Immigration and Border Protection is delivering immigration and customs functions on Norfolk Island.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Whole of Australian Government (WoAG) Accommodation Arrangement</a></h3>
-            <div class="meta">
-              <time datetime="2016-05-10">10 May 2016</time>
-              <a rel="author" href="#content">Department of Finance</a> </div>
-            <p> The Department of Finance is seeking comments on a discussion paper that may shape a future accommodation program for the Australian Government.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Aged under 15: what does it mean for classifications?</a></h3>
-            <div class="meta">
-              <time datetime="2016-05-06">06 May 2016</time>
-              <a rel="author" href="agency-landing.html">Department of Communications and the Arts</a> </div>
-            <p> Classifications help you to make informed decisions about what you and your children see and play.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <h3><a href="#content">Sydney – final countdown to digital-only TV has begun</a></h3>
-            <div class="meta">
-              <time datetime="2013-11-13">13 November 2013</time>
-              <a rel="author" href="ministers-landing.html">Minister for Communications</a> </div>
-            <p> Sydney and surrounding areas will switch to digital-only TV at 9am on 3 December 2013.</p>
-            <footer class="tags">
-              <dl>
-                <dt>Topics:</dt>
-                  <dd><a href="#content">Television (TV) reception</a></dd>
-                  <dd><a href="#content">Tag Name</a></dd>
-              </dl>
-            </footer>
-          </article>
-        </li>
-
-      </ul>
-
-      <h1>{{Pagination}}</h1>
-
-    </article>
-    <!-- ========== end Content ========== -->
-  </main>
-
-
-  <!-- ========== Page footer ========== -->
-  <footer role="contentinfo">
-    <div class="wrapper">
-      <section class="footer-top">
+    </section>
+    <section>
+      <div class="footer-logo">
+        <img alt="Australian Government Coat of Arms" src="../latest/img/coat-of-arms.png">
+      </div>
+      <div class="footer-links">
         <nav>
           <ul>
-            <li><h2>Title header</h2></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-          </ul>
-          <ul>
-            <li><h2>Title header</h2></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-          </ul>
-          <ul>
-            <li><h2>Title header</h2></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-          </ul>
-          <ul>
-            <li><h2>Title header</h2></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
-            <li><a href="#content">This is a footer link</a></li>
+            <li><a href="#content">Example global link</a></li>
+            <li><a href="#content">Example global link</a></li>
+            <li><a href="#content">Example global link</a></li>
+            <li><a href="#content">Example global link</a></li>
+            <li><a href="#content">Example global link</a></li>
           </ul>
         </nav>
-      </section>
-      <section>
-        <div class="footer-logo">
-          <img alt="Australian Government Coat of Arms" src="../latest/img/coat-of-arms.png">
-        </div>
-        <div class="footer-links">
-          <nav>
-            <ul>
-              <li><a href="#content">Example global link</a></li>
-              <li><a href="#content">Example global link</a></li>
-              <li><a href="#content">Example global link</a></li>
-              <li><a href="#content">Example global link</a></li>
-              <li><a href="#content">Example global link</a></li>
-            </ul>
-          </nav>
-          <p>&copy; Commonwealth of Australia <br>
-          <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md">Licensed under the MIT License.</a></p>
-        </div>
-      </section>
-    </div>
-  </footer>
-
-</body>
-</html>
+        <p>&copy; Commonwealth of Australia <br>
+        <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE.md">Licensed under the MIT License.</a></p>
+      </div>
+    </section>
+  </div>
+</footer>

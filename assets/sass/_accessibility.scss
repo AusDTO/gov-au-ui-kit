@@ -5,6 +5,7 @@
 
 // Added as a class because this should to be obvious in HTML
 
+.visuallyhidden,
 .is-visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -14,9 +15,4 @@
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-// To be deprecated in 2.0
-.visuallyhidden {
-  display: none;
 }
