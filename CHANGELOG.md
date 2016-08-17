@@ -2,7 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### `develop` as of 2016-08-15
+### 1.7.4 - 2016-08-17
 
 #### Accessibility testing
 
