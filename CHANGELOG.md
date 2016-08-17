@@ -12,6 +12,7 @@ Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://git
 
 - Support to grey out disabled/non-functional anchors/links (largely for prototyping) via `.placeholder-link` (documented under *§ Link styles*).
 - Source files for Examples now use a common layout file (`examples/layouts/default.html`)
+- Added the [Respond polyfill](https://github.com/scottjehl/Respond) for CSS3 media query support in IE6-8
 
 ### 1.7.3 2016-08-08
 
