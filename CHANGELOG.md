@@ -15,7 +15,7 @@ Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://git
 - Added the [Respond polyfill](https://github.com/scottjehl/Respond) for CSS3 media query support in IE6-8
 - Removed the [Selectivizr polyfill](http://selectivizr.com/) so as to not trigger quirks mode in IE8
 
-### 1.7.3 2016-08-08
+### 1.7.3 - 2016-08-08
 
 #### UI-Kit changes
 
