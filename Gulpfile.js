@@ -16,7 +16,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
-    zip = require('gulp-zip')
+    zip = require('gulp-zip'),
+    wrap = require('gulp-wrap')
     ;
 
 var paths = {
@@ -25,7 +26,8 @@ var paths = {
     scssDir: './assets/sass/**/*.scss',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
-    examplesDir: './examples/**/*.*',
+    examplesDir: './examples/*.html',
+    examplesTemplatesDir: './examples/layouts',
     kssBuilderDir: './kss-builder/**/*.*',
     images: './assets/img/**/*.+(png|svg|jpg)',
     scss: './assets/sass/ui-kit.scss',
@@ -133,7 +135,8 @@ gulp.task('svg2png', ['ui-kit.img'], function () {
 
 gulp.task('examples', function () {
     return gulp.src(paths.examplesDir)
-        .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
+      .pipe(wrap({ src: paths.examplesTemplatesDir + '/default.html' }))
+      .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
 });
 
 gulp.task('markdown', function () {
@@ -208,6 +211,7 @@ gulp.task('watch.build', function () {
     gulp.watch([
             paths.assets,
             paths.examplesDir,
+            paths.examplesTemplatesDir,
             paths.readme,
             paths.kssBuilderDir,
             '!./kss-builder/kss-assets/kss.css'
@@ -227,6 +231,6 @@ gulp.task('livereload', function () {
 gulp.task('webserver', function () {
     connect.server({
         livereload: true,
-        root: ['.', 'build']
+        root: 'build'
     });
 });
