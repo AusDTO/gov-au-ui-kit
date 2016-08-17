@@ -11,6 +11,7 @@ Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://git
 #### UI-Kit changes
 
 - Support to grey out disabled/non-functional anchors/links (largely for prototyping) via `.placeholder-link` (documented under *§ Link styles*).
+- Source files for Examples now use a common layout file (`examples/layouts/default.html`)
 
 ### 1.7.3 2016-08-08
 
