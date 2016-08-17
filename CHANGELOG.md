@@ -8,6 +8,10 @@
 
 Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `node test/pa11y.js`).
 
+#### UI-Kit changes
+
+- Support to grey out disabled/non-functional anchors/links (largely for prototyping) via `.placeholder-link` (documented under *§ Link styles*).
+
 ### 1.7.3 2016-08-08
 
 #### UI-Kit changes
