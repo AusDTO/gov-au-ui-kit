@@ -91,3 +91,5 @@ UI-Kit version: 1.7.4
 //@import 'gov-au-ui-kit/assets/sass/print';
 
 ```
+
+5. Now we can run `gulp sass` as usual and the ui-kit will compile into our single .css export resource
