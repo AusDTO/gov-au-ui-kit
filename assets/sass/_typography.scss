@@ -13,6 +13,8 @@ Typeface
 
 We are currently testing the open source <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans family</a> in 3 styles.
 
+Open Sans is a monspace sans-serif font selected for accessibility.
+
 <div class="guide-example--type"><h3>Open Sans regular 400</h3>
   <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
@@ -50,6 +52,16 @@ The font stacks should still achieve a high degree of coverage across a range of
 You need to load webfonts through the <a href="https://github.com/typekit/webfontloader" rel="external">Google Web Font Loader</a> via `<script>` to add Open Sans via the HTML `head`. This supports modern browsers and older versions of Internet Explorer.
 
 Style guide: Typography.1 Typeface.1 Font stacks
+*/
+
+/*
+Accessibility
+
+- Don't write in all *italics* or CAPITALS.
+- Avoid using **bold**. Bolding a few words may help scannability, **but blocks of bold are harder to read**.
+- Use just 1 font (Open Sans).
+
+Style guide: Typography.1 Typeface.2 Accessibility
 */
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
