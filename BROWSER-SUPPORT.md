@@ -2,6 +2,8 @@
 
 This is a draft.
 
+‘Support’ refers to both making things usable before they go live, as well as improving and fixing issues found in production.
+
 ## Guiding principles
 
 UI-Kit is guided by 3 core philosophies:
