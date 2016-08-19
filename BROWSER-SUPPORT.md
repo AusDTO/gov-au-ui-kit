@@ -1,73 +1,12 @@
-# Browser support
+# Browser support matrix (draft)
 
-This is a late working draft.
+The UI-Kit team needs to support all of our users, regardless of their device, web browser or other user agent.
 
-There are a lot of different browsers and devices.
+The support levels will be revised when needed to better meet user needs.
 
-The UI-Kit team wishes to support all users according to their needs, regardless of user agent or browser technologies.
+We initially defined these levels using Australia.gov.au analytics data.
 
-## Guiding principles
-
-UI-Kit’s browser support strategy is guided by 3 core philosophies:
-
-1. support basic access and functionality in the browsers and devices of all users
-2. build a solid, semantic HTML5 foundation
-3. <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a>.
-
-We wish to avoid listing devices and/or browsers we provide no support for. We believe we can provide graduated functional support for almost all browsers and devices used by Australians.
-
-For this reason we build on a solid HTML foundation. It ensures that if no CSS or JavaScript is run that the basic content and functionality of UI-Kit components remain accessible and working.
-
-From there we opt to progressively improve the look, functionality, and accessibility of components depending on the capabilities of user devices and browsers.
-
-From these principles we propose a loose two-tier approach:
-
-1. Full support
-2. Functional support
-
-## Full support
-
-The closest to intended experience:
-
-* all (or most) features documented in GOV.AU UI-Kit
-* advanced functionality and behaviour.
-
-## Functional support
-
-Usually a fallback, using the simplest layout available to most graphical browsers:
-
-* accessible content
-* functionality to complete critical user tasks
-* basic page design and layout
-* similar look and behaviour across all pages
-* JavaScript not required.
-
-Different browsers in this category may (will) have differing results, but core functionality must not be degraded.
-
-## Defining functional support
-
-The UI-Kit team will provide more verbose information against each component in the UI-Kit in our styleguide documentation.
-
-These additions will document which features are permissible to be graduated in look, functionality, etc. by explicitly listing which parts of a feature must be maintained.
-
-This work requires explicit browser testing and will always be constrained by the technical limitations of that browser and device.
-
-## Which category?
-
-Initially we considered composing a decision tree flow chart to guide.
-
-We have shelved this because:
-
-- the UI-Kit team feels confident in identifying full-support browsers and devices;
-- all other browsers and devices still deserve graduated support
-
-## Browser support matrix
-
-We defined these levels initially using Australia.gov.au analytics data.
-
-This table will be revised when needed to better meet user needs.
-
-| Browser        | Device: OS      | Minimum Version | Support    | Tested   |
+| Browser        | Device       | Minimum version | Support level   | Test status  |
 |----------------|-----------------|-----------------|------------|----------|
 | Chrome         | Desktop: ?      | 49              | Full       | Tested   |
 | Firefox        | Desktop: ?      | 40              | Full       | Tested   |
@@ -80,18 +19,39 @@ This table will be revised when needed to better meet user needs.
 | IE Mobile      | ?               | 11              | Full       | Untested |
 | UC Browser     | ?               | 10.X            | ?          | Untested |
 
-There are other browsers with full support, and many more with functional support.
+There are other browsers that have full or functional support.
 
-## Terms
+## Unsupported browsers
+We don't list unsupported devices and browsers.
 
-Support
-: In the context of this document, refers to both making things usable before they go live, as well as improving and fixing issues found in production environments.
+We are aiming for a solid HTML mobile-first foundation that provides functional support for the browsers and devices of all of our users.
 
-Progressive enhancement
-: A strategy in web design and development that emphasises building basic foundations first geared to the lowest common denominator of browser functionality, and then extending from there to add functionality and enhancements.
+## Functional support
 
-Graceful degradation
-: A strategy in technology design and development that emphasises fault-tolerance, where older browsers would receive a managed degraded experience.
+* Accessible content.
+* Users can complete critical tasks.
+* Basic page design and layout, based on the simplest layout available to graphical browsers.
+* Similar look and behaviour across all pages (performance will still vary across browsers).
+* JavaScript and CSS not required.
 
-User agent (or software agent)
-: Software acting on behalf of a user (eg a web browser).
+As we perform browser testing we will provide component-specific documentation. This will specify what is critical and what provides advanced functionality.
+
+## Full support
+
+* All (or most) documented features.
+* Advanced functionality and behaviour.
+
+## Principles
+
+1. Support basic access and functionality in the browsers and devices of all of our users.
+2. Build a solid semantic HTML5 foundation &#8212; no CSS or JavaScript is required for basic content and functionality.
+3. <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">Progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> &#8212; building the basic foundation for the lowest common denominator then enhancing;  instead of a managed degraded experience for older browsers (fault tolerance).
+
+We define 'support' as:
+- making things usable before they go live
+- improving and fixing issues found in production environments.
+
+We didn't use a decision tree because:
+
+- we can identify fully supported browsers and devices
+- all other browsers and devices need graduated support.
