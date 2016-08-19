@@ -36,16 +36,13 @@ UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
 
 The framework is built on a solid accessible HTML foundation. We follow a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> to produce accessible components by default.
 
-Currently (August 2016) we are:
+#### Accessibility compliance - roadmap to WCAG 2.0 (Level AA)
 
-- using automated build tools to write accessible code (linting and HTML5 validation)
-- running automated accessibility testing of our examples templates &mdash; `examples/` (<a href="https://github.com/pa11y/pa11y" rel="external">Pa11y CLI</a>).
-
-We are working on:
-- fixing automated accessibility testing errors
-- documenting accessibility compliance and guidance for each component
-- testing the framework with users to find barriers
-- preparing for an audit of the framework.
+[x] Automated testing via HTML_CodeSniffer (WCAG 2.0 criteria) & Nu HTML Checker (HTML validation)
+[ ] Manual evaluation with [Wave by WebAIM](http://wave.webaim.org/)
+[ ] Manual checking of page structure, content and keyboard navigation
+[ ] Testing the UI Kit with users and assistive technologies
+[ ] Preparing for and carrying out an audit
 
 ### Browser support
 
