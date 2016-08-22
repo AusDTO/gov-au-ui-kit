@@ -16,7 +16,8 @@ var gulp = require('gulp'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
     zip = require('gulp-zip'),
-    wrap = require('gulp-wrap')
+    wrap = require('gulp-wrap'),
+    imagemin = require('gulp-imagemin')
     ;
 
 var paths = {
@@ -119,6 +120,7 @@ gulp.task('ui-kit.min.js', function () {
 });
 gulp.task('ui-kit.img', ['svg2png'], function () {
     return gulp.src(paths.images)
+        .pipe(imagemin())
         .pipe(gulp.dest(paths.outputAssets + '/img/'));
 });
 
