@@ -4,22 +4,23 @@ We want to include ui-kit as the raw dependency in [DTO Dashboards](https://gith
 
 We did this by installing the module as an npm and including parts as granularly as possible.
 
-
 ## Installation steps
 
-1. Install gov-au-ui-kit as an npm from the tag release
+Install gov-au-ui-kit as an npm from the tag release:
 
-package.json
-```
+`package.json`:
+
+```json
 deps: {
   "gov-au-ui-kit": "git@github.com:AusDTO/gov-au-ui-kit.git#1.7.4",
 }
 ```
 
-2. Include node_modules in Sass compile path
+Next, include node_modules in Sass compile path:
 
-gulpfile.js
-```
+`gulpfile.js`:
+
+```javascript
 var path = require('path');
 var sass = require('gulp-sass');
 
@@ -38,9 +39,10 @@ gulp.task('sass', function() {
 });
 ```
 
-3. Duplicate ui-kit's import file in our local project, make sure you save it as a partial instead of an import file (prefixed filename with _)
+Next, duplicate ui-kit's import file in our local project, make sure you save it as a partial instead of an import file (prefixed filename with `_`)
 
-$ dto-dashboard/lib/assets/src
+`$ dto-dashboard/lib/assets/src`
+
 ```
 styles
 ├── main.scss
@@ -51,10 +53,11 @@ styles
     └── neat
 ```
 
-4. Update the duplicate file's file paths so they make sense for our project. And include or exclude which partials we need from ui-kit. This means we will get the ui-kit inside the Sass compilation scope so I can access variables, mixins and all the elements that ui-kit offers.
+Finally, update the duplicate file's file paths so they make sense for our project. And include or exclude which partials we need from ui-kit. This means we will get the ui-kit inside the Sass compilation scope so I can access variables, mixins and all the elements that ui-kit offers.
 
-dto-dashboard/lib/assets/src/styles/_vendor/gov-au-ui-kit/_ui-kit.scss
-```
+`dto-dashboard/lib/assets/src/styles/_vendor/gov-au-ui-kit/_ui-kit.scss`:
+
+```scss
 /*
 
 UI-Kit version: 1.7.4
@@ -89,7 +92,6 @@ UI-Kit version: 1.7.4
 
 //@import 'gov-au-ui-kit/assets/sass/ie';
 //@import 'gov-au-ui-kit/assets/sass/print';
-
 ```
 
-5. Now we can run `gulp sass` as usual and the ui-kit will compile into our single .css export resource
+Now we can run `gulp sass` as usual and the ui-kit will compile into our single `.css` export resource.
