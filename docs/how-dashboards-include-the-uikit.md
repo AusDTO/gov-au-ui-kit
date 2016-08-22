@@ -1,6 +1,6 @@
 # How dto-dashboards include the gov-au-ui-kit
 
-We want to include ui-kit as the raw dependency in Dashboards so we get access to Sass scope and individual JS modules and images so we can include them in any combination, extend them to suit our project or use a different version of Bourbon or Neat.
+We want to include ui-kit as the raw dependency in [DTO Dashboards](https://github.com/AusDTO/dto-dashboard) so we get access to Sass scope and individual JS modules and images so we can include them in any combination, extend them to suit our project or use a different version of Bourbon or Neat.
 
 We did this by installing the module as an npm and including parts as granularly as possible.
 
