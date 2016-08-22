@@ -53,7 +53,7 @@ Style guide: Link styles.1 Hover links
 }
 
 @mixin link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
-  $link-disabled-colour: transparentize($text-colour, 0.4);
+  $link-disabled-colour: transparentize($text-colour, 0.3);
   color: $text-colour;
 
   a {
@@ -189,7 +189,7 @@ Style guide: Link styles.1 Hover links
 
 // move these bad boys to their right contextual places
 
-.content-main,
+main > article,
 footer[role='contentinfo'] {
   @include link-colours($non-black, $light-aqua, $non-black);
   @include button-colours($button-bg-colour, $button-bg-colour--hover, $button-bg-colour--active, $button-text-colour);
