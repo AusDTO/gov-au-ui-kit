@@ -12,7 +12,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     del = require('del'),
     runSequence = require('run-sequence'),
-    inline = require('./lib/gulp-scss-inline.js'),
     connect = require('gulp-connect'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
@@ -42,6 +41,20 @@ var paths = {
 var options = {
     autoprefixer: {
         browsers: ['last 2 versions', 'ie 8-10']
+    },
+    sass: {
+        functions: {
+            'image-url($img)': function(img) {
+              var sass = require('node-sass');
+              var String = sass.types.String;
+              return new String('/latest/img/' + img.getValue());
+            }
+        }
+    },
+    webpack: {
+        output: {
+            filename: 'ui-kit.js',
+        }
     }
 };
 
@@ -55,32 +68,20 @@ gulp.task('lint', function () {
 });
 
 gulp.task('ui-kit', function () {
-    gulp.start(['ui-kit.scss', 'ui-kit.js']);
+    gulp.start(['ui-kit.scss', 'ui-kit.js', 'ui-kit.img']);
 });
 
-gulp.task('ui-kit.scss', ['svg2png'], function () {
+gulp.task('ui-kit.scss', function () {
     return gulp.src(paths.scss)
-        .pipe(sass({
-            functions: {
-                'asset-data-url': inline('./')
-            }
-        }).on('error', sass.logError))
+        .pipe(sass(options.sass).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
         .pipe(gitVersion())
-        .pipe(gulp.dest(paths.outputAssets));
-});
-gulp.task('ui-kit.icons', ['svg2png'], function () {
-    return gulp.src(paths.images)
         .pipe(gulp.dest(paths.outputAssets));
 });
 
 gulp.task('ui-kit.js', function () {
     return gulp.src(paths.js)
-        .pipe(webpack({
-            output: {
-                filename: 'ui-kit.js',
-            }
-        }))
+        .pipe(webpack(options.webpack))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
@@ -95,7 +96,7 @@ gulp.task('ui-kit.min', function () {
     gulp.start(['ui-kit.min.scss', 'ui-kit.min.js']);
 });
 
-gulp.task('ui-kit.min.scss', ['ui-kit.scss', 'ui-kit.icons', 'svg2png'], function () {
+gulp.task('ui-kit.min.scss', ['ui-kit.scss'], function () {
     return gulp.src([paths.outputCSS, '!./**/*.min.css'])
         .pipe(cssnano())
         .pipe(gitVersion())
@@ -116,18 +117,18 @@ gulp.task('ui-kit.min.js', function () {
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
-gulp.task('ui-kit.img', function () {
+gulp.task('ui-kit.img', ['svg2png'], function () {
     return gulp.src(paths.images)
         .pipe(gulp.dest(paths.outputAssets + '/img/'));
 });
 
-gulp.task('ui-kit.img.zip', ['ui-kit.min.scss'], function () {
+gulp.task('ui-kit.img.zip', ['ui-kit.img'], function () {
     return gulp.src(paths.outputAssets + '/img/**/*')
         .pipe(zip('images.zip'))
         .pipe(gulp.dest(paths.outputAssets));
 });
 
-gulp.task('svg2png', ['ui-kit.img'], function () {
+gulp.task('svg2png', function () {
     return gulp.src(paths.assetsDir + '/img/icons/*.svg')
         .pipe(svg2png())
         .pipe(gulp.dest(paths.outputAssets + '/img/icons/'));
@@ -181,11 +182,7 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
 
 gulp.task('styleguide.scss', ['svg2png'], function () {
     return gulp.src(paths.kssScssDir)
-        .pipe(sass({
-            functions: {
-                'asset-data-url': inline('./')
-            }
-        }).on('error', sass.logError))
+        .pipe(sass(options.sass).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.kssCssDir));
