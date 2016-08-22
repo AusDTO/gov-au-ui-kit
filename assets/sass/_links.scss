@@ -87,60 +87,60 @@ Style guide: Link styles.1 Hover links
         background-size: (0.75 * $medium-spacing) auto;
       }
     }
+  }
 
-    /*
-    See more link
+  /*
+  See more link
 
-    Use see more links at the end of [lists](section-list-styles.html),
-    to take the user to a index page of all items.
+  Use see more links at the end of [lists](section-list-styles.html),
+  to take the user to a index page of all items.
 
-    Markup: <a class="see-more" href="#">See more</a>
+  Markup: <a class="see-more" href="#">See more</a>
 
-    <details data-label="placeholder-link-accessibility" aria-expanded="false">
-      <summary>Accessibility &amp; browser testing</summary>
-      <div class="accordion-panel">
-      <strong>Passed</strong>:
-        <ul>
-          <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-          <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-        </ul>
-      <strong>Untested</strong>:
-        <ul>
-          <li>WCAG:AA manual</li>
-          <li>Browser support &mdash; automated and manual</li>
-        </ul>
-      </div>
-    </details>
+  <details data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
 
-    Style guide: Link styles.2 See more link
-    */
+  Style guide: Link styles.2 See more link
+  */
 
-    &.see-more {
-      display: inline-block;
-      position: relative;
-      margin-right: $base-spacing;
-      font-weight: $heading-font-weight;
-      color: $button-bg-colour;
+  .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: $base-spacing;
+    font-weight: $heading-font-weight;
+    color: $button-bg-colour;
 
-      &::after {
-        @extend %icon-arrow-right--aqua;
+    &::after {
+      @extend %icon-arrow-right--aqua;
 
-        content: '';
-        position: absolute;
-        top: 0;
-        right: -($medium-spacing);
-        display: block;
-        width: $medium-spacing;
-        height: $medium-spacing;
-        background-repeat: no-repeat;
-        background-position: right $tiny-spacing;
-        background-size: (0.8 * $small-spacing) auto;
-      }
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -($medium-spacing);
+      display: block;
+      width: $medium-spacing;
+      height: $medium-spacing;
+      background-repeat: no-repeat;
+      background-position: right $tiny-spacing;
+      background-size: (0.8 * $small-spacing) auto;
+    }
 
-      &:hover,
-      &:focus {
-        color: $hover-text-colour;
-      }
+    &:hover,
+    &:focus {
+      color: $hover-text-colour;
     }
   }
 
