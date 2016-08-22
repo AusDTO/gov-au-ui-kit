@@ -53,7 +53,7 @@ Style guide: Link styles.1 Hover links
 }
 
 @mixin link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
-  $link-disabled-colour: transparentize($text-colour, 0.4);
+  $link-disabled-colour: transparentize($text-colour, 0.3);
   color: $text-colour;
 
   a {
