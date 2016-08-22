@@ -11,6 +11,7 @@
 #### UI-Kit changes
 
 - Added `.ua-notification` class for issuing top-of-page User Agent (browser) notifications (eg for browsers we have difficulty supporting) in the `_accessibility.scss` partial.
+- Link styles are now applied to any `article` that is a direct child of the page's `main` element
 
 ### 1.7.4 - 2016-08-17
 
