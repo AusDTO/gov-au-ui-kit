@@ -1,23 +1,29 @@
 # Browser support
 
+## Introduction
+
 The UI-Kit team needs to support all of our users, regardless of their device, web browser or other user agent.
+
+Alongside accessibility, extensive browser and device support is a legal requirement under the <a href="https://www.legislation.gov.au/Details/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>, requiring equal access to information on laws and government programs.
+
+## Browser support matrix
 
 The support levels will be revised when needed to better meet user needs.
 
 We initially defined these levels using analytics data of various major *.gov.au sites.
 
-| Browser        | Device       | Minimum version | Support level   | Test status  |
-|----------------|-----------------|-----------------|------------|----------|
-| Chrome         | Desktop: ?      | 49              | Advanced   | Tested   |
-| Firefox        | Desktop: ?      | 40              | Advanced   | Tested   |
-| Edge           | Desktop         | -               | Advanced   | Untested |
-| IE             | Desktop         | 9+              | Advanced   | Untested |
-| IE             | Desktop         | <9              | Functional | Untested |
-| Safari         | Desktop         | 8               | Advanced   | Untested |
-| iOS Safari     | iPhone?         | 8.4             | Advanced   | Untested |
-| Chrome Android | ?               | 51              | Advanced   | Untested |
-| IE Mobile      | ?               | 11              | Advanced   | Untested |
-| UC Browser     | ?               | 10.X            | Functional | Untested |
+| Browser        | Device       | Minimum version    | Support level  | Test status  |
+|----------------|-----------------|-----------------|----------------|--------------|
+| Chrome         | Desktop: ?      | 49              | Advanced       | Tested       |
+| Firefox        | Desktop: ?      | 40              | Advanced       | Tested       |
+| Edge           | Desktop         | -               | Advanced       | Untested     |
+| IE             | Desktop         | 9+              | Advanced       | Untested     |
+| IE             | Desktop         | <9              | Functional     | Untested     |
+| Safari         | Desktop         | 8               | Advanced       | Untested     |
+| iOS Safari     | iPhone?         | 8.4             | Advanced       | Untested     |
+| Chrome Android | ?               | 51              | Advanced       | Untested     |
+| IE Mobile      | ?               | 11              | Advanced       | Untested     |
+| UC Browser     | ?               | 10.X            | Functional     | Untested     |
 
 There are other browsers that have full or functional support.
 
