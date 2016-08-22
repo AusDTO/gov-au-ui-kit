@@ -4,7 +4,7 @@
 
 The UI-Kit team needs to support all of our users, regardless of their device, web browser or other user agent.
 
-Alongside accessibility, extensive browser and device support is a legal requirement under the <a href="https://www.legislation.gov.au/Details/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>, requiring equal access to information on laws and government programs.
+Alongside accessibility, extensive browser and device support is a legal requirement under the <a href="https://www.legislation.gov.au/Latest/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>, requiring equal access to information on laws and government programs.
 
 ## Browser support matrix
 
