@@ -49,6 +49,7 @@ When implementing accordions:
 Style guide: Accordions.1 Usability
 */
 
+// New CSS Experiment
 details,
 .accordion {
   display: block;
@@ -69,26 +70,18 @@ summary {
   height: auto;
   margin: 0;
   padding: $small-spacing;
-  border-bottom: none;
   border-top-right-radius: $tiny-border-radius;
   border-top-left-radius: $tiny-border-radius;
-  background-color: $lighter-aqua;
-  color: $darker-aqua;
   text-align: left;
   font-weight: $bold-font-weight;
   cursor: pointer;
   transition: background-color $transition-timing-fast $transition-easing;
+  color: $body-text-colour;
+  background-color: $green;
 
   // Remove vanilla summary styles.
   &::-webkit-details-marker {
     display: none;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-    background-color: $light-aqua;
-    color: $non-black;
   }
 
   &::before {
@@ -111,6 +104,10 @@ summary {
     }
   }
 
+  &:focus {
+    outline: none;
+  }
+
 }
 
 .accordion-panel {
@@ -120,11 +117,9 @@ summary {
   height: auto;
   overflow: hidden;
   padding: $base-spacing $base-spacing $small-spacing;
-  border: solid $small-spacing $lighter-aqua;
-  border-top: none;
+  transition: padding $transition-timing $transition-easing, border $transition-timing $transition-easing, position $transition-timing $transition-easing;
   border-bottom-right-radius: $tiny-border-radius;
   border-bottom-left-radius: $tiny-border-radius;
-  transition: padding $transition-timing $transition-easing, border $transition-timing $transition-easing, position $transition-timing $transition-easing;
 
   [aria-expanded='false'] & {
     z-index: -1;
@@ -138,4 +133,41 @@ summary {
     margin-top: 0;
   }
 
+}
+
+// ACCORDION VARIATIONS
+
+@mixin accordion-styles ($summary-bg, $summary-color, $summary-hover-bg, $summary-hover-color, $summary-border, $panel-border) {
+
+  summary {
+    background-color: $summary-bg;
+    color: $darker-aqua;
+    border-bottom: #{$summary-border};
+    border-top: #{$summary-border};
+
+    &:hover {
+      background-color: $summary-hover-bg;
+      color: $summary-hover-color;
+    }
+  }
+
+  .accordion-panel {
+    border: #{$panel-border};
+  }
+}
+
+
+
+details {
+
+  &.accordion-content {
+    margin-top: -1px;
+    @include accordion-styles($background-secondary-colour, $non-black, $light-grey, $non-black, '1px solid #{$light-grey}', 0);
+    font-size: rem(20);
+  }
+
+  &.accordion-forms {
+    @include accordion-styles($lighter-aqua, $darker-aqua, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}');
+    border-top: none;
+  }
 }
