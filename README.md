@@ -38,11 +38,13 @@ The framework is built on a solid accessible HTML foundation. We follow a philos
 
 #### Accessibility compliance - roadmap to WCAG 2.0 (Level AA)
 
-[x] Automated testing via HTML_CodeSniffer (WCAG 2.0 criteria) & Nu HTML Checker (HTML validation)
-[ ] Manual evaluation with [Wave by WebAIM](http://wave.webaim.org/)
-[ ] Manual checking of page structure, content and keyboard navigation
-[ ] Testing the UI Kit with users and assistive technologies
-[ ] Preparing for and carrying out an audit
+|Status|Task|
+|----|------|
+|Done|Automated testing via HTML_CodeSniffer (WCAG 2.0 criteria) & Nu HTML Checker (HTML validation)|
+|Pending|Manual evaluation with [Wave by WebAIM](http://wave.webaim.org/)|
+|Pending|Manual checking of page structure, content and keyboard navigation|
+|Pending|Testing the UI Kit with users and assistive technologies|
+|Pending|Preparing for and carrying out an audit|
 
 ### Browser support
 
