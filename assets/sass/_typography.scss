@@ -13,7 +13,7 @@ Typeface
 
 We are currently testing the open source <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans family</a> in 3 styles.
 
-Open Sans is a monspace sans-serif font selected for accessibility.
+Open Sans is a sans-serif font selected for accessibility.
 
 <div class="guide-example--type"><h3>Open Sans regular 400</h3>
   <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
@@ -57,9 +57,15 @@ Style guide: Typography.1 Typeface.1 Font stacks
 /*
 Accessibility
 
-- Don't write in all *italics* or CAPITALS.
-- Avoid using **bold**. Bolding a few words may help scannability, **but blocks of bold are harder to read**.
 - Use just 1 font (Open Sans).
+- Write short sentences. Make line length less than 75 characters. Use grid boxes to limit length.
+- Set `line-height` (leading) to at least 1.5.
+- Use sentence case for most content. For example:
+  - <a href="#" role="button">Sign up</a>
+  - <button disabled>Log out</a>
+- Use <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/t.html#titles" rel="external">title case for titles</a> like Department of Communications and the Arts.
+- Don't write in all *italics* or CAPITALS.
+- Avoid using **bold**. Bolding a word can help scannability. **But blocks of bold text are hard to read**.
 
 Style guide: Typography.1 Typeface.2 Accessibility
 */
