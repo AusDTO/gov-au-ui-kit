@@ -32,19 +32,19 @@ For a full list of features see the [CHANGELOG](CHANGELOG.md).
 
 ### Accessibility
 
-UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
-
 The framework is built on a solid accessible HTML foundation. We follow a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> to produce accessible components by default.
 
-#### Accessibility compliance - roadmap to WCAG 2.0 (Level AA)
+UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
 
-|Status|Task|
-|----|------|
-|Done|Automated testing via HTML_CodeSniffer (WCAG 2.0 criteria) & Nu HTML Checker (HTML validation)|
-|Pending|Manual evaluation with [Wave by WebAIM](http://wave.webaim.org/)|
-|Pending|Manual checking of page structure, content and keyboard navigation|
-|Pending|Testing the UI Kit with users and assistive technologies|
-|Pending|Preparing for and carrying out an audit|
+We use automated testing:
+- WCAG 2.0 criteria using <a href="http://squizlabs.github.io/HTML_CodeSniffer/" rel="external">HTML_CodeSniffer</a>
+- HTML validation using <a href="http://validator.github.io/validator/" rel="external">Nu HTML Checker</a>.
+
+We are working on:
+- manual evaluation using <a href="http://wave.webaim.org/" rel="external">Wave by WebAIM</a>
+- manual checking of page structure, content and keyboard navigation
+- testing with users and assistive technologies
+- an audit.
 
 ### Browser support
 
