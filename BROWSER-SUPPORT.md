@@ -1,7 +1,5 @@
 # Browser support
 
-## Introduction
-
 The UI-Kit team needs to support all of our users, regardless of their device, web browser or other user agent.
 
 Alongside accessibility, extensive browser and device support is a legal requirement under the <a href="https://www.legislation.gov.au/Latest/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>, requiring equal access to information on laws and government programs.
@@ -10,7 +8,7 @@ Alongside accessibility, extensive browser and device support is a legal require
 
 The support levels will be revised when needed to better meet user needs.
 
-We initially defined these levels using analytics data of various major *.gov.au sites.
+We initially defined these levels using analytics data from various major *.gov.au sites.
 
 | Browser        | Device       | Minimum version    | Support level  | Test status  |
 |----------------|-----------------|-----------------|----------------|--------------|
@@ -52,10 +50,10 @@ As we perform browser testing we will provide component-specific documentation. 
 ## Principles
 
 1. Support basic access and functionality in the browsers and devices of all of our users.
-2. Build a solid semantic HTML5 foundation — no CSS or JavaScript is required for basic content and functionality.
-3. <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">Progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> — building the basic foundation for the lowest common denominator then enhancing;  instead of a managed degraded experience for older browsers (fault tolerance).
+2. Build a solid semantic HTML5 foundation. No CSS or JavaScript needed for basic content and functionality.
+3. <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">Progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a>. Build the basic foundation for the lowest common denominator then enhance &mdash; instead of a managed degraded experience for older browsers (fault tolerance).
 
-We define ‘support’ both as:
+We define ‘support’ as:
 
 - making things usable before they go live
 - improving and fixing issues found in production environments.
