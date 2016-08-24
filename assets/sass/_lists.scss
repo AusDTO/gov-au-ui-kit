@@ -190,6 +190,9 @@ Style guide: List styles.4 Highlighted word style
 
   > li {
 
+    width: 100%;
+    max-width: none;
+
     @include media($tablet) {
       display: flex;
     }
