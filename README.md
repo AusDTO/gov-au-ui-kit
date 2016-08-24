@@ -75,25 +75,24 @@ You should use this with the <a href="http://content-style-guide.apps.staging.di
 We have a build process for the development of the framework which uses gulp on node.js.
 
 To build it yourself, begin by installing the system dependencies:
-- Node.js v5.0.0
+- Node.js v5.0.0+
 
 Install node package dependencies:
 
 ```
-npm -g install gulp
 npm install
 ```
 
 Run a build:
 
 ```
-gulp build
+npm run-script build
 ```
 
-You can automate builds:
+Run a build with livereloading:
 
 ```
-gulp serve
+npm start
 ```
 
 Run accessibility tests:

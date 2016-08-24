@@ -17,7 +17,9 @@
     "js"
   ],
   "scripts": {
-    "test": "node test/pa11y"
+    "test": "node test/pa11y",
+    "start": "gulp serve",
+    "build": "gulp"
   },
   "sasslintConfig": "./sass-lint.yml",
   "preferGlobal": true,
