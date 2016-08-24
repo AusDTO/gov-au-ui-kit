@@ -4,26 +4,42 @@ The UI-Kit team needs to support all of our users, regardless of their device, w
 
 Equal access to information on laws and government programs is a legal requirement under the <a href="https://www.legislation.gov.au/Latest/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>.
 
-## Browser support matrix
-
 The support levels will be revised when needed to better meet user needs.
 
-We initially defined these levels using analytics data from various major *.gov.au sites.
+We initially defined these levels using analytics data from various major \*.gov.au sites.
 
-| Browser        | Device       | Minimum version    | Support level  | Test status  |
-|----------------|-----------------|-----------------|----------------|--------------|
-| Chrome         | Desktop: ?      | 49              | Advanced       | Tested       |
-| Firefox        | Desktop: ?      | 40              | Advanced       | Tested       |
-| Edge           | Desktop         | -               | Advanced       | Untested     |
-| IE             | Desktop         | 9+              | Advanced       | Untested     |
-| IE             | Desktop         | <9              | Functional     | Untested     |
-| Safari         | Desktop         | 8               | Advanced       | Untested     |
-| iOS Safari     | iPhone?         | 8.4             | Advanced       | Untested     |
-| Chrome Android | ?               | 51              | Advanced       | Untested     |
-| IE Mobile      | ?               | 11              | Advanced       | Untested     |
-| UC Browser     | ?               | 10.X            | Functional     | Untested     |
+## Mobile browsers
 
-There are other browsers that have full or functional support.
+| Browser        | Platforms      | Minimum version | Test status           |
+|----------------|----------------|-----------------|-----------------------|
+| Chrome         | Android, iOS   | 21              | Tested (Android only) |
+| Firefox        | Android, iOS   | 28              | Untested              |
+| Safari         | iOS            | 3.2             | Untested              |
+| Android browser| Android        | 2.1             | Untested              |
+| IE             | Windows Mobile | 10              | Untested              |
+
+Minimum version based on [support for CSS Flexible Box Layout Modules](http://caniuse.com/#feat=flexbox)
+
+## Desktop
+
+| Browser           | Platforms     | Test status |
+|-------------------|---------------|-------------|
+| Chrome            | Windows, OS X | Tested      |
+| Firefox           | Windows, OS X | Tested      |
+| Safari            | OS X          | Untested    |
+| Opera             | Windows, OS X | Untested    |
+| Yandex            | Windows, OS X | Untested    |
+| Edge              | Windows       | Untested    |
+| Internet Explorer | Windows       | Tested      |
+
+All browsers listed are latest stable release.
+
+## Internet Explorer
+
+| Version      | Support level       |
+|--------------|---------------------|
+| IE 9 & older | Functional (no CSS) |
+| IE 10        | Supported           |
 
 ## Unsupported browsers
 
