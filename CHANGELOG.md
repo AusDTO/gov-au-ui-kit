@@ -2,7 +2,20 @@
 
 ## UI Kit "Kraken"
 
-### `develop` as of 2016-08-15
+### `develop` as of 2016-08-22
+
+#### misc
+
+- IE conditional styling statements added for the gov.au demo: `head` in `examples/` edited so that ≤IE9 receives no styling except a warning message; ≥IE9 gets styling. These IE conditionals are solely for demo purposes and will be removed in the future.
+
+#### UI-Kit changes
+
+- Added `.ua-notification` class for issuing top-of-page User Agent (browser) notifications (eg for browsers we have difficulty supporting) in the `_accessibility.scss` partial.
+- Link styles are now applied to any `article` that is a direct child of the page's `main` element
+- Removed inline icon images from `ui-kit.css` & `ui-kit.min.css` and include them in `/latest/images/zip` instead
+- Images (SVG & PNG) are optimised before being zipped and saved to `/latest/images.zip`
+
+### 1.7.4 - 2016-08-17
 
 #### Accessibility testing
 

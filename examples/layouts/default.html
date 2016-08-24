@@ -26,7 +26,10 @@
     });
   </script>
 
-  <link rel="stylesheet" type="text/css" href="../latest/ui-kit.css"/>
+  <!-- Yellow UA msg for anything older than IE9. Please remove me post end-Aug demo. -->
+  <!-- There is a .ua-notification in _accessibility. This should remain post end-Aug. -->
+  <!--[if gte IE 9 | !IE ]><!--><link rel="stylesheet" type="text/css" href="../latest/ui-kit.css"/><!--<![endif]-->
+  <!--[if lt IE 9]><style>body{margin:0; font-family:sans-serif;}.ua-notification {display: block;padding: 0.8em;text-align: center;background-color: #f9c642;color: #313131;font-size: rem(17); margin-top:0;}</style><![endif]-->
 
   <!--[if lt IE 9]>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -38,6 +41,9 @@
 
 </head>
 <body>
+
+  <!-- Yellow UA msg for anything older than IE9. Please remove me post end-Aug demo. -->
+  <!-- Compatibility message --><!--[if lt IE 9]><p class="ua-notification">GOV.AU works better on a newer web browser (the software you use to access the internet). We’re improving how it works in your browser.</p><![endif]-->
 
   <nav class="skip-to">
     <a href="#content">Skip to main content</a> <a href="#nav">Skip to section navigation</a>
