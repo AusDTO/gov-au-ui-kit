@@ -162,7 +162,7 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    padding: $base-spacing 0;
+    padding: 4% 0; //Was `padding: $base-spacing 0;` changed to match gutter
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
   }
