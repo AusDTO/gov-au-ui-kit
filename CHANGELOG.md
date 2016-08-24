@@ -20,6 +20,10 @@
 
 - Added guidance for font usage and accessibility (documented under *§ Typography - Typeface*).
 
+#### Bugfixes
+
+- Fixed Header title image not fluid-width on small screens
+
 ### 1.7.4 - 2016-08-17
 
 #### Accessibility testing
