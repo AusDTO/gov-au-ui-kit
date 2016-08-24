@@ -77,7 +77,6 @@ summary {
   cursor: pointer;
   transition: background-color $transition-timing-fast $transition-easing;
   color: $body-text-colour;
-  background-color: $green;
 
   // Remove vanilla summary styles.
   &::-webkit-details-marker {
@@ -137,22 +136,23 @@ summary {
 
 // ACCORDION VARIATIONS
 
-@mixin accordion-styles ($summary-bg, $summary-color, $summary-hover-bg, $summary-hover-color, $summary-border, $panel-border) {
+@mixin accordion-styles ($summary-bg, $summary-colour, $summary-hover-bg, $summary-hover-colour, $summary-border, $panel-border, $panel-border-top) {
 
   summary {
     background-color: $summary-bg;
-    color: $darker-aqua;
+    color: $summary-colour;
     border-bottom: #{$summary-border};
     border-top: #{$summary-border};
 
     &:hover {
       background-color: $summary-hover-bg;
-      color: $summary-hover-color;
+      color: $summary-hover-colour;
     }
   }
 
   .accordion-panel {
     border: #{$panel-border};
+    border-top: $panel-border-top;
   }
 }
 
@@ -162,12 +162,11 @@ details {
 
   &.accordion-content {
     margin-top: -1px;
-    @include accordion-styles($background-secondary-colour, $non-black, $light-grey, $non-black, '1px solid #{$light-grey}', 0);
+    @include accordion-styles($background-secondary-colour, $non-black, $light-grey, $non-black, '1px solid #{$light-grey}', 0, none);
     font-size: rem(20);
   }
 
   &.accordion-forms {
-    @include accordion-styles($lighter-aqua, $darker-aqua, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}');
-    border-top: none;
+    @include accordion-styles($lighter-aqua, $darker-aqua, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}', none);
   }
 }
