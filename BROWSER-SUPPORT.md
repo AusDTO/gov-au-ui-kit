@@ -20,9 +20,9 @@ We initially defined these levels using analytics data from various major \*.gov
 
 Minimum version based on [support for CSS Flexible Box Layout Modules](http://caniuse.com/#feat=flexbox)
 
-## Desktop
+## Desktop browsers
 
-| Browser           | Platforms     | Test status |
+| Browser           | Platforms     | Tested for (Advanced Support)[#advanced-support] |
 |-------------------|---------------|-------------|
 | Chrome            | Windows, OS X | Tested      |
 | Firefox           | Windows, OS X | Tested      |
@@ -30,16 +30,10 @@ Minimum version based on [support for CSS Flexible Box Layout Modules](http://ca
 | Opera             | Windows, OS X | Untested    |
 | Yandex            | Windows, OS X | Untested    |
 | Edge              | Windows       | Untested    |
-| Internet Explorer | Windows       | Tested      |
+| IE 10+            | Windows       | Tested      |
+| IE 9 & older      | Windows       | Tested (Functional support only)[#functional-support] |
 
-All browsers listed are latest stable release.
-
-## Internet Explorer
-
-| Version      | Support level       | Test status |
-|--------------|---------------------|-------------|
-| IE 9 & older | Functional (no CSS) | Tested      |
-| IE 10+       | Supported           | Tested      |
+All browsers listed are latest stable release, except Internet Explorer.
 
 ## Unsupported browsers
 
