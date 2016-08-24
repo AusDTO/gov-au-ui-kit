@@ -36,10 +36,10 @@ All browsers listed are latest stable release.
 
 ## Internet Explorer
 
-| Version      | Support level       |
-|--------------|---------------------|
-| IE 9 & older | Functional (no CSS) |
-| IE 10+       | Supported           |
+| Version      | Support level       | Test status |
+|--------------|---------------------|-------------|
+| IE 9 & older | Functional (no CSS) | Tested      |
+| IE 10+       | Supported           | Tested      |
 
 ## Unsupported browsers
 
