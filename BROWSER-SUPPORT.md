@@ -45,12 +45,12 @@ As we perform browser testing we will provide component-specific documentation. 
 
 * All (or most) documented features.
 * Advanced functionality and behaviour.
-* Advanced design.
+* Advanced design using JavaScript and CSS.
 
 ## Principles
 
 1. Support basic access and functionality in the browsers and devices of all of our users.
-2. Build a solid semantic HTML5 foundation. No CSS or JavaScript needed for basic content and functionality.
+2. Build a solid semantic HTML5 foundation.
 3. <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">Progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a>. Build the basic foundation for the lowest common denominator then enhance &mdash; instead of a managed degraded experience for older browsers (fault tolerance).
 
 We define ‘support’ as:
