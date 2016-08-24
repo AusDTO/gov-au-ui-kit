@@ -2,6 +2,13 @@
 
 ## UI Kit "Kraken"
 
+### `develop` (unreleased)
+
+#### UI-Kit changes
+
+- Desktop: Content area is now 12 columns wide to accommodate larger block elements. In response basic text elements `h1-h6, p, li, dl` now have a max-width for readability. See `_grid-layout.scss`
+- Desktop: Added `.content-full-width` as a method of making basic text elements fill to 12 columns if required (see above).
+
 ### 1.7.5 - 2016-08-25
 
 #### UI-Kit changes
