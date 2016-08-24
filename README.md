@@ -99,7 +99,7 @@ gulp serve
 Run accessibility tests:
 
 ```
-node test/pa11y.js
+npm test
 ```
 
 **Note:** Check [Pa11y's requirements](https://github.com/pa11y/pa11y#requirements) to make sure you have the necessary dependencies installed to run the automated accessibility tests. You will need to reinstall node package dependencies (`npm -g install gulp` & `npm install`) after adding Pa11y.

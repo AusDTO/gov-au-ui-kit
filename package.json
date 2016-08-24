@@ -16,6 +16,9 @@
     "scss",
     "js"
   ],
+  "scripts": {
+    "test": "node test/pa11y"
+  },
   "sasslintConfig": "./sass-lint.yml",
   "preferGlobal": true,
   "license": "MIT",

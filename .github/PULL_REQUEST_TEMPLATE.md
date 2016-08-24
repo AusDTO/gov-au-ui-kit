@@ -26,6 +26,6 @@ Include a high-level description for what the pull request fixes and links to Gi
   - [ ] Cross-browser tested against standard browser matrix (TBD)
   - [ ] Tested on multiple devices (TBD)
   - [ ] HTML5 validation (CircleCI)
-  - [ ] Accessibility testing & WCAG2 compliance (`node test/pa11y.js`)
+  - [ ] Accessibility testing & WCAG2 compliance (`npm test`)
 - [ ] Stakeholder/PO review
 - [ ] CHANGELOG updated
