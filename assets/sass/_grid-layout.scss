@@ -140,28 +140,17 @@ main {
       @include media($desktop) {
         @include span-columns(12 of 16);
 
-        //Elements which should have shorter line-length for readability.
         h1,
         h2,
         h3,
         h4,
         h5,
         p,
-        ul,
-        ol,
         dl {
           max-width: 38rem;
         }
 
-        //Elements which are one of the above but should be full width.
-        .content-full-width,
-        .list-horizontal,
-        .list-vertical,
-        .list-vertical--thirds,
-        .list-vertical--forths,
-        .inline-tab-nav ul,
-        .inline-links,
-        .inline-links--inverted {
+        .content-full-width {
           max-width: none;
           width: 100%;
         }
