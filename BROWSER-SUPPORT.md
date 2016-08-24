@@ -10,7 +10,7 @@ We initially defined these levels using analytics data from various major \*.gov
 
 ## Mobile browsers
 
-| Browser        | Platforms      | Minimum version | Test status           |
+| Browser        | Platforms      | Minimum version | Advanced support status              |
 |----------------|----------------|-----------------|-----------------------|
 | Chrome         | Android, iOS   | 21              | Tested (Android only) |
 | Firefox        | Android, iOS   | 28              | Untested              |
@@ -18,11 +18,11 @@ We initially defined these levels using analytics data from various major \*.gov
 | Android browser| Android        | 2.1             | Untested              |
 | IE             | Windows Mobile | 10              | Untested              |
 
-Minimum version based on [support for CSS Flexible Box Layout Modules](http://caniuse.com/#feat=flexbox)
+Minimum version based on [support for CSS Flexible Box layout modules](http://caniuse.com/#feat=flexbox).
 
 ## Desktop browsers
 
-| Browser           | Platforms     | Tested for (Advanced Support)[#advanced-support] |
+| Browser           | Platforms     | Advanced support status |
 |-------------------|---------------|-------------|
 | Chrome            | Windows, OS X | Tested      |
 | Firefox           | Windows, OS X | Tested      |
@@ -30,8 +30,8 @@ Minimum version based on [support for CSS Flexible Box Layout Modules](http://ca
 | Opera             | Windows, OS X | Untested    |
 | Yandex            | Windows, OS X | Untested    |
 | Edge              | Windows       | Untested    |
-| IE 10+            | Windows       | Tested      |
-| IE 9 & older      | Windows       | Tested (Functional support only)[#functional-support] |
+| IE 10 & newer            | Windows       | Tested      |
+| IE 9 & older      | Windows       | Tested &mdash; functional support only  |
 
 All browsers listed are latest stable release, except Internet Explorer.
 
@@ -40,6 +40,12 @@ All browsers listed are latest stable release, except Internet Explorer.
 We don’t list unsupported devices and browsers.
 
 We are aiming for a solid HTML mobile-first foundation that provides functional support for the browsers and devices of all of our users.
+
+## Advanced support
+
+* All (or most) documented features.
+* Advanced functionality and behaviour.
+* Advanced design using JavaScript and CSS.
 
 ## Functional support
 
@@ -50,12 +56,6 @@ We are aiming for a solid HTML mobile-first foundation that provides functional 
 * JavaScript and CSS not necessarily required.
 
 As we perform browser testing we will provide component-specific documentation. This will specify what is critical and what provides advanced functionality.
-
-## Advanced support
-
-* All (or most) documented features.
-* Advanced functionality and behaviour.
-* Advanced design using JavaScript and CSS.
 
 ## Principles
 
