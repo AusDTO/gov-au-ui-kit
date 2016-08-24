@@ -13,6 +13,8 @@ Typeface
 
 We are currently testing the open source <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans family</a> in 3 styles.
 
+Open Sans is a sans-serif font selected for accessibility.
+
 <div class="guide-example--type"><h3>Open Sans regular 400</h3>
   <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
   abcdefghijklmnopqrstuvwxyz<br />
@@ -50,6 +52,21 @@ The font stacks should still achieve a high degree of coverage across a range of
 You need to load webfonts through the <a href="https://github.com/typekit/webfontloader" rel="external">Google Web Font Loader</a> via `<script>` to add Open Sans via the HTML `head`. This supports modern browsers and older versions of Internet Explorer.
 
 Style guide: Typography.1 Typeface.1 Font stacks
+*/
+
+/*
+Accessibility
+
+- Use just 1 font (Open Sans).
+- Make line length less than 75 characters. Use grid boxes to limit length.
+- Set `line-height` (leading) to at least 1.5 ([UI KIT uses 1.6](#guide-typography-3-spacing)).
+- <a href="http://content-style-guide.apps.staging.digital.gov.au/writing-for-the-web/3-structure-your-page-for-readability.html" rel="external">Write short sentences</a>. Aim for less than 25 words.
+- Use sentence case for most content. For example &lsquo;Sign up&rsquo; or &lsquo;Log out&rsquo; buttons.
+- Use <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/t.html#titles" rel="external">title case for titles</a> like Department of Communications and the Arts.
+- Don't write in all *italics* or CAPITALS.
+- Avoid using **bold**. Bolding a word can help scannability. **But blocks of bold text are hard to read**.
+
+Style guide: Typography.1 Typeface.2 Accessibility
 */
 
 $base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
