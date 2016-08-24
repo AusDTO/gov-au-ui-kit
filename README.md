@@ -75,28 +75,33 @@ You should use this with the <a href="http://content-style-guide.apps.staging.di
 We have a build process for the development of the framework which uses gulp on node.js.
 
 To build it yourself, begin by installing the system dependencies:
-- Node.js v5.0.0
+- Node.js v5.0.0+
 
 Install node package dependencies:
 
 ```
-npm -g install gulp
 npm install
 ```
 
 Run a build:
 
 ```
-gulp build
+npm run-script build
+```
+
+Run a build with livereloading:
+
+```
+npm start
 ```
 
 Run accessibility tests:
 
 ```
-node test/pa11y.js
+npm test
 ```
 
-*Note:* Check [Pa11y's requirements](https://github.com/pa11y/pa11y#requirements) to make sure you have the necessary dependencies installed to run the automated accessibility tests.
+**Note:** Check [Pa11y's requirements](https://github.com/pa11y/pa11y#requirements) to make sure you have the necessary dependencies installed to run the automated accessibility tests.
 
 The compiled style guide can be found at `./build/index.html` and the UI Kit CSS
 at `./build/latest/ui-kit.css`.

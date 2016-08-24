@@ -7,6 +7,7 @@
 #### misc
 
 - IE conditional styling statements added for the gov.au demo: `head` in `examples/` edited so that ≤IE9 receives no styling except a warning message; ≥IE9 gets styling. These IE conditionals are solely for demo purposes and will be removed in the future.
+- Updated `gulp` build commands to use `npm scripts` (documented in the [README](https://github.com/AusDTO/gov-au-ui-kit#build-the-guide-yourself))
 
 #### UI-Kit changes
 
@@ -19,7 +20,7 @@
 
 #### Accessibility testing
 
-Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `node test/pa11y.js`).
+Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `npm test`).
 
 #### UI-Kit changes
 
