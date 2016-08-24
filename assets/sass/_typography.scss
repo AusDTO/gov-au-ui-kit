@@ -379,6 +379,26 @@ h6 {
   }
 }
 
+.content-main {
+  @include media($desktop) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    li,
+    dl {
+      max-width: 38rem;
+    }
+
+    .content-full-width {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+
 // a {
 //   color: $link-colour;
 //   text-decoration: none;
