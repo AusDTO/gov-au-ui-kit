@@ -48,13 +48,13 @@ We are working on:
 - preparing for an audit of the framework.
 
 ### Browser support
+The [cross browser and device support](BROWSER-SUPPORT.md) table.
 
 We are working on:
 
 - automated browser testing as part of our build process
 - manual testing of all CSS, JS and markup
-- documenting browser support for each component
-- composing a browser support matrix.
+- documenting browser support for each component.
 
 ## What this isn't
 
