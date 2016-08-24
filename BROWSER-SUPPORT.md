@@ -39,7 +39,7 @@ All browsers listed are latest stable release.
 | Version      | Support level       |
 |--------------|---------------------|
 | IE 9 & older | Functional (no CSS) |
-| IE 10        | Supported           |
+| IE 10+       | Supported           |
 
 ## Unsupported browsers
 
