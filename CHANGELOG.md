@@ -2,12 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### `develop` as of 2016-08-22
-
-#### misc
-
-- IE conditional styling statements added for the gov.au demo: `head` in `examples/` edited so that ≤IE9 receives no styling except a warning message; ≥IE9 gets styling. These IE conditionals are solely for demo purposes and will be removed in the future.
-- Updated `gulp` build commands to use `npm scripts` (documented in the [README](https://github.com/AusDTO/gov-au-ui-kit#build-the-guide-yourself))
+### 1.7.5 - 2016-08-25
 
 #### UI-Kit changes
 
@@ -19,6 +14,8 @@
 #### Styleguide
 
 - Added guidance for font usage and accessibility (documented under *§ Typography - Typeface*).
+- IE conditional styling statements added for the gov.au demo: `head` in `examples/` edited so that ≤IE9 receives no styling except a warning message; ≥IE9 gets styling. These IE conditionals are solely for demo purposes and will be removed in the future.
+- Updated `gulp` build commands to use `npm scripts` (documented in the [README](https://github.com/AusDTO/gov-au-ui-kit#build-the-guide-yourself))
 
 #### Bugfixes
 
