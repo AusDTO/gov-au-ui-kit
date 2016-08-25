@@ -2,11 +2,30 @@
 
 ## UI Kit "Kraken"
 
+### 1.7.5 - 2016-08-25
+
+#### UI-Kit changes
+
+- Added `.ua-notification` class for issuing top-of-page User Agent (browser) notifications (eg for browsers we have difficulty supporting) in the `_accessibility.scss` partial.
+- Link styles are now applied to any `article` that is a direct child of the page's `main` element.
+- Removed inline icon images from `ui-kit.css` & `ui-kit.min.css` and include them in `/latest/images/zip` instead.
+- Images (SVG & PNG) are optimised before being zipped and saved to `/latest/images.zip`.
+
+#### Styleguide
+
+- Added guidance for font usage and accessibility (documented under *§ Typography - Typeface*).
+- IE conditional styling statements added for the gov.au demo: `head` in `examples/` edited so that ≤IE9 receives no styling except a warning message; ≥IE9 gets styling. These IE conditionals are solely for demo purposes and will be removed in the future.
+- Updated `gulp` build commands to use `npm scripts` (documented in the [README](https://github.com/AusDTO/gov-au-ui-kit#build-the-guide-yourself))
+
+#### Bugfixes
+
+- Fixed Header title image not fluid-width on small screens
+
 ### 1.7.4 - 2016-08-17
 
 #### Accessibility testing
 
-Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `node test/pa11y.js`).
+Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://github.com/pa11y/pa11y) and [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) (run with `npm test`).
 
 #### UI-Kit changes
 

@@ -1,6 +1,6 @@
 {
   "name": "gov-au-ui-kit",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "description": "GOV.AU UI framework, using Bourbon and Neat",
   "author": "GOV.AU UI Kit team <ui-kit-announce@digital.gov.au>",
   "homepage": "https://gov-au-ui-kit.apps.staging.digital.gov.au/",
@@ -16,6 +16,11 @@
     "scss",
     "js"
   ],
+  "scripts": {
+    "test": "node test/pa11y",
+    "start": "gulp serve",
+    "build": "gulp"
+  },
   "sasslintConfig": "./sass-lint.yml",
   "preferGlobal": true,
   "license": "MIT",
@@ -33,6 +38,7 @@
     "gulp-connect": "^4.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-gitversion": "^0.0.8",
+    "gulp-imagemin": "^3.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "gulp-sass-lint": "^1.2.0",

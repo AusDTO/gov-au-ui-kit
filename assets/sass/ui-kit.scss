@@ -1,10 +1,9 @@
 /*
 
-UI-Kit version: 1.7.4
+UI-Kit version: 1.7.5
 
 */
 
-@import 'vendor/entity';
 @import 'vendor/normalize';
 @import 'vendor/bourbon/bourbon';
 
@@ -12,10 +11,11 @@ UI-Kit version: 1.7.4
 @import 'vendor/neat/neat';
 
 @import 'variables';
+@import 'colours';
+
 @import 'accessibility';
 
 @import 'icons';
-@import 'colours';
 @import 'typography';
 @import 'grid-layout';
 @import 'buttons';
