@@ -246,7 +246,7 @@ We are currently testing all styles for legibility and readability.
 
 Markup: templates/heading-body-styles.hbs
 
-Style guide: Typography.2 Headings & body copy
+Style guide: Typography.4 Headings & body copy
 */
 
 // Styling for headings
@@ -379,6 +379,32 @@ h6 {
   }
 }
 
+/*
+Line length
+
+UI Kit applies a maximum width to typographic elements that appear within the main content container. This maintains a readable line length.
+
+A max-width of 38rem (about 70 characters) is applied to these elements:
+- h1 - h5
+- p
+- li
+- dl
+
+<div class="callout">
+
+If you'd like to include an element that spans across the maximum available space, apply the class `.content-full-width`.
+
+</div>
+
+### Resources
+- [Typography -  Accessibility](/section-typography.html#guide-typography-1-typeface-2-accessibility)
+- <a href="https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading" rel="external">Size Matters, Smashing Magazine</a>
+
+Markup: templates/content-full-width.hbs
+
+Style guide: Typography.4 Line length
+*/
+
 .content-main {
   @include media($desktop) {
     h1,
@@ -430,7 +456,7 @@ Markup: Copy text to clipboard using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
   </div>
 </details>
 
-Style guide: Typography.8 Keyboard input
+Style guide: Typography.5 Keyboard input
 */
 
 kbd {
@@ -520,7 +546,7 @@ More [complex list styles](section-list-styles.html) are available.
 
 Markup: templates/list-examples.hbs
 
-Style guide: Typography.4 Lists
+Style guide: Typography.6 Lists
 */
 
 ul,
@@ -597,7 +623,7 @@ Markup: templates/callouts-examples.hbs
   </div>
 </details>
 
-Style guide: Typography.5 Callouts & warnings
+Style guide: Typography.7 Callouts & warnings
 */
 
 %base-callout {
@@ -672,7 +698,7 @@ Markup: templates/badges.hbs
   </div>
 </details>
 
-Style guide: Typography.6 Badges
+Style guide: Typography.8 Badges
 */
 
 $badges: (
@@ -730,7 +756,7 @@ Markup: templates/quotation-examples.hbs
   </div>
 </details>
 
-Style guide: Typography.7 Quotations
+Style guide: Typography.9 Quotations
 */
 
 blockquote {
