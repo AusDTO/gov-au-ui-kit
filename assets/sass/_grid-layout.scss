@@ -138,10 +138,10 @@ main {
       }
 
       @include media($desktop) {
-        @include span-columns(10 of 16);
-        @include shift(2);
+        @include span-columns(12 of 16);
       }
 
+      // Know what this is for?
       &:first-child {
 
         @include reset-layout-direction;
