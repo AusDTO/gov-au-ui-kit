@@ -279,7 +279,7 @@ Style guide: List styles.4 Highlighted word style
 
 @mixin reset-omega2 {
   &:nth-child(2n) {
-    margin-right: 2.74614%;
+    margin-right: 2.74614%; //can this be pulled as a var from somewhere?
   }
 
   &:nth-child(2n+1) {
