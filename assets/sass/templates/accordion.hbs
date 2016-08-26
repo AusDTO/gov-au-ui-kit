@@ -1,6 +1,26 @@
 <details open data-label="accordion-example" aria-expanded="true">
-  <summary>An accordion</summary>
+  <summary>Default accordion</summary>
   <div class="accordion-panel">
       <p>Text in the accordion.</p>
+  </div>
+</details>
+
+<details class="accordion-forms" open data-label="accordion-example" aria-expanded="true">
+  <summary>Form accordion</summary>
+  <div class="accordion-panel">
+      <p>Text in the accordion.</p>
+      <form>
+      <fieldset>
+
+              <legend class="is-visuallyhidden">Filter by Topic</legend>
+
+              <input id="aaa" name="reply" type="checkbox" value="AAA">
+              <label for="aaa">Form example 1</label>
+
+              <input id="bbb" name="reply" type="checkbox" value="BBB">
+              <label for="bbb">Form example 2</label>
+
+            </fieldset>
+          </form>
   </div>
 </details>
