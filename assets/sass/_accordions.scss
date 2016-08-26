@@ -58,7 +58,7 @@ details,
 
   & + details,
   & + .accordion {
-    margin-top: $small-spacing;
+    margin-top: -1px;
   }
 }
 
@@ -68,7 +68,6 @@ summary {
   position: relative;
   width: 100%;
   height: auto;
-  margin: 0;
   padding: $small-spacing;
   border-top-right-radius: $tiny-border-radius;
   border-top-left-radius: $tiny-border-radius;
@@ -76,7 +75,12 @@ summary {
   font-weight: $bold-font-weight;
   cursor: pointer;
   transition: background-color $transition-timing-fast $transition-easing;
-  color: $body-text-colour;
+
+  background: $background-secondary-colour;
+  color: $non-black;
+  border-bottom: 1px solid $light-grey;
+  border-top: 1px solid $light-grey;
+  font-size: rem(20);
 
   // Remove vanilla summary styles.
   &::-webkit-details-marker {
@@ -160,13 +164,11 @@ summary {
 
 details {
 
-  &.accordion-content {
-    margin-top: -1px;
-    @include accordion-styles($background-secondary-colour, $non-black, $light-grey, $non-black, '1px solid #{$light-grey}', 0, none);
-    font-size: rem(20);
-  }
-
   &.accordion-forms {
+    summary {
+      font-size: 16px;
+    }
+    margin-top: $small-spacing;
     @include accordion-styles($lighter-aqua, $darker-aqua, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}', none);
   }
 }
