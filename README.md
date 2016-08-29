@@ -32,29 +32,28 @@ For a full list of features see the [CHANGELOG](CHANGELOG.md).
 
 ### Accessibility
 
-UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
-
 The framework is built on a solid accessible HTML foundation. We follow a philosophy of <a href="https://en.wikipedia.org/wiki/Progressive_enhancement" rel="external">progressive enhancement</a> over <a href="https://en.wikipedia.org/wiki/Fault_tolerance" rel="external">graceful degradation</a> to produce accessible components by default.
 
-Currently (August 2016) we are:
+UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
 
-- using automated build tools to write accessible code (linting and HTML5 validation)
-- running automated accessibility testing of our examples templates &mdash; `examples/` (<a href="https://github.com/pa11y/pa11y" rel="external">Pa11y CLI</a>).
+We use automated testing:
+- WCAG 2.0 criteria using <a href="http://squizlabs.github.io/HTML_CodeSniffer/" rel="external">HTML_CodeSniffer</a>
+- HTML validation using <a href="http://validator.github.io/validator/" rel="external">Nu HTML Checker</a>.
 
 We are working on:
-- fixing automated accessibility testing errors
-- documenting accessibility compliance and guidance for each component
-- testing the framework with users to find barriers
-- preparing for an audit of the framework.
+- manual evaluation using <a href="http://wave.webaim.org/" rel="external">Wave by WebAIM</a>
+- manual checking of page structure, content and keyboard navigation
+- testing with users and assistive technologies
+- an audit.
 
 ### Browser support
+The [cross browser and device support](BROWSER-SUPPORT.md) table.
 
 We are working on:
 
 - automated browser testing as part of our build process
 - manual testing of all CSS, JS and markup
-- documenting browser support for each component
-- composing a browser support matrix.
+- documenting browser support for each component.
 
 ## What this isn't
 
@@ -75,28 +74,33 @@ You should use this with the <a href="http://content-style-guide.apps.staging.di
 We have a build process for the development of the framework which uses gulp on node.js.
 
 To build it yourself, begin by installing the system dependencies:
-- Node.js v5.0.0
+- Node.js v5.0.0+
 
 Install node package dependencies:
 
 ```
-npm -g install gulp
 npm install
 ```
 
 Run a build:
 
 ```
-gulp build
+npm run-script build
+```
+
+Run a build with livereloading:
+
+```
+npm start
 ```
 
 Run accessibility tests:
 
 ```
-node test/pa11y.js
+npm test
 ```
 
-*Note:* Check [Pa11y's requirements](https://github.com/pa11y/pa11y#requirements) to make sure you have the necessary dependencies installed to run the automated accessibility tests.
+**Note:** Check [Pa11y's requirements](https://github.com/pa11y/pa11y#requirements) to make sure you have the necessary dependencies installed to run the automated accessibility tests.
 
 The compiled style guide can be found at `./build/index.html` and the UI Kit CSS
 at `./build/latest/ui-kit.css`.

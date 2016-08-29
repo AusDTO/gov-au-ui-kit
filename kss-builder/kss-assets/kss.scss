@@ -65,6 +65,32 @@ code {
   color: $navy;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr:nth-child(even) {
+    background-color: $non-white;
+  }
+
+  td,
+  th {
+    border-bottom: solid 1px $light-grey;
+    padding: $tiny-spacing;
+    font-size: $small-font-size;
+    text-align: left;
+
+    @include media($tablet) {
+      padding: $small-spacing;
+      font-size: initial;
+    }
+  }
+
+  thead {
+    border-bottom: solid 2px $grey;
+  }
+}
+
 .guide-colour {
   float: left;
   width: 43%;

@@ -138,10 +138,10 @@ main {
       }
 
       @include media($desktop) {
-        @include span-columns(10 of 16);
-        @include shift(2);
+        @include span-columns(12 of 16);
       }
 
+      // Know what this is for?
       &:first-child {
 
         @include reset-layout-direction;
@@ -221,8 +221,6 @@ footer {
 
 /*
 Accessibility
-
-Long lines reduce legibility. Lines of text should be no longer than 75 characters including spaces. Place text in narrower grid boxes to stop text lines from becoming too wide.
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 

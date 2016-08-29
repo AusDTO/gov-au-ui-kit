@@ -159,7 +159,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    width: 337px;
+    width: 100%;
+    max-width: 337px;
     height: 51px;
 
     &.dusk {
