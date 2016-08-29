@@ -1,6 +1,6 @@
 @mixin inline-background-image($img) {
-  background-image: url(image-url('icons/' + $img + '.png'));
-  background-image: none, url(image-url('icons/' + $img + '.svg')),
+  background-image: image-url('icons/' + $img + '.png');
+  background-image: none, image-url('icons/' + $img + '.svg'),
   linear-gradient(transparent, transparent);
 }
 
