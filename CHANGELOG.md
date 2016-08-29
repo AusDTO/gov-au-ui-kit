@@ -9,6 +9,10 @@
 - Desktop: Content area is now 12 columns wide to accommodate larger block elements. In response basic text elements `h1-h6, p, li, dl` now have a max-width for readability. See `_grid-layout.scss`
 - Desktop: Added `.content-full-width` as a method of making basic text elements fill to 12 columns if required (see above).
 
+#### Styleguide
+
+- Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
+
 #### Bugfixes
 
 - Fixed HTML validation errors [PR 311](https://github.com/AusDTO/gov-au-ui-kit/pull/311)
