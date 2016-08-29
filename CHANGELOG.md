@@ -8,6 +8,7 @@
 
 - Desktop: Content area is now 12 columns wide to accommodate larger block elements. In response basic text elements `h1-h6, p, li, dl` now have a max-width for readability. See `_grid-layout.scss`
 - Desktop: Added `.content-full-width` as a method of making basic text elements fill to 12 columns if required (see above).
+- Base `%base-vertical-list` and the vertical lists have re-written, switching from flexboxes to Neat columns, providing IE9/10 support. Also done for top set of footer links (`.footer-top`).
 
 #### Bugfixes
 
