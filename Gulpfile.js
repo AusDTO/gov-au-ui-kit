@@ -17,17 +17,19 @@ var gulp = require('gulp'),
     webpack = require('webpack-stream'),
     zip = require('gulp-zip'),
     wrap = require('gulp-wrap'),
-    imagemin = require('gulp-imagemin')
+    imagemin = require('gulp-imagemin'),
+    handlebars = require('gulp-compile-handlebars')
     ;
 
 var paths = {
     assets: './assets/**/*.*',
     assetsDir: './assets',
     scssDir: './assets/sass/**/*.scss',
+    scssTemplatesDir: './assets/sass/templates',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
-    examplesDir: './examples/*.html',
-    examplesTemplatesDir: './examples/layouts',
+    examples: './examples/*.hbs',
+    examplePartialsDir: './examples/partials',
     kssBuilderDir: './kss-builder/**/*.*',
     images: './assets/img/**/*.+(png|svg|jpg)',
     scss: './assets/sass/ui-kit.scss',
@@ -56,6 +58,9 @@ var options = {
         output: {
             filename: 'ui-kit.js',
         }
+    },
+    handlebars: {
+      batch: [ paths.scssTemplatesDir, paths.examplePartialsDir ]
     }
 };
 
@@ -137,8 +142,12 @@ gulp.task('svg2png', function () {
 });
 
 gulp.task('examples', function () {
-    return gulp.src(paths.examplesDir)
-      .pipe(wrap({ src: paths.examplesTemplatesDir + '/default.html' }))
+
+    return gulp.src(paths.examples)
+      .pipe(handlebars({}, options.handlebars))
+      .pipe(rename({
+        extname: '.html'
+      }))
       .pipe(gulp.dest(paths.outputHTML + '/examples')).pipe(connect.reload());
 });
 
@@ -209,8 +218,7 @@ gulp.task('watch', ['watch.build']);
 gulp.task('watch.build', function () {
     gulp.watch([
             paths.assets,
-            paths.examplesDir,
-            paths.examplesTemplatesDir,
+            paths.examples,
             paths.readme,
             paths.kssBuilderDir,
             '!./kss-builder/kss-assets/kss.css'

@@ -10,6 +10,10 @@
 - Desktop: Added `.content-full-width` as a method of making basic text elements fill to 12 columns if required (see above).
 - Base `%base-vertical-list` and the vertical lists have re-written, switching from flexboxes to Neat columns, providing IE9/10 support. Also done for top set of footer links (`.footer-top`).
 
+#### Styleguide
+
+- Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
+
 #### Bugfixes
 
 - Fixed HTML validation errors [PR 311](https://github.com/AusDTO/gov-au-ui-kit/pull/311)
