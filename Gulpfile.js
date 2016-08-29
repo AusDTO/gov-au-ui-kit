@@ -28,7 +28,7 @@ var paths = {
     scssTemplatesDir: './assets/sass/templates',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
-    examples: './examples/*.hbs',
+    examples: './examples/**/*.hbs',
     examplePartialsDir: './examples/partials',
     kssBuilderDir: './kss-builder/**/*.*',
     images: './assets/img/**/*.+(png|svg|jpg)',
@@ -219,7 +219,6 @@ gulp.task('watch.build', function () {
     gulp.watch([
             paths.assets,
             paths.examples,
-            paths.examplesTemplatesDir,
             paths.readme,
             paths.kssBuilderDir,
             '!./kss-builder/kss-assets/kss.css'
