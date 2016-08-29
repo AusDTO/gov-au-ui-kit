@@ -107,7 +107,9 @@ summary {
     }
   }
 
+  &:hover,
   &:focus {
+    background-color: $light-grey;
     outline: none;
   }
 
@@ -148,7 +150,8 @@ summary {
     border-bottom: #{$summary-border};
     border-top: #{$summary-border};
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $summary-hover-bg;
       color: $summary-hover-colour;
     }
