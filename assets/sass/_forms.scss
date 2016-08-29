@@ -17,7 +17,7 @@ Text input
 
 Single line text inputs.
 
-They can be limited to number input only by setting the `type` attribute to `number`. For telephone numbers set the `type` attribute to `tel`. To trigger the num-pad on iPhones, add a pattern attribute to the input element: `pattern="[0-9]*"`.
+They can be limited to number input only by setting the `type` attribute to `number`. For telephone numbers set the `type` attribute to `tel`. To explicityly trigger the num-pad on iPhones, omit the `type` attribute and add a pattern attribute to the input element: `pattern="[0-9]*"`.
 
 Markup: templates/text-input-single-line.hbs
 
