@@ -10,6 +10,8 @@
 
 #### UI-Kit changes
 
+- New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion-widget`
+- Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`
 - Added `.ua-notification` class for issuing top-of-page User Agent (browser) notifications (eg for browsers we have difficulty supporting) in the `_accessibility.scss` partial.
 - Link styles are now applied to any `article` that is a direct child of the page's `main` element
 - Removed inline icon images from `ui-kit.css` & `ui-kit.min.css` and include them in `/latest/images/zip` instead
