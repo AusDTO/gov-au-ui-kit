@@ -169,6 +169,6 @@ details {
       font-size: $small-font-size;
     }
     margin-top: $small-spacing;
-    @include accordion-styles($lighter-aqua, $darker-aqua, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}', none);
+    @include accordion-styles($lighter-aqua, $non-black, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}', none);
   }
 }
