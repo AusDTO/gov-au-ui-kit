@@ -1,5 +1,5 @@
 @mixin wrapper-padding {
-  @include pad(0 $base-spacing);
+  @include pad(0 $gutter);
   width: 100%;
   box-sizing: border-box;
 

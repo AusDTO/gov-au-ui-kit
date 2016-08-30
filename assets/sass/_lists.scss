@@ -277,17 +277,6 @@ Style guide: List styles.4 Highlighted word style
   }
 }
 
-@mixin reset-omega2 {
-  &:nth-child(2n) {
-    margin-right: 2.74614%; //can this be pulled as a var from somewhere?
-  }
-
-  &:nth-child(2n+1) {
-    clear: none;
-  }
-}
-
-
 .list-vertical {
   @extend %base-vertical-list;
 
@@ -323,13 +312,12 @@ Style guide: List styles.4 Highlighted word style
       @include omega(2n);
     }
     @include media($desktop) {
-      @include reset-omega2;
+      @include omega-reset(2n);
       @include span-columns(4 of 12);
       @include omega(3n);
     }
   }
 }
-
 
 
 .list-vertical--fourths {
@@ -348,7 +336,7 @@ Style guide: List styles.4 Highlighted word style
       @include omega(2n);
     }
     @include media($desktop) {
-      @include reset-omega2;
+      @include omega-reset(2n);
       @include span-columns(3 of 12);
       @include omega(4n);
     }

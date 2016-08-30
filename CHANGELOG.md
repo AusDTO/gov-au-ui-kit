@@ -14,6 +14,7 @@
 
 - Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
 - Section index links now only show Section headings and not Sub-sections
+- Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
 
 #### Bugfixes
 
