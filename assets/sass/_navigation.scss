@@ -302,12 +302,13 @@ Style guide: Navigation.6 Footer navigation
   margin: $base-spacing 0 0;
   text-align: left;
   font-weight: $base-font-weight;
+  background-color: $background-secondary-colour;
   border: 0;
 
-  &,
+  &:focus,
   &:hover {
-    background-color: $background-secondary-colour;
-    color: $darker-aqua;
+    background-color: $navy;
+    color: $non-white;
   }
 
   &::before {
@@ -591,7 +592,7 @@ Style guide: Navigation.7 Skip links
 }
 
 .index-links {
-  margin: ($base-spacing * 2) 0 $base-spacing $small-spacing;
+  margin: ($base-spacing * 2) 0 $base-spacing 0;
   border-left: $tiny-spacing solid $non-white;
   padding: 0 0 $medium-spacing ($base-spacing - $tiny-spacing);
 
