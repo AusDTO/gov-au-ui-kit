@@ -52,7 +52,10 @@ var options = {
               var String = sass.types.String;
               return new String('/latest/img/' + img.getValue());
             }
-        }
+        },
+        includePaths: [
+          './node_modules'
+        ]
     },
     webpack: {
         output: {

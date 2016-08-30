@@ -56,10 +56,14 @@
     "object-assign": "^4.1.0",
     "pa11y": "^4.0.0",
     "path": "^0.12.7",
+    "responsive-nav": "^1.0.39",
     "run-sequence": "^1.2.1",
     "sass-inline-svg": "^0.0.3",
     "smoothscroll": "^0.2.2",
     "through2": "^2.0.1",
     "webpack-stream": "^3.2.0"
+  },
+  "devDependencies": {
+    "velocity-animate": "^1.2.3"
   }
 }

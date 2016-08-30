@@ -49,40 +49,36 @@ When implementing accordions:
 Style guide: Accordions.1 Usability
 */
 
-// New CSS Experiment
-details,
-.accordion {
+%base-accordion {
   display: block;
   margin: $base-spacing 0 0;
   overflow: hidden;
-
-  & + details,
-  & + .accordion {
-    margin-top: -1px;
-  }
 }
 
-.accordion-button,
-summary {
-  display: block;
+%base-accordion-button {
   position: relative;
+  display: block;
+  cursor: pointer;
   width: 100%;
   height: auto;
   padding: $small-spacing;
-  border-top-right-radius: $tiny-border-radius;
-  border-top-left-radius: $tiny-border-radius;
+  border-radius: $tiny-border-radius $tiny-border-radius 0 0;
+  background-color: $background-secondary-colour;
   text-align: left;
   font-weight: $bold-font-weight;
-  cursor: pointer;
+  font-size: rem(20);
   transition: background-color $transition-timing-fast $transition-easing;
 
-  background: $background-secondary-colour;
-  color: $non-black;
-  border-bottom: 1px solid $light-grey;
-  border-top: 1px solid $light-grey;
-  font-size: rem(20);
+  &:last-child {
+    border-bottom-width: 1px;
+  }
 
-  // Remove vanilla summary styles.
+  &:hover,
+  &:focus {
+    background-color: $border-colour;
+    outline: none;
+  }
+
   &::-webkit-details-marker {
     display: none;
   }
@@ -106,72 +102,71 @@ summary {
       transform: rotate(180deg);
     }
   }
-
-  &:hover,
-  &:focus {
-    background-color: $light-grey;
-    outline: none;
-  }
-
 }
 
-.accordion-panel {
+%base-accordion-panel {
   display: block;
-  position: relative;
-  top: 0;
   height: auto;
   overflow: hidden;
+  border-radius: $tiny-border-radius $tiny-border-radius 0 0;
   padding: $base-spacing $base-spacing $small-spacing;
-  transition: padding $transition-timing $transition-easing, border $transition-timing $transition-easing, position $transition-timing $transition-easing;
-  border-bottom-right-radius: $tiny-border-radius;
-  border-bottom-left-radius: $tiny-border-radius;
-
-  [aria-expanded='false'] & {
-    z-index: -1;
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    top: $small-spacing * -2;
-  }
 
   :first-child {
     margin-top: 0;
   }
-
 }
 
-// ACCORDION VARIATIONS
+details,
+.accordion {
+  @extend %base-accordion;
 
-@mixin accordion-styles ($summary-bg, $summary-colour, $summary-hover-bg, $summary-hover-colour, $summary-border, $panel-border, $panel-border-top) {
+  border-color: $border-colour;
+  border-width: 1px 0;
+  border-style: solid;
+
+  & + & {
+    margin-top: 0;
+    border-top: none;
+  }
+}
+
+.accordion-button,
+summary {
+  @extend %base-accordion-button;
+
+  [aria-expanded='true'] & {
+    border-bottom: 1px solid $border-colour;
+  }
+}
+
+.accordion-panel {
+  @extend %base-accordion-panel;
+}
+
+.accordion--widget {
+  @extend %base-accordion;
+
+  margin-top: $small-spacing;
+  border: none;
 
   summary {
-    background-color: $summary-bg;
-    color: $summary-colour;
-    border-bottom: #{$summary-border};
-    border-top: #{$summary-border};
+    @extend %base-accordion-button;
+
+    border: none;
+    background-color: $lighter-aqua;
+    font-size: $small-font-size;
 
     &:hover,
     &:focus {
-      background-color: $summary-hover-bg;
-      color: $summary-hover-colour;
+      background-color: $light-aqua;
+      color: $darker-aqua;
     }
   }
 
   .accordion-panel {
-    border: #{$panel-border};
-    border-top: $panel-border-top;
-  }
-}
+    @extend %base-accordion-panel;
 
-
-
-details {
-
-  &.accordion-widget {
-    summary {
-      font-size: $small-font-size;
-    }
-    margin-top: $small-spacing;
-    @include accordion-styles($lighter-aqua, $non-black, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}', none);
+    border: $small-spacing solid $lighter-aqua;
+    border-top: none;
   }
 }

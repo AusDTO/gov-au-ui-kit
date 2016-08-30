@@ -1,93 +1,73 @@
 var smoothScroll = require('smoothscroll');
+var responsiveNav = require('responsive-nav');
+var Velocity = require('velocity-animate');
 
 (function (document) {
 
-  var Collapsible = {
-
-    /**
-     * Initialise the Collapse behaviour
-     * @param {array} elems - array of HTMLCollections representing collapsible elements
-     * @param {object} toggle - the element to be used as a toggle. If `null`, one is created
-     * @param {bool} collapsed - if `true`, panel is collapsed by default
-     */
-    init: function(elems, toggle, collapsed) {
-      for (var i = 0; i < elems.length; i++) {
-        var toggleElem = toggle ? toggle.item(i) : null;
-        this.initPanel(elems[i], collapsed);
-        this.initToggle(elems[i], toggleElem);
-      }
-    },
-
-    /**
-     * Initialise the collapsible panel by setting its ID & 'aria-expanded' attributes
-     * @param {object} elem - the containing DOMElement
-     * @param {bool} collapsed - if `true`, panel is collapsed by default
-     */
-    initPanel: function(elem, collapsed) {
-      var panelLabel = elem.getAttribute('data-label');
-
-      elem.id = panelLabel;
-
-      if (collapsed) {
-        elem.setAttribute('aria-expanded', 'false');
-      }
-    },
-
-    /**
-     * Create a toggle element, attach an event listener and insert it into the DOM
-     * @param {object} elem - containing element for collapsible nav
-     */
-    initToggle: function(elem, toggle) {
-      var panelLabel = elem.getAttribute('data-label') ? elem.getAttribute('data-label') : elem.className,
-          toggleElem = toggle || document.createElement('button'),
-          self = this;
-
-      if (!toggle) {
-          toggleElem.textContent = elem.getAttribute('data-toggle-label') || 'Menu';
-      }
-
-      toggleElem.setAttribute('aria-controls', panelLabel);
-      toggleElem.className = panelLabel + '-toggle';
-      toggleElem.targetElem = elem;
-      toggleElem.addEventListener('click', self.togglePanel);
-
-      if (!toggle) {
-        elem.parentNode.insertBefore(toggleElem, elem);
-      }
-
-    },
-
-    /**
-     * Toggles ARIA attribute on the nav element
-     * @param {event} event - the event that triggered the toggle
-     */
-    togglePanel: function(event) {
-      var toggle = event.target,
-          elem = event.target.targetElem,
-          expanded = elem.getAttribute('aria-expanded') === 'true';
-
-      event.preventDefault();
-
-      if (elem.hasAttribute('open')) {
-        elem.removeAttribute('open');
-      } else {
-        elem.setAttribute('open', '');
-      }
-
-      toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      elem.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+  initResponsiveNav = function(elementSelector) {
+    if (document.querySelector(elementSelector)) {
+      responsiveNav(elementSelector);
     }
+  }
 
-  };
+  initAccordions = function(elems) {
+    for (var i = 0; i < elems.length; i++) {
+      var toggle = elems[i].querySelector('.accordion-button, summary');
+      var panel = elems[i].querySelector('.accordion-panel');
+
+      if (elems[i].getAttribute('data-label')) {
+        panelLabel = elems[i].getAttribute('data-label');
+      } else {
+        panelLabel = elems[i].className;
+      }
+
+      initToggle(elems[i], toggle, panel, panelLabel);
+      initPanel(elems[i], panel, panelLabel);
+
+    }
+  }
+
+  initToggle = function(elem, toggle, panel, label) {
+    toggle.targetElem = elem;
+    toggle.targetPanel = panel;
+    toggle.setAttribute('aria-controls', label);
+    toggle.addEventListener('click', togglePanel);
+  }
+
+  initPanel = function(elem, panel, label) {
+    elem.id = label;
+
+    if (elem.getAttribute('aria-expanded') === 'false') {
+      slidePanel(panel, true);
+    }
+  }
+
+  togglePanel = function(event) {
+    var toggle = event.target,
+        elem = event.target.targetElem,
+        panel = event.target.targetPanel,
+        expanded = elem.getAttribute('aria-expanded') === 'true';
+
+    event.preventDefault();
+
+    toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    elem.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+
+    slidePanel(panel, expanded);
+  }
+
+  slidePanel = function(panel, bool) {
+    Velocity(panel, bool ? 'slideUp' : 'slideDown', { duration: 300 });
+  }
 
   // Kick of the JavaScript party when the DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
-    var navElements = document.querySelectorAll('.global-nav, .local-nav');
-    Collapsible.init(navElements, null, true);
 
-    var accordionElements = document.querySelectorAll('.accordion, details'),
-        accordionToggleElement = document.querySelectorAll('.accordion-button, summary');
-    Collapsible.init(accordionElements, accordionToggleElement, false);
+    initResponsiveNav('.global-nav');
+    initResponsiveNav('.local-nav');
+    initResponsiveNav('.local-nav-demo');
+
+    initAccordions(document.querySelectorAll('.accordion, details'));
   });
 
 })(document);

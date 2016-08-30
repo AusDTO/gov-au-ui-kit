@@ -188,40 +188,41 @@ Markup: templates/footer-navigation.hbs
 Style guide: Navigation.6 Footer navigation
 */
 
-.global-nav-toggle {
-  position: relative;
-  float: right;
-  height: auto;
-  margin: $tiny-spacing 0;
-  padding: 0;
-
-  .govau--header & {
+.govau--header {
+  .nav-toggle {
+    position: relative;
+    float: right;
+    height: auto;
+    width: auto;
+    margin: $tiny-spacing 0;
+    padding: 0;
     border: 0;
     border-bottom: 1px solid;
-  }
 
-  &::before {
-    @extend %icon-bars;
-    content: '';
-    position: absolute;
-    top: .25em;
-    bottom: .25em;
-    left: ($base-spacing * -1);
-    width: $medium-spacing;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-  }
-
-  &[aria-expanded='true'] {
     &::before {
-      @extend %icon-close;
+      @extend %icon-bars;
+      content: '';
+      position: absolute;
+      top: .25em;
+      bottom: .25em;
+      left: ($base-spacing * -1);
+      width: $medium-spacing;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
     }
-  }
 
-  &,
-  &:hover {
-    background-color: transparent;
-    border-color: transparent;
+    &.active {
+      &::before {
+        @extend %icon-close;
+        transform: none;
+      }
+    }
+
+    &,
+    &:hover {
+      background-color: transparent;
+      color: $body-inverted-text-colour;
+    }
   }
 }
 
@@ -229,13 +230,6 @@ Style guide: Navigation.6 Footer navigation
   clear: both;
   padding: $tiny-spacing 0 $small-spacing;
   overflow: hidden;
-  transition: padding ($transition-timing * 2) ease;
-
-  &[aria-expanded='false'] {
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 
   ul {
     list-style-type: none;
@@ -296,7 +290,13 @@ Style guide: Navigation.6 Footer navigation
   }
 }
 
-.local-nav-toggle {
+.sidebar {
+  padding: 0 0 $base-spacing;
+}
+
+.nav-toggle {
+  @extend %base-button;
+
   position: relative;
   width: 100%;
   margin: $base-spacing 0 0;
@@ -326,7 +326,9 @@ Style guide: Navigation.6 Footer navigation
     transition: transform $transition-timing $transition-easing;
   }
 
-  &[aria-expanded='true'] {
+  &.active {
+    margin-bottom: 0;
+
     &::before {
       transform: rotate(180deg);
     }
@@ -346,21 +348,7 @@ Style guide: Navigation.6 Footer navigation
 
 .primary-nav,
 .local-nav {
-  margin: 0 0 $base-spacing;
   overflow: hidden;
-  transition: padding ($transition-timing * 2) ease;
-
-  &[aria-expanded='false'] {
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-
-    @include media($tablet) {
-      height: auto;
-      padding: $base-spacing 0;
-    }
-  }
-
 
   ul {
     @include link-colours($link-colour, $focus-colour, $link-colour);
