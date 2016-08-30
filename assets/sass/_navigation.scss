@@ -355,9 +355,9 @@ Style guide: Navigation.6 Footer navigation
     margin: 0;
     padding: 0;
     list-style: none;
-    text-transform: uppercase;
 
     ul {
+      font-size: rem(14); // level 2+ should be 14px
       margin: 0;
       text-transform: none;
 
@@ -400,7 +400,7 @@ Style guide: Navigation.6 Footer navigation
       border: none;
       border-left: 4px solid transparent;
       border-bottom: none;
-      padding: $medium-spacing / 2 $small-spacing;
+      padding: rem(12) $small-spacing; //Was: ( $medium-spacing / 2) $small-spacing;
       text-decoration: none;
       transition: border-color $transition-timing-fast $transition-easing;
 
