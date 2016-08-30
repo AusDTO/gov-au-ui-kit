@@ -235,6 +235,17 @@ Style guide: List styles.4 Highlighted word style
 %base-vertical-list {
   @extend %base-list;
 
+  /*
+  Consider how to create an equal height grid of list items.
+  Could use this for overflow http://jsfiddle.net/barney/TPP8g/
+  
+  &.vertical-list--grid {
+    > li {
+      min-height: 13em;
+    }
+  }
+  */
+
   > li {
 
     border-top: 6px solid $light-aqua;
