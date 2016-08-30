@@ -30,7 +30,7 @@ When implementing accordions:
 - For multiple accordion elements each `details` element must have its own `data-label` attribute.
 - This framework allows a text/string search of accordion content, even when collapsed (string itself remains hidden until opened).
 
-<details data-label="accordions-accessibility" aria-expanded="false">
+<details open data-label="accordions-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
