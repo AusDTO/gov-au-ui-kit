@@ -273,7 +273,7 @@ h1 {
   }
 
   @include media($desktop) {
-    font-size: rem(32);
+    font-size: rem(40);
   }
 
   &:first-of-type {
@@ -285,15 +285,18 @@ h2 {
   font-size: rem(32);
   line-height: $small-leading;
   margin-top: $base-spacing;
+  margin-bottom: 1em;
 
   @include media($tablet) {
-    font-size: rem(44);
+    font-size: rem(40);
   }
 }
 
 h3 {
   font-size: rem(24);
   font-weight: $heading-font-weight;
+  margin-top: 1.4em;
+  margin-bottom: 0.8em;
 
   @include media($tablet) {
     font-size: rem(26);
