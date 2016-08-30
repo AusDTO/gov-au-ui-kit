@@ -603,7 +603,7 @@ Style guide: Navigation.7 Skip links
 }
 
 .index-links {
-  margin: ($base-spacing * 2) 0 $base-spacing $small-spacing;
+  margin: ($base-spacing * 2) 0 $base-spacing 0;
   border-left: $tiny-spacing solid $non-white;
   padding: 0 0 $medium-spacing ($base-spacing - $tiny-spacing);
 
