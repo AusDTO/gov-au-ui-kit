@@ -303,15 +303,13 @@ h3 {
   }
 }
 
-h4 {
+h4,
+h5,
+h6 {
   font-size: rem(18);
   font-weight: $heading-font-weight;
 }
 
-h5,
-h6 {
-  @extend h4;
-}
 
 // Document this later.
 .gov-speak {
