@@ -24,12 +24,12 @@ Markup: templates/text-input-single-line.hbs
 <details data-label="text-input-single-line-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
-  <strong>Passed</strong>:
+  Passed:
     <ul>
       <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
       <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
     </ul>
-  <strong>Untested</strong>:
+  Untested:
     <ul>
       <li>WCAG:AA manual</li>
       <li>Browser support &mdash; automated and manual</li>
@@ -114,12 +114,12 @@ form {
   <details data-label="text-area-input-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
     <div class="accordion-panel">
-    <strong>Passed</strong>:
+    Passed:
       <ul>
         <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
         <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
       </ul>
-    <strong>Untested</strong>:
+    Untested:
       <ul>
         <li>WCAG:AA manual</li>
         <li>Browser support &mdash; automated and manual</li>
@@ -206,12 +206,12 @@ form {
   <details data-label="radio-button-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
     <div class="accordion-panel">
-    <strong>Passed</strong>:
+    Passed:
       <ul>
         <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
         <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
       </ul>
-    <strong>Untested</strong>:
+    Untested:
       <ul>
         <li>WCAG:AA manual</li>
         <li>Browser support &mdash; automated and manual</li>
@@ -279,12 +279,12 @@ Markup:
 <details data-label="checkbox-input-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
-  <strong>Passed</strong>:
+  Passed:
     <ul>
       <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
       <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
     </ul>
-  <strong>Untested</strong>:
+  Untested:
     <ul>
       <li>WCAG:AA manual</li>
       <li>Browser support &mdash; automated and manual</li>

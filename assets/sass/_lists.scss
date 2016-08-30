@@ -20,12 +20,12 @@ Markup: templates/lists-horizontal.hbs
 <details data-label="horizontal-list-styles-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
-  <strong>Passed</strong>:
+  Passed:
     <ul>
       <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
       <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
     </ul>
-  <strong>Untested</strong>:
+  Untested:
     <ul>
       <li>WCAG:AA manual</li>
       <li>Browser support &mdash; automated and manual</li>
@@ -53,12 +53,12 @@ Markup: templates/lists-vertical.hbs
 <details data-label="vertical-list-styles-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
-  <strong>Passed</strong>:
+  Passed:
     <ul>
       <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
       <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
     </ul>
-  <strong>Untested</strong>:
+  Untested:
     <ul>
       <li>WCAG:AA manual</li>
       <li>Browser support &mdash; automated and manual</li>
@@ -79,12 +79,12 @@ Markup: templates/lists-small.hbs
 <details data-label="small-list-styles-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
-  <strong>Passed</strong>:
+  Passed:
     <ul>
       <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
       <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
     </ul>
-  <strong>Untested</strong>:
+  Untested:
     <ul>
       <li>WCAG:AA manual</li>
       <li>Browser support &mdash; automated and manual</li>
@@ -102,14 +102,19 @@ Use highlighted words style for a list with repeating phrases.
 
 Markup: templates/lists-highlighted.hbs
 
-<details data-label="highlighted-list-styles-accessibility" aria-expanded="false">
-  <summary>Accessibility notes</summary>
+<details data-label="small-list-styles-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
-
-    <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
-    **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
-    **Untested** WCAG:AA manual compliance<br/>
-    **Untested** Supported browsers tested</p>
+  Passed:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  Untested:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
   </div>
 </details>
 
