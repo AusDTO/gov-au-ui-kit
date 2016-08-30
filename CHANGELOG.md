@@ -9,7 +9,7 @@
 - Desktop: Content area is now 12 columns wide to accommodate larger block elements. In response basic text elements `h1-h6, p, li, dl` now have a max-width for readability. See `_grid-layout.scss`
 - Desktop: Added `.content-full-width` as a method of making basic text elements fill to 12 columns if required (see above).
 - Base `%base-vertical-list` and the vertical lists have re-written, switching from flexboxes to Neat columns, providing IE9/10 support. Also done for top set of footer links (`.footer-top`).
-- New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion-widget`
+- New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion-controls`
 - Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`
 
 #### Styleguide
@@ -26,7 +26,7 @@
 
 #### UI-Kit changes
 
-- New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion-widget`
+- New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion-controls`
 - Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`
 - Added `.ua-notification` class for issuing top-of-page User Agent (browser) notifications (eg for browsers we have difficulty supporting) in the `_accessibility.scss` partial.
 - Link styles are now applied to any `article` that is a direct child of the page's `main` element.
