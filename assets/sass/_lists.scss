@@ -117,8 +117,9 @@ Style guide: List styles.4 Highlighted word style
 */
 
 %base-list {
+  @include clearfix;
   list-style: none;
-  //margin: ($base-spacing * 2) 0;
+  margin-top: em(34);
   padding: 0;
 
   .tags {
@@ -162,7 +163,7 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    padding: 4% 0; //Was `padding: $base-spacing 0;` changed to match gutter
+    padding: 2.74614% 0; //Was $base-spacing but changed to match gutter
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
   }
@@ -233,11 +234,10 @@ Style guide: List styles.4 Highlighted word style
 
 %base-vertical-list {
   @extend %base-list;
-  @include outer-container;
 
   > li {
 
-    border-top: 4px solid $border-colour;
+    border-top: 6px solid $light-aqua;
     border-bottom: none;
 
     article {
@@ -255,7 +255,7 @@ Style guide: List styles.4 Highlighted word style
       min-height: auto;
 
       @include media ($tablet) {
-        min-height:  $base-spacing * 2;
+        //min-height:  $base-spacing * 4;
       }
     }
 
@@ -263,7 +263,7 @@ Style guide: List styles.4 Highlighted word style
       min-height: auto;
 
       @include media ($tablet) {
-        min-height: $base-spacing * 3;
+        //min-height: $base-spacing * 3;
       }
     }
 
