@@ -175,10 +175,11 @@ Style guide: List styles.4 Highlighted word style
   h6 {
     margin-top: 0;
     margin-bottom: $tiny-spacing;
-  }
 
-  h3 {
-    @extend h4;
+    //Same as vanilla H4
+    font-size: rem(18);
+    font-weight: $heading-font-weight;
+    line-height: 1.4;
   }
 
   img {
@@ -238,7 +239,7 @@ Style guide: List styles.4 Highlighted word style
   /*
   Consider how to create an equal height grid of list items.
   Could use this for overflow http://jsfiddle.net/barney/TPP8g/
-  
+
   &.vertical-list--grid {
     > li {
       min-height: 13em;
@@ -262,13 +263,6 @@ Style guide: List styles.4 Highlighted word style
       }
     }
 
-    h3 {
-      min-height: auto;
-
-      @include media ($tablet) {
-        //min-height:  $base-spacing * 4;
-      }
-    }
 
     p {
       min-height: auto;
