@@ -9,26 +9,41 @@ The **expand/collapse all** feature will be provided soon &mdash; this will be m
 
 This guidance is in part adapted from <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
 
-Markup: templates/accordion.hbs
-
 Style guide: Accordions
 */
 
 /*
-Usability
+Content accordion
 
-When designing or writing accordions:
+Use content accordions if the user only needs a selection of the information on a page.
 
-- Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
-- Use a succinct but descriptive accordion headings / labels.
-- Use [definition or description lists](section-typography.html#guide-typography-5-lists) for glossaries instead of accordions.
+Don't use an accordion if the user needs to see all of the information.
 
-When implementing accordions:
+<details data-label="accordions-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
 
-- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
-- JavaScript behaviour is used to replace the browser default for `<details>`.
-- For multiple accordion elements each `details` element must have its own `data-label` attribute.
-- This framework allows a text/string search of accordion content, even when collapsed (string itself remains hidden until opened).
+Markup: templates/content-accordion.hbs
+
+Style guide: Accordions.1 Content accordion
+*/
+
+/*
+Controls accordion
+
+Use controls accordions to make page controls easier to use.
 
 <details open data-label="accordions-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -46,7 +61,26 @@ When implementing accordions:
   </div>
 </details>
 
-Style guide: Accordions.1 Usability
+Markup: templates/controls-accordion.hbs
+
+Style guide: Accordions.2 Controls accordion
+*/
+
+/*
+Usability
+
+Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
+
+Use [definition or description lists](section-typography.html#guide-typography-6-lists) for glossaries instead of accordions.
+
+Building accordions
+- Keep accordion headings and labels short but descriptive.
+- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
+- JavaScript behaviour is used to replace the browser default for `<details>`.
+- For multiple accordion elements each `details` element must have its own `data-label` attribute.
+- You can run a text/string search of accordion content, even when collapsed (the string stays hidden until the accordion is opened).
+
+Style guide: Accordions.3 Usability
 */
 
 %base-accordion {
