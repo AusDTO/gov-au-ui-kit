@@ -213,6 +213,7 @@ Style guide: List styles.4 Highlighted word style
       h3,
       h4 {
         font-size: rem(24);
+        font-weight: $base-font-weight;
 
         @include media($tablet) {
           font-size: rem(36);
@@ -221,10 +222,12 @@ Style guide: List styles.4 Highlighted word style
         span {
           display: block;
           font-size: rem(17);
+          font-weight: $heading-font-weight;
         }
       }
 
-      + article ul {
+      + article ul,
+      + div ul {
         list-style: none;
         margin-top: 0;
         padding-left: 0;
@@ -245,7 +248,7 @@ Style guide: List styles.4 Highlighted word style
     &.offset-item {
       border-bottom: 0;
       border-top: solid 1px $border-colour;
-      padding-left: $base-spacing;
+      padding-left: 0;
       padding-right: $base-spacing;
 
       &:last-child {
@@ -254,9 +257,12 @@ Style guide: List styles.4 Highlighted word style
 
       .number-descriptor {
         @include outer-container;
+
         li {
-          @include span-columns(3 of 6);
-          @include omega(2n);
+          @include media($mobile) {
+            @include span-columns(3 of 6);
+            @include omega(2n);
+          }
 
           h5 {
             font-size: rem(16);
@@ -267,6 +273,7 @@ Style guide: List styles.4 Highlighted word style
 
     &.highlighted-item {
       background-color: $callout-bg-light-colour;
+      padding-left: $base-spacing;
 
       .offset-title h2,
       .offset-title h3,
