@@ -9,26 +9,15 @@ The **expand/collapse all** feature will be provided soon &mdash; this will be m
 
 This guidance is in part adapted from <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
 
-Markup: templates/accordion.hbs
-
 Style guide: Accordions
 */
 
 /*
-Usability
+Content accordion
 
-When designing or writing accordions:
+Use content accordions if the user only needs a selection of the information on a page.
 
-- Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
-- Use a succinct but descriptive accordion headings / labels.
-- Use [definition or description lists](section-typography.html#guide-typography-5-lists) for glossaries instead of accordions.
-
-When implementing accordions:
-
-- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
-- JavaScript behaviour is used to replace the browser default for `<details>`.
-- For multiple accordion elements each `details` element must have its own `data-label` attribute.
-- This framework allows a text/string search of accordion content, even when collapsed (string itself remains hidden until opened).
+Don't use an accordion if the user needs to see all of the information.
 
 <details data-label="accordions-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -46,9 +35,55 @@ When implementing accordions:
   </div>
 </details>
 
-Style guide: Accordions.1 Usability
+Markup: templates/content-accordion.hbs
+
+Style guide: Accordions.1 Content accordion
 */
 
+/*
+Controls accordion
+
+Use controls accordions to make page controls easier to use.
+
+<details data-label="accordions-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Markup: templates/controls-accordion.hbs
+
+Style guide: Accordions.2 Controls accordion
+*/
+
+/*
+Usability
+
+Don't use an accordion if the user needs to see all of the information. Structure and rewrite your content instead.
+
+Use [definition or description lists](section-typography.html#guide-typography-6-lists) for glossaries instead of accordions.
+
+Building accordions
+- Keep accordion headings and labels short but descriptive.
+- Accordions can be set to open or closed initially using `aria-expanded` property set to `true` or `false`.
+- JavaScript behaviour is used to replace the browser default for `<details>`.
+- For multiple accordion elements each `details` element must have its own `data-label` attribute.
+- You can run a text/string search of accordion content, even when collapsed (the string stays hidden until the accordion is opened).
+
+Style guide: Accordions.3 Usability
+*/
+
+// New CSS Experiment
 details,
 .accordion {
   display: block;
@@ -57,7 +92,7 @@ details,
 
   & + details,
   & + .accordion {
-    margin-top: $small-spacing;
+    margin-top: -1px;
   }
 }
 
@@ -67,28 +102,23 @@ summary {
   position: relative;
   width: 100%;
   height: auto;
-  margin: 0;
   padding: $small-spacing;
-  border-bottom: none;
   border-top-right-radius: $tiny-border-radius;
   border-top-left-radius: $tiny-border-radius;
-  background-color: $lighter-aqua;
-  color: $darker-aqua;
   text-align: left;
   font-weight: $bold-font-weight;
   cursor: pointer;
   transition: background-color $transition-timing-fast $transition-easing;
 
+  background: $background-secondary-colour;
+  color: $non-black;
+  border-bottom: 1px solid $light-grey;
+  border-top: 1px solid $light-grey;
+  font-size: rem(20);
+
   // Remove vanilla summary styles.
   &::-webkit-details-marker {
     display: none;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-    background-color: $light-aqua;
-    color: $non-black;
   }
 
   &::before {
@@ -111,6 +141,12 @@ summary {
     }
   }
 
+  &:hover,
+  &:focus {
+    background-color: $light-grey;
+    outline: none;
+  }
+
 }
 
 .accordion-panel {
@@ -120,11 +156,9 @@ summary {
   height: auto;
   overflow: hidden;
   padding: $base-spacing $base-spacing $small-spacing;
-  border: solid $small-spacing $lighter-aqua;
-  border-top: none;
+  transition: padding $transition-timing $transition-easing, border $transition-timing $transition-easing, position $transition-timing $transition-easing;
   border-bottom-right-radius: $tiny-border-radius;
   border-bottom-left-radius: $tiny-border-radius;
-  transition: padding $transition-timing $transition-easing, border $transition-timing $transition-easing, position $transition-timing $transition-easing;
 
   [aria-expanded='false'] & {
     z-index: -1;
@@ -138,4 +172,40 @@ summary {
     margin-top: 0;
   }
 
+}
+
+// ACCORDION VARIATIONS
+
+@mixin accordion-styles ($summary-bg, $summary-colour, $summary-hover-bg, $summary-hover-colour, $summary-border, $panel-border, $panel-border-top) {
+
+  summary {
+    background-color: $summary-bg;
+    color: $summary-colour;
+    border-bottom: #{$summary-border};
+    border-top: #{$summary-border};
+
+    &:hover,
+    &:focus {
+      background-color: $summary-hover-bg;
+      color: $summary-hover-colour;
+    }
+  }
+
+  .accordion-panel {
+    border: #{$panel-border};
+    border-top: $panel-border-top;
+  }
+}
+
+
+
+details {
+
+  &.accordion-controls {
+    summary {
+      font-size: $small-font-size;
+    }
+    margin-top: $small-spacing;
+    @include accordion-styles($lighter-aqua, $non-black, $light-aqua, $darker-aqua, none, 'solid #{$small-spacing} #{$lighter-aqua}', none);
+  }
 }
