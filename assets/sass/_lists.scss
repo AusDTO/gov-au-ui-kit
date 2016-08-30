@@ -187,6 +187,18 @@ Style guide: List styles.4 Highlighted word style
       &:last-child {
         border-bottom: solid 1px $border-colour;
       }
+
+      .number-descriptor {
+        @include outer-container;
+        li {
+          @include span-columns(3 of 6);
+          @include omega(2n);
+
+          h5 {
+            font-size: rem(16);
+          }
+        }
+      }
     }
 
     &.highlighted-item {
