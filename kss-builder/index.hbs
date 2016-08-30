@@ -118,9 +118,9 @@
         <h2>In this section</h2>
         <ul>
           {{#each sections}}
-            {{#unless @first}}
+            {{#if_equal depth 2}}
             <li><a href="#guide-{{referenceURI}}">{{header}}</a></li>
-            {{/unless}}
+            {{/if_equal}}
           {{/each}}
         </ul>
       </nav>
