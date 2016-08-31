@@ -2,6 +2,24 @@
 
 ## UI Kit "Kraken"
 
+### 1.7.6 - 2016-09-01
+
+#### UI-Kit changes
+
+- Desktop: Content area is now 12 columns wide to accommodate larger block elements. In response basic text elements `h1-h6, p, li, dl` now have a max-width for readability. See `_grid-layout.scss`
+- Desktop: Added `.content-full-width` as a method of making basic text elements fill to 12 columns if required (see above).
+- Base `%base-vertical-list` and the vertical lists have re-written, switching from flexboxes to Neat columns, providing IE9/10 support. Also done for top set of footer links (`.footer-top`).
+
+#### Styleguide
+
+- Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
+- Section index links now only show Section headings and not Sub-sections
+- Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
+
+#### Bugfixes
+
+- Fixed HTML validation errors [PR 311](https://github.com/AusDTO/gov-au-ui-kit/pull/311)
+
 ### 1.7.5 - 2016-08-25
 
 #### UI-Kit changes

@@ -54,23 +54,18 @@ footer[role='contentinfo'] {
     border-bottom: 1px solid $border-colour;
 
     nav {
-      display: flex;
-      box-sizing: border-box;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      @extend %base-vertical-list;
 
       ul {
-        flex: 0 0 100%;
-        margin: 0;
-        padding-right: $base-spacing;
-
-        @include media($mobile) {
-          flex-basis: 50%;
+        @include media($tablet) {
+          @include span-columns(6 of 12);
+          @include omega(2n);
         }
 
-        @include media($tablet) {
-          flex-basis: 25%;
+        @include media($desktop) {
+          @include omega-reset(2n);
+          @include span-columns(3 of 12);
+          @include omega(5n);
         }
       }
 

@@ -118,9 +118,9 @@
         <h2>In this section</h2>
         <ul>
           {{#each sections}}
-            {{#unless @first}}
+            {{#if_equal depth 2}}
             <li><a href="#guide-{{referenceURI}}">{{header}}</a></li>
-            {{/unless}}
+            {{/if_equal}}
           {{/each}}
         </ul>
       </nav>
@@ -196,7 +196,7 @@
 
           {{#if sourceFile.name}}
             <div class="kss-source">
-              Source on GitHub: <a href="https://github.com/AusDTO/gov-au-ui-kit/tree/master/assets/sass/{{sourceFile.name}}#L{{sourceFile.line}}" rel="external gh-source-ref"><code>{{sourceFile.name}}</code></a>, line {{sourceFile.line}}
+              Source on GitHub: <a href="https://github.com/AusDTO/gov-au-ui-kit/tree/master/assets/sass/{{sourceFile.name}}#L{{sourceFile.line}}" rel="external"><code>{{sourceFile.name}}</code></a>, line {{sourceFile.line}}
             </div>
           {{/if}}
 

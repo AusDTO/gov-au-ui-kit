@@ -118,7 +118,7 @@ Style guide: List styles.4 Highlighted word style
 
 %base-list {
   list-style: none;
-  margin: ($base-spacing * 2) 0;
+  //margin: ($base-spacing * 2) 0;
   padding: 0;
 
   .tags {
@@ -162,7 +162,7 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    padding: $base-spacing 0;
+    padding: 4% 0; //Was `padding: $base-spacing 0;` changed to match gutter
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
   }
@@ -185,10 +185,15 @@ Style guide: List styles.4 Highlighted word style
   }
 }
 
+
+
 .list-horizontal {
   @extend %base-list;
 
   > li {
+
+    width: 100%;
+    max-width: none;
 
     @include media($tablet) {
       display: flex;
@@ -222,41 +227,18 @@ Style guide: List styles.4 Highlighted word style
         }
       }
     }
-
   }
-
 }
 
-$list-vertical-gutter: 4%;
 
-.list-vertical {
+%base-vertical-list {
   @extend %base-list;
-
-  &.no-border {
-    li:nth-child(-n+2) {
-      border-top: none;
-      padding-top: 0;
-    }
-  }
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  @include outer-container;
 
   > li {
 
     border-top: 4px solid $border-colour;
     border-bottom: none;
-    margin: 0;
-    flex: 0 0 100%;
-
-    @include media($tablet) {
-      flex-basis: ((100% - $list-vertical-gutter) / 2);
-
-      &:not(:nth-child(2n)) {
-        margin-right: $list-vertical-gutter;
-      }
-    }
 
     article {
       display: flex;
@@ -295,8 +277,27 @@ $list-vertical-gutter: 4%;
   }
 }
 
+.list-vertical {
+  @extend %base-vertical-list;
+
+  &.no-border {
+    li:nth-child(-n+2) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  > li {
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+  }
+}
+
+
 .list-vertical--thirds {
-  @extend .list-vertical;
+  @extend %base-vertical-list;
 
   &.no-border {
     li:nth-child(-n+3) {
@@ -307,21 +308,20 @@ $list-vertical-gutter: 4%;
 
   > li {
     @include media($tablet) {
-      flex: 0 0 ((100% - $list-vertical-gutter * 2) / 3);
-
-      &:not(:nth-child(2n)) {
-        margin-right: 0;
-      }
-
-      &:not(:nth-child(3n)) {
-        margin-right: $list-vertical-gutter;
-      }
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+    @include media($desktop) {
+      @include omega-reset(2n);
+      @include span-columns(4 of 12);
+      @include omega(3n);
     }
   }
 }
 
+
 .list-vertical--fourths {
-  @extend .list-vertical;
+  @extend %base-vertical-list;
 
   &.no-border {
     li:nth-child(-n+4) {
@@ -332,19 +332,17 @@ $list-vertical-gutter: 4%;
 
   > li {
     @include media($tablet) {
-      flex: 0 0 ((100% - $list-vertical-gutter * 3) / 4);
-
-      &:not(:nth-child(2n)),
-      &:not(:nth-child(3n)) {
-        margin-right: 0;
-      }
-
-      &:not(:nth-child(4n)) {
-        margin-right: $list-vertical-gutter;
-      }
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+    @include media($desktop) {
+      @include omega-reset(2n);
+      @include span-columns(3 of 12);
+      @include omega(4n);
     }
   }
 }
+
 
 .list-small {
   @extend %base-list;
