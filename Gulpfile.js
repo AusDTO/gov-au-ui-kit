@@ -212,7 +212,7 @@ gulp.task('build', ['lint', 'ui-kit', 'markdown', 'examples', 'styleguide']);
 
 gulp.task('build.prod', function (callback) {
     runSequence('clean',
-        ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.img.zip', 'ui-kit.scssmerge', 'markdown', 'htmlvalidate'],
+        ['lint', 'nginx', 'ui-kit', 'ui-kit.min', 'ui-kit.img.zip', 'markdown', 'htmlvalidate'],
         callback);
 });
 
