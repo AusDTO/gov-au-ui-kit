@@ -177,7 +177,7 @@ summary {
   @extend %base-accordion-panel;
 }
 
-.accordion--widget {
+.accordion--controls {
   @extend %base-accordion;
 
   margin-top: $small-spacing;

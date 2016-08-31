@@ -17,8 +17,6 @@
 - Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
 - Section index links now only show Section headings and not Sub-sections
 - Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
-- New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion-controls`
-- Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`
 
 #### Bugfixes
 
