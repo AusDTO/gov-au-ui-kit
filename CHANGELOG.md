@@ -2,7 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### `develop` (unreleased)
+### 1.7.6 - 2016-09-01
 
 #### UI-Kit changes
 
