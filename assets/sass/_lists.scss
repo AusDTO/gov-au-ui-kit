@@ -37,6 +37,34 @@ Style guide: List styles.1 Horizontal style
 */
 
 /*
+Offset item
+
+Use offset items to make it easier to scan horizontal lists.
+
+Make sure each offset title makes sense as a heading in the page structure.
+
+Markup: templates/lists-offset.hbs
+
+<details data-label="horizontal-list-styles-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: List styles.1 Horizontal style.1 Offset item
+*/
+
+/*
 Vertical style
 
 Vertical style provides multiple columns of list items. By default the vertical lists are displayed in 2 columns.
