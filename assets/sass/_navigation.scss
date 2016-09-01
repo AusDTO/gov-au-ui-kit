@@ -401,7 +401,7 @@ Style guide: Navigation.6 Footer navigation
       border: none;
       border-left: 4px solid transparent;
       border-bottom: none;
-      padding: rem(12) $small-spacing; //Was: ( $medium-spacing / 2) $small-spacing;
+      padding: $small-spacing;
       text-decoration: none;
       transition: border-color $transition-timing-fast $transition-easing;
 
