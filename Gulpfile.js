@@ -77,7 +77,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('ui-kit', function () {
-    gulp.start(['ui-kit.scss', 'ui-kit.js', 'ui-kit.img']);
+    gulp.start(['ui-kit.scss', 'ui-kit.js']);
 });
 
 gulp.task('ui-kit.scss', function () {
