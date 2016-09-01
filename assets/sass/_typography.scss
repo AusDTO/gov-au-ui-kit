@@ -295,8 +295,8 @@ h2 {
 h3 {
   font-size: rem(24);
   font-weight: $heading-font-weight;
-  margin-top: 1.4em;
-  margin-bottom: 0.8em;
+  margin-top: $medium-spacing + ($small-spacing / 3); // 38.133px; was 34.4px from Alz.
+  margin-bottom: $small-spacing;
 
   @include media($tablet) {
     font-size: rem(26);
@@ -309,7 +309,6 @@ h6 {
   font-size: rem(18);
   font-weight: $heading-font-weight;
 }
-
 
 // Document this later.
 .gov-speak {
