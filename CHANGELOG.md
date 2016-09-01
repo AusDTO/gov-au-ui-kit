@@ -2,7 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### `develop` (unreleased)
+### 1.7.6 - 2016-09-01
 
 #### UI-Kit changes
 
@@ -13,6 +13,8 @@
 #### Styleguide
 
 - Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
+- Section index links now only show Section headings and not Sub-sections
+- Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
 
 #### Bugfixes
 
