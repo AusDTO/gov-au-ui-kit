@@ -118,9 +118,10 @@ Style guide: List styles.4 Highlighted word style
 
 %base-list {
   @include clearfix;
-  list-style: none;
-  margin-top: em(34);
+
+  margin-top: em(34); // Using ems for IE8 supp.
   padding: 0;
+  list-style: none;
 
   .tags {
     @include link-colours($button-bg-colour, $link-colour--hover, $link-colour);
@@ -176,10 +177,9 @@ Style guide: List styles.4 Highlighted word style
     margin-top: 0;
     margin-bottom: $tiny-spacing;
 
-    //Same as vanilla H4
     font-size: rem(18);
     font-weight: $heading-font-weight;
-    line-height: 1.4;
+    line-height: $base-heading-leading;
   }
 
   img {
@@ -263,13 +263,8 @@ Style guide: List styles.4 Highlighted word style
       }
     }
 
-
     p {
       min-height: auto;
-
-      @include media ($tablet) {
-        //min-height: $base-spacing * 3;
-      }
     }
 
     .meta {
@@ -360,7 +355,6 @@ Style guide: List styles.4 Highlighted word style
     padding: $small-spacing;
     padding-left: ($base-spacing * 2);
     border-bottom: none;
-
     background-repeat: no-repeat;
     background-position: $base-spacing ($small-spacing * 1.75);
     background-size: $tiny-spacing auto;
