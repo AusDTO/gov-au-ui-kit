@@ -187,14 +187,12 @@ Style guide: Link styles.1 Hover links
   }
 }
 
-//Support for .local-nav padding and indents
+// Placeholder link support for .local-nav padding and indents
 .local-nav {
   ul span.placeholder-link {
     display: block;
     border-left: 4px solid transparent;
-    padding: $medium-spacing / 2 $small-spacing;
-  }
-  ul ul span.placeholder-link {
+    padding: ($medium-spacing / 2) $small-spacing;
   }
   ul ul ul span.placeholder-link {
     padding-left: $base-spacing;
@@ -203,8 +201,6 @@ Style guide: Link styles.1 Hover links
     padding-left: $base-spacing + $small-spacing;
   }
 }
-
-// move these bad boys to their right contextual places
 
 main > article,
 footer[role='contentinfo'] {
