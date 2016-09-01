@@ -20,7 +20,7 @@ include in your project:
 
 GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
 
-The [/docs/](\docs\) folder contains draft documentation on experimental work. For example, how to install UI-Kit for use with `webpack`.
+The [/docs/](/docs/) folder contains draft documentation on experimental work. For example, how to install UI-Kit for use with `webpack`.
 
 ### Features
 
