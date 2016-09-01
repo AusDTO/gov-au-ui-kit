@@ -119,7 +119,7 @@ Style guide: List styles.4 Highlighted word style
 %base-list {
   @include clearfix;
 
-  margin-top: em(34); // Using ems for IE8 supp.
+  margin-top: $base-spacing * 1.4; // Revisit.
   padding: 0;
   list-style: none;
 
@@ -133,7 +133,7 @@ Style guide: List styles.4 Highlighted word style
       display: inline-block;
       margin: 0;
       padding: 0;
-      line-height: $base-heading-leading * 1.5;
+      line-height: $base-heading-leading * 1.5; // Revisit.
     }
 
     dt,
