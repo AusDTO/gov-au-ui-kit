@@ -126,6 +126,7 @@ gulp.task('ui-kit.min.js', function () {
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
+
 gulp.task('ui-kit.img', ['svg2png'], function () {
     return gulp.src(paths.images)
         .pipe(imagemin())
@@ -194,7 +195,7 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
 
 });
 
-gulp.task('styleguide.scss', ['svg2png'], function () {
+gulp.task('styleguide.scss', function () {
     return gulp.src(paths.kssScssDir)
         .pipe(sass(options.sass).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))
