@@ -1,15 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<!--[if lt IE 7 ]>
-<html lang="en" class="ie6 no-js">    <![endif]-->
-<!--[if IE 7 ]>
-<html lang="en" class="ie7 no-js">    <![endif]-->
-<!--[if IE 8 ]>
-<html lang="en" class="ie8 no-js">    <![endif]-->
-<!--[if IE 9 ]>
-<html lang="en" class="ie9 no-js">    <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" class="no-js"><!--<![endif]-->
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,6 +14,17 @@
     h.className = h.className.replace('no-js', 'js')
   })(document.documentElement)
   </script>
+
+  <!--[if gt IE 8]><!--><link href="kss-assets/kss.css" rel="stylesheet" ><!--<![endif]-->
+  <!--[if IE 6]><link href="/latest/ui-kit-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 7]><link href="/latest/ui-kit-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 8]><link href="/latest/ui-kit-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+  <!--[if lt IE 9]>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="latest/ui-kit.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   <script>
@@ -42,20 +43,13 @@
 
     ga('create', 'UA-72255206-3', 'auto');
     ga('send', 'pageview');
-
   </script>
-
-  <link rel="stylesheet" href="kss-assets/kss.css">
-
-  <!--[if lt IE 9]>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
-  <![endif]-->
-
-  <script type="text/javascript" src="latest/ui-kit.js"></script>
 </head>
 <body>
+
+<!-- Yellow UA msg for anything older than IE9. Please remove me post end-Aug demo. -->
+<!-- Compatibility message -->
+<!--[if lt IE 9]><p class="ua-notification">GOV.AU works better on a newer web browser (the software you use to access the internet). We’re improving how it works in your browser.</p><![endif]-->
 
 <nav class="skip-to">
   <a href="#content">Skip to main content</a>

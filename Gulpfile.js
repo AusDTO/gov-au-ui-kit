@@ -81,11 +81,16 @@ gulp.task('ui-kit', function () {
 });
 
 gulp.task('ui-kit.scss', function () {
-    return gulp.src(paths.scss)
-        .pipe(sass(options.sass).on('error', sass.logError))
-        .pipe(autoprefixer(options.autoprefixer))
-        .pipe(gitVersion())
-        .pipe(gulp.dest(paths.outputAssets));
+
+  return gulp.src('./assets/sass/**/*.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest(paths.outputAssets));
+    // 
+    // return gulp.src(paths.scss)
+    //     .pipe(sass.sync(options.sass).on('error', sass.logError))
+    //     // .pipe(autoprefixer(options.autoprefixer))
+    //     // .pipe(gitVersion())
+    //     .pipe(gulp.dest(paths.outputAssets));
 });
 
 gulp.task('ui-kit.js', function () {

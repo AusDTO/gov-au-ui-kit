@@ -72,6 +72,13 @@ Style guide: Grid.5 Layout.1 Wrapper
   @include outer-container;
 }
 
+html {
+  @include ie-lte(8) {
+    position: relative;
+    min-height: 100%;
+  }
+}
+
 body {
   @include flex-layout;
 }
@@ -93,6 +100,24 @@ main {
     @include media($tablet) {
       @include span-columns(4 of 6);
     }
+  }
+
+  @include ie-lte(8) {
+    &:before,
+    &:after {
+      content: '.';
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  @include ie-lte(7) {
+    zoom: 1;
   }
 
   /*
