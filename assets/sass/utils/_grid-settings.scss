@@ -49,8 +49,6 @@ $desktop: new-breakpoint(min-width $max-width 16);
 Style guide: Grid.3 Breakpoints
 */
 
-@import '../_vendor/neat/neat-helpers';
-
 $mobile-minwidth: 420px;
 $tablet-minwidth: 768px;
 $desktop-minwidth: 1200px;

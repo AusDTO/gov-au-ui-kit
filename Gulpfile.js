@@ -25,7 +25,7 @@ var paths = {
     assets: './assets/**/*.*',
     assetsDir: './assets',
     scssDir: './assets/sass/**/*.scss',
-    scssTemplatesDir: './assets/sass/templates',
+    scssTemplatesDir: './assets/sass/components/templates',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
     examples: './examples/*.hbs',
@@ -68,7 +68,7 @@ var options = {
 };
 
 gulp.task('lint', function () {
-    return gulp.src([paths.scssDir, paths.kssScssDir, '!./assets/sass/_vendor/**/*.scss'])
+    return gulp.src([paths.scssDir, paths.kssScssDir, '!./assets/sass/vendor/**/*.scss'])
         .pipe(sassLint({
             configFile: '.sass-lint.yml'
         }))
