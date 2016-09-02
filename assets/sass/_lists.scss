@@ -193,7 +193,6 @@ Style guide: List styles.4 Highlighted word style
   @extend %base-list;
 
   > li {
-
     width: 100%;
     max-width: none;
 
@@ -202,7 +201,9 @@ Style guide: List styles.4 Highlighted word style
     }
 
     figure {
-
+      @include media($mobile) {
+        margin-bottom: $medium-spacing;
+      }
       @include media($tablet) {
         flex: 0 0 35%;
         margin-right: $base-spacing;
