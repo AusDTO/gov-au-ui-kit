@@ -106,7 +106,7 @@ $darker-aqua:   darken($aqua, 10%);
 $light-aqua:    lighten($aqua, 30%);
 $lighter-aqua:  lighten($aqua, 60%);
 
-$navy:          #224a61;
+$navy:          #043751;
 $dark-navy:     darken($navy, 10%);
 
 $maroon:        #880e48;
@@ -272,7 +272,9 @@ $badge-colour--success:         $green;
 
 $controls-bg-colour:            $dark-navy;
 $controls-contrast-bg-colour:   $maroon;
-$header-bg-colour:              #134058;
+$header-bg-colour:              $navy;
+$header-bg-colour-2:            #104F71;
+$header-bg-colour-3:            #1C809D;
 $hero-bg-colour:                #0098b0;
 $breadcrumbs-bg-colour:         $non-white;
 
