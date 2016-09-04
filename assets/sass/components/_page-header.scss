@@ -132,9 +132,15 @@
   margin-bottom: 0;
   color: $body-inverted-text-colour;
 
-  background: $header-bg-colour; /* Old browsers */
-  background: linear-gradient(45deg, $header-bg-colour 0%, $header-bg-colour-2 30%, $header-bg-colour-3 80%, $header-bg-colour-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#043751', endColorstr='#1c809d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-color: $header-bg-colour;
+  background-image: url('../latest/img/header-bg-v2.jpg');
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  //CSS gradient not used because of 'dazzle' issues on monitors with low refresh rate.
+  //background: $header-bg-colour; /* Old browsers */
+  //background: linear-gradient(45deg, $header-bg-colour 0%, $header-bg-colour-2 30%, $header-bg-colour-3 80%, $header-bg-colour-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#043751', endColorstr='#1c809d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   /* Note: do not use variables in above IE filter. */
 
   @include media($tablet) {
