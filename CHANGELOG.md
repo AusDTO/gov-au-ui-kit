@@ -8,10 +8,18 @@
 
 - New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion--controls`.
 - Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`.
+- Minor design changes
+- Local navigation font-size changed to be smaller than body copy for better visual hierarchy.
 
 #### Styleguide
 
 - Added guide to [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) on installing and using UI Kit via `npm`
+
+#### Bugfixes
+
+- Added visible focus/hover on Local navigation menu button, `#323`
+- Added styles for usage of placeholder links in the Local navigation `#290`
+- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy `#299`
 
 ### 1.7.6 - 2016-09-01
 
