@@ -677,6 +677,10 @@ Style guide: Navigation.8 Group of links
 .links-group {
   @include outer-container;
 
+  @include ie-lte(8) {
+    @include ie-clearfix;
+  }
+
   ul {
     padding: 0;
     list-style: none;
@@ -699,8 +703,12 @@ Style guide: Navigation.8 Group of links
       @include media ($desktop) {
         @include span-columns(4 of 16);
         @include omega(4n);
+
+        @include ie-lte(8) {
+          width: 21%;
         }
       }
+    }
   }
 }
 

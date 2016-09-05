@@ -248,6 +248,10 @@ Style guide: List styles.4 Highlighted word style
   }
   */
 
+  @include ie-lte(8) {
+    @include ie-clearfix;
+  }
+
   > li {
 
     border-top: 6px solid $border-highlight-colour;
@@ -311,11 +315,19 @@ Style guide: List styles.4 Highlighted word style
     @include media($tablet) {
       @include span-columns(6 of 12);
       @include omega(2n);
+
+      @include ie-lte(8) {
+        width: 49%;
+      }
     }
     @include media($desktop) {
       @include omega-reset(2n);
       @include span-columns(4 of 12);
       @include omega(3n);
+
+      @include ie-lte(8) {
+        width: 30%;
+      }
     }
   }
 }
@@ -340,6 +352,10 @@ Style guide: List styles.4 Highlighted word style
       @include omega-reset(2n);
       @include span-columns(3 of 12);
       @include omega(4n);
+
+      @include ie-lte(8) {
+        width: 21%;
+      }
     }
   }
 }

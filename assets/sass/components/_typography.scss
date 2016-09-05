@@ -247,6 +247,10 @@ h1 {
   &:first-of-type {
     margin-top: $tiny-spacing;
   }
+
+  @include ie-lte(8) {
+    font-size: 32px;
+  }
 }
 
 h2 {
@@ -257,6 +261,10 @@ h2 {
 
   @include media($tablet) {
     font-size: rem(40);
+  }
+
+  @include ie-lte(8) {
+    font-size: 44px;
   }
 }
 
@@ -269,6 +277,10 @@ h3 {
   @include media($tablet) {
     font-size: rem(26);
   }
+
+  @include ie-lte(8) {
+    font-size: 26px;
+  }
 }
 
 h4,
@@ -276,6 +288,10 @@ h5,
 h6 {
   font-size: rem(18);
   font-weight: $heading-font-weight;
+
+  @include ie-lte(8) {
+    font-size: 18px;
+  }
 }
 
 // Document this later.

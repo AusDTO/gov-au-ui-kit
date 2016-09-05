@@ -64,6 +64,11 @@
   .links-group {
     margin: ($base-spacing * 1.5) 0;
 
+    @include ie-lte(8) {
+      margin-bottom: 0;
+      padding-bottom: $base-spacing * 1.5;
+    }
+
     h2 {
       font-size: rem(17);
       font-weight: $bold-font-weight;
@@ -144,6 +149,10 @@
       padding-bottom: 0;
     }
 
+    @include ie-lte(8) {
+      display: inline;
+    }
+
     .brandbar {
       position: absolute;
       top: 42px;
@@ -173,6 +182,10 @@
 
     &.night {
       background-image: image-url('icons/logo-gov-au-2x-night.png');
+    }
+
+    @include ie-lte(8) {
+      background-image: url('../latest/img/icons/logo-gov-au-1x.png');
     }
   }
 

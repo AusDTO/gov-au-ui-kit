@@ -42,3 +42,13 @@ $is-ie: false !default;
     }
   }
 }
+
+@mixin ie-clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+    height: 0;
+    border: 1px solid $maroon;
+  }
+}
