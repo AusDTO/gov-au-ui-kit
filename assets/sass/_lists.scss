@@ -145,12 +145,13 @@ Style guide: List styles.4 Highlighted word style
 */
 
 %base-list {
-  list-style: none;
   //margin: ($base-spacing * 2) 0;
   padding: 0;
+  list-style: none;
 
   .tags {
     @include link-colours($button-bg-colour, $link-colour--hover, $link-colour);
+
     color: $grey;
 
     dl,
@@ -190,9 +191,9 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
+    margin-bottom: 0;
     padding: 4% 0; //Was `padding: $base-spacing 0;` changed to match gutter
     border-bottom: solid 1px $border-colour;
-    margin-bottom: 0;
   }
 
   h2,
@@ -405,8 +406,8 @@ Style guide: List styles.4 Highlighted word style
 
   &.no-border {
     li:nth-child(-n+2) {
-      border-top: none;
       padding-top: 0;
+      border-top: none;
     }
   }
 
@@ -424,8 +425,8 @@ Style guide: List styles.4 Highlighted word style
 
   &.no-border {
     li:nth-child(-n+3) {
-      border-top: none;
       padding-top: 0;
+      border-top: none;
     }
   }
 
@@ -448,8 +449,8 @@ Style guide: List styles.4 Highlighted word style
 
   &.no-border {
     li:nth-child(-n+4) {
-      border-top: none;
       padding-top: 0;
+      border-top: none;
     }
   }
 
@@ -469,6 +470,7 @@ Style guide: List styles.4 Highlighted word style
 
 .list-small {
   @extend %base-list;
+
   border-top: solid 1px $border-colour;
 
   a {
@@ -497,9 +499,9 @@ Style guide: List styles.4 Highlighted word style
   }
 
   span {
+    border-bottom: 1px solid;
     color: $link-colour;
     text-decoration: none;
-    border-bottom: 1px solid;
   }
 
   li {
@@ -516,10 +518,10 @@ Style guide: List styles.4 Highlighted word style
   @extend %base-list;
 
   li {
-    list-style: none;
-    border-bottom: 0;
     padding-bottom: $base-spacing;
     padding-top: 0;
+    border-bottom: 0;
+    list-style: none;
   }
 
   a {
