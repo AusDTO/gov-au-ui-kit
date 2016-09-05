@@ -735,7 +735,7 @@ Style guide: Typography.7 Highlight
 .highlighted {
   background: $focus-colour;
   box-decoration-break: clone;
-  box-shadow: .75 * $tiny-spacing 0 0 $focus-colour, -.75 * $tiny-spacing 0 0 $focus-colour;
+  box-shadow: (.75 * $tiny-spacing) 0 0 $focus-colour, (-.75 * $tiny-spacing) 0 0 $focus-colour;
   display: inline;
 }
 
