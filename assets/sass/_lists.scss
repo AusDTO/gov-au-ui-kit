@@ -164,7 +164,7 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
-    padding: 2.74614% 0; //Was $base-spacing but changed to match gutter
+    padding: flex-gutter($content-grid-columns) 0;
     border-bottom: solid 1px $border-colour;
     margin-bottom: 0;
   }
