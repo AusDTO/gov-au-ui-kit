@@ -250,7 +250,7 @@ Style guide: List styles.4 Highlighted word style
 
   > li {
 
-    border-top: 6px solid $light-aqua;
+    border-top: 6px solid $border-highlight-colour;
     border-bottom: none;
 
     article {
@@ -364,7 +364,7 @@ Style guide: List styles.4 Highlighted word style
     &:hover,
     &:active {
       background-position: ($base-spacing * 1.25) ($small-spacing * 1.75);
-      background-color: $non-white;
+      background-color: $background-secondary-colour;
 
       span {
         color: $dark-aqua;
