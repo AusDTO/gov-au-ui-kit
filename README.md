@@ -20,6 +20,8 @@ include in your project:
 
 GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
 
+The [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) folder contains draft documentation on experimental work. For example, how to install UI-Kit for use with `webpack`.
+
 ### Features
 
 - <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize</a>.
