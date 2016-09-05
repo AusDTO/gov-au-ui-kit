@@ -45,15 +45,6 @@ var options = {
     autoprefixer: {
         browsers: ['last 2 versions', 'ie 8-10']
     },
-    sass: {
-        functions: {
-            'image-url($img)': function(img) {
-              var sass = require('node-sass');
-              var String = sass.types.String;
-              return new String('/latest/img/' + img.getValue());
-            }
-        }
-    },
     webpack: {
         output: {
             filename: 'ui-kit.js',

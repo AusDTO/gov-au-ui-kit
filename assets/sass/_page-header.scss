@@ -128,7 +128,7 @@
   background-color: $header-bg-colour;
   color: $body-inverted-text-colour;
 
-  background-image: url('../latest/img/header-bg.png');
+  background-image: image-url('header-bg.png');
   background-position: top right;
   background-repeat: repeat-y;
 
@@ -155,7 +155,7 @@
 
   .govau--text {
     display: block;
-    background-image: url('../latest/img/icons/logo-gov-au-2x.png');
+    background-image: image-url('icons/logo-gov-au-2x.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -164,15 +164,15 @@
     height: 51px;
 
     &.dusk {
-      background-image: url('../latest/img/icons/logo-gov-au-2x-dusk.png');
+      background-image: image-url('icons/logo-gov-au-2x-dusk.png');
     }
 
     &.dawn {
-      background-image: url('../latest/img/icons/logo-gov-au-2x-dawn.png');
+      background-image: image-url('icons/logo-gov-au-2x-dawn.png');
     }
 
     &.night {
-      background-image: url('../latest/img/icons/logo-gov-au-2x-night.png');
+      background-image: image-url('icons/logo-gov-au-2x-night.png');
     }
   }
 
