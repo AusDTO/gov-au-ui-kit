@@ -90,14 +90,14 @@ Style guide: Accordions.3 Usability
 }
 
 %base-accordion-button {
-  position: relative;
   display: block;
-  cursor: pointer;
+  position: relative;
   width: 100%;
   height: auto;
   padding: $small-spacing;
   border-radius: $tiny-border-radius $tiny-border-radius 0 0;
   background-color: $background-secondary-colour;
+  cursor: pointer;
   text-align: left;
   font-weight: $bold-font-weight;
   font-size: rem(20);
@@ -142,8 +142,8 @@ Style guide: Accordions.3 Usability
   display: block;
   height: auto;
   overflow: hidden;
-  border-radius: $tiny-border-radius $tiny-border-radius 0 0;
   padding: $base-spacing $base-spacing $small-spacing;
+  border-radius: $tiny-border-radius $tiny-border-radius 0 0;
 
   :first-child {
     margin-top: 0;
