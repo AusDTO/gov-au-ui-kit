@@ -22,12 +22,12 @@ Markup: templates/basic-links.hbs
 <details data-label="basic-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
-  <strong>Passed</strong>:
+  Passed:
     <ul>
       <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
       <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
     </ul>
-  <strong>Untested</strong>:
+  Untested:
     <ul>
       <li>WCAG:AA manual</li>
       <li>Browser support &mdash; automated and manual</li>
@@ -100,12 +100,12 @@ Style guide: Link styles.1 Hover links
   <details data-label="placeholder-link-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
     <div class="accordion-panel">
-    <strong>Passed</strong>:
+    Passed:
       <ul>
         <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
         <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
       </ul>
-    <strong>Untested</strong>:
+    Untested:
       <ul>
         <li>WCAG:AA manual</li>
         <li>Browser support &mdash; automated and manual</li>
@@ -159,12 +159,12 @@ Style guide: Link styles.1 Hover links
   <details data-label="placeholder-links-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
     <div class="accordion-panel">
-    <strong>Passed</strong>:
+    Passed:
       <ul>
         <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
         <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
       </ul>
-    <strong>Untested</strong>:
+    Untested:
       <ul>
         <li>WCAG:AA manual</li>
         <li>Browser support &mdash; automated and manual</li>
