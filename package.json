@@ -65,9 +65,7 @@
     "sass-inline-svg": "^0.0.3",
     "smoothscroll": "^0.2.2",
     "through2": "^2.0.1",
-    "webpack-stream": "^3.2.0"
-  },
-  "devDependencies": {
+    "webpack-stream": "^3.2.0",
     "velocity-animate": "^1.2.3"
   }
 }
