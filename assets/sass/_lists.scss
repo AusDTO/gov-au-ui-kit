@@ -221,47 +221,68 @@ Style guide: List styles.4 Highlighted word style
   @extend %base-list;
 
   > li {
+    @include outer-container;
+
     width: 100%;
     max-width: none;
 
-    @include media($tablet) {
-      display: flex;
-    }
-
     figure {
-      @include media($mobile) {
-        margin-bottom: $medium-spacing;
-      }
       @include media($tablet) {
-        flex: 0 0 35%;
-        margin-right: $base-spacing;
+        @include span-columns(4 of 12);
+      }
+
+      & + article {
+        @include media($tablet) {
+          @include span-columns(8 of 12);
+        }
       }
     }
 
     .offset-title {
+      margin-bottom: $base-spacing;
+
       h2,
       h3,
       h4 {
-        font-size: rem(24);
+        font-size: rem(32);
         font-weight: $base-font-weight;
-
-        @include media($tablet) {
-          font-size: rem(36);
-        }
-
-        span {
-          display: block;
-          font-size: rem(17);
-          font-weight: $heading-font-weight;
-        }
       }
 
-      + article ul,
-      + div ul {
-        list-style: none;
-        margin-top: 0;
-        padding-left: 0;
+      span {
+        display: block;
+        font-size: rem(17);
+        font-weight: $heading-font-weight;
       }
+
+      @include media($mobile) {
+        @include span-columns(6 of 6);
+      }
+
+      @include media($tablet) {
+        @include span-columns(4 of 12);
+
+        h2,
+        h3,
+        h4 {
+          font-size: rem(38);
+        }
+      }
+    }
+
+    .offset-body {
+      @include media($mobile) {
+        @include span-columns(6 of 6);
+      }
+
+      @include media($tablet) {
+        @include span-columns(8 of 12);
+      }
+
+      // ul {
+      //   list-style: none;
+      //   margin-top: 0;
+      //   padding-left: 0;
+      // }
     }
 
     .meta {
@@ -276,10 +297,9 @@ Style guide: List styles.4 Highlighted word style
     }
 
     &.offset-item {
+      padding-top: $base-spacing;
       border-top: 0;
       border-bottom: solid 1px $border-colour;
-      padding-left: 0;
-      padding-right: $base-spacing;
 
       &:last-child {
         border-bottom: solid 1px $border-colour;
@@ -322,7 +342,13 @@ Style guide: List styles.4 Highlighted word style
 
       figure {
         @include media($tablet) {
-          flex-basis: 65%;
+          @include span-columns(8 of 12);
+        }
+
+        & + article {
+          @include media($tablet) {
+            @include span-columns(4 of 12);
+          }
         }
       }
     }
