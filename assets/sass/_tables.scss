@@ -22,7 +22,7 @@ Basic table
 
 Markup: templates/table-examples.hbs
 
-<details data-label="table-accessibility" aria-expanded="false">
+<details open data-label="table-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -76,7 +76,7 @@ Calendar table
 
 Markup: templates/table-calendar.hbs
 
-<details data-label="table-calendar-style-accessibility" aria-expanded="false">
+<details open data-label="table-calendar-style-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:

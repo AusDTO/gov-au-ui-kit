@@ -440,7 +440,7 @@ Use the <a href="http://w3c.github.io/html/textlevel-semantics.html#the-kbd-elem
 
 Markup: Copy text to clipboard using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-<details data-label="kbd-accessibility" aria-expanded="false">
+<details open data-label="kbd-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -607,7 +607,7 @@ You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>
 
 Markup: templates/callouts-examples.hbs
 
-<details data-label="callouts-accessibility" aria-expanded="false">
+<details open data-label="callouts-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -682,7 +682,7 @@ There is styling for badges to indicate status.
 
 Markup: templates/badges.hbs
 
-<details data-label="badges-accessibility" aria-expanded="false">
+<details open data-label="badges-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -757,7 +757,7 @@ There are 2 ways of using quotes:
 
 Markup: templates/quotation-examples.hbs
 
-<details data-label="blockquote-accessibility" aria-expanded="false">
+<details open data-label="blockquote-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
