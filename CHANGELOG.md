@@ -17,9 +17,9 @@
 
 #### Bugfixes
 
-- Added visible focus/hover on Local navigation menu button, `#323`
-- Added styles for usage of placeholder links in the Local navigation `#290`
-- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy `#299`
+- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323)
+- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290)
+- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299)
 
 ### 1.7.6 - 2016-09-01
 
