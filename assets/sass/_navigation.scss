@@ -307,8 +307,7 @@ Style guide: Navigation.6 Footer navigation
 
   &:focus,
   &:hover {
-    background-color: $navy;
-    color: $non-white;
+    background-color: $light-grey;
   }
 
   &::before {
