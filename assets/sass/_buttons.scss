@@ -28,7 +28,7 @@ Do not apply styles to disabled buttons.
 
 Markup: templates/buttons-examples.hbs
 
-<details data-label="buttons-accessibility" aria-expanded="false">
+<details open data-label="buttons-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
