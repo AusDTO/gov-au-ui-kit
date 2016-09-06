@@ -13,6 +13,9 @@
 
 - Added guide to [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) on installing and using UI Kit via `npm`
 
+#### Bugfixes
+- Change git merge strategy for CHANGELOG.md to reduce conflicts
+
 ### 1.7.6 - 2016-09-01
 
 #### UI-Kit changes
