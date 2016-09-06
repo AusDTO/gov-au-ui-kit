@@ -42,9 +42,7 @@ Style guide: Link styles.1 Hover links
 %base-link-icon--after {
   content: '';
   position: absolute;
-  display: block;
-  top: 0;
-  right: -($medium-spacing);
+  display: inline;
   width: $medium-spacing;
   height: $medium-spacing;
   background-repeat: no-repeat;
@@ -72,7 +70,7 @@ Style guide: Link styles.1 Hover links
     }
 
     &[rel~='external'] {
-      display: inline-block;
+      display: inline;
       position: relative;
       margin-right: $base-spacing;
 
