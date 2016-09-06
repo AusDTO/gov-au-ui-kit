@@ -723,6 +723,23 @@ $badges: (
 }
 
 /*
+Highlight text
+
+Use `<strong class="highlighted">` to increase visual emphasis.
+
+Markup: templates/highlight.hbs
+
+Style guide: Typography.7 Highlight
+*/
+
+.highlighted {
+  background: $focus-colour;
+  box-decoration-break: clone;
+  box-shadow: (.75 * $tiny-spacing) 0 0 $focus-colour, (-.75 * $tiny-spacing) 0 0 $focus-colour;
+  display: inline;
+}
+
+/*
 Quotations
 
 There are 2 ways of using quotes:

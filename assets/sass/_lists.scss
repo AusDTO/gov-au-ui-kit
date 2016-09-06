@@ -37,6 +37,34 @@ Style guide: List styles.1 Horizontal style
 */
 
 /*
+Offset item
+
+Use offset items to make it easier to scan horizontal lists.
+
+Make sure each offset title makes sense as a heading in the page structure.
+
+Markup: templates/lists-offset.hbs
+
+<details data-label="offset-list-styles-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: List styles.1 Horizontal style.1 Offset item
+*/
+
+/*
 Vertical style
 
 Vertical style provides multiple columns of list items. By default the vertical lists are displayed in 2 columns.
@@ -125,6 +153,7 @@ Style guide: List styles.4 Highlighted word style
 
   .tags {
     @include link-colours($button-bg-colour, $link-colour--hover, $link-colour);
+
     color: $grey;
 
     dl,
@@ -164,9 +193,9 @@ Style guide: List styles.4 Highlighted word style
   }
 
   > li {
+    margin-bottom: 0;
     padding: flex-gutter($content-grid-columns) 0;
     border-bottom: solid 1px $border-colour;
-    margin-bottom: 0;
   }
 
   h2,
@@ -193,20 +222,63 @@ Style guide: List styles.4 Highlighted word style
   @extend %base-list;
 
   > li {
+    @include outer-container;
+
     width: 100%;
     max-width: none;
 
-    @include media($tablet) {
-      display: flex;
+    figure {
+      margin-bottom: flex-gutter($content-grid-columns);
+
+      @include media($tablet) {
+        @include span-columns(4 of 12);
+      }
+
+      & + article {
+        @include media($tablet) {
+          @include span-columns(8 of 12);
+        }
+      }
     }
 
-    figure {
-      @include media($mobile) {
-        margin-bottom: $medium-spacing;
+    .offset-title {
+      margin-bottom: $base-spacing;
+
+      h2,
+      h3,
+      h4 {
+        font-size: rem(32);
+        font-weight: $base-font-weight;
       }
+
+      span {
+        display: block;
+        font-size: rem(17);
+        font-weight: $heading-font-weight;
+      }
+
+      @include media($mobile) {
+        @include span-columns(6 of 6);
+      }
+
       @include media($tablet) {
-        flex: 0 0 35%;
-        margin-right: $base-spacing;
+        @include span-columns(4 of 12);
+
+        h2,
+        h3,
+        h4 {
+          font-size: rem(38);
+        }
+      }
+    }
+
+    .offset-body {
+      @include media($mobile) {
+        @include span-columns(6 of 6);
+      }
+
+      @include media($tablet) {
+        @include span-columns(8 of 12);
       }
     }
 
@@ -221,12 +293,57 @@ Style guide: List styles.4 Highlighted word style
       border-bottom: none;
     }
 
-    &.hero-item {
-      border-top: solid 1px $border-colour;
+    &.offset-item {
+      padding-top: $base-spacing;
+      border-top: 0;
+      border-bottom: solid 1px $border-colour;
 
+      &:last-child {
+        border-bottom: solid 1px $border-colour;
+        border-top: 0;
+      }
+
+      &:first-child {
+        border-top: solid 1px $border-colour;
+      }
+
+      .number-descriptor {
+        @include outer-container;
+
+        li {
+          @include media($mobile) {
+            @include span-columns(3 of 6);
+            @include omega(2n);
+          }
+
+          h5 {
+            font-size: rem(16);
+          }
+        }
+      }
+    }
+
+    &.highlighted-item {
+      background-color: $callout-bg-light-colour;
+      padding-left: $base-spacing;
+
+      .offset-title h2,
+      .offset-title h3,
+      .offset-title h4 {
+        font-size: rem(70);
+      }
+    }
+
+    &.hero-item {
       figure {
         @include media($tablet) {
-          flex-basis: 65%;
+          @include span-columns(8 of 12);
+        }
+
+        & + article {
+          @include media($tablet) {
+            @include span-columns(4 of 12);
+          }
         }
       }
     }
@@ -283,8 +400,8 @@ Style guide: List styles.4 Highlighted word style
 
   &.no-border {
     li:nth-child(-n+2) {
-      border-top: none;
       padding-top: 0;
+      border-top: none;
     }
   }
 
@@ -302,8 +419,8 @@ Style guide: List styles.4 Highlighted word style
 
   &.no-border {
     li:nth-child(-n+3) {
-      border-top: none;
       padding-top: 0;
+      border-top: none;
     }
   }
 
@@ -326,8 +443,8 @@ Style guide: List styles.4 Highlighted word style
 
   &.no-border {
     li:nth-child(-n+4) {
-      border-top: none;
       padding-top: 0;
+      border-top: none;
     }
   }
 
@@ -347,6 +464,7 @@ Style guide: List styles.4 Highlighted word style
 
 .list-small {
   @extend %base-list;
+
   border-top: solid 1px $border-colour;
 
   a {
@@ -374,9 +492,9 @@ Style guide: List styles.4 Highlighted word style
   }
 
   span {
+    border-bottom: 1px solid;
     color: $link-colour;
     text-decoration: none;
-    border-bottom: 1px solid;
   }
 
   li {
@@ -393,10 +511,10 @@ Style guide: List styles.4 Highlighted word style
   @extend %base-list;
 
   li {
-    list-style: none;
-    border-bottom: 0;
     padding-bottom: $base-spacing;
     padding-top: 0;
+    border-bottom: 0;
+    list-style: none;
   }
 
   a {
