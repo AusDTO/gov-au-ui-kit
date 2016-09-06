@@ -302,12 +302,12 @@ Style guide: Navigation.6 Footer navigation
   margin: $base-spacing 0 0;
   text-align: left;
   font-weight: $base-font-weight;
+  background-color: $background-secondary-colour;
   border: 0;
 
-  &,
+  &:focus,
   &:hover {
-    background-color: $background-secondary-colour;
-    color: $darker-aqua;
+    background-color: $light-grey;
   }
 
   &::before {
@@ -355,9 +355,9 @@ Style guide: Navigation.6 Footer navigation
     margin: 0;
     padding: 0;
     list-style: none;
-    text-transform: uppercase;
 
     ul {
+      font-size: rem(14); // level 2+ should be 14px
       margin: 0;
       text-transform: none;
 
@@ -378,7 +378,7 @@ Style guide: Navigation.6 Footer navigation
             @extend %icon-arrow-right;
             padding-left: $base-spacing + $small-spacing;
             background-repeat: no-repeat;
-            background-position: $base-spacing $small-spacing * 1.45;
+            background-position: $base-spacing center;
             background-size: $tiny-spacing auto;
           }
         }
@@ -400,7 +400,7 @@ Style guide: Navigation.6 Footer navigation
       border: none;
       border-left: 4px solid transparent;
       border-bottom: none;
-      padding: $medium-spacing / 2 $small-spacing;
+      padding: $small-spacing;
       text-decoration: none;
       transition: border-color $transition-timing-fast $transition-easing;
 
@@ -591,7 +591,7 @@ Style guide: Navigation.7 Skip links
 }
 
 .index-links {
-  margin: ($base-spacing * 2) 0 $base-spacing $small-spacing;
+  margin: ($base-spacing * 2) 0 $base-spacing 0;
   border-left: $tiny-spacing solid $non-white;
   padding: 0 0 $medium-spacing ($base-spacing - $tiny-spacing);
 

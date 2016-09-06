@@ -185,7 +185,20 @@ Style guide: Link styles.1 Hover links
   }
 }
 
-// move these bad boys to their right contextual places
+// Placeholder link support for .local-nav padding and indents
+.local-nav {
+  ul span.placeholder-link {
+    display: block;
+    border-left: 4px solid transparent;
+    padding: ($medium-spacing / 2) $small-spacing;
+  }
+  ul ul ul span.placeholder-link {
+    padding-left: $base-spacing;
+  }
+  ul ul ul ul span.placeholder-link {
+    padding-left: $base-spacing + $small-spacing;
+  }
+}
 
 main > article,
 footer[role='contentinfo'] {

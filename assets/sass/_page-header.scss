@@ -119,7 +119,7 @@
 
 .prerelease-govau--header {
   @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
-  @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
+  @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
 
   position: relative;
   padding: $base-spacing 0 ($base-spacing * 3);
