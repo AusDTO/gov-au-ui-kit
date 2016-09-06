@@ -11,7 +11,7 @@
 
 #### Bugfixes
 
-- Poor wrapping of links going to external resources (`rel` `external`).
+- Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky.
 
 #### Styleguide
 
