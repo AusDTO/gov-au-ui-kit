@@ -194,7 +194,7 @@ Style guide: List styles.4 Highlighted word style
 
   > li {
     margin-bottom: 0;
-    padding: 4% 0; //Was `padding: $base-spacing 0;` changed to match gutter
+    padding: flex-gutter($content-grid-columns) 0;
     border-bottom: solid 1px $border-colour;
   }
 
@@ -278,12 +278,6 @@ Style guide: List styles.4 Highlighted word style
       @include media($tablet) {
         @include span-columns(8 of 12);
       }
-
-      // ul {
-      //   list-style: none;
-      //   margin-top: 0;
-      //   padding-left: 0;
-      // }
     }
 
     .meta {
@@ -339,8 +333,6 @@ Style guide: List styles.4 Highlighted word style
     }
 
     &.hero-item {
-      border-top: solid 1px $border-colour;
-
       figure {
         @include media($tablet) {
           @include span-columns(8 of 12);
