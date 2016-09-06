@@ -9,6 +9,10 @@
 - New styles for accordions used in the primary content area `details`, and when used in widgets or filters `details.accordion--controls`.
 - Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`.
 
+#### Bugfixes
+
+- Poor wrapping of links going to external resources (`rel` `external`).
+
 #### Styleguide
 
 - Added guide to [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) on installing and using UI Kit via `npm`
