@@ -228,6 +228,8 @@ Style guide: List styles.4 Highlighted word style
     max-width: none;
 
     figure {
+      margin-bottom: flex-gutter($content-grid-columns);
+
       @include media($tablet) {
         @include span-columns(4 of 12);
       }
