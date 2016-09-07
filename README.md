@@ -49,7 +49,9 @@ We are working on:
 - an audit.
 
 ### Browser support
-The [cross browser and device support](BROWSER-SUPPORT.md) table.
+Read [cross browser and device support](BROWSER-SUPPORT.md) table.
+
+The kit uses a [conditional styling mixin for specific versions of IE](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/assets/sass/_ie.scss). Use this when extending the kit.
 
 We are working on:
 
