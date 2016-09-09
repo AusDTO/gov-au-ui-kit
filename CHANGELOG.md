@@ -17,6 +17,7 @@
 #### Bugfixes
 
 - Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
+- Changed undocumented (experimental) header styles to use a background image instead of CSS gradient.
 
 #### Styleguide
 
