@@ -1,7 +1,9 @@
 @mixin inline-background-image($img) {
-  background-image: image-url('icons/' + $img + '.png');
-  background-image: none, image-url('icons/' + $img + '.svg'),
-  linear-gradient(transparent, transparent);
+  background-image: image-url('icons/' + $img + '.svg');
+
+  @include ie-lte(8) {
+    background-image: image-url('icons/' + $img + '.png');
+  }
 }
 
 // Generic icons

@@ -174,29 +174,41 @@ Style guide: Link styles.1 Hover links
   */
 
   // Specifying a span here explicitly to avoid a.placeholder-link usage.
-  span.placeholder-link {
-    color: $link-disabled-colour;
-    border-bottom: none;
-    cursor: not-allowed;
-
-    &:hover {
+  span {
+    &.placeholder-link {
+      color: $link-disabled-colour;
+      border-bottom: none;
       cursor: not-allowed;
+
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 }
 
 // Placeholder link support for .local-nav padding and indents
 .local-nav {
-  ul span.placeholder-link {
-    display: block;
-    border-left: 4px solid transparent;
-    padding: ($medium-spacing / 2) $small-spacing;
-  }
-  ul ul ul span.placeholder-link {
-    padding-left: $base-spacing;
-  }
-  ul ul ul ul span.placeholder-link {
-    padding-left: $base-spacing + $small-spacing;
+  ul {
+    .placeholder-link {
+      display: block;
+      border-left: 4px solid transparent;
+      padding: ($medium-spacing / 2) $small-spacing;
+    }
+
+    ul {
+      ul {
+        .placeholder-link {
+          padding-left: $base-spacing;
+        }
+
+        ul {
+          .placeholder-link {
+            padding-left: $base-spacing + $small-spacing;
+          }
+        }
+      }
+    }
   }
 }
 
