@@ -300,10 +300,11 @@ Style guide: Navigation.6 Footer navigation
   position: relative;
   width: 100%;
   margin: $base-spacing 0 0;
+  border: 0;
+  background-color: $background-secondary-colour;
   text-align: left;
   font-weight: $base-font-weight;
-  background-color: $background-secondary-colour;
-  border: 0;
+  color: $button-inverted-text-colour;
 
   &:focus,
   &:hover {
