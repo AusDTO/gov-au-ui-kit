@@ -97,6 +97,12 @@
     padding-bottom: $medium-spacing;
   }
 
+  @include ie-lte(8) {
+    @include ie-clearfix;
+    margin-bottom: 0;
+    padding-bottom: $base-spacing * 1.5;
+  }
+
   .govau--logo {
     float: left;
 
