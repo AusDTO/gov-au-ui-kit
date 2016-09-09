@@ -69,12 +69,6 @@ Accessibility
 Style guide: Typography.1 Typeface.2 Accessibility
 */
 
-$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
-$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
-
-$base-font-family: $base-sans-serif;
-
 /*
 Spacing
 
@@ -99,32 +93,6 @@ We may change:
 
 Style guide: Typography.3 Spacing
 */
-
-// Leading/line-height.
-$base-leading: 1.6;
-$base-heading-leading: 1.4;
-$small-leading: 1.2;
-$double-leading: 2;
-
-// Base spacing, relative to leading.
-$base-spacing: $base-leading * 1em;
-$large-spacing: $base-spacing * 2;
-$medium-spacing: $base-spacing * 0.75;
-$small-spacing: $base-spacing / 2;
-$tiny-spacing: $base-spacing / 4;
-
-// Font weights
-$base-font-weight: 400;
-$bold-font-weight: 700;
-$heading-font-weight: $bold-font-weight;
-
-// Font sizes
-$smaller-font-size: 62.5%;
-$small-font-size: 87.5%;
-$large-font-size: 150%;
-
-// Font styles
-$base-font-style: normal;
 
 html {
   color: $body-text-colour;
@@ -273,11 +241,15 @@ h1 {
   }
 
   @include media($desktop) {
-    font-size: rem(32);
+    font-size: rem(40);
   }
 
   &:first-of-type {
     margin-top: $tiny-spacing;
+  }
+
+  @include ie-lte(8) {
+    font-size: 32px;
   }
 }
 
@@ -285,29 +257,41 @@ h2 {
   font-size: rem(32);
   line-height: $small-leading;
   margin-top: $base-spacing;
+  margin-bottom: 1em;
 
   @include media($tablet) {
-    font-size: rem(44);
+    font-size: rem(40);
+  }
+
+  @include ie-lte(8) {
+    font-size: 44px;
   }
 }
 
 h3 {
   font-size: rem(24);
   font-weight: $heading-font-weight;
+  margin-top: $medium-spacing + ($small-spacing / 3); // 38.133px; was 34.4px from Alz.
+  margin-bottom: $small-spacing;
 
   @include media($tablet) {
     font-size: rem(26);
   }
+
+  @include ie-lte(8) {
+    font-size: 26px;
+  }
 }
 
-h4 {
-  font-size: rem(18);
-  font-weight: $heading-font-weight;
-}
-
+h4,
 h5,
 h6 {
-  @extend h4;
+  font-size: rem(18);
+  font-weight: $heading-font-weight;
+
+  @include ie-lte(8) {
+    font-size: 18px;
+  }
 }
 
 // Document this later.
@@ -440,7 +424,7 @@ Use the <a href="http://w3c.github.io/html/textlevel-semantics.html#the-kbd-elem
 
 Markup: Copy text to clipboard using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-<details data-label="kbd-accessibility" aria-expanded="false">
+<details open data-label="kbd-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -510,18 +494,20 @@ strong {
 // To be deprecated as of v2.0
 //
 // We are retaining this so that p.abstract is possible. Please use div.abstract p.
-p.abstract {
-  margin: $small-spacing 0 ($medium-spacing * 1.25);
-  padding-bottom: $medium-spacing;
-  border-bottom: 1px solid $border-colour;
-  font-size: rem(19);
+p {
+  &.abstract {
+    margin: $small-spacing 0 ($medium-spacing * 1.25);
+    padding-bottom: $medium-spacing;
+    border-bottom: 1px solid $border-colour;
+    font-size: rem(19);
 
-  @include media($tablet) {
-    font-size: rem(21);
-  }
+    @include media($tablet) {
+      font-size: rem(21);
+    }
 
-  @include media($desktop) {
-    font-size: rem(24);
+    @include media($desktop) {
+      font-size: rem(24);
+    }
   }
 }
 
@@ -607,7 +593,7 @@ You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>
 
 Markup: templates/callouts-examples.hbs
 
-<details data-label="callouts-accessibility" aria-expanded="false">
+<details open data-label="callouts-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -682,7 +668,7 @@ There is styling for badges to indicate status.
 
 Markup: templates/badges.hbs
 
-<details data-label="badges-accessibility" aria-expanded="false">
+<details open data-label="badges-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -740,7 +726,7 @@ There are 2 ways of using quotes:
 
 Markup: templates/quotation-examples.hbs
 
-<details data-label="blockquote-accessibility" aria-expanded="false">
+<details open data-label="blockquote-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:

@@ -19,7 +19,7 @@ Older browsers (IE8 and lower) and those without JavaScript will get an expanded
 
 Markup: templates/global-navigation.hbs
 
-<details data-label="global-nav-accessibility" aria-expanded="false">
+<details open data-label="global-nav-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -53,7 +53,7 @@ Use active state to show where the user is. Use `class="is-active"` for each cli
 
 Markup: templates/local-navigation.hbs
 
-<details data-label="local-nav-accessibility" aria-expanded="false">
+<details open data-label="local-nav-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -81,7 +81,7 @@ They appear directly under a page header or hero, from `$tablet` breakpoint upwa
 
 Markup: templates/breadcrumbs.hbs
 
-<details data-label="breadcrumb-accessibility" aria-expanded="false">
+<details open data-label="breadcrumb-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -111,7 +111,7 @@ Users with modern browsers will see a smooth scroll down the page.
 
 Markup: templates/index-links.hbs
 
-<details data-label="index-links-accessibility" aria-expanded="false">
+<details open data-label="index-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -137,7 +137,7 @@ You can present a list of links as a horizontal block using an unsorted list wit
 
 Markup: templates/inline-links.hbs
 
-<details data-label="inline-links-accessibility" aria-expanded="false">
+<details open data-label="inline-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -169,7 +169,7 @@ This framework uses CSS Flexboxes to manage columns. It provides:
 
 Markup: templates/footer-navigation.hbs
 
-<details data-label="footer-nav-accessibility" aria-expanded="false">
+<details open data-label="footer-nav-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -188,40 +188,41 @@ Markup: templates/footer-navigation.hbs
 Style guide: Navigation.6 Footer navigation
 */
 
-.global-nav-toggle {
-  position: relative;
-  float: right;
-  height: auto;
-  margin: $tiny-spacing 0;
-  padding: 0;
-
-  .govau--header & {
+.govau--header {
+  .nav-toggle {
+    position: relative;
+    float: right;
+    height: auto;
+    width: auto;
+    margin: $tiny-spacing 0;
+    padding: 0;
     border: 0;
     border-bottom: 1px solid;
-  }
 
-  &::before {
-    @extend %icon-bars;
-    content: '';
-    position: absolute;
-    top: .25em;
-    bottom: .25em;
-    left: ($base-spacing * -1);
-    width: $medium-spacing;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-  }
-
-  &[aria-expanded='true'] {
     &::before {
-      @extend %icon-close;
+      @extend %icon-bars;
+      content: '';
+      position: absolute;
+      top: .25em;
+      bottom: .25em;
+      left: ($base-spacing * -1);
+      width: $medium-spacing;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
     }
-  }
 
-  &,
-  &:hover {
-    background-color: transparent;
-    border-color: transparent;
+    &.active {
+      &::before {
+        @extend %icon-close;
+        transform: none;
+      }
+    }
+
+    &,
+    &:hover {
+      background-color: transparent;
+      color: $body-inverted-text-colour;
+    }
   }
 }
 
@@ -229,13 +230,6 @@ Style guide: Navigation.6 Footer navigation
   clear: both;
   padding: $tiny-spacing 0 $small-spacing;
   overflow: hidden;
-  transition: padding ($transition-timing * 2) ease;
-
-  &[aria-expanded='false'] {
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 
   ul {
     list-style-type: none;
@@ -296,18 +290,25 @@ Style guide: Navigation.6 Footer navigation
   }
 }
 
-.local-nav-toggle {
+.sidebar {
+  padding: 0 0 $base-spacing;
+}
+
+.nav-toggle {
+  @extend %base-button;
+
   position: relative;
   width: 100%;
   margin: $base-spacing 0 0;
+  border: 0;
+  background-color: $background-secondary-colour;
   text-align: left;
   font-weight: $base-font-weight;
-  border: 0;
+  color: $button-inverted-text-colour;
 
-  &,
+  &:focus,
   &:hover {
-    background-color: $background-secondary-colour;
-    color: $darker-aqua;
+    background-color: $light-grey;
   }
 
   &::before {
@@ -326,7 +327,9 @@ Style guide: Navigation.6 Footer navigation
     transition: transform $transition-timing $transition-easing;
   }
 
-  &[aria-expanded='true'] {
+  &.active {
+    margin-bottom: 0;
+
     &::before {
       transform: rotate(180deg);
     }
@@ -346,30 +349,16 @@ Style guide: Navigation.6 Footer navigation
 
 .primary-nav,
 .local-nav {
-  margin: 0 0 $base-spacing;
   overflow: hidden;
-  transition: padding ($transition-timing * 2) ease;
-
-  &[aria-expanded='false'] {
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-
-    @include media($tablet) {
-      height: auto;
-      padding: $base-spacing 0;
-    }
-  }
-
 
   ul {
     @include link-colours($link-colour, $focus-colour, $link-colour);
     margin: 0;
     padding: 0;
     list-style: none;
-    text-transform: uppercase;
 
     ul {
+      font-size: rem(14); // level 2+ should be 14px
       margin: 0;
       text-transform: none;
 
@@ -390,7 +379,7 @@ Style guide: Navigation.6 Footer navigation
             @extend %icon-arrow-right;
             padding-left: $base-spacing + $small-spacing;
             background-repeat: no-repeat;
-            background-position: $base-spacing $small-spacing * 1.45;
+            background-position: $base-spacing center;
             background-size: $tiny-spacing auto;
           }
         }
@@ -412,7 +401,7 @@ Style guide: Navigation.6 Footer navigation
       border: none;
       border-left: 4px solid transparent;
       border-bottom: none;
-      padding: $medium-spacing / 2 $small-spacing;
+      padding: $small-spacing;
       text-decoration: none;
       transition: border-color $transition-timing-fast $transition-easing;
 
@@ -552,7 +541,7 @@ Include skip links between the opening of the `<body>` and the page `<header>`.
 
 Markup: templates/skip-link.hbs
 
-<details data-label="skip-links-accessibility" aria-expanded="false">
+<details open data-label="skip-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -603,7 +592,7 @@ Style guide: Navigation.7 Skip links
 }
 
 .index-links {
-  margin: ($base-spacing * 2) 0 $base-spacing $small-spacing;
+  margin: ($base-spacing * 2) 0 $base-spacing 0;
   border-left: $tiny-spacing solid $non-white;
   padding: 0 0 $medium-spacing ($base-spacing - $tiny-spacing);
 
@@ -667,7 +656,7 @@ You can use groups of links:
 
 Markup: templates/groups-links.hbs
 
-<details data-label="group-links-accessibility" aria-expanded="false">
+<details open data-label="group-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -688,6 +677,10 @@ Style guide: Navigation.8 Group of links
 
 .links-group {
   @include outer-container;
+
+  @include ie-lte(8) {
+    @include ie-clearfix;
+  }
 
   ul {
     padding: 0;
@@ -711,8 +704,12 @@ Style guide: Navigation.8 Group of links
       @include media ($desktop) {
         @include span-columns(4 of 16);
         @include omega(4n);
+
+        @include ie-lte(8) {
+          width: 21%;
         }
       }
+    }
   }
 }
 

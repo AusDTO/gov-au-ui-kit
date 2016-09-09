@@ -23,7 +23,7 @@ Include a high-level description for what the pull request fixes and links to Gi
 - [ ] UX reviewed by Gary or someone the Design team
 - [ ] Code reviewed by one of the core developers
 - [ ] Acceptance Testing
-  - [ ] Cross-browser tested against standard browser matrix (TBD)
+  - [ ] [Cross-browser tested against standard browser matrix](https://docs.google.com/spreadsheets/d/1B8pGWSiFbWhurnDISvD2MKnI0IF_T8tU2sl1naZCw1E/edit#gid=1030964576)
   - [ ] Tested on multiple devices (TBD)
   - [ ] HTML5 validation (CircleCI)
   - [ ] Accessibility testing & WCAG2 compliance (`npm test`)

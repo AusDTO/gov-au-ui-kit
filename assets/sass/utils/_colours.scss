@@ -106,7 +106,7 @@ $darker-aqua:   darken($aqua, 10%);
 $light-aqua:    lighten($aqua, 30%);
 $lighter-aqua:  lighten($aqua, 60%);
 
-$navy:          #224a61;
+$navy:          #043751;
 $dark-navy:     darken($navy, 10%);
 
 $maroon:        #880e48;
@@ -206,7 +206,7 @@ The <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-con
 <p class="guide-colour-block bg-light-yellow">non-black on light-yellow <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-blue">non-black on light-blue <span class="invert">AA</span></p>
 
-<details data-label="colour-accessibility" aria-expanded="false">
+<details open data-label="colour-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -257,6 +257,7 @@ $callout-bg-light-colour:       $lighter-aqua;
 $border-colour:                 $light-grey;
 $border-soft-colour:            rgba($light-grey, 0.5);
 $border-contrast-colour:        $navy;
+$border-highlight-colour:       $light-aqua;
 
 $box-shadow-colour:             rgba($non-black, 0.5);
 
@@ -271,7 +272,9 @@ $badge-colour--success:         $green;
 
 $controls-bg-colour:            $dark-navy;
 $controls-contrast-bg-colour:   $maroon;
-$header-bg-colour:              #134058;
+$header-bg-colour:              $navy;
+$header-bg-colour-2:            #104f71;
+$header-bg-colour-3:            #1c809d;
 $hero-bg-colour:                #0098b0;
 $breadcrumbs-bg-colour:         $non-white;
 

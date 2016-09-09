@@ -1,34 +1,10 @@
 /*
 
-UI-Kit version: 1.7.6
+UI-Kit version: 1.8.0
 
 */
 
-@import 'vendor/normalize';
-@import 'vendor/bourbon/bourbon';
-
-@import 'grid-settings';
-@import 'vendor/neat/neat';
-
 @import 'variables';
-@import 'colours';
-
-@import 'accessibility';
-
-@import 'icons';
-@import 'typography';
-@import 'grid-layout';
-@import 'buttons';
-@import 'links';
-@import 'tables';
-@import 'forms';
-@import 'navigation';
-@import 'lists';
-@import 'accordions';
-@import 'images';
-@import 'video';
-@import 'page-header';
-@import 'page-footer';
-
-@import 'ie';
-@import 'print';
+@import 'utils';
+@import 'vendor';
+@import 'components';

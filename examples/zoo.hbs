@@ -13,7 +13,7 @@
       </div>
 
       <div class="feedback">
-        <a href="#content" class="button--feedback">Give feedback</a>
+        <a href="#content" class="button--feedback" role="button">Give feedback</a>
       </div>
 
     </div><!--wrapper-->
@@ -47,6 +47,7 @@
             <li><a href="#content">Budget and plans</a></li>
             <li><a href="#content">Grants and tenders</a></li>
             <li><a class="is-active is-current" href="#content">Contact us</a></li>
+            <li><span class="placeholder-link">A placeholder item</span></li>
           </ul>
         </li>
       </ul>
@@ -73,7 +74,8 @@
       </nav>
     </header>
 
-    {{> accordion}}
+    {{> content-accordion}}
+    {{> controls-accordion}}
     {{> calendar-callout-example}}
     {{> heading-body-styles}}
     {{> lists-horizontal}}

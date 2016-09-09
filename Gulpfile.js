@@ -25,7 +25,7 @@ var paths = {
     assets: './assets/**/*.*',
     assetsDir: './assets',
     scssDir: './assets/sass/**/*.scss',
-    scssTemplatesDir: './assets/sass/templates',
+    scssTemplatesDir: './assets/sass/components/templates',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
     examples: './examples/*.hbs',
@@ -52,7 +52,10 @@ var options = {
               var String = sass.types.String;
               return new String('/latest/img/' + img.getValue());
             }
-        }
+        },
+        includePaths: [
+          './node_modules'
+        ]
     },
     webpack: {
         output: {
@@ -74,15 +77,15 @@ gulp.task('lint', function () {
 });
 
 gulp.task('ui-kit', function () {
-    gulp.start(['ui-kit.scss', 'ui-kit.js', 'ui-kit.img']);
+    gulp.start(['ui-kit.scss', 'ui-kit.js']);
 });
 
 gulp.task('ui-kit.scss', function () {
-    return gulp.src(paths.scss)
-        .pipe(sass(options.sass).on('error', sass.logError))
-        .pipe(autoprefixer(options.autoprefixer))
-        .pipe(gitVersion())
-        .pipe(gulp.dest(paths.outputAssets));
+  return gulp.src(paths.scssDir)
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(autoprefixer(options.autoprefixer))
+    .pipe(gitVersion())
+    .pipe(gulp.dest(paths.outputAssets));
 });
 
 gulp.task('ui-kit.js', function () {
@@ -123,6 +126,7 @@ gulp.task('ui-kit.min.js', function () {
         .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
+
 gulp.task('ui-kit.img', ['svg2png'], function () {
     return gulp.src(paths.images)
         .pipe(imagemin())
@@ -191,7 +195,7 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
 
 });
 
-gulp.task('styleguide.scss', ['svg2png'], function () {
+gulp.task('styleguide.scss', function () {
     return gulp.src(paths.kssScssDir)
         .pipe(sass(options.sass).on('error', sass.logError))
         .pipe(autoprefixer(options.autoprefixer))

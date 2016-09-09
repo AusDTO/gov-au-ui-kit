@@ -2,6 +2,36 @@
 
 ## UI Kit "Kraken"
 
+### 1.8.0 - 2016-09-09
+
+#### UI-Kit changes
+
+- Added styles for accordions used in the primary content area `details`, and when used in widgets or filters:  `details.accordion--controls`.
+- Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`.
+- Changed visual design throughout (minor).
+- Changed local navigation font size to be smaller than body copy for better visual hierarchy.
+- Added `mixins` for IE-conditional styles and stylesheets for old IE versions
+- Changed structure of `assets/sass` directory
+- Changed animation of collapsible elements from CSS to JS transitions
+- Changed undocumented (experimental) header styles to use a background image instead of CSS gradient.
+
+#### Bugfixes
+
+- Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
+
+#### Styleguide
+
+- Added guide to [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) on installing and using UI-Kit via `npm`.
+
+#### Bugfixes
+
+- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
+- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
+- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
+
+#### Bugfixes
+- Change git merge strategy for CHANGELOG.md to reduce conflicts
+
 ### 1.7.6 - 2016-09-01
 
 #### UI-Kit changes

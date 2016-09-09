@@ -20,6 +20,8 @@ include in your project:
 
 GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
 
+The [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) folder contains draft documentation on experimental work. For example, how to install UI-Kit for use with `webpack`.
+
 ### Features
 
 - <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize</a>.
@@ -47,7 +49,9 @@ We are working on:
 - an audit.
 
 ### Browser support
-The [cross browser and device support](BROWSER-SUPPORT.md) table.
+Read [cross browser and device support](BROWSER-SUPPORT.md) table.
+
+The kit uses a [conditional styling mixin for specific versions of IE](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/assets/sass/_ie.scss). Use this when extending the kit.
 
 We are working on:
 

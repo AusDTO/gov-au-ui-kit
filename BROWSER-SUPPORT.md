@@ -2,7 +2,7 @@
 
 The UI-Kit team needs to support all of our users, regardless of their device, web browser or other user agent.
 
-Equal access to information on laws and government programs is a legal requirement under the <a href="https://www.legislation.gov.au/Latest/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>.
+Equal access to information about laws and government programs is a legal requirement under the <a href="https://www.legislation.gov.au/Latest/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>.
 
 The support levels will be revised when needed to better meet user needs.
 

@@ -46,7 +46,7 @@ For each new element you will need to set column properties for the breakpoints,
 
 The following diagram shows how the main content area takes up 12 of 16 columns at `$desktop` and above:
 
-![Diagram of the layout across 16 columns](kss-assets/img/img_grid_layout.png)
+![Diagram of the layout across 16 columns](/kss-assets/img/img_grid_layout.png)
 
 For iOS users ensure you set the `viewport` to the `device-width` in your `<head>` to ensure your site is responsive:
 
@@ -72,6 +72,13 @@ Style guide: Grid.5 Layout.1 Wrapper
   @include outer-container;
 }
 
+html {
+  @include ie-lte(8) {
+    position: relative;
+    min-height: 100%;
+  }
+}
+
 body {
   @include flex-layout;
 }
@@ -95,12 +102,30 @@ main {
     }
   }
 
+  @include ie-lte(8) {
+    &:before,
+    &:after {
+      content: '.';
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  @include ie-lte(7) {
+    zoom: 1;
+  }
+
   /*
   Sidebar
 
   Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar/side navigation.
 
-  ![Diagram of the layout with optional aside nav](kss-assets/img/img_grid_layout_nav.png)
+  ![Diagram of the layout with optional aside nav](/kss-assets/img/img_grid_layout_nav.png)
 
   By default the sidebar sits to the right of the main content. When the sidebar contains content controls (eg filters), instead of navigation, it can sit on the left side. Use the class `.sidebar-has-controls` on the parent `main` element:
 
@@ -224,7 +249,7 @@ Accessibility
 
 Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
 
-<details data-label="grid-text-accessibility" aria-expanded="false">
+<details open data-label="grid-text-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:

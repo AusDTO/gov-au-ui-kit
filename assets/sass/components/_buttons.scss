@@ -28,7 +28,7 @@ Do not apply styles to disabled buttons.
 
 Markup: templates/buttons-examples.hbs
 
-<details data-label="buttons-accessibility" aria-expanded="false">
+<details open data-label="buttons-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
   <div class="accordion-panel">
   <strong>Passed</strong>:
@@ -89,6 +89,7 @@ Style guide: Buttons.1 Creating buttons
   margin: 0 $base-spacing $small-spacing 0;
   padding: $small-spacing $base-spacing;
   border-radius: $tiny-border-radius;
+  border: 0;
   outline: 0;
   text-decoration: none;
   font-weight: $bold-font-weight;
