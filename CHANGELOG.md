@@ -13,11 +13,11 @@
 - Added `mixins` for IE-conditional styles and stylesheets for old IE versions
 - Changed structure of `assets/sass` directory
 - Changed animation of collapsible elements from CSS to JS transitions
+- Changed undocumented (experimental) header styles to use a background image instead of CSS gradient.
 
 #### Bugfixes
 
 - Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
-- Changed undocumented (experimental) header styles to use a background image instead of CSS gradient.
 
 #### Styleguide
 
