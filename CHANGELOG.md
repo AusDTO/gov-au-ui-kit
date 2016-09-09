@@ -13,6 +13,7 @@
 - Added `mixins` for IE-conditional styles and stylesheets for old IE versions
 - Changed structure of `assets/sass` directory
 - Changed animation of collapsible elements from CSS to JS transitions
+- Changed undocumented (experimental) header styles to use a background image instead of CSS gradient.
 
 #### Bugfixes
 

@@ -130,12 +130,18 @@
   padding: $base-spacing 0 ($base-spacing * 3);
   padding-bottom: $medium-spacing;
   margin-bottom: 0;
-  background-color: $header-bg-colour;
   color: $body-inverted-text-colour;
 
-  background-image: image-url('header-bg.png');
+  background-color: $header-bg-colour;
+  background-image: image-url('header-bg.jpg');
   background-position: top right;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+
+  //CSS gradient not used because of 'dazzle' issues on monitors with low refresh rate.
+  //background: $header-bg-colour; /* Old browsers */
+  //background: linear-gradient(45deg, $header-bg-colour 0%, $header-bg-colour-2 30%, $header-bg-colour-3 80%, $header-bg-colour-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#043751', endColorstr='#1c809d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /* Note: do not use variables in above IE filter. */
 
   @include media($tablet) {
     padding-bottom: 0;
