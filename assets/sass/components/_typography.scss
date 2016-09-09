@@ -69,12 +69,6 @@ Accessibility
 Style guide: Typography.1 Typeface.2 Accessibility
 */
 
-$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
-$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
-
-$base-font-family: $base-sans-serif;
-
 /*
 Spacing
 
@@ -99,32 +93,6 @@ We may change:
 
 Style guide: Typography.3 Spacing
 */
-
-// Leading/line-height.
-$base-leading: 1.6;
-$base-heading-leading: 1.4;
-$small-leading: 1.2;
-$double-leading: 2;
-
-// Base spacing, relative to leading.
-$base-spacing: $base-leading * 1em;
-$large-spacing: $base-spacing * 2;
-$medium-spacing: $base-spacing * 0.75;
-$small-spacing: $base-spacing / 2;
-$tiny-spacing: $base-spacing / 4;
-
-// Font weights
-$base-font-weight: 400;
-$bold-font-weight: 700;
-$heading-font-weight: $bold-font-weight;
-
-// Font sizes
-$smaller-font-size: 62.5%;
-$small-font-size: 87.5%;
-$large-font-size: 150%;
-
-// Font styles
-$base-font-style: normal;
 
 html {
   color: $body-text-colour;
@@ -279,6 +247,10 @@ h1 {
   &:first-of-type {
     margin-top: $tiny-spacing;
   }
+
+  @include ie-lte(8) {
+    font-size: 32px;
+  }
 }
 
 h2 {
@@ -289,6 +261,10 @@ h2 {
 
   @include media($tablet) {
     font-size: rem(40);
+  }
+
+  @include ie-lte(8) {
+    font-size: 44px;
   }
 }
 
@@ -301,6 +277,10 @@ h3 {
   @include media($tablet) {
     font-size: rem(26);
   }
+
+  @include ie-lte(8) {
+    font-size: 26px;
+  }
 }
 
 h4,
@@ -308,6 +288,10 @@ h5,
 h6 {
   font-size: rem(18);
   font-weight: $heading-font-weight;
+
+  @include ie-lte(8) {
+    font-size: 18px;
+  }
 }
 
 // Document this later.

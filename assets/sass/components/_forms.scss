@@ -183,6 +183,15 @@ form {
             top: 9px;
           }
         }
+
+        @include ie-lte(8) {
+          border: 0;
+          height: 3em;
+          left: 1px;
+          margin-bottom: -4em;
+          position: relative;
+          width: 3em;
+        }
       }
     }
   }

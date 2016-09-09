@@ -300,10 +300,11 @@ Style guide: Navigation.6 Footer navigation
   position: relative;
   width: 100%;
   margin: $base-spacing 0 0;
+  border: 0;
+  background-color: $background-secondary-colour;
   text-align: left;
   font-weight: $base-font-weight;
-  background-color: $background-secondary-colour;
-  border: 0;
+  color: $button-inverted-text-colour;
 
   &:focus,
   &:hover {
@@ -677,6 +678,10 @@ Style guide: Navigation.8 Group of links
 .links-group {
   @include outer-container;
 
+  @include ie-lte(8) {
+    @include ie-clearfix;
+  }
+
   ul {
     padding: 0;
     list-style: none;
@@ -699,8 +704,12 @@ Style guide: Navigation.8 Group of links
       @include media ($desktop) {
         @include span-columns(4 of 16);
         @include omega(4n);
+
+        @include ie-lte(8) {
+          width: 21%;
         }
       }
+    }
   }
 }
 

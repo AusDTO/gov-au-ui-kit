@@ -6,14 +6,17 @@
 
 #### UI-Kit changes
 
-- New styles for accordions used in the primary content area `details`, and when used in widgets or filters:  `details.accordion--controls`.
+- Added styles for accordions used in the primary content area `details`, and when used in widgets or filters:  `details.accordion--controls`.
 - Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`.
-- Minor design changes.
-- Local navigation font size changed to be smaller than body copy for better visual hierarchy.
+- Changed visual design throughout (minor).
+- Changed local navigation font size to be smaller than body copy for better visual hierarchy.
+- Added `mixins` for IE-conditional styles and stylesheets for old IE versions
+- Changed structure of `assets/sass` directory
+- Changed animation of collapsible elements from CSS to JS transitions
 
 #### Bugfixes
 
-- Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky.
+- Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
 
 #### Styleguide
 
