@@ -94,7 +94,7 @@ Style guide: Accordions.3 Usability
   position: relative;
   width: 100%;
   height: auto;
-  padding: $small-spacing;
+  padding: $small-spacing $large-spacing $small-spacing $small-spacing;
   border-radius: $tiny-border-radius $tiny-border-radius 0 0;
   background-color: $background-secondary-colour;
   cursor: pointer;
