@@ -1,10 +1,10 @@
-# `gov-au-ui-kit`
+# GOV.AU UI-Kit
 
 ![CircleCI build status](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield) ![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg) ![Current Release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000)
 
 ## What is this?
 
-UI Kit (`gov-au-ui-kit`) is 3 things:
+UI Kit is 3 things:
 
 1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
 2. common-use [HTML templates](/examples)
@@ -18,7 +18,7 @@ include in your project:
 <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
 ```
 
-GOV-AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
+GOV.AU UI-Kit is currently in early draft release. You can help us build it by [contributing](CONTRIBUTING.md).
 
 The [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) folder contains draft documentation on experimental work. For example, how to install UI-Kit for use with `webpack`.
 
@@ -131,7 +131,7 @@ Some of the key libraries we use are:
 
 `^` = compatible with version (see <a href="https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004" rel="external">semver</a>).
 
-## Make gov-au-ui-kit better
+## Make GOV.AU UI-Kit better
 
 - Contribute to our <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">GitHub issue register</a> by logging new issues and joining the discussion.
 - Contribute to this repository. Please see [CONTRIBUTING.md](CONTRIBUTING.md), [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see <a href="http://getbem.com/" rel="external">Block Element Modifier</a>), first.
@@ -169,4 +169,4 @@ This repository includes <a href="http://bourbon.io/" rel="external">Bourbon</a>
 
 ![Australian Government Digital Transformation Office logo](https://www.dto.gov.au/images/govt-crest.png)
 
-gov-au-ui-kit is maintained and funded by the <a href="https://www.dto.gov.au/" rel="external">Digital Transformation Office</a>.
+GOV.AU UI-Kit is maintained and funded by the <a href="https://www.dto.gov.au/" rel="external">Digital Transformation Office</a>.
