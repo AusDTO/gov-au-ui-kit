@@ -1,6 +1,6 @@
-# Including gov-au-ui-kit via npm
+# Including GOV.AU UI-Kit via npm
 
-Simple guide for installing UI Kit via npm for use with `webpack` or any build process that uses `node-sass`.
+Simple guide for installing UI-Kit via npm for use with `webpack` or any build process that uses `node-sass`.
 
 ## Installation steps
 
