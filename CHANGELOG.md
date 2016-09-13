@@ -2,6 +2,12 @@
 
 ## UI Kit "Kraken"
 
+### `develop` - (unreleased)
+
+#### Styleguide
+
+- Renamed complete example page to 'all' (`/examples/all.html`).
+
 ### 1.8.0 - 2016-09-09
 
 #### UI-Kit changes
@@ -42,7 +48,7 @@
 
 #### Styleguide
 
-- Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
+- Added a 'Zoo' example page (`/examples/all.html`) that demonstrates every element in the UI Kit
 - Section index links now only show Section headings and not Sub-sections
 - Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
 
