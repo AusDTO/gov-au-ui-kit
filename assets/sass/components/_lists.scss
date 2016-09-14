@@ -83,11 +83,11 @@ Markup: templates/lists-small.hbs
     <ul>
       <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
       <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      <li>Browser support: Modern browsers and IE7+
     </ul>
   <strong>Untested</strong>:
     <ul>
       <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
     </ul>
   </div>
 </details>
@@ -296,6 +296,10 @@ Style guide: List styles.4 Highlighted word style
     @include media($tablet) {
       @include span-columns(6 of 12);
       @include omega(2n);
+
+      @include ie-lte(8) {
+        width: 45%;
+      }
     }
   }
 }
@@ -317,7 +321,7 @@ Style guide: List styles.4 Highlighted word style
       @include omega(2n);
 
       @include ie-lte(8) {
-        width: 49%;
+        width: 45%;
       }
     }
     @include media($desktop) {

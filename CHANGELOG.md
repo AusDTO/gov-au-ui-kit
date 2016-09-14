@@ -2,6 +2,12 @@
 
 ## UI Kit "Kraken"
 
+### `develop` (unreleased)
+
+#### Bugfixes
+
+- Fixed Vertical lists not displaying correctly in IE7-8
+
 ### 1.8.0 - 2016-09-09
 
 #### UI-Kit changes
@@ -18,19 +24,14 @@
 #### Bugfixes
 
 - Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
+- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
+- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
+- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
+- Change git merge strategy for CHANGELOG.md to reduce conflicts
 
 #### Styleguide
 
 - Added guide to [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) on installing and using UI-Kit via `npm`.
-
-#### Bugfixes
-
-- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
-- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
-- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
-
-#### Bugfixes
-- Change git merge strategy for CHANGELOG.md to reduce conflicts
 
 ### 1.7.6 - 2016-09-01
 
