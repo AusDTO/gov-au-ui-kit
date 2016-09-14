@@ -2,6 +2,12 @@
 
 ## UI Kit "Kraken"
 
+### `develop` (unreleased)
+
+#### Bugfixes
+
+- Fixed Vertical lists not displaying correctly in IE7-8
+
 ### 1.8.0 - 2016-09-09
 
 #### UI-Kit changes
