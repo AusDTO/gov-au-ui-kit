@@ -43,7 +43,7 @@ var paths = {
 
 var options = {
     autoprefixer: {
-        browsers: ['last 2 versions', 'ie 8-10']
+        browsers: ['last 2 versions', 'ie 7-10', 'iOS >= 4']
     },
     sass: {
         functions: {
