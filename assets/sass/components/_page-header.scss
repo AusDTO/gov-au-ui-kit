@@ -239,23 +239,6 @@
   }
 }
 
-.feedback--mobile {
-  display: block;
-
-  a[role='button'] {
-    display: block;
-    margin: auto;
-    text-align: center;
-    max-width: 30em;
-    background-color: transparent;
-    color: red;
-  }
-
-  @include media($tablet) {
-    display: none;
-  }
-}
-
 .button--feedback {
   @extend .inverted;
 
