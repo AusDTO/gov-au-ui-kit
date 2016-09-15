@@ -8,6 +8,7 @@
 
 - Fixed Vertical lists not displaying correctly in IE7-8
 - Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365)
+- Fixes to button styles [#328](https://github.com/AusDTO/gov-au-ui-kit/issues/328)
 
 ### 1.8.0 - 2016-09-09
 
