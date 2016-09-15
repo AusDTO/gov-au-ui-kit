@@ -15,7 +15,7 @@ test:
     - accesslint-ci scan http://localhost:3000
 
 dependencies:
-  override:
+  post:
     - npm install -g accesslint-cli
     - gem install accesslint-ci
 
