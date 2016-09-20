@@ -61,9 +61,9 @@
   @include prefixer(transition-duration, $times, webkit moz spec);
 }
 
-@mixin transition-timing-function($motions...) {
+@mixin kit-transition-timing-base-function($motions...) {
   // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
-  @include prefixer(transition-timing-function, $motions, webkit moz spec);
+  @include prefixer(kit-transition-timing-base-function, $motions, webkit moz spec);
 }
 
 @mixin transition-delay($times...) {

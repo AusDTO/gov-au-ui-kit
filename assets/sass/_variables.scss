@@ -1,42 +1,43 @@
-$gov-ui-kit-image-base-url: '../latest/img/' !default;
+$kit-image-url-base: '../latest/img/' !default;
 
-$base-z-index: 0;
-$base-border-radius: 3px;
-$tiny-border-radius: 1px;
-$large-border-radius: ($base-border-radius * 4);
+$kit-z-index-base: 0 !default;
+$kit-border-radius-base: 3px !default;
+$kit-border-radius-tiny: 1px !default;
+$kit-border-radius-large: ($kit-border-radius-base * 4) !default;
 
-$transition-timing: .2s;
-$transition-timing-fast: $transition-timing / 2;
-$transition-easing: ease-in-out;
+$kit-transition-timing-base: .2s !default;
+$kit-transition-timing-fast: ($kit-transition-timing-base / 2) !default;
+$kit-transition-easing-base: ease-in-out !default;
 
-$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
-$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+$kit-font-family-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif !default;
+$kit-font-family-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif !default;
+$kit-font-family-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace !default;
 
-$base-font-family: $base-sans-serif;
+$kit-font-family-base: $kit-font-family-sans-serif !default;
 
-// Leading/line-height.
-$base-leading: 1.6;
-$base-heading-leading: 1.4;
-$small-leading: 1.2;
-$double-leading: 2;
+// Leading/line-height
+$kit-leading-base: 1.6 !default;
+$kit-leading-headings: 1.4 !default;
+$kit-leading-small: 1.2 !default;
+$kit-leading-double: 2 !default;
 
-// Base spacing, relative to leading.
-$base-spacing: $base-leading * 1em;
-$large-spacing: $base-spacing * 2;
-$medium-spacing: $base-spacing * 0.75;
-$small-spacing: $base-spacing / 2;
-$tiny-spacing: $base-spacing / 4;
+// Base spacing, relative to leading
+$kit-spacing-base: $kit-leading-base * 1em !default;
+
+$kit-spacing-large: $kit-spacing-base * 2 !default;
+$kit-spacing-medium: $kit-spacing-base * 0.75 !default;
+$kit-spacing-small: $kit-spacing-base / 2 !default;
+$kit-spacing-tiny: $kit-spacing-base / 4 !default;
 
 // Font weights
-$base-font-weight: 400;
-$bold-font-weight: 700;
-$heading-font-weight: $bold-font-weight;
+$kit-font-weight-base: 400 !default;
+$kit-font-weight-bold: 700 !default;
+$kit-font-weight-headings: $kit-font-weight-bold !default;
 
 // Font sizes
-$smaller-font-size: 62.5%;
-$small-font-size: 87.5%;
-$large-font-size: 150%;
+$kit-font-size-smaller: 62.5% !default;
+$kit-font-size-small: 87.5% !default;
+$kit-font-size-large: 150% !default;
 
 // Font styles
-$base-font-style: normal;
+$kit-font-style-base: normal !default;

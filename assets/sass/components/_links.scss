@@ -13,7 +13,7 @@ Hover, focus & external links
 
 The `:hover` and `:focus` styles are identical.
 
-Inverted colour versions of `:hover` and `:focus` are created using `@mixin link-colours` where required (eg in the page header). The `_buttons.scss` partial includes a similar mixin: `@mixin button-colours`.
+Inverted colour versions of `:hover` and `:focus` are created using `@mixin kit-link-colours` where required (eg in the page header). The `_buttons.scss` partial includes a similar mixin: `@mixin button-colours`.
 
 Link to external sites using `rel="external"`.
 
@@ -43,14 +43,14 @@ Style guide: Link styles.1 Hover links
   content: '';
   position: absolute;
   display: inline;
-  width: $medium-spacing;
-  height: $medium-spacing;
+  width: $kit-spacing-medium;
+  height: $kit-spacing-medium;
   background-repeat: no-repeat;
-  background-position: right $tiny-spacing;
+  background-position: right $kit-spacing-tiny;
   border-bottom: 1px solid transparent;
 }
 
-@mixin link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
+@mixin kit-link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
   $link-disabled-colour: transparentize($text-colour, 0.3);
   color: $text-colour;
 
@@ -59,8 +59,8 @@ Style guide: Link styles.1 Hover links
     text-decoration: none;
     outline: none;
     border-bottom: solid 1px $hover-bg-colour;
-    transition-timing-function: $transition-easing;
-    transition-duration: $transition-timing-fast;
+    transition-timing-function: $kit-transition-easing-base;
+    transition-duration: $kit-transition-timing-fast;
     transition-property: background-color, border-color, color;
 
     &:hover,
@@ -72,7 +72,7 @@ Style guide: Link styles.1 Hover links
     &[rel~='external'] {
       display: inline;
       position: relative;
-      margin-right: $base-spacing;
+      margin-right: $kit-spacing-base;
 
       &:hover {
         border-color: transparent;
@@ -82,7 +82,7 @@ Style guide: Link styles.1 Hover links
         @extend %icon-external-link--aqua;
         @extend %base-link-icon--after;
 
-        background-size: (0.75 * $medium-spacing) auto;
+        background-size: (0.75 * $kit-spacing-medium) auto;
       }
     }
   }
@@ -117,9 +117,9 @@ Style guide: Link styles.1 Hover links
   .see-more {
     display: inline-block;
     position: relative;
-    margin-right: $base-spacing;
-    font-weight: $heading-font-weight;
-    color: $button-bg-colour;
+    margin-right: $kit-spacing-base;
+    font-weight: $kit-font-weight-headings;
+    color: $kit-button-bg-colour;
 
     &::after {
       @extend %icon-arrow-right--aqua;
@@ -127,13 +127,13 @@ Style guide: Link styles.1 Hover links
       content: '';
       position: absolute;
       top: 0;
-      right: -($medium-spacing);
+      right: -($kit-spacing-medium);
       display: block;
-      width: $medium-spacing;
-      height: $medium-spacing;
+      width: $kit-spacing-medium;
+      height: $kit-spacing-medium;
       background-repeat: no-repeat;
-      background-position: right $tiny-spacing;
-      background-size: (0.8 * $small-spacing) auto;
+      background-position: right $kit-spacing-tiny;
+      background-size: (0.8 * $kit-spacing-small) auto;
     }
 
     &:hover,
@@ -193,18 +193,18 @@ Style guide: Link styles.1 Hover links
     .placeholder-link {
       display: block;
       border-left: 4px solid transparent;
-      padding: ($medium-spacing / 2) $small-spacing;
+      padding: ($kit-spacing-medium / 2) $kit-spacing-small;
     }
 
     ul {
       ul {
         .placeholder-link {
-          padding-left: $base-spacing;
+          padding-left: $kit-spacing-base;
         }
 
         ul {
           .placeholder-link {
-            padding-left: $base-spacing + $small-spacing;
+            padding-left: $kit-spacing-base + $kit-spacing-small;
           }
         }
       }
@@ -214,6 +214,6 @@ Style guide: Link styles.1 Hover links
 
 main > article,
 footer[role='contentinfo'] {
-  @include link-colours($non-black, $light-aqua, $non-black);
-  @include button-colours($button-bg-colour, $button-bg-colour--hover, $button-bg-colour--active, $button-text-colour);
+  @include kit-link-colours($off-black, $light-aqua, $off-black);
+  @include button-colours($kit-button-bg-colour, $kit-button-bg-colour--hover, $kit-button-bg-colour--active, $kit-button-text-colour);
 }

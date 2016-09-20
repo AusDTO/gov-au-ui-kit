@@ -85,7 +85,7 @@ Style guide: Accordions.3 Usability
 
 %base-accordion {
   display: block;
-  margin: $base-spacing 0 0;
+  margin: $kit-spacing-base 0 0;
   overflow: hidden;
 }
 
@@ -94,14 +94,14 @@ Style guide: Accordions.3 Usability
   position: relative;
   width: 100%;
   height: auto;
-  padding: $small-spacing $large-spacing $small-spacing $small-spacing;
-  border-radius: $tiny-border-radius $tiny-border-radius 0 0;
-  background-color: $background-secondary-colour;
+  padding: $kit-spacing-small $kit-spacing-large $kit-spacing-small $kit-spacing-small;
+  border-radius: $kit-border-radius-tiny $kit-border-radius-tiny 0 0;
+  background-color: $kit-page-bg-secondary-colour;
   cursor: pointer;
   text-align: left;
-  font-weight: $bold-font-weight;
+  font-weight: $kit-font-weight-bold;
   font-size: rem(20);
-  transition: background-color $transition-timing-fast $transition-easing;
+  transition: background-color $kit-transition-timing-fast $kit-transition-easing-base;
 
   &:last-child {
     border-bottom-width: 1px;
@@ -109,7 +109,7 @@ Style guide: Accordions.3 Usability
 
   &:hover,
   &:focus {
-    background-color: $border-colour;
+    background-color: $kit-border-colour;
     outline: none;
   }
 
@@ -124,13 +124,13 @@ Style guide: Accordions.3 Usability
     position: absolute;
     top: .5em;
     bottom: .5em;
-    right: $small-spacing;
-    width: $medium-spacing;
+    right: $kit-spacing-small;
+    width: $kit-spacing-medium;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% auto;
     transform: rotate(0deg);
-    transition: transform $transition-timing $transition-easing;
+    transition: transform $kit-transition-timing-base $kit-transition-easing-base;
 
     [aria-expanded='true'] & {
       transform: rotate(180deg);
@@ -142,8 +142,8 @@ Style guide: Accordions.3 Usability
   display: block;
   height: auto;
   overflow: hidden;
-  padding: $base-spacing $base-spacing $small-spacing;
-  border-radius: $tiny-border-radius $tiny-border-radius 0 0;
+  padding: $kit-spacing-base $kit-spacing-base $kit-spacing-small;
+  border-radius: $kit-border-radius-tiny $kit-border-radius-tiny 0 0;
 
   :first-child {
     margin-top: 0;
@@ -154,7 +154,7 @@ details,
 .accordion {
   @extend %base-accordion;
 
-  border-color: $border-colour;
+  border-color: $kit-border-colour;
   border-width: 1px 0;
   border-style: solid;
 
@@ -169,7 +169,7 @@ summary {
   @extend %base-accordion-button;
 
   [aria-expanded='true'] & {
-    border-bottom: 1px solid $border-colour;
+    border-bottom: 1px solid $kit-border-colour;
   }
 }
 
@@ -180,7 +180,7 @@ summary {
 .accordion--controls {
   @extend %base-accordion;
 
-  margin-top: $small-spacing;
+  margin-top: $kit-spacing-small;
   border: none;
 
   summary {
@@ -188,7 +188,7 @@ summary {
 
     border: none;
     background-color: $lighter-aqua;
-    font-size: $small-font-size;
+    font-size: $kit-font-size-small;
 
     &:hover,
     &:focus {
@@ -200,7 +200,7 @@ summary {
   .accordion-panel {
     @extend %base-accordion-panel;
 
-    border: $small-spacing solid $lighter-aqua;
+    border: $kit-spacing-small solid $lighter-aqua;
     border-top: none;
   }
 }

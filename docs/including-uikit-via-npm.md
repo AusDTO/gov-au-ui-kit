@@ -53,7 +53,7 @@ e.g.
 
 The current build doesn't expose all required images to compile the provided SASS.
 
-A sass variable (`$gov-ui-kit-image-base-url`) has been exposed to work around this issue.
+A sass variable (`$kit-image-url-base`) has been exposed to work around this issue.
 
 You can point it to a URL or a local copy of the assets to compile correctly.
 
@@ -62,5 +62,5 @@ You can point it to a URL or a local copy of the assets to compile correctly.
 e.g.
 ```scss
 // Point to a URL until fallback image assets are available by other means.
-$gov-ui-kit-image-base-url: 'https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/';
+$kit-image-url-base: 'https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/';
 ```

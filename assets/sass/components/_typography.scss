@@ -40,9 +40,9 @@ Style guide: Typography.1 Typeface
 Font stacks
 
 ```
-$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
-$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
-$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+$kit-font-family-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
+$kit-font-family-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
+$kit-font-family-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 ```
 
 We are currently testing the use of webfonts.
@@ -76,29 +76,29 @@ The framework sets spacing variables in ems relative to the base font's leading.
 
 <p class="callout">Spacing will change in relation to the font size of the elements that use them. So don’t apply a <code>font-size</code> to a container element (eg a <code>footer</code>).</p>
 
-The base font's leading (`line-height`) is set using the variable `$base-leading` (`$base-leading: 1.6`).
+The base font's leading (`line-height`) is set using the variable `$kit-leading-base` (`$kit-leading-base: 1.6`).
 
-`$base-leading` is used to calculate 5 spacing values in ems:
+`$kit-leading-base` is used to calculate 5 spacing values in ems:
 
-- `$base-spacing: $base-leading * 1em`
-- `$large-spacing: $base-spacing * 2`
-- `$medium-spacing: $base-spacing * 0.75`
-- `$small-spacing: $base-spacing / 2`
-- `$tiny-spacing: $base-spacing / 4`.
+- `$kit-spacing-base: $kit-leading-base * 1em`
+- `$kit-spacing-large: $kit-spacing-base * 2`
+- `$kit-spacing-medium: $kit-spacing-base * 0.75`
+- `$kit-spacing-small: $kit-spacing-base / 2`
+- `$kit-spacing-tiny: $kit-spacing-base / 4`.
 
 We may change:
 
-- `$base-spacing` to a figure that is easier to multiply and divide
+- `$kit-spacing-base` to a figure that is easier to multiply and divide
 - to using rems instead of ems, for consistency in calculations (in preference to relational proportionality in sizing).
 
 Style guide: Typography.3 Spacing
 */
 
 html {
-  color: $body-text-colour;
-  line-height: $base-leading;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
+  color: $kit-body-text-colour;
+  line-height: $kit-leading-base;
+  font-family: $kit-font-family-base;
+  font-weight: $kit-font-weight-base;
 }
 
 /*
@@ -225,16 +225,16 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: $base-heading-leading;
-  font-weight: $base-font-weight;
-  margin-bottom: $tiny-spacing;
-  margin-top: $base-spacing;
+  line-height: $kit-leading-headings;
+  font-weight: $kit-font-weight-base;
+  margin-bottom: $kit-spacing-tiny;
+  margin-top: $kit-spacing-base;
 }
 
 h1 {
   font-size: rem(24);
-  font-weight: $bold-font-weight;
-  margin-bottom: $small-spacing;
+  font-weight: $kit-font-weight-bold;
+  margin-bottom: $kit-spacing-small;
 
   @include media($tablet) {
     font-size: rem(28);
@@ -245,7 +245,7 @@ h1 {
   }
 
   &:first-of-type {
-    margin-top: $tiny-spacing;
+    margin-top: $kit-spacing-tiny;
   }
 
   @include ie-lte(8) {
@@ -255,8 +255,8 @@ h1 {
 
 h2 {
   font-size: rem(32);
-  line-height: $small-leading;
-  margin-top: $base-spacing;
+  line-height: $kit-leading-small;
+  margin-top: $kit-spacing-base;
   margin-bottom: 1em;
 
   @include media($tablet) {
@@ -270,9 +270,9 @@ h2 {
 
 h3 {
   font-size: rem(24);
-  font-weight: $heading-font-weight;
-  margin-top: $medium-spacing + ($small-spacing / 3); // 38.133px; was 34.4px from Alz.
-  margin-bottom: $small-spacing;
+  font-weight: $kit-font-weight-headings;
+  margin-top: $kit-spacing-medium + ($kit-spacing-small / 3); // 38.133px; was 34.4px from Alz.
+  margin-bottom: $kit-spacing-small;
 
   @include media($tablet) {
     font-size: rem(26);
@@ -287,7 +287,7 @@ h4,
 h5,
 h6 {
   font-size: rem(18);
-  font-weight: $heading-font-weight;
+  font-weight: $kit-font-weight-headings;
 
   @include ie-lte(8) {
     font-size: 18px;
@@ -302,15 +302,15 @@ h6 {
   h4,
   h5,
   h6 {
-    line-height: $base-heading-leading;
-    font-weight: $heading-font-weight;
-    margin-bottom: $tiny-spacing;
-    margin-top: $base-spacing;
+    line-height: $kit-leading-headings;
+    font-weight: $kit-font-weight-headings;
+    margin-bottom: $kit-spacing-tiny;
+    margin-top: $kit-spacing-base;
   }
 
   h1 {
     font-size: rem(32);
-    line-height: $small-leading;
+    line-height: $kit-leading-small;
 
     @include media($tablet) {
       font-size: rem(44);
@@ -321,13 +321,13 @@ h6 {
     }
 
     &:first-of-type {
-      margin-top: $tiny-spacing;
+      margin-top: $kit-spacing-tiny;
     }
   }
 
   h2 {
     font-size: rem(28);
-    line-height: $small-leading;
+    line-height: $kit-leading-small;
 
     @include media($tablet) {
       font-size: rem(32);
@@ -336,7 +336,7 @@ h6 {
 
   h3 {
     font-size: rem(24);
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
 
     @include media($tablet) {
       font-size: rem(26);
@@ -345,7 +345,7 @@ h6 {
 
   h4 {
     font-size: rem(19);
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
 
     @include media($tablet) {
       font-size: rem(22);
@@ -354,12 +354,12 @@ h6 {
 
   h5 {
     font-size: rem(17);
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
   }
 
   h6 {
     font-size: rem(17);
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
   }
 }
 
@@ -413,8 +413,8 @@ code,
 pre,
 samp,
 kbd {
-  font-family: $base-monospace;
-  font-size: $small-font-size;
+  font-family: $kit-font-family-monospace;
+  font-size: $kit-font-size-small;
 }
 
 /*
@@ -446,22 +446,22 @@ Style guide: Typography.5 Keyboard input
 kbd {
   display: inline-block;
   border: solid 1px $light-aqua;
-  border-radius: $base-border-radius;
+  border-radius: $kit-border-radius-base;
   box-shadow: 0 1px 0 0 $light-aqua;
-  background-color: $non-white;
+  background-color: $off-white;
   color: $dark-aqua;
   text-align: center;
-  font-size: $small-font-size;
-  padding: 0 $small-spacing;
-  margin: 0 $tiny-spacing;
+  font-size: $kit-font-size-small;
+  padding: 0 $kit-spacing-small;
+  margin: 0 $kit-spacing-tiny;
 }
 
 strong {
-  font-weight: $bold-font-weight;
+  font-weight: $kit-font-weight-bold;
 
   // Huh?
   &.very-bold {
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
   }
 }
 
@@ -474,12 +474,12 @@ strong {
 //
 // For abstracts or page introductory paragraphs.
 .abstract {
-  margin: $medium-spacing 0 ($base-spacing * 1.25);
-  border-bottom: 1px solid $border-colour;
+  margin: $kit-spacing-medium 0 ($kit-spacing-base * 1.25);
+  border-bottom: 1px solid $kit-border-colour;
 
   p {
     font-size: rem(19);
-    font-weight: $base-font-weight;
+    font-weight: $kit-font-weight-base;
 
     @include media($tablet) {
       font-size: rem(21);
@@ -496,9 +496,9 @@ strong {
 // We are retaining this so that p.abstract is possible. Please use div.abstract p.
 p {
   &.abstract {
-    margin: $small-spacing 0 ($medium-spacing * 1.25);
-    padding-bottom: $medium-spacing;
-    border-bottom: 1px solid $border-colour;
+    margin: $kit-spacing-small 0 ($kit-spacing-medium * 1.25);
+    padding-bottom: $kit-spacing-medium;
+    border-bottom: 1px solid $kit-border-colour;
     font-size: rem(19);
 
     @include media($tablet) {
@@ -512,11 +512,11 @@ p {
 }
 
 hr {
-  border-color: $border-colour;
+  border-color: $kit-border-colour;
   border-style: solid;
   border-bottom: none;
-  margin-top: $base-spacing;
-  margin-bottom: $base-spacing;
+  margin-top: $kit-spacing-base;
+  margin-bottom: $kit-spacing-base;
 }
 
 /*
@@ -537,7 +537,7 @@ Style guide: Typography.6 Lists
 
 ul,
 ol {
-  padding-left: ($base-spacing + $small-spacing);
+  padding-left: ($kit-spacing-base + $kit-spacing-small);
 
   ul {
     list-style-type: disc;
@@ -552,8 +552,8 @@ dt,
 dd {
   font-size: rem(16);
   margin-top: 0; // Check up on where margin-top is coming from...
-  margin-bottom: $medium-spacing;
-  line-height: $base-spacing;
+  margin-bottom: $kit-spacing-medium;
+  line-height: $kit-spacing-base;
 
   @include media($tablet) {
     font-size: rem(17);
@@ -561,19 +561,19 @@ dd {
 }
 
 li {
-  margin-bottom: ($small-spacing / 1.5);
+  margin-bottom: ($kit-spacing-small / 1.5);
 
   ul,
   ol {
-    margin-top: $tiny-spacing;
+    margin-top: $kit-spacing-tiny;
     margin-bottom: 0;
   }
 }
 
 dt {
   display: inline-block;
-  font-weight: $bold-font-weight;
-  margin-top: $tiny-spacing;
+  font-weight: $kit-font-weight-bold;
+  margin-top: $kit-spacing-tiny;
 
   &:first-of-type {
     margin-top: 0;
@@ -613,10 +613,10 @@ Style guide: Typography.7 Callouts & warnings
 */
 
 %base-callout {
-  margin: $base-spacing $small-spacing;
-  padding: $medium-spacing $medium-spacing $medium-spacing $base-spacing;
-  border-radius: $tiny-border-radius;
-  box-shadow: 0 0 8px $light-grey;
+  margin: $kit-spacing-base $kit-spacing-small;
+  padding: $kit-spacing-medium $kit-spacing-medium $kit-spacing-medium $kit-spacing-base;
+  border-radius: $kit-border-radius-tiny;
+  box-shadow: 0 0 8px $kit-box-shadow-colour;
 }
 
 .callout {
@@ -626,8 +626,8 @@ Style guide: Typography.7 Callouts & warnings
 .callout--warning {
   @extend %base-callout;
 
-  border-left: $tiny-spacing solid $red;
-  padding-left: $base-spacing - $tiny-spacing;
+  border-left: $kit-spacing-tiny solid $kit-error-colour;
+  padding-left: $kit-spacing-base - $kit-spacing-tiny;
 }
 
 .callout--calendar-event {
@@ -635,29 +635,29 @@ Style guide: Typography.7 Callouts & warnings
 
   margin-left: 0;
   box-shadow: none;
-  padding-bottom: $small-spacing;
-  background-color: $callout-bg-light-colour;
+  padding-bottom: $kit-spacing-small;
+  background-color: $kit-callout-bg-colour;
 
   time,
   .event-name {
     font-size: rem(32);
-    line-height: $small-leading;
+    line-height: $kit-leading-small;
   }
 
   time {
     display: block;
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
   }
 
   .event-name {
-    font-weight: $base-font-weight;
+    font-weight: $kit-font-weight-base;
   }
 
   .next-event {
     display: block;
     font-size: rem(17);
-    font-weight: $base-font-weight;
-    margin-bottom: $tiny-spacing;
+    font-weight: $kit-font-weight-base;
+    margin-bottom: $kit-spacing-tiny;
   }
 }
 
@@ -688,19 +688,19 @@ Style guide: Typography.8 Badges
 */
 
 $badges: (
-  'default':  $badge-colour--default,
-  'alpha':    $badge-colour--alpha,
-  'beta':     $badge-colour--beta,
-  'error':    $badge-colour--error,
-  'success':  $badge-colour--success,
+  'default':  $kit-badge-colour--default,
+  'alpha':    $kit-badge-colour--alpha,
+  'beta':     $kit-badge-colour--beta,
+  'error':    $kit-badge-colour--beta,
+  'success':  $kit-badge-colour--success,
 );
 
 @each $badge-type, $colour in $badges {
   .badge--#{$badge-type} {
     display: inline-block;
     background-color: $colour;
-    border-radius: $large-border-radius;
-    padding: $tiny-spacing $small-spacing;
+    border-radius: $kit-border-radius-large;
+    padding: $kit-spacing-tiny $kit-spacing-small;
     line-height: 1;
     letter-spacing: 1px;
     color: lighten($colour, 75%);
@@ -746,22 +746,22 @@ Style guide: Typography.9 Quotations
 */
 
 blockquote {
-  margin: $medium-spacing 0;
-  padding: $small-spacing ($base-spacing + $small-spacing);
-  background-color: $background-secondary-colour;
-  font-family: $base-serif;
+  margin: $kit-spacing-medium 0;
+  padding: $kit-spacing-small ($kit-spacing-base + $kit-spacing-small);
+  background-color: $kit-page-bg-secondary-colour;
+  font-family: $kit-font-family-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
   &.pullquote {
     padding: 0;
-    background-color: $background-colour;
+    background-color: $kit-page-bg-colour;
 
     p {
       font-size: rem(24);
-      line-height: $base-leading;
+      line-height: $kit-leading-base;
       text-align: center;
-      font-weight: $base-font-weight;
-      margin-top: $base-spacing;
+      font-weight: $kit-font-weight-base;
+      margin-top: $kit-spacing-base;
 
       @include media($tablet) {
         font-size: rem(26);
@@ -781,41 +781,41 @@ blockquote {
   &::after {
     display: block;
     height: 0;
-    font-family: $base-serif;
+    font-family: $kit-font-family-serif;
     font-size: rem(43);
     color: $aqua;
   }
 
   &::before {
-    margin-left: -($small-spacing * 0.75);
-    padding-bottom: $tiny-spacing;
+    margin-left: -($kit-spacing-small * 0.75);
+    padding-bottom: $kit-spacing-tiny;
     content: open-quote;
   }
 
   &::after {
-    margin-right: -($small-spacing * 0.75);
-    margin-top: -($small-spacing);
-    padding-bottom: $medium-spacing;
+    margin-right: -($kit-spacing-small * 0.75);
+    margin-top: -($kit-spacing-small);
+    padding-bottom: $kit-spacing-medium;
     text-align: right;
     content: close-quote;
   }
 
   footer {
-    margin-top: $medium-spacing;
-    padding-top: $tiny-spacing;
-    border-top: 1px solid $light-grey;
+    margin-top: $kit-spacing-medium;
+    padding-top: $kit-spacing-tiny;
+    border-top: 1px solid $kit-border-colour;
   }
 
   cite {
     display: inline-block;
-    font-family: $base-sans-serif;
+    font-family: $kit-font-family-sans-serif;
 
     &::before {
       content: 'Citation: ';
       text-transform: lowercase;
       font-variant: small-caps;
       letter-spacing: 1px;
-      color: $body-text-colour;
+      color: $kit-body-text-colour;
     }
   }
 
@@ -834,7 +834,7 @@ q {
 }
 
 cite {
-  font-style: $base-font-style;
+  font-style: $kit-font-style-base;
 }
 
 article {
