@@ -22,7 +22,7 @@
 }
 
 .guide-example {
-  border: solid 5px $non-white;
+  border: solid 5px $off-white;
   margin: $kit-spacing-base 0;
   margin-bottom: 0;
   padding: $kit-spacing-base;
@@ -30,7 +30,7 @@
 
 .guide-example--type {
   @extend %scrolling-example;
-  background-color: $non-white;
+  background-color: $off-white;
   border-radius: $kit-border-radius-base;
   color: $dark-aqua;
   margin-bottom: $kit-spacing-small;
@@ -55,7 +55,7 @@ pre {
   margin: 0 0 $kit-spacing-base;
   white-space: pre;
   overflow: scroll;
-  background-color: $non-white;
+  background-color: $off-white;
   padding: $kit-spacing-small;
   max-height: 15.9em;
 }
@@ -70,7 +70,7 @@ table {
   border-collapse: collapse;
 
   tr:nth-child(even) {
-    background-color: $non-white;
+    background-color: $off-white;
   }
 
   td,
@@ -138,13 +138,13 @@ table {
 
 // Colour background classes
 
-.bg-non-black {
-  background-color: $non-black;
-  color: $non-white;
+.bg-off-black {
+  background-color: $off-black;
+  color: $off-white;
 
   .invert {
-    background-color: $non-white;
-    color: $non-black;
+    background-color: $off-white;
+    color: $off-black;
   }
 }
 
@@ -160,100 +160,100 @@ table {
 
 .bg-light-grey {
   background-color: $light-grey;
-  color: $non-black;
+  color: $off-black;
 
   .invert {
-    background-color: $non-black;
+    background-color: $off-black;
     color: $light-grey;
   }
 }
 
-.bg-non-white {
-  background-color: $non-white;
-  color: $non-black;
+.bg-off-white {
+  background-color: $off-white;
+  color: $off-black;
 
   .invert {
-    background-color: $non-black;
-    color: $non-white;
+    background-color: $off-black;
+    color: $off-white;
   }
 }
 
 .bg-white {
   background-color: $white;
-  color: $non-black;
+  color: $off-black;
 
   .invert {
-    background-color: $non-black;
+    background-color: $off-black;
     color: $white;
   }
 }
 
 .bg-aqua {
   background-color: $aqua;
-  color: $non-white;
+  color: $off-white;
 
   .invert {
-    background-color: $non-white;
+    background-color: $off-white;
     color: $aqua;
   }
 }
 
 .bg-dark-aqua {
   background-color: $dark-aqua;
-  color: $non-white;
+  color: $off-white;
 
   .invert {
-    background-color: $non-white;
+    background-color: $off-white;
     color: $dark-aqua;
   }
 }
 
 .bg-darker-aqua {
   background-color: $darker-aqua;
-  color: $non-white;
+  color: $off-white;
 
   .invert {
-    background-color: $non-white;
+    background-color: $off-white;
     color: $darker-aqua;
   }
 }
 
 .bg-light-aqua {
   background-color: $light-aqua;
-  color: $non-black;
+  color: $off-black;
 
   .invert {
-    background-color: $non-black;
+    background-color: $off-black;
     color: $light-aqua;
   }
 }
 
 .bg-lighter-aqua {
   background-color: $lighter-aqua;
-  color: $non-black;
+  color: $off-black;
 
   .invert {
-    background-color: $non-black;
+    background-color: $off-black;
     color: $lighter-aqua;
   }
 }
 
 .bg-navy {
   background-color: $navy;
-  color: $non-white;
+  color: $off-white;
 
   .invert {
-    background-color: $non-white;
+    background-color: $off-white;
     color: $navy;
   }
 }
 
 .bg-dark-navy {
   background-color: $dark-navy;
-  color: $non-white;
+  color: $off-white;
 
   .invert {
-    background-color: $non-white;
+    background-color: $off-white;
     color: $dark-navy;
   }
 }
@@ -314,10 +314,10 @@ table {
 
 .bg-light-yellow {
   background-color: $light-yellow;
-  color: $non-black;
+  color: $off-black;
 
   .invert {
-    background-color: $non-black;
+    background-color: $off-black;
     color: $light-yellow;
   }
 }
@@ -328,10 +328,10 @@ table {
 
 .bg-light-blue {
   background-color: $light-blue;
-  color: $non-black;
+  color: $off-black;
 
   .invert {
-    background-color: $non-black;
+    background-color: $off-black;
     color: $light-blue;
   }
 }
