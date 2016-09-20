@@ -124,7 +124,7 @@ Style guide: List styles.4 Highlighted word style
   list-style: none;
 
   .tags {
-    @include link-colours($button-bg-colour, $link-colour--hover, $link-colour);
+    @include kit-link-colours($kit-button-bg-colour, $kit-kit-link-colour--hover, $kit-link-colour);
     color: $grey;
 
     dl,
@@ -144,12 +144,12 @@ Style guide: List styles.4 Highlighted word style
 
     a {
       padding: 2px $kit-spacing-tiny;
-      border: 1px solid $button-bg-colour;
+      border: 1px solid $kit-button-bg-colour;
       border-radius: 2px;
 
       &:hover,
       &:focus {
-        border-color: $link-colour--hover;
+        border-color: $kit-kit-link-colour--hover;
       }
     }
   }
@@ -165,7 +165,7 @@ Style guide: List styles.4 Highlighted word style
 
   > li {
     padding: flex-gutter($content-grid-columns) 0;
-    border-bottom: solid 1px $border-colour;
+    border-bottom: solid 1px $kit-border-colour;
     margin-bottom: 0;
   }
 
@@ -222,7 +222,7 @@ Style guide: List styles.4 Highlighted word style
     }
 
     &.hero-item {
-      border-top: solid 1px $border-colour;
+      border-top: solid 1px $kit-border-colour;
 
       figure {
         @include media($tablet) {
@@ -254,7 +254,7 @@ Style guide: List styles.4 Highlighted word style
 
   > li {
 
-    border-top: 6px solid $border-highlight-colour;
+    border-top: 6px solid $kit-border-highlight-colour;
     border-bottom: none;
 
     article {
@@ -367,7 +367,7 @@ Style guide: List styles.4 Highlighted word style
 
 .list-small {
   @extend %base-list;
-  border-top: solid 1px $border-colour;
+  border-top: solid 1px $kit-border-colour;
 
   a {
     @extend %icon-arrow-right;
@@ -384,7 +384,7 @@ Style guide: List styles.4 Highlighted word style
     &:hover,
     &:active {
       background-position: ($kit-spacing-base * 1.25) ($kit-spacing-small * 1.75);
-      background-color: $background-secondary-colour;
+      background-color: $kit-page-bg-secondary-colour;
 
       span {
         color: $dark-aqua;
@@ -394,7 +394,7 @@ Style guide: List styles.4 Highlighted word style
   }
 
   span {
-    color: $link-colour;
+    color: $kit-link-colour;
     text-decoration: none;
     border-bottom: 1px solid;
   }

@@ -50,7 +50,7 @@ table {
   border-collapse: collapse;
 
   tr:nth-child(even) {
-    background-color: $non-white;
+    background-color: $off-white;
   }
 
   td,
@@ -155,7 +155,7 @@ Style guide: Tables.2 Calendar table variant
 
   th,
   td {
-    background-color: $background-secondary-colour;
+    background-color: $kit-page-bg-secondary-colour;
   }
 }
 

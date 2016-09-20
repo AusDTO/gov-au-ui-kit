@@ -15,9 +15,9 @@ Lighter and darker versions are percentage variations of the original colours (S
 
 <div class="guide-colour-examples">
   <div class="guide-colour">
-    <div class="swatch bg-non-black"></div>
-    <p class="text"><strong>Non-black</strong><br/>
-      <small>$non-black<br/>#313131</small></p>
+    <div class="swatch bg-off-black"></div>
+    <p class="text"><strong>off-black</strong><br/>
+      <small>$off-black<br/>#313131</small></p>
   </div>
 
   <div class="guide-colour">
@@ -33,9 +33,9 @@ Lighter and darker versions are percentage variations of the original colours (S
   </div>
 
   <div class="guide-colour">
-    <div class="swatch bg-non-white"></div>
-    <p class="text"><strong>Non-white</strong><br/>
-      <small>$non-white<br/> #F0F3F5</small></p>
+    <div class="swatch bg-off-white"></div>
+    <p class="text"><strong>off-white</strong><br/>
+      <small>$off-white<br/> #F0F3F5</small></p>
   </div>
 
   <div class="guide-colour">
@@ -94,10 +94,10 @@ Style guide: Colours.1 Colours palette
 // Colour constants
 
 $black:         #000;
-$non-black:     #313131;
+$off-black:     #313131;
 $grey:          #6e6e6e;
 $light-grey:    lighten($grey, 30%);
-$non-white:     #f0f3f5;
+$off-white:     #f0f3f5;
 $white:         #fff;
 
 $aqua:          #18788d;
@@ -120,7 +120,7 @@ These colours are reserved to help show specific changes in status.
   <div class="guide-colour">
     <div class="swatch bg-success-green"></div>
     <p class="text"><strong>Success-green</strong><br/>
-      <small>$success-colour<br/> #007554</small></p>
+      <small>$kit-success-colour<br/> #007554</small></p>
   </div>
 
   <div class="guide-colour">
@@ -132,7 +132,7 @@ These colours are reserved to help show specific changes in status.
   <div class="guide-colour">
     <div class="swatch bg-error-red"></div>
     <p class="text"><strong>Error-red</strong><br/>
-      <small>$error-colour<br/> #cc0000</small></p>
+      <small>$kit-error-colour<br/> #cc0000</small></p>
   </div>
 
   <div class="guide-colour">
@@ -144,7 +144,7 @@ These colours are reserved to help show specific changes in status.
   <div class="guide-colour">
     <div class="swatch bg-warning-yellow"></div>
     <p class="text"><strong>Warning-yellow</strong><br/>
-      <small>$warning-colour<br/> #f9c642</small></p>
+      <small>$kit-warning-colour<br/> #f9c642</small></p>
   </div>
 
   <div class="guide-colour">
@@ -156,7 +156,7 @@ These colours are reserved to help show specific changes in status.
   <div class="guide-colour">
     <div class="swatch bg-info-blue"></div>
     <p class="text"><strong>Info-blue</strong><br/>
-      <small>$info-colour<br/> #00Bfe9</small></p>
+      <small>$kit-info-colour<br/> #00Bfe9</small></p>
   </div>
 
   <div class="guide-colour">
@@ -187,24 +187,24 @@ Accessibility
 The <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">recommended colour contrast ratio</a> for text and interactive elements should be at least 4.5:1.
 
 ### Accessible combinations
-<p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-off-black">off-white on off-black<span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-grey">white on grey <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-grey">non-black on light-grey <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-non-white">non-black on non-white <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-white">non-black on white <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-darker-aqua">non-white on darker-aqua <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-dark-aqua">non-white on dark-aqua <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-grey">off-black on light-grey <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-off-white">off-black on off-white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-white">off-black on white <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-darker-aqua">off-white on darker-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-aqua">off-white on dark-aqua <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-aqua">white on aqua <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-aqua">non-black on light-aqua <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-dark-navy">non-white on dark-navy <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-navy">non-white on navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-light-aqua">off-black on light-aqua <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-dark-navy">off-white on dark-navy <span class="invert">AAA</span></p>
+<p class="guide-colour-block bg-navy">off-white on navy <span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-maroon">white on maroon <span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-error-red">white on error-red  <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-red">error-red on light-red <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-success-green">white on success-green <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-green">success-green on light-green <span class="invert">AAA</span></p>
-<p class="guide-colour-block bg-light-yellow">non-black on light-yellow <span class="invert">AA</span></p>
-<p class="guide-colour-block bg-light-blue">non-black on light-blue <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-yellow">off-black on light-yellow <span class="invert">AA</span></p>
+<p class="guide-colour-block bg-light-blue">off-black on light-blue <span class="invert">AA</span></p>
 
 <details open data-label="colour-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -227,55 +227,57 @@ Style guide: Colours.3 Accessibility
 
 // Colour variables
 
-$background-colour:             $white;
-$background-secondary-colour:   $non-white;
+$kit-page-bg-colour:                $white;
+$kit-page-bg-secondary-colour:      $off-white;
 
-$link-colour:                   $non-black;
-$link-colour--hover:            $light-aqua;
+$kit-link-colour:                   $off-black;
+$kit-kit-link-colour--hover:        $light-aqua;
 
-$link-inverted-colour:          $white;
-$link-inverted-colour--hover:   $white;
+$kit-link-colour-inverted:          $white;
+$kit-link-inverted-colour--hover:   $white;
 
-$button-bg-colour:              $aqua;
-$button-bg-colour--hover:       $darker-aqua;
-$button-bg-colour--active:      $dark-aqua;
-$button-bg-colour--disabled:    $light-grey;
+$kit-button-bg-colour:              $aqua;
+$kit-button-bg-colour--hover:       $darker-aqua;
+$kit-button-bg-colour--active:      $dark-aqua;
+$kit-button-bg-colour--disabled:    $light-grey;
 
-$button-inverted-colour:        $white;
+$kit-button-inverted-bg-colour:     $white;
 
-$button-text-colour:            $white;
-$button-inverted-text-colour:   $navy;
+$kit-button-text-colour:            $white;
+$kit-button-inverted-text-colour:   $navy;
 
-$focus-colour:                  $lighter-aqua;
-$error-colour:                  $red;
-$success-colour:                $green;
-$warning-colour:                $yellow;
-$info-colour:                   $blue;
+$kit-focus-colour:                  $lighter-aqua;
+$kit-error-colour:                  $red;
+$kit-success-colour:                $green;
+$kit-warning-colour:                $yellow;
+$kit-info-colour:                   $blue;
 
-$callout-bg-light-colour:       $lighter-aqua;
+$kit-callout-bg-colour:             $lighter-aqua;
 
-$border-colour:                 $light-grey;
-$border-soft-colour:            rgba($light-grey, 0.5);
-$border-contrast-colour:        $navy;
-$border-highlight-colour:       $light-aqua;
+$kit-border-colour:                 $light-grey;
+$kit-border-light-colour:           rgba($light-grey, 0.5);
+$kit-border-contrast-colour:        $navy;
+$kit-border-highlight-colour:       $light-aqua;
 
-$box-shadow-colour:             rgba($non-black, 0.5);
+$kit-box-shadow-colour:             rgba($off-black, 0.4);
 
-$body-text-colour:              $non-black;
-$body-inverted-text-colour:     $white;
+$kit-body-text-colour:              $off-black;
+$kit-body-inverted-text-colour:     $white;
 
-$badge-colour--default:         $grey;
-$badge-colour--alpha:           $non-black;
-$badge-colour--beta:            $maroon;
-$badge-colour--error:           $error-colour;
-$badge-colour--success:         $green;
+$kit-badge-colour--default:         $grey;
+$kit-badge-colour--alpha:           $off-black;
+$kit-badge-colour--beta:            $maroon;
+$kit-badge-colour--beta:            $kit-error-colour;
+$kit-badge-colour--success:         $green;
 
-$controls-bg-colour:            $dark-navy;
-$controls-contrast-bg-colour:   $maroon;
-$header-bg-colour:              $navy;
-$header-bg-colour-2:            #104f71;
-$header-bg-colour-3:            #1c809d;
-$hero-bg-colour:                #0098b0;
-$breadcrumbs-bg-colour:         $non-white;
+$kit-controls-bg-colour:            $dark-navy;
+$kit-controls-bg-colour--contrast:  $maroon;
 
-$input-focus-colour:            $light-aqua;
+$kit-header-bg-colour:              $navy;
+$kit-header-bg-colour-2:            #104f71;
+$kit-header-bg-colour-3:            #1c809d;
+
+$kit-hero-bg-colour:                #0098b0;
+$kit-breadcrumbs-bg-colour:         $off-white;
+
+$kit-input-focus-colour:            $light-aqua;

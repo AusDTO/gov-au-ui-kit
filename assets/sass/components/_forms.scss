@@ -43,28 +43,28 @@ Style guide: Forms.1 Text input
 %base-input {
   width: 100%;
   outline-offset: 0;
-  border: 2px solid $border-colour;
+  border: 2px solid $kit-border-colour;
   border-radius: 0;
-  background-color: $background-colour;
+  background-color: $kit-page-bg-colour;
   padding: $kit-spacing-tiny;
 
   &:invalid,
   &.invalid {
-    outline: 2px solid $error-colour;
+    outline: 2px solid $kit-error-colour;
   }
 
   &.valid {
-    outline: 2px solid $success-colour;
+    outline: 2px solid $kit-success-colour;
   }
 
   &:focus {
-    outline: 2px solid $input-focus-colour;
+    outline: 2px solid $kit-input-focus-colour;
   }
 
   &:disabled,
   &[disabled] {
     cursor: not-allowed;
-    background: $non-white;
+    background: $off-white;
     border: 2px solid $light-grey;
   }
 
@@ -89,7 +89,7 @@ form {
     display: block;
     margin-bottom: $kit-spacing-tiny;
     font-size: rem(14);
-    color: $body-text-colour;
+    color: $kit-body-text-colour;
   }
 
   [type='text'],
@@ -149,14 +149,14 @@ form {
       width: 1px;
 
       &:focus + label {
-        outline: 1px solid $border-colour;
+        outline: 1px solid $kit-border-colour;
       }
 
       &:invalid + label {
-        color: $error-colour;
+        color: $kit-error-colour;
 
         &::before {
-          border-color: $error-colour;
+          border-color: $kit-error-colour;
         }
       }
 
@@ -234,7 +234,7 @@ form {
   input[type='radio'] {
     & + label {
       &::before {
-        border: 2px solid $body-text-colour;
+        border: 2px solid $kit-body-text-colour;
         border-radius: 50%;
         content: '';
         left: 18px;
@@ -249,10 +249,11 @@ form {
         content: '';
       }
 
+      // Clean me up
       &::after {
         width: 17px;
         height: 17px;
-        background-color: $body-text-colour;
+        background-color: $kit-body-text-colour;
         border: 1px solid transparent;
         border-radius: 50%;
         content: '';
@@ -306,7 +307,7 @@ Style guide: Forms.4 Checkbox input
   input[type='checkbox'] + label {
     &::before {
       left: 20px;
-      border: 2px solid $body-text-colour;
+      border: 2px solid $kit-body-text-colour;
       content: '';
       @include media($tablet) {
         top: 9px;
@@ -326,7 +327,7 @@ Style guide: Forms.4 Checkbox input
       &::after {
         width: 17px;
         height: 17px;
-        background-color: $body-text-colour;
+        background-color: $kit-body-text-colour;
         border: 1px solid transparent;
         content: '';
         left: 25px;

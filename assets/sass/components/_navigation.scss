@@ -221,7 +221,7 @@ Style guide: Navigation.6 Footer navigation
     &,
     &:hover {
       background-color: transparent;
-      color: $body-inverted-text-colour;
+      color: $kit-body-inverted-text-colour;
     }
   }
 }
@@ -243,10 +243,10 @@ Style guide: Navigation.6 Footer navigation
 
   li {
     margin: 0;
-    border-bottom: 1px solid $border-soft-colour;
+    border-bottom: 1px solid $kit-border-light-colour;
 
     &:first-child {
-      border-top: 1px solid $border-soft-colour;
+      border-top: 1px solid $kit-border-light-colour;
     }
 
     @include media($tablet) {
@@ -254,7 +254,7 @@ Style guide: Navigation.6 Footer navigation
       @include omega(2n);
 
       &:nth-child(2) {
-        border-top: 1px solid $border-soft-colour;
+        border-top: 1px solid $kit-border-light-colour;
       }
     }
 
@@ -266,12 +266,12 @@ Style guide: Navigation.6 Footer navigation
       display: block;
       border: none;
       padding: $kit-spacing-small 0 1em;
-      color: $body-inverted-text-colour;
+      color: $kit-body-inverted-text-colour;
 
       &:focus,
       &:hover {
         background-color: transparent;
-        color: $body-inverted-text-colour;
+        color: $kit-body-inverted-text-colour;
       }
     }
   }
@@ -300,10 +300,10 @@ Style guide: Navigation.6 Footer navigation
   width: 100%;
   margin: $kit-spacing-base 0 0;
   border: 0;
-  background-color: $background-secondary-colour;
+  background-color: $kit-page-bg-secondary-colour;
   text-align: left;
   font-weight: $kit-font-weight-base;
-  color: $button-inverted-text-colour;
+  color: $kit-button-inverted-text-colour;
 
   &:focus,
   &:hover {
@@ -351,7 +351,7 @@ Style guide: Navigation.6 Footer navigation
   overflow: hidden;
 
   ul {
-    @include link-colours($link-colour, $focus-colour, $link-colour);
+    @include kit-link-colours($kit-link-colour, $kit-focus-colour, $kit-link-colour);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -388,10 +388,10 @@ Style guide: Navigation.6 Footer navigation
     li {
       margin: 0;
       padding: 0;
-      border-bottom: 1px solid $border-colour;
+      border-bottom: 1px solid $kit-border-colour;
 
       &:first-child {
-        border-top: 1px solid $border-colour;
+        border-top: 1px solid $kit-border-colour;
       }
     }
 
@@ -405,7 +405,7 @@ Style guide: Navigation.6 Footer navigation
       transition: border-color $kit-transition-timing-fast $kit-transition-easing-base;
 
       &:hover {
-        border-color: $border-contrast-colour;
+        border-color: $kit-border-contrast-colour;
       }
 
       &.is-active {
@@ -413,7 +413,7 @@ Style guide: Navigation.6 Footer navigation
       }
 
       &.is-current {
-        background-color: $focus-colour;
+        background-color: $kit-focus-colour;
       }
 
     }
@@ -429,7 +429,7 @@ Style guide: Navigation.6 Footer navigation
 
   .nav-heading {
     color: $darker-aqua;
-    background: $background-secondary-colour;
+    background: $kit-page-bg-secondary-colour;
     margin: $kit-spacing-base 0;
 
     .chevron {
@@ -470,12 +470,12 @@ Style guide: Navigation.6 Footer navigation
 }
 
 [class^='breadcrumbs'] {
-  @include link-colours($link-colour, $link-colour--hover);
+  @include kit-link-colours($kit-link-colour, $kit-kit-link-colour--hover);
   display: none;
   width: 100%;
   margin: 0;
-  background-color: $breadcrumbs-bg-colour;
-  color: $body-text-colour;
+  background-color: $kit-breadcrumbs-bg-colour;
+  color: $kit-body-text-colour;
 
   @include media($tablet) {
     display: inline-block;
@@ -505,14 +505,14 @@ Style guide: Navigation.6 Footer navigation
   }
 
   &[class$='--inverted'] {
-    @include link-colours($link-inverted-colour, $link-inverted-colour--hover, $link-colour);
+    @include kit-link-colours($kit-link-colour-inverted, $kit-link-inverted-colour--hover, $kit-link-colour);
     background-color: transparent;
-    color: $body-inverted-text-colour;
+    color: $kit-body-inverted-text-colour;
 
     ul {
       li:not(:last-child) {
         @extend %icon-arrow-right--white;
-        color: $body-inverted-text-colour;
+        color: $kit-body-inverted-text-colour;
       }
     }
   }
@@ -560,7 +560,7 @@ Style guide: Navigation.7 Skip links
 */
 
 .skip-to {
-  @include link-colours($link-colour, $link-colour--hover);
+  @include kit-link-colours($kit-link-colour, $kit-kit-link-colour--hover);
   position: relative;
   z-index: 99;
 
@@ -592,7 +592,7 @@ Style guide: Navigation.7 Skip links
 
 .index-links {
   margin: ($kit-spacing-base * 2) 0 $kit-spacing-base 0;
-  border-left: $kit-spacing-tiny solid $non-white;
+  border-left: $kit-spacing-tiny solid $off-white;
   padding: 0 0 $kit-spacing-medium ($kit-spacing-base - $kit-spacing-tiny);
 
   h2,
@@ -636,7 +636,7 @@ Style guide: Navigation.7 Skip links
 
   &[class$='--inverted'] {
     a {
-      color: $body-inverted-text-colour;
+      color: $kit-body-inverted-text-colour;
     }
   }
 }
@@ -782,7 +782,7 @@ Style guide: Navigation.07 Tab navigation
 
     &:hover,
     &:focus {
-      color: $non-black;
+      color: $off-black;
       border-bottom-color: $aqua;
     }
 

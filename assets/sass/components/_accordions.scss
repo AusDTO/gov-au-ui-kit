@@ -96,7 +96,7 @@ Style guide: Accordions.3 Usability
   height: auto;
   padding: $kit-spacing-small $kit-spacing-large $kit-spacing-small $kit-spacing-small;
   border-radius: $kit-border-radius-tiny $kit-border-radius-tiny 0 0;
-  background-color: $background-secondary-colour;
+  background-color: $kit-page-bg-secondary-colour;
   cursor: pointer;
   text-align: left;
   font-weight: $kit-font-weight-bold;
@@ -109,7 +109,7 @@ Style guide: Accordions.3 Usability
 
   &:hover,
   &:focus {
-    background-color: $border-colour;
+    background-color: $kit-border-colour;
     outline: none;
   }
 
@@ -154,7 +154,7 @@ details,
 .accordion {
   @extend %base-accordion;
 
-  border-color: $border-colour;
+  border-color: $kit-border-colour;
   border-width: 1px 0;
   border-style: solid;
 
@@ -169,7 +169,7 @@ summary {
   @extend %base-accordion-button;
 
   [aria-expanded='true'] & {
-    border-bottom: 1px solid $border-colour;
+    border-bottom: 1px solid $kit-border-colour;
   }
 }
 

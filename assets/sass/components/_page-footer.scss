@@ -1,8 +1,8 @@
 footer[role='contentinfo'] {
   @include pad(( $kit-spacing-base * 2 ) 0);
 
-  background-color: $non-white;
-  border-top: 6px solid $border-contrast-colour;
+  background-color: $off-white;
+  border-top: 6px solid $kit-border-contrast-colour;
 
   ul {
     padding: 0;
@@ -51,7 +51,7 @@ footer[role='contentinfo'] {
   .footer-top {
     margin-bottom: $kit-spacing-base * 2;
     padding-bottom: $kit-spacing-base * 2;
-    border-bottom: 1px solid $border-colour;
+    border-bottom: 1px solid $kit-border-colour;
 
     nav {
       @extend %base-vertical-list;

@@ -112,22 +112,22 @@ button,
     &:active,
     &:focus {
       cursor: not-allowed;
-      border-color: $button-bg-colour--disabled;
-      background-color: $button-bg-colour--disabled;
-      color: $non-black;
+      border-color: $kit-button-bg-colour--disabled;
+      background-color: $kit-button-bg-colour--disabled;
+      color: $off-black;
     }
   }
 
   &.inverted {
-    border-color: $button-inverted-colour;
+    border-color: $kit-button-inverted-bg-colour;
     background-color: transparent;
 
     &:hover,
     &:active,
     &:focus {
-      border-color: $button-inverted-colour;
-      background-color: $button-inverted-colour;
-      color: $button-inverted-text-colour;
+      border-color: $kit-button-inverted-bg-colour;
+      background-color: $kit-button-inverted-bg-colour;
+      color: $kit-button-inverted-text-colour;
     }
   }
 }

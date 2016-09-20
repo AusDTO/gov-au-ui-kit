@@ -13,7 +13,7 @@ Hover, focus & external links
 
 The `:hover` and `:focus` styles are identical.
 
-Inverted colour versions of `:hover` and `:focus` are created using `@mixin link-colours` where required (eg in the page header). The `_buttons.scss` partial includes a similar mixin: `@mixin button-colours`.
+Inverted colour versions of `:hover` and `:focus` are created using `@mixin kit-link-colours` where required (eg in the page header). The `_buttons.scss` partial includes a similar mixin: `@mixin button-colours`.
 
 Link to external sites using `rel="external"`.
 
@@ -50,7 +50,7 @@ Style guide: Link styles.1 Hover links
   border-bottom: 1px solid transparent;
 }
 
-@mixin link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
+@mixin kit-link-colours($text-colour, $hover-bg-colour, $hover-text-colour: $text-colour) {
   $link-disabled-colour: transparentize($text-colour, 0.3);
   color: $text-colour;
 
@@ -59,7 +59,7 @@ Style guide: Link styles.1 Hover links
     text-decoration: none;
     outline: none;
     border-bottom: solid 1px $hover-bg-colour;
-    kit-transition-timing-base-function: $kit-transition-easing-base;
+    transition-timing-function: $kit-transition-easing-base;
     transition-duration: $kit-transition-timing-fast;
     transition-property: background-color, border-color, color;
 
@@ -119,7 +119,7 @@ Style guide: Link styles.1 Hover links
     position: relative;
     margin-right: $kit-spacing-base;
     font-weight: $kit-font-weight-headings;
-    color: $button-bg-colour;
+    color: $kit-button-bg-colour;
 
     &::after {
       @extend %icon-arrow-right--aqua;
@@ -214,6 +214,6 @@ Style guide: Link styles.1 Hover links
 
 main > article,
 footer[role='contentinfo'] {
-  @include link-colours($non-black, $light-aqua, $non-black);
-  @include button-colours($button-bg-colour, $button-bg-colour--hover, $button-bg-colour--active, $button-text-colour);
+  @include kit-link-colours($off-black, $light-aqua, $off-black);
+  @include button-colours($kit-button-bg-colour, $kit-button-bg-colour--hover, $kit-button-bg-colour--active, $kit-button-text-colour);
 }

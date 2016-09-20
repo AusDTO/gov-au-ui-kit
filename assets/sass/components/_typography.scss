@@ -95,7 +95,7 @@ Style guide: Typography.3 Spacing
 */
 
 html {
-  color: $body-text-colour;
+  color: $kit-body-text-colour;
   line-height: $kit-leading-base;
   font-family: $kit-font-family-base;
   font-weight: $kit-font-weight-base;
@@ -448,7 +448,7 @@ kbd {
   border: solid 1px $light-aqua;
   border-radius: $kit-border-radius-base;
   box-shadow: 0 1px 0 0 $light-aqua;
-  background-color: $non-white;
+  background-color: $off-white;
   color: $dark-aqua;
   text-align: center;
   font-size: $kit-font-size-small;
@@ -475,7 +475,7 @@ strong {
 // For abstracts or page introductory paragraphs.
 .abstract {
   margin: $kit-spacing-medium 0 ($kit-spacing-base * 1.25);
-  border-bottom: 1px solid $border-colour;
+  border-bottom: 1px solid $kit-border-colour;
 
   p {
     font-size: rem(19);
@@ -498,7 +498,7 @@ p {
   &.abstract {
     margin: $kit-spacing-small 0 ($kit-spacing-medium * 1.25);
     padding-bottom: $kit-spacing-medium;
-    border-bottom: 1px solid $border-colour;
+    border-bottom: 1px solid $kit-border-colour;
     font-size: rem(19);
 
     @include media($tablet) {
@@ -512,7 +512,7 @@ p {
 }
 
 hr {
-  border-color: $border-colour;
+  border-color: $kit-border-colour;
   border-style: solid;
   border-bottom: none;
   margin-top: $kit-spacing-base;
@@ -616,7 +616,7 @@ Style guide: Typography.7 Callouts & warnings
   margin: $kit-spacing-base $kit-spacing-small;
   padding: $kit-spacing-medium $kit-spacing-medium $kit-spacing-medium $kit-spacing-base;
   border-radius: $kit-border-radius-tiny;
-  box-shadow: 0 0 8px $light-grey;
+  box-shadow: 0 0 8px $kit-box-shadow-colour;
 }
 
 .callout {
@@ -626,7 +626,7 @@ Style guide: Typography.7 Callouts & warnings
 .callout--warning {
   @extend %base-callout;
 
-  border-left: $kit-spacing-tiny solid $red;
+  border-left: $kit-spacing-tiny solid $kit-error-colour;
   padding-left: $kit-spacing-base - $kit-spacing-tiny;
 }
 
@@ -636,7 +636,7 @@ Style guide: Typography.7 Callouts & warnings
   margin-left: 0;
   box-shadow: none;
   padding-bottom: $kit-spacing-small;
-  background-color: $callout-bg-light-colour;
+  background-color: $kit-callout-bg-colour;
 
   time,
   .event-name {
@@ -688,11 +688,11 @@ Style guide: Typography.8 Badges
 */
 
 $badges: (
-  'default':  $badge-colour--default,
-  'alpha':    $badge-colour--alpha,
-  'beta':     $badge-colour--beta,
-  'error':    $badge-colour--error,
-  'success':  $badge-colour--success,
+  'default':  $kit-badge-colour--default,
+  'alpha':    $kit-badge-colour--alpha,
+  'beta':     $kit-badge-colour--beta,
+  'error':    $kit-badge-colour--beta,
+  'success':  $kit-badge-colour--success,
 );
 
 @each $badge-type, $colour in $badges {
@@ -748,13 +748,13 @@ Style guide: Typography.9 Quotations
 blockquote {
   margin: $kit-spacing-medium 0;
   padding: $kit-spacing-small ($kit-spacing-base + $kit-spacing-small);
-  background-color: $background-secondary-colour;
+  background-color: $kit-page-bg-secondary-colour;
   font-family: $kit-font-family-serif;
   quotes: '\201C''\201D''\2018''\2019';
 
   &.pullquote {
     padding: 0;
-    background-color: $background-colour;
+    background-color: $kit-page-bg-colour;
 
     p {
       font-size: rem(24);
@@ -803,7 +803,7 @@ blockquote {
   footer {
     margin-top: $kit-spacing-medium;
     padding-top: $kit-spacing-tiny;
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $kit-border-colour;
   }
 
   cite {
@@ -815,7 +815,7 @@ blockquote {
       text-transform: lowercase;
       font-variant: small-caps;
       letter-spacing: 1px;
-      color: $body-text-colour;
+      color: $kit-body-text-colour;
     }
   }
 

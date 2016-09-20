@@ -1,10 +1,10 @@
 [class^='controls'] {
-  @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
-  @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $controls-bg-colour);
+  @include kit-link-colours($kit-link-colour-inverted, $kit-link-colour-inverted, $kit-controls-bg-colour);
+  @include button-colours(transparent, $kit-body-inverted-text-colour, $kit-body-inverted-text-colour, $kit-controls-bg-colour);
 
   padding: $kit-spacing-tiny 0;
-  background-color: $controls-bg-colour;
-  color: $body-inverted-text-colour;
+  background-color: $kit-controls-bg-colour;
+  color: $kit-body-inverted-text-colour;
 
   section {
 
@@ -48,13 +48,13 @@
   }
 
   &[class$='--contrast'] {
-    @include button-colours($controls-contrast-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $controls-contrast-bg-colour);
+    @include button-colours($kit-controls-bg-colour--contrast, $kit-body-inverted-text-colour, $kit-body-inverted-text-colour, $kit-body-inverted-text-colour, $kit-controls-bg-colour--contrast);
 
-    background-color: $controls-contrast-bg-colour;
+    background-color: $kit-controls-bg-colour--contrast;
 
     [role='button']:hover,
     [role='button']:focus {
-      color: $controls-contrast-bg-colour;
+      color: $kit-controls-bg-colour--contrast;
     }
   }
 }
@@ -83,15 +83,15 @@
 }
 
 .govau--header {
-  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
-  @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
+  @include kit-link-colours($kit-link-colour-inverted, $kit-link-colour-inverted, $kit-link-colour);
+  @include button-colours($kit-header-bg-colour, $kit-body-inverted-text-colour, $kit-body-inverted-text-colour, $kit-body-inverted-text-colour, $kit-header-bg-colour);
 
   position: relative;
   padding: $kit-spacing-medium 0 ($kit-spacing-base * 3);
   padding-bottom: $kit-spacing-medium;
   margin-bottom: 0;
-  background-color: $header-bg-colour;
-  color: $body-inverted-text-colour;
+  background-color: $kit-header-bg-colour;
+  color: $kit-body-inverted-text-colour;
 
   @include media($tablet) {
     padding-bottom: $kit-spacing-medium;
@@ -116,7 +116,7 @@
     font-weight: $kit-font-weight-headings;
     padding-bottom: 2px;
     border-bottom: 0;
-    color: $body-inverted-text-colour;
+    color: $kit-body-inverted-text-colour;
     font-family: $kit-font-family-sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -129,23 +129,23 @@
 }
 
 .prerelease-govau--header {
-  @include link-colours($link-inverted-colour, $link-inverted-colour, $link-colour);
-  @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
+  @include kit-link-colours($kit-link-colour-inverted, $kit-link-colour-inverted, $kit-link-colour);
+  @include button-colours(transparent, $kit-body-inverted-text-colour, $kit-body-inverted-text-colour, $kit-body-inverted-text-colour, $kit-header-bg-colour);
 
   position: relative;
   padding: $kit-spacing-base 0 ($kit-spacing-base * 3);
   padding-bottom: $kit-spacing-medium;
   margin-bottom: 0;
-  color: $body-inverted-text-colour;
+  color: $kit-body-inverted-text-colour;
 
-  background-color: $header-bg-colour;
+  background-color: $kit-header-bg-colour;
   background-image: image-url('header-bg.jpg');
   background-position: top right;
   background-repeat: no-repeat;
 
   //CSS gradient not used because of 'dazzle' issues on monitors with low refresh rate.
-  //background: $header-bg-colour; /* Old browsers */
-  //background: linear-gradient(45deg, $header-bg-colour 0%, $header-bg-colour-2 30%, $header-bg-colour-3 80%, $header-bg-colour-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //background: $kit-header-bg-colour; /* Old browsers */
+  //background: linear-gradient(45deg, $kit-header-bg-colour 0%, $kit-header-bg-colour-2 30%, $kit-header-bg-colour-3 80%, $kit-header-bg-colour-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#043751', endColorstr='#1c809d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   /* Note: do not use variables in above IE filter. */
 
@@ -206,7 +206,7 @@
     font-weight: $kit-font-weight-headings;
     padding-bottom: 2px;
     border-bottom: 0;
-    color: $body-inverted-text-colour;
+    color: $kit-body-inverted-text-colour;
     font-family: $kit-font-family-sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -255,17 +255,17 @@
 .hero,
 .hero-sml,
 .hero-med {
-  @include link-colours($non-black, $light-aqua, $non-black);
+  @include kit-link-colours($off-black, $light-aqua, $off-black);
 
   padding: ($kit-spacing-base * 2) 0;
   margin-bottom: 0;
-  background-color: $non-white;
+  background-color: $off-white;
   color: $navy;
 
   &.corporate {
     //^ class name from platforms
-    background-color: $hero-bg-colour;
-    color: $body-inverted-text-colour;
+    background-color: $kit-hero-bg-colour;
+    color: $kit-body-inverted-text-colour;
   }
 
   h1 {
