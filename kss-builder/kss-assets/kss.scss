@@ -13,27 +13,27 @@
 
 .guide-section-nav {
   @include media($tablet) {
-    margin-top: ($base-spacing * 4);
+    margin-top: ($kit-spacing-base * 4);
   }
 }
 
 .guide-section-header {
-  margin-bottom: $base-spacing * 2;
+  margin-bottom: $kit-spacing-base * 2;
 }
 
 .guide-example {
   border: solid 5px $non-white;
-  margin: $base-spacing 0;
+  margin: $kit-spacing-base 0;
   margin-bottom: 0;
-  padding: $base-spacing;
+  padding: $kit-spacing-base;
 }
 
 .guide-example--type {
   @extend %scrolling-example;
   background-color: $non-white;
-  border-radius: $base-border-radius;
+  border-radius: $kit-border-radius-base;
   color: $dark-aqua;
-  margin-bottom: $small-spacing;
+  margin-bottom: $kit-spacing-small;
   padding: 2em;
   overflow: auto;
 
@@ -52,11 +52,11 @@
 
 pre {
   @extend %scrolling-example;
-  margin: 0 0 $base-spacing;
+  margin: 0 0 $kit-spacing-base;
   white-space: pre;
   overflow: scroll;
   background-color: $non-white;
-  padding: $small-spacing;
+  padding: $kit-spacing-small;
   max-height: 15.9em;
 }
 
@@ -76,12 +76,12 @@ table {
   td,
   th {
     border-bottom: solid 1px $light-grey;
-    padding: $tiny-spacing;
-    font-size: $small-font-size;
+    padding: $kit-spacing-tiny;
+    font-size: $kit-font-size-small;
     text-align: left;
 
     @include media($tablet) {
-      padding: $small-spacing;
+      padding: $kit-spacing-small;
       font-size: initial;
     }
   }
@@ -111,7 +111,7 @@ table {
   }
 
   .text {
-    padding: $small-spacing;
+    padding: $kit-spacing-small;
     margin: 0;
 
     small {
@@ -126,12 +126,12 @@ table {
 }
 
 .guide-colour-block {
-  padding: $small-spacing $small-spacing $small-spacing $medium-spacing;
+  padding: $kit-spacing-small $kit-spacing-small $kit-spacing-small $kit-spacing-medium;
 
   .invert {
     float: right;
     padding: 0 0.5em;
-    border-radius: $base-border-radius;
+    border-radius: $kit-border-radius-base;
     font-weight: bold;
   }
 }

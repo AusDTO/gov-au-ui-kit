@@ -93,7 +93,7 @@ main {
   @include outer-container;
 
   @include media($tablet) {
-    padding-top: $base-spacing * 2;
+    padding-top: $kit-spacing-base * 2;
   }
 
   @include ie-lte(8) {
@@ -237,7 +237,7 @@ footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
     @include pad(0 default);
-    margin-top: ($base-spacing * 2);
+    margin-top: ($kit-spacing-base * 2);
     min-width: 100%;
   }
 }

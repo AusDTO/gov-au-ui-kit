@@ -194,7 +194,7 @@ Style guide: Navigation.6 Footer navigation
     float: right;
     height: auto;
     width: auto;
-    margin: $tiny-spacing 0;
+    margin: $kit-spacing-tiny 0;
     padding: 0;
     border: 0;
     border-bottom: 1px solid;
@@ -205,8 +205,8 @@ Style guide: Navigation.6 Footer navigation
       position: absolute;
       top: .25em;
       bottom: .25em;
-      left: ($base-spacing * -1);
-      width: $medium-spacing;
+      left: ($kit-spacing-base * -1);
+      width: $kit-spacing-medium;
       background-repeat: no-repeat;
       background-size: auto 100%;
     }
@@ -233,11 +233,11 @@ Style guide: Navigation.6 Footer navigation
   ul {
     list-style-type: none;
     margin: 0;
-    padding: $base-spacing 0;
+    padding: $kit-spacing-base 0;
 
     @include media($tablet) {
       @include outer-container;
-      margin-top: $base-spacing;
+      margin-top: $kit-spacing-base;
     }
   }
 
@@ -265,7 +265,7 @@ Style guide: Navigation.6 Footer navigation
     a {
       display: block;
       border: none;
-      padding: $small-spacing 0 1em;
+      padding: $kit-spacing-small 0 1em;
       color: $body-inverted-text-colour;
 
       &:focus,
@@ -290,7 +290,7 @@ Style guide: Navigation.6 Footer navigation
 }
 
 .sidebar {
-  padding: 0 0 $base-spacing;
+  padding: 0 0 $kit-spacing-base;
 }
 
 .nav-toggle {
@@ -298,11 +298,11 @@ Style guide: Navigation.6 Footer navigation
 
   position: relative;
   width: 100%;
-  margin: $base-spacing 0 0;
+  margin: $kit-spacing-base 0 0;
   border: 0;
   background-color: $background-secondary-colour;
   text-align: left;
-  font-weight: $base-font-weight;
+  font-weight: $kit-font-weight-base;
   color: $button-inverted-text-colour;
 
   &:focus,
@@ -317,13 +317,13 @@ Style guide: Navigation.6 Footer navigation
     position: absolute;
     top: .5em;
     bottom: .5em;
-    right: $small-spacing;
-    width: $medium-spacing;
+    right: $kit-spacing-small;
+    width: $kit-spacing-medium;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center center;
     transform: rotate(0deg);
-    transition: transform $transition-timing $transition-easing;
+    transition: transform $kit-transition-timing-base $kit-transition-easing-base;
   }
 
   &.active {
@@ -342,7 +342,7 @@ Style guide: Navigation.6 Footer navigation
 .local-nav {
   padding-top: 0;
   @include media($tablet) {
-    padding: $base-spacing 0;
+    padding: $kit-spacing-base 0;
   }
 }
 
@@ -369,17 +369,17 @@ Style guide: Navigation.6 Footer navigation
 
       ul {
         a {
-          padding-left: $base-spacing;
+          padding-left: $kit-spacing-base;
           border-bottom: 0;
         }
 
         ul {
           a {
             @extend %icon-arrow-right;
-            padding-left: $base-spacing + $small-spacing;
+            padding-left: $kit-spacing-base + $kit-spacing-small;
             background-repeat: no-repeat;
-            background-position: $base-spacing center;
-            background-size: $tiny-spacing auto;
+            background-position: $kit-spacing-base center;
+            background-size: $kit-spacing-tiny auto;
           }
         }
       }
@@ -400,16 +400,16 @@ Style guide: Navigation.6 Footer navigation
       border: none;
       border-left: 4px solid transparent;
       border-bottom: none;
-      padding: $small-spacing;
+      padding: $kit-spacing-small;
       text-decoration: none;
-      transition: border-color $transition-timing-fast $transition-easing;
+      transition: border-color $kit-transition-timing-fast $kit-transition-easing-base;
 
       &:hover {
         border-color: $border-contrast-colour;
       }
 
       &.is-active {
-        font-weight: $bold-font-weight;
+        font-weight: $kit-font-weight-bold;
       }
 
       &.is-current {
@@ -425,12 +425,12 @@ Style guide: Navigation.6 Footer navigation
 // This class is legacy as of v1.2
 // Marked for removal at 2.0
 .primary-nav {
-  padding: $base-spacing 0;
+  padding: $kit-spacing-base 0;
 
   .nav-heading {
     color: $darker-aqua;
     background: $background-secondary-colour;
-    margin: $base-spacing 0;
+    margin: $kit-spacing-base 0;
 
     .chevron {
       float: right;
@@ -456,7 +456,7 @@ Style guide: Navigation.6 Footer navigation
     display: block;
     background-color: $dark-aqua;
     color: $white;
-    padding: $medium-spacing / 2 $small-spacing;
+    padding: $kit-spacing-medium / 2 $kit-spacing-small;
 
     &:hover {
       border-color: $dark-aqua;
@@ -483,8 +483,8 @@ Style guide: Navigation.6 Footer navigation
 
   ul {
     margin: 0;
-    padding: $small-spacing 0 .8 * $medium-spacing;
-    line-height: $medium-spacing;
+    padding: $kit-spacing-small 0 .8 * $kit-spacing-medium;
+    line-height: $kit-spacing-medium;
     list-style: none;
 
     li {
@@ -495,11 +495,11 @@ Style guide: Navigation.6 Footer navigation
 
       &:not(:last-child) {
         @extend %icon-arrow-right;
-        margin-right: $small-spacing;
-        padding-right: $medium-spacing;
+        margin-right: $kit-spacing-small;
+        padding-right: $kit-spacing-medium;
         background-repeat: no-repeat;
         background-position: right;
-        background-size: $tiny-spacing auto;
+        background-size: $kit-spacing-tiny auto;
       }
     }
   }
@@ -573,7 +573,7 @@ Style guide: Navigation.7 Skip links
     padding: 0;
     position: absolute;
     width: 1px;
-    border-radius: $tiny-border-radius;
+    border-radius: $kit-border-radius-tiny;
 
     &:active,
     &:focus {
@@ -585,15 +585,15 @@ Style guide: Navigation.7 Skip links
       width: auto;
       top: 10px;
       left: 10px;
-      padding: $tiny-spacing $small-spacing;
+      padding: $kit-spacing-tiny $kit-spacing-small;
     }
   }
 }
 
 .index-links {
-  margin: ($base-spacing * 2) 0 $base-spacing 0;
-  border-left: $tiny-spacing solid $non-white;
-  padding: 0 0 $medium-spacing ($base-spacing - $tiny-spacing);
+  margin: ($kit-spacing-base * 2) 0 $kit-spacing-base 0;
+  border-left: $kit-spacing-tiny solid $non-white;
+  padding: 0 0 $kit-spacing-medium ($kit-spacing-base - $kit-spacing-tiny);
 
   h2,
   h3,
@@ -601,21 +601,21 @@ Style guide: Navigation.7 Skip links
   h5,
   h6 {
     font-size: rem(17);
-    margin-top: $base-spacing;
+    margin-top: $kit-spacing-base;
     color: $grey;
-    font-weight: $base-font-weight;
+    font-weight: $kit-font-weight-base;
   }
 
   ul,
   ol {
     list-style-type: none;
-    margin: $base-spacing 0 0;
+    margin: $kit-spacing-base 0 0;
     padding: 0;
   }
 
   li {
-    margin-bottom: $medium-spacing;
-    font-weight: $bold-font-weight;
+    margin-bottom: $kit-spacing-medium;
+    font-weight: $kit-font-weight-bold;
 
     &:last-child {
       margin-bottom: 0;
@@ -627,11 +627,11 @@ Style guide: Navigation.7 Skip links
   display: inline-block;
   list-style-type: none;
   margin: 0;
-  padding: $small-spacing 0;
+  padding: $kit-spacing-small 0;
 
   li {
     display: inline-block;
-    margin: 0 $tiny-spacing;
+    margin: 0 $kit-spacing-tiny;
   }
 
   &[class$='--inverted'] {
@@ -730,7 +730,7 @@ Style guide: Navigation.07 Tab navigation
 
 .inline-tab-nav {
   border-bottom: solid 1px $grey;
-  margin: ($base-spacing * 2) 0;
+  margin: ($kit-spacing-base * 2) 0;
 
   h1,
   h2,
@@ -745,7 +745,7 @@ Style guide: Navigation.07 Tab navigation
     font-size: 1em;
     font-weight: 400;
     margin: 0;
-    padding: $small-spacing 1.5em;
+    padding: $kit-spacing-small 1.5em;
     padding-left: 0;
     vertical-align: middle;
     white-space: nowrap;
@@ -777,7 +777,7 @@ Style guide: Navigation.07 Tab navigation
     display: block;
     float: left;
     vertical-align: bottom;
-    padding: $small-spacing 1.5em;
+    padding: $kit-spacing-small 1.5em;
     border-bottom: solid 4px transparent;
 
     &:hover,

@@ -2,7 +2,7 @@
   @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
   @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $controls-bg-colour);
 
-  padding: $tiny-spacing 0;
+  padding: $kit-spacing-tiny 0;
   background-color: $controls-bg-colour;
   color: $body-inverted-text-colour;
 
@@ -39,7 +39,7 @@
 
   [class^='breadcrumbs'] {
     width: auto;
-    margin-right: $small-spacing;
+    margin-right: $kit-spacing-small;
     background-color: transparent;
   }
 
@@ -62,16 +62,16 @@
 .govau--header,
 .prerelease-govau--header {
   .links-group {
-    margin: ($base-spacing * 1.5) 0;
+    margin: ($kit-spacing-base * 1.5) 0;
 
     @include ie-lte(8) {
       margin-bottom: 0;
-      padding-bottom: $base-spacing * 1.5;
+      padding-bottom: $kit-spacing-base * 1.5;
     }
 
     h2 {
       font-size: rem(17);
-      font-weight: $bold-font-weight;
+      font-weight: $kit-font-weight-bold;
       margin-top: 0;
       padding: 0;
     }
@@ -87,20 +87,20 @@
   @include button-colours($header-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
 
   position: relative;
-  padding: $medium-spacing 0 ($base-spacing * 3);
-  padding-bottom: $medium-spacing;
+  padding: $kit-spacing-medium 0 ($kit-spacing-base * 3);
+  padding-bottom: $kit-spacing-medium;
   margin-bottom: 0;
   background-color: $header-bg-colour;
   color: $body-inverted-text-colour;
 
   @include media($tablet) {
-    padding-bottom: $medium-spacing;
+    padding-bottom: $kit-spacing-medium;
   }
 
   @include ie-lte(8) {
     @include ie-clearfix;
     margin-bottom: 0;
-    padding-bottom: $base-spacing * 1.5;
+    padding-bottom: $kit-spacing-base * 1.5;
   }
 
   .govau--logo {
@@ -113,18 +113,18 @@
 
   .logo {
     font-size: rem(24);
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
     padding-bottom: 2px;
     border-bottom: 0;
     color: $body-inverted-text-colour;
-    font-family: $base-sans-serif;
+    font-family: $kit-font-family-sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 
   [class^='badge'] {
     vertical-align: text-bottom;
-    margin-left: $tiny-spacing;
+    margin-left: $kit-spacing-tiny;
   }
 }
 
@@ -133,8 +133,8 @@
   @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $header-bg-colour);
 
   position: relative;
-  padding: $base-spacing 0 ($base-spacing * 3);
-  padding-bottom: $medium-spacing;
+  padding: $kit-spacing-base 0 ($kit-spacing-base * 3);
+  padding-bottom: $kit-spacing-medium;
   margin-bottom: 0;
   color: $body-inverted-text-colour;
 
@@ -203,23 +203,23 @@
 
   .logo {
     font-size: rem(24);
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
     padding-bottom: 2px;
     border-bottom: 0;
     color: $body-inverted-text-colour;
-    font-family: $base-sans-serif;
+    font-family: $kit-font-family-sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 
   [class^='badge'] {
     vertical-align: text-bottom;
-    margin-left: $tiny-spacing;
+    margin-left: $kit-spacing-tiny;
   }
 
   .breadcrumbs,
   .breadcrumbs--inverted {
-    margin-top: $medium-spacing;
+    margin-top: $kit-spacing-medium;
   }
 }
 
@@ -235,7 +235,7 @@
   @include media($tablet) {
     display: block;
     float: right;
-    margin-left: $base-spacing;
+    margin-left: $kit-spacing-base;
   }
 }
 
@@ -257,7 +257,7 @@
 .hero-med {
   @include link-colours($non-black, $light-aqua, $non-black);
 
-  padding: ($base-spacing * 2) 0;
+  padding: ($kit-spacing-base * 2) 0;
   margin-bottom: 0;
   background-color: $non-white;
   color: $navy;
@@ -281,7 +281,7 @@
   p {
     font-size: rem(24);
     max-width: 30em;
-    margin-bottom: $small-spacing;
+    margin-bottom: $kit-spacing-small;
   }
 
   .site-title {
@@ -289,11 +289,11 @@
 
     display: block;
     margin-top: 0;
-    margin-bottom: $tiny-spacing;
+    margin-bottom: $kit-spacing-tiny;
   }
 
   .tagline {
-    font-size: $large-font-size;
+    font-size: $kit-font-size-large;
   }
 
   .wrapper {
@@ -309,16 +309,16 @@
 }
 
 .hero-sml {
-  padding: $medium-spacing 0;
+  padding: $kit-spacing-medium 0;
 
   p {
     font-size: rem(19);
-    font-weight: $bold-font-weight;
+    font-weight: $kit-font-weight-bold;
   }
 }
 
 .hero-med {
-  padding: ($base-spacing * 1.5) 0;
+  padding: ($kit-spacing-base * 1.5) 0;
 }
 
 /*

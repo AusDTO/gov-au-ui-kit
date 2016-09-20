@@ -78,20 +78,20 @@ Style guide: Buttons.1 Creating buttons
   -webkit-appearance: none;
   appearance: none;
   display: inline-block;
-  height: $base-spacing * 2;
-  margin: 0 $base-spacing $small-spacing 0;
-  padding: $small-spacing $base-spacing;
-  border-radius: $tiny-border-radius;
+  height: $kit-spacing-base * 2;
+  margin: 0 $kit-spacing-base $kit-spacing-small 0;
+  padding: $kit-spacing-small $kit-spacing-base;
+  border-radius: $kit-border-radius-tiny;
   border-width: 1px;
   border-style: solid;
   border-color: inherit;
   outline: 0;
   text-decoration: none;
-  font-weight: $bold-font-weight;
+  font-weight: $kit-font-weight-bold;
 
   @include media($tablet) {
-    height: $base-spacing * 1.75;
-    padding: ($tiny-spacing * 1.25) $medium-spacing;
+    height: $kit-spacing-base * 1.75;
+    padding: ($kit-spacing-tiny * 1.25) $kit-spacing-medium;
   }
 }
 

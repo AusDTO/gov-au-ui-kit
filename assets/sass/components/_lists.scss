@@ -119,7 +119,7 @@ Style guide: List styles.4 Highlighted word style
 %base-list {
   @include clearfix;
 
-  margin-top: $base-spacing * 1.4; // Revisit.
+  margin-top: $kit-spacing-base * 1.4; // Revisit.
   padding: 0;
   list-style: none;
 
@@ -133,17 +133,17 @@ Style guide: List styles.4 Highlighted word style
       display: inline-block;
       margin: 0;
       padding: 0;
-      line-height: $base-heading-leading * 1.5; // Revisit.
+      line-height: $kit-leading-headings * 1.5; // Revisit.
     }
 
     dt,
     dd {
-      margin-right: $tiny-spacing;
-      font-size: $small-font-size;
+      margin-right: $kit-spacing-tiny;
+      font-size: $kit-font-size-small;
     }
 
     a {
-      padding: 2px $tiny-spacing;
+      padding: 2px $kit-spacing-tiny;
       border: 1px solid $button-bg-colour;
       border-radius: 2px;
 
@@ -155,8 +155,8 @@ Style guide: List styles.4 Highlighted word style
   }
 
   .meta {
-    font-size: $small-font-size;
-    margin-bottom: $small-spacing;
+    font-size: $kit-font-size-small;
+    margin-bottom: $kit-spacing-small;
 
     time {
       color: $grey;
@@ -175,11 +175,11 @@ Style guide: List styles.4 Highlighted word style
   h5,
   h6 {
     margin-top: 0;
-    margin-bottom: $tiny-spacing;
+    margin-bottom: $kit-spacing-tiny;
 
     font-size: rem(18);
-    font-weight: $heading-font-weight;
-    line-height: $base-heading-leading;
+    font-weight: $kit-font-weight-headings;
+    line-height: $kit-leading-headings;
   }
 
   img {
@@ -202,18 +202,18 @@ Style guide: List styles.4 Highlighted word style
 
     figure {
       @include media($mobile) {
-        margin-bottom: $medium-spacing;
+        margin-bottom: $kit-spacing-medium;
       }
       @include media($tablet) {
         flex: 0 0 35%;
-        margin-right: $base-spacing;
+        margin-right: $kit-spacing-base;
       }
     }
 
     .meta {
       time {
         display: inline-block;
-        margin-right: $small-spacing;
+        margin-right: $kit-spacing-small;
       }
     }
 
@@ -373,17 +373,17 @@ Style guide: List styles.4 Highlighted word style
     @extend %icon-arrow-right;
 
     display: block;
-    padding: $small-spacing;
-    padding-left: ($base-spacing * 2);
+    padding: $kit-spacing-small;
+    padding-left: ($kit-spacing-base * 2);
     border-bottom: none;
     background-repeat: no-repeat;
-    background-position: $base-spacing ($small-spacing * 1.75);
-    background-size: $tiny-spacing auto;
-    transition: background $transition-timing $transition-easing;
+    background-position: $kit-spacing-base ($kit-spacing-small * 1.75);
+    background-size: $kit-spacing-tiny auto;
+    transition: background $kit-transition-timing-base $kit-transition-easing-base;
 
     &:hover,
     &:active {
-      background-position: ($base-spacing * 1.25) ($small-spacing * 1.75);
+      background-position: ($kit-spacing-base * 1.25) ($kit-spacing-small * 1.75);
       background-color: $background-secondary-colour;
 
       span {
@@ -415,18 +415,18 @@ Style guide: List styles.4 Highlighted word style
   li {
     list-style: none;
     border-bottom: 0;
-    padding-bottom: $base-spacing;
+    padding-bottom: $kit-spacing-base;
     padding-top: 0;
   }
 
   a {
-    font-size: $large-font-size;
-    font-weight: $heading-font-weight;
-    line-height: $base-heading-leading;
+    font-size: $kit-font-size-large;
+    font-weight: $kit-font-weight-headings;
+    line-height: $kit-leading-headings;
 
     span {
       display: block;
-      font-size: $smaller-font-size;
+      font-size: $kit-font-size-smaller;
     }
   }
 }

@@ -43,10 +43,10 @@ Style guide: Link styles.1 Hover links
   content: '';
   position: absolute;
   display: inline;
-  width: $medium-spacing;
-  height: $medium-spacing;
+  width: $kit-spacing-medium;
+  height: $kit-spacing-medium;
   background-repeat: no-repeat;
-  background-position: right $tiny-spacing;
+  background-position: right $kit-spacing-tiny;
   border-bottom: 1px solid transparent;
 }
 
@@ -59,8 +59,8 @@ Style guide: Link styles.1 Hover links
     text-decoration: none;
     outline: none;
     border-bottom: solid 1px $hover-bg-colour;
-    transition-timing-function: $transition-easing;
-    transition-duration: $transition-timing-fast;
+    kit-transition-timing-base-function: $kit-transition-easing-base;
+    transition-duration: $kit-transition-timing-fast;
     transition-property: background-color, border-color, color;
 
     &:hover,
@@ -72,7 +72,7 @@ Style guide: Link styles.1 Hover links
     &[rel~='external'] {
       display: inline;
       position: relative;
-      margin-right: $base-spacing;
+      margin-right: $kit-spacing-base;
 
       &:hover {
         border-color: transparent;
@@ -82,7 +82,7 @@ Style guide: Link styles.1 Hover links
         @extend %icon-external-link--aqua;
         @extend %base-link-icon--after;
 
-        background-size: (0.75 * $medium-spacing) auto;
+        background-size: (0.75 * $kit-spacing-medium) auto;
       }
     }
   }
@@ -117,8 +117,8 @@ Style guide: Link styles.1 Hover links
   .see-more {
     display: inline-block;
     position: relative;
-    margin-right: $base-spacing;
-    font-weight: $heading-font-weight;
+    margin-right: $kit-spacing-base;
+    font-weight: $kit-font-weight-headings;
     color: $button-bg-colour;
 
     &::after {
@@ -127,13 +127,13 @@ Style guide: Link styles.1 Hover links
       content: '';
       position: absolute;
       top: 0;
-      right: -($medium-spacing);
+      right: -($kit-spacing-medium);
       display: block;
-      width: $medium-spacing;
-      height: $medium-spacing;
+      width: $kit-spacing-medium;
+      height: $kit-spacing-medium;
       background-repeat: no-repeat;
-      background-position: right $tiny-spacing;
-      background-size: (0.8 * $small-spacing) auto;
+      background-position: right $kit-spacing-tiny;
+      background-size: (0.8 * $kit-spacing-small) auto;
     }
 
     &:hover,
@@ -193,18 +193,18 @@ Style guide: Link styles.1 Hover links
     .placeholder-link {
       display: block;
       border-left: 4px solid transparent;
-      padding: ($medium-spacing / 2) $small-spacing;
+      padding: ($kit-spacing-medium / 2) $kit-spacing-small;
     }
 
     ul {
       ul {
         .placeholder-link {
-          padding-left: $base-spacing;
+          padding-left: $kit-spacing-base;
         }
 
         ul {
           .placeholder-link {
-            padding-left: $base-spacing + $small-spacing;
+            padding-left: $kit-spacing-base + $kit-spacing-small;
           }
         }
       }

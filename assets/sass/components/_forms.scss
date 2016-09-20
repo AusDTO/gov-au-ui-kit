@@ -46,7 +46,7 @@ Style guide: Forms.1 Text input
   border: 2px solid $border-colour;
   border-radius: 0;
   background-color: $background-colour;
-  padding: $tiny-spacing;
+  padding: $kit-spacing-tiny;
 
   &:invalid,
   &.invalid {
@@ -74,20 +74,20 @@ form {
 
   fieldset,
   p {
-    margin: 0 0 $medium-spacing 0;
+    margin: 0 0 $kit-spacing-medium 0;
     padding: 0;
     border: none;
   }
 
   label {
     display: block;
-    margin-bottom: $tiny-spacing;
-    margin-top: $tiny-spacing;
+    margin-bottom: $kit-spacing-tiny;
+    margin-top: $kit-spacing-tiny;
   }
 
   .hint {
     display: block;
-    margin-bottom: $tiny-spacing;
+    margin-bottom: $kit-spacing-tiny;
     font-size: rem(14);
     color: $body-text-colour;
   }

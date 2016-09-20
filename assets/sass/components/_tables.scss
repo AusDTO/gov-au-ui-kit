@@ -42,7 +42,7 @@ Style guide: Tables.1 Basic tables
 */
 
 table {
-  margin-bottom: $base-spacing;
+  margin-bottom: $kit-spacing-base;
 }
 
 .content-table {
@@ -56,12 +56,12 @@ table {
   td,
   th {
     border-bottom: solid 1px $light-grey;
-    padding: $tiny-spacing;
-    font-size: $small-font-size;
+    padding: $kit-spacing-tiny;
+    font-size: $kit-font-size-small;
     text-align: left;
 
     @include media($tablet) {
-      padding: $small-spacing;
+      padding: $kit-spacing-small;
       font-size: initial;
     }
   }
@@ -96,35 +96,35 @@ Style guide: Tables.2 Calendar table variant
 */
 .calendar-table {
   width: 100%;
-  margin-top: 2 * $base-spacing;
+  margin-top: 2 * $kit-spacing-base;
 
   caption {
-    margin: 0 0 $small-spacing;
+    margin: 0 0 $kit-spacing-small;
     font-size: rem(24);
     font-weight: 700;
     text-align: left;
   }
 
   tr {
-    border-bottom: $tiny-spacing solid $white;
+    border-bottom: $kit-spacing-tiny solid $white;
   }
 
   th {
     display: block;
     width: 100%;
-    padding: $small-spacing $base-spacing;
+    padding: $kit-spacing-small $kit-spacing-base;
     text-transform: uppercase;
     color: $aqua;
 
     @include media($mobile) {
       display: table-cell;
-      width: 6 * $base-spacing;
+      width: 6 * $kit-spacing-base;
     }
 
     span {
       font-size: rem(28);
-      font-weight: $heading-font-weight;
-      line-height: $base-heading-leading;
+      font-weight: $kit-font-weight-headings;
+      line-height: $kit-leading-headings;
       display: block;
       margin: 0;
     }
@@ -133,15 +133,15 @@ Style guide: Tables.2 Calendar table variant
   td {
     display: block;
     margin: 0;
-    padding: 0 $base-spacing $small-spacing;
+    padding: 0 $kit-spacing-base $kit-spacing-small;
     font-size: rem(19);
-    font-weight: $heading-font-weight;
+    font-weight: $kit-font-weight-headings;
     text-align: center;
 
     @include media($mobile) {
       display: table-cell;
-      padding-top: $small-spacing;
-      border-left: $tiny-spacing solid $white;
+      padding-top: $kit-spacing-small;
+      border-left: $kit-spacing-tiny solid $white;
       text-align: left;
     }
 
