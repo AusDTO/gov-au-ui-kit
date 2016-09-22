@@ -1,9 +1,7 @@
-[class^='controls'] {
+%base-controls {
   @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
-  @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $controls-bg-colour);
 
   padding: $tiny-spacing 0;
-  background-color: $controls-bg-colour;
   color: $body-inverted-text-colour;
 
   section {
@@ -46,16 +44,26 @@
   [role='button'] {
     margin: 0;
   }
+}
 
-  &[class$='--contrast'] {
-    @include button-colours($controls-contrast-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $controls-contrast-bg-colour);
+.controls {
+  @extend %base-controls;
 
-    background-color: $controls-contrast-bg-colour;
+  @include button-colours(transparent, $body-inverted-text-colour, $body-inverted-text-colour, $controls-bg-colour);
 
-    [role='button']:hover,
-    [role='button']:focus {
-      color: $controls-contrast-bg-colour;
-    }
+  background-color: $controls-bg-colour;
+}
+
+.controls--contrast {
+  @extend %base-controls;
+
+  @include button-colours($controls-contrast-bg-colour, $body-inverted-text-colour, $body-inverted-text-colour, $body-inverted-text-colour, $controls-contrast-bg-colour);
+
+  background-color: $controls-contrast-bg-colour;
+
+  [role='button']:hover,
+  [role='button']:focus {
+    color: $controls-contrast-bg-colour;
   }
 }
 
