@@ -7,6 +7,14 @@
 #### Styleguide
 
 - Renamed complete example page to 'all' (`/examples/all.html`).
+### `develop` (unreleased)
+
+#### Bugfixes
+
+- Fixed Vertical lists not displaying correctly in IE7-8
+- Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365)
+- Fixes to button styles [#328](https://github.com/AusDTO/gov-au-ui-kit/issues/328)
+- Fix for missing feedback button on mobile [#348](https://github.com/AusDTO/gov-au-ui-kit/issues/348). Header feedback button continues to be hidden on mobile but support is now provided for a feedback button to be used in the footer which is visible at mobile sizes.
 
 ### 1.8.0 - 2016-09-09
 
@@ -24,19 +32,14 @@
 #### Bugfixes
 
 - Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
+- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
+- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
+- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
+- Change git merge strategy for CHANGELOG.md to reduce conflicts
 
 #### Styleguide
 
 - Added guide to [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) on installing and using UI-Kit via `npm`.
-
-#### Bugfixes
-
-- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
-- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
-- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
-
-#### Bugfixes
-- Change git merge strategy for CHANGELOG.md to reduce conflicts
 
 ### 1.7.6 - 2016-09-01
 

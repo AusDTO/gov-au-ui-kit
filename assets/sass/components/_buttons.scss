@@ -47,14 +47,18 @@ Markup: templates/buttons-examples.hbs
 Style guide: Buttons.1 Creating buttons
 */
 
+
+// Nest this mixin for specifying new button colours
 @mixin button-colours($bg-colour, $bg-colour--hover, $bg-colour--active, $text-colour, $text-colour--hover: $text-colour) {
   button,
-  a[role='button'],
-  input[type='submit'],
-  input[type='reset'] {
+  .button,
+  [role='button'],
+  [type='submit'],
+  [type='reset'],
+  [type='button'] {
     background-color: $bg-colour;
     color: $text-colour;
-    border: 1px solid $bg-colour--hover;
+    border-color: $bg-colour--hover;
 
     &:hover,
     &:focus {
@@ -65,22 +69,11 @@ Style guide: Buttons.1 Creating buttons
     &:active {
       background-color: $bg-colour--active;
     }
-
-    &[disabled],
-    &.disabled {
-      &,
-      &:hover,
-      &:active,
-      &:focus {
-        cursor: not-allowed;
-        border-color: transparent;
-        background-color: $button-bg-colour--disabled;
-        color: $non-black;
-      }
-    }
   }
 }
 
+
+// Default button appearance (no colour)
 %base-button {
   -webkit-appearance: none;
   appearance: none;
@@ -89,7 +82,9 @@ Style guide: Buttons.1 Creating buttons
   margin: 0 $base-spacing $small-spacing 0;
   padding: $small-spacing $base-spacing;
   border-radius: $tiny-border-radius;
-  border: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
   outline: 0;
   text-decoration: none;
   font-weight: $bold-font-weight;
@@ -100,14 +95,31 @@ Style guide: Buttons.1 Creating buttons
   }
 }
 
+
+// Buttons out of the box (colour is specified elsewhere by nesting the button-colours mixin)
 button,
 .button,
 [role='button'],
+[type='submit'],
+[type='reset'],
 [type='button'] {
   @extend %base-button;
 
+  &[disabled],
+  &.disabled {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: not-allowed;
+      border-color: $button-bg-colour--disabled;
+      background-color: $button-bg-colour--disabled;
+      color: $non-black;
+    }
+  }
+
   &.inverted {
-    border: 1px solid $button-inverted-colour;
+    border-color: $button-inverted-colour;
     background-color: transparent;
 
     &:hover,
