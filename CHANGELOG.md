@@ -2,7 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### `develop` (unreleased)
+### `develop` - (unreleased)
 
 #### Bugfixes
 
@@ -10,6 +10,10 @@
 - Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365)
 - Fixes to button styles [#328](https://github.com/AusDTO/gov-au-ui-kit/issues/328)
 - Fix for missing feedback button on mobile [#348](https://github.com/AusDTO/gov-au-ui-kit/issues/348). Header feedback button continues to be hidden on mobile but support is now provided for a feedback button to be used in the footer which is visible at mobile sizes.
+
+#### Styleguide
+
+- Renamed complete example page to 'all' (`/examples/all.html`).
 
 ### 1.8.0 - 2016-09-09
 
@@ -46,7 +50,7 @@
 
 #### Styleguide
 
-- Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
+- Added a 'Zoo' example page (`/examples/all.html`) that demonstrates every element in the UI Kit
 - Section index links now only show Section headings and not Sub-sections
 - Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
 
