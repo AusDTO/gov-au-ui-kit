@@ -195,6 +195,21 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
 
 });
 
+gulp.task('styleguide.data', function () {
+  var fs = require('fs');
+  var source = 'assets/sass';
+  var outputFile = 'data-sections.json';
+  var data;
+
+  kss.traverse(source, {'custom': ['tags']}).then(function(styleData) {
+    data = JSON.stringify(styleData.data.sections);
+    fs.writeFile(outputFile, data, (err) => {
+      if (err) throw err;
+      console.log(outputFile, 'saved successfully')
+    });
+  });
+});
+
 gulp.task('styleguide.scss', function () {
     return gulp.src(paths.kssScssDir)
         .pipe(sass(options.sass).on('error', sass.logError))

@@ -41,6 +41,9 @@ jspm_packages
 # Git merge files
 .orig
 
+# Generated data file
+data-sections.json
+
 .sass-cache/
 *.css.map
 *.iml
