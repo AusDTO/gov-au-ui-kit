@@ -199,9 +199,10 @@ gulp.task('styleguide.data', function () {
   var fs = require('fs');
   var source = 'assets/sass';
   var outputFile = 'data-sections.json';
+  var customFields = ['tags'];
   var data;
 
-  kss.traverse(source, {'custom': ['tags']}).then(function(styleData) {
+  kss.traverse(source, {'custom': customFields}).then(function(styleData) {
     data = JSON.stringify(styleData.data.sections);
     fs.writeFile(outputFile, data, (err) => {
       if (err) throw err;
