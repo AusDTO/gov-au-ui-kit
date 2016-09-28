@@ -93,7 +93,7 @@ Style guide: Link styles.1 Hover links
   Use see more links at the end of [lists](section-list-styles.html),
   to take the user to a index page of all items.
 
-  Markup: <a class="see-more" href="#">See more</a>
+  Markup: templates/see-more-link.hbs
 
   <details open data-label="placeholder-link-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
@@ -151,8 +151,7 @@ Style guide: Link styles.1 Hover links
 
   <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
 
-  Markup: <p><span class="placeholder-link">Draft news item</span></p>
-  <p><a href="#">News item</a><p>
+  Markup: templates/placeholder-link.hbs
 
   <details open data-label="placeholder-links-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
