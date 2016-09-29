@@ -212,7 +212,7 @@ We are currently testing all styles for legibility and readability.
 
 ### Base size examples &mdash; global styles
 
-Markup: templates/heading-body-styles.hbs
+Markup: templates/heading-body-styles.html
 
 Style guide: Typography.4 Headings & body copy
 */
@@ -384,7 +384,7 @@ If you'd like to include an element that spans across the maximum available spac
 - [Typography -  Accessibility](/section-typography.html#guide-typography-1-typeface-2-accessibility)
 - <a href="https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading" rel="external">Size Matters, Smashing Magazine</a>
 
-Markup: templates/content-full-width.hbs
+Markup: templates/content-full-width.html
 
 Style guide: Typography.4 Line length
 */
@@ -422,7 +422,7 @@ Show keyboard input
 
 Use the <a href="http://w3c.github.io/html/textlevel-semantics.html#the-kbd-element" rel="external"><code>kbd</code> element</a> to show users which key to press.
 
-Markup: templates/keyboard-input.hbs
+Markup: templates/keyboard-input.html
 
 <details open data-label="kbd-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -530,7 +530,7 @@ The framework provides list styles for:
 
 More [complex list styles](section-list-styles.html) are available.
 
-Markup: templates/list-examples.hbs
+Markup: templates/list-examples.html
 
 Style guide: Typography.6 Lists
 */
@@ -591,7 +591,7 @@ There are 3 classes for drawing the user's attention:
 
 You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>` or an `<aside>`.
 
-Markup: templates/callouts-examples.hbs
+Markup: templates/callouts-examples.html
 
 <details open data-label="callouts-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -666,7 +666,7 @@ Badges
 
 There is styling for badges to indicate status.
 
-Markup: templates/badges.hbs
+Markup: templates/badges.html
 
 <details open data-label="badges-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -724,7 +724,7 @@ There are 2 ways of using quotes:
 - another `blockquote`
 - the `footer` element to provide citations using `<cite>`.
 
-Markup: templates/quotation-examples.hbs
+Markup: templates/quotation-examples.html
 
 <details open data-label="blockquote-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
