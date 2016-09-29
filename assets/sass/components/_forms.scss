@@ -21,7 +21,7 @@ These can be limited to number input by setting the `type` attribute to `number`
 
 To trigger the iPhone numpad use `pattern="[0-9]*"` attribute in the input element. Don't add a `type` attribute.
 
-Markup: templates/text-input-single-line.hbs
+Markup: templates/text-input-single-line.html
 
 <details open data-label="text-input-single-line-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -107,7 +107,7 @@ form {
 
   The `<textarea>` element gives a multi-line text input the user can resize vertically.
 
-  Markup: templates/textarea-input.hbs
+  Markup: templates/textarea-input.html
 
   <details open data-label="text-area-input-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
@@ -199,7 +199,7 @@ form {
 
   The `radio` input allows users to see all available choices at once and select exactly 1 option.
 
-  Markup: templates/radio-button-input.hbs
+  Markup: templates/radio-button-input.html
 
   <details open data-label="radio-button-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
@@ -261,7 +261,7 @@ Checkbox input
 
 The `checkbox` input allows users to select 1 or more options from a visible list.
 
-Markup: templates/checkbox-input.hbs
+Markup: templates/checkbox-input.html
 
 <details open data-label="checkbox-input-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -336,7 +336,7 @@ Accessibility
 - The hint text should be above the form field and always visible.
 - Use ARIA tags to make sure screen readers can read hint text correctly.
 
-Markup: templates/hint-text.hbs
+Markup: templates/hint-text.html
 
 ### Optional & mandatory fields
 

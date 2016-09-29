@@ -17,7 +17,7 @@ Inverted colour versions of `:hover` and `:focus` are created using `@mixin link
 
 Link to external sites using `rel="external"`.
 
-Markup: templates/basic-links.hbs
+Markup: templates/basic-links.html
 
 <details open data-label="basic-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -93,7 +93,7 @@ Style guide: Link styles.1 Hover links
   Use see more links at the end of [lists](section-list-styles.html),
   to take the user to a index page of all items.
 
-  Markup: templates/see-more-link.hbs
+  Markup: templates/see-more-link.html
 
   <details open data-label="placeholder-link-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
@@ -151,7 +151,7 @@ Style guide: Link styles.1 Hover links
 
   <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
 
-  Markup: templates/placeholder-link.hbs
+  Markup: templates/placeholder-link.html
 
   <details open data-label="placeholder-links-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
