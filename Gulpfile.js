@@ -16,8 +16,7 @@ var gulp = require('gulp'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
     zip = require('gulp-zip'),
-    imagemin = require('gulp-imagemin'),
-    handlebars = require('gulp-compile-handlebars')
+    imagemin = require('gulp-imagemin')
     ;
 
 var paths = {
