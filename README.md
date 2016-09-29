@@ -135,7 +135,7 @@ Some of the key libraries we use are:
 
 - Contribute to our <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">GitHub issue register</a> by logging new issues and joining the discussion.
 - Contribute to this repository. Please see [CONTRIBUTING.md](CONTRIBUTING.md), [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see <a href="http://getbem.com/" rel="external">Block Element Modifier</a>), first.
-- Contact us via the DTO slack in `#govau-guide`.
+- Contact us via the DTO slack in `#guides-uikit`.
 
 ## Project goal
 

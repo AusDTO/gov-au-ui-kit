@@ -6,7 +6,7 @@ We're so glad you're thinking about contributing to the Gov AU UI Kit. The UI Ki
 Let us know by [raising an issue](#submitting-an-issue).
 
 **Have a suggestion for a new feature?**
-If you can reach us on Slack, visit us in #govau-guide and let us know. If you're not on Slack, that's fine, just [open an issue](#submitting-an-issue)
+If you can reach us on Slack, visit us in #guides-uikit and let us know. If you're not on Slack, that's fine, just [open an issue](#submitting-an-issue)
 
 If your suggestion is not already in our roadmap, we'll probably suggest that you make a fork of our repo and then [open a pull request](submitting-a-pr) so that we can review your changes or additions and hopefully merge them in.
 
