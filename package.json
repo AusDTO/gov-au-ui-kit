@@ -55,6 +55,7 @@
     "responsive-nav": "^1.0.39",
     "run-sequence": "^1.2.1",
     "smoothscroll": "^0.2.2",
+    "through2": "^2.0.1",
     "webpack-stream": "^3.2.0",
     "velocity-animate": "^1.2.3"
   }
