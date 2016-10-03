@@ -14,6 +14,7 @@
 #### Styleguide
 
 - Renamed complete example page to 'all' (`/examples/all.html`).
+- Update name of Slack channel from `#govau-uikit`/`#govau-guides` to `#guides-uikit`
 
 ### 1.8.0 - 2016-09-09
 
