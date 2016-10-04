@@ -6,9 +6,10 @@
 
 #### Bugfixes
 
-- Fixed Vertical lists not displaying correctly in IE7-8
-- Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365)
-- Fixes to button styles [#328](https://github.com/AusDTO/gov-au-ui-kit/issues/328)
+- Changes `.inline-nav` to `.inline-tab-nav` as actually documented.
+- Fixed Vertical lists not displaying correctly in IE7-8.
+- Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365).
+- Fixes to button styles [#328](https://github.com/AusDTO/gov-au-ui-kit/issues/328).
 - Fix for missing feedback button on mobile [#348](https://github.com/AusDTO/gov-au-ui-kit/issues/348). Header feedback button continues to be hidden on mobile but support is now provided for a feedback button to be used in the footer which is visible at mobile sizes.
 
 #### Styleguide
