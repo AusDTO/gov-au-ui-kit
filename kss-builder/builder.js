@@ -54,8 +54,8 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
                 group: 'Style guide:',
                 string: true,
                 multiple: false,
-                describe: 'Title of the style guide',
-                default: 'GOV.AU UI-Kit'
+                describe: 'Design guidance and documentation of the UI-Kit',
+                default: 'DTO Design Guide & UI-Kit'
             }
         });
     }
