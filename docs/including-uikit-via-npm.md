@@ -6,13 +6,12 @@ Simple guide for installing UI-Kit via npm for use with `webpack` or any build p
 
 Find the latest release at: [gov-au-ui-kit/releases](https://github.com/AusDTO/gov-au-ui-kit/releases)
 
-Install via npm (substitute `1.7.6` for latest release tag):
+Install via npm (substitute `1.8` for latest release tag):
 ```bash
-$ npm install https://github.com/AusDTO/gov-au-ui-kit.git#1.7.6
+$ npm install https://github.com/AusDTO/gov-au-ui-kit.git#1.8
 ```
 
 #### Configuring `node-sass`:
-
 
 `node-sass` exposes an option for [includePaths](https://github.com/sass/node-sass#includepaths), you want to provide the absolute path to `node_modules` to `node-sass`.
 
