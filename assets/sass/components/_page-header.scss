@@ -113,13 +113,10 @@
 
   .logo {
     font-size: rem(24);
-    font-weight: $heading-font-weight;
     padding-bottom: 2px;
     border-bottom: 0;
     color: $body-inverted-text-colour;
     font-family: $base-sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 
   [class^='badge'] {
@@ -203,13 +200,10 @@
 
   .logo {
     font-size: rem(24);
-    font-weight: $heading-font-weight;
     padding-bottom: 2px;
     border-bottom: 0;
     color: $body-inverted-text-colour;
     font-family: $base-sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 
   [class^='badge'] {
