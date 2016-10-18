@@ -4,6 +4,8 @@
 
 ### `develop` - (unreleased)
 
+Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SASS comment sections (and their children, nested). This is being used by the new `dto-design-guide` Jekyll repository.
+
 #### Bugfixes
 
 - Changes `.inline-nav` to `.inline-tab-nav` as actually documented.
