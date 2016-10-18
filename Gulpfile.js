@@ -27,7 +27,7 @@ var paths = {
     scssTemplatesDir: './assets/sass/components/templates',
     kssScssDir: './kss-builder/kss-assets/*.scss',
     kssCssDir: './kss-builder/kss-assets',
-    examples: './examples/*.html',
+    examples: './examples/*.hbs',
     examplePartialsDir: './examples/partials',
     kssBuilderDir: './kss-builder/**/*.*',
     images: './assets/img/**/*.+(png|svg|jpg)',
