@@ -6,6 +6,7 @@
 
 #### Bugfixes
 
+- Fixes font sizing when placing content elements inside a `table`’s `td`.
 - Changes `.inline-nav` to `.inline-tab-nav` as actually documented.
 - Fixed Vertical lists not displaying correctly in IE7-8.
 - Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365).
