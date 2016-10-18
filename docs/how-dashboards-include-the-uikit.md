@@ -6,13 +6,13 @@ We did this by installing the module as an npm and including parts as granularly
 
 ## Installation steps
 
-Install GOV.AU UI-Kit as an npm from the tag release:
+Install GOV.AU UI-Kit as an npm from the tag release (substitute `1.8` for latest release tag):
 
 `package.json`:
 
 ```json
 deps: {
-  "gov-au-ui-kit": "git@github.com:AusDTO/gov-au-ui-kit.git#1.7.4",
+  "gov-au-ui-kit": "https://github.com/AusDTO/gov-au-ui-kit.git#1.8",
 }
 ```
 
