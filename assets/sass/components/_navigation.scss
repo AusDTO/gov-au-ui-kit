@@ -376,6 +376,7 @@ Style guide: Navigation.6 Footer navigation
         ul {
           a {
             @extend %icon-arrow-right;
+            
             padding-left: $base-spacing + $small-spacing;
             background-repeat: no-repeat;
             background-position: $base-spacing center;
@@ -445,6 +446,7 @@ Style guide: Navigation.6 Footer navigation
     ul {
       margin: 0;
       display: none;
+      
       @include media($tablet) {
         margin: inherit;
         display: block;
@@ -471,6 +473,7 @@ Style guide: Navigation.6 Footer navigation
 
 [class^='breadcrumbs'] {
   @include link-colours($link-colour, $link-colour--hover);
+  
   display: none;
   width: 100%;
   margin: 0;
@@ -495,6 +498,7 @@ Style guide: Navigation.6 Footer navigation
 
       &:not(:last-child) {
         @extend %icon-arrow-right;
+        
         margin-right: $small-spacing;
         padding-right: $medium-spacing;
         background-repeat: no-repeat;
@@ -506,12 +510,14 @@ Style guide: Navigation.6 Footer navigation
 
   &[class$='--inverted'] {
     @include link-colours($link-inverted-colour, $link-inverted-colour--hover, $link-colour);
+    
     background-color: transparent;
     color: $body-inverted-text-colour;
 
     ul {
       li:not(:last-child) {
         @extend %icon-arrow-right--white;
+        
         color: $body-inverted-text-colour;
       }
     }
@@ -561,6 +567,7 @@ Style guide: Navigation.7 Skip links
 
 .skip-to {
   @include link-colours($link-colour, $link-colour--hover);
+  
   position: relative;
   z-index: 99;
 
@@ -687,6 +694,7 @@ Style guide: Navigation.8 Group of links
 
     li {
       @include span-columns(4);
+      
       float: left;
       margin-top: 0.5em;
 
