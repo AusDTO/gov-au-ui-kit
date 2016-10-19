@@ -16,9 +16,14 @@ Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SA
 
 #### Styleguide
 
+- Renamed the design guide website to *DTO Design Guide & UI-Kit*.
 - Renamed complete example page to 'all' (`/examples/all.html`).
 - Reformatted component example `.hbs` files to a max line character length of 80.
 - Update name of Slack channel from `#govau-uikit`/`#govau-guides` to `#guides-uikit`
+
+#### UI-Kit changes
+
+- Changes current uppercase site title topbar to be set-case and removes `letter-spacing`.
 
 ### 1.8.0 - 2016-09-09
 
