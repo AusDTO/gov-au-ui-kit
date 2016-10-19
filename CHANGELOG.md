@@ -4,6 +4,10 @@
 
 ### `develop` - (unreleased)
 
+#### Large changes
+
+- Moved font sizing declarations to `body`, rather than applying them to `ul`, `ol`, `p`, `dt`, `dd`, etc. directly. This should avoid the need to apply `font-size: 1em` resets for nested content, eg a `p` or `ul` > `li` inside a `table` > `td`.
+
 #### Bugfixes
 
 - Changes `.inline-nav` to `.inline-tab-nav` as actually documented.

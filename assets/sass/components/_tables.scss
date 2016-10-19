@@ -57,7 +57,6 @@ table {
   th {
     border-bottom: solid 1px $light-grey;
     padding: $tiny-spacing;
-    font-size: $small-font-size;
     text-align: left;
 
     @include media($tablet) {
