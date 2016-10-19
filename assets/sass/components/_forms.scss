@@ -21,7 +21,7 @@ These can be limited to number input by setting the `type` attribute to `number`
 
 To trigger the iPhone numpad use `pattern="[0-9]*"` attribute in the input element. Don't add a `type` attribute.
 
-Markup: templates/text-input-single-line.hbs
+Markup: templates/text-input-single-line.html
 
 <details open data-label="text-input-single-line-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -107,11 +107,7 @@ form {
 
   The `<textarea>` element gives a multi-line text input the user can resize vertically.
 
-  Markup:
-  <form>
-    <label for="texta">An input for longer responses</label>
-    <textarea name="texta" id="texta"></textarea>
-  </form>
+  Markup: templates/textarea-input.html
 
   <details open data-label="text-area-input-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
@@ -203,16 +199,7 @@ form {
 
   The `radio` input allows users to see all available choices at once and select exactly 1 option.
 
-  Markup:
-  <form>
-    <fieldset>
-      <legend>Would you like?</legend>
-      <input id="yes" name="reply" type="radio" value="Yes"/>
-      <label for="yes">Yes</label>
-      <input id="no" name="reply" type="radio" value="No"/>
-      <label for="no">No</label>
-    </fieldset>
-  </form>
+  Markup: templates/radio-button-input.html
 
   <details open data-label="radio-button-accessibility" aria-expanded="false">
     <summary>Accessibility &amp; browser testing</summary>
@@ -274,18 +261,7 @@ Checkbox input
 
 The `checkbox` input allows users to select 1 or more options from a visible list.
 
-Markup:
-<form>
-  <fieldset>
-    <legend>Which would you like?</legend>
-    <input id="aaa" name="reply" type="checkbox" value="AAA"/>
-    <label for="aaa">AAA</label>
-    <input id="bbb" name="reply" type="checkbox" value="BBB"/>
-    <label for="bbb">BBB</label>
-    <input id="ccc" name="reply" type="checkbox" value="CCC"/>
-    <label for="ccc">CCC</label>
-  </fieldset>
-</form>
+Markup: templates/checkbox-input.html
 
 <details open data-label="checkbox-input-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -360,12 +336,7 @@ Accessibility
 - The hint text should be above the form field and always visible.
 - Use ARIA tags to make sure screen readers can read hint text correctly.
 
-Markup:
-<form>
-  <label for="name">Full name</label>
-  <span class="hint" id="name-hint">Your name is on your birth certificate.</span>
-  <input type="text" id="name" aria-describedby="name-hint" />
-</form>
+Markup: templates/hint-text.html
 
 ### Optional & mandatory fields
 

@@ -16,7 +16,6 @@ var gulp = require('gulp'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
     zip = require('gulp-zip'),
-    wrap = require('gulp-wrap'),
     imagemin = require('gulp-imagemin'),
     handlebars = require('gulp-compile-handlebars')
     ;
@@ -193,6 +192,45 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
         gulp.src('./build/*.html').pipe(connect.reload());
     });
 
+});
+
+gulp.task('styleguide.data', function () {
+  var fs = require('fs');
+  var source = 'assets/sass';
+  var outputFile = 'data-sections.json';
+  var customFields = ['tags'];
+  var data;
+
+  kss.traverse(source, {'custom': customFields}).then(function(styleData) {
+    data = JSON.parse(JSON.stringify(styleData.data.sections));
+
+    var output = [];
+    for (var i = 0; i < data.length; i++ ) {
+      var section = data[i];
+
+      if (section.depth === 1) {
+        console.log("section " + section.header + " ref " + section.referenceNumber);
+        for (var j =i+1 ; j < data.length; j++ ) {
+          //console.log("ref " + data[j].referenceNumber);
+          if (data[j].referenceNumber.startsWith(section.referenceNumber + ".")) {
+            console.log("child section " + data[j].header);
+            if (section.children) {
+              section.children.push(data[j]);
+            }
+            else {
+              section.children = [data[j]];
+            }
+          }
+        }
+        output.push(section);
+      }
+    }
+
+    fs.writeFile(outputFile, JSON.stringify(output), (err) => {
+      if (err) throw err;
+      console.log(outputFile, 'saved successfully')
+    });
+  });
 });
 
 gulp.task('styleguide.scss', function () {

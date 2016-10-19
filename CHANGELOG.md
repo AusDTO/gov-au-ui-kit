@@ -7,6 +7,7 @@
 #### Large changes
 
 - Moved font sizing declarations to `body`, rather than applying them to `ul`, `ol`, `p`, `dt`, `dd`, etc. directly. This should avoid the need to apply `font-size: 1em` resets for nested content, eg a `p` or `ul` > `li` inside a `table` > `td`.
+Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SASS comment sections (and their children, nested). This is being used by the new `dto-design-guide` Jekyll repository.
 
 #### Bugfixes
 
@@ -18,9 +19,14 @@
 
 #### Styleguide
 
+- Renamed the design guide website to *DTO Design Guide & UI-Kit*.
 - Renamed complete example page to 'all' (`/examples/all.html`).
 - Reformatted component example `.hbs` files to a max line character length of 80.
 - Update name of Slack channel from `#govau-uikit`/`#govau-guides` to `#guides-uikit`
+
+#### UI-Kit changes
+
+- Changes current uppercase site title topbar to be set-case and removes `letter-spacing`.
 
 ### 1.8.0 - 2016-09-09
 
