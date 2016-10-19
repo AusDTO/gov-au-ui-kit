@@ -15,6 +15,7 @@
 #### Styleguide
 
 - Renamed complete example page to 'all' (`/examples/all.html`).
+- Reformatted component example `.hbs` files to a max line character length of 80.
 - Update name of Slack channel from `#govau-uikit`/`#govau-guides` to `#guides-uikit`
 
 ### 1.8.0 - 2016-09-09
