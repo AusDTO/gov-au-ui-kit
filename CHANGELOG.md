@@ -11,6 +11,7 @@ Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SA
 
 #### Bugfixes
 
+- `main` now receives the same `padding-top` at mobile sizes that it received at tablet+ sizes (fix for content hugging the top of `main`/the page `header`).
 - Changes `.inline-nav` to `.inline-tab-nav` as actually documented.
 - Fixed Vertical lists not displaying correctly in IE7-8.
 - Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365).
