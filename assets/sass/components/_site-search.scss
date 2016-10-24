@@ -1,0 +1,156 @@
+
+// Responsive site-search box
+//============================
+
+// Tested:
+//-----------------
+//  Browser Pass: Crome, ie9, ie8
+//  Browser Semi-pass: ie7 (layout is functional but a bit odd, no line-height maybe?)
+//  HTML Pass: W3C & WCAG
+
+//Notes:
+//-----------------
+// - JS required for psudo placeholder label, but no-js will fall back gracefully
+// - JS written jQuery, rewrite if required
+
+// Expected HTML:
+//-----------------
+// <div class="site-search">
+//   <form id="search" class="" action="/search" role="search">
+//       <label for="site-search-text">Search GOV.AU</label>
+//         <input type="search" name="q" id="site-search-text" title="Search" class="search-input" />
+//       <input class="submit" type="submit" value="Search" />
+//   </form>
+// </div><!--site-search-->
+
+// Expected JS (jQuery):
+//-----------------
+// $( document ).ready(function() {
+//   //If search-input has value, add class that moves it in front of the label acting as a placeholder
+//   $('#site-search-text').on('input', function(){ //on'input' >=ie9
+//     element = $(this);
+//     if( element.val() ) {
+//       element.addClass('has-value');
+//     } else {
+//       element.removeClass('has-value');
+//     }
+//   });
+// });
+
+
+//VARS
+//=================
+$site-search-border:                          solid 1px; //none
+$site-search-font-colour:                     $navy;
+$site-search-label-colour:                    $non-white; //Only seen with no JS
+$site-search-background-colour:               $non-white;
+$site-search-background-colour--hover:        darken($non-white, 5%);
+$site-search-button-background-colour:        $non-white;
+$site-search-button-background-colour--hover: darken($non-white, 5%);
+$site-search-outline--focus:                  $light-aqua;
+
+.site-search {
+  width: 100%;
+  color: $site-search-font-colour;
+  border: $site-search-border;
+  border-radius: $base-border-radius;
+
+  form {
+    padding-right: 3em;
+    color: $site-search-font-colour;
+    border-radius: 3px;
+    position: relative;
+    height: 3em; //No height ie7. position:relative ?
+
+    @include clearfix;
+  }
+
+  input {
+    //both text-input and button
+    transition-timing-function: $transition-easing;
+    transition-duration: $transition-timing-fast;
+    transition-property: background-color;
+  }
+
+  label {
+    // Acts as a psudo placeholder with JS or normal label without JS
+    // see js related styles below nested parent
+    height: 3em;
+    line-height: 3em;
+    margin: 0;
+    cursor: text;
+  }
+
+  .search-input {
+    display: block;
+    width: 100%;
+    float: left;
+    border: none;
+    padding: 0;
+    text-indent: 1em;
+    height: 3em;
+    background-color: $site-search-background-colour;
+    border-radius: $base-border-radius 0 0 $base-border-radius;
+    position: relative; //For z-index on focus
+
+    &:hover {
+      background-color: $site-search-background-colour--hover;
+    }
+
+    &:focus {
+      outline: solid 3px $site-search-outline--focus;
+    }
+
+    &:focus,
+    &.has-value { // Class is added with JS
+      z-index: 2; //For z-index on focus
+    }
+
+    &:hover:focus  {
+      background-color: $site-search-background-colour;
+    }
+  } //.search-input
+
+  .submit {
+    position: relative;
+    border: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    margin-right: -3em;
+    width: 3em;
+    height: 3em;
+    text-indent: -99em;
+    background-color: $site-search-button-background-colour;
+    border-radius: 0 $base-border-radius $base-border-radius 0;
+
+    @include inline-background-image('search--navy');
+    background-size: 20px auto; //Resize the SVG img as it has no height (could be set in SVG meta but this is safer)
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:hover {
+      background-color: $site-search-button-background-colour--hover;
+    }
+
+    &:focus {
+      outline: solid 3px $site-search-outline--focus;
+      z-index: 2;
+    }
+
+  } //.submit
+
+} //.site-search
+
+
+.no-js .site-search label {
+  color: $site-search-label-colour;
+}
+
+.js .site-search label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1; //For z-index on focus
+  text-indent: 1em;
+}

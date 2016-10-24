@@ -1,0 +1,25 @@
+<div class="site-search">
+  <form id="search" class="" action="/search" role="search">
+      <label for="site-search-text">Search GOV.AU</label>
+        <input type="search" name="q" id="site-search-text" title="Search" class="search-input" />
+      <input class="submit" type="submit" value="Search" />
+  </form>
+</div><!--govau-site-search-->
+
+
+<script type='text/javascript' src='//code.jquery.com/jquery-1.12.4.min.js'></script>
+<script type='text/javascript' >
+
+  $( document ).ready(function() {
+    //If search-input has value add class that moves it in front of label
+    $('#site-search-text').on('input', function(){ //on'input' >=ie9
+      element = $(this);
+      if( element.val() ) {
+        element.addClass('has-value');
+      } else {
+        element.removeClass('has-value');
+      }
+    });
+  });
+
+</script>
