@@ -4,9 +4,10 @@
 
 // Tested:
 //-----------------
-//  Browser Pass: Crome, ie9, ie8
-//  Browser Semi-pass: ie7 (layout is functional but a bit odd, no line-height maybe?)
-//  HTML Pass: W3C & WCAG
+//  Browser Pass: Chrome, FF.49, Opera.36, ie.E-8, iPhone.6-5
+//  Browser Semi-pass: ie7 (functions but layout is broken)
+//  HTML validated: W3C & WCAG
+//  WCAG: Approved by A11y SME
 
 //Notes:
 //-----------------
@@ -26,8 +27,8 @@
 // Expected JS (jQuery):
 //-----------------
 // $( document ).ready(function() {
-//   //If search-input has value, add class that moves it in front of the label acting as a placeholder
-//   $('#site-search-text').on('input', function(){ //on'input' >=ie9
+//   //If search-input has value add class that moves it in front of label
+//   $('#site-search-text').on("propertychange input", function(){ // input = ie9+, propertychange < ie9
 //     element = $(this);
 //     if( element.val() ) {
 //       element.addClass('has-value');
@@ -40,7 +41,7 @@
 
 //VARS
 //=================
-$site-search-border:                          solid 1px; //none
+$site-search-border:                          solid 1px; //none;
 $site-search-font-colour:                     $navy;
 $site-search-label-colour:                    $non-white; //Only seen with no JS
 $site-search-background-colour:               $non-white;
@@ -50,19 +51,11 @@ $site-search-button-background-colour--hover: darken($non-white, 5%);
 $site-search-outline--focus:                  $light-aqua;
 
 .site-search {
-  width: 100%;
   color: $site-search-font-colour;
-  border: $site-search-border;
-  border-radius: $base-border-radius;
 
   form {
-    padding-right: 3em;
-    color: $site-search-font-colour;
-    border-radius: 3px;
-    position: relative;
-    height: 3em; //No height ie7. position:relative ?
-
-    @include clearfix;
+    position: relative; // for psudo placeholder label
+    // height: 3em; //No height ie7. position:relative ?
   }
 
   input {
@@ -73,25 +66,39 @@ $site-search-outline--focus:                  $light-aqua;
   }
 
   label {
-    // Acts as a psudo placeholder with JS or normal label without JS
-    // see js related styles below nested parent
+    // Acts as a psudo placeholder with JS, or normal label if no JS
+    // see JS related styles below nested parent
     height: 3em;
     line-height: 3em;
     margin: 0;
     cursor: text;
   }
 
+  .site-search-border {
+    // Provides an option for a border around the search-box and a place to put the clearfix that doesn't interfere with other elements.
+    // This CSS is not on the form or .site-search parent because the label should not be included
+    @include clearfix;
+
+    border: $site-search-border;
+    border-radius: $base-border-radius;
+    //width: 100%;
+    padding-right: 3em;
+  }
+
   .search-input {
+    -webkit-appearance: none; //Cause iPhone
+    position: relative; //For z-index on focus if JS
+    z-index: 1; //For z-index on focus if JS
     display: block;
     width: 100%;
     float: left;
     border: none;
     padding: 0;
     text-indent: 1em;
+    line-height: 3em;
     height: 3em;
     background-color: $site-search-background-colour;
     border-radius: $base-border-radius 0 0 $base-border-radius;
-    position: relative; //For z-index on focus
 
     &:hover {
       background-color: $site-search-background-colour--hover;
@@ -103,7 +110,7 @@ $site-search-outline--focus:                  $light-aqua;
 
     &:focus,
     &.has-value { // Class is added with JS
-      z-index: 2; //For z-index on focus
+      z-index: 3; //For z-index on focus
     }
 
     &:hover:focus  {
@@ -111,13 +118,15 @@ $site-search-outline--focus:                  $light-aqua;
     }
   } //.search-input
 
+
   .submit {
-    position: relative;
+    position: relative; //For z-index on focus if JS
+    z-index: 1; //For z-index on focus if JS
     border: none;
     float: right;
     margin: 0;
-    padding: 0;
     margin-right: -3em;
+    padding: 0;
     width: 3em;
     height: 3em;
     text-indent: -99em;
@@ -135,11 +144,10 @@ $site-search-outline--focus:                  $light-aqua;
 
     &:focus {
       outline: solid 3px $site-search-outline--focus;
-      z-index: 2;
+      z-index: 3;
     }
 
   } //.submit
-
 } //.site-search
 
 
@@ -151,6 +159,6 @@ $site-search-outline--focus:                  $light-aqua;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1; //For z-index on focus
+  z-index: 2; //For z-index on focus if JS
   text-indent: 1em;
 }

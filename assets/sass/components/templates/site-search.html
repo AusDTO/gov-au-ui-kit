@@ -12,7 +12,7 @@
 
   $( document ).ready(function() {
     //If search-input has value add class that moves it in front of label
-    $('#site-search-text').on('input', function(){ //on'input' >=ie9
+    $('#site-search-text').on("propertychange input", function(){ // input = ie9+, propertychange < ie9
       element = $(this);
       if( element.val() ) {
         element.addClass('has-value');
