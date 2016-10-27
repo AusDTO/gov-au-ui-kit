@@ -1,0 +1,18 @@
+// Content is added to the body in order for JS to listen/return the state of a media-query.
+
+body:after {
+  content: 'mobile';
+  display: none;
+}
+
+@include media($tablet) {
+  body:after {
+    content: 'tablet';
+  }
+}
+
+@include media($desktop) {
+  body:after {
+    content: 'desktop';
+  }
+}
