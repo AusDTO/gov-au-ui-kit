@@ -1,5 +1,6 @@
 @mixin wrapper-padding {
   @include pad(0 $gutter);
+
   width: 100%;
   box-sizing: border-box;
 
@@ -92,9 +93,7 @@ main {
   @include wrapper-padding;
   @include outer-container;
 
-  @include media($tablet) {
-    padding-top: $base-spacing * 2;
-  }
+  padding-top: $base-spacing * 2;
 
   @include ie-lte(8) {
     @include ie-clearfix;
@@ -167,9 +166,7 @@ main {
       }
 
       &:first-child {
-
         @include reset-layout-direction;
-
         @include fill-parent;
         @include shift(0);
 
@@ -194,6 +191,7 @@ main {
 
       @include media($tablet) {
         @include span-columns(4 of 12);
+
         margin-left: 0;
       }
 
@@ -237,6 +235,7 @@ footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
     @include pad(0 default);
+
     margin-top: ($base-spacing * 2);
     min-width: 100%;
   }
