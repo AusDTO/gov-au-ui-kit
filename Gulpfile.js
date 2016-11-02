@@ -200,7 +200,7 @@ gulp.task('styleguide.data', function () {
   var outputFile = 'data-sections.json';
   var customFields = ['tags', 'collection'];
   var output = [];
-  var data, section, i, j;
+  var data;
 
   // From: http://kss-node.github.io/kss-node/api/master/module-kss.html
   // - The traverse() function reads all the source directories and calls parse()
@@ -223,7 +223,7 @@ gulp.task('styleguide.data', function () {
           console.log('child section', section.referenceNumber, section.header);
       }
     })
-    
+
     fs.writeFile(outputFile, JSON.stringify(output), (err) => {
       if (err) throw err;
       console.log(outputFile, 'saved successfully')
