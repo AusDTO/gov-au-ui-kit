@@ -199,21 +199,25 @@ gulp.task('styleguide.data', function () {
   var source = 'assets/sass';
   var outputFile = 'data-sections.json';
   var customFields = ['tags'];
-  var data;
+  var output = [];
+  var data, section, i, j;
 
+  // From: http://kss-node.github.io/kss-node/api/master/module-kss.html
+  // - The traverse() function reads all the source directories and calls parse()
+  // - The parse() function finds the KSS comments in the provided text, creates a
+  //   JSON object containing all the parsed data and passes it the new KssStyleGuide(data)
+  //   constructor to create a style guide object.
   kss.traverse(source, {'custom': customFields}).then(function(styleData) {
     data = JSON.parse(JSON.stringify(styleData.data.sections));
 
-    var output = [];
-    for (var i = 0; i < data.length; i++ ) {
-      var section = data[i];
+    for ( i = 0; i < data.length; i++ ) {
+      section = data[i];
 
       if (section.depth === 1) {
-        console.log("section " + section.header + " ref " + section.referenceNumber);
-        for (var j =i+1 ; j < data.length; j++ ) {
-          //console.log("ref " + data[j].referenceNumber);
-          if (data[j].referenceNumber.startsWith(section.referenceNumber + ".")) {
-            console.log("child section " + data[j].header);
+        console.log('section', section.referenceNumber, section.header);
+        for (j =i+1 ; j < data.length; j++ ) {
+          if (data[j].referenceNumber.startsWith(section.referenceNumber + '.')) {
+            console.log('child section', data[j].referenceNumber, data[j].header);
             if (section.children) {
               section.children.push(data[j]);
             }
