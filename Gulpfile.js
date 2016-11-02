@@ -198,7 +198,7 @@ gulp.task('styleguide.data', function () {
   var fs = require('fs');
   var source = 'assets/sass';
   var outputFile = 'data-sections.json';
-  var customFields = ['tags'];
+  var customFields = ['tags', 'collection'];
   var output = [];
   var data, section, i, j;
 
