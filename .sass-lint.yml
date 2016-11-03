@@ -35,3 +35,6 @@ rules:
     - 2
     - max-depth:
       - 4
+  class-name-format:
+    - 1
+    - convention: hyphenatedbem
