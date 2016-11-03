@@ -263,7 +263,7 @@ h1 {
   }
 }
 
-h2 {
+@mixin h2 {
   font-size: rem(32);
   line-height: $small-leading;
   margin-top: $base-spacing;
@@ -276,6 +276,10 @@ h2 {
   @include ie-lte(8) {
     font-size: 44px;
   }
+}
+
+h2 {
+  @include h2;
 }
 
 h3 {

@@ -59,6 +59,48 @@
   }
 }
 
+/*
+Page header
+
+Style guide: Page header
+*/
+
+/*
+Creating a header
+
+Markup: templates/page-header.html
+
+Style guide: Page header.Creating a header
+*/
+.page-header {
+  @include linear-gradient(to top, $non-white, $white, $fallback: $non-white);
+
+  padding-top: $base-spacing;
+  box-shadow: 0 -6px $border-colour inset;
+}
+
+.page-header__logo {
+  padding: $small-spacing 0;
+
+  a {
+    border-bottom: none;
+    font-size: rem(24);
+    font-weight: $bold-font-weight;
+
+    @include media($tablet) {
+      font-size: rem(26);
+    }
+
+    @include ie-lte(8) {
+      font-size: 26px;
+    }
+  }
+}
+
+
+// To be deprecated
+// These header, hero and brandbar styles were never formally released or
+// included in UI Kit docs
 .govau--header,
 .prerelease-govau--header {
   .links-group {
