@@ -1,27 +1,9 @@
 <div class="site-search">
-  <form id="search" class="" action="/search" role="search">
+  <form id="search" class="" action="#" role="search">
       <label for="site-search-text">Search GOV.AU</label>
       <div class="site-search-border">
-        <input type="search" name="q" id="site-search-text" title="Search" class="search-input" />
+        <input type="search" name="q" title="Search" class="search-input js-search-input" />
         <input class="submit" type="submit" value="Search" />
       </div>
   </form>
 </div><!--site-search-->
-
-
-<script type='text/javascript' src='//code.jquery.com/jquery-1.12.4.min.js'></script>
-<script type='text/javascript' >
-
-  $( document ).ready(function() {
-    //If search-input has value add class that moves it in front of label
-    $('#site-search-text').on("propertychange input", function(){ // input = ie9+, propertychange < ie9
-      element = $(this);
-      if( element.val() ) {
-        element.addClass('has-value');
-      } else {
-        element.removeClass('has-value');
-      }
-    });
-  });
-
-</script>
