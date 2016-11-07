@@ -15,7 +15,7 @@ Horizontal style
 
 Horizontal style provides a single column of list items.
 
-Markup: templates/lists-horizontal.hbs
+Markup: templates/lists-horizontal.html
 
 <details open data-label="horizontal-list-styles-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -48,7 +48,7 @@ You can change the number of columns used:
 
 For <a href="http://caniuse.com/#feat=flexbox" rel="external">browsers that don't support Flexbox layout</a> lists will appear as in horizontal style with images (if used) below each list item.
 
-Markup: templates/lists-vertical.hbs
+Markup: templates/lists-vertical.html
 
 <details open data-label="vertical-list-styles-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -74,7 +74,7 @@ Small list style
 
 Use small list style for large groups of list items.
 
-Markup: templates/lists-small.hbs
+Markup: templates/lists-small.html
 
 <details open data-label="small-list-styles-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -100,7 +100,7 @@ Highlighted words style
 
 Use highlighted words style for a list with repeating phrases.
 
-Markup: templates/lists-highlighted.hbs
+Markup: templates/lists-highlighted.html
 
 <details open data-label="highlighted-list-styles-accessibility" aria-expanded="false">
   <summary>Accessibility notes</summary>
@@ -296,6 +296,10 @@ Style guide: List styles.4 Highlighted word style
     @include media($tablet) {
       @include span-columns(6 of 12);
       @include omega(2n);
+
+      @include ie-lte(8) {
+        width: 45%;
+      }
     }
   }
 }
@@ -317,7 +321,7 @@ Style guide: List styles.4 Highlighted word style
       @include omega(2n);
 
       @include ie-lte(8) {
-        width: 49%;
+        width: 45%;
       }
     }
     @include media($desktop) {

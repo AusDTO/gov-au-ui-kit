@@ -97,6 +97,12 @@
     padding-bottom: $medium-spacing;
   }
 
+  @include ie-lte(8) {
+    @include ie-clearfix;
+    margin-bottom: 0;
+    padding-bottom: $base-spacing * 1.5;
+  }
+
   .govau--logo {
     float: left;
 
@@ -107,13 +113,10 @@
 
   .logo {
     font-size: rem(24);
-    font-weight: $heading-font-weight;
     padding-bottom: 2px;
     border-bottom: 0;
     color: $body-inverted-text-colour;
     font-family: $base-sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 
   [class^='badge'] {
@@ -197,13 +200,10 @@
 
   .logo {
     font-size: rem(24);
-    font-weight: $heading-font-weight;
     padding-bottom: 2px;
     border-bottom: 0;
     color: $body-inverted-text-colour;
     font-family: $base-sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 
   [class^='badge'] {

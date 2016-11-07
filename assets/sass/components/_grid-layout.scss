@@ -1,5 +1,6 @@
 @mixin wrapper-padding {
   @include pad(0 $gutter);
+
   width: 100%;
   box-sizing: border-box;
 
@@ -17,6 +18,11 @@
   header[role='banner'],
   footer[role='contentinfo'] {
     flex: none;
+  }
+
+  main {
+    // makes flex work in IE10/11 https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
+    flex: 1 0 auto;
   }
 }
 
@@ -87,11 +93,10 @@ main {
   @include wrapper-padding;
   @include outer-container;
 
-  // makes flex work in IE10/11 https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
-  flex: 1 0 auto;
+  padding-top: $base-spacing * 2;
 
-  @include media($tablet) {
-    padding-top: $base-spacing * 2;
+  @include ie-lte(8) {
+    @include ie-clearfix;
   }
 
   .form-wrapper {
@@ -99,20 +104,6 @@ main {
 
     @include media($tablet) {
       @include span-columns(4 of 6);
-    }
-  }
-
-  @include ie-lte(8) {
-    &:before,
-    &:after {
-      content: '.';
-      display: block;
-      height: 0;
-      overflow: hidden;
-    }
-
-    &:after {
-      clear: both;
     }
   }
 
@@ -160,17 +151,22 @@ main {
 
       @include media($tablet) {
         @include span-columns(8 of 12);
+
+        @include ie-lte(8) {
+          margin-left: 0;
+        }
       }
 
       @include media($desktop) {
         @include span-columns(12 of 16);
+
+        @include ie-lte(8) {
+          margin-left: 0;
+        }
       }
 
-      // Know what this is for?
       &:first-child {
-
         @include reset-layout-direction;
-
         @include fill-parent;
         @include shift(0);
 
@@ -183,7 +179,6 @@ main {
           @include span-columns(10 of 16);
           @include shift(0);
         }
-
       }
     }
   }
@@ -196,6 +191,7 @@ main {
 
       @include media($tablet) {
         @include span-columns(4 of 12);
+
         margin-left: 0;
       }
 
@@ -239,6 +235,7 @@ footer {
   &[role='contentinfo'] {
     @include outer-container(100%);
     @include pad(0 default);
+
     margin-top: ($base-spacing * 2);
     min-width: 100%;
   }

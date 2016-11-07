@@ -12,6 +12,23 @@ footer[role='contentinfo'] {
     list-style: none;
   }
 
+  .feedback {
+    display: block;
+    margin-bottom: $base-spacing;
+
+    @include media($tablet) {
+      display: none;
+    }
+  }
+
+  .button--feedback {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 30em;
+    background-color: transparent;
+  }
+
   .footer-logo {
     @include media($tablet) {
       @include span-columns(3 of 12);

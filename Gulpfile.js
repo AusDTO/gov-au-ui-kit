@@ -16,7 +16,6 @@ var gulp = require('gulp'),
     svg2png = require('gulp-svg2png'),
     webpack = require('webpack-stream'),
     zip = require('gulp-zip'),
-    wrap = require('gulp-wrap'),
     imagemin = require('gulp-imagemin'),
     handlebars = require('gulp-compile-handlebars')
     ;
@@ -43,7 +42,7 @@ var paths = {
 
 var options = {
     autoprefixer: {
-        browsers: ['last 2 versions', 'ie 8-10']
+        browsers: ['last 2 versions', 'ie 7-10', 'iOS >= 4']
     },
     sass: {
         functions: {
@@ -193,6 +192,44 @@ gulp.task('styleguide', ['styleguide.scss'], function () {
         gulp.src('./build/*.html').pipe(connect.reload());
     });
 
+});
+
+gulp.task('styleguide.data', function () {
+  var fs = require('fs');
+  var source = 'assets/sass';
+  var outputFile = 'data-sections.json';
+  var customFields = ['tags', 'collection'];
+  var output = [];
+  var data;
+
+  // From: http://kss-node.github.io/kss-node/api/master/module-kss.html
+  // - The traverse() function reads all the source directories and calls parse()
+  // - The parse() function finds the KSS comments in the provided text, creates a
+  //   JSON object containing all the parsed data and passes it the new KssStyleGuide(data)
+  //   constructor to create a style guide object.
+  kss.traverse(source, {'custom': customFields}).then(function(styleData) {
+    data = JSON.parse(JSON.stringify(styleData.data.sections));
+
+    data.map(section => {
+      if ( section.depth === 1 ) {
+          section.children = []
+          output.push(section)
+          console.log('section', section.referenceNumber, section.header);
+      } else {
+          let node = output.find(parentSection => {
+            return parentSection.referenceNumber.startsWith(section.referenceNumber.split('.')[0])
+          })
+          node.children.push(section)
+          console.log('child section', section.referenceNumber, section.header);
+      }
+    })
+
+    fs.writeFile(outputFile, JSON.stringify(output), (err) => {
+      if (err) throw err;
+      console.log(outputFile, 'saved successfully')
+    });
+
+  });
 });
 
 gulp.task('styleguide.scss', function () {

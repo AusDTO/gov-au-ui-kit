@@ -2,6 +2,33 @@
 
 ## UI Kit "Kraken"
 
+### `develop` - (unreleased)
+
+#### Large changes
+
+- Moved font sizing declarations to `body`, rather than applying them to `ul`, `ol`, `p`, `dt`, `dd`, etc. directly. This should avoid the need to apply `font-size: 1em` resets for nested content, eg a `p` or `ul` > `li` inside a `table` > `td`.
+Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SASS comment sections (and their children, nested). This is being used by the new `dto-design-guide` Jekyll repository.
+
+#### Bugfixes
+
+- `main` now receives the same `padding-top` at mobile sizes that it received at tablet+ sizes (fix for content hugging the top of `main`/the page `header`).
+- Changes `.inline-nav` to `.inline-tab-nav` as actually documented.
+- Fixed Vertical lists not displaying correctly in IE7-8.
+- Fixes global menu not opening completely on iOS 9 [#365](https://github.com/AusDTO/gov-au-ui-kit/issues/365).
+- Fixes to button styles [#328](https://github.com/AusDTO/gov-au-ui-kit/issues/328).
+- Fix for missing feedback button on mobile [#348](https://github.com/AusDTO/gov-au-ui-kit/issues/348). Header feedback button continues to be hidden on mobile but support is now provided for a feedback button to be used in the footer which is visible at mobile sizes.
+
+#### Styleguide
+
+- Renamed the design guide website to *DTO Design Guide & UI-Kit*.
+- Renamed complete example page to 'all' (`/examples/all.html`).
+- Reformatted component example `.hbs` files to a max line character length of 80.
+- Update name of Slack channel from `#govau-uikit`/`#govau-guides` to `#guides-uikit`
+
+#### UI-Kit changes
+
+- Changes current uppercase site title topbar to be set-case and removes `letter-spacing`.
+
 ### 1.8.0 - 2016-09-09
 
 #### UI-Kit changes
@@ -18,19 +45,14 @@
 #### Bugfixes
 
 - Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
+- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
+- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
+- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
+- Change git merge strategy for CHANGELOG.md to reduce conflicts
 
 #### Styleguide
 
 - Added guide to [/docs/](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/docs) on installing and using UI-Kit via `npm`.
-
-#### Bugfixes
-
-- Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
-- Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
-- Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
-
-#### Bugfixes
-- Change git merge strategy for CHANGELOG.md to reduce conflicts
 
 ### 1.7.6 - 2016-09-01
 
@@ -42,7 +64,7 @@
 
 #### Styleguide
 
-- Added a 'Zoo' example page (`/examples/zoo.html`) that demonstrates every element in the UI Kit
+- Added a 'Zoo' example page (`/examples/all.html`) that demonstrates every element in the UI Kit
 - Section index links now only show Section headings and not Sub-sections
 - Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
 

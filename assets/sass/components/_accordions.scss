@@ -35,7 +35,9 @@ Don't use an accordion if the user needs to see all of the information.
   </div>
 </details>
 
-Markup: templates/content-accordion.hbs
+Markup: templates/content-accordion.html
+
+Tags: interactive, accordion, content
 
 Style guide: Accordions.1 Content accordion
 */
@@ -61,7 +63,9 @@ Use controls accordions to make page controls easier to use.
   </div>
 </details>
 
-Markup: templates/controls-accordion.hbs
+Markup: templates/controls-accordion.html
+
+Tags: interactive, accordion, controls
 
 Style guide: Accordions.2 Controls accordion
 */
@@ -94,7 +98,7 @@ Style guide: Accordions.3 Usability
   position: relative;
   width: 100%;
   height: auto;
-  padding: $small-spacing;
+  padding: $small-spacing $large-spacing $small-spacing $small-spacing;
   border-radius: $tiny-border-radius $tiny-border-radius 0 0;
   background-color: $background-secondary-colour;
   cursor: pointer;

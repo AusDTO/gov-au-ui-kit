@@ -17,7 +17,7 @@ The global navigation panel is collapsed (hidden) by default.
 
 Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu without a hamburger button.
 
-Markup: templates/global-navigation.hbs
+Markup: templates/global-navigation.html
 
 <details open data-label="global-nav-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -51,7 +51,7 @@ Older browsers (IE8 and lower) and those without JavaScript will see an expanded
 
 Use active state to show where the user is. Use `class="is-active"` for each clicked menu item. Use  `class="is-active is-current"` for the current location.
 
-Markup: templates/local-navigation.hbs
+Markup: templates/local-navigation.html
 
 <details open data-label="local-nav-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -79,7 +79,7 @@ Breadcrumbs help the user understand where they are in the service and how they 
 
 They appear directly under a page header or hero, from `$tablet` breakpoint upwards.
 
-Markup: templates/breadcrumbs.hbs
+Markup: templates/breadcrumbs.html
 
 <details open data-label="breadcrumb-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -109,7 +109,7 @@ A heading is optional &mdash; use the correct header level for the page structur
 
 Users with modern browsers will see a smooth scroll down the page.
 
-Markup: templates/index-links.hbs
+Markup: templates/index-links.html
 
 <details open data-label="index-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -135,7 +135,7 @@ Inline links block
 
 You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.
 
-Markup: templates/inline-links.hbs
+Markup: templates/inline-links.html
 
 <details open data-label="inline-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -167,7 +167,7 @@ This framework uses CSS Flexboxes to manage columns. It provides:
 - 2 columns for `$mobile` and `$tablet` breakpoint
 - 4 columns for `$desktop` breakpoint.
 
-Markup: templates/footer-navigation.hbs
+Markup: templates/footer-navigation.html
 
 <details open data-label="footer-nav-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -228,13 +228,12 @@ Style guide: Navigation.6 Footer navigation
 
 .global-nav {
   clear: both;
-  padding: $tiny-spacing 0 $small-spacing;
   overflow: hidden;
 
   ul {
     list-style-type: none;
-    margin: $base-spacing 0;
-    padding: 0;
+    margin: 0;
+    padding: $base-spacing 0;
 
     @include media($tablet) {
       @include outer-container;
@@ -377,6 +376,7 @@ Style guide: Navigation.6 Footer navigation
         ul {
           a {
             @extend %icon-arrow-right;
+
             padding-left: $base-spacing + $small-spacing;
             background-repeat: no-repeat;
             background-position: $base-spacing center;
@@ -446,6 +446,7 @@ Style guide: Navigation.6 Footer navigation
     ul {
       margin: 0;
       display: none;
+
       @include media($tablet) {
         margin: inherit;
         display: block;
@@ -472,6 +473,7 @@ Style guide: Navigation.6 Footer navigation
 
 [class^='breadcrumbs'] {
   @include link-colours($link-colour, $link-colour--hover);
+
   display: none;
   width: 100%;
   margin: 0;
@@ -496,6 +498,7 @@ Style guide: Navigation.6 Footer navigation
 
       &:not(:last-child) {
         @extend %icon-arrow-right;
+
         margin-right: $small-spacing;
         padding-right: $medium-spacing;
         background-repeat: no-repeat;
@@ -507,12 +510,14 @@ Style guide: Navigation.6 Footer navigation
 
   &[class$='--inverted'] {
     @include link-colours($link-inverted-colour, $link-inverted-colour--hover, $link-colour);
+
     background-color: transparent;
     color: $body-inverted-text-colour;
 
     ul {
       li:not(:last-child) {
         @extend %icon-arrow-right--white;
+
         color: $body-inverted-text-colour;
       }
     }
@@ -539,7 +544,7 @@ Include skip links between the opening of the `<body>` and the page `<header>`.
   <p>(The example space will be visually empty until the skip links receive focus.)</p>
 </div>
 
-Markup: templates/skip-link.hbs
+Markup: templates/skip-link.html
 
 <details open data-label="skip-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -562,6 +567,7 @@ Style guide: Navigation.7 Skip links
 
 .skip-to {
   @include link-colours($link-colour, $link-colour--hover);
+
   position: relative;
   z-index: 99;
 
@@ -654,7 +660,7 @@ You can use groups of links:
 - in the header (eg listing popular links across the site)
 - anywhere within an `article` (eg as a list of related topics).
 
-Markup: templates/groups-links.hbs
+Markup: templates/groups-links.html
 
 <details open data-label="group-links-accessibility" aria-expanded="false">
   <summary>Accessibility &amp; browser testing</summary>
@@ -688,6 +694,7 @@ Style guide: Navigation.8 Group of links
 
     li {
       @include span-columns(4);
+
       float: left;
       margin-top: 0.5em;
 
@@ -724,7 +731,7 @@ Client-side context is not affected by the tabs.
 
 Set current location using `class="is-current"`.
 
-Markup: templates/tab-style-nav.hbs
+Markup: templates/tab-style-nav.html
 
 Style guide: Navigation.07 Tab navigation
 */
