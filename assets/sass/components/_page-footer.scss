@@ -5,6 +5,7 @@ footer[role='contentinfo'] {
   border-top: 6px solid $border-contrast-colour;
 
   ul {
+    margin-bottom: ($base-spacing * 1.5);
     padding: 0;
   }
 
