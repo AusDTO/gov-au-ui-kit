@@ -4,6 +4,12 @@
 
 ### `develop` - (unreleased)
 
+#### UI-Kit changes
+
+- `.lede` has been added, synonymous with `.abstract`, accessible on block elements (not `p` tags).
+
+### 1.9 - 2016-11-07
+
 #### Large changes
 
 - Moved font sizing declarations to `body`, rather than applying them to `ul`, `ol`, `p`, `dt`, `dd`, etc. directly. This should avoid the need to apply `font-size: 1em` resets for nested content, eg a `p` or `ul` > `li` inside a `table` > `td`.
