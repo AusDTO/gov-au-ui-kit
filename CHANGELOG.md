@@ -2,6 +2,10 @@
 
 ## UI Kit "Kraken"
 
+### 1.10.2 - 2016-11-9
+
+- Fixed `ui-kit.js` Gulp task so that minified version is created
+
 ### 1.10.1 - 2016-11-8
 
 - Update version number in package.json so that it's SemVer valid (X.Y.Z)
