@@ -62,15 +62,24 @@
 /*
 Page header
 
+Use clear and consistent page headers to help users know where they are.
+
+The header should help the user navigate to the main sections of the site.
+
 Style guide: Page header
 */
 
 /*
-Creating a header
+Header contents
+
+Use 1 header at the top of the page containing:
+
+- branding
+- [site navigation](section-navigation.html#guide-navigation-02-site-navigation)
 
 Markup: templates/page-header.html
 
-Style guide: Page header.Creating a header
+Style guide: Page header.01 Header
 */
 .page-header {
   @include linear-gradient(to top, $non-white, $white, $fallback: $non-white);
