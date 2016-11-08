@@ -7,47 +7,68 @@ Style guide: Navigation.Site nav
 */
 
 $site-nav-type-size: rem(16);
+$site-nav-border-width: 2px;
 $site-nav-border-colour: $border-colour;
-$site-nav-border-hover-colour: $border-highlight-colour;
+$site-nav-border-colour--hover: $border-highlight-colour;
+$site-nav-item-colour--hover: $lighter-aqua;
+$site-nav-toggle-width: 40%;
 
 .site-nav {
-  > ul {
+  .nav-toggle {
+    margin-left: 100% - $site-nav-toggle-width;
+    width: $site-nav-toggle-width;
+    background-color: transparent;
+  }
+}
+
+.site-nav__wrapper {
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    border-top: $site-nav-border-width solid $site-nav-border-colour;
 
     @include media($tablet) {
       display: flex;
       justify-content: space-between;
+      border-top: none;
+
+      @include ie-lte(9) {
+        @include ie-clearfix;
+      }
+    }
+  }
+
+  li {
+    margin: 0;
+
+    @include media($tablet) {
+      text-align: center;
+
+      @include ie-lte(9) {
+        float: left;
+      }
     }
 
-    li {
+    a {
+      display: block;
+      border-color: $site-nav-border-colour;
+      border-width: $site-nav-border-width;
+      padding: $medium-spacing $gutter;
+      font-weight: $bold-font-weight;
+      font-size: $site-nav-type-size;
 
-      margin: 0;
-
-      @include media($tablet) {
-        text-align: center;
+      &:hover {
+        background-color: $site-nav-item-colour--hover;
       }
 
-      a {
-        display: block;
-        border-color: $site-nav-border-colour;
-        padding: $medium-spacing $gutter;
-        font-weight: $bold-font-weight;
-        font-size: $site-nav-type-size;
+      @include media($tablet) {
+        border-bottom: 6px solid transparent;
 
         &:hover {
-          color: $link-inverted-colour;
-        }
-
-        @include media($tablet) {
-          border-bottom: 6px solid transparent;
-
-          &:hover {
-            background-color: transparent;
-            border-color: $site-nav-border-hover-colour;
-            color: $link-colour;
-          }
+          background-color: transparent;
+          border-color: $site-nav-border-colour--hover;
+          color: $link-colour;
         }
       }
     }
