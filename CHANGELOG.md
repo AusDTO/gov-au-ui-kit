@@ -2,6 +2,10 @@
 
 ## UI Kit "Kraken"
 
+### 1.10.1 - 2016-11-8
+
+- Update version number in package.json so that it's SemVer valid (X.Y.Z)
+
 ### 1.10 - 2016-11-8
 
 #### UI-Kit changes
