@@ -487,7 +487,9 @@ strong {
 // More specialised typography.
 //
 // For abstracts or page introductory paragraphs.
-.abstract {
+// Todo: document `.lede`.
+.abstract,
+.lede {
   margin: $medium-spacing 0 ($base-spacing * 1.25);
   border-bottom: 1px solid $border-colour;
 
