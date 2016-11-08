@@ -58,6 +58,7 @@ Files impacted:
 
 - `package.json`, line 3
 - `assets/sass/ui-kit.scss`, line 3
+- `CHANGELOG.md`
 
 ### Ensure the changelog is up to date
 
