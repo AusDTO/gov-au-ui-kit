@@ -19,6 +19,7 @@
   - improves margins when footer link `ul`s collapse in mobile–tablet views and footer crest margins
   - centers image and copyright footer content in mobile view.
 - `.lede` has been added, synonymous with `.abstract`, accessible on block elements (not `p` tags).
+- Link styles are now applied to the `<main>` element instead of `<article>`
 
 ### 1.9 - 2016-11-07
 
