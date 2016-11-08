@@ -1,19 +1,23 @@
-var smoothScroll = require('smoothscroll');
-var responsiveNav = require('responsive-nav');
-var Velocity = require('velocity-animate');
+'use strict';
 
 (function (document) {
 
-  initResponsiveNav = function(elementSelector) {
+  var smoothScroll = require('smoothscroll');
+  var responsiveNav = require('responsive-nav');
+  var Velocity = require('velocity-animate');
+  var SiteSearch = require('./components/site-search.js');
+
+   function initResponsiveNav(elementSelector) {
     if (document.querySelector(elementSelector)) {
       responsiveNav(elementSelector);
     }
   }
 
-  initAccordions = function(elems) {
+   function initAccordions(elems) {
     for (var i = 0; i < elems.length; i++) {
       var toggle = elems[i].querySelector('.accordion-button, summary');
       var panel = elems[i].querySelector('.accordion-panel');
+      var panelLabel;
 
       if (elems[i].getAttribute('data-label')) {
         panelLabel = elems[i].getAttribute('data-label');
@@ -27,14 +31,14 @@ var Velocity = require('velocity-animate');
     }
   }
 
-  initToggle = function(elem, toggle, panel, label) {
+   function initToggle(elem, toggle, panel, label) {
     toggle.targetElem = elem;
     toggle.targetPanel = panel;
     toggle.setAttribute('aria-controls', label);
     toggle.addEventListener('click', togglePanel);
   }
 
-  initPanel = function(elem, panel, label) {
+   function initPanel(elem, panel, label) {
     elem.id = label;
 
     if (elem.getAttribute('aria-expanded') === 'false') {
@@ -42,7 +46,7 @@ var Velocity = require('velocity-animate');
     }
   }
 
-  togglePanel = function(event) {
+   function togglePanel(event) {
     var toggle = event.target,
         elem = event.target.targetElem,
         panel = event.target.targetPanel,
@@ -56,7 +60,7 @@ var Velocity = require('velocity-animate');
     slidePanel(panel, expanded);
   }
 
-  slidePanel = function(panel, bool) {
+   function slidePanel(panel, bool) {
     Velocity(panel, bool ? 'slideUp' : 'slideDown', { duration: 300 });
   }
 
@@ -68,6 +72,8 @@ var Velocity = require('velocity-animate');
     initResponsiveNav('.local-nav-demo');
 
     initAccordions(document.querySelectorAll('.accordion, details'));
+
+    SiteSearch.init('.js-search-input');
   });
 
 })(document);
