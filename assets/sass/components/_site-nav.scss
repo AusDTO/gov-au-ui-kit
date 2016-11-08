@@ -1,7 +1,7 @@
 /*
 Site navigation
 
-Markup: templates/site-nav.html
+Markup: templates/site-navigation.html
 
 Use the site navigation to help the user to navigate between main sections.
 
@@ -24,10 +24,21 @@ $site-nav-toggle-width: 40%;
     margin-left: 100% - $site-nav-toggle-width;
     width: $site-nav-toggle-width;
     background-color: transparent;
+    border-bottom: none;
+
+    &:hover {
+      background-color: $nav-menu-toggle--hover;
+    }
   }
 }
 
 .site-nav__wrapper {
+  margin-bottom: $tiny-spacing;
+
+  @include media($tablet) {
+    margin-bottom: 0;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -47,6 +58,14 @@ $site-nav-toggle-width: 40%;
 
   li {
     margin: 0;
+
+    @include media($mobile-only) {
+      &:last-child {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
 
     @include media($tablet) {
       text-align: center;

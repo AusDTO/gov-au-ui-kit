@@ -6,7 +6,14 @@
 
 #### UI-Kit changes
 
+#### Larger changes
+
+- New: site navigation and page header features — see *§ Navigation: Site navigation* and *§ Page header* in the Design Guide.
+- The same link styles (via the `link-colours` mixin) for `article` are now applied to `header[role='banner']`.
 - Removes the min-width from the `$mobile-only` breakpoint.
+
+#### Smaller changes
+
 - Footer improvements:
   - adds `ie-clearfix` mixin
   - improves margins when footer link `ul`s collapse in mobile–tablet views and footer crest margins
