@@ -5,7 +5,9 @@ Markup: templates/site-nav.html
 
 Use the site navigation to help the user to navigate between main sections.
 
-The menu will colla
+The menu will collapse by default on small screens.
+
+Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu.
 
 Style guide: Navigation.02 Site navigation
 */
