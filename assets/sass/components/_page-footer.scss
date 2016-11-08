@@ -1,10 +1,12 @@
 footer[role='contentinfo'] {
-  @include pad(( $base-spacing * 2 ) 0);
+  @include pad($base-spacing 0);
+  @include ie-clearfix;
 
   background-color: $non-white;
   border-top: 6px solid $border-contrast-colour;
 
   ul {
+    margin-bottom: ($base-spacing * 1.5);
     padding: 0;
   }
 
@@ -34,14 +36,28 @@ footer[role='contentinfo'] {
       @include span-columns(3 of 12);
     }
 
+    margin-bottom: $base-spacing * 2;
+
     img {
       max-height: 7em; //was $base-spacing * 4;
+      display: block;
+      margin: 0 auto;
+
+      @include media($tablet) {
+        margin: 0;
+      }
     }
   }
 
   .footer-links {
+    text-align: center;
+    margin: 0 auto;
+
     @include media($tablet) {
       @include span-columns(9 of 12);
+
+      margin: 0;
+      text-align: left;
     }
 
     ul {

@@ -263,7 +263,7 @@ h1 {
   }
 }
 
-h2 {
+@mixin h2 {
   font-size: rem(32);
   line-height: $small-leading;
   margin-top: $base-spacing;
@@ -276,6 +276,10 @@ h2 {
   @include ie-lte(8) {
     font-size: 44px;
   }
+}
+
+h2 {
+  @include h2;
 }
 
 h3 {
@@ -483,7 +487,9 @@ strong {
 // More specialised typography.
 //
 // For abstracts or page introductory paragraphs.
-.abstract {
+// Todo: document `.lede`.
+.abstract,
+.lede {
   margin: $medium-spacing 0 ($base-spacing * 1.25);
   border-bottom: 1px solid $border-colour;
 

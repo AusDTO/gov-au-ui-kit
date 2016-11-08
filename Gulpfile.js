@@ -37,6 +37,7 @@ var paths = {
     readme: './README.md',
     outputAssets: './build/latest',
     outputCSS: './build/latest/*.css',
+    outputJS: './build/latest/*.js',
     outputHTML: './build'
 };
 
@@ -83,14 +84,12 @@ gulp.task('ui-kit.scss', function () {
   return gulp.src(paths.scssDir)
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer(options.autoprefixer))
-    .pipe(gitVersion())
     .pipe(gulp.dest(paths.outputAssets));
 });
 
 gulp.task('ui-kit.js', function () {
     return gulp.src(paths.js)
         .pipe(webpack(options.webpack))
-        .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
 
@@ -115,14 +114,12 @@ gulp.task('ui-kit.min.scss', ['ui-kit.scss'], function () {
 });
 
 gulp.task('ui-kit.min.js', function () {
-    return gulp.src(paths.js)
-        .pipe(webpack({
-            output: {
-                filename: 'ui-kit.min.js',
-            }
-        }))
+    return gulp.src(paths.outputJS)
         .pipe(uglify())
         .pipe(gitVersion())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest(paths.outputAssets));
 });
 
