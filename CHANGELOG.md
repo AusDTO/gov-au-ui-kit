@@ -6,6 +6,7 @@
 
 #### UI-Kit changes
 
+- Removes the min-width from the `$mobile-only` breakpoint.
 - Footer improvements:
   - adds `ie-clearfix` mixin
   - improves margins when footer link `ul`s collapse in mobile–tablet views and footer crest margins
