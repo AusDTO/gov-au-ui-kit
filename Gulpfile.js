@@ -113,7 +113,7 @@ gulp.task('ui-kit.min.scss', ['ui-kit.scss'], function () {
         .pipe(gulp.dest(paths.outputAssets));
 });
 
-gulp.task('ui-kit.min.js', function () {
+gulp.task('ui-kit.min.js', ['ui-kit.js'], function () {
     return gulp.src(paths.outputJS)
         .pipe(uglify())
         .pipe(gitVersion())
