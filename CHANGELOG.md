@@ -4,6 +4,16 @@
 
 ### `develop` - (unreleased)
 
+#### UI-Kit changes
+
+- Footer improvements:
+  - adds `ie-clearfix` mixin
+  - improves margins when footer link `ul`s collapse in mobile–tablet views and footer crest margins
+  - centers image and copyright footer content in mobile view.
+- `.lede` has been added, synonymous with `.abstract`, accessible on block elements (not `p` tags).
+
+### 1.9 - 2016-11-07
+
 #### Large changes
 
 - Moved font sizing declarations to `body`, rather than applying them to `ul`, `ol`, `p`, `dt`, `dd`, etc. directly. This should avoid the need to apply `font-size: 1em` resets for nested content, eg a `p` or `ul` > `li` inside a `table` > `td`.
