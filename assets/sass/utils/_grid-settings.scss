@@ -59,7 +59,7 @@ $content-grid-columns: $tablet-grid-columns;
 $desktop-grid-columns: 16;
 
 $mobile: new-breakpoint(min-width $mobile-minwidth, $mobile-grid-columns);
-$mobile-only: new-breakpoint(min-width $mobile-minwidth max-width $tablet-minwidth - 1, $mobile-grid-columns);
+$mobile-only: new-breakpoint(max-width $tablet-minwidth - 1, $mobile-grid-columns);
 $tablet: new-breakpoint(min-width $tablet-minwidth, $tablet-grid-columns);
 $tablet-only: new-breakpoint(min-width $tablet-minwidth max-width $desktop-minwidth - 1, $tablet-grid-columns);
 $desktop: new-breakpoint(min-width $max-width, $desktop-grid-columns);
