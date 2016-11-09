@@ -1,0 +1,137 @@
+{{> header}}
+<!-- ========== Page header ========== -->
+<header role="banner">
+  <section class="prerelease-govau--header">
+    <div class="wrapper">
+      <div class="govau--logo">
+        <img src="../latest/img/icons/logo-govau-full-2x.png" alt="gov.au crest logo" width="270"/>
+
+        <div id="test" class="brandbar default"><!--ID is temp for example-->
+          <div class="b1"></div>
+          <div class="b2"></div>
+        </div>
+      </div>
+
+      <div class="feedback">
+        <a href="#content" class="button--feedback">Give feedback</a>
+      </div>
+
+    </div><!--wrapper-->
+
+    <nav class="breadcrumbs--inverted" aria-label="breadcrumb">
+      <div class="wrapper">
+        <ul>
+          <li><a href="#content">Home</a></li>
+          <li><a href="ministers-landing.html">Minister for Communications</a></li>
+          <li class="current">Responsibilities</li>
+        </ul>
+      </div>
+    </nav>
+
+  </section>
+</header>
+
+
+<!-- ========== Hero ========== -->
+<div class="hero-sml corporate">
+  <div class="wrapper">
+    <p>Minister for Communications</p>
+  </div>
+</div>
+
+
+<!-- ========== Main page row ========== -->
+<main role="main">
+  <aside class="sidebar" id="nav">
+
+    <!-- ========== Nav ========== -->
+    <nav class="local-nav" aria-label="main navigation">
+      <h1 class="is-visuallyhidden">Menu</h1>
+      <ul>
+        <li><a class="is-active" href="ministers-landing.html">Minister for Communications</a>
+          <ul>
+            <li><a href="#content" class="is-active is-current">Responsibilities</a></li>
+            <li><a href="profile.html">About the minister</a></li>
+            <li><a href="news-section-listing.html">News</a></li>
+            <li><a href="#content">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </aside>
+
+  <!-- ========== Content ========== -->
+  <article id="content" class="content-main">
+    <header>
+      <h1>Form Validation</h1>
+
+      <div class="form-validation form-validation--type-error" role="alert">
+        <div class="icon-box"></div>
+        <h2>There were 3 errors found in the information you submitted</h2>
+        <ol>
+          <li><a href="#">Please enter a valid licence number</a></li>
+          <li><a href="#">Please enter a valid email address</a></li>
+          <li><a href="#">First name is required</a></li>
+        </ol>
+      </div><!--form-validation-->
+
+      <div class="form-validation form-validation--type-warning">
+        <div class="icon-box"></div>
+        <h2>Protect yourself against phone scams</h2>
+        <p>The ATO is warning the public to be aware of a phone scam that is again circulating where fraudsters are intimidating people into paying a fake tax debt over the phone.</p>
+      </div><!--form-validation-->
+
+      <div class="form-validation form-validation--type-success" role="alert">
+        <div class="icon-box"></div>
+        <p><strong>September 2016</strong> –  Safari 38%,  Firefox 28%,  Chome 17%,  Other 11%, Internet Expl 6%  – 16 October 2016</p>
+      </div><!--form-validation-->
+
+      <div class="form-validation form-validation--type-info">
+        <div class="icon-box"></div>
+        <h2>See also:</h2>
+        <p>The Commonwealth of Australia, a federal parliamentary constitutional monarchy, was formed in 1901 as a result of an agreement among six self-governing British colonies, which became the six states.</p>
+      </div><!--form-validation-->
+
+    </header>
+
+    <p>The minister leads the <a href="agency-landing.html">Department of Communications and the Arts</a> and other government agencies within the Communications portfolio.</p>
+    <p>Ministers are members of the Australian Government who have been allocated an area of responsibility for how Australia is run. This area of responsibility is known as a portfolio.</p>
+
+    <form>
+          <p>
+            <label for="textin">A <code>text</code> input field</label>
+            <input name="textin" id="textin" type="text">
+          </p>
+          <p>
+            <label for="numberin">A <code>number</code> input field</label>
+            <input name="numberin" id="numberin" type="number">
+          </p>
+          <p>
+            <label for="phonein">A phone number (<code>tel</code>) input field:</label>
+            <input name="phonein" id="phonein" type="tel" pattern="[0-9]*">
+          </p>
+          <p>
+            <label for="textinvalid">An invalid field
+              <span class="field-validation-error">Value cannot be more than 100%. Please check your calculations.</span>
+            </label>
+            <input name="textinvalid" id="textinvalid" type="text" class="invalid">
+          </p>
+          <p>
+            <label for="textvalid">A valid field</label>
+            <input name="textvalid" id="textvalid" type="text" class="valid">
+          </p>
+        </form>
+
+        <p>The department and agencies provide information and deliver services related to various portfolio responsibilities such as <a href="#content">television, radio, internet, phones and more.</a></p>
+        <p>The minister works with their department, agencies, community organisations and professional associations to:</p>
+
+    <footer>
+      <p>Information sources: <cite>Department of Communications website</cite> and the <cite>Parliamentary Education Office website</cite>.</p>
+    </footer>
+
+  </article>
+  <!-- ========== end Content ========== -->
+</main>
+
+{{> footer}}

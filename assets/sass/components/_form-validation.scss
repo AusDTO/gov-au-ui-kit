@@ -1,0 +1,88 @@
+
+.form-validation {
+  position: relative;
+  margin: $base-spacing 0;
+  padding: $medium-spacing $medium-spacing $medium-spacing ( $large-spacing + $medium-spacing );
+  border: solid 2px $non-black;
+  border-radius: $large-border-radius;
+  overflow: hidden; //hides border-radius corners of.icon-box
+
+  .icon-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $large-spacing;
+    background-color: $non-black;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: $base-spacing auto;
+    //  FIXME how should PNG 2x work in <ie9 because background-size will not?
+    //  In the past I've used modernizr and this:
+    // .selector { background-image url(icon-1x.png); }
+    // .svg .selector { background-image url(icon.svg); }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 1em;
+    font-weight: $bold-font-weight;
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5em;
+  }
+}
+
+.form-validation--type-error {
+  border-color: $error-colour;
+
+  .icon-box {
+    background-color: $error-colour;
+    @include inline-background-image('form-validation--type-error-icon');
+  }
+}
+
+.form-validation--type-warning {
+  border-color: $warning-colour;
+
+  .icon-box {
+    background-color: $warning-colour;
+    @include inline-background-image('form-validation--type-error-icon'); //TODO create asset
+  }
+}
+
+.form-validation--type-success {
+  border-color: $success-colour;
+
+  .icon-box {
+    background-color: $success-colour;
+    @include inline-background-image('form-validation--type-error-icon'); //TODO create asset
+  }
+}
+
+.form-validation--type-info {
+  border-color: $info-colour;
+
+  .icon-box {
+    background-color: $info-colour;
+    @include inline-background-image('form-validation--type-error-icon'); //TODO create asset
+  }
+}
+
+
+//==================
+
+.field-validation-error {
+  display: block;
+  font-weight: $bold-font-weight;
+  color: $error-colour;
+}
