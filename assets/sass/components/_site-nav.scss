@@ -46,13 +46,18 @@ $site-nav-toggle-width: 40%;
     border-top: $site-nav-border-width solid $site-nav-border-colour;
 
     @include media($tablet) {
-      display: flex;
-      justify-content: space-between;
+      @include clearfix;
       border-top: none;
 
       @include ie-lte(9) {
         @include ie-clearfix;
       }
+    }
+  }
+
+  &.nav-collapse {
+    li {
+      width: auto !important; // Override's Responsive Nav plugin styles
     }
   }
 
@@ -67,19 +72,34 @@ $site-nav-toggle-width: 40%;
       }
     }
 
-    @include media($tablet) {
-      text-align: center;
+    @include media($mobile) {
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+    }
 
-      @include ie-lte(9) {
-        float: left;
-      }
+    @include media($tablet) {
+      float: left;
+      text-align: center;
+    }
+
+    @include media($desktop) {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
     }
 
     a {
       display: block;
       border-color: $site-nav-border-colour;
       border-width: $site-nav-border-width;
-      padding: $medium-spacing $gutter;
+      padding: $medium-spacing 0;
       font-weight: $bold-font-weight;
       font-size: $site-nav-type-size;
 
