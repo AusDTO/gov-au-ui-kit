@@ -65,7 +65,7 @@
 
   .icon-box {
     background-color: $success-colour;
-    @include inline-background-image('form-validation--type-error-icon'); //TODO create asset
+    @include inline-background-image('form-validation--type-success-icon');
   }
 }
 
