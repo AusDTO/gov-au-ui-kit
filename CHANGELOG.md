@@ -2,6 +2,11 @@
 
 ## UI Kit "Kraken"
 
+### 1.10.3 - 2016-11-10
+
+- Switches from flexbox to floats for the site navigation feature.
+- Undoes link-button mixin application to the `header[role='banner']` from 1.10.0.
+
 ### 1.10.2 - 2016-11-9
 
 - Fixed `ui-kit.js` Gulp task so that minified version is created
@@ -10,7 +15,7 @@
 
 - Update version number in package.json so that it's SemVer valid (X.Y.Z)
 
-### 1.10 - 2016-11-8
+### 1.10.0 - 2016-11-8
 
 #### UI-Kit changes
 
