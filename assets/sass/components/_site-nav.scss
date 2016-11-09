@@ -57,7 +57,9 @@ $site-nav-toggle-width: 40%;
 
   &.nav-collapse {
     li {
-      width: auto !important; // Overrides Responsive Nav plugin styles
+      width: auto !important;
+      // Overrides Responsive Nav plugin styles because it sets width:100%,
+      // breaking the nav.
     }
   }
 
