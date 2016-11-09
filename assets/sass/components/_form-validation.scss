@@ -1,4 +1,28 @@
 
+// HTML example
+// ========================================
+// <div class="form-validation form-validation--type-error" role="alert">
+//   <div class="icon-box"></div>
+//   <h2>There were 3 errors found in the information you submitted</h2>
+//   <ol>
+//     <li><a href="#textinvalid">Please enter a valid licence number <span class="visuallyhidden">Error 1 of 3</span></a></li>
+//     <li><a href="#textinvalid">Please enter a valid email address <span class="visuallyhidden">Error 2 of 3</span></a></li>
+//     <li><a href="#textinvalid">First name is required <span class="visuallyhidden">Error 3 of 3</span></a></li>
+//   </ol>
+// </div><!--form-validation-->
+
+// Notes
+// ========================================
+// Use ARIA role 'alert' on notifications (both dynamic and static)
+// https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
+//
+// The `.form-validation` box should appear at the top of a page so that it is one of the first things read by assistive tech.
+// It should then link to the form elements which have errors.
+// http://webaim.org/techniques/formvalidation/
+//
+// Note the use of `<span class="visuallyhidden">Error 1 of 3</span>` inside of links in the `.form-validation` element so that it is read when focused
+
+
 .form-validation {
   position: relative;
   margin: $base-spacing 0;
