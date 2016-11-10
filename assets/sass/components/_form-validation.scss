@@ -1,6 +1,7 @@
 
 // HTML example
 // ========================================
+// Summary:
 // <div class="form-validation form-validation--type-error" role="alert">
 //   <div class="icon-box"></div>
 //   <h2>There were 3 errors found in the information you submitted</h2>
@@ -10,6 +11,13 @@
 //     <li><a href="#textinvalid">First name is required <span class="visuallyhidden">Error 3 of 3</span></a></li>
 //   </ol>
 // </div><!--form-validation-->
+
+// Inline:
+// <label for="textinvalid">An invalid field
+//   <span class="field-validation-error">Value cannot be more than 100%. Please check your calculations. <span class="visuallyhidden">Error 1 of 3</span></span>
+// </label>
+// <input name="textinvalid" id="textinvalid" type="text" class="invalid">
+
 
 // Notes
 // ========================================
