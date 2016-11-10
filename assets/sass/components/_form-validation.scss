@@ -20,7 +20,13 @@
 // It should then link to the form elements which have errors.
 // http://webaim.org/techniques/formvalidation/
 //
-// Note the use of `<span class="visuallyhidden">Error 1 of 3</span>` inside of links in the `.form-validation` element so that it is read when focused
+// The use of `<span class="visuallyhidden">Error 1 of 3</span>` inside of links in the `.form-validation` element so that it is read when focused
+
+// Client side / dynamic validation
+// ========================================
+// Add `role="alert"` to the alert so that assistive tech is notified.
+// Add `<span class="visuallyhidden">Error X of X</span>` to the alert.
+// On submit, set focus to the first input which has an error. (See gmail login example)
 
 
 .form-validation {
@@ -110,4 +116,13 @@
   display: block;
   font-weight: $bold-font-weight;
   color: $error-colour;
+  padding: $small-spacing $small-spacing $small-spacing $large-spacing ;
+  background-color: $light-red;
+  line-height: 1.2;
+  background-position: $small-spacing center;
+  background-repeat: no-repeat;
+  background-size: $base-spacing auto;
+  margin: $small-spacing auto;
+
+  @include inline-background-image('inline-validation--type-error-icon');
 }
