@@ -1,43 +1,13 @@
 /*
 Forms
 
-Keep forms as simple as possible &mdash; only ask what is needed for the transaction.
-
-Ask only 1 question per page.
-
-***
-
-This guidance is in part adapted from <a href="http://govuk-elements.herokuapp.com/" rel="external">GOV.UK elements</a> under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external">Open Government Licence v3.0</a> and <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/" rel="external">GOV.UK design patterns</a> under <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/" rel="external">Open Government Licence v2.0</a>.
-
 Style guide: Forms
 */
 
 /*
 Text input
 
-Single line text inputs.
-
-These can be limited to number input by setting the `type` attribute to `number`. For telephone numbers set the `type` attribute to `tel`.
-
-To trigger the iPhone numpad use `pattern="[0-9]*"` attribute in the input element. Don't add a `type` attribute.
-
 Markup: templates/text-input-single-line.html
-
-<details open data-label="text-input-single-line-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
 
 Style guide: Forms.1 Text input
 */
@@ -105,25 +75,7 @@ form {
   /*
   Text area input
 
-  The `<textarea>` element gives a multi-line text input the user can resize vertically.
-
   Markup: templates/textarea-input.html
-
-  <details open data-label="text-area-input-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
 
   Style guide: Forms.2 Text area input
   */
@@ -197,25 +149,7 @@ form {
   /*
   Radio button input
 
-  The `radio` input allows users to see all available choices at once and select exactly 1 option.
-
   Markup: templates/radio-button-input.html
-
-  <details open data-label="radio-button-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
 
   Style guide: Forms.3 Radio button input
   */
@@ -259,25 +193,7 @@ form {
   /*
 Checkbox input
 
-The `checkbox` input allows users to select 1 or more options from a visible list.
-
 Markup: templates/checkbox-input.html
-
-<details open data-label="checkbox-input-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
 
 Style guide: Forms.4 Checkbox input
 */
@@ -322,27 +238,7 @@ Style guide: Forms.4 Checkbox input
 /*
 Accessibility
 
-### Labels
-
-- All forms fields should have labels.
-- Don't hide labels, unless the surrounding context makes them unnecessary.
-- Tell the user what they need to enter into the field. Label text should be short and direct.
-- Avoid colons at the end of labels.
-- Align labels above their fields. They should be associated with form fields using the `for` and `id` attribute.
-
-### Hint text
-
-- Use hint text to give the user contextual help about how to provide the information.
-- The hint text should be above the form field and always visible.
-- Use ARIA tags to make sure screen readers can read hint text correctly.
-
 Markup: templates/hint-text.html
-
-### Optional & mandatory fields
-
-Only ask for the information you absolutely need. Don't mark mandatory fields with asterisks.
-
-If you have to ask for optional information mark the field labels with ‘(optional)’.
 
 Style guide: Forms.5 Accessibility
 */
