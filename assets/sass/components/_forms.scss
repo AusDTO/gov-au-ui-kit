@@ -1,7 +1,9 @@
 /*
-Forms
+Forms & buttons
 
-Style guide: Forms
+Collection: Components
+
+Style guide: Forms & buttons
 */
 
 /*
@@ -9,7 +11,7 @@ Text input
 
 Markup: templates/text-input-single-line.html
 
-Style guide: Forms.1 Text input
+Style guide: Forms & buttons.02 Text input
 */
 
 %base-input {
@@ -77,7 +79,7 @@ form {
 
   Markup: templates/textarea-input.html
 
-  Style guide: Forms.2 Text area input
+  Style guide: Forms & buttons.03 Text area input
   */
 
   textarea {
@@ -151,7 +153,7 @@ form {
 
   Markup: templates/radio-button-input.html
 
-  Style guide: Forms.3 Radio button input
+  Style guide: Forms & buttons.04 Radio button input
   */
 
   input[type='radio'] {
@@ -195,7 +197,7 @@ Checkbox input
 
 Markup: templates/checkbox-input.html
 
-Style guide: Forms.4 Checkbox input
+Style guide: Forms & buttons.05 Checkbox input
 */
   input[type='checkbox'] + label {
     &::before {
@@ -240,5 +242,5 @@ Accessibility
 
 Markup: templates/hint-text.html
 
-Style guide: Forms.5 Accessibility
+Style guide: Forms & buttons.06 Accessibility
 */
