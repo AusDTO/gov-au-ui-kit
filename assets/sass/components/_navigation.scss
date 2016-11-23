@@ -9,9 +9,7 @@ Style guide: Navigation
 /*
 Global navigation
 
-The global navigation provides an additional navigation level above the [site navigation](#guide-navigation-02-site-navigation).
-
-The panel is collapsed (hidden) by default.
+The global navigation panel is collapsed (hidden) by default.
 
 Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu without a hamburger button.
 
@@ -33,13 +31,13 @@ Markup: templates/global-navigation.html
   </div>
 </details>
 
-Style guide: Navigation.01 Global navigation
+Style guide: Navigation.1 Global navigation
 */
 
 /*
 Local navigation
 
-Use local navigation to help the user to navigate within the current section.
+Use local navigation to help the user go straight to the specific content that meets their needs.
 
 The framework provides a vertical navigation menu. The home page title is always at top, followed by up to 3 levels of navigation.
 
@@ -67,7 +65,7 @@ Markup: templates/local-navigation.html
   </div>
 </details>
 
-Style guide: Navigation.03 Local navigation
+Style guide: Navigation.2 Local navigation
 */
 
 /*
@@ -95,13 +93,13 @@ Markup: templates/breadcrumbs.html
   </div>
 </details>
 
-Style guide: Navigation.07 Breadcrumbs
+Style guide: Navigation.3 Breadcrumbs
 */
 
 /*
 Contents links
 
-Table of contents links (index links) help users navigate to the specific content on the page that meet their needs.
+Contents links (index links) help users understand the page structure.
 
 A heading is optional &mdash; use the correct header level for the page structure.
 
@@ -125,7 +123,7 @@ Markup: templates/index-links.html
   </div>
 </details>
 
-Style guide: Navigation.04 Contents links
+Style guide: Navigation.4 Contents links
 */
 
 /*
@@ -165,7 +163,7 @@ Markup: templates/footer-navigation.html
   </div>
 </details>
 
-Style guide: Navigation.09 Footer navigation
+Style guide: Navigation.6 Footer navigation
 */
 
 .govau--header {
@@ -287,7 +285,7 @@ Style guide: Navigation.09 Footer navigation
 
   &:focus,
   &:hover {
-    background-color: $nav-menu-toggle--hover;
+    background-color: $light-grey;
   }
 
   &::before {
@@ -543,7 +541,7 @@ Markup: templates/skip-link.html
   </div>
 </details>
 
-Style guide: Navigation.10 Skip links
+Style guide: Navigation.7 Skip links
 */
 
 .skip-to {
@@ -689,7 +687,7 @@ Set current location using `class="is-current"`.
 
 Markup: templates/tab-style-nav.html
 
-Style guide: Navigation.06 Tab navigation
+Style guide: Navigation.07 Tab navigation
 */
 
 .inline-tab-nav {
@@ -769,5 +767,5 @@ Accessibility
 - Test with users to ensure the navigation hierarchy is not too long or too deep.
 - Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
 
-Style guide: Navigation.05 Accessibility
+Style guide: Navigation.10 Accessibility
 */
