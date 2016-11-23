@@ -37,6 +37,7 @@ var paths = {
     readme: './README.md',
     outputAssets: './build/latest',
     outputCSS: './build/latest/*.css',
+    outputJS: './build/latest/*.js',
     outputHTML: './build'
 };
 
@@ -83,14 +84,12 @@ gulp.task('ui-kit.scss', function () {
   return gulp.src(paths.scssDir)
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer(options.autoprefixer))
-    .pipe(gitVersion())
     .pipe(gulp.dest(paths.outputAssets));
 });
 
 gulp.task('ui-kit.js', function () {
     return gulp.src(paths.js)
         .pipe(webpack(options.webpack))
-        .pipe(gitVersion())
         .pipe(gulp.dest(paths.outputAssets));
 });
 
@@ -114,15 +113,13 @@ gulp.task('ui-kit.min.scss', ['ui-kit.scss'], function () {
         .pipe(gulp.dest(paths.outputAssets));
 });
 
-gulp.task('ui-kit.min.js', function () {
-    return gulp.src(paths.js)
-        .pipe(webpack({
-            output: {
-                filename: 'ui-kit.min.js',
-            }
-        }))
+gulp.task('ui-kit.min.js', ['ui-kit.js'], function () {
+    return gulp.src(paths.outputJS)
         .pipe(uglify())
         .pipe(gitVersion())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest(paths.outputAssets));
 });
 
@@ -198,38 +195,37 @@ gulp.task('styleguide.data', function () {
   var fs = require('fs');
   var source = 'assets/sass';
   var outputFile = 'data-sections.json';
-  var customFields = ['tags'];
+  var customFields = ['tags', 'collection'];
+  var output = [];
   var data;
 
+  // From: http://kss-node.github.io/kss-node/api/master/module-kss.html
+  // - The traverse() function reads all the source directories and calls parse()
+  // - The parse() function finds the KSS comments in the provided text, creates a
+  //   JSON object containing all the parsed data and passes it the new KssStyleGuide(data)
+  //   constructor to create a style guide object.
   kss.traverse(source, {'custom': customFields}).then(function(styleData) {
     data = JSON.parse(JSON.stringify(styleData.data.sections));
 
-    var output = [];
-    for (var i = 0; i < data.length; i++ ) {
-      var section = data[i];
-
-      if (section.depth === 1) {
-        console.log("section " + section.header + " ref " + section.referenceNumber);
-        for (var j =i+1 ; j < data.length; j++ ) {
-          //console.log("ref " + data[j].referenceNumber);
-          if (data[j].referenceNumber.startsWith(section.referenceNumber + ".")) {
-            console.log("child section " + data[j].header);
-            if (section.children) {
-              section.children.push(data[j]);
-            }
-            else {
-              section.children = [data[j]];
-            }
-          }
-        }
-        output.push(section);
+    data.map(section => {
+      if ( section.depth === 1 ) {
+          section.children = []
+          output.push(section)
+          console.log('section', section.referenceNumber, section.header);
+      } else {
+          let node = output.find(parentSection => {
+            return parentSection.referenceNumber.startsWith(section.referenceNumber.split('.')[0])
+          })
+          node.children.push(section)
+          console.log('child section', section.referenceNumber, section.header);
       }
-    }
+    })
 
     fs.writeFile(outputFile, JSON.stringify(output), (err) => {
       if (err) throw err;
       console.log(outputFile, 'saved successfully')
     });
+
   });
 });
 

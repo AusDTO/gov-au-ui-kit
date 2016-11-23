@@ -1,0 +1,123 @@
+/*
+Site navigation
+
+Markup: templates/site-navigation.html
+
+Use the site navigation to help the user to navigate between main sections.
+
+The menu will collapse by default on small screens.
+
+Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu.
+
+Style guide: Navigation.02 Site navigation
+*/
+
+$site-nav-type-size: rem(16);
+$site-nav-border-width: 2px;
+$site-nav-border-colour: $border-colour;
+$site-nav-border-colour--hover: $border-highlight-colour;
+$site-nav-item-colour--hover: $lighter-aqua;
+$site-nav-toggle-width: 40%;
+
+.site-nav {
+  .nav-toggle {
+    margin-left: 100% - $site-nav-toggle-width;
+    width: $site-nav-toggle-width;
+    background-color: transparent;
+    border-bottom: none;
+
+    &:hover {
+      background-color: $nav-menu-toggle--hover;
+    }
+  }
+}
+
+.site-nav__wrapper {
+  margin-bottom: $tiny-spacing;
+
+  @include media($tablet) {
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-top: $site-nav-border-width solid $site-nav-border-colour;
+
+    @include media($tablet) {
+      @include clearfix;
+      border-top: none;
+
+      @include ie-lte(9) {
+        @include ie-clearfix;
+      }
+    }
+  }
+
+  &.nav-collapse {
+    li {
+      width: auto !important;
+      // Overrides Responsive Nav plugin styles because it sets width:100%,
+      // breaking the nav.
+    }
+  }
+
+  li {
+    margin: 0;
+
+    @include media($mobile-only) {
+      &:last-child {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+
+    @include media($mobile) {
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+    }
+
+    @include media($tablet) {
+      float: left;
+      text-align: center;
+    }
+
+    @include media($desktop) {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    a {
+      display: block;
+      border-color: $site-nav-border-colour;
+      border-width: $site-nav-border-width;
+      padding: $medium-spacing 0;
+      font-weight: $bold-font-weight;
+      font-size: $site-nav-type-size;
+
+      &:hover {
+        background-color: $site-nav-item-colour--hover;
+      }
+
+      @include media($tablet) {
+        border-bottom: 6px solid transparent;
+
+        &:hover {
+          background-color: transparent;
+          border-color: $site-nav-border-colour--hover;
+          color: $link-colour;
+        }
+      }
+    }
+  }
+}

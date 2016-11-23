@@ -2,7 +2,39 @@
 
 ## UI Kit "Kraken"
 
-### `develop` - (unreleased)
+### 1.10.3 - 2016-11-10
+
+- Switches from flexbox to floats for the site navigation feature.
+- Undoes link-button mixin application to the `header[role='banner']` from 1.10.0.
+
+### 1.10.2 - 2016-11-9
+
+- Fixed `ui-kit.js` Gulp task so that minified version is created
+
+### 1.10.1 - 2016-11-8
+
+- Update version number in package.json so that it's SemVer valid (X.Y.Z)
+
+### 1.10.0 - 2016-11-8
+
+#### UI-Kit changes
+
+#### Larger changes
+
+- New: site navigation and page header features — see *§ Navigation: Site navigation* and *§ Page header* in the Design Guide.
+- The same link styles (via the `link-colours` mixin) for `article` are now applied to `header[role='banner']`.
+- Removes the min-width from the `$mobile-only` breakpoint.
+
+#### Smaller changes
+
+- Footer improvements:
+  - adds `ie-clearfix` mixin
+  - improves margins when footer link `ul`s collapse in mobile–tablet views and footer crest margins
+  - centers image and copyright footer content in mobile view.
+- `.lede` has been added, synonymous with `.abstract`, accessible on block elements (not `p` tags).
+- Link styles are now applied to the `<main>` element instead of `<article>`
+
+### 1.9 - 2016-11-07
 
 #### Large changes
 
