@@ -16,7 +16,7 @@ $site-nav-type-size: rem(16);
 $site-nav-border-width: 2px;
 $site-nav-border-colour: $border-colour;
 $site-nav-border-colour--hover: $border-highlight-colour;
-$site-nav-item-colour--hover: $lighter-aqua;
+$site-nav-item-colour--hover: $aqua;
 $site-nav-toggle-width: 40%;
 
 .site-nav {
@@ -105,8 +105,10 @@ $site-nav-toggle-width: 40%;
       font-weight: $bold-font-weight;
       font-size: $site-nav-type-size;
 
-      &:hover {
+      &:hover,
+      &.is-active {
         background-color: $site-nav-item-colour--hover;
+        color: $link-colour;
       }
 
       @include media($tablet) {
