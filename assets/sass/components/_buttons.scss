@@ -1,52 +1,12 @@
 /*
 Buttons
 
-Buttons signal action &mdash; use them to move the user through a transaction.
-
-Use 1 button per page to build a strong call to action. Adding a second or third button forces users to make a choice. If choice is required use another kind of element eg radio button.
-
-Use button text to describe what the button does &mdash; keep it short.
-
-The button alignment in [forms](section-forms.html) should put the primary action button at the left edge, in the user's line of sight.
-
-***
-
-This guidance is in part adapted from <a href="http://govuk-elements.herokuapp.com" rel="external">GOV.UK elements</a> under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external">Open Government Licence v3.0</a>, and <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
-
-Style guide: Buttons
-*/
-
-/*
-Creating buttons
-
-Call buttons using:
-
-- `<button>` element (for actions like submitting a form)
-- the `role` property of `a` elements (eg an anchor link).
-
-Do not apply styles to disabled buttons.
+Collection: Components
 
 Markup: templates/buttons-examples.html
 
-<details open data-label="buttons-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
-
-Style guide: Buttons.1 Creating buttons
+Style guide: Forms & buttons. 01 Buttons
 */
-
 
 // Nest this mixin for specifying new button colours
 @mixin button-colours($bg-colour, $bg-colour--hover, $bg-colour--active, $text-colour, $text-colour--hover: $text-colour) {
