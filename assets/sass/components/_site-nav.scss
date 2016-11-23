@@ -16,7 +16,7 @@ $site-nav-type-size: rem(16);
 $site-nav-border-width: 2px;
 $site-nav-border-colour: $border-colour;
 $site-nav-border-colour--hover: $border-highlight-colour;
-$site-nav-item-colour--hover: $lighter-aqua;
+$site-nav-item-colour--hover: $aqua;
 $site-nav-toggle-width: 40%;
 
 .site-nav {
@@ -104,6 +104,11 @@ $site-nav-toggle-width: 40%;
       padding: $medium-spacing 0;
       font-weight: $bold-font-weight;
       font-size: $site-nav-type-size;
+
+      &.is-active {
+        border-color: $site-nav-border-colour--hover;
+        color: $link-colour;
+      }
 
       &:hover {
         background-color: $site-nav-item-colour--hover;
