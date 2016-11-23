@@ -413,6 +413,7 @@ Style guide: Navigation.09 Footer navigation
 
       &.is-active {
         font-weight: $bold-font-weight;
+        background-color: $non-white;
       }
 
       &.is-current {
