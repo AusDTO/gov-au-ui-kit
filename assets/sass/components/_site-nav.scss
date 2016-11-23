@@ -105,13 +105,10 @@ $site-nav-toggle-width: 40%;
       font-weight: $bold-font-weight;
       font-size: $site-nav-type-size;
 
+      &:hover,
       &.is-active {
-        border-color: $site-nav-border-colour--hover;
-        color: $link-colour;
-      }
-
-      &:hover {
         background-color: $site-nav-item-colour--hover;
+        color: $link-colour;
       }
 
       @include media($tablet) {
