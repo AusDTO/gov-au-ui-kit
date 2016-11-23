@@ -285,7 +285,7 @@ Style guide: Navigation.6 Footer navigation
 
   &:focus,
   &:hover {
-    background-color: $light-grey;
+    background-color: $nav-menu-toggle--hover;
   }
 
   &::before {
