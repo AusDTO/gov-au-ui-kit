@@ -1,37 +1,13 @@
 /*
 List styles
 
-List styles make collections of similar content more usable and discoverable.
-
-You can add usual body elements within each list item (eg ordered and unordered lists).
-
-Use `<a class="see-more">` after your list to link to an index of all items.
-
 Style guide: List styles
 */
 
 /*
 Horizontal style
 
-Horizontal style provides a single column of list items.
-
 Markup: templates/lists-horizontal.html
-
-<details open data-label="horizontal-list-styles-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
 
 Style guide: List styles.1 Horizontal style
 */
@@ -39,7 +15,7 @@ Style guide: List styles.1 Horizontal style
 /*
 Vertical style
 
-Vertical style provides multiple columns of list items. By default the vertical lists are displayed in 2 columns.
+By default the vertical lists are displayed in 2 columns.
 
 You can change the number of columns used:
 

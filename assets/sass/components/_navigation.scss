@@ -3,10 +3,6 @@ Navigation
 
 Make sure users understand where they are in the service, where they have been and where they can go.
 
-***
-
-This guidance is in part adapted from <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
-
 Style guide: Navigation
 */
 
@@ -105,7 +101,7 @@ Style guide: Navigation.07 Breadcrumbs
 /*
 Contents links
 
-Table of contents links (index links) help users navigate to the specific content on the page that meet their needs.
+Contents links (index links) help users understand the page structure.
 
 A heading is optional &mdash; use the correct header level for the page structure.
 
@@ -135,27 +131,9 @@ Style guide: Navigation.04 Contents links
 /*
 Inline links block
 
-You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.
-
 Markup: templates/inline-links.html
 
-<details open data-label="inline-links-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
-
-Style guide: Navigation.08 Inline links
+Style guide: Navigation.5 Inline links
 */
 
 /*
@@ -654,34 +632,9 @@ Style guide: Navigation.10 Skip links
 /*
 Groups of links
 
-Use groups of links to help users find content elsewhere that will meet their needs.
-
-Groups of links span from 2 columns (`$mobile`) up to 4 columns (`$tablet` and `$desktop`).
-
-You can use groups of links:
-
-- in the header (eg listing popular links across the site)
-- anywhere within an `article` (eg as a list of related topics).
-
 Markup: templates/groups-links.html
 
-<details open data-label="group-links-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
-
-Style guide: Navigation.11 Group of links
+Style guide: Navigation.8 Group of links
 */
 
 .links-group {
