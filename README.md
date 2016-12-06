@@ -7,9 +7,7 @@
 UI-Kit is 2 things:
 
 1. a draft design guide to build an accessible standardised look and feel for GOV.AU projects: [gov-au-ui-kit.apps.staging.digital.gov.au](http://gov-au-ui-kit.apps.staging.digital.gov.au/)
- common-use [HTML templates](/examples)
-2. a lean and frugal CSS & JS framework (found in `assets/`) that you can
-include in your project:
+2. a lean and frugal CSS & JS framework (found in `assets/`) that you can include in your project:
 
 **Link to precompiled minified files**
 
