@@ -594,14 +594,13 @@ dt {
 /*
 Callouts & warnings
 
-There are 7 classes for drawing the user's attention:
+There are 6 classes for drawing the user's attention:
 
 - `.callout`
 - `.callout--warning` for warnings
 - `.callout--error` for errors
 - `.callout--info` for information
 - `.callout--success` for success
-- `.callout-status` for status
 - `.callout--calendar-event` for dates.
 
 You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>` or an `<aside>`.
