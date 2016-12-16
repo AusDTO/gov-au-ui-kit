@@ -29,46 +29,11 @@
 /*
 Layout
 
-Maximum page width is set to 1200px. Gutters between the columns are a minimum of 32px.
-
-```
-$max-width: em(1200) !global;
-$gutter: em(32);
-```
-
-We define the grid placement for the following page layout elements:
-
-- `header[role='banner']` and `footer[role='contentinfo']`
-- `main.content-main`
-- `aside`.
-
-To create your own element you will need to use the <a href="http://thoughtbot.github.io/neat-docs/latest/#span-columns" rel="external">Neat <code>span-columns</code> function</a>.
-
-For each new element you will need to set column properties for the breakpoints, from smallest to largest:
-
-1. `$mobile`
-2. `$tablet`
-3. `$desktop`
-
-The following diagram shows how the main content area takes up 12 of 16 columns at `$desktop` and above:
-
-![Diagram of the layout across 16 columns](/kss-assets/img/img_grid_layout.png)
-
-For iOS users ensure you set the `viewport` to the `device-width` in your `<head>` to ensure your site is responsive:
-
-```
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
-
 Style guide: Grid.5 Layout
 */
 
 /*
 Wrapper class
-
-There is a wrapper class (`<div class="wrapper">`) for wrapping the contents of a block within the grid, while allowing its outer container to run the full viewport width.
-
-This is currently used for the page `header` and `footer`, and also for the [breadcrumbs](section-navigation.html#kssref-navigation-2-breadcrumbs).
 
 Style guide: Grid.5 Layout.1 Wrapper
 */
@@ -113,23 +78,6 @@ main {
 
   /*
   Sidebar
-
-  Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar/side navigation.
-
-  ![Diagram of the layout with optional aside nav](/kss-assets/img/img_grid_layout_nav.png)
-
-  By default the sidebar sits to the right of the main content. When the sidebar contains content controls (eg filters), instead of navigation, it can sit on the left side. Use the class `.sidebar-has-controls` on the parent `main` element:
-
-  ```
-  <main class="sidebar-has-controls">
-    <aside class="sidebar">
-    ...
-    </aside>
-    <article role="main" id="content" class="content-main">
-    ...
-    </article>
-  </main>
-  ```
 
   Style guide: Grid.6 Sidebar
   */
@@ -219,8 +167,6 @@ main {
 /*
 Header & footer
 
-The site header and footer are targeted by their ARIA roles, not a `class` or `id`. Use `banner` and `contentinfo` roles, respectively.
-
 Style guide: Grid.7 Header & footer
 */
 
@@ -243,24 +189,6 @@ footer {
 
 /*
 Accessibility
-
-Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.
-
-<details open data-label="grid-text-accessibility" aria-expanded="false">
-  <summary>Accessibility &amp; browser testing</summary>
-  <div class="accordion-panel">
-  <strong>Passed</strong>:
-    <ul>
-      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-    </ul>
-  <strong>Untested</strong>:
-    <ul>
-      <li>WCAG:AA manual</li>
-      <li>Browser support &mdash; automated and manual</li>
-    </ul>
-  </div>
-</details>
 
 Style guide: Grid.8 Accessibility
 */

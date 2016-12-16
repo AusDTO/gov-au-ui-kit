@@ -51,3 +51,10 @@ data-sections.json
 build
 
 .DS_Store
+
+### Sublime ###
+*.sublime-project
+*.sublime-workspace
+
+### Yarn ###
+yarn.lock
