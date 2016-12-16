@@ -89,7 +89,7 @@ footer[role='contentinfo'] {
     nav {
       @extend %base-vertical-list;
 
-      ul {
+      .footer-menu {
         @include media($tablet) {
           @include span-columns(6 of 12);
           @include omega(2n);
