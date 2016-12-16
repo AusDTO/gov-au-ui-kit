@@ -4,6 +4,8 @@
 
 ### `develop`
 
+UI-Kit has grown up a bit more -- we now have an official URL! Check it out at http://guides.service.gov.au/design-guide/
+
 - Most of the guidance previously sitting in the SASS partials have gracefully uprooted and migrated themselves into the new [Design Guide repository](https://github.com/AusDTO/dto-design-guide/), stored now in Markdown. They like their new home.
 - The English text in some of the markup examples have received some further tlc.
 
