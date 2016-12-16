@@ -2,6 +2,11 @@
 
 ## UI Kit "Kraken"
 
+### `develop`
+
+- Most of the guidance previously sitting in the SASS partials have gracefully uprooted and migrated themselves into the new [Design Guide repository](https://github.com/AusDTO/dto-design-guide/), stored now in Markdown. They like their new home.
+- The English text in some of the markup examples have received some further tlc.
+
 ### 1.10.3 - 2016-11-10
 
 - Switches from flexbox to floats for the site navigation feature.
