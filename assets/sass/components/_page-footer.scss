@@ -89,7 +89,7 @@ footer[role='contentinfo'] {
     nav {
       @extend %base-vertical-list;
 
-      ul {
+      .footer-menu {
         @include media($tablet) {
           @include span-columns(6 of 12);
           @include omega(2n);
@@ -104,11 +104,6 @@ footer[role='contentinfo'] {
             width: 21%;
           }
         }
-      }
-
-      li {
-        line-height: 1.5em;
-        list-style: none;
 
         h1,
         h2,
@@ -116,6 +111,11 @@ footer[role='contentinfo'] {
         h4 {
           font-size: rem(16);
           font-weight: $heading-font-weight;
+        }
+
+        li {
+          line-height: 1.5em;
+          list-style: none;
         }
       }
     }
