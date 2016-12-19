@@ -10,6 +10,10 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 - The images loaded as content in the guide have also joined their friends in the new Design Guide repository.
 - The English text in some of the markup examples have received some further tlc.
 
+#### New goodies
+
+- 3 new callout variations: `.callout--success`, `.callout--error`, `.callout--info` have joined the gang.
+
 ### 1.10.3 - 2016-11-10
 
 - Switches from flexbox to floats for the site navigation feature.
@@ -24,8 +28,6 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 - Update version number in package.json so that it's SemVer valid (X.Y.Z)
 
 ### 1.10.0 - 2016-11-8
-
-#### UI-Kit changes
 
 #### Larger changes
 
