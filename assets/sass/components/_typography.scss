@@ -407,10 +407,13 @@ dt {
 /*
 Callouts & warnings
 
-There are 3 classes for drawing the user's attention:
+There are 6 classes for drawing the user's attention:
 
 - `.callout`
 - `.callout--warning` for warnings
+- `.callout--error` for errors
+- `.callout--info` for information
+- `.callout--success` for success
 - `.callout--calendar-event` for dates.
 
 You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>` or an `<aside>`.
@@ -447,11 +450,29 @@ Style guide: Typography.7 Callouts & warnings
   @extend %base-callout;
 }
 
-.callout--warning {
+[class^='callout--'],
+[class*=' callout--'] {
   @extend %base-callout;
 
-  border-left: $tiny-spacing solid $red;
   padding-left: $base-spacing - $tiny-spacing;
+  border-left-width: $tiny-spacing;
+  border-left-style: solid;
+}
+
+.callout--warning {
+  border-left-color: $warning-colour;
+}
+
+.callout--info {
+  border-left-color: $info-colour;
+}
+
+.callout--error {
+  border-left-color:  $error-colour;
+}
+
+.callout--success {
+  border-left-color: $success-colour;
 }
 
 .callout--calendar-event {
