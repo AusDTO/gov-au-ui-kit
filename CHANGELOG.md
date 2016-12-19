@@ -14,6 +14,10 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 
 - 3 new callout variations: `.callout--success`, `.callout--error`, `.callout--info` have joined the gang.
 
+#### Breaking changes
+
+- The columns of footer menus that have had some organisational issues… the lists themselves contained their heading (thanks to @djmyles for picking this up). They had crisis meeting: the resolution is each heading and list set gets its own special class (`.footer-menu`), and this way they get to remain friends. This fixes the semantics and makes it less difficult for CMS template engines to output the right headings and menus. See the footer navigation entry to see what the new markup looks like.
+
 ### 1.10.3 - 2016-11-10
 
 - Switches from flexbox to floats for the site navigation feature.
