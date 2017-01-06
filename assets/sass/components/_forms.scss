@@ -114,22 +114,22 @@ form {
 
       + label {
         display: inline-block;
+        float: left;
         margin-bottom: 8px;
-        padding: 15px 0 15px 60px;
-        position: relative;
+        padding: 15px 0 15px 0;
         width: 100%;
 
         @include media($tablet) {
-          padding: 12px 0 12px 60px;
+          padding: 12px 0 12px 0;
         }
 
         &::before {
           display: inline-block;
+          float: left;
           height: 27px;
-          position: absolute;
           text-align: center;
-          top: 13px;
           width: 27px;
+          margin-right: $tiny-spacing;
 
           @include media($tablet) {
             top: 9px;
@@ -181,12 +181,13 @@ form {
         border: 1px solid transparent;
         border-radius: 50%;
         content: '';
-        left: 23px;
-        top: 18px;
-        position: absolute;
+        float: left;
+        margin-left: -28px;
+        margin-top: 5px;
 
         @include media($tablet) {
           top: 14px;
+          margin-left: -29px;
         }
       }
     }
@@ -201,12 +202,8 @@ Style guide: Forms & buttons.05 Checkbox input
 */
   input[type='checkbox'] + label {
     &::before {
-      left: 20px;
       border: 2px solid $body-text-colour;
       content: '';
-      @include media($tablet) {
-        top: 9px;
-      }
     }
   }
 
@@ -225,13 +222,9 @@ Style guide: Forms & buttons.05 Checkbox input
         background-color: $body-text-colour;
         border: 1px solid transparent;
         content: '';
-        left: 25px;
-        top: 18px;
-        position: absolute;
-
-        @include media($tablet) {
-          top: 14px;
-        }
+        float: left;
+        margin-left: -29px;
+        margin-top: 5px;
       }
     }
   }
