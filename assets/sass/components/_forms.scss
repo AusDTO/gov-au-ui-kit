@@ -53,10 +53,21 @@ form {
     border: none;
   }
 
+  legend {
+    margin-bottom: $small-spacing;
+  }
+
+  // klepas cleaned up the spacing vars a bit... just don't scroll further down.
   label {
     display: block;
-    margin-bottom: $tiny-spacing;
-    margin-top: $tiny-spacing;
+    margin-top: ($small-spacing + $tiny-spacing);
+    margin-bottom: ($small-spacing + $tiny-spacing);
+    margin-left: $small-spacing;
+
+    @include media($tablet) {
+      margin-top: $small-spacing;
+      margin-bottom: $small-spacing;
+    }
   }
 
   .hint {
@@ -94,7 +105,8 @@ form {
       @extend %base-input;
 
       height: 1px;
-      // hide the native widget but keep it in the tab order
+      // Hide the native widget but keep it in the tab order
+      // For 2.x we should burn this with fire. Lots of fire.
       left: -10000px;
       position: absolute;
       visibility: visible;
@@ -115,21 +127,16 @@ form {
       + label {
         display: inline-block;
         float: left;
-        margin-bottom: 8px;
-        padding: 15px 0 15px 0;
         width: 100%;
-
-        @include media($tablet) {
-          padding: 12px 0 12px 0;
-        }
 
         &::before {
           display: inline-block;
           float: left;
+          // These magic numbers need to be blitzed in 2.x
           height: 27px;
-          text-align: center;
           width: 27px;
-          margin-right: $tiny-spacing;
+          text-align: center;
+          margin-right: 14px;
 
           @include media($tablet) {
             top: 9px;
@@ -182,12 +189,12 @@ form {
         border-radius: 50%;
         content: '';
         float: left;
-        margin-left: -28px;
+        // More magic numbers...
+        margin-left: -36px;
         margin-top: 5px;
 
         @include media($tablet) {
           top: 14px;
-          margin-left: -29px;
         }
       }
     }
@@ -223,7 +230,7 @@ Style guide: Forms & buttons.05 Checkbox input
         border: 1px solid transparent;
         content: '';
         float: left;
-        margin-left: -29px;
+        margin-left: -36px;
         margin-top: 5px;
       }
     }
