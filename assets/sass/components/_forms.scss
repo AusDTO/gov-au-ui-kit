@@ -53,10 +53,21 @@ form {
     border: none;
   }
 
+  legend {
+    margin-bottom: $small-spacing;
+  }
+
+  // klepas cleaned up the spacing vars a bit... just don't scroll further down.
   label {
     display: block;
-    margin-bottom: $tiny-spacing;
-    margin-top: $tiny-spacing;
+    margin-top: ($small-spacing + $tiny-spacing);
+    margin-bottom: ($small-spacing + $tiny-spacing);
+    margin-left: $small-spacing;
+
+    @include media($tablet) {
+      margin-top: $small-spacing;
+      margin-bottom: $small-spacing;
+    }
   }
 
   .hint {
@@ -94,7 +105,8 @@ form {
       @extend %base-input;
 
       height: 1px;
-      // hide the native widget but keep it in the tab order
+      // Hide the native widget but keep it in the tab order
+      // For 2.x we should burn this with fire. Lots of fire.
       left: -10000px;
       position: absolute;
       visibility: visible;
@@ -114,22 +126,17 @@ form {
 
       + label {
         display: inline-block;
-        margin-bottom: 8px;
-        padding: 15px 0 15px 60px;
-        position: relative;
+        float: left;
         width: 100%;
-
-        @include media($tablet) {
-          padding: 12px 0 12px 60px;
-        }
 
         &::before {
           display: inline-block;
+          float: left;
+          // These magic numbers need to be blitzed in 2.x
           height: 27px;
-          position: absolute;
-          text-align: center;
-          top: 13px;
           width: 27px;
+          text-align: center;
+          margin-right: 14px;
 
           @include media($tablet) {
             top: 9px;
@@ -181,9 +188,10 @@ form {
         border: 1px solid transparent;
         border-radius: 50%;
         content: '';
-        left: 23px;
-        top: 18px;
-        position: absolute;
+        float: left;
+        // More magic numbers...
+        margin-left: -36px;
+        margin-top: 5px;
 
         @include media($tablet) {
           top: 14px;
@@ -201,12 +209,8 @@ Style guide: Forms & buttons.05 Checkbox input
 */
   input[type='checkbox'] + label {
     &::before {
-      left: 20px;
       border: 2px solid $body-text-colour;
       content: '';
-      @include media($tablet) {
-        top: 9px;
-      }
     }
   }
 
@@ -225,13 +229,9 @@ Style guide: Forms & buttons.05 Checkbox input
         background-color: $body-text-colour;
         border: 1px solid transparent;
         content: '';
-        left: 25px;
-        top: 18px;
-        position: absolute;
-
-        @include media($tablet) {
-          top: 14px;
-        }
+        float: left;
+        margin-left: -36px;
+        margin-top: 5px;
       }
     }
   }
