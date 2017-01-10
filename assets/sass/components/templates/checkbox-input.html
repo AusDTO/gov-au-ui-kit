@@ -1,13 +1,13 @@
 <form>
   <fieldset>
-    <legend>Which electronic devices do you own?</legend>
-    <input id="phone" name="reply" type="checkbox" value="phone"/>
+    <legend id="q-devices-owned">Which electronic devices do you own?</legend>
+    <input id="phone" name="reply" type="checkbox" aria-describedby="q-devices-owned" value="phone"/>
     <label for="phone">Phone</label>
-    <input id="tablet" name="reply" type="checkbox" value="tablet"/>
+    <input id="tablet" name="reply" type="checkbox" aria-describedby="q-devices-owned" value="tablet"/>
     <label for="tablet">Tablet</label>
-    <input id="laptop" name="reply" type="checkbox" value="laptop"/>
+    <input id="laptop" name="reply" type="checkbox" aria-describedby="q-devices-owned" value="laptop"/>
     <label for="laptop">Laptop</label>
-    <input id="desktop" name="reply" type="checkbox" value="desktop"/>
+    <input id="desktop" name="reply" type="checkbox" aria-describedby="q-devices-owned" value="desktop"/>
     <label for="desktop">Desktop computer</label>
   </fieldset>
 </form>
