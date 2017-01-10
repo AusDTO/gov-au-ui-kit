@@ -62,7 +62,6 @@ form {
     display: block;
     margin-top: ($small-spacing + $tiny-spacing);
     margin-bottom: ($small-spacing + $tiny-spacing);
-    margin-left: $small-spacing;
 
     @include media($tablet) {
       margin-top: $small-spacing;
@@ -128,6 +127,7 @@ form {
         display: inline-block;
         float: left;
         width: 100%;
+        margin-left: $small-spacing;
 
         &::before {
           display: inline-block;
