@@ -16,7 +16,7 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 
 #### Bugfixes
 
-- Fixed an obscure issue in Chrome when using a screen reader where `label`s in forms were rudely not being read out. As a consequence those labels are now being positioned using floats (oh you Chrome, [you so random](https://www.youtube.com/watch?v=ggB33d0BLcY)). While at it, the radio buttons and checkboxes decided to improve their distribution of whitespace a bit too.
+- Fixed an obscure issue in Chrome when using a screen reader where `label`s in forms were rudely not being read out. As a consequence those labels are now being positioned using floats (oh you Chrome, [you so random](https://www.youtube.com/watch?v=ggB33d0BLcY)). While at it, the radio buttons and checkboxes decided to improve their distribution of whitespace a bit too. Thanks to @simonschwartz.
 
 #### Breaking changes
 
