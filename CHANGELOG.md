@@ -17,7 +17,7 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 #### Bugfixes
 
 - Fixed an obscure issue in Chrome when using a screen reader where `label`s in forms were rudely not being read out. As a consequence those labels are now being positioned using floats (oh you Chrome, [you so random](https://www.youtube.com/watch?v=ggB33d0BLcY)). While at it, the radio buttons and checkboxes decided to improve their distribution of whitespace a bit too. Thanks to @simonschwartz.
-- It appears Apple’s VoiceOver has a hard time reading out the `legend` in a `form`, so after testing we updated some of the form markup snippets to explicitly demo linking a `fieldset`’s `legend` with an `input` (don’t worry: we also feel a bit disgusted that this might mean having to add extra `id`s). As ever, this is a good reminder that we need to make proper use of `aria-describedby` in either this approach or the use of [hint text](http://localhost:4000/components/forms-buttons/index.html#hint-text).
+- It appears Apple’s VoiceOver has a hard time reading out the `legend` in a `form`, so after testing we updated some of the form markup snippets to explicitly demo linking a `fieldset`’s `legend` with an `input` (don’t worry: we also feel a bit disgusted that this might mean having to add extra `id`s). As ever, this is a good reminder that we need to make proper use of `aria-describedby` in either this approach or the use of [hint text](http://guides.service.gov.au/design-guide/components/forms-buttons/index.html#hint-text).
 
 #### Breaking changes
 
