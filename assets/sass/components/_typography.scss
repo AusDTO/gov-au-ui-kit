@@ -640,3 +640,34 @@ article {
     margin-top: 0;
   }
 }
+
+.tags {
+  @include link-colours($button-bg-colour, $link-colour--hover, $link-colour);
+  color: $grey;
+
+  dl,
+  dt,
+  dd {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: $base-heading-leading * 1.5; // Revisit.
+  }
+
+  dt,
+  dd {
+    margin-right: $tiny-spacing;
+    font-size: $small-font-size;
+  }
+
+  a {
+    padding: 2px $tiny-spacing;
+    border: 1px solid $button-bg-colour;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus {
+      border-color: $link-colour--hover;
+    }
+  }
+}
