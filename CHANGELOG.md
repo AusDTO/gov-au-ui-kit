@@ -13,16 +13,17 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 #### New goodies
 
 - 3 new callout variations: `.callout--success`, `.callout--error`, `.callout--info` have joined the gang.
+- The tag [definition] lists from the more complex lists are in high demand, so are now available universally anywhere via the `.tags` class. See the [example markup from the complex lists](http://guides.service.gov.au/design-guide/components/list-styles/index.html#horizontal-style).
+
+#### Breaking changes
+
+- The columns of footer menus that have had some organisational issues… the lists themselves contained their heading (thanks to @djmyles for picking this up). They had crisis meeting: the resolution is each heading and list set gets its own special class (`.footer-menu`), and this way they get to remain friends. This fixes the semantics and makes it less difficult for CMS template engines to output the right headings and menus. See the footer navigation entry to see what the new markup looks like.
 
 #### Bugfixes
 
 - Fixed an obscure issue in Chrome when using a screen reader where `label`s in forms were rudely not being read out. As a consequence those labels are now being positioned using floats (oh you Chrome, [you so random](https://www.youtube.com/watch?v=ggB33d0BLcY)). While at it, the radio buttons and checkboxes decided to improve their distribution of whitespace a bit too. Thanks to @simonschwartz.
 - It appears Apple’s VoiceOver has a hard time reading out the `legend` in a `form`, so after testing we updated some of the form markup snippets to explicitly demo linking a `fieldset`’s `legend` with an `input` (don’t worry: we also feel a bit disgusted that this might mean having to add extra `id`s). As ever, this is a good reminder that we need to make proper use of `aria-describedby` in either this approach or the use of [hint text](http://guides.service.gov.au/design-guide/components/forms-buttons/index.html#hint-text).
 - Our `$mobile` breakpoint function had a minimum width set on the upper limit, which denied grid support to anything smaller than `$mobile-minwidth` (420px). Thanks @elisechant.
-
-#### Breaking changes
-
-- The columns of footer menus that have had some organisational issues… the lists themselves contained their heading (thanks to @djmyles for picking this up). They had crisis meeting: the resolution is each heading and list set gets its own special class (`.footer-menu`), and this way they get to remain friends. This fixes the semantics and makes it less difficult for CMS template engines to output the right headings and menus. See the footer navigation entry to see what the new markup looks like.
 
 ### 1.10.3 - 2016-11-10
 
@@ -31,11 +32,11 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 
 ### 1.10.2 - 2016-11-9
 
-- Fixed `ui-kit.js` Gulp task so that minified version is created
+- Fixed `ui-kit.js` Gulp task so that minified version is created.
 
 ### 1.10.1 - 2016-11-8
 
-- Update version number in package.json so that it's SemVer valid (X.Y.Z)
+- Update version number in package.json so that it's SemVer valid (X.Y.Z).
 
 ### 1.10.0 - 2016-11-8
 
@@ -48,11 +49,11 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 #### Smaller changes
 
 - Footer improvements:
-  - adds `ie-clearfix` mixin
+  - adds `ie-clearfix` mixin.
   - improves margins when footer link `ul`s collapse in mobile–tablet views and footer crest margins
   - centers image and copyright footer content in mobile view.
 - `.lede` has been added, synonymous with `.abstract`, accessible on block elements (not `p` tags).
-- Link styles are now applied to the `<main>` element instead of `<article>`
+- Link styles are now applied to the `<main>` element instead of `<article>`.
 
 ### 1.9 - 2016-11-07
 
@@ -75,7 +76,7 @@ Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SA
 - Renamed the design guide website to *DTO Design Guide & UI-Kit*.
 - Renamed complete example page to 'all' (`/examples/all.html`).
 - Reformatted component example `.hbs` files to a max line character length of 80.
-- Update name of Slack channel from `#govau-uikit`/`#govau-guides` to `#guides-uikit`
+- Update name of Slack channel from `#govau-uikit`/`#govau-guides` to `#guides-uikit`.
 
 #### UI-Kit changes
 
@@ -89,18 +90,18 @@ Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SA
 - Added `accordion-styles` mixin for creating alternative accordion styles if required. See `_accordions.scss`.
 - Changed visual design throughout (minor).
 - Changed local navigation font size to be smaller than body copy for better visual hierarchy.
-- Added `mixins` for IE-conditional styles and stylesheets for old IE versions
-- Changed structure of `assets/sass` directory
-- Changed animation of collapsible elements from CSS to JS transitions
+- Added `mixins` for IE-conditional styles and stylesheets for old IE versions.
+- Changed structure of `assets/sass` directory.
+- Changed animation of collapsible elements from CSS to JS transitions.
 - Changed undocumented (experimental) header styles to use a background image instead of CSS gradient.
 
 #### Bugfixes
 
-- Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340)
+- Fixes poor wrapping of links that have an icon after them (`%base-link-icon--after)`) thanks to @alecky [#340](https://github.com/AusDTO/gov-au-ui-kit/issues/340).
 - Added visible focus/hover on Local navigation menu button [#323](https://github.com/AusDTO/gov-au-ui-kit/issues/323).
 - Added styles for usage of placeholder links in the Local navigation [#290](https://github.com/AusDTO/gov-au-ui-kit/issues/290).
 - Headings 2 to 6 used in `.list-horizontal` or `.list-vertical` list types are now styled to match H4 to address issues with visual hierarchy versus semantic hierarchy [#299](https://github.com/AusDTO/gov-au-ui-kit/issues/299).
-- Change git merge strategy for CHANGELOG.md to reduce conflicts
+- Change git merge strategy for CHANGELOG.md to reduce conflicts.
 
 #### Styleguide
 
@@ -110,19 +111,19 @@ Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SA
 
 #### UI-Kit changes
 
-- Desktop: Content area is now 12 columns wide to accommodate larger block elements. In response basic text elements `h1-h6, p, li, dl` now have a max-width for readability. See `_grid-layout.scss`
+- Desktop: Content area is now 12 columns wide to accommodate larger block elements. In response basic text elements `h1-h6, p, li, dl` now have a max-width for readability. See `_grid-layout.scss`.
 - Desktop: Added `.content-full-width` as a method of making basic text elements fill to 12 columns if required (see above).
 - Base `%base-vertical-list` and the vertical lists have re-written, switching from flexboxes to Neat columns, providing IE9/10 support. Also done for top set of footer links (`.footer-top`).
 
 #### Styleguide
 
-- Added a 'Zoo' example page (`/examples/all.html`) that demonstrates every element in the UI Kit
-- Section index links now only show Section headings and not Sub-sections
+- Added a 'Zoo' example page (`/examples/all.html`) that demonstrates every element in the UI Kit.
+- Section index links now only show Section headings and not Sub-sections.
 - Omega reset mixin added to Grid settings (documented under *§ Grid - Helpers*).
 
 #### Bugfixes
 
-- Fixed HTML validation errors [PR 311](https://github.com/AusDTO/gov-au-ui-kit/pull/311)
+- Fixed HTML validation errors [PR 311](https://github.com/AusDTO/gov-au-ui-kit/pull/311).
 
 ### 1.7.5 - 2016-08-25
 
@@ -137,11 +138,11 @@ Adds a new gulp task (`styleguide.data`) which outputs a JSON file of all the SA
 
 - Added guidance for font usage and accessibility (documented under *§ Typography - Typeface*).
 - IE conditional styling statements added for the gov.au demo: `head` in `examples/` edited so that ≤IE9 receives no styling except a warning message; ≥IE9 gets styling. These IE conditionals are solely for demo purposes and will be removed in the future.
-- Updated `gulp` build commands to use `npm scripts` (documented in the [README](https://github.com/AusDTO/gov-au-ui-kit#build-the-guide-yourself))
+- Updated `gulp` build commands to use `npm scripts` (documented in the [README](https://github.com/AusDTO/gov-au-ui-kit#build-the-guide-yourself)).
 
 #### Bugfixes
 
-- Fixed Header title image not fluid-width on small screens
+- Fixed Header title image not fluid-width on small screens.
 
 ### 1.7.4 - 2016-08-17
 
@@ -152,9 +153,9 @@ Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://git
 #### UI-Kit changes
 
 - Support to grey out disabled/non-functional anchors/links (largely for prototyping) via `.placeholder-link` (documented under *§ Link styles*).
-- Source files for Examples now use a common layout file (`examples/layouts/default.html`)
-- Added the [Respond polyfill](https://github.com/scottjehl/Respond) for CSS3 media query support in IE6-8
-- Removed the [Selectivizr polyfill](http://selectivizr.com/) so as to not trigger quirks mode in IE8
+- Source files for Examples now use a common layout file (`examples/layouts/default.html`).
+- Added the [Respond polyfill](https://github.com/scottjehl/Respond) for CSS3 media query support in IE6-8.
+- Removed the [Selectivizr polyfill](http://selectivizr.com/) so as to not trigger quirks mode in IE8.
 
 ### 1.7.3 - 2016-08-08
 
@@ -162,7 +163,7 @@ Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://git
 
 - Improved visibility of disabled text field inputs via greying-out.
 - Refactored `_block-elements` partial, now named `_grid-layout` with `wrapper-padding` mixin.
-- Replaced `.visuallyhidden` helper class to `_accessibility.scss` (undocumented, added as a convenience)
+- Replaced `.visuallyhidden` helper class to `_accessibility.scss` (undocumented, added as a convenience).
 - Added an experimental inline tab element (documented under *§ Tab navigation (experimental)*).
 
 #### Styleguide
@@ -176,10 +177,10 @@ Added automated accessibility testing (WCAG2.0 AA) using [Pa11y CLI](https://git
 
 #### Bugfixes
 
-- Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues
-- Fixed [#255](https://github.com/AusDTO/gov-au-ui-kit/issues/255): SVG's don't have `xml` tag
-- Fixed [#271](https://github.com/AusDTO/gov-au-ui-kit/issues/271): Insufficient colour contrast in Hero
-- Fixed [#274](https://github.com/AusDTO/gov-au-ui-kit/issues/274): Typo in Examples landing page
+- Fixed [#170](https://github.com/AusDTO/gov-au-ui-kit/issues/170): Elaborate list view patterns have left alignment issues.
+- Fixed [#255](https://github.com/AusDTO/gov-au-ui-kit/issues/255): SVG's don't have `xml` tag.
+- Fixed [#271](https://github.com/AusDTO/gov-au-ui-kit/issues/271): Insufficient colour contrast in Hero.
+- Fixed [#274](https://github.com/AusDTO/gov-au-ui-kit/issues/274): Typo in Examples landing page.
 
 ### 1.7.2 - 2016-08-02
 
@@ -203,7 +204,7 @@ Bugfixes:
 Styleguide:
 
 - Added a disclaimer regarding accessibility and browser support.
-- Updated Australian Coat of Arms image that appears in site footer
+- Updated Australian Coat of Arms image that appears in site footer.
 
 Bugfixes:
 
@@ -217,10 +218,10 @@ Bugfixes:
 
 UI-Kit changes
 
-- Added `.is-visuallyhidden` helper class to `_accessibility.scss` (`.visuallyhidden` to be deprecated in v2.0)
-- Local navigation markup and style change
-  - Now includes a semantically correct menu heading
-  - Top level of navigation has new styles
+- Added `.is-visuallyhidden` helper class to `_accessibility.scss` (`.visuallyhidden` to be deprecated in v2.0).
+- Local navigation markup and style change:
+  - Now includes a semantically correct menu heading.
+  - Top level of navigation has new styles.
 
 #### UI-Kit changes/additions:
 
@@ -246,10 +247,10 @@ UI-Kit changes
 
 #### UI-Kit changes
 
-- Groups of links added (documented *§ Navigation*)
-- Iconography (undocumented, experimental)
-  -  Removed ui-kit-icons.css output file
-  -  Added images.zip build output containing images used (`gulp build.prod`)
+- Groups of links added (documented *§ Navigation*).
+- Iconography (undocumented, experimental):
+  -  Removed ui-kit-icons.css output file.
+  -  Added images.zip build output containing images used (`gulp build.prod`).
 
 ### 1.4.0 - 2016-07-27
 
@@ -286,20 +287,20 @@ We have also revised a number of our styleguide sections, simplifying them while
 
 Build environment:
 
-- Compiles icons into separate SCSS partial (`assets/sass/ui-kit-icons.scss`) [undocumented, experimental]
+- Compiles icons into separate SCSS partial (`assets/sass/ui-kit-icons.scss`) [undocumented, experimental].
 
 ### 1.3.0 - 2016-07-19
 
 Adds or modifies:
 
 
-- Colour palettes refactored to reflect updated colour usage (documented *§ Colours*)
+- Colour palettes refactored to reflect updated colour usage (documented *§ Colours*).
 - “See more” link styling (currently documented under *§ List views*).
 - JS-powered smooth scrolling for anchors commencing with `#` locally on that page (documented *§ Navigation*).
-- Vertical Lists now have an option to remove the top border (documented *§ List views*)
-- `.reader` class for visually hiding an element but having it available for screen readers
-- `.visuallyhidden` class for visually hiding an element but having it available for screen readers
-- Inline navigation - Alpha release
+- Vertical Lists now have an option to remove the top border (documented *§ List views*).
+- `.reader` class for visually hiding an element but having it available for screen readers.
+- `.visuallyhidden` class for visually hiding an element but having it available for screen readers.
+- Inline navigation - Alpha release.
 - Number support for `input`; make sure you use also use `type="number"`.
 - Style changes to Local (primary) navigation.
 - Style changes to the page footer.
@@ -310,11 +311,11 @@ Adds or modifies:
 
 Bugfixes:
 
-- Fixed [#175](https://github.com/AusDTO/gov-au-ui-kit/issues/175) `gulp watch` or `serve` not picking up on asset changes
-- Fixed [#171](https://github.com/AusDTO/gov-au-ui-kit/issues/171) Unused Open Sans weight 600
-- Fixed [#156](https://github.com/AusDTO/gov-au-ui-kit/issues/156) Looping Gulp build [styleguide]
-- Fixed [#159](https://github.com/AusDTO/gov-au-ui-kit/issues/159) Bouncing Local nav
-- Fixed [#136](https://github.com/AusDTO/gov-au-ui-kit/issues/136) Guide home page Local nav active styles [styleguide]
+- Fixed [#175](https://github.com/AusDTO/gov-au-ui-kit/issues/175) `gulp watch` or `serve` not picking up on asset changes.
+- Fixed [#171](https://github.com/AusDTO/gov-au-ui-kit/issues/171) Unused Open Sans weight 600.
+- Fixed [#156](https://github.com/AusDTO/gov-au-ui-kit/issues/156) Looping Gulp build [styleguide].
+- Fixed [#159](https://github.com/AusDTO/gov-au-ui-kit/issues/159) Bouncing Local nav.
+- Fixed [#136](https://github.com/AusDTO/gov-au-ui-kit/issues/136) Guide home page Local nav active styles [styleguide].
 
 ### 1.2.0 - 2016-07-12
 
@@ -331,78 +332,79 @@ Adds or modifies:
 
 Bugfixes:
 
-- Fixed [#111](https://github.com/AusDTO/gov-au-ui-kit/issues/111) Single column layout width
-- Fixed [#99](https://github.com/AusDTO/gov-au-ui-kit/issues/99) Breadcrumbs icon not showing up
+- Fixed [#111](https://github.com/AusDTO/gov-au-ui-kit/issues/111) Single column layout width.
+- Fixed [#99](https://github.com/AusDTO/gov-au-ui-kit/issues/99) Breadcrumbs icon not showing up.
 
 ### 1.1.0 - 2016-07-05
 
 Adds or modifies:
 
-- Forms
-  - Added styled checkboxes and radio buttons
-- Header and Footer
-  - Ensured footer is pushed to the bottom of the screen even with short content
+- Forms:
+  - Added styled checkboxes and radio buttons.
+- Header and Footer:
+  - Ensured footer is pushed to the bottom of the screen even with short content.
 - List views
-  - Added more styles for horizontal, vertical and small lists for use in main content area
-- Tables
-  - Added missing documentation on use of tables
-- Navigation
-  - Skip to main content links and documentation
-- Font asset loading
-  - Removed calling of webfonts via `@import`
-  - Added [Google Web Font Loader](https://github.com/typekit/webfontloader) (see *&sect; Markup changes* below)
-- Typography
-  - Heading sizes scaled down
-  - Added 700 font-weight to apply to some headings
-  - Scale down body leading (`line-height`)
-  - Increase spacing between list items
-  - Added styles for `hr` element
-- Responsive grid changes
-  - Increased column gutter width
-  - Increased number of columns for each breakpoint for more granular grid placements
-  - Refactored responsive breakpoints to use `min-width` (mobile-first)
+  - Added more styles for horizontal, vertical and small lists for use in main content area.
+- Tables:
+  - Added missing documentation on use of tables.
+- Navigation:
+  - Skip to main content links and documentation.
+- Font asset loading:
+  - Removed calling of webfonts via `@import`.
+  - Added [Google Web Font Loader](https://github.com/typekit/webfontloader) (see *&sect; Markup changes* below).
+- Typography:
+  - Heading sizes scaled down.
+  - Added 700 font-weight to apply to some headings.
+  - Scale down body leading (`line-height`).
+  - Increase spacing between list items.
+  - Added styles for `hr` element.
+- Responsive grid changes:
+  - Increased column gutter width.
+  - Increased number of columns for each breakpoint for more granular grid placements.
+  - Refactored responsive breakpoints to use `min-width` (mobile-first).
 
 Bugfixes:
 
-- Fixed [#122](https://github.com/AusDTO/gov-au-ui-kit/issues/122)
-- Fixed [#102](https://github.com/AusDTO/gov-au-ui-kit/issues/102)
+- Fixed [#122](https://github.com/AusDTO/gov-au-ui-kit/issues/122).
+- Fixed [#102](https://github.com/AusDTO/gov-au-ui-kit/issues/102).
 
 Markup changes:
 
-- Add new `<script>` tag to load Google Web Font Loader into `<head>`
+- Add new `<script>` tag to load Google Web Font Loader into `<head>`.
 
 ### 1.0.0 - 2016-06-30
+
 Guide MVP is now live ([1]).
 
 Adds:
 
-- Style guide
-  - Guide now uses UI Kit styles throughout
-  - 'Last Updated' added to UI Kit documentation
-- Buttons
-  - Guidance on how to apply button styling to `button` and `a` elements
-- Colours
-  - Colour palette swatches
-  - Contrast guidance and accessibility compliance
-  - Contextual colours & usage guidance
-- Grid
-  - Guidance on grid settings and page layout
-  - Description of responsive breakpoints
-  - Debugging with `$visual-grid: true;`
-  - Accessibility guidance
-- Navigation
-  - Primary navigation (vertical sidebar)
-  - Breadcrumbs
-- Typography
-  - Body font changed to Open Sans ([2])
-  - Guidance on font and heading sizes
-  - Callouts & blockquotes
-  - Badges
+- Style guide:
+  - Guide now uses UI Kit styles throughout.
+  - 'Last Updated' added to UI Kit documentation.
+- Buttons:
+  - Guidance on how to apply button styling to `button` and `a` elements.
+- Colours:
+  - Colour palette swatches.
+  - Contrast guidance and accessibility compliance.
+  - Contextual colours & usage guidance.
+- Grid:
+  - Guidance on grid settings and page layout.
+  - Description of responsive breakpoints.
+  - Debugging with `$visual-grid: true;`.
+  - Accessibility guidance.
+- Navigation:
+  - Primary navigation (vertical sidebar).
+  - Breadcrumbs.
+- Typography:
+  - Body font changed to Open Sans ([2]).
+  - Guidance on font and heading sizes.
+  - Callouts & blockquotes.
+  - Badges.
 
 Markup changes:
 
-- Badge ([3]) variants now use BEM classnames (eg `badge--beta`)
-- Callout ([4]) variant now use BEM classname (eg `callout--warning`)
+- Badge ([3]) variants now use BEM classnames (eg `badge--beta`).
+- Callout ([4]) variant now use BEM classname (eg `callout--warning`).
 
 ## UI Kit "Rugby"
 
@@ -417,13 +419,13 @@ Adds:
 
 Markup changes:
 
-- page header and footer are targeted by their ARIA roles respectively
-- nav markup changes to support responsiveness
+- Page header and footer are targeted by their ARIA roles respectively.
+- Nav markup changes to support responsiveness.
 
 Bugfixes:
 
-- responsive page/grid padding fixes for tablet-desktop
-- fixed private `npm` dependency problem
+- Responsive page/grid padding fixes for tablet-desktop.
+- Fixed private `npm` dependency problem.
 
 ---
 
