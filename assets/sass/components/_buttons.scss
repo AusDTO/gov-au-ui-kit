@@ -91,3 +91,60 @@ button,
     }
   }
 }
+
+/*
+
+input groups
+
+HTML EXAMPLES
+
+Standard input group using button element
+
+ <div class="input-group">
+   <input  maxlength="128"  placeholder="Type search term here" title="Search" type="text" value="" />
+   <button>Search</button>
+ </div>
+
+Standard input group using input[type='button']
+
+<div class="input-group">
+  <input maxlength="128" placeholder="Type search term here" title="Search" type="text" value="" />
+  <input class="form-submit" type="submit" value="Search" />
+</div>
+
+Reverse input group using button element
+
+<div class="input-group reverse">
+   <input  maxlength="128"  placeholder="Type search term here" title="Search" type="text" value="" />
+   <button>Search</button>
+</div>
+
+Reverse input group using input[type='button']
+
+<div class="input-group reverse">
+  <input maxlength="128" placeholder="Type search term here" title="Search" type="text" value="" />
+  <input class="form-submit" type="submit" value="Search" />
+</div>
+
+*/
+
+.input-group {
+  display: flex;
+
+  %base-button {
+    margin: 0;
+  }
+
+  // The default HTML structure is button or [type='button'] element to the right
+  > :nth-child(1) {
+    border-right: 0;
+  }
+}
+
+// button or [type='button'] to the left (reverse HTML structure)
+.input-group.reverse  {
+
+  > :nth-child(2) {
+    border-left: 0;
+  }
+}
