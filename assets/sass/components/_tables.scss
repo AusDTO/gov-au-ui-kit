@@ -115,7 +115,7 @@ Style guide: Tables.2 Calendar table variant
     text-transform: uppercase;
     color: $aqua;
 
-    @include media($mobile) {
+    @include media($tablet) {
       display: table-cell;
       width: 6 * $base-spacing;
     }
@@ -137,7 +137,7 @@ Style guide: Tables.2 Calendar table variant
     font-weight: $heading-font-weight;
     text-align: center;
 
-    @include media($mobile) {
+    @include media($tablet) {
       display: table-cell;
       padding-top: $small-spacing;
       border-left: $tiny-spacing solid $white;
