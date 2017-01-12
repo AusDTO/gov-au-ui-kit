@@ -161,10 +161,12 @@ We may create an installer wrapper (likely node-based), or release via git submo
 
 ## Copyright & license
 
-© Copyright Commonwealth of Australia. <a href="(https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE" rel="external license">Licensed under the MIT license</a>.
+© Copyright Commonwealth of Australia.
+
+With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is <a href="(https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE" rel="external license">licensed under the MIT license</a>.
 
 This repository includes <a href="http://bourbon.io/" rel="external">Bourbon</a>, <a href="http://neat.bourbon.io/" rel="external">Neat</a> and <a href="https://necolas.github.io/normalize.css/" rel="external">Normalize.css</a>. All also use the MIT license.
 
-![Australian Government Digital Transformation Office logo](https://www.dta.gov.au/images/govt-crest.png)
+![Australian Government Digital Transformation Agency logo](https://www.dta.gov.au/images/govt-crest.png)
 
 GOV.AU UI-Kit is maintained and funded by the <a href="https://www.dta.gov.au/" rel="external">Digital Transformation Agency</a>.
