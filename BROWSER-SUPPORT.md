@@ -4,9 +4,7 @@ The UI-Kit team needs to support all of our users, regardless of their device, w
 
 Equal access to information about laws and government programs is a legal requirement under the <a href="https://www.legislation.gov.au/Latest/C2016C00763" rel="external">Disability Discrimination Act (1992)</a>.
 
-The support levels will be revised when needed to better meet user needs.
-
-We initially defined these levels using analytics data from various major \*.gov.au sites.
+This document has drawn on analytics data from various major \*.gov.au sites.
 
 ## Mobile browsers
 
@@ -26,18 +24,18 @@ Minimum version based on [support for CSS Flexible Box layout modules](http://ca
 |-------------------|---------------|-------------|
 | Chrome            | Windows, OS X | Tested      |
 | Firefox           | Windows, OS X | Tested      |
-| Safari            | OS X          | Untested    |
+| Safari            | OS X          | Tested      |
 | Opera             | Windows, OS X | Untested    |
 | Yandex            | Windows, OS X | Untested    |
-| Edge              | Windows       | Untested    |
-| IE 10 & newer            | Windows       | Tested      |
+| Edge              | Windows       | Tested      |
+| IE 10 & newer     | Windows       | Tested      |
 | IE 9 & older      | Windows       | Tested &mdash; functional support only  |
 
 All browsers listed are latest stable release, except Internet Explorer.
 
 ## Unsupported browsers
 
-We don’t list unsupported devices and browsers.
+We list commonly used browsers and devices and their rough test status. We don’t list unsupported devices and browsers.
 
 We are aiming for a solid HTML mobile-first foundation that provides functional support for the browsers and devices of all of our users.
 
@@ -67,8 +65,3 @@ We define ‘support’ as:
 
 - making things usable before they go live
 - improving and fixing issues found in production environments.
-
-We didn’t use a decision tree because:
-
-- we can identify fully supported browsers and devices
-- all other browsers and devices need graduated support.
