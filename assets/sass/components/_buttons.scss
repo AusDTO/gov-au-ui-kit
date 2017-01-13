@@ -24,10 +24,14 @@ Style guide: Forms & buttons. 01 Buttons
     &:focus {
       background-color: $bg-colour--hover;
       color: $text-colour--hover;
+      outline: $text-colour--hover solid 2px;
+      outline-offset: -4px;
     }
 
     &:active {
       background-color: $bg-colour--active;
+      outline: $text-colour solid 2px;
+      outline-offset: -4px;
     }
   }
 }
