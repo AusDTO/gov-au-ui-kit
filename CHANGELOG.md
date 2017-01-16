@@ -9,6 +9,7 @@ UI-Kit has grown up a bit more -- we now have an official URL! Check it out at h
 - Most of the guidance previously sitting in the SASS partials have gracefully uprooted and migrated themselves into the new [Design Guide repository](https://github.com/AusDTO/dto-design-guide/), stored now in Markdown. They like their new home.
 - The images loaded as content in the guide have also joined their friends in the new Design Guide repository.
 - The English text in some of the markup examples have received some further tlc.
+- Our [browser support document](https://github.com/AusDTO/gov-au-ui-kit/blob/develop/BROWSER-SUPPORT.md) was out of date. It’s been simplified a bit more, and updated to reflect testing conducted end-2016.
 
 #### New goodies
 
