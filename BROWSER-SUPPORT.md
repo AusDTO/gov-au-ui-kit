@@ -35,7 +35,7 @@ All browsers listed are latest stable release, except Internet Explorer.
 
 ## Unsupported browsers
 
-We list commonly used browsers and devices and their rough test status. We don’t list unsupported devices and browsers.
+We list commonly used browsers and devices and their rough test status. Other combinations may be supported but have not been extensively tested.
 
 We are aiming for a solid HTML mobile-first foundation that provides functional support for the browsers and devices of all of our users.
 
