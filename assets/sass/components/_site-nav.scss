@@ -16,7 +16,7 @@ $site-nav-type-size: rem(16);
 $site-nav-border-width: 2px;
 $site-nav-border-colour: $border-colour;
 $site-nav-border-colour--hover: $border-highlight-colour;
-$site-nav-item-colour--hover: $lighter-aqua;
+$site-nav-item-colour--hover: transparent;
 $site-nav-toggle-width: 40%;
 
 .site-nav {
@@ -74,11 +74,6 @@ $site-nav-toggle-width: 40%;
       }
     }
 
-    @include media($mobile) {
-      padding-left: $gutter / 2;
-      padding-right: $gutter / 2;
-    }
-
     @include media($tablet) {
       float: left;
       text-align: center;
@@ -105,12 +100,20 @@ $site-nav-toggle-width: 40%;
       font-weight: $bold-font-weight;
       font-size: $site-nav-type-size;
 
-      &:hover {
-        background-color: $site-nav-item-colour--hover;
+      &:hover,
+      &.is-active {
+        border-color: $site-nav-border-colour--hover;
+        color: $link-colour;
+      }
+
+      @include media($mobile) {
+        padding-left: $gutter / 2;
+        padding-right: $gutter / 2;
       }
 
       @include media($tablet) {
         border-bottom: 6px solid transparent;
+        padding: $medium-spacing $tiny-spacing;
 
         &:hover {
           background-color: transparent;

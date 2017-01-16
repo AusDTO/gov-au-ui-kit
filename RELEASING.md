@@ -26,8 +26,8 @@ Two separate deployed versions of the UI Kit will be maintained.
 
 | Branch | Server | URL |
 |--------|--------|-----|
-| develop | Staging | [http://gov-au-ui-kit-staging.apps.staging.digital.gov.au/](http://gov-au-ui-kit-staging.apps.staging.digital.gov.au/) |
-| master | Production | [http://gov-au-ui-kit.apps.staging.digital.gov.au/](http://gov-au-ui-kit.apps.staging.digital.gov.au/)  |
+| develop | Staging | [design-guide.apps.staging.digital.gov.au](http://design-guide.apps.staging.digital.gov.au/) |
+| master | Production | [guides.service.gov.au/design-guide](http://guides.service.gov.au/design-guide/)  |
 
 Production will always host the latest release and will be considered stable.
 Staging will host the current code at the develop branch and may not necessarily be stable.
