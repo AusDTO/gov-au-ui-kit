@@ -2,7 +2,7 @@
 
 ## UI Kit "Kraken"
 
-### `develop`
+### 1.11.0 - 2017-01-16
 
 UI-Kit has grown up a bit more -- we now have an official URL! Check it out at http://guides.service.gov.au/design-guide/
 
