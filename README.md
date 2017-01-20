@@ -71,6 +71,13 @@ The <a href="https://www.dto.gov.au/standard/" rel="external">Digital Service St
 
 You should use this with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">draft <strong>Content Style Guide</strong></a> for Digital Transformation Office projects.
 
+## Including UI Kit
+
+To include UI Kit in your project, see the following articles:
+
+- [Including UI Kit via NPM](./docs/including-uikit-via-npm.md)
+- [How dashboards include the GOV.AU UI-Kit](./docs/how-dashboards-include-the-ui-kit.md)
+
 ## Build the Guide yourself
 
 We have a build process for the development of the framework which uses gulp on node.js.
