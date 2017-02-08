@@ -2,10 +2,22 @@
 general:
   artifacts:
     - "build"
+    - "tmp"
+
+machine:
+  node:
+    version: 6.1.0
 
 test:
-  override:
+  post:
     - ./bin/cibuild.sh
+    - bundle exec rails server -d -p 3000
+    - accesslint-ci scan http://localhost:3000
+
+dependencies:
+  post:
+    - npm install -g accesslint-cli
+    - gem install accesslint-ci
 
 deployment:
   development:
