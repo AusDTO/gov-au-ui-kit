@@ -7,6 +7,7 @@
 #### Changes
 
 - We removed the quotation marks around block quotations (`blockquote`) as well as the inline quotation element (`q`). While the quote marks knew they were pretty they realised they might be in conflict with user-entered quotation marks.
+- The font of block quotations have shed their serifs to better fit in with their surrounding sans serif friends.
 
 ### 1.11.0 - 2017-01-16
 
