@@ -545,10 +545,10 @@ Style guide: Typography.5 Quotations
 
 blockquote {
   margin: $medium-spacing 0;
-  padding: $small-spacing ($base-spacing + $small-spacing);
+  padding: $base-spacing ($base-spacing + $small-spacing) $tiny-spacing;
   background-color: $background-secondary-colour;
   font-family: $base-serif;
-  quotes: '\201C''\201D''\2018''\2019';
+  quotes: none;
 
   &.pullquote {
     padding: 0;
@@ -559,48 +559,19 @@ blockquote {
       line-height: $base-leading;
       text-align: center;
       font-weight: $base-font-weight;
-      margin-top: $base-spacing;
+      margin-top: $medium-spacing;
 
       @include media($tablet) {
         font-size: rem(26);
       }
     }
-
-    // Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
-
-    &::before,
-    &::after {
-      text-align: center;
-      margin: 0;
-    }
-  }
-
-  &::before,
-  &::after {
-    display: block;
-    height: 0;
-    font-family: $base-serif;
-    font-size: rem(43);
-    color: $aqua;
-  }
-
-  &::before {
-    margin-left: -($small-spacing * 0.75);
-    padding-bottom: $tiny-spacing;
-    content: open-quote;
-  }
-
-  &::after {
-    margin-right: -($small-spacing * 0.75);
-    margin-top: -($small-spacing);
-    padding-bottom: $medium-spacing;
-    text-align: right;
-    content: close-quote;
   }
 
   footer {
+    display: block;
     margin-top: $medium-spacing;
-    padding-top: $tiny-spacing;
+    padding-top: $small-spacing;
+    padding-bottom: $small-spacing;
     border-top: 1px solid $light-grey;
   }
 
@@ -627,8 +598,7 @@ blockquote {
 }
 
 q {
-  // Investigate: switching to html entities?
-  quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';
+  // quotes: '“' '”' '‘' '’' '“' '”' '‘' '’';
 }
 
 cite {
