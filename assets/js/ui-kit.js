@@ -16,6 +16,16 @@ var components = {
     }
   }
 
+  checkMedia = function(){
+    //Returns which media-query is active
+    //(Content is added to the body via CSS media queries)
+    var size = window.getComputedStyle( document.body, ':after' ).getPropertyValue( 'content' ).replace( /"/g, '' );
+
+    if( size == 'desktop' ) { return 'desktop'; }
+    else if ( size == 'tablet' ) { return 'tablet'; }
+    else { return 'mobile'; }
+  }
+
   // Kick of the JavaScript party when the DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
     initComponent('Accordion', '.accordion, details');
