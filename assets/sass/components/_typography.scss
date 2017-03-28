@@ -81,16 +81,21 @@ Style guide: Typography.3 Body copy
 // Note that we style h5 and h6 are identical to h4.
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
-h4 {
+.h3,
+h4,
+.h4 {
   line-height: $base-heading-leading;
   font-weight: $base-font-weight;
   margin-bottom: $tiny-spacing;
   margin-top: $base-spacing;
 }
 
-h1 {
+h1,
+.h1 {
   font-size: rem(24);
   font-weight: $bold-font-weight;
   margin-bottom: $small-spacing;
@@ -127,11 +132,13 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.h2 {
   @include h2;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: rem(24);
   font-weight: $heading-font-weight;
   margin-top: $medium-spacing + ($small-spacing / 3); // 38.133px; was 34.4px from Alz.
@@ -147,8 +154,11 @@ h3 {
 }
 
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   font-size: rem(18);
   font-weight: $heading-font-weight;
 
