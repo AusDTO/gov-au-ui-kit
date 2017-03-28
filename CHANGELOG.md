@@ -2,6 +2,13 @@
 
 ## UI Kit "Kraken"
 
+### `develop`
+
+#### Changes
+
+- We removed the quotation marks around block quotations (`blockquote`) as well as the inline quotation element (`q`). While the quote marks knew they were pretty they realised they might be in conflict with user-entered quotation marks.
+- The font of block quotations have shed their serifs to better fit in with their surrounding sans serif friends.
+
 ### 1.11.0 - 2017-01-16
 
 UI-Kit has grown up a bit more -- we now have an official URL! Check it out at http://guides.service.gov.au/design-guide/
