@@ -482,6 +482,7 @@ Style guide: Typography.7 Callouts & warnings
   box-shadow: none;
   padding-bottom: $small-spacing;
   background-color: $callout-bg-light-colour;
+  border-left: none;
 
   time,
   .event-name {
